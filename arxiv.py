@@ -14,7 +14,7 @@ from tqdm import tqdm
 
 SERVERCHAN_API_KEY = os.environ.get("SERVERCHAN_API_KEY", None)
 QUERY = os.environ.get('QUERY', 'cs.IR')
-LIMITS = int(os.environ.get('LIMITS',5))
+LIMITS = int(os.environ.get('LIMITS',15))
 FEISHU_URL = os.environ.get("FEISHU_URL", None)
 MODEL_TYPE = os.environ.get("MODEL_TYPE", "DeepSeek")
 ECNU_MODEL_KEY = os.environ.get("ECNU_MODEL_KEY", None)
