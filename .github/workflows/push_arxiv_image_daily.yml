@@ -1,4 +1,4 @@
-name: push_arxiv_daily
+name: push_arxiv_image_paper_daily
 
 env:
   PYTHON_VERSION: "3.8" # set this to the Python version to use
