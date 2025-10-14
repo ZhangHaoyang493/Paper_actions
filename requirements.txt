@@ -1,0 +1,8 @@
+feedparser
+openai
+tenacity
+tqdm
+beautifulsoup4
+aiohttp
+requests
+jinja2
