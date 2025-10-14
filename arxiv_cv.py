@@ -13,7 +13,7 @@ from tqdm import tqdm
 # from translate import translate
 
 SERVERCHAN_API_KEY = os.environ.get("SERVERCHAN_API_KEY", None)
-QUERY = os.environ.get('QUERY', '"image+restoration"+OR+"image+deraining"+OR+"image+denoise"+OR+"CT+Metal+Reduction"+OR+"Reflection+Removal"')
+QUERY = os.environ.get('QUERY', 'cs.CV')
 LIMITS = int(os.environ.get('LIMITS',5))
 FEISHU_CV_URL = os.environ.get("FEISHU_CV_URL", None)
 MODEL_TYPE = os.environ.get("MODEL_TYPE", "DeepSeek")

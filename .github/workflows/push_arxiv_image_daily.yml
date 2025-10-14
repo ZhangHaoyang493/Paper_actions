@@ -15,7 +15,7 @@ jobs:
     env:
       SERVERCHAN_API_KEY: ${{ secrets.SERVERCHAN_API_KEY }}
       CAIYUN_TOKEN: ${{ secrets.CAIYUN_TOKEN }}
-      QUERY: "cs.IR"
+      QUERY: '"image+restoration"+OR+"image+deraining"+OR+"image+denoise"+OR+"CT+Metal+Reduction"+OR+"Reflection+Removal"'
       LIMITS: 15
       FEISHU_CV_URL: ${{ secrets.FEISHU_CV_URL }}
       DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
