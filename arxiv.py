@@ -112,7 +112,7 @@ def send_feishu_message(title, content, url=FEISHU_URL):
     requests.post(url=url, data=body, headers=headers)
 
 
-def translate(texts: list[str]):
+def translate(texts):
     from openai import OpenAI
     import json
     from tqdm.notebook import tqdm
