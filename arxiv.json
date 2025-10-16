@@ -355,5 +355,24 @@
         ],
         "label_reason": "论文针对GNN在推荐中的流行度偏差问题提出后处理方法，属于图神经网络推荐改进技术",
         "relevance_score": 8
+    },
+    {
+        "title": "Universal Image Restoration Pre-training via Masked Degradation\n  Classification",
+        "url": "http://arxiv.org/abs/2510.13282v1",
+        "pub_date": "2025-10-15",
+        "summary": "This study introduces a Masked Degradation Classification Pre-Training method (MaskDCPT), designed to facilitate the classification of degradation types in input images, leading to comprehensive image restoration pre-training. Unlike conventional pre-training methods, MaskDCPT uses the degradation type of the image as an extremely weak supervision, while simultaneously leveraging the image reconstruction to enhance performance and robustness. MaskDCPT includes an encoder and two decoders: the encoder extracts features from the masked low-quality input image. The classification decoder uses these features to identify the degradation type, whereas the reconstruction decoder aims to reconstruct a corresponding high-quality image. This design allows the pre-training to benefit from both masked image modeling and contrastive learning, resulting in a generalized representation suited for restoration tasks. Benefit from the straightforward yet potent MaskDCPT, the pre-trained encoder can be used to address universal image restoration and achieve outstanding performance. Implementing MaskDCPT significantly improves performance for both convolution neural networks (CNNs) and Transformers, with a minimum increase in PSNR of 3.77 dB in the 5D all-in-one restoration task and a 34.8% reduction in PIQE compared to baseline in real-world degradation scenarios. It also emergences strong generalization to previously unseen degradation types and levels. In addition, we curate and release the UIR-2.5M dataset, which includes 2.5 million paired restoration samples across 19 degradation types and over 200 degradation levels, incorporating both synthetic and real-world data. The dataset, source code, and models are available at https://github.com/MILab-PKU/MaskDCPT.",
+        "translated": "本研究提出了一种 Masked Degradation Classification Pre-Training 方法（MaskDCPT），旨在实现对输入图像退化类型的分类，从而促进通用图像恢复的预训练。不同于传统的预训练方法，MaskDCPT 将图像的退化类型作为极其弱的监督信号，同时利用图像重建来提升性能和鲁棒性。MaskDCPT 包含一个编码器和两个解码器：编码器从被遮蔽的低质量输入图像中提取特征；分类解码器利用这些特征识别退化类型，而重建解码器则致力于重建对应的高质量图像。这种设计使预训练能够同时受益于遮蔽图像建模和对比学习，从而获得适用于图像恢复任务的通用表征。借助简洁而有效的 MaskDCPT，预训练的编码器可用于解决通用图像恢复问题，并取得优异的性能。MaskDCPT 的实现显著提升了卷积神经网络（CNNs）和 Transformers 的性能，在 5D 全合一图像恢复任务中，PSNR 至少提升了 3.77 dB，而在真实退化场景中，与基线相比，PIQE 降低了 34.8%。此外，该方法在未见过的退化类型和程度上也展现出强大的泛化能力。同时，我们整理并发布了 UIR-2.5M 数据集，该数据集包含 250 万对覆盖 19 种退化类型和 200 多个退化等级的图像恢复样本，融合了合成数据和真实数据。数据集、源代码和模型均可在 https://github.com/MILab-PKU/MaskDCPT 获取。",
+        "translated_title": "通过掩码退化分类的通用图像恢复预训练",
+        "label": [
+            "图像恢复（Image Restoration）",
+            "图像去噪（Image Denoising）",
+            "图像去雨（Image Deraining）",
+            "图像去雾（Image Dehazing）",
+            "图像去模糊（Image Deblurring）",
+            "超分辨率（Super-Resolution）",
+            "图像去 JPEG 伪影（JPEG Artifact Removal）"
+        ],
+        "label_reason": "论文提出通用图像恢复预训练方法，适用于多种低级图像恢复任务",
+        "relevance_score": 9
     }
 ]
