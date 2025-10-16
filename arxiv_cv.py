@@ -22,7 +22,6 @@ ECNU_MODEL_KEY = os.environ.get("ECNU_MODEL_KEY", None)
 
 from openai import OpenAI
 import json
-from tqdm.notebook import tqdm
 
 client = OpenAI(
     api_key=ECNU_MODEL_KEY,
