@@ -640,5 +640,159 @@
         "relevance_score": 2,
         "novelty_score": 7,
         "novelty_reason": "提出离散流匹配的新范式，对多模态模型架构有显著改进。"
+    },
+    {
+        "title": "Epistemic-aware Vision-Language Foundation Model for Fetal Ultrasound\n  Interpretation",
+        "url": "http://arxiv.org/abs/2510.12953v1",
+        "pub_date": "2025-10-14",
+        "summary": "Recent medical vision-language models have shown promise on tasks such as VQA, report generation, and anomaly detection. However, most are adapted to structured adult imaging and underperform in fetal ultrasound, which poses challenges of multi-view image reasoning, numerous diseases, and image diversity. To bridge this gap, we introduce FetalMind, a medical AI system tailored to fetal ultrasound for both report generation and diagnosis. Guided by clinical workflow, we propose Salient Epistemic Disentanglement (SED), which injects an expert-curated bipartite graph into the model to decouple view-disease associations and to steer preference selection along clinically faithful steps via reinforcement learning. This design mitigates variability across diseases and heterogeneity across views, reducing learning bottlenecks while aligning the model's inference with obstetric practice. To train FetalMind at scale, we curate FetalSigma-1M dataset, the first large-scale fetal ultrasound report corpus, comprising 20K reports from twelve medical centers, addressing the scarcity of domain data. Extensive experiments show that FetalMind outperforms open- and closed-source baselines across all gestational stages, achieving +14% average gains and +61.2% higher accuracy on critical conditions while remaining efficient, stable, and scalable. Project Page: https://hexiao0275.github.io/FetalMind.",
+        "translated": "近年来，医疗视觉-语言模型在视觉问答（VQA）、报告生成和异常检测等任务上表现出潜力。然而，大多数模型适用于结构化的成人影像数据，在胎儿超声任务中表现欠佳，这面临着多视角图像推理、大量疾病类别和图像多样性的挑战。为弥合这一差距，我们提出了FetalMind，一个专为胎儿超声定制的医疗人工智能系统，支持报告生成与诊断任务。受临床工作流程的启发，我们提出了显著性认识解耦（Salient Epistemic Disentanglement, SED）方法，该方法将专家构建的二部图注入模型，以解耦视角与疾病之间的关联，并通过强化学习引导模型在临床可靠的步骤中进行偏好选择。这一设计缓解了不同疾病之间的差异性以及不同视角之间的异质性，从而降低学习瓶颈，同时使模型的推理过程与产科实践保持一致。为了大规模训练FetalMind，我们构建了FetalSigma-1M数据集，这是首个大规模胎儿超声报告语料库，包含了来自十二个医疗机构的20K份报告，解决了该领域数据稀缺的问题。大量实验表明，FetalMind在所有孕周阶段均优于开源和闭源基线模型，平均提升14%，在关键疾病上的准确率提高61.2%，同时保持高效、稳定和可扩展。项目主页：https://hexiao0275.github.io/FetalMind.",
+        "translated_title": "具有认知感知能力的视觉-语言基础模型在胎儿超声解释中的应用",
+        "label": [],
+        "label_reason": "论文聚焦医学影像与自然语言处理，非直接推荐系统相关。",
+        "relevance_score": 2,
+        "novelty_score": 7,
+        "novelty_reason": "提出临床工作流引导的模型设计，数据集和方法有创新性。"
+    },
+    {
+        "title": "DeepMMSearch-R1: Empowering Multimodal LLMs in Multimodal Web Search",
+        "url": "http://arxiv.org/abs/2510.12801v1",
+        "pub_date": "2025-10-14",
+        "summary": "Multimodal Large Language Models (MLLMs) in real-world applications require access to external knowledge sources and must remain responsive to the dynamic and ever-changing real-world information in order to address information-seeking and knowledge-intensive user queries. Existing approaches, such as retrieval augmented generation (RAG) methods, search agents, and search equipped MLLMs, often suffer from rigid pipelines, excessive search calls, and poorly constructed search queries, which result in inefficiencies and suboptimal outcomes. To address these limitations, we present DeepMMSearch-R1, the first multimodal LLM capable of performing on-demand, multi-turn web searches and dynamically crafting queries for both image and text search tools. Specifically, DeepMMSearch-R1 can initiate web searches based on relevant crops of the input image making the image search more effective, and can iteratively adapt text search queries based on retrieved information, thereby enabling self-reflection and self-correction. Our approach relies on a two-stage training pipeline: a cold start supervised finetuning phase followed by an online reinforcement learning optimization. For training, we introduce DeepMMSearchVQA, a novel multimodal VQA dataset created through an automated pipeline intermixed with real-world information from web search tools. This dataset contains diverse, multi-hop queries that integrate textual and visual information, teaching the model when to search, what to search for, which search tool to use and how to reason over the retrieved information. We conduct extensive experiments across a range of knowledge-intensive benchmarks to demonstrate the superiority of our approach. Finally, we analyze the results and provide insights that are valuable for advancing multimodal web-search.",
+        "translated": "在现实世界应用中，多模态大语言模型（MLLMs）需要访问外部知识源，并且必须能够响应动态变化的现实世界信息，以应对用户的信息查询和知识密集型请求。现有方法，如检索增强生成（RAG）方法、搜索代理和配备搜索功能的 MLLMs，通常存在流水线僵化、搜索调用过多以及搜索查询构建不完善的问题，导致效率低下和结果次优。为了解决这些限制，我们提出了 DeepMMSearch-R1，这是首个能够按需进行多轮网页搜索，并为图像和文本搜索工具动态构建查询的多模态大语言模型。具体来说，DeepMMSearch-R1 可以根据输入图像的相关裁剪区域发起网页搜索，从而提高图像搜索的有效性；同时能够根据检索到的信息迭代调整文本搜索查询，实现自我反思和自我修正。我们的方法依赖于一个两阶段的训练流水线：首先进行冷启动阶段的监督微调，然后进行在线强化学习优化。为了训练，我们引入了 DeepMMSearchVQA，这是一个通过自动化流水线与网页搜索工具中的现实世界信息混合生成的新型多模态视觉问答（VQA）数据集。该数据集包含多样化的多跳查询，融合了文本和视觉信息，教导模型何时进行搜索、搜索什么内容、使用哪个搜索工具以及如何对检索到的信息进行推理。我们在多个知识密集型基准上进行了广泛的实验，以验证我们方法的优越性。最后，我们对结果进行了分析，并提供了对多模态网页搜索研究具有重要价值的见解。",
+        "translated_title": "DeepMMSearch-R1：在多模态网页搜索中增强多模态大语言模型",
+        "label": [
+            "多模态推荐",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "论文涉及多模态LLM在搜索中的应用，可能适用于推荐系统。",
+        "relevance_score": 5,
+        "novelty_score": 8,
+        "novelty_reason": "提出多模态LLM动态构建搜索查询的新方法，具有创新性。"
+    },
+    {
+        "title": "CTRL-Rec: Controlling Recommender Systems With Natural Language",
+        "url": "http://arxiv.org/abs/2510.12742v1",
+        "pub_date": "2025-10-14",
+        "summary": "When users are dissatisfied with recommendations from a recommender system, they often lack fine-grained controls for changing them. Large language models (LLMs) offer a solution by allowing users to guide their recommendations through natural language requests (e.g., \"I want to see respectful posts with a different perspective than mine\"). We propose a method, CTRL-Rec, that allows for natural language control of traditional recommender systems in real-time with computational efficiency. Specifically, at training time, we use an LLM to simulate whether users would approve of items based on their language requests, and we train embedding models that approximate such simulated judgments. We then integrate these user-request-based predictions into the standard weighting of signals that traditional recommender systems optimize. At deployment time, we require only a single LLM embedding computation per user request, allowing for real-time control of recommendations. In experiments with the MovieLens dataset, our method consistently allows for fine-grained control across a diversity of requests. In a study with 19 Letterboxd users, we find that CTRL-Rec was positively received by users and significantly enhanced users' sense of control and satisfaction with recommendations compared to traditional controls.",
+        "translated": "当用户对推荐系统提供的推荐结果不满意时，他们通常缺乏对推荐结果进行细粒度调整的控制手段。大语言模型（LLM）提供了一种解决方案，允许用户通过自然语言请求（例如，“我想看到与我的观点不同的尊重性帖子”）来引导推荐结果。我们提出了一种方法 CTRL-Rec，它能够在计算效率的前提下，实现对传统推荐系统的实时自然语言控制。具体而言，在训练阶段，我们使用 LLM 来模拟用户是否会基于他们的语言请求批准某些物料，并训练嵌入模型以逼近这种模拟的判断结果。随后，我们将这些基于用户请求的预测结果整合到传统推荐系统优化的标准信号加权中。在部署阶段，我们仅需为每个用户请求进行一次 LLM 嵌入计算，从而实现实时的推荐控制。在 MovieLens 数据集上的实验表明，我们的方法在各种请求下都能实现一致的细粒度控制。在与 19 位 Letterboxd 用户进行的研究中，我们发现 CTRL-Rec 得到了用户的积极反馈，并显著增强了用户对推荐结果的控制感和满意度，相比传统的控制方式。",
+        "translated_title": "CTRL-Rec：用自然语言控制推荐系统",
+        "label": [
+            "LLM生成式推荐",
+            "精排"
+        ],
+        "label_reason": "结合LLM实现自然语言控制推荐结果，增强用户控制感和满意度",
+        "relevance_score": 8,
+        "novelty_score": 9,
+        "novelty_reason": "首次将LLM用于实时推荐控制，方法新颖且有效"
+    },
+    {
+        "title": "SAIL-Embedding Technical Report: Omni-modal Embedding Foundation Model",
+        "url": "http://arxiv.org/abs/2510.12709v2",
+        "pub_date": "2025-10-14",
+        "summary": "Multimodal embedding models aim to yield informative unified representations that empower diverse cross-modal tasks. Despite promising developments in the evolution from CLIP-based dual-tower architectures to large vision-language models, prior works still face unavoidable challenges in real-world applications and business scenarios, such as the limited modality support, unstable training mechanisms, and industrial domain gaps. In this work, we introduce SAIL-Embedding, an omni-modal embedding foundation model that addresses these issues through tailored training strategies and architectural design. In the optimization procedure, we propose a multi-stage training scheme to boost the multifaceted effectiveness of representation learning. Specifically, the content-aware progressive training aims to enhance the model's adaptability to diverse downstream tasks and master enriched cross-modal proficiency. The collaboration-aware recommendation enhancement training further adapts multimodal representations for recommendation scenarios by distilling knowledge from sequence-to-item and ID-to-item embeddings while mining user historical interests. Concurrently, we develop the stochastic specialization and dataset-driven pattern matching to strengthen model training flexibility and generalizability. Experimental results show that SAIL-Embedding achieves SOTA performance compared to other methods in different retrieval tasks. In online experiments across various real-world scenarios integrated with our model, we observe a significant increase in Lifetime (LT), which is a crucial indicator for the recommendation experience. For instance, the model delivers the 7-day LT gain of +0.5% in the Douyin-Selected scenario. For the Douyin feed rank model, the match features produced by SAIL-Embedding yield a +0.1% AUC gain.",
+        "translated": "多模态嵌入模型旨在生成具有信息量的统一表示，以支持多种跨模态任务。尽管从基于CLIP的双塔架构发展到大视觉-语言模型已取得令人期待的进展，但先前的工作在实际应用和业务场景中仍面临不可避免的挑战，如模态支持有限、训练机制不稳定以及与工业领域的差距。在本文中，我们提出了 SAIL-Embedding，这是一个全模态嵌入基础模型，通过定制化的训练策略和架构设计解决上述问题。在优化过程中，我们提出了一种多阶段训练方案，以提升表示学习在多方面上的有效性。具体而言，内容感知的渐进式训练旨在增强模型对下游任务的适应能力，并掌握丰富的跨模态能力。协作感知的推荐增强训练则通过从序列到物料和ID到物料的嵌入中提炼知识，同时挖掘用户的历史兴趣，进一步将多模态表示适配到推荐场景。与此同时，我们开发了随机专业化和数据集驱动的模式匹配方法，以增强模型训练的灵活性和泛化能力。实验结果表明，SAIL-Embedding在不同检索任务中相较其他方法实现了最先进的（SOTA）性能。在多个实际场景中与我们的模型集成进行的在线实验中，我们观察到用户生命周期（Lifetime, LT）有显著提升，这是衡量推荐体验的关键指标。例如，在Douyin-Selected场景中，模型带来了7天LT指标+0.5%的增长。对于Douyin的流推荐排序模型，SAIL-Embedding生成的匹配特征带来了+0.1%的AUC提升。",
+        "translated_title": "SAIL-Embedding 技术报告：通用模态嵌入基础模型",
+        "label": [
+            "多模态推荐",
+            "精排",
+            "序列推荐"
+        ],
+        "label_reason": "多模态嵌入模型用于推荐场景，结合序列建模与ID建模",
+        "relevance_score": 8,
+        "novelty_score": 8,
+        "novelty_reason": "提出多阶段训练策略和模式匹配方法，提升模型灵活性和表现"
+    },
+    {
+        "title": "The Role of Parametric Injection-A Systematic Study of Parametric\n  Retrieval-Augmented Generation",
+        "url": "http://arxiv.org/abs/2510.12668v1",
+        "pub_date": "2025-10-14",
+        "summary": "Retrieval-augmented generation (RAG) enhances large language models (LLMs) by retrieving external documents. As an emerging form of RAG, parametric retrieval-augmented generation (PRAG) encodes documents as model parameters (i.e., LoRA modules) and injects these representations into the model during inference, enabling interaction between the LLM and documents at parametric level. Compared with directly placing documents in the input context, PRAG is more efficient and has the potential to offer deeper model-document interaction. Despite its growing attention, the mechanism underlying parametric injection remains poorly understood. In this work, we present a systematic study of PRAG to clarify the role of parametric injection, showing that parameterized documents capture only partial semantic information of documents, and relying on them alone yields inferior performance compared to interaction at text level. However, these parametric representations encode high-level document information that can enhance the model's understanding of documents within the input context. When combined parameterized documents with textual documents, the model can leverage relevant information more effectively and become more robust to noisy inputs, achieving better performance than either source alone. We recommend jointly using parameterized and textual documents and advocate for increasing the information content of parametric representations to advance PRAG.",
+        "translated": "检索增强生成（RAG）通过检索外部文档来增强大语言模型（LLM）。作为一种新兴形式的RAG，参数化检索增强生成（PRAG）将文档编码为模型参数（即LoRA模块），并在推理过程中将这些表示注入模型，从而在参数层面实现LLM与文档之间的交互。与直接将文档放入输入上下文相比，PRAG更加高效，并且有望提供更深层次的模型-文档交互。尽管PRAG已引起越来越多的关注，但其参数注入机制仍不明确。在本工作中，我们对PRAG进行了系统研究，以阐明参数注入的作用，表明参数化的文档仅捕捉了文档的部分语义信息，单独依赖它们会导致性能不如文本层面的交互。然而，这些参数表示编码了文档的高层信息，可以增强模型对输入上下文中文档的理解。将参数化文档与文本文档结合使用时，模型能够更有效地利用相关信息，并对输入中的噪声具有更强的鲁棒性，从而在性能上优于任一单独来源。我们建议联合使用参数化文档与文本文档，并倡导提升参数表示的信息量以推动PRAG的发展。",
+        "translated_title": "The Role of Parametric Injection—A Systematic Study of Parametric Retrieval-Augmented Generation\n\n参数注入的作用——参数化检索增强生成的系统研究",
+        "label": [
+            "LLM生成式推荐"
+        ],
+        "label_reason": "论文研究PRAG在生成式模型中的作用，可能用于生成式推荐系统。",
+        "relevance_score": 5,
+        "novelty_score": 7,
+        "novelty_reason": "系统性研究PRAG机制，提出参数化文档与文本文档结合的新方法。"
+    },
+    {
+        "title": "SMILE: SeMantic Ids Enhanced CoLd Item Representation for Click-through\n  Rate Prediction in E-commerce SEarch",
+        "url": "http://arxiv.org/abs/2510.12604v1",
+        "pub_date": "2025-10-14",
+        "summary": "With the rise of modern search and recommendation platforms, insufficient collaborative information of cold-start items exacerbates the Matthew effect of existing platform items, challenging platform diversity and becoming a longstanding issue. Existing methods align items' side content with collaborative information to transfer collaborative signals from high-popularity items to cold-start items. However, these methods fail to account for the asymmetry between collaboration and content, nor the fine-grained differences among items. To address these issues, we propose SMILE, an item representation enhancement approach based on fused alignment of semantic IDs. Specifically, we use RQ-OPQ encoding to quantize item content and collaborative information, followed by a two-step alignment: RQ encoding transfers shared collaborative signals across items, while OPQ encoding learns differentiated information of items. Comprehensive offline experiments on large-scale industrial datasets demonstrate superiority of SMILE, and rigorous online A/B tests confirm statistically significant improvements: item CTR +1.66%, buyers +1.57%, and order volume +2.17%.",
+        "translated": "随着现代搜索与推荐系统的兴起，冷启动物料的协同信息不足加剧了平台现有物料的马太效应，挑战平台多样性，并成为一个长期存在的问题。现有方法将物料的侧边内容与协同信息对齐，以将协同信号从高热度物料转移到冷启动物料。然而，这些方法未能考虑协同与内容之间的不对称性，也未考虑物料之间的细粒度差异。为了解决这些问题，我们提出了 SMILE，一种基于语义 ID 融合对齐的物料表示增强方法。具体而言，我们使用 RQ-OPQ 编码对物料内容和协同信息进行量化，随后进行两步对齐：RQ 编码跨物料传递共享的协同信号，而 OPQ 编码学习物料的差异化信息。在大规模工业数据集上的全面离线实验验证了 SMILE 的优越性，严格的在线 A/B 测试也确认了其具有统计显著性的提升效果：物料点击率提升 1.66%，买家数量增加 1.57%，订单量增长 2.17%。",
+        "translated_title": "SMILE：语义ID增强的冷启动物料表征用于电商搜索中的点击率预测",
+        "label": [
+            "精排",
+            "冷启动",
+            "General Recommendation Techniques",
+            "Click-through Rate Prediction"
+        ],
+        "label_reason": "论文聚焦于冷启动商品的CTR预测，属于推荐系统核心问题",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出了基于语义ID融合对齐的新方法，改进了冷启动建模"
+    },
+    {
+        "title": "Leveraging Language Semantics for Collaborative Filtering with TextGCN\n  and TextGCN-MLP: Zero-Shot vs In-Domain Performance",
+        "url": "http://arxiv.org/abs/2510.12461v1",
+        "pub_date": "2025-10-14",
+        "summary": "In recent years, various approaches have been proposed to leverage large language models (LLMs) for incorporating textual information about items into recommender systems. Existing methods primarily focus on either fine-tuning LLMs to generate recommendations or integrating LLM-based embeddings into downstream models. In this work, we follow the latter direction and propose \\textbf{TextGCN}, which applies parameter-free graph convolution layers directly over LLM-based item-title embeddings, instead of learning ID-based embeddings as in traditional methods. By combining language semantics with graph message passing, this architecture achieves state-of-the-art zero-shot performance, significantly outperforming prior approaches. Furthermore, we introduce \\textbf{TextGCN-MLP}, which extends TextGCN with a trainable multilayer perceptron trained using a contrastive loss, achieving state-of-the-art in-domain performance on recommendation benchmarks. However, the zero-shot performance of TextGCN-MLP remains lower than that of TextGCN, highlighting the trade-off between in-domain specialization and zero-shot generalization. We release our code on github at \\href{https://github.com/ChernovAndrey/TFCE}{github.com/ChernovAndrey/TFCE}.",
+        "translated": "近年来，各种方法被提出以利用大语言模型（LLMs）将物品的文本信息引入推荐系统。现有方法主要集中在两个方面：一是微调LLMs以生成推荐结果，二是将基于LLM的嵌入向量整合到下游模型中。在本工作中，我们遵循后者，并提出了**TextGCN**，该方法直接在基于LLM的物品标题嵌入上应用无参数图卷积层，而不是像传统方法那样学习基于ID的嵌入。通过将语言语义与图消息传递相结合，该架构实现了最先进的零样本性能，显著优于先前的方法。此外，我们引入了**TextGCN-MLP**，该方法通过对比损失训练一个可训练的多层感知机（multilayer perceptron）来扩展TextGCN，在推荐基准测试中实现了最先进的域内性能。然而，TextGCN-MLP的零样本性能仍然低于TextGCN，突显了域内专业化与零样本泛化之间的权衡。我们的代码已发布在github上：\\href{https://github.com/ChernovAndrey/TFCE}{github.com/ChernovAndrey/TFCE}。",
+        "translated_title": "利用语言语义进行协同过滤的推荐系统：TextGCN与TextGCN-MLP的零样本与领域内性能对比",
+        "label": [
+            "图神经网络推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "结合图神经网络与文本语义，改进协同过滤方法。",
+        "relevance_score": 8,
+        "novelty_score": 8,
+        "novelty_reason": "提出参数无关的图卷积方法，结合对比学习提升推荐效果。"
+    },
+    {
+        "title": "A Hierarchical Quantized Tokenization Framework for Task-Adaptive Graph\n  Representation Learning",
+        "url": "http://arxiv.org/abs/2510.12369v1",
+        "pub_date": "2025-10-14",
+        "summary": "Recent progress in language and vision foundation models demonstrates the importance of discrete token interfaces that transform complex inputs into compact sequences for large-scale modeling. Extending this paradigm to graphs requires a tokenization scheme that handles non-Euclidean structures and multi-scale dependencies efficiently. Existing approaches to graph tokenization, linearized, continuous, and quantized, remain limited in adaptability and efficiency. In particular, most current quantization-based tokenizers organize hierarchical information in fixed or task-agnostic ways, which may either over-represent or under-utilize structural cues, and lack the ability to dynamically reweight contributions from different levels without retraining the encoder. This work presents a hierarchical quantization framework that introduces a self-weighted mechanism for task-adaptive aggregation across multiple scales. The proposed method maintains a frozen encoder while modulating information flow through a lightweight gating process, enabling parameter-efficient adaptation to diverse downstream tasks. Experiments on benchmark datasets for node classification and link prediction demonstrate consistent improvements over strong baselines under comparable computational budgets.",
+        "translated": "近期在语言和视觉基础模型方面的进展表明，离散的token接口在将复杂输入转化为紧凑序列以进行大规模建模中的重要性。将这一范式扩展到图结构需要一种能够高效处理非欧几里得结构和多尺度依赖关系的token化方案。现有的图token化方法，包括线性化、连续化和量化方法，在适应性和效率方面仍存在限制。特别是，大多数当前基于量化的tokenizer以固定或任务无关的方式组织层次信息，这可能导致对结构线索的过度表示或利用不足，并且无法在不重新训练编码器的情况下动态调整不同层次的贡献权重。本文提出了一种层次量化框架，引入了一种自加权机制，用于在多个尺度上进行任务自适应的聚合。所提出的方法在保持冻结编码器的同时，通过轻量级的门控过程调节信息流动，从而在不同下游任务中实现参数高效的适应。在节点分类和链接预测基准数据集上的实验表明，在可比较的计算预算下，该方法在多个任务中均优于强大的基线模型。",
+        "translated_title": "一种面向任务自适应图表示学习的层次量化分词框架",
+        "label": [],
+        "label_reason": "论文聚焦图表示学习，未明确涉及推荐系统环节",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "提出自加权机制改进图量化方法，有一定创新性"
+    },
+    {
+        "title": "Simple Projection Variants Improve ColBERT Performance",
+        "url": "http://arxiv.org/abs/2510.12327v1",
+        "pub_date": "2025-10-14",
+        "summary": "Multi-vector dense retrieval methods like ColBERT systematically use a single-layer linear projection to reduce the dimensionality of individual vectors. In this study, we explore the implications of the MaxSim operator on the gradient flows of the training of multi-vector models and show that such a simple linear projection has inherent, if non-critical, limitations in this setting. We then discuss the theoretical improvements that could result from replacing this single-layer projection with well-studied alternative feedforward linear networks (FFN), such as deeper, non-linear FFN blocks, GLU blocks, and skip-connections, could alleviate these limitations. Through the design and systematic evaluation of alternate projection blocks, we show that better-designed final projections positively impact the downstream performance of ColBERT models. We highlight that many projection variants outperform the original linear projections, with the best-performing variants increasing average performance on a range of retrieval benchmarks across domains by over 2 NDCG@10 points. We then conduct further exploration on the individual parameters of these projections block in order to understand what drives this empirical performance, highlighting the particular importance of upscaled intermediate projections and residual connections. As part of these ablation studies, we show that numerous suboptimal projection variants still outperform the traditional single-layer projection across multiple benchmarks, confirming our hypothesis. Finally, we observe that this effect is consistent across random seeds, further confirming that replacing the linear layer of ColBERT models is a robust, drop-in upgrade.",
+        "translated": "诸如 ColBERT 等多向量密集召回方法通常使用单层线性投影来降低单个向量的维度。在本研究中，我们探讨了 MaxSim 运算符在多向量模型训练过程中的梯度流动所带来的影响，并表明在这一设置下，这种简单的线性投影存在固有但非关键的限制。我们进一步讨论了理论上的改进，即将该单层投影替换为已被广泛研究的替代前馈线性网络（FFN），例如更深的非线性 FFN 模块、GLU 模块以及跳跃连接（skip-connections），从而缓解这些限制。通过对替代投影模块的设计及其系统性评估，我们证明了更合理设计的最终投影对 ColBERT 模型的下游性能具有积极影响。我们发现，许多投影变体优于原始的线性投影，其中表现最好的变体在多个跨领域的召回基准上将平均性能提升了超过 2 个 NDCG@10 分数点。随后，我们对这些投影模块的单个参数进行了进一步探索，以理解其经验性能背后的关键因素，强调了中间投影的扩展（upscaled）和残差连接的特别重要性。作为消融实验的一部分，我们展示了即使许多次优的投影变体，也能在多个基准上优于传统的单层投影，从而验证了我们的假设。最后，我们观察到这一效果在不同随机种子之间是一致的，进一步确认了替换 ColBERT 模型中的线性层是一种鲁棒且可直接替换的性能提升方式。",
+        "translated_title": "简单投影变体提升ColBERT性能",
+        "label": [],
+        "label_reason": "论文聚焦于密集检索方法优化，不直接涉及推荐系统",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "提出改进投影层的结构，有一定方法创新"
+    },
+    {
+        "title": "Causal Inspired Multi Modal Recommendation",
+        "url": "http://arxiv.org/abs/2510.12325v1",
+        "pub_date": "2025-10-14",
+        "summary": "Multimodal recommender systems enhance personalized recommendations in e-commerce and online advertising by integrating visual, textual, and user-item interaction data. However, existing methods often overlook two critical biases: (i) modal confounding, where latent factors (e.g., brand style or product category) simultaneously drive multiple modalities and influence user preference, leading to spurious feature-preference associations; (ii) interaction bias, where genuine user preferences are mixed with noise from exposure effects and accidental clicks. To address these challenges, we propose a Causal-inspired multimodal Recommendation framework. Specifically, we introduce a dual-channel cross-modal diffusion module to identify hidden modal confounders, utilize back-door adjustment with hierarchical matching and vector-quantized codebooks to block confounding paths, and apply front-door adjustment combined with causal topology reconstruction to build a deconfounded causal subgraph. Extensive experiments on three real-world e-commerce datasets demonstrate that our method significantly outperforms state-of-the-art baselines while maintaining strong interpretability.",
+        "translated": "多模态推荐系统通过融合视觉、文本和用户-物料交互数据，提升了电子商务和在线广告中的个性化推荐效果。然而，现有方法通常忽略了两种关键偏差：(i) 模态混淆，其中潜在因子（例如品牌风格或产品类别）同时驱动多个模态，并影响用户偏好，导致虚假的特征-偏好关联；(ii) 交互偏差，其中真实的用户偏好与曝光效应和偶然点击带来的噪声混合。为了解决这些挑战，我们提出了一种受因果启发的多模态推荐框架。具体而言，我们引入了一个双通道跨模态扩散模块以识别隐藏的模态混淆因子，利用分层匹配和矢量量化码本进行后门调整以阻断混淆路径，并应用前门调整结合因果拓扑重构，以构建去混淆的因果子图。在三个真实世界电子商务数据集上的广泛实验表明，我们的方法在保持强大可解释性的同时，显著优于最先进的基线方法。",
+        "translated_title": "因果启发的多模态推荐",
+        "label": [
+            "多模态推荐",
+            "因果推理",
+            "推荐系统公平性/可解释性"
+        ],
+        "label_reason": "论文聚焦多模态推荐并引入因果推理解决关键偏差问题。",
+        "relevance_score": 8,
+        "novelty_score": 8,
+        "novelty_reason": "提出双通道跨模态扩散模块和因果拓扑重构，具有显著创新性。"
     }
 ]
