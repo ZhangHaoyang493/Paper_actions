@@ -208,5 +208,171 @@
         "pub_date": "2025-10-02",
         "summary": "We introduce Equilibrium Matching (EqM), a generative modeling framework built from an equilibrium dynamics perspective. EqM discards the non-equilibrium, time-conditional dynamics in traditional diffusion and flow-based generative models and instead learns the equilibrium gradient of an implicit energy landscape. Through this approach, we can adopt an optimization-based sampling process at inference time, where samples are obtained by gradient descent on the learned landscape with adjustable step sizes, adaptive optimizers, and adaptive compute. EqM surpasses the generation performance of diffusion/flow models empirically, achieving an FID of 1.90 on ImageNet 256$\\times$256. EqM is also theoretically justified to learn and sample from the data manifold. Beyond generation, EqM is a flexible framework that naturally handles tasks including partially noised image denoising, OOD detection, and image composition. By replacing time-conditional velocities with a unified equilibrium landscape, EqM offers a tighter bridge between flow and energy-based models and a simple route to optimization-driven inference.",
         "translated": "我们提出了一种名为**均衡匹配**（Equilibrium Matching, EqM）的生成建模框架，其构建基于**均衡动力学**的视角。EqM摒弃了传统扩散模型和基于流的生成模型中所依赖的非均衡、时序条件的动力学，转而学习一个隐式能量景观的**均衡梯度**。通过这种方法，我们可以在推理阶段采用基于优化的采样过程，其中样本通过在所学能量景观上进行梯度下降获得，该过程支持可调节的步长、自适应优化器以及自适应计算能力。从实证结果来看，EqM在生成性能上超越了扩散模型和流模型，在ImageNet 256$\\times$256数据集上达到了1.90的FID分数。EqM在理论上也能够从数据流形中进行学习与采样，具有坚实的理论依据。除生成任务外，EqM还是一种灵活的框架，天然地适用于包括部分噪声图像去噪、分布外（OOD）检测以及图像合成在内的多种任务。通过将时序条件的速度替换为统一的均衡景观，EqM在流模型与基于能量的模型之间架起了更紧密的桥梁，并为实现优化驱动的推理提供了一条简洁的路径。"
+    },
+    {
+        "title": "HyMiRec: A Hybrid Multi-interest Learning Framework for LLM-based\n  Sequential Recommendation",
+        "url": "http://arxiv.org/abs/2510.13738v1",
+        "pub_date": "2025-10-15",
+        "summary": "Large language models (LLMs) have recently demonstrated strong potential for sequential recommendation. However, current LLM-based approaches face critical limitations in modeling users' long-term and diverse interests. First, due to inference latency and feature fetching bandwidth constraints, existing methods typically truncate user behavior sequences to include only the most recent interactions, resulting in the loss of valuable long-range preference signals. Second, most current methods rely on next-item prediction with a single predicted embedding, overlooking the multifaceted nature of user interests and limiting recommendation diversity. To address these challenges, we propose HyMiRec, a hybrid multi-interest sequential recommendation framework, which leverages a lightweight recommender to extracts coarse interest embeddings from long user sequences and an LLM-based recommender to captures refined interest embeddings. To alleviate the overhead of fetching features, we introduce a residual codebook based on cosine similarity, enabling efficient compression and reuse of user history embeddings. To model the diverse preferences of users, we design a disentangled multi-interest learning module, which leverages multiple interest queries to learn disentangles multiple interest signals adaptively, allowing the model to capture different facets of user intent. Extensive experiments are conducted on both benchmark datasets and a collected industrial dataset, demonstrating our effectiveness over existing state-of-the-art methods. Furthermore, online A/B testing shows that HyMiRec brings consistent improvements in real-world recommendation systems.",
+        "translated": "大语言模型（LLMs）最近在序列推荐中展现出强大的潜力。然而，目前基于LLM的方法在建模用户长期和多样化兴趣方面面临关键的限制。首先，由于推理延迟和特征获取带宽的限制，现有方法通常截断用户行为序列，仅包含最近的交互，从而丢失了有价值的长距离偏好信号。其次，大多数当前方法依赖于单一预测嵌入的下一物品预测，忽视了用户兴趣的多面性，限制了推荐的多样性。为了解决这些挑战，我们提出HyMiRec，一种混合多兴趣序列推荐框架，其利用一个轻量级推荐器从长用户序列中提取粗兴趣嵌入，并利用一个基于LLM的推荐器捕捉精兴趣嵌入。为了缓解特征获取带来的开销，我们引入了一个基于余弦相似度的残差码本，从而实现了用户历史嵌入的高效压缩和重复使用。为了建模用户的多样化偏好，我们设计了一个解耦的多兴趣学习模块，该模块利用多个兴趣查询自适应地学习解耦的多个兴趣信号，使得模型能够捕捉用户意图的不同方面。我们在基准数据集和收集的工业数据集上进行了广泛的实验，验证了该方法相较于现有最先进方法的有效性。此外，在线A/B测试表明，HyMiRec在实际推荐系统中带来了持续的性能提升。",
+        "translated_title": "HyMiRec：一种基于大语言模型的序列推荐混合多兴趣学习框架",
+        "label": [
+            "LLM生成式推荐",
+            "序列推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "结合LLM与多兴趣学习的序列推荐框架，直接解决推荐系统核心问题",
+        "relevance_score": 9
+    },
+    {
+        "title": "RAG Meets Temporal Graphs: Time-Sensitive Modeling and Retrieval for\n  Evolving Knowledge",
+        "url": "http://arxiv.org/abs/2510.13590v1",
+        "pub_date": "2025-10-15",
+        "summary": "Knowledge is inherently time-sensitive and continuously evolves over time. Although current Retrieval-Augmented Generation (RAG) systems enrich LLMs with external knowledge, they largely ignore this temporal nature. This raises two challenges for RAG. First, current RAG methods lack effective time-aware representations. Same facts of different time are difficult to distinguish with vector embeddings or conventional knowledge graphs. Second, most RAG evaluations assume a static corpus, leaving a blind spot regarding update costs and retrieval stability as knowledge evolves. To make RAG time-aware, we propose Temporal GraphRAG (TG-RAG), which models external corpora as a bi-level temporal graph consisting of a temporal knowledge graph with timestamped relations and a hierarchical time graph. Multi-granularity temporal summaries are generated for each time node to capture both key events and broader trends at that time. The design supports incremental updates by extracting new temporal facts from the incoming corpus and merging them into the existing graph. The temporal graph explicitly represents identical facts at different times as distinct edges to avoid ambiguity, and the time hierarchy graph allows only generating reports for new leaf time nodes and their ancestors, ensuring effective and efficient updates. During inference, TG-RAG dynamically retrieves a subgraph within the temporal and semantic scope of the query, enabling precise evidence gathering. Moreover, we introduce ECT-QA, a time-sensitive question-answering dataset featuring both specific and abstract queries, along with a comprehensive evaluation protocol designed to assess incremental update capabilities of RAG systems. Extensive experiments show that TG-RAG significantly outperforms existing baselines, demonstrating the effectiveness of our method in handling temporal knowledge and incremental updates.",
+        "translated": "知识本质上是时间敏感的，并且会随着时间不断演化。尽管当前的检索增强生成（RAG）系统通过引入外部知识丰富了大语言模型（LLM），但它们在很大程度上忽视了这种时间特性。这引发了RAG面临的两个挑战。首先，当前的RAG方法缺乏有效的时间感知表示。不同时间下的相同事实，难以通过向量嵌入（embedding）或传统知识图谱进行区分。其次，大多数RAG评估假设语料库是静态的，从而忽略了知识演化过程中的更新成本和检索稳定性问题。为了使RAG具备时间感知能力，我们提出了时序图RAG（Temporal GraphRAG，TG-RAG），该方法将外部语料库建模为一个双层时序图，包含一个具有时间戳关系的时序知识图谱和一个层次化时间图。为每个时间节点生成多粒度时序摘要，以捕捉该时间点的关键事件和更广泛的趋势。该设计通过从新输入的语料中提取新的时序事实并将其合并到现有图中，支持增量更新。时序图显式地将不同时刻的相同事实表示为不同的边，以避免歧义，而时间层次图则仅允许为新的叶子时间节点及其祖先生成报告，从而确保更新的有效性和高效性。在推理阶段，TG-RAG能够动态检索与查询在时间和语义范围内匹配的子图，实现精确的证据收集。此外，我们引入了一个时间敏感的问答数据集ECT-QA，包含具体和抽象的查询，并设计了一套全面的评估协议，用于评估RAG系统的增量更新能力。大量实验表明，TG-RAG显著优于现有基线，验证了我们方法在处理时序知识和增量更新方面的有效性。",
+        "translated_title": "RAG与时间图的结合：面向动态知识的时间敏感建模与召回",
+        "label": [
+            "LLM生成式推荐",
+            "多模态推荐",
+            "推荐系统评估"
+        ],
+        "label_reason": "论文提出时间敏感的RAG方法，适用于生成式推荐中的动态知识建模与评估。",
+        "relevance_score": 7
+    },
+    {
+        "title": "MADREC: A Multi-Aspect Driven LLM Agent for Explainable and Adaptive\n  Recommendation",
+        "url": "http://arxiv.org/abs/2510.13371v1",
+        "pub_date": "2025-10-15",
+        "summary": "Recent attempts to integrate large language models (LLMs) into recommender systems have gained momentum, but most remain limited to simple text generation or static prompt-based inference, failing to capture the complexity of user preferences and real-world interactions. This study proposes the Multi-Aspect Driven LLM Agent MADRec, an autonomous LLM-based recommender that constructs user and item profiles by unsupervised extraction of multi-aspect information from reviews and performs direct recommendation, sequential recommendation, and explanation generation. MADRec generates structured profiles via aspect-category-based summarization and applies Re-Ranking to construct high-density inputs. When the ground-truth item is missing from the output, the Self-Feedback mechanism dynamically adjusts the inference criteria. Experiments across multiple domains show that MADRec outperforms traditional and LLM-based baselines in both precision and explainability, with human evaluation further confirming the persuasiveness of the generated explanations.",
+        "translated": "近期尝试将大语言模型（LLMs）集成到推荐系统中的工作逐渐增多，但大多数仍局限于简单的文本生成或基于静态提示的推理，未能捕捉用户偏好和现实世界交互的复杂性。本研究提出多方面驱动的大语言模型代理 MADRec，这是一种基于大语言模型的自主推荐系统，通过从评论中无监督提取多方面信息构建用户和物料画像，并执行直接推荐、序列推荐以及解释生成。MADRec 通过基于方面类别的摘要生成结构化画像，并应用重排（Re-Ranking）构造高密度输入。当输出中缺少真实物料时，自反馈（Self-Feedback）机制会动态调整推理标准。跨多个领域的实验表明，MADRec 在准确性和可解释性方面均优于传统方法和基于 LLM 的基线模型，人工评估进一步验证了所生成解释的说服力。",
+        "translated_title": "MADREC：一种面向多方面驱动的可解释且自适应的推荐大语言模型代理",
+        "label": [
+            "LLM生成式推荐",
+            "精排",
+            "重排",
+            "推荐系统可解释性"
+        ],
+        "label_reason": "基于LLM的推荐与可解释性，融合重排与反馈机制",
+        "relevance_score": 9
+    },
+    {
+        "title": "Improving Visual Recommendation on E-commerce Platforms Using\n  Vision-Language Models",
+        "url": "http://arxiv.org/abs/2510.13359v1",
+        "pub_date": "2025-10-15",
+        "summary": "On large-scale e-commerce platforms with tens of millions of active monthly users, recommending visually similar products is essential for enabling users to efficiently discover items that align with their preferences. This study presents the application of a vision-language model (VLM) -- which has demonstrated strong performance in image recognition and image-text retrieval tasks -- to product recommendations on Mercari, a major consumer-to-consumer marketplace used by more than 20 million monthly users in Japan. Specifically, we fine-tuned SigLIP, a VLM employing a sigmoid-based contrastive loss, using one million product image-title pairs from Mercari collected over a three-month period, and developed an image encoder for generating item embeddings used in the recommendation system. Our evaluation comprised an offline analysis of historical interaction logs and an online A/B test in a production environment. In offline analysis, the model achieved a 9.1% improvement in nDCG@5 compared with the baseline. In the online A/B test, the click-through rate improved by 50% whereas the conversion rate improved by 14% compared with the existing model. These results demonstrate the effectiveness of VLM-based encoders for e-commerce product recommendations and provide practical insights into the development of visual similarity-based recommendation systems.",
+        "translated": "在拥有数千万活跃月活用户的大型电商平台中，推荐视觉相似产品对于帮助用户高效发现与其偏好一致的物料至关重要。本研究提出了将视觉-语言模型（VLM）应用于Mercari平台的产品推荐，其中VLM已在图像识别和图文检索任务中展现出卓越的性能。Mercari是日本一个重要的C2C电商平台，月活跃用户超过2000万。具体而言，我们使用在三个月内从Mercari收集的包含一百万对产品图像和标题的数据，对采用基于Sigmoid的对比损失的VLM SigLIP进行了微调，并开发了用于生成推荐系统中物料嵌入表示的图像编码器。我们的评估包括对历史交互日志的离线分析以及在生产环境中进行的在线A/B测试。离线分析结果显示，与基线模型相比，该模型在nDCG@5指标上提升了9.1%。在线A/B测试中，点击率提升了50%，转化率提升了14%。这些结果证明了基于VLM编码器在电商产品推荐中的有效性，并为视觉相似性推荐系统的发展提供了实践洞见。",
+        "translated_title": "使用视觉-语言模型改进电子商务平台的视觉推荐",
+        "label": [
+            "多模态推荐",
+            "精排",
+            "图像相似性推荐"
+        ],
+        "label_reason": "论文将视觉语言模型用于电商推荐，提升图像相似性产品推荐效果",
+        "relevance_score": 8
+    },
+    {
+        "title": "ChatR1: Reinforcement Learning for Conversational Reasoning and\n  Retrieval Augmented Question Answering",
+        "url": "http://arxiv.org/abs/2510.13312v1",
+        "pub_date": "2025-10-15",
+        "summary": "We present ChatR1, a reasoning framework based on reinforcement learning (RL) for conversational question answering (CQA). Reasoning plays an important role in CQA, where user intent evolves across dialogue turns, and utterances are often underspecified, requiring contextual interpretation, query reformulation, and dynamic coordination between retrieval and generation. Unlike static `rewrite, retrieve, and generate' pipelines, ChatR1 interleaves search and reasoning across turns, enabling exploratory and adaptive behaviors learned through RL. To address the challenge of sparse and delayed rewards in RL, we propose an intent-aware reward that provides turn-level feedback by aligning retrieval and reasoning with evolving user goals. Our proposed ChatR1 demonstrates strong performance on both 3B and 7B model backbones, outperforming competitive models on five CQA datasets, measured by different metrics (F1, BERTScore, and LLM-as-judge). We include a diverse set of CQA datasets to cover topic shifts, evolving intents, mixed-initiative dialogues, and multi-document grounding, testing ChatR1's performance from various aspects. Ablation studies confirm the effectiveness of the intent-aware reward. Our analyses further reveal diverse reasoning trajectories and effective use of the search tool. ChatR1 also generalizes robustly across domains, demonstrating that RL-based reasoning enables more flexible and context-sensitive behavior than static CQA pipelines.",
+        "translated": "我们提出了 ChatR1，一种基于强化学习（RL）的对话式问答（CQA）推理框架。推理在 CQA 中起着重要作用，因为用户意图会随着对话轮次而演变，且对话内容通常信息不完整，需要上下文解释、查询重构，以及检索与生成之间的动态协调。与静态的“重写、检索、生成”流水线不同，ChatR1 在对话轮次中交替进行搜索和推理，使得通过 RL 学到的探索性和适应性行为得以实现。为了解决 RL 中稀疏和延迟奖励的挑战，我们提出了一种意图感知的奖励机制，通过将检索和推理与用户意图的演变对齐，提供轮次级的反馈。我们提出的 ChatR1 在 3B 和 7B 模型主干上均表现出色，在五个 CQA 数据集上的表现优于多个竞争模型，评估指标包括 F1、BERTScore 和以大语言模型作为评判者。我们纳入了多样化的 CQA 数据集，涵盖主题转换、意图演变、混合倡议对话以及多文档依据，从多个方面测试了 ChatR1 的性能。消融实验验证了意图感知奖励的有效性。进一步的分析还揭示了多样化的推理轨迹和对搜索工具的有效利用。ChatR1 在多个领域上也表现出良好的泛化能力，表明基于 RL 的推理能够实现比静态 CQA 流水线更为灵活和上下文敏感的行为。",
+        "translated_title": "ChatR1：会话推理与检索增强问答的强化学习方法",
+        "label": [
+            "LLM生成式推荐",
+            "序列推荐"
+        ],
+        "label_reason": "论文涉及对话式问答与生成式模型，适用于推荐中的序列建模和生成式推荐。",
+        "relevance_score": 7
+    },
+    {
+        "title": "Beyond Static LLM Policies: Imitation-Enhanced Reinforcement Learning\n  for Recommendation",
+        "url": "http://arxiv.org/abs/2510.13229v1",
+        "pub_date": "2025-10-15",
+        "summary": "Recommender systems (RecSys) have become critical tools for enhancing user engagement by delivering personalized content across diverse digital platforms. Recent advancements in large language models (LLMs) demonstrate significant potential for improving RecSys, primarily due to their exceptional generalization capabilities and sophisticated contextual understanding, which facilitate the generation of flexible and interpretable recommendations. However, the direct deployment of LLMs as primary recommendation policies presents notable challenges, including persistent latency issues stemming from frequent API calls and inherent model limitations such as hallucinations and biases. To address these issues, this paper proposes a novel offline reinforcement learning (RL) framework that leverages imitation learning from LLM-generated trajectories. Specifically, inverse reinforcement learning is employed to extract robust reward models from LLM demonstrations. This approach negates the need for LLM fine-tuning, thereby substantially reducing computational overhead. Simultaneously, the RL policy is guided by the cumulative rewards derived from these demonstrations, effectively transferring the semantic insights captured by the LLM. Comprehensive experiments conducted on two benchmark datasets validate the effectiveness of the proposed method, demonstrating superior performance when compared against state-of-the-art RL-based and in-context learning baselines. The code can be found at https://github.com/ArronDZhang/IL-Rec.",
+        "translated": "推荐系统（Recommender systems, RecSys）已成为在各种数字平台上提供个性化内容以提升用户参与度的关键工具。近年来，大语言模型（Large language models, LLMs）在推荐系统中的应用展现出显著潜力，主要归功于其出色的泛化能力和复杂上下文理解能力，这些能力有助于生成灵活且可解释的推荐结果。然而，直接将LLMs作为主要的推荐策略部署存在诸多挑战，包括由于频繁调用API而导致的持续性延迟问题，以及模型本身固有的局限性，如幻觉和偏见等。为了解决这些问题，本文提出了一种新颖的离线强化学习（Reinforcement learning, RL）框架，该框架通过模仿学习LLM生成的轨迹来实现。具体而言，采用逆强化学习（inverse reinforcement learning）方法从LLM的演示中提取稳健的奖励模型。这种方法避免了对LLM进行微调的需求，从而显著降低了计算开销。同时，强化学习策略通过这些演示所获得的累积奖励进行指导，有效地将LLM捕捉到的语义信息迁移过来。在两个基准数据集上进行的全面实验验证了所提方法的有效性，其性能优于最先进的基于RL的和上下文学习的基线方法。代码可在 https://github.com/ArronDZhang/IL-Rec 找到。",
+        "translated_title": "超越静态大语言模型策略：基于模仿增强的推荐系统强化学习方法",
+        "label": [
+            "LLM生成式推荐",
+            "精排",
+            "通用推荐技术"
+        ],
+        "label_reason": "结合LLM与强化学习优化推荐策略，涉及生成式推荐和策略优化",
+        "relevance_score": 9
+    },
+    {
+        "title": "LLM-guided Hierarchical Retrieval",
+        "url": "http://arxiv.org/abs/2510.13217v1",
+        "pub_date": "2025-10-15",
+        "summary": "Modern IR systems are increasingly tasked with answering complex, multi-faceted queries that require deep reasoning rather than simple keyword or semantic matching. While LLM-based IR has shown great promise, the prevailing retrieve-then-rerank paradigm inherits the limitations of embedding-based retrieval; parametric generative approaches are difficult to update with new information; and long-context methods that place the entire corpus in context are computationally infeasible for large document collections. To address these challenges, we introduce LATTICE, a hierarchical retrieval framework that enables an LLM to reason over and navigate large corpora with logarithmic search complexity by imposing a semantic tree structure on the corpus. Our approach consists of two stages: (1) an offline phase that organizes the corpus into a semantic hierarchy via either a bottom-up agglomerative strategy or a top-down divisive strategy using multi-level summaries and (2) an online traversal phase where a search LLM navigates this tree. A central challenge in such LLM-guided search is that the model's relevance judgments are noisy, context-dependent, and unaware of the hierarchy, making cross-branch and cross-level comparisons difficult. To overcome this, we propose a traversal algorithm that estimates calibrated latent relevance scores from local LLM outputs and aggregates them into a global path relevance metric. Our training-free framework achieves state-of-the-art zero-shot performance on the reasoning-intensive BRIGHT benchmark, demonstrating up to 9% improvement in Recall@100 and 5% in nDCG@10 over the next best zero-shot baseline. Furthermore, compared to the fine-tuned SOTA method DIVER-v2, LATTICE attains comparable results on BRIGHT subsets that use a static corpus for evaluation.",
+        "translated": "现代推荐系统日益需要处理复杂的、多方面的查询，这些查询需要深入推理，而不仅仅是简单的关键词或语义匹配。尽管基于大语言模型（LLM）的推荐系统展现出了巨大潜力，但主流的先召回后重排范式继承了基于嵌入的召回方法的局限性；参数化的生成式方法难以通过新信息进行更新；而将整个语料库放入上下文中的长上下文方法在面对大规模文档集合时计算上不可行。为了解决这些挑战，我们引入了 LATTICE，一个分层召回框架，通过在语料库上施加语义树结构，使 LLM 能够以对数级搜索复杂度对大规模语料库进行推理和导航。我们的方法包含两个阶段：（1）一个离线阶段，通过自底向上的聚合策略或自顶向下的划分策略，利用多层级摘要将语料库组织成语义层次结构；（2）一个在线遍历阶段，其中搜索 LLM 遍历该树结构。在这种由 LLM 指导的搜索中，一个核心挑战是模型的相关性判断是嘈杂的、上下文依赖的，并且不了解层次结构，从而使得跨分支和跨层级的比较变得困难。为了解决这一问题，我们提出了一种遍历算法，该算法从局部 LLM 输出中估计校准后的隐相关性得分，并将其聚合为一个全局路径相关性指标。我们的无训练框架在推理密集型的 BRIGHT 基准上实现了最先进的零样本性能，其 Recall@100 和 nDCG@10 指标分别比次优的零样本基线提升了最高 9% 和 5%。此外，与微调后的最先进方法 DIVER-v2 相比，LATTICE 在使用静态语料库进行评估的 BRIGHT 子集上达到了可比的结果。",
+        "translated_title": "LLM引导的层次化召回",
+        "label": [
+            "召回（Recall）",
+            "多模态推荐（Multimodal Recommendation）",
+            "LLM生成式推荐（LLM-based Generative Recommendation）"
+        ],
+        "label_reason": "论文提出基于LLM的分层召回框架，适用于信息检索并间接可用于推荐",
+        "relevance_score": 7
+    },
+    {
+        "title": "ReMindRAG: Low-Cost LLM-Guided Knowledge Graph Traversal for Efficient\n  RAG",
+        "url": "http://arxiv.org/abs/2510.13193v1",
+        "pub_date": "2025-10-15",
+        "summary": "Knowledge graphs (KGs), with their structured representation capabilities, offer promising avenue for enhancing Retrieval Augmented Generation (RAG) systems, leading to the development of KG-RAG systems. Nevertheless, existing methods often struggle to achieve effective synergy between system effectiveness and cost efficiency, leading to neither unsatisfying performance nor excessive LLM prompt tokens and inference time. To this end, this paper proposes REMINDRAG, which employs an LLM-guided graph traversal featuring node exploration, node exploitation, and, most notably, memory replay, to improve both system effectiveness and cost efficiency. Specifically, REMINDRAG memorizes traversal experience within KG edge embeddings, mirroring the way LLMs \"memorize\" world knowledge within their parameters, but in a train-free manner. We theoretically and experimentally confirm the effectiveness of REMINDRAG, demonstrating its superiority over existing baselines across various benchmark datasets and LLM backbones. Our code is available at https://github.com/kilgrims/ReMindRAG.",
+        "translated": "知识图谱（KGs）凭借其结构化表示能力，为增强检索增强生成（RAG）系统提供了有前景的路径，从而推动了KG-RAG系统的出现。然而，现有方法通常难以在系统效果和成本效率之间实现有效的协同，导致性能不佳或大语言模型（LLM）提示词数量和推理时间过多。为此，本文提出REMINDRAG，其采用了一种由LLM引导的图遍历方法，包含节点探索、节点利用，以及最重要的是记忆回放，从而同时提升系统的有效性和成本效率。具体而言，REMINDRAG在KG的边嵌入中记忆遍历经验，其方式类似于LLMs在其参数中“记忆”世界知识，但无需训练。我们从理论和实验两个方面验证了REMINDRAG的有效性，结果表明其在多种基准数据集和LLM主干模型上均优于现有基线方法。我们的代码可在 https://github.com/kilgrims/ReMindRAG 获取。",
+        "translated_title": "ReMindRAG：高效RAG的低成本大语言模型引导的知识图谱遍历方法",
+        "label": [
+            "LLM生成式推荐",
+            "多模态推荐"
+        ],
+        "label_reason": "论文涉及LLM引导的知识图谱遍历，适用于生成式推荐中的信息检索优化。",
+        "relevance_score": 7
+    },
+    {
+        "title": "Retrieval-in-the-Chain: Bootstrapping Large Language Models for\n  Generative Retrieval",
+        "url": "http://arxiv.org/abs/2510.13095v1",
+        "pub_date": "2025-10-15",
+        "summary": "Generative retrieval (GR) is an emerging paradigm that leverages large language models (LLMs) to autoregressively generate document identifiers (docids) relevant to a given query. Prior works have focused on leveraging the generative capabilities of LLMs to improve GR, while overlooking that their reasoning capabilities could likewise help. This raises a key question: Can explicit reasoning benefit GR? To investigate, we first conduct a preliminary study where an LLM is prompted to generate free-form chain-of-thought (CoT) reasoning before performing constrained docid decoding. Although this method outperforms standard GR, the generated reasoning tends to be verbose and poorly aligned with the docid space. These limitations motivate the development of a reasoning mechanism better tailored to GR.   Therefore, we propose Reason-for-Retrieval (R4R), a reasoning-augmented framework for GR that converts free-form CoT reasoning into a compact, structured format, and iteratively refines the reasoning during the retrieval process. R4R augments an existing GR method by leveraging a reasoning-capable LLM that has been instruction-tuned for GR. At inference time, R4R first uses the LLM to generate an initial structured reasoning; then the same LLM alternates between (i) constrained decoding with the chosen GR method to produce candidate docids and (ii) updating the reasoning based on retrieval results to improve the next round. R4R does not require additional models or training, and instead a single LLM serves as both the reasoning generator and the retriever. Extensive experiments on Natural Questions, MS MARCO, and a real-world item-search benchmark validate the effectiveness of R4R.",
+        "translated": "生成式召回（GR）是一种新兴范式，它利用大语言模型（LLM）对给定查询进行自回归地生成相关文档标识符（docids）。此前的研究主要关注于利用LLM的生成能力来提升GR，而忽略了其推理能力同样可以提供帮助。这引发了一个关键问题：显式的推理是否能提升GR？为了探究这一问题，我们首先进行了一项初步研究，其中LLM被提示在进行受限docids解码之前生成自由形式的思维链（CoT）推理。尽管这种方法优于标准的GR方法，但生成的推理内容往往冗长，并且与docid空间的对齐效果较差。这些限制促使我们开发一种更加契合GR的推理机制。因此，我们提出了Reason-for-Retrieval（R4R），这是一个增强推理能力的GR框架，它将自由形式的CoT推理转换为一种紧凑的结构化格式，并在召回过程中迭代地优化该推理。R4R通过使用为GR指令调优的具有推理能力的LLM，来增强现有的GR方法。在推理阶段，R4R首先使用LLM生成初始的结构化推理；然后，相同的LLM交替执行以下两个步骤：（i）利用选定的GR方法进行受限解码以生成候选docids，以及（ii）根据召回结果更新推理内容以优化下一轮生成。R4R不需要额外的模型或训练，而是通过单一LLM同时担任推理生成器和召回器的角色。在Natural Questions、MS MARCO和一个实际的物料-搜索基准数据集上的大量实验验证了R4R的有效性。",
+        "translated_title": "链中召回：通过引导大语言模型实现生成式召回",
+        "label": [
+            "LLM生成式推荐",
+            "召回"
+        ],
+        "label_reason": "论文提出基于LLM的生成式检索框架，与推荐系统召回环节密切相关。",
+        "relevance_score": 8
+    },
+    {
+        "title": "Post-hoc Popularity Bias Correction in GNN-based Collaborative Filtering",
+        "url": "http://arxiv.org/abs/2510.12959v1",
+        "pub_date": "2025-10-14",
+        "summary": "User historical interaction data is the primary signal for learning user preferences in collaborative filtering (CF). However, the training data often exhibits a long-tailed distribution, where only a few items have the majority of interactions. CF models trained directly on such imbalanced data are prone to learning popularity bias, which reduces personalization and leads to suboptimal recommendation quality. Graph Neural Networks (GNNs), while effective for CF due to their message passing mechanism, can further propagate and amplify popularity bias through their aggregation process. Existing approaches typically address popularity bias by modifying training objectives but fail to directly counteract the bias propagated during GNN's neighborhood aggregation. Applying weights to interactions during aggregation can help alleviate this problem, yet it risks distorting model learning due to unstable node representations in the early stages of training. In this paper, we propose a Post-hoc Popularity Debiasing (PPD) method that corrects for popularity bias in GNN-based CF and operates directly on pre-trained embeddings without requiring retraining. By estimating interaction-level popularity and removing popularity components from node representations via a popularity direction vector, PPD reduces bias while preserving user preferences. Experimental results show that our method outperforms state-of-the-art approaches for popularity bias correction in GNN-based CF.",
+        "translated": "用户的历史交互数据是协同过滤（CF）中学习用户/物料偏好的主要信号。然而，训练数据通常表现出长尾分布，其中只有少数物料获得了大部分的交互。直接在这样的不平衡数据上训练的CF模型容易学习到流行度偏差，从而降低个性化程度并导致推荐质量下降。图神经网络（GNN）由于其消息传递机制在CF中表现有效，但它们的聚合过程可能会进一步传播和放大流行度偏差。现有方法通常通过修改训练目标来应对流行度偏差，但未能直接对抗GNN在邻域聚合过程中传播的偏差。在聚合过程中对交互加权有助于缓解这一问题，然而由于训练早期阶段节点表示的不稳定性，这种加权可能会扭曲模型的学习。本文提出了一种后处理流行度去偏（Post-hoc Popularity Debiasing, PPD）方法，该方法无需重新训练，即可直接在预训练的嵌入上进行操作，对基于GNN的CF中的流行度偏差进行校正。通过估计交互层面的流行度，并借助一个流行度方向向量从节点表示中去除流行度成分，PPD在减少偏差的同时保留了用户偏好。实验结果表明，我们的方法在基于GNN的CF中流行度偏差校正方面优于当前最先进的方法。",
+        "translated_title": "基于图神经网络的协同过滤中的后处理流行度偏差校正",
+        "label": [
+            "图神经网络推荐（GNN for Recommendation）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "论文针对GNN在推荐中的流行度偏差问题提出后处理方法，属于图神经网络推荐改进技术",
+        "relevance_score": 8
+    },
+    {
+        "title": "Universal Image Restoration Pre-training via Masked Degradation\n  Classification",
+        "url": "http://arxiv.org/abs/2510.13282v1",
+        "pub_date": "2025-10-15",
+        "summary": "This study introduces a Masked Degradation Classification Pre-Training method (MaskDCPT), designed to facilitate the classification of degradation types in input images, leading to comprehensive image restoration pre-training. Unlike conventional pre-training methods, MaskDCPT uses the degradation type of the image as an extremely weak supervision, while simultaneously leveraging the image reconstruction to enhance performance and robustness. MaskDCPT includes an encoder and two decoders: the encoder extracts features from the masked low-quality input image. The classification decoder uses these features to identify the degradation type, whereas the reconstruction decoder aims to reconstruct a corresponding high-quality image. This design allows the pre-training to benefit from both masked image modeling and contrastive learning, resulting in a generalized representation suited for restoration tasks. Benefit from the straightforward yet potent MaskDCPT, the pre-trained encoder can be used to address universal image restoration and achieve outstanding performance. Implementing MaskDCPT significantly improves performance for both convolution neural networks (CNNs) and Transformers, with a minimum increase in PSNR of 3.77 dB in the 5D all-in-one restoration task and a 34.8% reduction in PIQE compared to baseline in real-world degradation scenarios. It also emergences strong generalization to previously unseen degradation types and levels. In addition, we curate and release the UIR-2.5M dataset, which includes 2.5 million paired restoration samples across 19 degradation types and over 200 degradation levels, incorporating both synthetic and real-world data. The dataset, source code, and models are available at https://github.com/MILab-PKU/MaskDCPT.",
+        "translated": "本研究提出了一种 Masked Degradation Classification Pre-Training 方法（MaskDCPT），旨在实现对输入图像退化类型的分类，从而促进通用图像恢复的预训练。不同于传统的预训练方法，MaskDCPT 将图像的退化类型作为极其弱的监督信号，同时利用图像重建来提升性能和鲁棒性。MaskDCPT 包含一个编码器和两个解码器：编码器从被遮蔽的低质量输入图像中提取特征；分类解码器利用这些特征识别退化类型，而重建解码器则致力于重建对应的高质量图像。这种设计使预训练能够同时受益于遮蔽图像建模和对比学习，从而获得适用于图像恢复任务的通用表征。借助简洁而有效的 MaskDCPT，预训练的编码器可用于解决通用图像恢复问题，并取得优异的性能。MaskDCPT 的实现显著提升了卷积神经网络（CNNs）和 Transformers 的性能，在 5D 全合一图像恢复任务中，PSNR 至少提升了 3.77 dB，而在真实退化场景中，与基线相比，PIQE 降低了 34.8%。此外，该方法在未见过的退化类型和程度上也展现出强大的泛化能力。同时，我们整理并发布了 UIR-2.5M 数据集，该数据集包含 250 万对覆盖 19 种退化类型和 200 多个退化等级的图像恢复样本，融合了合成数据和真实数据。数据集、源代码和模型均可在 https://github.com/MILab-PKU/MaskDCPT 获取。",
+        "translated_title": "通过掩码退化分类的通用图像恢复预训练",
+        "label": [
+            "图像恢复（Image Restoration）",
+            "图像去噪（Image Denoising）",
+            "图像去雨（Image Deraining）",
+            "图像去雾（Image Dehazing）",
+            "图像去模糊（Image Deblurring）",
+            "超分辨率（Super-Resolution）",
+            "图像去 JPEG 伪影（JPEG Artifact Removal）"
+        ],
+        "label_reason": "论文提出通用图像恢复预训练方法，适用于多种低级图像恢复任务",
+        "relevance_score": 9
     }
 ]
