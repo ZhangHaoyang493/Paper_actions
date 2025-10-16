@@ -7,7 +7,7 @@ env:
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 5 * * *' # 每天 UTC 时间 5:00 触发, 即上海时间13点 - 已禁用
+    - cron: '0 1,5,9,13 * * *' # 每天 UTC 时间 5:00 触发, 即上海时间13点 - 已禁用
 
 jobs:
   daily-push:
@@ -15,9 +15,9 @@ jobs:
     env:
       SERVERCHAN_API_KEY: ${{ secrets.SERVERCHAN_API_KEY }}
       CAIYUN_TOKEN: ${{ secrets.CAIYUN_TOKEN }}
-      QUERY: '"image+restoration"+OR+"image+deraining"+OR+"image+denoise"+OR+"CT+Metal+Reduction"+OR+"Reflection+Removal"'
-      LIMITS: 15
-      FEISHU_CV_URL: ${{ secrets.FEISHU_CV_URL }}
+      QUERY: '"image+restoration"+OR+"image+deraining"+OR+"image+denoise"+OR+"CT+Metal+Reduction"+OR+"Reflection+Removal"+OR+"image+dehaze"'
+      LIMITS: 10
+      FEISHU_URL: ${{ secrets.FEISHU_CV_URL }}
       DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
       MODEL_TYPE: "DeepSeek"
       ECNU_MODEL_KEY: ${{ secrets.ECNU_MODEL_KEY }}

@@ -14,10 +14,22 @@ from tqdm import tqdm
 
 SERVERCHAN_API_KEY = os.environ.get("SERVERCHAN_API_KEY", None)
 QUERY = os.environ.get('QUERY', 'cs.CV')
-LIMITS = int(os.environ.get('LIMITS',5))
-FEISHU_CV_URL = os.environ.get("FEISHU_CV_URL", None)
+LIMITS = int(os.environ.get('LIMITS',2))
+FEISHU_URL = os.environ.get("FEISHU_URL", None)
 MODEL_TYPE = os.environ.get("MODEL_TYPE", "DeepSeek")
 ECNU_MODEL_KEY = os.environ.get("ECNU_MODEL_KEY", None)
+
+
+from openai import OpenAI
+import json
+from tqdm.notebook import tqdm
+
+client = OpenAI(
+    api_key=ECNU_MODEL_KEY,
+    base_url="https://chat.ecnu.edu.cn/open/api/v1"  # 注意：不包含 /chat/completions
+)
+
+
 
 def get_yesterday():
     today = datetime.datetime.now()
@@ -77,7 +89,7 @@ def send_wechat_message(title, content, SERVERCHAN_API_KEY):
     }
     requests.post(url, params=params)
 
-def send_feishu_message(title, content, url=FEISHU_CV_URL):
+def send_feishu_message(title, content, url=FEISHU_URL):
     card_data = {
         "config": {
             "wide_screen_mode": True
@@ -113,33 +125,50 @@ def send_feishu_message(title, content, url=FEISHU_CV_URL):
 
 
 def translate(texts):
-    from openai import OpenAI
-    import json
-    from tqdm.notebook import tqdm
-
-    client = OpenAI(
-        api_key=ECNU_MODEL_KEY,
-        base_url="https://chat.ecnu.edu.cn/open/api/v1"  # 注意：不包含 /chat/completions
-    )
+    
 
     res = []
     for i in range(len(texts)):
         print(f'[+] 正在翻译第 {i+1} 篇论文....')
         prompt = f"""
-        请将我提供的英文论文内容（如标题、摘要、引言或技术段落）**准确、流畅、专业地翻译为中文**，要求如下：
+        你是一位精通计算机视觉，尤其是 low-level 图像处理领域的中英双语研究员。请将以下英文论文内容（可能包含标题、摘要、方法描述或实验部分）**准确、流畅地翻译为中文**，并遵循以下原则：
 
-        1. **术语准确**：保留“recommendation system”、“embedding”、“contrastive learning”、“self-supervised”、“CTR prediction”、“multi-modal”等专业术语的标准中文译法；
-        2. **学术风格**：使用正式、简洁的学术中文，避免口语化表达；
-        3. **逻辑清晰**：确保句子结构符合中文习惯，不照搬英文语序；
-        4. **保留原意**：不增删、不曲解原文技术细节；
-        5. **格式一致**：若原文包含公式编号、引用标记（如 [1]）、缩写（如 DSSM, CLIP），请原样保留。
+        1. **术语规范**（必须严格遵守）：
+        - image restoration → 图像恢复  
+        - image denoising → 图像去噪  
+        - image deraining → 图像去雨  
+        - image dehazing → 图像去雾  
+        - image deblurring → 图像去模糊  
+        - super-resolution → 超分辨率  
+        - reflection removal → 去反射  
+        - metal artifact reduction → 金属伪影消除  
+        - low-light enhancement → 低光照增强  
+        - JPEG artifact removal → JPEG 伪影去除  
+        - degradation → 退化  
+        - prior / prior knowledge → 先验 / 先验知识  
+        - end-to-end → 端到端  
+        - feature map → 特征图  
+        - residual learning → 残差学习  
+        - frequency domain → 频域  
+        - spatial domain → 空域
+
+        2. **翻译要求**：
+        - 保持原文技术细节和逻辑结构，**不增不减**；
+        - 使用**学术中文表达**，避免口语化；
+        - 公式、变量名（如 (x), (y), (I_{{rain}})）、模型名称（如 U-Net, DnCNN）**保留原文不译**；
+        - 机构名、数据集名（如 Rain100L, SIDD, RESIDE）**保留英文**；
+        - 被动语态可转为主动语态以符合中文习惯，但**不得改变原意**。
+
+        3. **输出格式**：
+        - 直接输出**纯中文翻译结果**，不要包含“翻译如下：”等引导语；
+        - 保留原文段落结构；
 
         现在，请翻译以下内容：{texts[i]}
         """
         response = client.chat.completions.create(
             model="ecnu-plus",
             messages=[
-                {"role": "system", "content": "你是一位精通人工智能、推荐系统、计算机视觉和自然语言处理领域的专业学术翻译专家。请严格按照用户的要求进行翻译。"},
+                {"role": "system", "content": "你是一位精通计算机视觉，尤其是 low-level 图像处理领域的中英双语研究员。请严格按照用户的要求进行翻译。"},
                 {"role": "user", "content": prompt}
             ],
             temperature=0.7,
@@ -148,6 +177,94 @@ def translate(texts):
         )
         res.append(response.choices[0].message.content)
     return res
+
+def label_and_score_paper(title, abstract):
+    prompt = f"""
+        你是一位专注于 low-level 计算机视觉的研究员，尤其擅长图像恢复、增强与复原任务。请根据我提供的论文**标题（Title）**和**摘要（Abstract）**，完成以下任务：
+
+        1. **判断是否属于 low-level 图像处理**：  
+        - **Low-level 任务**包括：图像恢复（如去噪、去雨、去雾、去模糊、超分辨率、去反射、去 JPEG 伪影、金属伪影消除等）、图像增强（如对比度增强、低光照增强）、图像重建等，目标是**改善或恢复图像的像素级质量**。  
+        - **High-level 任务**（不相关）包括：图像分类、目标检测、语义分割（若用于场景理解）、人脸识别、图像生成（如 GAN 生成新图像，而非恢复）、视频理解、3D 重建（非图像级）等。  
+        - 注意：**图像分割**若用于**医学图像分割、边缘提取、显著性检测等像素级恢复/分析任务**，可视为 low-level；若用于场景理解（如 Cityscapes 分割），则视为 high-level。
+
+        2. **打分（1–10 分）**：  
+        - **10 分**：论文核心贡献直接解决 low-level 图像处理问题（如新去雨网络、CT 金属伪影消除方法）。  
+        - **7–9 分**：方法专为 low-level 设计，或在标准 low-level 数据集（如 Rain100L、SIDD、RESIDE）上验证。  
+        - **4–6 分**：技术可迁移到 low-level（如通用退化建模），但非主要目标。  
+        - **1–3 分**：属于 high-level 视觉任务，或仅使用图像作为输入但不处理像素质量（如用图像做推荐、分类）。
+
+        3. **打标签**：  
+        从以下标签中选择**一个或多个**最贴切的（可多选，标签使用中文）：
+        - 图像恢复（Image Restoration）
+        - 图像去噪（Image Denoising）
+        - 图像去雨（Image Deraining）
+        - 图像去雾（Image Dehazing）
+        - 图像去模糊（Image Deblurring）
+        - 超分辨率（Super-Resolution）
+        - 图像去反射（Image Reflection Removal）
+        - 图像去 JPEG 伪影（JPEG Artifact Removal）
+        - CT金属伪影消除（CT Metal Artifact Reduction）
+        - 低光照增强（Low-light Enhancement）
+        - 对比度增强（Contrast Enhancement）
+        - 图像修复（Image Inpainting）
+        - 多帧/视频图像恢复（Video/Image Sequence Restoration）
+        - 医学图像增强（Medical Image Enhancement）
+        - 遥感图像复原（Remote Sensing Image Restoration）
+
+        > 若论文不属于 low-level 图像处理，标签留空或写“无”。
+
+        4. **输出格式**（严格按以下 JSON 格式，不要任何额外解释）：
+        {{
+        "relevance_score": 整数（1-10）,
+        "tags": ["标签1", "标签2", ...],
+        "reason": "简要说明打分和标签理由（30字以内）"
+        }}
+
+        现在，请处理以下论文：
+
+        标题：{title}
+        摘要：{abstract}
+    """
+
+    response = client.chat.completions.create(
+        model="ecnu-plus",
+        messages=[
+            {"role": "system", "content": "你是一位专注于 low-level 计算机视觉的研究员，尤其擅长图像恢复、增强与复原任务。请严格按照用户的要求进行打标和打分。"},
+            {"role": "user", "content": prompt}
+        ],
+        temperature=0.7,
+        max_tokens=5000
+    )
+
+    result = response.choices[0].message.content.strip()
+    try:
+        result_json = json.loads(result)
+    except json.JSONDecodeError:
+        print(f"[ERROR] JSON Decode Error: {result}")
+        return None
+    if not isinstance(result_json, dict):
+        print(f"[ERROR] Result is not a JSON object: {result}")
+        return None
+    if 'relevance_score' not in result_json or 'tags' not in result_json or 'reason' not in result_json:
+        print(f"[ERROR] Missing keys in result: {result_json}")
+        return None
+    if not isinstance(result_json['relevance_score'], int) or not (1 <= result_json['relevance_score'] <= 10):
+        print(f"[ERROR] Invalid relevance score: {result_json['relevance_score']}")
+        return None
+    if not isinstance(result_json['tags'], list):
+        print(f"[ERROR] Tags should be a list: {result_json['tags']}")
+        return None
+    return result_json
+
+def label_and_score_papers(papers):
+    results = []
+    for i, paper in enumerate(papers):
+        print(f'[+] 正在打标和打分第 {i+1} 篇论文')
+        title = paper['title']
+        abstract = paper['summary']
+        result = label_and_score_paper(title, abstract)
+        results.append(result)
+    return results
 
 
 def save_and_translate(papers, filename='arxiv.json'):
@@ -168,13 +285,21 @@ def save_and_translate(papers, filename='arxiv.json'):
             untranslated_papers.append(paper)
     
     source = []
+    titles_translate = []
     for paper in untranslated_papers:
         source.append(paper['summary'])
+        titles_translate.append(paper['title'])
     target = translate(source)
-    if len(target) == len(untranslated_papers):
+    titles_target = translate(titles_translate)
+    label_score_results = label_and_score_papers(untranslated_papers)
+    if len(target) == len(untranslated_papers) and len(titles_target) == len(untranslated_papers) and len(label_score_results) == len(untranslated_papers):
         for i in range(len(untranslated_papers)):
             untranslated_papers[i]['translated'] = target[i]
-    
+            untranslated_papers[i]['translated_title'] = titles_target[i]
+            if label_score_results[i] is not None:
+                untranslated_papers[i]['label'] = label_score_results[i]['tags']
+                untranslated_papers[i]['label_reason'] = label_score_results[i]['reason']
+                untranslated_papers[i]['relevance_score'] = label_score_results[i]['relevance_score']
     results.extend(untranslated_papers)
 
     with open(filename, 'w', encoding='utf-8') as f:
@@ -217,6 +342,10 @@ def cronjob():
         pub_date = paper['pub_date']
         summary = paper['summary']
         translated = paper['translated']
+        translated_title = paper['translated_title']
+        label = paper['label']
+        label_reason = paper['label_reason']
+        relevance_score = paper['relevance_score']
 
         yesterday = get_yesterday()
 
@@ -230,11 +359,11 @@ def cronjob():
         msg_summary = f'Summary：\n\n{summary}'
         msg_translated = f'Translated (Powered by {MODEL_TYPE}):\n\n{translated}'
 
-        push_title = f'Arxiv:Image Process Papers[{ii}]@{today}'
-        msg_content = f"[{msg_title}]({url})\n\n{msg_pub_date}\n\n{msg_url}\n\n{msg_translated}\n\n{msg_summary}\n\n"
+        push_title = f'Arxiv: {translated_title}[{ii}]@{today}'
+        msg_content = f"[{msg_title}]({url})\n\nlow-level相关性分数：{relevance_score}\n标签：{', '.join(label)}\n标签理由：{label_reason}\n\n{msg_pub_date}\n\n{msg_url}\n\n{msg_translated}\n\n{msg_summary}\n\n"
 
         # send_wechat_message(push_title, msg_content, SERVERCHAN_API_KEY)
-        send_feishu_message(push_title, msg_content, FEISHU_CV_URL)
+        send_feishu_message(push_title, msg_content, FEISHU_URL)
 
         time.sleep(12)
 
