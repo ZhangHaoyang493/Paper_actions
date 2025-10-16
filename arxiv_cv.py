@@ -186,13 +186,19 @@ def label_and_score_paper(title, abstract):
         - **High-level 任务**（不相关）包括：图像分类、目标检测、语义分割（若用于场景理解）、人脸识别、图像生成（如 GAN 生成新图像，而非恢复）、视频理解、3D 重建（非图像级）等。  
         - 注意：**图像分割**若用于**医学图像分割、边缘提取、显著性检测等像素级恢复/分析任务**，可视为 low-level；若用于场景理解（如 Cityscapes 分割），则视为 high-level。
 
-        2. **打分（1–10 分）**：  
-        - **10 分**：论文核心贡献直接解决 low-level 图像处理问题（如新去雨网络、CT 金属伪影消除方法）。  
+        2. **相关性打分（1–10 分）**：  
+        - **10 分**：论文核心贡献直接解决 low-level 图像处理问题（如提出新去雨架构、CT 金属伪影消除方法）。  
         - **7–9 分**：方法专为 low-level 设计，或在标准 low-level 数据集（如 Rain100L、SIDD、RESIDE）上验证。  
-        - **4–6 分**：技术可迁移到 low-level（如通用退化建模），但非主要目标。  
-        - **1–3 分**：属于 high-level 视觉任务，或仅使用图像作为输入但不处理像素质量（如用图像做推荐、分类）。
+        - **4–6 分**：技术可迁移到 low-level（如通用退化建模、频域先验），但非主要目标。  
+        - **1–3 分**：属于 high-level 视觉任务，或仅使用图像作为输入但不处理像素质量。
 
-        3. **打标签**：  
+        3. **创新度打分（1–10 分）**：  
+        - **10 分**：提出全新范式、理论或架构（如首次将扩散模型用于真实图像去雨）。  
+        - **7–9 分**：对现有方法有显著改进（如新损失函数、高效网络结构），性能或效率明显提升。  
+        - **4–6 分**：常规组合或微调（如换 backbone、调超参），无本质创新。  
+        - **1–3 分**：复现已有工作、方法陈旧，或创新点模糊不清。
+
+        4. **打标签**：  
         从以下标签中选择**一个或多个**最贴切的（可多选，标签使用中文）：
         - 图像恢复（Image Restoration）
         - 图像去噪（Image Denoising）
@@ -210,13 +216,15 @@ def label_and_score_paper(title, abstract):
         - 医学图像增强（Medical Image Enhancement）
         - 遥感图像复原（Remote Sensing Image Restoration）
 
-        > 若论文不属于 low-level 图像处理，标签留空或写“无”。
+        > 若论文不属于 low-level 图像处理，标签留空。
 
-        4. **输出格式**（严格按以下 JSON 格式，不要任何额外解释）：
+        5. **输出格式**（严格按以下 JSON 格式，不要任何额外解释、注释或 Markdown）：
         {{
         "relevance_score": 整数（1-10）,
+        "novelty_score": 整数（1-10）,
         "tags": ["标签1", "标签2", ...],
-        "reason": "简要说明打分和标签理由（30字以内）"
+        "reason": "相关性与标签理由（30字以内）",
+        "novelty_reason": "创新度打分理由（30字以内）"
         }}
 
         现在，请处理以下论文：
@@ -244,7 +252,7 @@ def label_and_score_paper(title, abstract):
     if not isinstance(result_json, dict):
         print(f"[ERROR] Result is not a JSON object: {result}")
         return None
-    if 'relevance_score' not in result_json or 'tags' not in result_json or 'reason' not in result_json:
+    if 'relevance_score' not in result_json or 'tags' not in result_json or 'reason' not in result_json or 'novelty_score' not in result_json or 'novelty_reason' not in result_json:
         print(f"[ERROR] Missing keys in result: {result_json}")
         return None
     if not isinstance(result_json['relevance_score'], int) or not (1 <= result_json['relevance_score'] <= 10):
@@ -299,6 +307,14 @@ def save_and_translate(papers, filename='arxiv.json'):
                 untranslated_papers[i]['label'] = label_score_results[i]['tags']
                 untranslated_papers[i]['label_reason'] = label_score_results[i]['reason']
                 untranslated_papers[i]['relevance_score'] = label_score_results[i]['relevance_score']
+                untranslated_papers[i]['novelty_score'] = label_score_results[i]['novelty_score']
+                untranslated_papers[i]['novelty_reason'] = label_score_results[i]['novelty_reason']
+            else:
+                untranslated_papers[i]['label'] = []
+                untranslated_papers[i]['label_reason'] = ''
+                untranslated_papers[i]['relevance_score'] = 0
+                untranslated_papers[i]['novelty_score'] = 0
+                untranslated_papers[i]['novelty_reason'] = ''
     results.extend(untranslated_papers)
 
     with open(filename, 'w', encoding='utf-8') as f:
@@ -345,6 +361,8 @@ def cronjob():
         label = paper['label']
         label_reason = paper['label_reason']
         relevance_score = paper['relevance_score']
+        novelty_score = paper['novelty_score']
+        novelty_reason = paper['novelty_reason']
 
         yesterday = get_yesterday()
 
@@ -359,7 +377,7 @@ def cronjob():
         msg_translated = f'Translated (Powered by {MODEL_TYPE}):\n\n{translated}'
 
         push_title = f'Arxiv: {translated_title}[{ii}]@{today}'
-        msg_content = f"[{msg_title}]({url})\n\nlow-level相关性分数：{relevance_score}\n标签：{', '.join(label)}\n标签理由：{label_reason}\n\n{msg_pub_date}\n\n{msg_url}\n\n{msg_translated}\n\n{msg_summary}\n\n"
+        msg_content = f"[{msg_title}]({url})\n\nlow-level相关性分数：{relevance_score}\n标签：{', '.join(label)}\n标签理由：{label_reason}\n\n创新度：{novelty_score}\n创新度理由：{novelty_reason}\n\n{msg_pub_date}\n\n{msg_url}\n\n{msg_translated}\n\n{msg_summary}\n\n"
 
         # send_wechat_message(push_title, msg_content, SERVERCHAN_API_KEY)
         send_feishu_message(push_title, msg_content, FEISHU_URL)
