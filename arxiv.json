@@ -1098,5 +1098,46 @@
         "relevance_score": 5,
         "novelty_score": 7,
         "novelty_reason": "提出结构化代理检索框架，改进多跳QA的精度与召回"
+    },
+    {
+        "title": "Coupled Diffusion Sampling for Training-Free Multi-View Image Editing",
+        "url": "http://arxiv.org/abs/2510.14981v1",
+        "pub_date": "2025-10-16",
+        "summary": "We present an inference-time diffusion sampling method to perform multi-view consistent image editing using pre-trained 2D image editing models. These models can independently produce high-quality edits for each image in a set of multi-view images of a 3D scene or object, but they do not maintain consistency across views. Existing approaches typically address this by optimizing over explicit 3D representations, but they suffer from a lengthy optimization process and instability under sparse view settings. We propose an implicit 3D regularization approach by constraining the generated 2D image sequences to adhere to a pre-trained multi-view image distribution. This is achieved through coupled diffusion sampling, a simple diffusion sampling technique that concurrently samples two trajectories from both a multi-view image distribution and a 2D edited image distribution, using a coupling term to enforce the multi-view consistency among the generated images. We validate the effectiveness and generality of this framework on three distinct multi-view image editing tasks, demonstrating its applicability across various model architectures and highlighting its potential as a general solution for multi-view consistent editing.",
+        "translated": "我们提出了一种在推理阶段使用的扩散采样方法，用于利用预训练的 2D 图像编辑模型进行多视角一致的图像编辑。这些模型可以独立地为 3D 场景或物体的多视角图像集中的每张图像生成高质量的编辑结果，但它们在不同视角之间无法保持一致性。现有方法通常通过在显式的 3D 表示上进行优化来解决这一问题，但它们在稀疏视角设置下优化过程漫长且不稳定。我们提出了一种隐式的 3D 正则化方法，通过约束生成的 2D 图像序列以遵循预训练的多视角图像分布。该方法是通过耦合扩散采样实现的，这是一种简单的扩散采样技术，同时从多视角图像分布和 2D 编辑图像分布中采样两条轨迹，并使用耦合项来强制生成图像之间的多视角一致性。我们在三个不同的多视角图像编辑任务上验证了该框架的有效性和通用性，展示了其在各种模型架构中的适用性，并突出了其作为多视角一致性编辑通用解决方案的潜力。",
+        "translated_title": "Coupled Diffusion Sampling for Training-Free Multi-View Image Editing  \n用于无需训练的多视角图像编辑的耦合扩散采样",
+        "label": [
+            "多帧/视频图像恢复"
+        ],
+        "label_reason": "方法涉及多视角图像生成一致性，属于多帧图像恢复范畴",
+        "relevance_score": 5,
+        "novelty_score": 8,
+        "novelty_reason": "提出耦合扩散采样新方法，具有一定的创新性"
+    },
+    {
+        "title": "From Pixels to Words -- Towards Native Vision-Language Primitives at\n  Scale",
+        "url": "http://arxiv.org/abs/2510.14979v1",
+        "pub_date": "2025-10-16",
+        "summary": "The edifice of native Vision-Language Models (VLMs) has emerged as a rising contender to typical modular VLMs, shaped by evolving model architectures and training paradigms. Yet, two lingering clouds cast shadows over its widespread exploration and promotion: (-) What fundamental constraints set native VLMs apart from modular ones, and to what extent can these barriers be overcome? (-) How to make research in native VLMs more accessible and democratized, thereby accelerating progress in the field. In this paper, we clarify these challenges and outline guiding principles for constructing native VLMs. Specifically, one native VLM primitive should: (i) effectively align pixel and word representations within a shared semantic space; (ii) seamlessly integrate the strengths of formerly separate vision and language modules; (iii) inherently embody various cross-modal properties that support unified vision-language encoding, aligning, and reasoning. Hence, we launch NEO, a novel family of native VLMs built from first principles, capable of rivaling top-tier modular counterparts across diverse real-world scenarios. With only 390M image-text examples, NEO efficiently develops visual perception from scratch while mitigating vision-language conflicts inside a dense and monolithic model crafted from our elaborate primitives. We position NEO as a cornerstone for scalable and powerful native VLMs, paired with a rich set of reusable components that foster a cost-effective and extensible ecosystem. Our code and models are publicly available at: https://github.com/EvolvingLMMs-Lab/NEO.",
+        "translated": "原生视觉-语言模型（VLMs）的构建已逐渐成为传统模块化VLMs的有力竞争者，这得益于模型架构和训练范式的发展与演变。然而，两个关键问题仍阻碍其广泛研究与推广：（-）原生VLMs与模块化VLMs之间存在哪些基本限制？这些限制在多大程度上可以被克服？（-）如何使原生VLMs的研究更具可访问性和普及性，从而加快该领域的发展进程？在本文中，我们明确了这些挑战，并提出了构建原生VLMs的指导原则。具体而言，一个原生VLM的基本要素应满足以下三点：（i）在共享的语义空间中有效对齐像素与语言表示；（ii）无缝融合视觉与语言模块各自的优势；（iii）内在地体现多种跨模态属性，以支持统一的视觉-语言编码、对齐和推理。因此，我们提出了NEO，一种基于第一性原理构建的新型原生VLM家族，其在多种现实场景中能够媲美最先进的模块化模型。在仅使用390M图像-文本样例的情况下，NEO便能高效地从零开始发展视觉感知能力，同时在由我们精心设计的密集单一模型中缓解视觉-语言冲突。我们视NEO为构建可扩展且强大的原生VLMs的基石，并提供了丰富的可复用组件，以促进经济高效且可扩展的生态系统形成。我们的代码和模型已公开发布于：https://github.com/EvolvingLMMs-Lab/NEO。",
+        "translated_title": "从像素到词语——迈向大规模的原生视觉-语言基元",
+        "label": [],
+        "label_reason": "论文专注于视觉-语言模型，非图像像素级处理任务。",
+        "relevance_score": 1,
+        "novelty_score": 5,
+        "novelty_reason": "提出新的视觉-语言模型构建原则和组件，但创新点主要在架构整合。"
+    },
+    {
+        "title": "Agentic Design of Compositional Machines",
+        "url": "http://arxiv.org/abs/2510.14980v1",
+        "pub_date": "2025-10-16",
+        "summary": "The design of complex machines stands as both a marker of human intelligence and a foundation of engineering practice. Given recent advances in large language models (LLMs), we ask whether they, too, can learn to create. We approach this question through the lens of compositional machine design: a task in which machines are assembled from standardized components to meet functional demands like locomotion or manipulation in a simulated physical environment. To support this investigation, we introduce BesiegeField, a testbed built on the machine-building game Besiege, which enables part-based construction, physical simulation and reward-driven evaluation. Using BesiegeField, we benchmark state-of-the-art LLMs with agentic workflows and identify key capabilities required for success, including spatial reasoning, strategic assembly, and instruction-following. As current open-source models fall short, we explore reinforcement learning (RL) as a path to improvement: we curate a cold-start dataset, conduct RL finetuning experiments, and highlight open challenges at the intersection of language, machine design, and physical reasoning.",
+        "translated": "复杂机器的设计既是人类智能的标志，也是工程实践的基础。鉴于近年来在大语言模型（LLMs）方面取得的进展，我们提出一个问题：它们是否也能学会创造？我们通过组合式机器设计的视角来探讨这一问题：该任务要求在模拟的物理环境中，通过标准化组件的组合来满足功能性需求，例如移动或操作。为了支持这项研究，我们引入了 BesiegeField，这是一个基于机器建造游戏 Besiege 构建的测试平台，支持基于部件的构建、物理模拟以及基于奖励的评估。借助 BesiegeField，我们对最先进的 LLMs 以及代理式工作流程进行了基准测试，并识别出成功所必需的关键能力，包括空间推理、策略性组装和遵循指令。由于目前的开源模型尚无法满足要求，我们探索了强化学习（RL）作为提升的路径：我们构建了一个冷启动数据集，进行了 RL 微调实验，并强调了语言、机器设计和物理推理交叉领域中的开放挑战。",
+        "translated_title": "Agentic Design of Compositional Machines  \n复合机器的智能体设计",
+        "label": [],
+        "label_reason": "论文聚焦于机器设计与语言模型应用，非图像像素级处理任务",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "提出新测试平台与RL冷启动数据集，但方法迁移性有限"
     }
 ]
