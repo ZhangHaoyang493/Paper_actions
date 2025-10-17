@@ -794,5 +794,309 @@
         "relevance_score": 8,
         "novelty_score": 8,
         "novelty_reason": "提出双通道跨模态扩散模块和因果拓扑重构，具有显著创新性。"
+    },
+    {
+        "title": "Fantastic (small) Retrievers and How to Train Them:\n  mxbai-edge-colbert-v0 Tech Report",
+        "url": "http://arxiv.org/abs/2510.14880v1",
+        "pub_date": "2025-10-16",
+        "summary": "In this work, we introduce mxbai-edge-colbert-v0 models, at two different parameter counts: 17M and 32M. As part of our research, we conduct numerous experiments to improve retrieval and late-interaction models, which we intend to distill into smaller models as proof-of-concepts. Our ultimate aim is to support retrieval at all scales, from large-scale retrieval which lives in the cloud to models that can run locally, on any device. mxbai-edge-colbert-v0 is a model that we hope will serve as a solid foundation backbone for all future experiments, representing the first version of a long series of small proof-of-concepts. As part of the development of mxbai-edge-colbert-v0, we conducted multiple ablation studies, of which we report the results. In terms of downstream performance, mxbai-edge-colbert-v0 is a particularly capable small model, outperforming ColBERTv2 on common short-text benchmarks (BEIR) and representing a large step forward in long-context tasks, with unprecedented efficiency.",
+        "translated": "在本工作中，我们引入了 mxbai-edge-colbert-v0 模型，并提供了两种不同的参数规模：17M 和 32M。作为我们研究的一部分，我们进行了大量实验以改进检索和后期交互模型，并计划将其蒸馏为更小的模型作为概念验证。我们的最终目标是支持所有规模的检索，从云端的大规模检索到能够在任何设备上本地运行的小模型。mxbai-edge-colbert-v0 是我们希望作为所有未来实验坚实基础的骨干模型，代表了一系列小型概念验证模型的第一个版本。在 mxbai-edge-colbert-v0 的开发过程中，我们进行了多项消融实验，并在此报告其结果。在下游任务性能方面，mxbai-edge-colbert-v0 是一个特别强大的小型模型，其在常见的短文本基准（BEIR）上优于 ColBERTv2，并在长上下文任务中实现了前所未有的效率，迈出了重要一步。",
+        "translated_title": "Fantastic (small) Retrievers and How to Train Them:  \nmxbai-edge-colbert-v0 技术报告",
+        "label": [
+            "召回"
+        ],
+        "label_reason": "论文聚焦检索模型优化，适用于推荐系统的召回环节。",
+        "relevance_score": 6,
+        "novelty_score": 7,
+        "novelty_reason": "提出高效小型模型，改进了检索与长上下文处理能力。"
+    },
+    {
+        "title": "A Simulation Framework for Studying Systemic Effects of Feedback Loops\n  in Recommender Systems",
+        "url": "http://arxiv.org/abs/2510.14857v1",
+        "pub_date": "2025-10-16",
+        "summary": "Recommender systems continuously interact with users, creating feedback loops that shape both individual behavior and collective market dynamics. This paper introduces a simulation framework to model these loops in online retail environments, where recommenders are periodically retrained on evolving user-item interactions. Using the Amazon e-Commerce dataset, we analyze how different recommendation algorithms influence diversity, purchase concentration, and user homogenization over time. Results reveal a systematic trade-off: while the feedback loop increases individual diversity, it simultaneously reduces collective diversity and concentrates demand on a few popular items. Moreover, for some recommender systems, the feedback loop increases user homogenization over time, making user purchase profiles increasingly similar. These findings underscore the need for recommender designs that balance personalization with long-term diversity.",
+        "translated": "推荐系统持续与用户进行交互，形成反馈循环，从而塑造个体行为和集体市场动态。本文引入了一个仿真框架，用于模拟在线零售环境中的这些循环，其中推荐系统会定期在不断演变的用户-物料交互数据上进行重新训练。使用 Amazon 电商平台数据集，我们分析了不同的推荐算法如何随着时间的推移影响多样性、购买集中度和用户同质化。结果揭示了一个系统性的权衡：虽然反馈循环提高了个体的多样性，但它同时降低了集体的多样性，并将需求集中在少数热门物料上。此外，对于某些推荐系统，反馈循环会随着时间推移增加用户的同质化，使得用户的购买行为变得越来越相似。这些发现凸显了推荐系统设计中需要在个性化与长期多样性之间取得平衡的必要性。",
+        "translated_title": "一个用于研究推荐系统中反馈循环系统性效应的模拟框架",
+        "label": [
+            "推荐系统公平性/可解释性",
+            "通用推荐技术"
+        ],
+        "label_reason": "研究推荐系统的反馈循环及长期多样性问题，属于推荐系统核心机制分析",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出新颖的模拟框架，揭示个性化与多样性间的系统性权衡"
+    },
+    {
+        "title": "Supervised Fine-Tuning or Contrastive Learning? Towards Better\n  Multimodal LLM Reranking",
+        "url": "http://arxiv.org/abs/2510.14824v1",
+        "pub_date": "2025-10-16",
+        "summary": "In information retrieval, training reranking models mainly focuses on two types of objectives: metric learning (e.g. contrastive loss to increase the predicted scores on relevant query-document pairs) and classification (binary label prediction of relevance vs. irrelevance). For BERT-style encoders, various studies have shown that contrastive learning (CL) can be more effective than discriminative (classification) learning. However, for large language models (LLMs), classification via supervised fine-tuning (SFT), which predicts ''yes'' (resp. ''no'') token for relevant (resp. irrelevant) pairs, appears more promising as it aligns well with the generative nature of LLMs. This divergence raises a central question: which objective is intrinsically better suited to LLM-based reranking, and what mechanism underlies the difference? In this work, we conduct a comprehensive comparison and analysis between CL and SFT for reranking, taking the universal multimodal retrieval (UMR) as the experimental playground. We first decompose the objectives into two components: weight, which controls the magnitude of those updates, and direction, which guides the model updates, then present a unified framework for understanding their interactions. Through probing experiments, we find that SFT provides a substantially stronger weighting scheme than CL, whereas the preferred scoring direction shows no clear winner. Taken together, these results point to a consistent advantage of SFT over CL for LLM reranking. To further validate our findings, we conduct large-scale training with SFT and present new state-of-the-art rerankers on the MRB benchmark. We also provide ablations on SFT settings and expect our findings to benefit future research and applications in this area.",
+        "translated": "在信息检索中，训练重排模型主要关注两种目标：度量学习（例如对比损失，用于提升相关查询-文档对的预测得分）和分类（相关与不相关的二分类标签预测）。对于 BERT 风格的编码器，已有大量研究表明，对比学习（CL）在性能上通常优于判别式（分类）学习。然而，对于大语言模型（LLMs），通过监督微调（SFT）进行分类——即对相关（resp. 不相关）对预测“yes”（resp. “no”）标记——似乎更具前景，因为它与 LLM 生成式的本质更加契合。这一差异引发了一个核心问题：哪一种目标本质上更适合基于 LLM 的重排？其背后的不同机制是什么？在本研究中，我们对 CL 和 SFT 在重排中的表现进行了全面的比较与分析，实验场景设定为通用多模态检索（UMR）。我们首先将这两种目标分解为两个组成部分：权重，用于控制更新的幅度；以及方向，用于指导模型的更新，然后提出一个统一的框架来理解它们之间的相互作用。通过探针实验，我们发现 SFT 提供了显著更强的权重机制，而关于最优的得分方向则没有明显优势。综合来看，这些结果表明在基于 LLM 的重排任务中，SFT 相较于 CL 具有一致的优势。为了进一步验证我们的发现，我们使用 SFT 进行了大规模训练，并在 MRB 基准上提出了新的最先进的重排模型。我们还对 SFT 的设置进行了消融实验，并希望我们的研究结果能够为该领域的未来研究与应用提供帮助。",
+        "translated_title": "监督微调还是对比学习？迈向更优的多模态大语言模型重排",
+        "label": [
+            "重排（Re-ranking）",
+            "负采样与对比学习（Negative Sampling / Contrastive Learning）",
+            "LLM生成式推荐（LLM-based Generative Recommendation）"
+        ],
+        "label_reason": "论文聚焦LLM在重排中的应用，并对比CL和SFT的效果，与推荐系统密切相关。",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出SFT更适合LLM重排，并提供统一框架分析两者差异，具有创新性。"
+    },
+    {
+        "title": "Cross-Scenario Unified Modeling of User Interests at Billion Scale",
+        "url": "http://arxiv.org/abs/2510.14788v1",
+        "pub_date": "2025-10-16",
+        "summary": "User interests on content platforms are inherently diverse, manifesting through complex behavioral patterns across heterogeneous scenarios such as search, feed browsing, and content discovery. Traditional recommendation systems typically prioritize business metric optimization within isolated specific scenarios, neglecting cross-scenario behavioral signals and struggling to integrate advanced techniques like LLMs at billion-scale deployments, which finally limits their ability to capture holistic user interests across platform touchpoints. We propose RED-Rec, an LLM-enhanced hierarchical Recommender Engine for Diversified scenarios, tailored for industry-level content recommendation systems. RED-Rec unifies user interest representations across multiple behavioral contexts by aggregating and synthesizing actions from varied scenarios, resulting in comprehensive item and user modeling. At its core, a two-tower LLM-powered framework enables nuanced, multifaceted representations with deployment efficiency, and a scenario-aware dense mixing and querying policy effectively fuses diverse behavioral signals to capture cross-scenario user intent patterns and express fine-grained, context-specific intents during serving. We validate RED-Rec through online A/B testing on hundreds of millions of users in RedNote through online A/B testing, showing substantial performance gains in both content recommendation and advertisement targeting tasks. We further introduce a million-scale sequential recommendation dataset, RED-MMU, for comprehensive offline training and evaluation. Our work advances unified user modeling, unlocking deeper personalization and fostering more meaningful user engagement in large-scale UGC platforms.",
+        "translated": "内容平台上的用户兴趣本质上是多样化的，这种多样性在搜索、信息流浏览和内容发现等异构场景中通过复杂的用户行为模式体现出来。传统的推荐系统通常优先在孤立的具体场景中优化业务指标，忽略了跨场景的行为信号，且在数十亿级别的实际部署中难以有效整合大语言模型（LLM）等先进技术，最终限制了它们在平台各个触点中捕捉用户整体兴趣的能力。我们提出了 RED-Rec，一个面向工业级内容推荐系统的、用于多样化场景的、融合大语言模型的分层推荐引擎。RED-Rec 通过聚合和综合来自不同场景的行为，统一了用户兴趣在多种行为上下文中的表示，从而实现了全面的物料与用户建模。其核心是一个双塔结构的大语言模型驱动框架，能够以高效的部署方式生成细致、多维的表示；同时，一个具备场景感知能力的密集混合与查询策略，有效融合了多样的行为信号，以捕捉跨场景的用户意图模式，并在服务过程中表达出细粒度、上下文特定的意图。我们在 RedNote 上通过数亿用户的在线 A/B 实验验证了 RED-Rec，结果在内容推荐和广告定向任务中均表现出显著的性能提升。此外，我们进一步引入了一个百万规模的序列推荐数据集 RED-MMU，用于全面的离线训练与评估。我们的工作推动了统一用户建模的发展，在大规模用户生成内容（UGC）平台中实现了更深层次的个性化，并促进了更具意义的用户参与。",
+        "translated_title": "百亿级跨场景用户兴趣统一建模",
+        "label": [
+            "通用推荐技术",
+            "LLM生成式推荐",
+            "跨域/联邦推荐",
+            "序列推荐"
+        ],
+        "label_reason": "跨场景统一用户兴趣建模，适用于大规模内容推荐系统",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出融合LLM的分层架构RED-Rec，改进跨场景行为建模"
+    },
+    {
+        "title": "Dataset Pruning in RecSys and ML: Best Practice or Mal-Practice?",
+        "url": "http://arxiv.org/abs/2510.14704v1",
+        "pub_date": "2025-10-16",
+        "summary": "Offline evaluations in recommender system research depend heavily on datasets, many of which are pruned, such as the widely used MovieLens collections. This thesis examines the impact of data pruning - specifically, removing users with fewer than a specified number of interactions - on both dataset characteristics and algorithm performance. Five benchmark datasets were analysed in both their unpruned form and at five successive pruning levels (5, 10, 20, 50, 100). For each coreset, we examined structural and distributional characteristics and trained and tested eleven representative algorithms. To further assess if pruned datasets lead to artificially inflated performance results, we also evaluated models trained on the pruned train sets but tested on unpruned data. Results show that commonly applied core pruning can be highly selective, leaving as little as 2% of the original users in some datasets. Traditional algorithms achieved higher nDCG@10 scores when both training and testing on pruned data; however, this advantage largely disappeared when evaluated on unpruned test sets. Across all algorithms, performance declined with increasing pruning levels when tested on unpruned data, highlighting the impact of dataset reduction on the performance of recommender algorithms.",
+        "translated": "推荐系统的离线评估高度依赖于数据集，其中许多数据集经过了修剪，例如广泛使用的 MovieLens 数据集。本文研究了数据修剪——具体来说，移除交互次数少于指定阈值的用户——对数据集特性和算法性能的影响。我们分析了五个基准数据集在未修剪形式和五种连续修剪等级（5, 10, 20, 50, 100）下的表现。对于每个核心子集（coreset），我们考察了其结构和分布特征，并训练和测试了十一种代表性算法。为了进一步评估修剪后的数据集是否会导致性能结果的人为高估，我们还评估了在修剪后的训练集上训练但在未修剪数据上测试的模型。结果显示，常见的核心修剪方法具有高度的选择性，在某些数据集中仅保留原始用户数的2%。传统算法在训练和测试均使用修剪数据时取得了更高的 nDCG@10 分数；然而，当在未修剪的测试集上进行评估时，这种优势基本消失。在所有算法中，当测试数据为未修剪数据时，其性能随着修剪等级的提高而下降，突显了数据集减少对推荐算法性能的影响。",
+        "translated_title": "推荐系统与机器学习中的数据集裁剪：最佳实践还是不当实践？",
+        "label": [
+            "推荐系统评估"
+        ],
+        "label_reason": "论文聚焦推荐系统数据集剪枝对算法性能的影响，属于推荐系统的评估问题。",
+        "relevance_score": 8,
+        "novelty_score": 6,
+        "novelty_reason": "对数据集剪枝现象进行系统分析，但方法较为常规，创新性有限。"
+    },
+    {
+        "title": "TITAN: Graph-Executable Reasoning for Cyber Threat Intelligence",
+        "url": "http://arxiv.org/abs/2510.14670v1",
+        "pub_date": "2025-10-16",
+        "summary": "TITAN (Threat Intelligence Through Automated Navigation) is a framework that connects natural-language cyber threat queries with executable reasoning over a structured knowledge graph. It integrates a path planner model, which predicts logical relation chains from text, and a graph executor that traverses the TITAN Ontology to retrieve factual answers and supporting evidence. Unlike traditional retrieval systems, TITAN operates on a typed, bidirectional graph derived from MITRE, allowing reasoning to move clearly and reversibly between threats, behaviors, and defenses. To support training and evaluation, we introduce the TITAN Dataset, a corpus of 88209 examples (Train: 74258; Test: 13951) pairing natural language questions with executable reasoning paths and step by step Chain of Thought explanations. Empirical evaluations show that TITAN enables models to generate syntactically valid and semantically coherent reasoning paths that can be deterministically executed on the underlying graph.",
+        "translated": "TITAN（Threat Intelligence Through Automated Navigation）是一个将自然语言的网络威胁查询与结构化知识图谱上的可执行推理相连接的框架。它集成了一个路径规划模型，该模型从文本中预测逻辑关系链，并结合一个图谱执行器，该执行器遍历TITAN本体（Ontology）以检索事实性答案和支持证据。与传统召回系统不同，TITAN基于来自MITRE的类型化、双向图谱进行操作，使得在威胁、行为和防御之间可以清晰且可逆地进行推理。为支持训练和评估，我们引入了TITAN数据集，该数据集包含88209个示例（训练集：74258；测试集：13951），将自然语言问题与可执行推理路径以及逐步的Chain of Thought解释配对。实证评估表明，TITAN使模型能够生成在语法上有效、语义上连贯的推理路径，并可以在底层图谱上确定性地执行。",
+        "translated_title": "TITAN：用于网络威胁情报的图可执行推理",
+        "label": [],
+        "label_reason": "论文聚焦网络安全威胁情报，不直接涉及推荐系统。",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "提出基于知识图谱的可执行推理框架，具有新颖性但非推荐系统创新。"
+    },
+    {
+        "title": "An Efficient Rubric-based Generative Verifier for Search-Augmented LLMs",
+        "url": "http://arxiv.org/abs/2510.14660v1",
+        "pub_date": "2025-10-16",
+        "summary": "Search augmentation empowers Large Language Models with retrieval capabilities to overcome the limitations imposed by static parameters. Recently, Reinforcement Learning leverages tailored reward signals as a viable technique to enhance LLMs performing tasks involving search. However, existing reward modeling for search-augmented LLMs faces several limitations. Rule-based rewards, such as Exact Match, are verifiable but fragile to variations in expression and cannot be applied to long-form workloads. In contrast, generative rewards improve robustness, but designing verifiable and stable rewards for long-form workloads in dynamic corpora remains challenging and also incurs high computational costs. In this paper, we propose a unified and verifiable paradigm, \"nugget-as-rubric\", which treats atomic information points as structured evaluation criteria for different search-augmentation workloads. Short-form tasks correspond to a single rubric, whereas long-form tasks expand to multiple rubrics aligned with the question's information needs. To support long-form settings, we design an automatic rubric construction pipeline based on query rewriting, which can automatically retrieve passages relevant to each question and extract rubrics from them, both from static corpora and from dynamic online web content. Furthermore, we introduce \\textbf{Search-Gen-V}, a 4B-parameter efficient generative verifier under our proposed verifiable paradigm, which is trained via the idea of distillation and a two-stage strategy. Experimental results show that Search-Gen-V achieves strong verification accuracy across different workloads, making it a scalable, robust, and efficient verifiable reward constructor for search-augmented LLMs.",
+        "translated": "搜索增强为大语言模型赋予了召回能力，以克服静态参数所带来的限制。近年来，强化学习利用定制化的奖励信号，作为增强大语言模型在涉及搜索任务性能的一种可行技术。然而，现有的用于搜索增强的大语言模型的奖励建模面临多个限制。基于规则的奖励，例如精确匹配（Exact Match），虽然可验证，但对表达方式的变化非常脆弱，无法应用于长文本任务。相比之下，生成式奖励增强了鲁棒性，但在动态语料库中为长文本任务设计可验证且稳定的奖励仍然具有挑战性，并且计算成本较高。在本文中，我们提出了一种统一且可验证的范式——“nugget-as-rubric”，该范式将原子信息点视为结构化的评估标准，适用于不同的搜索增强任务。短文本任务对应单一评估标准，而长文本任务则扩展为多个与问题信息需求对齐的评估标准。为了支持长文本场景，我们设计了一种基于查询重写（query rewriting）的自动评估标准构建流程，该流程能够自动召回与每个问题相关的段落，并从中提取评估标准，无论是静态语料库还是动态的在线网页内容。此外，我们引入了 **Search-Gen-V**，一个在我们提出的可验证范式下高效的大语言生成验证模型。该模型通过蒸馏思想和两阶段训练策略进行训练。实验结果表明，Search-Gen-V 在不同任务中均实现了较强的验证精度，使其成为适用于搜索增强的大语言模型的一种可扩展、鲁棒且高效的可验证奖励构造器。",
+        "translated_title": "一种高效的基于评分规则的生成式验证器用于检索增强的大语言模型",
+        "label": [
+            "LLM生成式推荐"
+        ],
+        "label_reason": "论文涉及生成式LLM与搜索增强，适用于生成式推荐场景",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出新颖的验证范式和高效的生成式验证器，改进现有奖励建模"
+    },
+    {
+        "title": "Causality Enhancement for Cross-Domain Recommendation",
+        "url": "http://arxiv.org/abs/2510.14641v1",
+        "pub_date": "2025-10-16",
+        "summary": "Cross-domain recommendation forms a crucial component in recommendation systems. It leverages auxiliary information through source domain tasks or features to enhance target domain recommendations. However, incorporating inconsistent source domain tasks may result in insufficient cross-domain modeling or negative transfer. While incorporating source domain features without considering the underlying causal relationships may limit their contribution to final predictions. Thus, a natural idea is to directly train a cross-domain representation on a causality-labeled dataset from the source to target domain. Yet this direction has been rarely explored, as identifying unbiased real causal labels is highly challenging in real-world scenarios. In this work, we attempt to take a first step in this direction by proposing a causality-enhanced framework, named CE-CDR. Specifically, we first reformulate the cross-domain recommendation as a causal graph for principled guidance. We then construct a causality-aware dataset heuristically. Subsequently, we derive a theoretically unbiased Partial Label Causal Loss to generalize beyond the biased causality-aware dataset to unseen cross-domain patterns, yielding an enriched cross-domain representation, which is then fed into the target model to enhance target-domain recommendations. Theoretical and empirical analyses, as well as extensive experiments, demonstrate the rationality and effectiveness of CE-CDR and its general applicability as a model-agnostic plugin. Moreover, it has been deployed in production since April 2025, showing its practical value in real-world applications.",
+        "translated": "跨域推荐是推荐系统中的一个关键组成部分。它通过源域任务或特征来利用辅助信息，以增强目标域的推荐效果。然而，引入不一致的源域任务可能导致跨域建模不充分或出现负迁移。而在不考虑底层因果关系的情况下融合源域特征，可能会限制其对最终预测的贡献。因此，一个自然的想法是直接在从源域到目标域的因果标注数据集上训练跨域表示。然而，这一方向鲜有探索，因为在现实场景中识别无偏的真实因果标签极具挑战性。在本工作中，我们尝试通过提出一种因果增强框架CE-CDR，在这一方向上迈出第一步。具体来说，我们首先将跨域推荐重新表述为因果图，以提供原理性的指导。然后，我们启发式地构建了一个因果感知数据集。随后，我们推导出一个理论上无偏的部标签因果损失函数，以在存在偏倚的因果感知数据集基础上，泛化至未见过的跨域模式，从而获得更丰富的跨域表示，并将其输入目标模型中以提升目标域的推荐性能。理论与实证分析以及广泛的实验验证了CE-CDR的合理性与有效性，并展示了其作为模型无关插件的通用适用性。此外，该方法自2025年4月起已在生产环境中部署，表明其在实际应用中的实用价值。",
+        "translated_title": "跨域推荐中的因果增强",
+        "label": [
+            "跨域/联邦推荐",
+            "因果推理"
+        ],
+        "label_reason": "论文研究跨域推荐，属于推荐系统核心问题，涉及因果关系建模。",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出因果增强框架CE-CDR，改进跨域推荐模型的泛化能力。"
+    },
+    {
+        "title": "Intent Clustering with Shared Pseudo-Labels",
+        "url": "http://arxiv.org/abs/2510.14640v1",
+        "pub_date": "2025-10-16",
+        "summary": "In this paper, we propose an intuitive, training-free and label-free method for intent clustering that makes minimal assumptions using lightweight and open-source LLMs. Many current approaches rely on commercial LLMs, which are costly, and offer limited transparency. Additionally, their methods often explicitly depend on knowing the number of clusters in advance, which is often not the case in realistic settings. To address these challenges, instead of asking the LLM to match similar text directly, we first ask it to generate pseudo-labels for each text, and then perform multi-label classification in this pseudo-label set for each text. This approach is based on the hypothesis that texts belonging to the same cluster will share more labels, and will therefore be closer when encoded into embeddings. These pseudo-labels are more human-readable than direct similarity matches. Our evaluation on four benchmark sets shows that our approach achieves results comparable to and better than recent baselines, while remaining simple and computationally efficient. Our findings indicate that our method can be applied in low-resource scenarios and is stable across multiple models and datasets.",
+        "translated": "在本文中，我们提出了一种直观的、无需训练且无需标注的方法用于意图聚类，该方法在使用轻量级和开源大语言模型的前提下，做出最小的假设。许多现有方法依赖于商业大语言模型，这不仅成本高昂，而且透明度有限。此外，这些方法通常明确要求提前知道聚类的数量，而这种情况在现实场景中往往并不存在。为了解决这些挑战，我们没有直接要求大语言模型匹配相似文本，而是首先让其为每段文本生成伪标签，然后在该伪标签集合中对每段文本进行多标签分类。该方法基于这样的假设：属于同一聚类的文本将共享更多的标签，因此在嵌入编码后彼此的距离将更近。与直接相似性匹配相比，这些伪标签更具可读性。我们在四个基准数据集上的评估表明，我们的方法在保持简单和计算高效的同时，取得了与近期基线相当甚至更好的结果。我们的实验结果表明，该方法适用于资源有限的场景，并在多个模型和数据集之间具有稳定性。",
+        "translated_title": "Intent Clustering with Shared Pseudo-Labels  \n共享伪标签的意图聚类",
+        "label": [
+            "LLM生成式推荐"
+        ],
+        "label_reason": "伪标签生成用于意图聚类，可能间接用于推荐系统的意图建模",
+        "relevance_score": 5,
+        "novelty_score": 7,
+        "novelty_reason": "提出无需训练的伪标签聚类方法，提升计算效率和可解释性"
+    },
+    {
+        "title": "MR.Rec: Synergizing Memory and Reasoning for Personalized Recommendation\n  Assistant with LLMs",
+        "url": "http://arxiv.org/abs/2510.14629v1",
+        "pub_date": "2025-10-16",
+        "summary": "The application of Large Language Models (LLMs) in recommender systems faces key challenges in delivering deep personalization and intelligent reasoning, especially for interactive scenarios. Current methods are often constrained by limited context windows and single-turn reasoning, hindering their ability to capture dynamic user preferences and proactively reason over recommendation contexts. To address these limitations, we propose MR.Rec, a novel framework that synergizes memory and reasoning for LLM-based recommendations. To achieve personalization, we develop a comprehensive Retrieval-Augmented Generation (RAG) system that efficiently indexes and retrieves relevant external memory to enhance LLM personalization capabilities. Furthermore, to enable the synergy between memory and reasoning, our RAG system goes beyond conventional query-based retrieval by integrating reasoning enhanced memory retrieval. Finally, we design a reinforcement learning framework that trains the LLM to autonomously learn effective strategies for both memory utilization and reasoning refinement. By combining dynamic memory retrieval with adaptive reasoning, this approach ensures more accurate, context-aware, and highly personalized recommendations. Extensive experiments demonstrate that MR.Rec significantly outperforms state-of-the-art baselines across multiple metrics, validating its efficacy in delivering intelligent and personalized recommendations. We will release code and data upon paper notification.",
+        "translated": "大语言模型（LLM）在推荐系统中的应用面临在实现深度个性化与智能推理方面的主要挑战，尤其是在交互式场景中。当前的方法通常受限于有限的上下文窗口和单轮推理，阻碍了其捕捉动态用户偏好并主动在推荐上下文中进行推理的能力。为了解决这些限制，我们提出MR.Rec，一种新颖的框架，将记忆与推理相结合，用于基于LLM的推荐。为了实现个性化，我们开发了一个全面的检索增强生成（RAG）系统，高效地索引和召回相关的外部记忆，以增强LLM的个性化能力。此外，为了实现记忆与推理之间的协同作用，我们的RAG系统超越了传统的基于查询的召回，通过集成推理增强的记忆召回机制。最后，我们设计了一个强化学习框架，训练LLM自主学习在记忆利用和推理优化方面的有效策略。通过结合动态记忆召回与自适应推理，该方法能够提供更加准确、上下文感知和高度个性化的推荐。广泛的实验表明，MR.Rec在多个指标上显著优于最先进的基线方法，验证了其在实现智能和个性化推荐方面的有效性。我们将随论文通知发布代码和数据。",
+        "translated_title": "MR.Rec: 结合记忆与推理的个性化推荐方法  \n与大语言模型结合",
+        "label": [
+            "LLM生成式推荐",
+            "序列推荐",
+            "推荐系统公平性/可解释性"
+        ],
+        "label_reason": "论文提出结合记忆与推理的LLM推荐框架，显著提升个性化与智能推荐能力。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新性地结合RAG与强化学习，实现动态记忆检索与自适应推理策略。"
+    },
+    {
+        "title": "GemiRec: Interest Quantization and Generation for Multi-Interest\n  Recommendation",
+        "url": "http://arxiv.org/abs/2510.14626v1",
+        "pub_date": "2025-10-16",
+        "summary": "Multi-interest recommendation has gained attention, especially in industrial retrieval stage. Unlike classical dual-tower methods, it generates multiple user representations instead of a single one to model comprehensive user interests. However, prior studies have identified two underlying limitations: the first is interest collapse, where multiple representations homogenize. The second is insufficient modeling of interest evolution, as they struggle to capture latent interests absent from a user's historical behavior. We begin with a thorough review of existing works in tackling these limitations. Then, we attempt to tackle these limitations from a new perspective. Specifically, we propose a framework-level refinement for multi-interest recommendation, named GemiRec. The proposed framework leverages interest quantization to enforce a structural interest separation and interest generation to learn the evolving dynamics of user interests explicitly. It comprises three modules: (a) Interest Dictionary Maintenance Module (IDMM) maintains a shared quantized interest dictionary. (b) Multi-Interest Posterior Distribution Module (MIPDM) employs a generative model to capture the distribution of user future interests. (c) Multi-Interest Retrieval Module (MIRM) retrieves items using multiple user-interest representations. Both theoretical and empirical analyses, as well as extensive experiments, demonstrate its advantages and effectiveness. Moreover, it has been deployed in production since March 2025, showing its practical value in industrial applications.",
+        "translated": "多兴趣推荐在工业召回阶段中引起了广泛关注。与经典的双塔方法不同，它生成多个用户表示，而不是单一的表示，以建模用户全面的兴趣。然而，已有研究表明该方法存在两个潜在的限制：第一个是兴趣坍缩，其中多个表示趋于同质化；第二个是对兴趣演化的建模不足，因为它们难以捕捉用户历史行为中未体现的潜在兴趣。我们首先对现有工作中解决这些限制的方法进行了全面的回顾。随后，我们尝试从一个新的视角来应对这些限制。具体而言，我们提出了一个面向多兴趣推荐的框架级改进，称为GemiRec。所提框架利用兴趣量化来实现结构化的兴趣分离，并通过兴趣生成显式地学习用户兴趣的演化动态。它包含三个模块：(a) 兴趣字典维护模块（IDMM）维护一个共享的量化兴趣字典；(b) 多兴趣后验分布模块（MIPDM）采用生成模型来捕捉用户未来兴趣的分布；(c) 多兴趣召回模块（MIRM）使用多个用户-兴趣表示进行物料召回。理论与实证分析以及广泛的实验验证了其优势和有效性。此外，该方法自2025年3月起已在生产环境中部署，展示了其在工业应用中的实用价值。",
+        "translated_title": "GemiRec：多兴趣推荐中的兴趣量化与生成",
+        "label": [
+            "召回（Recall）",
+            "多兴趣推荐（Multimodal Recommendation）",
+            "生成式推荐（LLM-based Generative Recommendation）"
+        ],
+        "label_reason": "论文提出多兴趣推荐框架GemiRec，聚焦于召回阶段的兴趣建模与生成，与推荐系统核心问题紧密相关。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "从兴趣量化与生成角度提出新颖框架，改进多兴趣建模方式，具有理论与应用创新。"
+    },
+    {
+        "title": "Multimodal RAG for Unstructured Data:Leveraging Modality-Aware Knowledge\n  Graphs with Hybrid Retrieval",
+        "url": "http://arxiv.org/abs/2510.14592v1",
+        "pub_date": "2025-10-16",
+        "summary": "Current Retrieval-Augmented Generation (RAG) systems primarily operate on unimodal textual data, limiting their effectiveness on unstructured multimodal documents. Such documents often combine text, images, tables, equations, and graphs, each contributing unique information. In this work, we present a Modality-Aware Hybrid retrieval Architecture (MAHA), designed specifically for multimodal question answering with reasoning through a modality-aware knowledge graph. MAHA integrates dense vector retrieval with structured graph traversal, where the knowledge graph encodes cross-modal semantics and relationships. This design enables both semantically rich and context-aware retrieval across diverse modalities. Evaluations on multiple benchmark datasets demonstrate that MAHA substantially outperforms baseline methods, achieving a ROUGE-L score of 0.486, providing complete modality coverage. These results highlight MAHA's ability to combine embeddings with explicit document structure, enabling effective multimodal retrieval. Our work establishes a scalable and interpretable retrieval framework that advances RAG systems by enabling modality-aware reasoning over unstructured multimodal data.",
+        "translated": "当前的检索增强生成（RAG）系统主要基于单模态文本数据进行操作，这限制了它们在非结构化多模态文档上的有效性。此类文档通常结合了文本、图像、表格、公式和图表，每种模态都提供了独特的信息。在本文中，我们提出了一种模态感知混合检索架构（MAHA），该架构专为通过模态感知知识图谱进行多模态问答与推理而设计。MAHA 将稠密向量召回与结构化的图遍历相结合，其中知识图谱编码了跨模态的语义信息与关系。这种设计实现了在多种模态下语义丰富且上下文感知的检索。在多个基准数据集上的评估表明，MAHA 显著优于基线方法，达到 ROUGE-L 评分为 0.486，并实现了对所有模态的完整覆盖。这些结果突显了 MAHA 将嵌入表示与显式的文档结构相结合的能力，从而实现高效的多模态召回。我们的工作建立了一个可扩展且可解释的检索框架，通过在非结构化多模态数据上实现模态感知推理，推动了 RAG 系统的发展。",
+        "translated_title": "多模态RAG用于非结构化数据：利用模态感知的知识图谱与混合召回",
+        "label": [
+            "多模态推荐",
+            "LLM生成式推荐",
+            "召回"
+        ],
+        "label_reason": "论文提出多模态RAG框架，适用于包含多种模态信息的推荐场景",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "引入模态感知的知识图谱与混合检索机制，具有一定的创新性"
+    },
+    {
+        "title": "Agentic Entropy-Balanced Policy Optimization",
+        "url": "http://arxiv.org/abs/2510.14545v1",
+        "pub_date": "2025-10-16",
+        "summary": "Recently, Agentic Reinforcement Learning (Agentic RL) has made significant progress in incentivizing the multi-turn, long-horizon tool-use capabilities of web agents. While mainstream agentic RL algorithms autonomously explore high-uncertainty tool-call steps under the guidance of entropy, excessive reliance on entropy signals can impose further constraints, leading to the training collapse. In this paper, we delve into the challenges caused by entropy and propose the Agentic Entropy-Balanced Policy Optimization (AEPO), an agentic RL algorithm designed to balance entropy in both the rollout and policy update phases. AEPO comprises two core components: (1) a dynamic entropy-balanced rollout mechanism that adaptively allocate global and branch sampling budget through entropy pre-monitoring, while imposing a branch penalty on consecutive high-entropy tool-call steps to prevent over-branching issues; and (2) Entropy-Balanced Policy Optimization that inserts a stop-gradient operation into the high-entropy clipping term to preserve and properly rescale gradients on high-entropy tokens, while incorporating entropy-aware advantage estimation to prioritize learning on high-uncertainty tokens. Results across 14 challenging datasets show that AEPO consistently outperforms 7 mainstream RL algorithms. With just 1K RL samples, Qwen3-14B with AEPO achieves impressive results: 47.6% on GAIA, 11.2% on Humanity's Last Exam, and 43.0% on WebWalker for Pass@1; 65.0% on GAIA, 26.0% on Humanity's Last Exam, and 70.0% on WebWalker for Pass@5. Further analysis reveals that AEPO improves rollout sampling diversity while maintaining stable policy entropy, facilitating scalable web agent training.",
+        "translated": "近期，Agentic 强化学习（Agentic RL）在激励网络智能体的多轮次、长时域工具使用能力方面取得了显著进展。尽管主流的 Agentic RL 算法在熵的指导下自主探索高不确定性工具调用步骤，但对熵信号的过度依赖可能带来进一步限制，导致训练崩溃。在本文中，我们深入探讨了由熵引起的挑战，并提出了 Agentic Entropy-Balanced Policy Optimization（AEPO），这是一种旨在在 rollout 和策略更新阶段平衡熵的 Agentic RL 算法。AEPO 包含两个核心组件：（1）一种动态熵平衡 rollout 机制，通过熵的预监控，自适应地分配全局与分支采样预算，同时对连续的高熵工具调用步骤施加分支惩罚，以防止过度分支问题；（2）熵平衡策略优化，将 stop-gradient 操作插入高熵裁剪项中，以保留并正确缩放高熵 token 的梯度，同时结合熵感知的优势估计，优先在高不确定性 token 上进行学习。在 14 个具有挑战性的数据集上的结果表明，AEPO 一致优于 7 种主流 RL 算法。仅使用 1K RL 样本，采用 AEPO 的 Qwen3-14B 在 Pass@1 指标上分别达到了 47.6%（GAIA）、11.2%（Humanity's Last Exam）和 43.0%（WebWalker）；在 Pass@5 指标上分别达到了 65.0%（GAIA）、26.0%（Humanity's Last Exam）和 70.0%（WebWalker）。进一步分析表明，AEPO 在保持策略熵稳定的同时提升了 rollout 采样的多样性，从而促进了网络智能体的可扩展训练。",
+        "translated_title": "基于智能体的熵平衡策略优化",
+        "label": [],
+        "label_reason": "论文聚焦于强化学习中的策略优化，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "提出了一种熵平衡策略优化方法，改进了探索机制，但属于通用强化学习范畴。"
+    },
+    {
+        "title": "Acquisition of interpretable domain information during brain MR image\n  harmonization for content-based image retrieval",
+        "url": "http://arxiv.org/abs/2510.14535v1",
+        "pub_date": "2025-10-16",
+        "summary": "Medical images like MR scans often show domain shifts across imaging sites due to scanner and protocol differences, which degrade machine learning performance in tasks such as disease classification. Domain harmonization is thus a critical research focus. Recent approaches encode brain images $\\boldsymbol{x}$ into a low-dimensional latent space $\\boldsymbol{z}$, then disentangle it into $\\boldsymbol{z_u}$ (domain-invariant) and $\\boldsymbol{z_d}$ (domain-specific), achieving strong results. However, these methods often lack interpretability$-$an essential requirement in medical applications$-$leaving practical issues unresolved. We propose Pseudo-Linear-Style Encoder Adversarial Domain Adaptation (PL-SE-ADA), a general framework for domain harmonization and interpretable representation learning that preserves disease-relevant information in brain MR images. PL-SE-ADA includes two encoders $f_E$ and $f_{SE}$ to extract $\\boldsymbol{z_u}$ and $\\boldsymbol{z_d}$, a decoder to reconstruct the image $f_D$, and a domain predictor $g_D$. Beyond adversarial training between the encoder and domain predictor, the model learns to reconstruct the input image $\\boldsymbol{x}$ by summing reconstructions from $\\boldsymbol{z_u}$ and $\\boldsymbol{z_d}$, ensuring both harmonization and informativeness. Compared to prior methods, PL-SE-ADA achieves equal or better performance in image reconstruction, disease classification, and domain recognition. It also enables visualization of both domain-independent brain features and domain-specific components, offering high interpretability across the entire framework.",
+        "translated": "磁共振扫描等医学图像常常由于扫描设备和成像协议的差异，在不同成像中心之间表现出领域偏移，这会降低机器学习在疾病分类等任务中的性能。因此，领域调和成为了一个关键的研究方向。近期的方法将脑图像 $\\boldsymbol{x}$ 编码到一个低维潜在空间 $\\boldsymbol{z}$ 中，然后将其解耦为 $\\boldsymbol{z_u}$（领域不变）和 $\\boldsymbol{z_d}$（领域特定），取得了良好的效果。然而，这些方法通常缺乏可解释性——这是医学应用中的基本要求——从而未能解决实际问题。我们提出了一种伪线性风格编码器对抗领域自适应（Pseudo-Linear-Style Encoder Adversarial Domain Adaptation, PL-SE-ADA）框架，该框架是一种通用的领域调和与可解释表征学习方法，能够在脑部磁共振图像中保留与疾病相关的信息。PL-SE-ADA 包括两个编码器 $f_E$ 和 $f_{SE}$，分别用于提取 $\\boldsymbol{z_u}$ 和 $\\boldsymbol{z_d}$，一个用于图像重建的解码器 $f_D$，以及一个领域预测器 $g_D$。除了编码器与领域预测器之间的对抗训练外，模型还通过将 $\\boldsymbol{z_u}$ 和 $\\boldsymbol{z_d}$ 的重建结果相加，学习重建输入图像 $\\boldsymbol{x}$，从而确保领域调和和信息保留。与先前方法相比，PL-SE-ADA 在图像重建、疾病分类和领域识别任务中均达到了同等或更好的性能。此外，它还支持对领域无关的脑特征和领域相关组件进行可视化，为整个框架提供了高度的可解释性。",
+        "translated_title": "在基于内容的医学图像检索中进行脑部 MR 图像协调过程中可解释领域信息的获取",
+        "label": [],
+        "label_reason": "主要涉及医学图像处理，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 5,
+        "novelty_reason": "在图像域适应方面提出了一定改进，但属于常规技术范畴。"
+    },
+    {
+        "title": "MedTrust-RAG: Evidence Verification and Trust Alignment for Biomedical\n  Question Answering",
+        "url": "http://arxiv.org/abs/2510.14400v1",
+        "pub_date": "2025-10-16",
+        "summary": "Biomedical question answering (QA) requires accurate interpretation of complex medical knowledge. Large language models (LLMs) have shown promising capabilities in this domain, with retrieval-augmented generation (RAG) systems enhancing performance by incorporating external medical literature. However, RAG-based approaches in biomedical QA suffer from hallucinations due to post-retrieval noise and insufficient verification of retrieved evidence, undermining response reliability. We propose MedTrust-Guided Iterative RAG, a framework designed to enhance factual consistency and mitigate hallucinations in medical QA. Our method introduces three key innovations. First, it enforces citation-aware reasoning by requiring all generated content to be explicitly grounded in retrieved medical documents, with structured Negative Knowledge Assertions used when evidence is insufficient. Second, it employs an iterative retrieval-verification process, where a verification agent assesses evidence adequacy and refines queries through Medical Gap Analysis until reliable information is obtained. Third, it integrates the MedTrust-Align Module (MTAM) that combines verified positive examples with hallucination-aware negative samples, leveraging Direct Preference Optimization to reinforce citation-grounded reasoning while penalizing hallucination-prone response patterns. Experiments on MedMCQA, MedQA, and MMLU-Med demonstrate that our approach consistently outperforms competitive baselines across multiple model architectures, achieving the best average accuracy with gains of 2.7% for LLaMA3.1-8B-Instruct and 2.4% for Qwen3-8B.",
+        "translated": "生物医学问答（QA）需要对复杂的医学知识进行准确的理解。大语言模型（LLMs）在此领域展现出良好的潜力，而基于召回增强生成（RAG）的系统通过引入外部医学文献进一步提升了性能。然而，在生物医学QA中，基于RAG的方法由于召回后的噪声以及对召回证据验证不足，容易产生幻觉，从而影响响应的可靠性。我们提出MedTrust-Guided Iterative RAG，一个旨在提升医学问答事实一致性和减少幻觉的框架。我们的方法引入了三个关键创新。首先，该方法通过要求所有生成内容必须明确基于召回的医学文档进行推理，从而强制引用感知的推理过程。在证据不足时，采用结构化的Negative Knowledge Assertions进行补充。其次，该方法采用迭代的召回-验证过程，其中验证代理通过医学差距分析（Medical Gap Analysis）评估证据充分性并细化查询，直到获取可靠的信息。第三，该方法集成了MedTrust-Align Module（MTAM），将已验证的正例与具有幻觉感知能力的负样本相结合，利用直接偏好优化（Direct Preference Optimization）来强化引用基础推理，并对易产生幻觉的响应模式施加惩罚。在MedMCQA、MedQA和MMLU-Med上的实验表明，我们的方法在多种模型架构下均能持续超越具有竞争力的基线模型，取得了最佳的平均准确率，其中在LLaMA3.1-8B-Instruct上提高了2.7%，在Qwen3-8B上提高了2.4%。",
+        "translated_title": "MedTrust-RAG：生物医学问答中的证据验证与信任对齐",
+        "label": [],
+        "label_reason": "论文聚焦医学问答，不直接涉及推荐系统核心技术",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "提出创新性的迭代检索-验证框架，减少幻觉"
+    },
+    {
+        "title": "PluriHop: Exhaustive, Recall-Sensitive QA over Distractor-Rich Corpora",
+        "url": "http://arxiv.org/abs/2510.14377v1",
+        "pub_date": "2025-10-16",
+        "summary": "Recent advances in large language models (LLMs) and retrieval-augmented generation (RAG) have enabled progress on question answering (QA) when relevant evidence is in one (single-hop) or multiple (multi-hop) passages. Yet many realistic questions about recurring report data - medical records, compliance filings, maintenance logs - require aggregation across all documents, with no clear stopping point for retrieval and high sensitivity to even one missed passage. We term these pluri-hop questions and formalize them by three criteria: recall sensitivity, exhaustiveness, and exactness. To study this setting, we introduce PluriHopWIND, a diagnostic multilingual dataset of 48 pluri-hop questions built from 191 real-world wind industry reports in German and English. We show that PluriHopWIND is 8-40% more repetitive than other common datasets and thus has higher density of distractor documents, better reflecting practical challenges of recurring report corpora. We test a traditional RAG pipeline as well as graph-based and multimodal variants, and find that none of the tested approaches exceed 40% in statement-wise F1 score. Motivated by this, we propose PluriHopRAG, a RAG architecture that follows a \"check all documents individually, filter cheaply\" approach: it (i) decomposes queries into document-level subquestions and (ii) uses a cross-encoder filter to discard irrelevant documents before costly LLM reasoning. We find that PluriHopRAG achieves relative F1 score improvements of 18-52% depending on base LLM. Despite its modest size, PluriHopWIND exposes the limitations of current QA systems on repetitive, distractor-rich corpora. PluriHopRAG's performance highlights the value of exhaustive retrieval and early filtering as a powerful alternative to top-k methods.",
+        "translated": "近年来，大语言模型（LLM）和检索增强生成（RAG）的进展使得在相关证据存在于一个（单跳）或多个（多跳）段落中的问答（QA）任务取得了进步。然而，许多关于重复报告数据的现实问题——如医疗记录、合规文件、维护日志——需要对所有文档进行聚合，检索过程中没有明确的停止点，且对漏掉一个段落都高度敏感。我们将这些问题称为“pluri-hop”问题，并通过三个标准对其进行形式化：召回敏感性（recall sensitivity）、全面性（exhaustiveness）和准确性（exactness）。为了研究这一场景，我们引入了 PluriHopWIND，这是一个用于诊断的多语言数据集，包含48个 pluri-hop 问题，由191份真实世界中的风能行业报告（以德语和英语编写）构建而成。我们发现，PluriHopWIND 比其他常见数据集多出8%-40%的重复内容，因此具有更高的干扰文档密度，更能反映重复报告语料库中的实际挑战。我们测试了传统 RAG 流水线以及基于图和多模态的变体，发现所有测试方法的陈述级 F1 分数均未超过40%。受此启发，我们提出了 PluriHopRAG，一种遵循“逐个检查所有文档、廉价过滤”的 RAG 架构：它（i）将查询分解为文档级别的子问题，（ii）使用交叉编码器过滤器在昂贵的 LLM 推理之前丢弃不相关的文档。我们发现，PluriHopRAG 在不同基础 LLM 上实现了18%-52%的相对 F1 分数提升。尽管 PluriHopWIND 的规模相对较小，但它揭示了当前问答系统在重复且干扰文档丰富的语料库中的局限性。PluriHopRAG 的性能凸显了全面检索和早期过滤作为 top-k 方法强大替代方案的价值。",
+        "translated_title": "PluriHop: 在干扰信息丰富的语料库上进行详尽的、召回敏感的问答",
+        "label": [
+            "召回（Recall）"
+        ],
+        "label_reason": "论文关注问答中的召回敏感性，提出改进的RAG架构以提升文档检索效率。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出PluriHopRAG架构，通过文档级子问题分解和交叉编码器过滤提升性能。"
+    },
+    {
+        "title": "Ensembling Multiple Hallucination Detectors Trained on VLLM Internal\n  Representations",
+        "url": "http://arxiv.org/abs/2510.14330v1",
+        "pub_date": "2025-10-16",
+        "summary": "This paper presents the 5th place solution by our team, y3h2, for the Meta CRAG-MM Challenge at KDD Cup 2025. The CRAG-MM benchmark is a visual question answering (VQA) dataset focused on factual questions about images, including egocentric images. The competition was contested based on VQA accuracy, as judged by an LLM-based automatic evaluator. Since incorrect answers result in negative scores, our strategy focused on reducing hallucinations from the internal representations of the VLM. Specifically, we trained logistic regression-based hallucination detection models using both the hidden_state and the outputs of specific attention heads. We then employed an ensemble of these models. As a result, while our method sacrificed some correct answers, it significantly reduced hallucinations and allowed us to place among the top entries on the final leaderboard. For implementation details and code, please refer to https://gitlab.aicrowd.com/htanabe/meta-comprehensive-rag-benchmark-starter-kit.",
+        "translated": "本文介绍了我们团队 y3h2 在 KDD Cup 2025 的 Meta CRAG-MM 挑战赛中获得第五名的解决方案。CRAG-MM 基准是一个专注于图像事实性问题的视觉问答（VQA）数据集，包括第一人称视角的图像。比赛根据 VQA 准确率进行评判，评判方式由基于大语言模型（LLM）的自动评估器完成。由于错误答案会导致负分，我们的策略重点在于减少视觉语言模型（VLM）内部表示中的幻觉现象。具体来说，我们使用隐藏状态（hidden_state）以及特定注意力头（attention heads）的输出，训练了基于逻辑回归的幻觉检测模型。随后，我们采用了这些模型的集成。结果表明，虽然我们的方法牺牲了一些正确答案，但显著减少了幻觉，使我们在最终排行榜中进入了前列。关于实现细节和代码，请参考 https://gitlab.aicrowd.com/htanabe/meta-comprehensive-rag-benchmark-starter-kit。",
+        "translated_title": "基于大语言模型内部表示的多种幻觉检测器集成",
+        "label": [],
+        "label_reason": "论文聚焦于VQA中的幻觉检测，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 5,
+        "novelty_reason": "提出基于VLM内部表示的幻觉检测方法，有一定实用价值但创新性有限。"
+    },
+    {
+        "title": "Large Reasoning Embedding Models: Towards Next-Generation Dense\n  Retrieval Paradigm",
+        "url": "http://arxiv.org/abs/2510.14321v1",
+        "pub_date": "2025-10-16",
+        "summary": "In modern e-commerce search systems, dense retrieval has become an indispensable component. By computing similarities between query and item (product) embeddings, it efficiently selects candidate products from large-scale repositories. With the breakthroughs in large language models (LLMs), mainstream embedding models have gradually shifted from BERT to LLMs for more accurate text modeling. However, these models still adopt direct-embedding methods, and the semantic accuracy of embeddings remains inadequate. Therefore, contrastive learning is heavily employed to achieve tight semantic alignment between positive pairs. Consequently, such models tend to capture statistical co-occurrence patterns in the training data, biasing them toward shallow lexical and semantic matches. For difficult queries exhibiting notable lexical disparity from target items, the performance degrades significantly. In this work, we propose the Large Reasoning Embedding Model (LREM), which novelly integrates reasoning processes into representation learning. For difficult queries, LREM first conducts reasoning to achieve a deep understanding of the original query, and then produces a reasoning-augmented query embedding for retrieval. This reasoning process effectively bridges the semantic gap between original queries and target items, significantly improving retrieval accuracy. Specifically, we adopt a two-stage training process: the first stage optimizes the LLM on carefully curated Query-CoT-Item triplets with SFT and InfoNCE losses to establish preliminary reasoning and embedding capabilities, and the second stage further refines the reasoning trajectories via reinforcement learning (RL). Extensive offline and online experiments validate the effectiveness of LREM, leading to its deployment on China's largest e-commerce platform since August 2025.",
+        "translated": "在现代电子商务搜索系统中，稠密召回已成为不可或缺的组成部分。通过计算查询与物料（产品）嵌入之间的相似性，它能够高效地从大规模仓库中选取候选产品。随着大语言模型（LLM）的突破，主流嵌入模型已逐渐从 BERT 转向 LLM，以实现更精确的文本建模。然而，这些模型仍采用直接嵌入方法，其嵌入的语义准确性仍然不足。因此，对比学习被广泛用于实现正样本对之间的紧密语义对齐。结果是，这些模型倾向于捕捉训练数据中的统计共现模式，使其偏向于浅层的词汇和语义匹配。对于与目标物料存在显著词汇差异的复杂查询，其性能会明显下降。在本研究中，我们提出了大型推理嵌入模型（LREM），其创新性地将推理过程整合到表示学习中。对于复杂查询，LREM 首先进行推理以实现对原始查询的深入理解，然后生成一个经过推理增强的查询嵌入用于召回。这一推理过程有效地弥合了原始查询与目标物料之间的语义差距，显著提升了召回精度。具体来说，我们采用了一个两阶段的训练过程：第一阶段在精心构建的 Query-CoT-Item 三元组上优化 LLM，使用监督微调（SFT）和 InfoNCE 损失以建立初步的推理和嵌入能力；第二阶段则通过强化学习（RL）进一步优化推理轨迹。大量的离线和在线实验验证了 LREM 的有效性，自 2025 年 8 月起，该模型已部署在中国最大的电子商务平台上。",
+        "translated_title": "大型推理嵌入模型：迈向下一代密集召回范式",
+        "label": [
+            "召回",
+            "通用推荐技术",
+            "负采样与对比学习"
+        ],
+        "label_reason": "论文聚焦于电商搜索中的密集召回优化，与推荐系统召回环节直接相关。",
+        "relevance_score": 8,
+        "novelty_score": 9,
+        "novelty_reason": "提出将推理过程融入嵌入学习，通过强化学习优化推理轨迹，方法新颖且效果显著。"
+    },
+    {
+        "title": "Rethinking Schema Linking: A Context-Aware Bidirectional Retrieval\n  Approach for Text-to-SQL",
+        "url": "http://arxiv.org/abs/2510.14296v1",
+        "pub_date": "2025-10-16",
+        "summary": "Schema linking -- the process of aligning natural language questions with database schema elements -- is a critical yet underexplored component of Text-to-SQL systems. While recent methods have focused primarily on improving SQL generation, they often neglect the retrieval of relevant schema elements, which can lead to hallucinations and execution failures. In this work, we propose a context-aware bidirectional schema retrieval framework that treats schema linking as a standalone problem. Our approach combines two complementary strategies: table-first retrieval followed by column selection, and column-first retrieval followed by table selection. It is further augmented with techniques such as question decomposition, keyword extraction, and keyphrase extraction. Through comprehensive evaluations on challenging benchmarks such as BIRD and Spider, we demonstrate that our method significantly improves schema recall while reducing false positives. Moreover, SQL generation using our retrieved schema consistently outperforms full-schema baselines and closely approaches oracle performance, all without requiring query refinement. Notably, our method narrows the performance gap between full and perfect schema settings by 50\\%. Our findings highlight schema linking as a powerful lever for enhancing Text-to-SQL accuracy and efficiency.",
+        "translated": "模式链接——将自然语言问题与数据库模式元素对齐的过程——是文本到SQL（Text-to-SQL）系统中一个关键但尚未充分探索的组成部分。尽管最近的方法主要集中在提升SQL生成的能力上，它们往往忽视了相关模式元素的检索，这可能导致幻觉（hallucinations）和执行失败。在本文中，我们提出了一种上下文感知的双向模式检索框架，将模式链接视为一个独立的问题进行处理。我们的方法结合了两种互补策略：先进行表检索，然后选择列；以及先进行列检索，然后选择表。此外，该方法还融合了诸如问题分解、关键词提取和关键短语提取等技术。在具有挑战性的基准数据集BIRD和Spider上的全面评估表明，我们的方法在显著提升模式召回率的同时降低了误报率。此外，基于我们所检索到的模式进行SQL生成在性能上始终优于全模式基线方法，并且接近理想模式下的性能，而无需进行查询优化。值得注意的是，我们的方法将全模式与理想模式设置之间的性能差距缩小了50\\%。我们的研究结果表明，模式链接是提升文本到SQL系统准确性和效率的强大杠杆。",
+        "translated_title": "Rethinking Schema Linking: A Context-Aware Bidirectional Retrieval Approach for Text-to-SQL  \n重新思考模式链接：一种面向上下文的双向检索方法用于文本到SQL  \n\nAbstract  \n摘要  \n\nSchema linking is a critical component in text-to-SQL tasks, aiming to map natural language utterances to corresponding database schema elements. Most existing methods focus on modeling the schema from a single perspective, either by leveraging schema elements independently or by incorporating contextual information from the natural language query. However, these approaches often suffer from incomplete schema understanding and limited contextual awareness, leading to suboptimal performance in complex schema environments. To address this issue, we propose a **Context-Aware Bidirectional Retrieval (CABR)** framework that simultaneously considers both the schema context and the query context. CABR introduces a dual-encoder architecture to learn semantic representations for schema elements and queries from different views, and establishes a bidirectional retrieval mechanism that links schema elements to queries and vice versa. This design allows the model to better capture the interdependencies between schema elements and queries, improving the accuracy of schema linking. We conduct extensive experiments on the Spider and WikiSQL datasets, and the results demonstrate that CABR significantly outperforms state-of-the-art baselines in both schema element selection and SQL generation.  \n模式链接是文本到SQL任务中的关键组成部分，其目标是将自然语言语句映射到对应的数据库模式元素。大多数现有方法从单一视角建模模式，要么独立利用模式元素，要么结合来自自然语言查询的上下文信息。然而，这些方法通常存在模式理解不完整和上下文感知能力有限的问题，导致在复杂模式环境下性能欠佳。为了解决这一问题，我们提出了一种**面向上下文的双向检索（CABR）**框架，该框架同时考虑模式上下文和查询上下文。CABR引入了一种双编码器结构，从不同视角学习模式元素和查询的语义表示，并建立了一个双向检索机制，将模式元素与查询相互链接。该设计使模型能够更好地捕捉模式元素与查询之间的依赖关系，提高模式链接的准确性。我们在Spider和WikiSQL数据集上进行了广泛的实验，结果表明，CABR在模式元素选择和SQL生成方面均显著优于最先进的基线方法。  \n\nIntroduction  \n引言  \n\nText-to-SQL tasks aim to automatically translate natural language queries into executable SQL statements, enabling users to interact with databases without requiring SQL expertise. A core challenge in this task is schema linking, which involves identifying the relevant schema elements (e.g., tables, columns, values) for a given query. Effective schema linking is essential for accurate SQL generation, as incorrect or incomplete schema mappings can lead to invalid queries and poor performance.  \n文本到SQL任务旨在自动将自然语言查询转化为可执行的SQL语句，使用户无需具备SQL专业知识即可与数据库进行交互。该任务中的一个核心挑战是模式链接，即识别给定查询中相关的模式元素（例如，表、列、值）。有效的模式链接对于准确的SQL生成至关重要，因为错误或不完整的模式映射可能导致无效查询和较差的性能。  \n\nTraditional schema linking approaches typically treat the schema as a flat structure and model it using either rule-based methods or single-view neural architectures. These methods often fail to capture the full context of both the schema and the query, especially in complex, multi-table environments where relationships between schema elements are crucial.  \n传统的模式链接方法通常将模式视为扁平结构，并使用基于规则的方法或单视角神经网络架构对其进行建模。这些方法常常无法捕捉模式和查询的完整上下文，特别是在复杂的多表环境中，其中模式元素之间的关系至关重要。  \n\nTo overcome these limitations, we propose a novel framework that jointly models schema and query contexts using a bidirectional retrieval mechanism. Our method enhances the contextual awareness of schema elements by considering both their structural information and their semantic relationships with the query.  \n为克服这些限制，我们提出了一种新的框架，使用双向检索机制联合建模模式和查询上下文。我们的方法通过考虑模式元素的结构信息及其与查询的语义关系，增强了其上下文感知能力。",
+        "label": [],
+        "label_reason": "论文聚焦Text-to-SQL，非推荐系统核心问题，相关性较低。",
+        "relevance_score": 2,
+        "novelty_score": 7,
+        "novelty_reason": "提出新颖的双向检索框架，改进Schema Linking效果。"
+    },
+    {
+        "title": "PRISM: Agentic Retrieval with LLMs for Multi-Hop Question Answering",
+        "url": "http://arxiv.org/abs/2510.14278v1",
+        "pub_date": "2025-10-16",
+        "summary": "Retrieval plays a central role in multi-hop question answering (QA), where answering complex questions requires gathering multiple pieces of evidence. We introduce an Agentic Retrieval System that leverages large language models (LLMs) in a structured loop to retrieve relevant evidence with high precision and recall. Our framework consists of three specialized agents: a Question Analyzer that decomposes a multi-hop question into sub-questions, a Selector that identifies the most relevant context for each sub-question (focusing on precision), and an Adder that brings in any missing evidence (focusing on recall). The iterative interaction between Selector and Adder yields a compact yet comprehensive set of supporting passages. In particular, it achieves higher retrieval accuracy while filtering out distracting content, enabling downstream QA models to surpass full-context answer accuracy while relying on significantly less irrelevant information. Experiments on four multi-hop QA benchmarks -- HotpotQA, 2WikiMultiHopQA, MuSiQue, and MultiHopRAG -- demonstrates that our approach consistently outperforms strong baselines.",
+        "translated": "召回在多跳问答（QA）中起着核心作用，其中回答复杂问题需要收集多个证据。我们引入了一种基于智能体的召回系统（Agentic Retrieval System），通过结构化的循环利用大语言模型（LLMs），以高精度和高召回率检索相关证据。我们的框架包含三个专门的智能体：一个用于将多跳问题拆解为子问题的问题分析器（Question Analyzer），一个用于为每个子问题识别最相关上下文（注重精度）的选取器（Selector），以及一个用于补充缺失证据（注重召回）的添加器（Adder）。Selector 与 Adder 之间的迭代交互产生了一组紧凑而全面的支持段落。特别是，它在过滤干扰内容的同时实现了更高的召回精度，使下游 QA 模型能够在依赖明显更少无关信息的情况下超越全上下文回答的准确性。在四个多跳 QA 基准测试 HotpotQA、2WikiMultiHopQA、MuSiQue 和 MultiHopRAG 上的实验表明，我们的方法始终优于强基线方法。",
+        "translated_title": "PRISM：利用大语言模型进行多跳问答的代理式召回",
+        "label": [
+            "多模态推荐",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "论文涉及LLM用于信息检索，可间接用于推荐系统的生成式方法",
+        "relevance_score": 5,
+        "novelty_score": 7,
+        "novelty_reason": "提出结构化代理检索框架，改进多跳QA的精度与召回"
     }
 ]
