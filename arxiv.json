@@ -1631,5 +1631,243 @@
         "relevance_score": 2,
         "novelty_score": 7,
         "novelty_reason": "提出分步演化范式SEGA，改进布局生成方法"
+    },
+    {
+        "title": "FACE: A General Framework for Mapping Collaborative Filtering Embeddings\n  into LLM Tokens",
+        "url": "http://arxiv.org/abs/2510.15729v1",
+        "pub_date": "2025-10-17",
+        "summary": "Recently, large language models (LLMs) have been explored for integration with collaborative filtering (CF)-based recommendation systems, which are crucial for personalizing user experiences. However, a key challenge is that LLMs struggle to interpret the latent, non-semantic embeddings produced by CF approaches, limiting recommendation effectiveness and further applications. To address this, we propose FACE, a general interpretable framework that maps CF embeddings into pre-trained LLM tokens. Specifically, we introduce a disentangled projection module to decompose CF embeddings into concept-specific vectors, followed by a quantized autoencoder to convert continuous embeddings into LLM tokens (descriptors). Then, we design a contrastive alignment objective to ensure that the tokens align with corresponding textual signals. Hence, the model-agnostic FACE framework achieves semantic alignment without fine-tuning LLMs and enhances recommendation performance by leveraging their pre-trained capabilities. Empirical results on three real-world recommendation datasets demonstrate performance improvements in benchmark models, with interpretability studies confirming the interpretability of the descriptors. Code is available in https://github.com/YixinRoll/FACE.",
+        "translated": "近期，研究者探索将大语言模型（LLMs）与基于协同过滤（CF）的推荐系统结合，以提升用户个性化体验。然而，一个关键挑战在于LLMs难以解析CF方法产生的潜在且非语义的嵌入，这限制了推荐效果及其进一步应用。为解决这一问题，我们提出FACE，一种通用的可解释框架，将CF嵌入映射到预训练LLM的token中。具体来说，我们引入了一个解耦投影模块，将CF嵌入分解为概念特定的向量，并通过一个量化自编码器将连续嵌入转换为LLM token（描述符）。随后，我们设计了一个对比对齐目标，以确保token与对应的文本信号对齐。因此，该模型无关的FACE框架在不微调LLMs的情况下实现了语义对齐，并通过利用其预训练能力提升了推荐性能。在三个真实推荐数据集上的实验结果表明，基准模型的性能得到了提升，可解释性研究也验证了描述符的可解释性。代码可在https://github.com/YixinRoll/FACE获取。",
+        "translated_title": "FACE：一种通用框架，用于将协同过滤嵌入映射到大语言模型（LLM）的token中",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "将协同过滤嵌入映射为LLM token，提升推荐语义对齐与性能",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出解耦投影和量化自编码器的新方法，实现LLM与CF的创新结合"
+    },
+    {
+        "title": "The 3rd Place Solution of CCIR CUP 2025: A Framework for\n  Retrieval-Augmented Generation in Multi-Turn Legal Conversation",
+        "url": "http://arxiv.org/abs/2510.15722v1",
+        "pub_date": "2025-10-17",
+        "summary": "Retrieval-Augmented Generation has made significant progress in the field of natural language processing. By combining the advantages of information retrieval and large language models, RAG can generate relevant and contextually appropriate responses based on items retrieved from reliable sources. This technology has demonstrated outstanding performance across multiple domains, but its application in the legal field remains in its exploratory phase. In this paper, we introduce our approach for \"Legal Knowledge Retrieval and Generation\" in CCIR CUP 2025, which leverages large language models and information retrieval systems to provide responses based on laws in response to user questions.",
+        "translated": "检索增强生成（Retrieval-Augmented Generation, RAG）在自然语言处理领域取得了显著进展。通过结合信息检索与大语言模型的优势，RAG可以根据从可靠来源检索到的项目生成相关且符合上下文的回答。该技术在多个领域中展示了卓越的性能，但其在法律领域的应用仍处于探索阶段。在本文中，我们介绍了我们在CCIR CUP 2025中“法律知识检索与生成”任务中的方法，该方法利用大语言模型和信息检索系统，根据法律法规对用户问题提供回答。",
+        "translated_title": "2025年CCIR CUP的第三名解决方案：一种用于多轮法律对话的检索增强生成框架",
+        "label": [
+            "LLM生成式推荐",
+            "多模态推荐"
+        ],
+        "label_reason": "论文涉及基于检索增强生成的推荐方法，适用于法律领域的多轮对话生成。",
+        "relevance_score": 7,
+        "novelty_score": 6,
+        "novelty_reason": "在RAG基础上提出法律对话生成框架，有一定创新但属于领域适配改进。"
+    },
+    {
+        "title": "Cost-Aware Retrieval-Augmentation Reasoning Models with Adaptive\n  Retrieval Depth",
+        "url": "http://arxiv.org/abs/2510.15719v1",
+        "pub_date": "2025-10-17",
+        "summary": "Reasoning models have gained significant attention due to their strong performance, particularly when enhanced with retrieval augmentation. However, these models often incur high computational costs, as both retrieval and reasoning tokens contribute substantially to the overall resource usage. In this work, we make the following contributions: (1) we propose a retrieval-augmented reasoning model that dynamically adjusts the length of the retrieved document list based on the query and retrieval results; (2) we develop a cost-aware advantage function for training of efficient retrieval-augmented reasoning models through reinforcement learning; and (3) we explore both memory- and latency-bound implementations of the proposed cost-aware framework for both proximal and group relative policy optimization algorithms. We evaluate our approach on seven public question answering datasets and demonstrate significant efficiency gains, without compromising effectiveness. In fact, we observed that the model latency decreases by ~16-20% across datasets, while its effectiveness increases by ~5% on average, in terms of exact match.",
+        "translated": "由于其出色的表现，推理模型近年来受到了广泛关注，尤其是在引入检索增强后效果更为显著。然而，这些模型通常带来较高的计算成本，因为检索和推理过程中的 tokens 都会显著增加整体资源消耗。在本文中，我们做出以下贡献：(1) 我们提出了一种检索增强的推理模型，该模型能够根据查询和检索结果动态调整检索文档列表的长度；(2) 我们开发了一种成本感知的优势函数，通过强化学习训练高效的检索增强推理模型；(3) 我们探讨了所提出成本感知框架在近端策略优化和组相对策略优化算法中的内存受限和延迟受限实现。我们在七个公开的问题回答数据集上评估了我们的方法，并展示了在不损害效果的前提下显著提升的效率。事实上，我们观察到，模型的延迟在各个数据集上平均降低了 ~16-20%，而其在精确匹配方面的效果平均提高了 ~5%。",
+        "translated_title": "成本感知的召回增强推理模型与自适应召回深度",
+        "label": [
+            "召回（Recall）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "论文涉及检索增强推理，与推荐系统的召回阶段相关。",
+        "relevance_score": 5,
+        "novelty_score": 7,
+        "novelty_reason": "提出动态调整检索长度和成本感知训练方法，有一定创新性。"
+    },
+    {
+        "title": "GraphMind: Interactive Novelty Assessment System for Accelerating\n  Scientific Discovery",
+        "url": "http://arxiv.org/abs/2510.15706v1",
+        "pub_date": "2025-10-17",
+        "summary": "Large Language Models (LLMs) show strong reasoning and text generation capabilities, prompting their use in scientific literature analysis, including novelty assessment. While evaluating novelty of scientific papers is crucial for peer review, it requires extensive knowledge of related work, something not all reviewers have. While recent work on LLM-assisted scientific literature analysis supports literature comparison, existing approaches offer limited transparency and lack mechanisms for result traceability via an information retrieval module. To address this gap, we introduce $\\textbf{GraphMind}$, an easy-to-use interactive web tool designed to assist users in evaluating the novelty of scientific papers or drafted ideas. Specially, $\\textbf{GraphMind}$ enables users to capture the main structure of a scientific paper, explore related ideas through various perspectives, and assess novelty via providing verifiable contextual insights. $\\textbf{GraphMind}$ enables users to annotate key elements of a paper, explore related papers through various relationships, and assess novelty with contextual insight. This tool integrates external APIs such as arXiv and Semantic Scholar with LLMs to support annotation, extraction, retrieval and classification of papers. This combination provides users with a rich, structured view of a scientific idea's core contributions and its connections to existing work. $\\textbf{GraphMind}$ is available at https://oyarsa.github.io/graphmind and a demonstration video at https://youtu.be/wKbjQpSvwJg. The source code is available at https://github.com/oyarsa/graphmind.",
+        "translated": "大语言模型（LLMs）展现出强大的推理和文本生成能力，促使它们被用于科学文献分析，包括新颖性评估。尽管评估科学论文的新颖性对于同行评审至关重要，但这需要对相关工作有广泛的知识，而并非所有评审者都具备这一条件。虽然最近关于LLM辅助科学文献分析的研究支持文献对比，但现有方法在透明度方面存在较大局限，且缺乏通过信息检索模块实现结果可追溯的机制。为了解决这一问题，我们引入了 $\\textbf{GraphMind}$，一款易于使用的交互式网络工具，旨在协助用户评估科学论文或初稿想法的新颖性。具体而言，$\\textbf{GraphMind}$ 使用户能够捕捉科学论文的主要结构，通过多种视角探索相关观点，并通过提供可验证的上下文洞察评估新颖性。$\\textbf{GraphMind}$ 支持用户标注论文的关键要素，通过多种关系探索相关论文，并结合上下文信息评估新颖性。该工具将外部 API（如 arXiv 和 Semantic Scholar）与大语言模型（LLMs）相结合，以支持论文的标注、提取、检索和分类。这种组合为用户提供了对科学观点核心贡献及其与已有工作关联的丰富结构化视图。$\\textbf{GraphMind}$ 可在 https://oyarsa.github.io/graphmind 获取，演示视频可在 https://youtu.be/wKbjQpSvwJg 查看。源代码可在 https://github.com/oyarsa/graphmind 获得。",
+        "translated_title": "GraphMind: 交互式新颖性评估系统，用于加速科学发现",
+        "label": [],
+        "label_reason": "论文主要关注科学论文新颖性评估，不直接涉及推荐系统核心技术。",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "提出结合LLM与信息检索的新工具，解决科学文献新颖性评估中的透明性问题。"
+    },
+    {
+        "title": "Mixture of Experts Approaches in Dense Retrieval Tasks",
+        "url": "http://arxiv.org/abs/2510.15683v1",
+        "pub_date": "2025-10-17",
+        "summary": "Dense Retrieval Models (DRMs) are a prominent development in Information Retrieval (IR). A key challenge with these neural Transformer-based models is that they often struggle to generalize beyond the specific tasks and domains they were trained on. To address this challenge, prior research in IR incorporated the Mixture-of-Experts (MoE) framework within each Transformer layer of a DRM, which, though effective, substantially increased the number of additional parameters. In this paper, we propose a more efficient design, which introduces a single MoE block (SB-MoE) after the final Transformer layer. To assess the retrieval effectiveness of SB-MoE, we perform an empirical evaluation across three IR tasks. Our experiments involve two evaluation setups, aiming to assess both in-domain effectiveness and the model's zero-shot generalizability. In the first setup, we fine-tune SB-MoE with four different underlying DRMs on seven IR benchmarks and evaluate them on their respective test sets. In the second setup, we fine-tune SB-MoE on MSMARCO and perform zero-shot evaluation on thirteen BEIR datasets. Additionally, we perform further experiments to analyze the model's dependency on its hyperparameters (i.e., the number of employed and activated experts) and investigate how this variation affects SB-MoE's performance. The obtained results show that SB-MoE is particularly effective for DRMs with lightweight base models, such as TinyBERT and BERT-Small, consistently exceeding standard model fine-tuning across benchmarks. For DRMs with more parameters, such as BERT-Base and Contriever, our model requires a larger number of training samples to achieve improved retrieval performance. Our code is available online at: https://github.com/FaySokli/SB-MoE.",
+        "translated": "稠密检索模型（DRMs）是信息检索（IR）领域的重要进展。基于神经网络Transformer的这些模型面临的一个关键挑战是，它们通常难以泛化到训练时特定任务和领域之外。为了解决这一挑战，以往的IR研究在每个Transformer层中引入了专家混合（MoE）框架，虽然这种方法有效，但却显著增加了额外的参数数量。在本文中，我们提出了一种更高效的结构设计，即在最终的Transformer层之后引入一个单一的MoE模块（SB-MoE）。为了评估SB-MoE的检索效果，我们在三个IR任务上进行了实证评估。我们的实验包含两种评估设置，旨在分别评估模型的在域性能和零样本泛化能力。在第一种设置中，我们在七个IR基准上使用四个不同的基础DRMs对SB-MoE进行微调，并在各自对应的测试集上进行评估。在第二种设置中，我们在MSMARCO上对SB-MoE进行微调，并在十三个BEIR数据集上进行零样本评估。此外，我们还进行了进一步的实验，以分析模型对超参数（即所使用和激活的专家数量）的依赖性，并研究这种变化如何影响SB-MoE的性能。实验结果表明，SB-MoE对轻量级基础模型的DRMs（如TinyBERT和BERT-Small）特别有效，其性能在多个基准上一致优于标准模型微调方法。对于参数较多的DRMs（如BERT-Base和Contriever），我们的模型需要更多的训练样本才能实现改进的检索性能。我们的代码可在以下网址获取：https://github.com/FaySokli/SB-MoE。",
+        "translated_title": "稠密召回任务中的专家混合方法",
+        "label": [
+            "通用推荐技术"
+        ],
+        "label_reason": "论文涉及密集检索模型优化，可能适用于推荐系统召回阶段。",
+        "relevance_score": 5,
+        "novelty_score": 7,
+        "novelty_reason": "提出一种更高效的MoE设计，改进了现有方法的参数效率。"
+    },
+    {
+        "title": "SQuAI: Scientific Question-Answering with Multi-Agent\n  Retrieval-Augmented Generation",
+        "url": "http://arxiv.org/abs/2510.15682v1",
+        "pub_date": "2025-10-17",
+        "summary": "We present SQuAI (https://squai.scads.ai/), a scalable and trustworthy multi-agent retrieval-augmented generation (RAG) framework for scientific question answering (QA) with large language models (LLMs). SQuAI addresses key limitations of existing RAG systems in the scholarly domain, where complex, open-domain questions demand accurate answers, explicit claims with citations, and retrieval across millions of scientific documents. Built on over 2.3 million full-text papers from arXiv.org, SQuAI employs four collaborative agents to decompose complex questions into sub-questions, retrieve targeted evidence via hybrid sparse-dense retrieval, and adaptively filter documents to improve contextual relevance. To ensure faithfulness and traceability, SQuAI integrates in-line citations for each generated claim and provides supporting sentences from the source documents. Our system improves faithfulness, answer relevance, and contextual relevance by up to +0.088 (12%) over a strong RAG baseline. We further release a benchmark of 1,000 scientific question-answer-evidence triplets to support reproducibility. With transparent reasoning, verifiable citations, and domain-wide scalability, SQuAI demonstrates how multi-agent RAG enables more trustworthy scientific QA with LLMs.",
+        "translated": "我们提出SQuAI（https://squai.scads.ai/），一种基于大语言模型（LLM）的可扩展且可靠的多智能体检索增强生成（RAG）框架，用于科学问答（QA）。SQuAI解决了现有RAG系统在学术领域中的关键局限性，尤其是在处理复杂、开放领域的科学问题时，需要准确的答案、带引文的明确声明，以及在数百万篇科学文献中进行检索。SQuAI基于来自arXiv.org的超过230万篇全文论文构建，利用四个协作智能体将复杂问题分解为子问题，通过混合稀疏-密集检索获取目标证据，并自适应地过滤文档以提高上下文相关性。为确保答案的忠实性和可追溯性，SQuAI为每个生成的声明整合行内引文，并提供支持性句子以引证来源文档。与一个强大的RAG基线相比，我们的系统在答案忠实性、相关性以及上下文相关性方面最多提高了+0.088（12%）。我们进一步发布了一个包含1000个科学问题-答案-证据三元组的基准数据集，以支持可复现性。通过透明的推理、可验证的引文以及覆盖整个领域的可扩展性，SQuAI展示了多智能体RAG如何在LLMs中实现更可信的科学问答。",
+        "translated_title": "SQuAI：基于多智能体的检索增强生成的科学问答",
+        "label": [],
+        "label_reason": "非推荐系统领域，但涉及RAG和检索技术",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "多智能体协作与混合检索方法具有创新性"
+    },
+    {
+        "title": "Enhance Large Language Models as Recommendation Systems with\n  Collaborative Filtering",
+        "url": "http://arxiv.org/abs/2510.15647v1",
+        "pub_date": "2025-10-17",
+        "summary": "As powerful tools in Natural Language Processing (NLP), Large Language Models (LLMs) have been leveraged for crafting recommendations to achieve precise alignment with user preferences and elevate the quality of the recommendations. The existing approaches implement both non-tuning and tuning strategies. Compared to following the tuning strategy, the approaches following the non-tuning strategy avoid the relatively costly, time-consuming, and expertise-requiring process of further training pre-trained LLMs on task-specific datasets, but they suffer the issue of not having the task-specific business or local enterprise knowledge. To the best of our knowledge, none of the existing approaches following the non-tuning strategy explicitly integrates collaborative filtering, one of the most successful recommendation techniques. This study aims to fill the gap by proposing critique-based LLMs as recommendation systems (Critic-LLM-RS). For our purpose, we train a separate machine-learning model called Critic that implements collaborative filtering for recommendations by learning from the interactions between many users and items. The Critic provides critiques to LLMs to significantly refine the recommendations. Extensive experiments have verified the effectiveness of Critic-LLM-RS on real datasets.",
+        "translated": "在自然语言处理（NLP）中，大语言模型（LLMs）作为强大的工具已被用于生成推荐，以实现与用户偏好的精确对齐并提升推荐质量。现有方法采用了非微调和微调两种策略。与采用微调策略的方法相比，采用非微调策略的方法避免了在任务特定数据集上进一步训练预训练大语言模型这一相对成本高、耗时长且需要专业知识的过程，但它们缺乏任务特定的商业或本地企业知识。据我们所知，目前没有采用非微调策略的现有方法明确地整合协同过滤这一最成功的推荐技术之一。本研究旨在通过提出基于批评的大语言模型推荐系统（Critic-LLM-RS）来弥补这一不足。为此，我们训练了一个单独的机器学习模型，称为Critic，它通过学习大量用户与物料之间的交互来实现基于协同过滤的推荐。Critic向大语言模型提供批评，从而显著优化推荐结果。大量的实验验证了Critic-LLM-RS在真实数据集上的有效性。",
+        "translated_title": "利用协同过滤增强大语言模型作为推荐系统",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "论文探讨了LLM在推荐系统中的应用，并结合协同过滤技术",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出Critic-LLM-RS框架，创新性地将协同过滤与LLM结合"
+    },
+    {
+        "title": "MCA: Modality Composition Awareness for Robust Composed Multimodal\n  Retrieval",
+        "url": "http://arxiv.org/abs/2510.15543v1",
+        "pub_date": "2025-10-17",
+        "summary": "Multimodal retrieval, which seeks to retrieve relevant content across modalities such as text or image, supports applications from AI search to contents production. Despite the success of separate-encoder approaches like CLIP align modality-specific embeddings with contrastive learning, recent multimodal large language models (MLLMs) enable a unified encoder that directly processes composed inputs. While flexible and advanced, we identify that unified encoders trained with conventional contrastive learning are prone to learn modality shortcut, leading to poor robustness under distribution shifts. We propose a modality composition awareness framework to mitigate this issue. Concretely, a preference loss enforces multimodal embeddings to outperform their unimodal counterparts, while a composition regularization objective aligns multimodal embeddings with prototypes composed from its unimodal parts. These objectives explicitly model structural relationships between the composed representation and its unimodal counterparts. Experiments on various benchmarks show gains in out-of-distribution retrieval, highlighting modality composition awareness as a effective principle for robust composed multimodal retrieval when utilizing MLLMs as the unified encoder.",
+        "translated": "跨模态检索旨在跨文本或图像等不同模态中检索相关内容，广泛支持从人工智能搜索到内容生产的应用场景。尽管像 CLIP 这样的独立编码器方法通过对比学习对齐模态特定嵌入取得了成功，但最近的多模态大语言模型（MLLMs）引入了能够直接处理组合输入的统一编码器。虽然统一编码器具备灵活性和先进性，但我们发现使用传统对比学习训练的统一编码器容易学习模态捷径，从而在分布偏移情况下表现不佳。我们提出了一种模态组合感知框架来缓解这一问题。具体而言，通过一个偏好损失强制多模态嵌入优于其单模态对应嵌入，同时通过一个组合正则化目标将多模态嵌入与由其单模态部分组合而成的原型对齐。这些目标显式建模了组合表示与其单模态嵌入之间的结构关系。在多个基准上的实验表明，该框架在分布外检索中取得了提升，突显了模态组合感知作为使用 MLLMs 作为统一编码器时实现鲁棒组合式多模态检索的有效原则。",
+        "translated_title": "MCA：模态组合感知的鲁棒组合多模态召回",
+        "label": [
+            "多模态推荐"
+        ],
+        "label_reason": "论文聚焦多模态检索，与推荐系统中的多模态推荐有间接联系。",
+        "relevance_score": 5,
+        "novelty_score": 7,
+        "novelty_reason": "提出模态组合感知框架，改进统一编码器训练策略，具有一定创新性。"
+    },
+    {
+        "title": "MSAM: Multi-Semantic Adaptive Mining for Cross-Modal Drone Video-Text\n  Retrieval",
+        "url": "http://arxiv.org/abs/2510.15470v1",
+        "pub_date": "2025-10-17",
+        "summary": "With the advancement of drone technology, the volume of video data increases rapidly, creating an urgent need for efficient semantic retrieval. We are the first to systematically propose and study the drone video-text retrieval (DVTR) task. Drone videos feature overhead perspectives, strong structural homogeneity, and diverse semantic expressions of target combinations, which challenge existing cross-modal methods designed for ground-level views in effectively modeling their characteristics. Therefore, dedicated retrieval mechanisms tailored for drone scenarios are necessary. To address this issue, we propose a novel approach called Multi-Semantic Adaptive Mining (MSAM). MSAM introduces a multi-semantic adaptive learning mechanism, which incorporates dynamic changes between frames and extracts rich semantic information from specific scene regions, thereby enhancing the deep understanding and reasoning of drone video content. This method relies on fine-grained interactions between words and drone video frames, integrating an adaptive semantic construction module, a distribution-driven semantic learning term and a diversity semantic term to deepen the interaction between text and drone video modalities and improve the robustness of feature representation. To reduce the interference of complex backgrounds in drone videos, we introduce a cross-modal interactive feature fusion pooling mechanism that focuses on feature extraction and matching in target regions, minimizing noise effects. Extensive experiments on two self-constructed drone video-text datasets show that MSAM outperforms other existing methods in the drone video-text retrieval task. The source code and dataset will be made publicly available.",
+        "translated": "随着无人机技术的发展，视频数据的数量迅速增加，从而对高效的语义召回提出了迫切需求。我们首次系统性地提出了并研究了无人机视频-文本召回（DVTR）任务。无人机视频具有俯视视角、强烈的结构同质性以及目标组合多样的语义表达，这些特性对当前为地面视角设计的跨模态方法在有效建模方面提出了挑战。因此，有必要设计专门针对无人机场景的召回机制。为了解决这一问题，我们提出了一种新颖的方法，称为多语义自适应挖掘（MSAM）。MSAM 引入了一种多语义自适应学习机制，能够捕捉帧之间的动态变化，并从特定场景区域中提取丰富的语义信息，从而增强对无人机视频内容的深入理解和推理能力。该方法依赖于词语与无人机视频帧之间的细粒度交互，融合了自适应语义构建模块、分布驱动的语义学习项以及多样性语义项，以深化文本与无人机视频模态之间的交互，并提升特征表示的鲁棒性。为了减少无人机视频中复杂背景的干扰，我们引入了一种跨模态交互式特征融合池化机制，该机制聚焦于目标区域的特征提取与匹配，从而最小化噪声的影响。在两个自建的无人机视频-文本数据集上的广泛实验表明，MSAM 在无人机视频-文本召回任务中优于其他现有方法。源代码和数据集将向公众开放。",
+        "translated_title": "MSAM：用于跨模态无人机视频-文本召回的多语义自适应挖掘",
+        "label": [],
+        "label_reason": "",
+        "relevance_score": 0,
+        "novelty_score": 0,
+        "novelty_reason": ""
+    },
+    {
+        "title": "Fault Cause Identification across Manufacturing Lines through\n  Ontology-Guided and Process-Aware FMEA Graph Learning with LLMs",
+        "url": "http://arxiv.org/abs/2510.15428v1",
+        "pub_date": "2025-10-17",
+        "summary": "Fault cause identification in automated manufacturing lines is challenging due to the system's complexity, frequent reconfigurations, and the limited reusability of existing Failure Mode and Effects Analysis (FMEA) knowledge. Although FMEA worksheets contain valuable expert insights, their reuse across heterogeneous lines is hindered by natural language variability, inconsistent terminology, and process differences. To address these limitations, this study proposes a process-aware framework that enhances FMEA reusability by combining manufacturing-domain conceptualization with graph neural network (GNN) reasoning. First, FMEA worksheets from multiple manufacturing lines are transformed into a unified knowledge graph through ontology-guided large language model (LLM) extraction, capturing domain concepts such as actions, states, components, and parameters. Second, a Relational Graph Convolutional Network (RGCN) with the process-aware scoring function learns embeddings that respect both semantic relationships and sequential process flows. Finally, link prediction is employed to infer and rank candidate fault causes consistent with the target line's process flow.   A case study on automotive pressure sensor assembly lines demonstrates that the proposed method outperforms a state-of-the-art retrieval-augmented generation (RAG) baseline (F1@20 = 0.267) and an RGCN approach (0.400), achieving the best performance (0.523) in fault cause identification. Ablation studies confirm the contributions of both LLM-driven domain conceptualization and process-aware learning. These results indicate that the proposed framework significantly improves the transferability of FMEA knowledge across heterogeneous lines, thereby supporting operators in diagnosing failures more reliably and paving the way for future domain-adaptive LLM applications in smart manufacturing.",
+        "translated": "在自动化生产线中，故障原因识别由于系统复杂性、频繁重构以及现有失效模式与影响分析（FMEA）知识的有限可重用性而具有挑战性。尽管FMEA工作表包含了宝贵的专家见解，但其在异构生产线之间的复用受到自然语言差异、术语不一致和流程差异的限制。为了解决这些局限性，本文提出了一种流程感知框架，通过将制造领域的概念化与图神经网络（GNN）推理相结合，以增强FMEA知识的可重用性。首先，利用本体引导的大语言模型（LLM）从多条制造生产线中提取FMEA工作表，将其转换为统一的知识图谱，从而捕捉诸如操作、状态、组件和参数等领域概念。其次，使用具有流程感知评分函数的关系图卷积网络（RGCN）学习嵌入，该嵌入同时尊重语义关系和顺序流程结构。最后，通过链接预测来推断并排序与目标生产线流程一致的候选故障原因。在汽车压力传感器装配线上的案例研究表明，所提出的方法优于最先进的检索增强生成（RAG）基线方法（F1@20 = 0.267）和RGCN方法（0.400），在故障原因识别上取得了最佳性能（0.523）。消融实验验证了LLM驱动的领域概念化和流程感知学习的贡献。这些结果表明，所提出的框架显著提升了FMEA知识在异构生产线之间的可迁移性，从而帮助操作人员更可靠地诊断故障，并为未来智能制造中领域自适应的大语言模型应用铺平了道路。",
+        "translated_title": "跨生产线的故障原因识别：基于本体引导与流程感知的FMEA图学习与大语言模型",
+        "label": [],
+        "label_reason": "论文聚焦于制造领域的故障分析，与推荐系统无直接关联。",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "提出结合本体论与GNN的框架改进FMEA，有一定创新性但非推荐系统核心方向。"
+    },
+    {
+        "title": "Dimension Mask Layer: Optimizing Embedding Efficiency for Scalable\n  ID-based Models",
+        "url": "http://arxiv.org/abs/2510.15308v1",
+        "pub_date": "2025-10-17",
+        "summary": "In modern recommendation systems and social media platforms like Meta, TikTok, and Instagram, large-scale ID-based features often require embedding tables that consume significant memory. Managing these embedding sizes can be challenging, leading to bulky models that are harder to deploy and maintain. In this paper, we introduce a method to automatically determine the optimal embedding size for ID features, significantly reducing the model size while maintaining performance.   Our approach involves defining a custom Keras layer called the dimension mask layer, which sits directly after the embedding lookup. This layer trims the embedding vector by allowing only the first N dimensions to pass through. By doing this, we can reduce the input feature dimension by more than half with minimal or no loss in model performance metrics. This reduction helps cut down the memory footprint of the model and lowers the risk of overfitting due to multicollinearity.   Through offline experiments on public datasets and an online A/B test on a real production dataset, we demonstrate that using a dimension mask layer can shrink the effective embedding dimension by 40-50\\%, leading to substantial improvements in memory efficiency. This method provides a scalable solution for platforms dealing with a high volume of ID features, optimizing both resource usage and model performance.",
+        "translated": "在现代推荐系统和Meta、TikTok以及Instagram等社交媒体平台中，大规模基于ID的特征通常需要嵌入表，而嵌入表会消耗大量内存。管理这些嵌入的维度规模具有挑战性，从而导致模型体积庞大，难以部署和维护。在本文中，我们介绍了一种方法，用于自动确定ID特征的最优嵌入维度，从而在保持性能的前提下显著减小模型规模。\n\n我们的方法包括定义一个自定义的Keras层，称为维度掩码层（dimension mask layer），该层直接位于嵌入查找（embedding lookup）之后。该层通过仅允许嵌入向量的前N个维度通过，从而对嵌入向量进行裁剪。通过这种方式，我们可以在几乎没有或完全没有损失模型性能指标的情况下，将输入特征维度减少一半以上。这种降维有助于减小模型的内存占用，并降低由于多重共线性导致的过拟合风险。\n\n通过在公共数据集上的离线实验和在真实生产数据集上的在线A/B测试，我们证明使用维度掩码层可以将有效的嵌入维度减少40-50%，从而在内存效率方面实现显著提升。该方法为处理大量ID特征的平台提供了一种可扩展的解决方案，同时优化了资源使用和模型性能。",
+        "translated_title": "维度掩码层：优化可扩展ID模型的嵌入效率",
+        "label": [
+            "通用推荐技术",
+            "负采样与对比学习"
+        ],
+        "label_reason": "论文提出嵌入维度优化方法，适用于推荐系统特征建模。",
+        "relevance_score": 7,
+        "novelty_score": 6,
+        "novelty_reason": "改进了嵌入层设计，有一定实用创新但非范式突破。"
+    },
+    {
+        "title": "GRank: Towards Target-Aware and Streamlined Industrial Retrieval with a\n  Generate-Rank Framework",
+        "url": "http://arxiv.org/abs/2510.15299v1",
+        "pub_date": "2025-10-17",
+        "summary": "Industrial-scale recommender systems rely on a cascade pipeline in which the retrieval stage must return a high-recall candidate set from billions of items under tight latency. Existing solutions ei- ther (i) suffer from limited expressiveness in capturing fine-grained user-item interactions, as seen in decoupled dual-tower architectures that rely on separate encoders, or generative models that lack precise target-aware matching capabilities, or (ii) build structured indices (tree, graph, quantization) whose item-centric topologies struggle to incorporate dynamic user preferences and incur prohibitive construction and maintenance costs.   We present GRank, a novel structured-index-free retrieval paradigm that seamlessly unifies target-aware learning with user-centric retrieval. Our key innovations include: (1) A target-aware Generator trained to perform personalized candidate generation via GPU-accelerated MIPS, eliminating semantic drift and maintenance costs of structured indexing; (2) A lightweight but powerful Ranker that performs fine-grained, candidate-specific inference on small subsets; (3) An end-to-end multi-task learning framework that ensures semantic consistency between generation and ranking objectives.   Extensive experiments on two public benchmarks and a billion-item production corpus demonstrate that GRank improves Recall@500 by over 30% and 1.7$\\times$ the P99 QPS of state-of-the-art tree- and graph-based retrievers.   GRank has been fully deployed in production in our recommendation platform since Q2 2025, serving 400 million active users with 99.95% service availability. Online A/B tests confirm significant improvements in core engagement metrics, with Total App Usage Time increasing by 0.160% in the main app and 0.165% in the Lite version.",
+        "translated": "工业级推荐系统依赖于一个级联流水线，其中召回阶段必须在严格的延迟限制下从数十亿个物料中返回一个高召回的候选集。现有解决方案要么（i）在捕捉用户-物料细粒度交互方面存在表达能力的局限，如依赖独立编码器的解耦双塔架构，或缺乏精确目标感知匹配能力的生成模型；要么（ii）构建结构化索引（树、图、量化），其以物料为中心的拓扑结构难以融合动态的用户偏好，并带来高昂的构建和维护成本。\n\n我们提出了 GRank，一种新颖的、不依赖结构化索引的召回范式，该范式无缝地将目标感知学习与用户中心召回统一起来。我们的关键创新包括：（1）一个目标感知的生成器（Generator），其通过 GPU 加速的 MIPS 进行个性化候选生成，消除了语义漂移和结构化索引的维护成本；（2）一个轻量但强大的排序器（Ranker），其在小规模候选子集上进行细粒度、候选特定的推理；（3）一个端到端的多任务学习框架，确保生成和排序目标之间的语义一致性。\n\n在两个公开基准和一个包含十亿级物料的生产语料上的广泛实验表明，GRank 在 Recall@500 上提升了超过 30%，并且在 P99 QPS 上达到了最先进树型和图型召回器的 1.7 倍。GRank 自 2025 年第二季度起已在我们的推荐平台中全面部署，服务于 4 亿活跃用户，服务可用性达到 99.95%。在线 A/B 测试确认了其在核心参与度指标上的显著提升，主应用中的总使用时长（Total App Usage Time）增加了 0.160%，Lite 版本增加了 0.165%。",
+        "translated_title": "GRank：面向目标感知和高效工业召回的生成-排序框架",
+        "label": [
+            "召回（Recall）",
+            "精排（Ranking）",
+            "LLM生成式推荐（LLM-based Generative Recommendation）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "GRank 提出生成-排序框架，提升推荐召回与排序效果，适用于工业级推荐场景。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "结合目标感知生成与轻量排序，避免结构化索引，创新性强且效果显著。"
+    },
+    {
+        "title": "MTmixAtt: Integrating Mixture-of-Experts with Multi-Mix Attention for\n  Large-Scale Recommendation",
+        "url": "http://arxiv.org/abs/2510.15286v1",
+        "pub_date": "2025-10-17",
+        "summary": "Industrial recommender systems critically depend on high-quality ranking models. However, traditional pipelines still rely on manual feature engineering and scenario-specific architectures, which hinder cross-scenario transfer and large-scale deployment. To address these challenges, we propose \\textbf{MTmixAtt}, a unified Mixture-of-Experts (MoE) architecture with Multi-Mix Attention, designed for large-scale recommendation tasks. MTmixAtt integrates two key components. The \\textbf{AutoToken} module automatically clusters heterogeneous features into semantically coherent tokens, removing the need for human-defined feature groups. The \\textbf{MTmixAttBlock} module enables efficient token interaction via a learnable mixing matrix, shared dense experts, and scenario-aware sparse experts, capturing both global patterns and scenario-specific behaviors within a single framework. Extensive experiments on the industrial TRec dataset from Meituan demonstrate that MTmixAtt consistently outperforms state-of-the-art baselines including Transformer-based models, WuKong, HiFormer, MLP-Mixer, and RankMixer. At comparable parameter scales, MTmixAtt achieves superior CTR and CTCVR metrics; scaling to MTmixAtt-1B yields further monotonic gains. Large-scale online A/B tests validate the real-world impact: in the \\textit{Homepage} scenario, MTmixAtt increases Payment PV by \\textbf{+3.62\\%} and Actual Payment GTV by \\textbf{+2.54\\%}. Overall, MTmixAtt provides a unified and scalable solution for modeling arbitrary heterogeneous features across scenarios, significantly improving both user experience and commercial outcomes.",
+        "translated": "工业推荐系统高度依赖高质量的排序模型。然而，传统的推荐流程仍然依赖人工特征工程和特定场景的模型架构，这限制了跨场景的迁移能力和大规模部署的效率。为了解决这些挑战，我们提出了**MTmixAtt**，一种基于多混合注意力机制的统一专家混合（Mixture-of-Experts，MoE）架构，专为大规模推荐任务设计。MTmixAtt 集成了两个关键模块。**AutoToken** 模块能够自动将异构特征聚类为语义连贯的 tokens，从而去除了对人工定义特征组的依赖。**MTmixAttBlock** 模块则通过可学习的混合矩阵、共享的密集专家和场景感知的稀疏专家实现高效的 token 交互，从而在单一框架内同时捕捉全局模式和特定场景的行为。在来自美团的工业级 TRec 数据集上的大量实验表明，MTmixAtt 在点击率（CTR）和转化率（CTCVR）等指标上始终优于当前最先进的基线模型，包括基于 Transformer 的模型、WuKong、HiFormer、MLP-Mixer 和 RankMixer。在参数规模相当的情况下，MTmixAtt-1B 在扩展后进一步实现了单调性能提升。大规模的在线 A/B 测试验证了其在实际中的效果：在 \\textit{Homepage} 场景下，MTmixAtt 带来了 \\textbf{+3.62\\%} 的支付页面访问量（Payment PV）提升和 \\textbf{+2.54\\%} 的实际支付 GMV（GTV）增长。总体而言，MTmixAtt 为跨场景建模任意异构特征提供了一个统一且可扩展的解决方案，显著提升了用户体验和商业成果。",
+        "translated_title": "MTmixAtt：将专家混合与多混合注意力结合用于大规模推荐",
+        "label": [],
+        "label_reason": "",
+        "relevance_score": 0,
+        "novelty_score": 0,
+        "novelty_reason": ""
+    },
+    {
+        "title": "HOB: A Holistically Optimized Bidding Strategy under Heterogeneous\n  Auction Mechanisms with Organic Traffic",
+        "url": "http://arxiv.org/abs/2510.15238v1",
+        "pub_date": "2025-10-17",
+        "summary": "The E-commerce advertising platforms typically sell commercial traffic through either second-price auction (SPA) or first-price auction (FPA). SPA was historically prevalent due to its dominant strategy incentive-compatible (DSIC) for bidders with quasi-linear utilities, especially when budgets are not a binding constraint, while FPA has gained more prominence for offering higher revenue potential to publishers and avoiding the possibility for discriminatory treatment in personalized reserve prices. Meanwhile, on the demand side, advertisers are increasingly adopting platform-wide marketing solutions akin to QuanZhanTui, shifting from spending budgets solely on commercial traffic to bidding on the entire traffic for the purpose of maximizing overall sales. For automated bidding systems, such a trend poses a critical challenge: determining optimal strategies across heterogeneous auction channels to fulfill diverse advertiser objectives, such as maximizing return (MaxReturn) or meeting target return on ad spend (TargetROAS). To overcome this challenge, this work makes two key contributions. First, we derive an efficient solution for optimal bidding under FPA channels, which takes into account the presence of organic traffic - traffic can be won for free. Second, we introduce a marginal cost alignment (MCA) strategy that provably secures bidding efficiency across heterogeneous auction mechanisms. To validate performance of our developed framework, we conduct comprehensive offline experiments on public datasets and large-scale online A/B testing, which demonstrate consistent improvements over existing methods.",
+        "translated": "电子商务广告平台通常通过第二价格拍卖（SPA）或第一价格拍卖（FPA）出售商业流量。SPA 在历史上较为普遍，因为它对具有准线性效用的竞标者而言是占优策略激励相容（DSIC）的，尤其是在预算并非约束条件的情况下。而 FPA 因其能为发布者提供更高的收入潜力，并避免在个性化保留价中出现歧视性待遇的可能性，而逐渐受到更多关注。与此同时，在需求侧，广告主正越来越多地采用类似 QuanZhanTui 的平台级营销方案，从仅仅将预算用于商业流量，转向对全部流量进行竞价，以实现整体销售额的最大化。对于自动出价系统而言，这一趋势带来了关键挑战：如何在异构的拍卖渠道中确定最优策略，以满足广告主的多样化目标，例如最大化回报（MaxReturn）或达到目标广告支出回报率（TargetROAS）。为克服这一挑战，本文做出了两个关键贡献。首先，我们推导了一个在 FPA 渠道下高效确定最优出价的解决方案，该方案考虑了免费流量（即自然流量）的存在——这些流量可以免费获取。其次，我们引入了一种边际成本对齐（MCA）策略，该策略在理论上可确保在异构拍卖机制中实现出价效率。为验证所提出框架的性能，我们在公开数据集上进行了全面的离线实验，并在大规模在线 A/B 测试中进行了验证，结果表明该方法相较于现有方法实现了持续的改进。",
+        "translated_title": "HOB：异质拍卖机制与自然流量下的整体优化出价策略",
+        "label": [
+            "跨域/联邦推荐"
+        ],
+        "label_reason": "论文涉及广告竞价策略优化，与推荐系统有一定间接关联。",
+        "relevance_score": 5,
+        "novelty_score": 7,
+        "novelty_reason": "提出了针对异构竞价机制的边际成本对齐策略，具有一定创新性。"
+    },
+    {
+        "title": "Structure-R1: Dynamically Leveraging Structural Knowledge in LLM\n  Reasoning through Reinforcement Learning",
+        "url": "http://arxiv.org/abs/2510.15191v1",
+        "pub_date": "2025-10-16",
+        "summary": "Large language models (LLMs) have demonstrated remarkable advances in reasoning capabilities. However, their performance remains constrained by limited access to explicit and structured domain knowledge. Retrieval-Augmented Generation (RAG) addresses this by incorporating external information as context to augment reasoning. Nevertheless, traditional RAG systems typically operate over unstructured and fragmented text, resulting in low information density and suboptimal reasoning. To overcome these limitations, we propose \\textsc{Structure-R1}, a novel framework that transforms retrieved content into structured representations optimized for reasoning. Leveraging reinforcement learning, \\textsc{Structure-R1} learns a content representation policy that dynamically generates and adapts structural formats based on the demands of multi-step reasoning. Unlike prior methods that rely on fixed schemas, our approach adopts a generative paradigm capable of producing task-specific structures tailored to individual queries. To ensure the quality and reliability of these representations, we introduce a self-reward structural verification mechanism that checks whether the generated structures are both correct and self-contained. Extensive experiments on seven knowledge-intensive benchmarks show that \\textsc{Structure-R1} consistently achieves competitive performance with a 7B-scale backbone model and matches the performance of much larger models. Additionally, our theoretical analysis demonstrates how structured representations enhance reasoning by improving information density and contextual clarity. Our code and data are available at: https://github.com/jlwu002/sr1.",
+        "translated": "大语言模型（LLMs）在推理能力方面已展现出显著的进展。然而，它们的性能仍受限于对显式且结构化领域知识的访问不足。检索增强生成（RAG）通过将外部信息作为上下文以增强推理能力来解决这一问题。然而，传统的 RAG 系统通常在非结构化和碎片化的文本上运行，导致信息密度低和推理效果不佳。为克服这些限制，我们提出了 \\textsc{Structure-R1}，一种新颖的框架，能够将检索到的内容转换为优化推理的结构化表示。该框架利用强化学习，学习一种内容表示策略，能够根据多步推理的需求动态生成和调整结构化格式。不同于依赖固定模式的先前方法，我们的方法采用生成式范式，能够为每个查询生成特定任务的结构。为确保这些表示的质量和可靠性，我们引入了一种自奖励的结构验证机制，用以检查生成的结构是否正确且自洽。在七个需要大量知识的基准数据集上的广泛实验表明，\\textsc{Structure-R1} 在使用 7B 规模主干模型的情况下始终能够实现具有竞争力的性能，并可与更大模型的表现相匹配。此外，我们的理论分析展示了结构化表示如何通过提高信息密度和上下文清晰度来增强推理。我们的代码和数据可在以下地址获取：https://github.com/jlwu002/sr1。",
+        "translated_title": "Structure-R1：通过强化学习动态利用大语言模型中的结构化知识",
+        "label": [
+            "LLM生成式推荐"
+        ],
+        "label_reason": "论文将结构化知识与LLM结合，适用于生成式推荐系统的推理增强。",
+        "relevance_score": 6,
+        "novelty_score": 8,
+        "novelty_reason": "提出动态生成结构化表示的新框架，并结合强化学习进行优化。"
+    },
+    {
+        "title": "DMRetriever: A Family of Models for Improved Text Retrieval in Disaster\n  Management",
+        "url": "http://arxiv.org/abs/2510.15087v1",
+        "pub_date": "2025-10-16",
+        "summary": "Effective and efficient access to relevant information is essential for disaster management. However, no retrieval model is specialized for disaster management, and existing general-domain models fail to handle the varied search intents inherent to disaster management scenarios, resulting in inconsistent and unreliable performance. To this end, we introduce DMRetriever, the first series of dense retrieval models (33M to 7.6B) tailored for this domain. It is trained through a novel three-stage framework of bidirectional attention adaptation, unsupervised contrastive pre-training, and difficulty-aware progressive instruction fine-tuning, using high-quality data generated through an advanced data refinement pipeline. Comprehensive experiments demonstrate that DMRetriever achieves state-of-the-art (SOTA) performance across all six search intents at every model scale. Moreover, DMRetriever is highly parameter-efficient, with 596M model outperforming baselines over 13.3 X larger and 33M model exceeding baselines with only 7.6% of their parameters. All codes, data, and checkpoints are available at https://github.com/KaiYin97/DMRETRIEVER",
+        "translated": "在灾难管理中，有效且高效地获取相关信息至关重要。然而，目前尚无专门针对灾难管理设计的检索模型，现有的通用领域模型无法处理灾难管理场景中固有的多样化的搜索意图，从而导致性能表现不一致且不可靠。为此，我们引入了 DMRetriever，这是首个专门为此领域定制的密集检索模型系列（33M 到 7.6B 参数）。该模型通过一种新颖的三阶段训练框架进行训练，包括双向注意力适配、无监督对比预训练以及难度感知的渐进式指令微调，使用了通过先进数据精炼流水线生成的高质量数据。全面的实验表明，DMRetriever 在所有六种搜索意图上均在每种模型规模下实现了最先进的（SOTA）性能。此外，DMRetriever 具有高度参数效率，596M 模型的性能优于参数规模为其 13.3 倍的基线模型，而 33M 模型的性能甚至超过了基线模型，其参数仅为基线模型的 7.6%。所有代码、数据和模型检查点均可在 https://github.com/KaiYin97/DMRETRIEVER 获取。",
+        "translated_title": "DMRetriever: 用于灾难管理中提升文本召回的一组模型",
+        "label": [
+            "召回（Recall）"
+        ],
+        "label_reason": "论文聚焦灾害管理中的文本检索，属于信息检索范畴，与推荐系统召回环节间接相关。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出三阶段训练框架和高效参数模型，在检索模型设计上有创新。"
     }
 ]
