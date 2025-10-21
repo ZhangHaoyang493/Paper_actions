@@ -1937,5 +1937,310 @@
         "relevance_score": 1,
         "novelty_score": 7,
         "novelty_reason": "提出了一种新的推理范式，通过解耦视觉稀疏性提高效率。"
+    },
+    {
+        "title": "On-the-Fly OVD Adaptation with FLAME: Few-shot Localization via Active\n  Marginal-Samples Exploration",
+        "url": "http://arxiv.org/abs/2510.17670v1",
+        "pub_date": "2025-10-20",
+        "summary": "Open-vocabulary object detection (OVD) models offer remarkable flexibility by detecting objects from arbitrary text queries. However, their zero-shot performance in specialized domains like Remote Sensing (RS) is often compromised by the inherent ambiguity of natural language, limiting critical downstream applications. For instance, an OVD model may struggle to distinguish between fine-grained classes such as \"fishing boat\" and \"yacht\" since their embeddings are similar and often inseparable. This can hamper specific user goals, such as monitoring illegal fishing, by producing irrelevant detections. To address this, we propose a cascaded approach that couples the broad generalization of a large pre-trained OVD model with a lightweight few-shot classifier. Our method first employs the zero-shot model to generate high-recall object proposals. These proposals are then refined for high precision by a compact classifier trained in real-time on only a handful of user-annotated examples - drastically reducing the high costs of RS imagery annotation.The core of our framework is FLAME, a one-step active learning strategy that selects the most informative samples for training. FLAME identifies, on the fly, uncertain marginal candidates near the decision boundary using density estimation, followed by clustering to ensure sample diversity. This efficient sampling technique achieves high accuracy without costly full-model fine-tuning and enables instant adaptation, within less then a minute, which is significantly faster than state-of-the-art alternatives.Our method consistently surpasses state-of-the-art performance on RS benchmarks, establishing a practical and resource-efficient framework for adapting foundation models to specific user needs.",
+        "translated": "开放词汇目标检测（OVD）模型通过从任意文本查询中检测目标，提供了显著的灵活性。然而，由于自然语言本身的歧义性，这些模型在遥感（RS）等专业领域中的零样本性能常常受到影响，从而限制了其关键的下游应用。例如，一个OVD模型可能难以区分“fishing boat”和“yacht”等细粒度类别，因为它们的嵌入表示相似且通常无法分离。这可能会妨碍特定用户目标，例如监测非法捕鱼行为，从而产生不相关的目标检测结果。为了解决这一问题，我们提出了一种级联方法，将大规模预训练OVD模型的广泛泛化能力与一个轻量级的小样本分类器相结合。我们的方法首先利用零样本模型生成高召回率的目标候选区域，然后通过一个紧凑的分类器对这些候选区域进行高精度的优化。该分类器仅使用少量用户标注的示例即可实时训练，从而大幅降低遥感图像标注的高昂成本。我们框架的核心是FLAME，一种一步式主动学习策略，用于选择最具信息量的样本进行训练。FLAME通过密度估计实时识别决策边界附近的不确定边际候选样本，随后进行聚类以确保样本的多样性。这种高效的采样技术在不进行代价高昂的完整模型微调的情况下实现了高精度，并能够在一分钟之内实现即时适应，显著快于最先进的替代方案。我们的方法在遥感基准测试中持续超越最先进的性能，建立了一个实用且资源高效的框架，用于将基础模型适配到特定用户需求。",
+        "translated_title": "On-the-Fly OVD Adaptation with FLAME: Few-shot Localization via Active Marginal-Samples Exploration  \nFLAME：通过主动探索边缘样本实现快速变化的OVD适应与小样本定位",
+        "label": [],
+        "label_reason": "论文主要涉及开放词汇目标检测，与推荐系统无直接关系。",
+        "relevance_score": 2,
+        "novelty_score": 5,
+        "novelty_reason": "提出了FLAME策略，但属于常规改进，未显著推动推荐领域发展。"
+    },
+    {
+        "title": "OG-Rank: Learning to Rank Fast and Slow with Uncertainty and\n  Reward-Trend Guided Adaptive Exploration",
+        "url": "http://arxiv.org/abs/2510.17614v1",
+        "pub_date": "2025-10-20",
+        "summary": "Clinicians need ranking systems that work in real time and still justify their choices. Motivated by the need for a low-latency, decoder-based reranker, we present OG-Rank, a single-decoder approach that pairs a pooled first-token scoring signal with an uncertainty-gated explanation step. The model scores all candidates in one pass and generates a brief, structured rationale only when the list is genuinely ambiguous, keeping latency predictable. Trained with a curriculum that concentrates effort on hard cases, OG-Rank delivers strong effectiveness on encounter-scoped order selection (fast path: Recall@1~0.45, nDCG@20~0.625) and improves further when the gate activates (Recall@1~0.56, nDCG@20~0.699 at a 45\\% gate rate), while compact backbones show similar gains under the same policy. Encoder baselines trail in both effectiveness and flexibility. The result is a practical recipe: rank fast by default and explain when it helps, a pattern that applies broadly to decision tasks where selective generation buys accuracy at acceptable cost. The single-policy design simplifies deployment and budget planning, and the curriculum principle (spend more on the hard cases, less on the easy ones) readily transfers beyond clinical order selection.",
+        "translated": "医生需要能够在实时环境下运行并对其推荐结果进行解释的排序系统。受低延迟、基于解码器的重排器需求驱动，我们提出了 OG-Rank，这是一种单解码器方法，将汇聚后的第一个 token 评分信号与不确定性门控的解释步骤相结合。该模型在一次前向传播中对所有候选对象进行评分，并仅在列表确实存在歧义时才生成简短、结构化的解释，从而保持延迟的可预测性。OG-Rank 通过集中训练资源在困难样本上的课程学习方式进行训练，在以就诊为范围的医嘱选择任务中表现出色（快速路径：Recall@1 约为 0.45，nDCG@20 约为 0.625），当门控激活时效果进一步提升（在 45% 的门控率下，Recall@1 约为 0.56，nDCG@20 约为 0.699），而使用相同策略的小型主干模型也能获得类似的提升效果。基于编码器的方法在效果和灵活性方面均落后。结果提供了一种实用的方案：默认快速排序，仅在有必要时进行解释，这种模式广泛适用于那些选择性生成能够以可接受成本换取准确性的决策任务。单策略设计简化了部署与预算规划，而课程学习原则（在困难样本上投入更多，在简单样本上投入更少）也能够轻松迁移到临床医嘱选择以外的其他任务中。",
+        "translated_title": "OG-Rank：基于不确定性和奖励趋势引导的自适应探索的“快与慢”排序学习",
+        "label": [
+            "重排（Re-ranking）",
+            "推荐系统评估（Evaluation Metrics / Offline/Online Testing）"
+        ],
+        "label_reason": "论文提出一种重排方法，结合快速排序与生成解释，适用于推荐系统中的重排环节。",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出基于不确定性和奖励趋势的自适应探索机制，改进重排效率与效果。"
+    },
+    {
+        "title": "How role-play shapes relevance judgment in zero-shot LLM rankers",
+        "url": "http://arxiv.org/abs/2510.17535v1",
+        "pub_date": "2025-10-20",
+        "summary": "Large Language Models (LLMs) have emerged as promising zero-shot rankers, but their performance is highly sensitive to prompt formulation. In particular, role-play prompts, where the model is assigned a functional role or identity, often give more robust and accurate relevance rankings. However, the mechanisms and diversity of role-play effects remain underexplored, limiting both effective use and interpretability. In this work, we systematically examine how role-play variations influence zero-shot LLM rankers. We employ causal intervention techniques from mechanistic interpretability to trace how role-play information shapes relevance judgments in LLMs. Our analysis reveals that (1) careful formulation of role descriptions have a large effect on the ranking quality of the LLM; (2) role-play signals are predominantly encoded in early layers and communicate with task instructions in middle layers, while receiving limited interaction with query or document representations. Specifically, we identify a group of attention heads that encode information critical for role-conditioned relevance. These findings not only shed light on the inner workings of role-play in LLM ranking but also offer guidance for designing more effective prompts in IR and beyond, pointing toward broader opportunities for leveraging role-play in zero-shot applications.",
+        "translated": "大语言模型（LLMs）已经展现出作为有前景的零样本排序器的潜力，但其性能对提示语的构造高度敏感。特别是角色扮演提示语，其中模型被赋予某种功能角色或身份，往往能提供更为鲁棒且准确的相关性排序。然而，角色扮演机制及其效果的多样性仍缺乏深入研究，这限制了其在实际应用中的有效使用和可解释性。在本研究中，我们系统地考察了角色扮演的变化如何影响零样本LLM排序器的表现。我们采用来自机制可解释性领域的因果干预技术，追踪角色扮演信息如何在LLM中塑造相关性判断。我们的分析揭示了以下几点：（1）角色描述的精心构造对LLM的排序质量具有显著影响；（2）角色扮演信号主要编码在模型的早期层中，并与任务指令在中层层进行交互，而与查询或文档表示的交互则较为有限。具体而言，我们识别出一组注意力头，它们编码了对角色条件相关性至关重要的信息。这些发现不仅阐明了角色扮演在LLM排序中的内部运作机制，还为设计更有效的提示语在信息检索和其他领域提供了指导，表明在零样本应用中利用角色扮演具有更广泛的可能性。",
+        "translated_title": "角色扮演如何塑造零样本大语言模型排序器的相关性判断",
+        "label": [
+            "LLM生成式推荐",
+            "精排",
+            "推荐系统评估"
+        ],
+        "label_reason": "论文探讨了LLM在零样本排序中的角色扮演机制，与生成式推荐和排序相关。",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "提出通过角色扮演提升LLM排序性能，并使用因果干预分析其内部机制，具有创新性。"
+    },
+    {
+        "title": "Towards Mixed-Modal Retrieval for Universal Retrieval-Augmented\n  Generation",
+        "url": "http://arxiv.org/abs/2510.17354v1",
+        "pub_date": "2025-10-20",
+        "summary": "Retrieval-Augmented Generation (RAG) has emerged as a powerful paradigm for enhancing large language models (LLMs) by retrieving relevant documents from an external corpus. However, existing RAG systems primarily focus on unimodal text documents, and often fall short in real-world scenarios where both queries and documents may contain mixed modalities (such as text and images). In this paper, we address the challenge of Universal Retrieval-Augmented Generation (URAG), which involves retrieving and reasoning over mixed-modal information to improve vision-language generation. To this end, we propose Nyx, a unified mixed-modal to mixed-modal retriever tailored for URAG scenarios. To mitigate the scarcity of realistic mixed-modal data, we introduce a four-stage automated pipeline for generation and filtering, leveraging web documents to construct NyxQA, a dataset comprising diverse mixed-modal question-answer pairs that better reflect real-world information needs. Building on this high-quality dataset, we adopt a two-stage training framework for Nyx: we first perform pre-training on NyxQA along with a variety of open-source retrieval datasets, followed by supervised fine-tuning using feedback from downstream vision-language models (VLMs) to align retrieval outputs with generative preferences. Experimental results demonstrate that Nyx not only performs competitively on standard text-only RAG benchmarks, but also excels in the more general and realistic URAG setting, significantly improving generation quality in vision-language tasks.",
+        "translated": "检索增强生成（RAG）作为一种强有力的范式，通过从外部语料库中检索相关文档来增强大语言模型（LLM）的能力。然而，现有的RAG系统主要关注单模态文本文档，在现实场景中往往表现不足，尤其是在查询和文档可能包含混合模态信息（如文本和图像）的情况下。本文中，我们研究了通用检索增强生成（URAG）这一挑战，其目标是通过检索和推理混合模态信息来提升视觉-语言生成能力。为此，我们提出了Nyx，一种统一的混合模态到混合模态的检索器，专门针对URAG场景进行设计。为了缓解真实混合模态数据稀缺的问题，我们引入了一个包含四个阶段的自动化生成与过滤流水线，利用网络文档构建了NyxQA数据集，该数据集包含多样化的混合模态问答对，更准确地反映了现实中的信息需求。基于这一高质量数据集，我们为Nyx采用了两阶段训练框架：首先在NyxQA以及多个开源检索数据集上进行预训练，然后使用下游视觉-语言模型（VLM）的反馈进行监督微调，以使检索结果与生成偏好对齐。实验结果表明，Nyx不仅在标准的纯文本RAG基准上表现优异，而且在更通用和现实的URAG设置中也表现出色，显著提升了视觉-语言任务中的生成质量。",
+        "translated_title": "迈向多模态召回的通用召回增强生成",
+        "label": [
+            "多模态推荐（Multimodal Recommendation）",
+            "LLM生成式推荐（LLM-based Generative Recommendation）"
+        ],
+        "label_reason": "论文探讨多模态信息检索增强生成，适用于推荐系统中的生成式推荐场景。",
+        "relevance_score": 6,
+        "novelty_score": 8,
+        "novelty_reason": "提出统一的多模态检索框架和数据生成方法，具有新颖性和实用性。"
+    },
+    {
+        "title": "MemoryBench: A Benchmark for Memory and Continual Learning in LLM\n  Systems",
+        "url": "http://arxiv.org/abs/2510.17281v1",
+        "pub_date": "2025-10-20",
+        "summary": "Scaling up data, parameters, and test-time computation has been the mainstream methods to improve LLM systems (LLMsys), but their upper bounds are almost reached due to the gradual depletion of high-quality data and marginal gains obtained from larger computational resource consumption. Inspired by the abilities of human and traditional AI systems in learning from practice, constructing memory and continual learning frameworks for LLMsys has become an important and popular research direction in recent literature. Yet, existing benchmarks for LLM memory often focus on evaluating the system on homogeneous reading comprehension tasks with long-form inputs rather than testing their abilities to learn from accumulated user feedback in service time. Therefore, we propose a user feedback simulation framework and a comprehensive benchmark covering multiple domains, languages, and types of tasks to evaluate the continual learning abilities of LLMsys. Experiments show that the effectiveness and efficiency of state-of-the-art baselines are far from satisfying, and we hope this benchmark could pave the way for future studies on LLM memory and optimization algorithms.",
+        "translated": "扩大数据量、模型参数和测试时计算能力已成为提升大语言模型系统（LLMsys）的主流方法，但由于高质量数据的逐渐枯竭以及计算资源消耗所带来的收益递减，其性能上限几乎已达到。受到人类及传统人工智能系统通过实践学习能力的启发，为LLMsys构建记忆机制和持续学习框架已成为近期研究中的一个重要且热门的研究方向。然而，现有的LLM记忆基准往往集中在评估系统在长文本输入下的同质化阅读理解任务上，而非测试其在服务时间内从累积的用户反馈中进行学习的能力。因此，我们提出一个用户反馈模拟框架以及一个涵盖多个领域、语言和任务类型的综合基准，用于评估LLMsys的持续学习能力。实验表明，最先进的基线方法在有效性和效率方面远未达到令人满意的效果，我们希望这一基准能够为未来关于LLM记忆机制和优化算法的研究铺平道路。",
+        "translated_title": "MemoryBench: 一个面向大语言模型系统中记忆与持续学习的基准测试",
+        "label": [
+            "LLM生成式推荐"
+        ],
+        "label_reason": "论文涉及LLM系统的持续学习和记忆能力，可能适用于生成式推荐。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出新的基准和用户反馈模拟框架，具有一定的创新性。"
+    },
+    {
+        "title": "On Efficiency-Effectiveness Trade-off of Diffusion-based Recommenders",
+        "url": "http://arxiv.org/abs/2510.17245v1",
+        "pub_date": "2025-10-20",
+        "summary": "Diffusion models have emerged as a powerful paradigm for generative sequential recommendation, which typically generate next items to recommend guided by user interaction histories with a multi-step denoising process. However, the multi-step process relies on discrete approximations, introducing discretization error that creates a trade-off between computational efficiency and recommendation effectiveness. To address this trade-off, we propose TA-Rec, a two-stage framework that achieves one-step generation by smoothing the denoising function during pretraining while alleviating trajectory deviation by aligning with user preferences during fine-tuning. Specifically, to improve the efficiency without sacrificing the recommendation performance, TA-Rec pretrains the denoising model with Temporal Consistency Regularization (TCR), enforcing the consistency between the denoising results across adjacent steps. Thus, we can smooth the denoising function to map the noise as oracle items in one step with bounded error. To further enhance effectiveness, TA-Rec introduces Adaptive Preference Alignment (APA) that aligns the denoising process with user preference adaptively based on preference pair similarity and timesteps. Extensive experiments prove that TA-Rec's two-stage objective effectively mitigates the discretization errors-induced trade-off, enhancing both efficiency and effectiveness of diffusion-based recommenders.",
+        "translated": "扩散模型已成为生成式序列推荐领域的一个强大范式，通常通过用户交互历史，以多步骤去噪过程生成下一个推荐的物料。然而，该多步骤过程依赖于离散近似，从而引入了离散化误差，造成了计算效率与推荐效果之间的权衡问题。为了解决这一权衡问题，我们提出了 TA-Rec，一个两阶段框架，通过在预训练阶段平滑去噪函数实现一步生成，同时在微调阶段通过与用户偏好对齐，缓解轨迹偏移问题。具体而言，为了在不牺牲推荐性能的前提下提高效率，TA-Rec 使用时间一致性正则化（Temporal Consistency Regularization, TCR）对去噪模型进行预训练，强制相邻步骤之间的去噪结果保持一致性。因此，我们可以平滑去噪函数，从而在一步内将噪声映射为理想物料，且误差被控制在一定范围内。为进一步增强推荐效果，TA-Rec 引入了自适应偏好对齐（Adaptive Preference Alignment, APA），根据偏好对相似性及时刻自适应地将去噪过程与用户偏好对齐。大量实验表明，TA-Rec 的两阶段目标有效地缓解了由离散化误差引起的权衡问题，提升了基于扩散模型的推荐系统的效率和效果。",
+        "translated_title": "基于扩散的推荐系统的效率与效果权衡",
+        "label": [
+            "LLM生成式推荐",
+            "序列推荐"
+        ],
+        "label_reason": "论文研究基于扩散模型的生成式序列推荐，与推荐系统核心问题直接相关。",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出TA-Rec框架，通过平滑去噪函数和自适应偏好对齐缓解效率-效果权衡。"
+    },
+    {
+        "title": "DSEBench: A Test Collection for Explainable Dataset Search with Examples",
+        "url": "http://arxiv.org/abs/2510.17228v1",
+        "pub_date": "2025-10-20",
+        "summary": "Dataset search has been an established information retrieval task. Current paradigms either retrieve datasets that are relevant to a keyword query or find datasets that are similar to an input target dataset. To allow for their combined specification of information needs, in this article, we investigate the more generalized task of Dataset Search with Examples (DSE) and further extend it to Explainable DSE that requires identifying the metadata and content fields of a dataset that indicate its relevance to the query and similarity to the target datasets. To facilitate this research, we construct DSEBench, a test collection that provides high-quality dataset- and field-level annotations to enable the evaluation of explainable DSE. We also employ a large language model to generate numerous annotations to be used for training. We establish extensive baselines on DSEBench by adapting and evaluating a variety of sparse, dense, and LLM-based retrieval, reranking, and explanation methods.",
+        "translated": "数据集检索已成为一项成熟的信息检索任务。当前的方法要么检索与关键字查询相关的数据集，要么查找与输入目标数据集相似的数据集。为了能够综合表达用户的信息需求，本文我们研究了更通用的数据集检索与示例任务（Dataset Search with Examples, DSE），并进一步将其扩展为可解释的DSE，该任务要求识别数据集中指示其与查询相关性以及与目标数据集相似性的元数据和内容字段。为推动该领域的研究，我们构建了DSEBench测试集合，提供高质量的数据集级别和字段级别的标注，以支持可解释DSE的评估。我们还利用大语言模型生成大量标注用于训练。我们在DSEBench上建立了广泛的基线，通过调整和评估多种稀疏、稠密以及基于大语言模型的召回、重排和解释方法。",
+        "translated_title": "DSEBench：一个包含示例的可解释数据集检索测试集",
+        "label": [
+            "推荐系统评估",
+            "解释性"
+        ],
+        "label_reason": "论文涉及可解释数据集检索，与推荐系统评估有一定关联",
+        "relevance_score": 5,
+        "novelty_score": 7,
+        "novelty_reason": "提出可解释数据集搜索新任务并构建高质量基准"
+    },
+    {
+        "title": "Rethinking On-policy Optimization for Query Augmentation",
+        "url": "http://arxiv.org/abs/2510.17139v1",
+        "pub_date": "2025-10-20",
+        "summary": "Recent advances in large language models (LLMs) have led to a surge of interest in query augmentation for information retrieval (IR). Two main approaches have emerged. The first prompts LLMs to generate answers or pseudo-documents that serve as new queries, relying purely on the model's parametric knowledge or contextual information. The second applies reinforcement learning (RL) to fine-tune LLMs for query rewriting, directly optimizing retrieval metrics. While having respective advantages and limitations, the two approaches have not been compared under consistent experimental conditions. In this work, we present the first systematic comparison of prompting-based and RL-based query augmentation across diverse benchmarks, including evidence-seeking, ad hoc, and tool retrieval. Our key finding is that simple, training-free query augmentation often performs on par with, or even surpasses, more expensive RL-based counterparts, especially when using powerful LLMs. Motivated by this discovery, we introduce a novel hybrid method, On-policy Pseudo-document Query Expansion (OPQE), which, instead of rewriting a query, the LLM policy learns to generate a pseudo-document that maximizes retrieval performance, thus merging the flexibility and generative structure of prompting with the targeted optimization of RL. We show OPQE outperforms both standalone prompting and RL-based rewriting, demonstrating that a synergistic approach yields the best results. Our implementation is made available to facilitate reproducibility.",
+        "translated": "近年来，大语言模型（LLMs）的进展引发了信息检索（IR）领域对查询增强（query augmentation）的广泛关注。目前主要有两种方法。第一种方法通过提示LLM生成答案或伪文档作为新的查询，完全依赖模型的参数化知识或上下文信息。第二种方法则利用强化学习（RL）对LLMs进行微调以实现查询重写，直接优化检索指标。尽管两种方法各有优势和局限性，但它们尚未在一致的实验条件下进行比较。在本文中，我们首次在多个基准上对基于提示（prompting-based）和基于强化学习（RL-based）的查询增强方法进行了系统性比较，包括证据寻求、临时检索和工具检索等任务。我们的主要发现是，简单且无需训练的查询增强方法通常可以与，甚至超越，代价更高的基于强化学习的对应方法，尤其是在使用功能强大的LLMs时。受此发现的启发，我们提出了一种新颖的混合方法——基于策略的伪文档查询扩展（On-policy Pseudo-document Query Expansion，OPQE），该方法不依赖于查询重写，而是通过学习LLM策略生成伪文档以最大化检索性能，从而将提示方法的灵活性与生成结构和强化学习的目标优化结合起来。我们展示了OPQE优于独立的提示方法和基于强化学习的重写方法，表明协同的方法能够取得最佳效果。我们已开源实现代码以促进结果复现。",
+        "translated_title": "Rethinking On-policy Optimization for Query Augmentation  \n重新思考基于策略的查询增强优化方法",
+        "label": [
+            "通用推荐技术",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "论文涉及LLM生成伪文档用于检索，与生成式推荐有一定关联。",
+        "relevance_score": 6,
+        "novelty_score": 7,
+        "novelty_reason": "提出一种结合提示和强化学习的新型混合方法，具有一定创新性。"
+    },
+    {
+        "title": "Towards Context-aware Reasoning-enhanced Generative Searching in\n  E-commerce",
+        "url": "http://arxiv.org/abs/2510.16925v1",
+        "pub_date": "2025-10-19",
+        "summary": "Search-based recommendation is one of the most critical application scenarios in e-commerce platforms. Users' complex search contexts--such as spatiotemporal factors, historical interactions, and current query's information--constitute an essential part of their decision-making, reflecting implicit preferences that complement explicit query terms. Modeling such rich contextual signals and their intricate associations with candidate items remains a key challenge. Although numerous efforts have been devoted to building more effective search methods, existing approaches still show limitations in integrating contextual information, which hinders their ability to fully capture user intent.   To address these challenges, we propose a context-aware reasoning-enhanced generative search framework for better \\textbf{understanding the complicated context}. Specifically, the framework first unifies heterogeneous user and item contexts into textual representations or text-based semantic identifiers and aligns them. To overcome the lack of explicit reasoning trajectories, we introduce a self-evolving post-training paradigm that iteratively combines supervised fine-tuning and reinforcement learning to progressively enhance the model's reasoning capability. In addition, we identify potential biases in existing RL algorithms when applied to search scenarios and present a debiased variant of GRPO to improve ranking performance. Extensive experiments on search log data collected from a real-world e-commerce platform demonstrate that our approach achieves superior performance compared with strong baselines, validating its effectiveness for search-based recommendation.",
+        "translated": "基于搜索的推荐是电子商务平台中最关键的应用场景之一。用户复杂的搜索上下文——例如时空因素、历史交互以及当前查询的信息——构成了其决策过程的重要组成部分，反映了对显式查询词的补充隐式偏好。如何建模这些丰富的上下文信号以及它们与候选物料之间复杂的关联关系，仍然是一个关键挑战。尽管已有大量研究致力于构建更有效的搜索方法，但现有方法在整合上下文信息方面仍存在局限，这限制了其全面捕捉用户意图的能力。\n\n为应对这些挑战，我们提出了一种面向搜索的上下文感知推理增强生成式框架，以更好地**理解复杂的上下文**。具体而言，该框架首先将异构的用户和物料上下文统一为文本表示或基于文本的语义标识符，并进行对齐。为了克服缺乏显式推理轨迹的问题，我们引入了一种自我演进的后训练范式，该范式通过迭代结合监督微调和强化学习，逐步增强模型的推理能力。此外，我们识别了现有强化学习算法在应用于搜索场景时可能存在的偏差问题，并提出了去偏的GRPO变体，以提升排序效果。在从真实电子商务平台收集的搜索日志数据上的大量实验表明，与强基线方法相比，我们的方法实现了更优越的性能，验证了其在基于搜索推荐中的有效性。",
+        "translated_title": "面向电子商务中上下文感知与推理增强的生成式搜索",
+        "label": [
+            "LLM生成式推荐",
+            "推荐系统评估",
+            "序列推荐"
+        ],
+        "label_reason": "论文聚焦电商场景下的搜索推荐，结合上下文和生成式方法，具有较强相关性。",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出结合上下文感知和推理增强的生成式搜索框架，具有一定创新性。"
+    },
+    {
+        "title": "The Layout Is the Model: On Action-Item Coupling in Generative\n  Recommendation",
+        "url": "http://arxiv.org/abs/2510.16804v1",
+        "pub_date": "2025-10-19",
+        "summary": "Generative Recommendation (GR) models treat a user's interaction history as a sequence to be autoregressively predicted. When both items and actions (e.g., watch time, purchase, comment) are modeled, the layout-the ordering and visibility of item/action tokens-critically determines what information the model can use and how it generalizes. We present a unified study of token layouts for GR grounded in first principles: (P1) maximize item/action signal in both input/output space, (P2) preserve the conditioning relationship \"action given item\" and (P3) no information leakage.   While interleaved layout (where item and action occupy separate tokens) naturally satisfies these principles, it also bloats sequence length with larger training/inference cost. On the non-interleaved front, we design a novel and effective approach, Lagged Action Conditioning (LAC), which appears strange on the surface but aligns well with the design principles to yield strong accuracy. Comprehensive experiments on public datasets and large-scale production logs evaluate different layout options and empirically verifies the design principles. Our proposed non-interleaved method, LAC, achieves competitive or superior quality at substantially lower FLOPs than interleaving. Our findings offer actionable guidance for assembling GR systems that are both accurate and efficient.",
+        "translated": "生成式推荐（GR）模型将用户的历史交互视为一个需要自回归预测的序列。当同时建模物料和行为（例如观看时长、购买、评论）时，布局——即物料/行为标记的顺序和可见性——在很大程度上决定了模型可以使用的哪些信息以及其泛化能力。我们基于第一性原理对GR的标记布局进行了统一研究：（P1）在输入/输出空间中最大化物料/行为的信号，（P2）保持“在给定物料下预测行为”的条件关系，以及（P3）防止信息泄露。尽管交错布局（物料和行为分别占据不同的标记）自然地满足了这些原理，但它也会增加序列长度并带来更高的训练和推理成本。在非交错布局方面，我们设计了一种新颖且有效的方法——延迟行为条件建模（LAC），这种方法表面上看起来有些奇怪，但其与设计原理高度一致，从而实现了较强的准确性。我们在公开数据集和大规模生产日志上进行了全面的实验，评估了不同的布局选项，并实证验证了这些设计原理。我们提出的非交错方法LAC在计算量（FLOPs）显著低于交错布局的情况下，实现了具有竞争力甚至更优的推荐质量。我们的研究结果为构建既准确又高效的GR系统提供了切实可行的指导。",
+        "translated_title": "“布局即模型”：生成式推荐中的动作-物料耦合问题",
+        "label": [
+            "LLM生成式推荐",
+            "序列推荐"
+        ],
+        "label_reason": "论文聚焦生成式推荐中的序列建模与token布局设计，对推荐系统有直接应用价值。",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出新颖的非交错布局方法LAC，在生成式推荐中展现强效且低计算成本。"
+    },
+    {
+        "title": "An Efficient Framework for Whole-Page Reranking via Single-Modal\n  Supervision",
+        "url": "http://arxiv.org/abs/2510.16803v1",
+        "pub_date": "2025-10-19",
+        "summary": "The whole-page reranking plays a critical role in shaping the user experience of search engines, which integrates retrieval results from multiple modalities, such as documents, images, videos, and LLM outputs. Existing methods mainly rely on large-scale human-annotated data, which is costly to obtain and time-consuming. This is because whole-page annotation is far more complex than single-modal: it requires assessing the entire result page while accounting for cross-modal relevance differences. Thus, how to improve whole-page reranking performance while reducing annotation costs is still a key challenge in optimizing search engine result pages(SERP). In this paper, we propose SMAR, a novel whole-page reranking framework that leverages strong Single-modal rankers to guide Modal-wise relevance Alignment for effective Reranking, using only limited whole-page annotation to outperform fully-annotated reranking models. Specifically, high-quality single-modal rankers are first trained on data specific to their respective modalities. Then, for each query, we select a subset of their outputs to construct candidate pages and perform human annotation at the page level. Finally, we train the whole-page reranker using these limited annotations and enforcing consistency with single-modal preferences to maintain ranking quality within each modality. Experiments on the Qilin and Baidu datasets demonstrate that SMAR reduces annotation costs by about 70-90\\% while achieving significant ranking improvements compared to baselines. Further offline and online A/B testing on Baidu APPs also shows notable gains in standard ranking metrics as well as user experience indicators, fully validating the effectiveness and practical value of our approach in real-world search scenarios.",
+        "translated": "整页重排在塑造搜索引擎用户体验方面起着关键作用，它将来自多种模态的检索结果（如文档、图像、视频和大语言模型输出）进行整合。现有方法主要依赖于大规模的人工标注数据，这在获取成本和耗时方面都较高。这是因为整页标注远比单模态标注复杂：它需要评估整个结果页面，同时考虑跨模态的相关性差异。因此，如何在降低标注成本的同时提升整页重排性能，仍然是优化搜索引擎结果页面（SERP）中的关键挑战。在本文中，我们提出了SMAR，一种新颖的整页重排框架，该框架利用强大的单模态排序器来引导模态间的相关性对齐以实现有效的重排，仅使用有限的整页标注即可超越完全标注的重排模型。具体而言，首先在各自模态的专用数据上训练高质量的单模态排序器。然后，对于每个查询，我们选择其输出的子集以构建候选页面，并在页面层面进行人工标注。最后，我们使用这些有限的标注数据训练整页重排模型，并通过强制保持与单模态偏好的一致性，以维持各模态内的排序质量。在Qilin和Baidu数据集上的实验表明，SMAR在实现显著排序性能提升的同时，可将标注成本降低约70-90\\%。进一步在百度APP上的离线和在线A/B测试也显示了在标准排序指标和用户体验指标上的显著提升，充分验证了我们的方法在实际搜索引擎场景中的有效性和实用价值。",
+        "translated_title": "通过单模态监督实现高效的整页重排框架",
+        "label": [
+            "重排（Re-ranking）",
+            "推荐系统评估（Evaluation Metrics / Offline/Online Testing）"
+        ],
+        "label_reason": "论文聚焦于搜索结果页重排，与推荐系统中的重排环节相关。",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "提出通过单模态排序器引导多模态对齐的重排框架，方法新颖且有效。"
+    },
+    {
+        "title": "Exact Nearest-Neighbor Search on Energy-Efficient FPGA Devices",
+        "url": "http://arxiv.org/abs/2510.16736v1",
+        "pub_date": "2025-10-19",
+        "summary": "This paper investigates the usage of FPGA devices for energy-efficient exact kNN search in high-dimension latent spaces. This work intercepts a relevant trend that tries to support the increasing popularity of learned representations based on neural encoder models by making their large-scale adoption greener and more inclusive. The paper proposes two different energy-efficient solutions adopting the same FPGA low-level configuration. The first solution maximizes system throughput by processing the queries of a batch in parallel over a streamed dataset not fitting into the FPGA memory. The second minimizes latency by processing each kNN incoming query in parallel over an in-memory dataset. Reproducible experiments on publicly available image and text datasets show that our solution outperforms state-of-the-art CPU-based competitors regarding throughput, latency, and energy consumption. Specifically, experiments show that the proposed FPGA solutions achieve the best throughput in terms of queries per second and the best-observed latency with scale-up factors of up to 16.6X. Similar considerations can be made regarding energy efficiency, where results show that our solutions can achieve up to 11.9X energy saving w.r.t. strong CPU-based competitors.",
+        "translated": "本文研究了使用FPGA设备在高维隐空间中进行节能精确kNN搜索的应用。这项工作抓住了一个相关趋势，即通过使基于神经编码器模型的表示学习的大规模采用更加绿色和包容，以支持其日益增长的流行。论文提出了两种不同的节能解决方案，它们采用相同的FPGA底层配置。第一种解决方案通过在一个无法完全加载到FPGA内存中的流式数据集上并行处理一批查询，以最大化系统吞吐量。第二种解决方案则通过在一个内存中的数据集上并行处理每个传入的kNN查询，以最小化延迟。在公开可用的图像和文本数据集上进行的可复现实验表明，我们的解决方案在吞吐量、延迟和能耗方面均优于当前最先进的基于CPU的竞争对手。具体而言，实验表明，所提出的FPGA解决方案在每秒查询数方面实现了最佳吞吐量，并观察到在扩展因子高达16.6倍的情况下，具有最低的延迟。关于能效方面也有类似的结论，结果表明，与强大的基于CPU的解决方案相比，我们的解决方案最多可实现11.9倍的能耗节省。",
+        "translated_title": "节能FPGA设备上的精确最近邻搜索",
+        "label": [],
+        "label_reason": "论文聚焦于FPGA上的kNN搜索优化，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "提出两种FPGA节能方案，实验设计完整，但属于通用计算优化领域。"
+    },
+    {
+        "title": "Right Answer at the Right Time - Temporal Retrieval-Augmented Generation\n  via Graph Summarization",
+        "url": "http://arxiv.org/abs/2510.16715v1",
+        "pub_date": "2025-10-19",
+        "summary": "Question answering in temporal knowledge graphs requires retrieval that is both time-consistent and efficient. Existing RAG methods are largely semantic and typically neglect explicit temporal constraints, which leads to time-inconsistent answers and inflated token usage. We propose STAR-RAG, a temporal GraphRAG framework that relies on two key ideas: building a time-aligned rule graph and conducting propagation on this graph to narrow the search space and prioritize semantically relevant, time-consistent evidence. This design enforces temporal proximity during retrieval, reduces the candidate set of retrieval results, and lowers token consumption without sacrificing accuracy. Compared with existing temporal RAG approaches, STAR-RAG eliminates the need for heavy model training and fine-tuning, thereby reducing computational cost and significantly simplifying deployment.Extensive experiments on real-world temporal KG datasets show that our method achieves improved answer accuracy while consuming fewer tokens than strong GraphRAG baselines.",
+        "translated": "时序知识图谱中的问答任务需要既具备时间一致性又高效的数据召回能力。现有的 RAG 方法大多基于语义，通常忽视了显式的时间约束，这导致了时间不一致的回答和较高的 token 使用量。我们提出了 STAR-RAG，一种时序 GraphRAG 框架，其依赖于两个核心思想：构建一个时间对齐的规则图，并在此图上进行传播以缩小搜索空间并优先考虑语义相关且时间一致的证据。这种设计在召回过程中强制执行时间邻近性，减少了召回结果的候选集合，并在不牺牲准确性的情况下降低了 token 消耗。与现有的时序 RAG 方法相比，STAR-RAG 消除了对繁重模型训练和微调的需求，从而降低了计算成本并大大简化了部署。在真实世界的时序知识图谱数据集上的大量实验表明，我们的方法在保持较低 token 消耗的同时，实现了优于强大 GraphRAG 基线的回答准确性。",
+        "translated_title": "Right Answer at the Right Time - Temporal Retrieval-Augmented Generation via Graph Summarization  \n在正确的时间给出正确的答案——基于图摘要的时间检索增强生成",
+        "label": [
+            "LLM生成式推荐",
+            "多模态推荐"
+        ],
+        "label_reason": "涉及基于图的检索增强生成，适用于生成式推荐场景",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "提出时间对齐规则图和传播机制，改进现有RAG方法"
+    },
+    {
+        "title": "Resolution-Aware Retrieval Augmented Zero-Shot Forecasting",
+        "url": "http://arxiv.org/abs/2510.16695v1",
+        "pub_date": "2025-10-19",
+        "summary": "Zero-shot forecasting aims to predict outcomes for previously unseen conditions without direct historical data, posing a significant challenge for traditional forecasting methods. We introduce a Resolution-Aware Retrieval-Augmented Forecasting model that enhances predictive accuracy by leveraging spatial correlations and temporal frequency characteristics. By decomposing signals into different frequency components, our model employs resolution-aware retrieval, where lower-frequency components rely on broader spatial context, while higher-frequency components focus on local influences. This allows the model to dynamically retrieve relevant data and adapt to new locations with minimal historical context.   Applied to microclimate forecasting, our model significantly outperforms traditional forecasting methods, numerical weather prediction models, and modern foundation time series models, achieving 71% lower MSE than HRRR and 34% lower MSE than Chronos on the ERA5 dataset.   Our results highlight the effectiveness of retrieval-augmented and resolution-aware strategies, offering a scalable and data-efficient solution for zero-shot forecasting in microclimate modeling and beyond.",
+        "translated": "零样本预测旨在在没有直接历史数据的情况下预测此前未见过的条件下的结果，这对传统预测方法提出了重大挑战。我们引入了一种分辨率感知的检索增强预测模型，该模型通过利用空间相关性和时间频率特征来提高预测准确性。通过将信号分解为不同的频率成分，我们的模型采用分辨率感知的检索策略，其中低频成分依赖于更广泛的空间上下文，而高频成分则关注局部影响。这使得模型能够动态检索相关数据，并在仅有少量历史信息的情况下适应新的位置。\n\n在微气候预测中的应用表明，我们的模型显著优于传统预测方法、数值天气预测模型以及现代基础时间序列模型，在ERA5数据集上，其均方误差（MSE）比HRRR低71%，比Chronos低34%。我们的结果突显了检索增强和分辨率感知策略的有效性，为微气候建模及其他领域的零样本预测提供了一种可扩展且数据高效的解决方案。",
+        "translated_title": "分辨率感知的召回增强零样本预测",
+        "label": [
+            "召回（Recall）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "论文涉及基于检索的策略，可用于推荐系统的召回环节。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出分辨率感知的检索增强方法，对零样本预测有明显改进。"
+    },
+    {
+        "title": "Safire: Similarity Framework for Visualization Retrieval",
+        "url": "http://arxiv.org/abs/2510.16662v1",
+        "pub_date": "2025-10-18",
+        "summary": "Effective visualization retrieval necessitates a clear definition of similarity. Despite the growing body of work in specialized visualization retrieval systems, a systematic approach to understanding visualization similarity remains absent. We introduce the Similarity Framework for Visualization Retrieval (Safire), a conceptual model that frames visualization similarity along two dimensions: comparison criteria and representation modalities. Comparison criteria identify the aspects that make visualizations similar, which we divide into primary facets (data, visual encoding, interaction, style, metadata) and derived properties (data-centric and human-centric measures). Safire connects what to compare with how comparisons are executed through representation modalities. We categorize existing representation approaches into four groups based on their levels of information content and visualization determinism: raster image, vector image, specification, and natural language description, together guiding what is computable and comparable. We analyze several visualization retrieval systems using Safire to demonstrate its practical value in clarifying similarity considerations. Our findings reveal how particular criteria and modalities align across different use cases. Notably, the choice of representation modality is not only an implementation detail but also an important decision that shapes retrieval capabilities and limitations. Based on our analysis, we provide recommendations and discuss broader implications for multimodal learning, AI applications, and visualization reproducibility.",
+        "translated": "有效的可视化召回需要对相似性有明确的定义。尽管在专用的可视化召回系统方面已有越来越多的研究，但在理解可视化相似性方面仍缺乏系统的方法。我们提出了可视化召回相似性框架（Safire），这是一个概念模型，从两个维度构建可视化相似性：比较标准和表示模态。比较标准识别使可视化之间产生相似性的方面，我们将其划分为基本维度（数据、视觉编码、交互、风格、元数据）和衍生属性（以数据为中心和以用户为中心的度量）。Safire通过表示模态将比较内容与比较方式联系起来。我们根据信息含量和可视化确定性的水平，将现有的表示方法分为四类：光栅图像、矢量图像、规范描述和自然语言描述，共同指导了哪些内容是可计算和可比较的。我们使用Safire分析了多个可视化召回系统，以展示其在澄清相似性考虑方面的实用价值。我们的发现揭示了特定的标准和模态在不同应用场景中的对齐方式。值得注意的是，表示模态的选择不仅是一个实现细节，也是一个重要的决策，它塑造了召回系统的能力和局限性。基于我们的分析，我们提供了建议，并讨论了其对多模态学习、人工智能应用和可视化可复现性的更广泛影响。",
+        "translated_title": "Safire：面向可视化召回的相似度框架",
+        "label": [
+            "多模态推荐"
+        ],
+        "label_reason": "论文涉及多模态表征与相似度计算，但主要聚焦于可视化检索而非推荐系统",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "提出系统性可视化相似度框架，对多模态表示有清晰分类"
+    },
+    {
+        "title": "Prompt Optimization via Retrieved Reasoning Assets and Multi-Agent\n  Analysis",
+        "url": "http://arxiv.org/abs/2510.16635v1",
+        "pub_date": "2025-10-18",
+        "summary": "Prompt optimization has emerged as an effective alternative to retraining for improving the performance of Large Language Models (LLMs). However, most existing approaches treat evaluation as a black box, relying solely on numerical scores while offering limited insight into why a prompt succeeds or fails. They also depend heavily on trial-and-error refinements, which are difficult to interpret and control. In this paper, we introduce MA-SAPO, a Multi-Agent framework for Score-Aware Prompt Optimization. Compared to prior methods, MA-SAPO explicitly couples evaluation outcomes with structured reasoning to guide systematic edits. The framework specifically consists of two stages: during the Reasoning Phase, agents collaboratively explain metric scores, diagnose weaknesses, and synthesize targeted refinements that are stored as reusable reasoning assets; during the Test Phase, agents retrieve these assets to analyze optimized prompts and apply only evidence-grounded edits. By turning evaluation signals into interpretable reasoning chains, MA-SAPO produces prompt refinements that are more transparent, auditable, and controllable. Experiments on the HelpSteer1/2 benchmarks demonstrate consistent improvements over single-pass prompting, retrieval-augmented baselines, and prior multi-agent strategies, validating the effectiveness of our approach.",
+        "translated": "Prompt优化已逐渐成为改进大语言模型（LLM）性能、替代模型微调的有效方法。然而，大多数现有方法将评估视为黑箱，仅依赖数值评分，而对Prompt成功或失败的原因提供有限的洞察。它们也高度依赖于试错式的优化，难以解释和控制。在本文中，我们提出了MA-SAPO，一个多智能体框架，用于实现评分感知的Prompt优化。与之前的方法相比，MA-SAPO明确地将评估结果与结构化推理相结合，以指导系统性的Prompt修改。该框架具体包含两个阶段：在推理阶段，智能体协作解释评估指标、诊断模型弱点，并综合生成有针对性的优化策略，这些策略以可复用的推理资产形式存储；在测试阶段，智能体检索这些资产以分析优化后的Prompt，并仅应用基于证据的修改。通过将评估信号转化为可解释的推理链，MA-SAPO生成的Prompt优化策略更加透明、可审计且可控。我们在HelpSteer1/2基准上的实验表明，MA-SAPO在单次Prompt、检索增强基线以及之前多智能体策略的基础上取得了持续的性能提升，验证了我们方法的有效性。",
+        "translated_title": "基于检索推理资产和多智能体分析的提示优化",
+        "label": [],
+        "label_reason": "论文聚焦于大模型提示优化，未直接涉及推荐系统技术。",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "提出多智能体框架，改进提示优化方法，具有创新性。"
+    },
+    {
+        "title": "FRONTIER-RevRec: A Large-scale Dataset for Reviewer Recommendation",
+        "url": "http://arxiv.org/abs/2510.16597v1",
+        "pub_date": "2025-10-18",
+        "summary": "Reviewer recommendation is a critical task for enhancing the efficiency of academic publishing workflows. However, research in this area has been persistently hindered by the lack of high-quality benchmark datasets, which are often limited in scale, disciplinary scope, and comparative analyses of different methodologies. To address this gap, we introduce FRONTIER-RevRec, a large-scale dataset constructed from authentic peer review records (2007-2025) from the Frontiers open-access publishing platform https://www.frontiersin.org/. The dataset contains 177941 distinct reviewers and 478379 papers across 209 journals spanning multiple disciplines including clinical medicine, biology, psychology, engineering, and social sciences. Our comprehensive evaluation on this dataset reveals that content-based methods significantly outperform collaborative filtering. This finding is explained by our structural analysis, which uncovers fundamental differences between academic recommendation and commercial domains. Notably, approaches leveraging language models are particularly effective at capturing the semantic alignment between a paper's content and a reviewer's expertise. Furthermore, our experiments identify optimal aggregation strategies to enhance the recommendation pipeline. FRONTIER-RevRec is intended to serve as a comprehensive benchmark to advance research in reviewer recommendation and facilitate the development of more effective academic peer review systems. The FRONTIER-RevRec dataset is available at: https://anonymous.4open.science/r/FRONTIER-RevRec-5D05.",
+        "translated": "评审推荐是提升学术出版流程效率的关键任务。然而，该领域的研究一直受到高质量基准数据集缺乏的阻碍，现有数据集通常在规模、学科覆盖范围以及不同方法的对比分析方面存在局限。为了解决这一问题，我们提出了 FRONTIER-RevRec，这是一个大规模数据集，由 Frontiers 开放获取出版平台（https://www.frontiersin.org/）提供的真实同行评审记录（2007-2025）构建而成。该数据集包含 177941 位不同的审稿人和 478379 篇论文，涵盖 209 个期刊，涉及临床医学、生物学、心理学、工程学和社会科学等多个学科。我们在该数据集上的综合评估表明，基于内容的方法显著优于协同过滤方法。这一发现通过我们的结构分析得到解释，该分析揭示了学术推荐与商业领域之间的基本差异。值得注意的是，利用语言模型的方法在捕捉论文内容与审稿人专业领域之间的语义一致性方面特别有效。此外，我们的实验识别出最优的聚合策略，以提升推荐流程的性能。FRONTIER-RevRec 旨在作为全面的基准数据集，推动评审推荐研究的发展，并促进更有效的学术同行评审系统的构建。FRONTIER-RevRec 数据集可通过以下链接获取：https://anonymous.4open.science/r/FRONTIER-RevRec-5D05。",
+        "translated_title": "FRONTIER-RevRec：一个用于审稿人推荐的大型数据集",
+        "label": [
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "论文聚焦推荐系统中的评审人推荐，属于学术推荐的通用技术范畴。",
+        "relevance_score": 7,
+        "novelty_score": 6,
+        "novelty_reason": "提出大规模数据集并分析方法性能，有一定实用价值但创新性有限。"
+    },
+    {
+        "title": "Enhancing Channel Estimation in RIS-aided Systems via Observation Matrix\n  Design",
+        "url": "http://arxiv.org/abs/2510.16576v1",
+        "pub_date": "2025-10-18",
+        "summary": "Reconfigurable intelligent surfaces (RISs) have emerged as a promising technology for enhancing wireless communications through dense antenna arrays. Accurate channel estimation is critical to unlocking their full performance potential. To enhance RIS channel estimators, this paper proposes a novel observation matrix design scheme. Bayesian optimization framework is adopted to generate observation matrices that maximize the mutual information between received pilot signals and RIS channels. To solve the formulated problem efficiently, we develop an alternating Riemannian manifold optimization (ARMO) algorithm to alternately update the receiver combiners and RIS phase-shift matrices. An adaptive kernel training strategy is further introduced to iteratively refine the channel covariance matrix without requiring additional pilot resources. Simulation results demonstrate that the proposed ARMO-enhanced estimator achieves substantial gains in estimation accuracy over state-of-the-art methods.",
+        "translated": "可重构智能表面（RISs）作为一种有前景的技术，通过密集天线阵列来增强无线通信。准确的信道估计对于发挥其全部性能潜力至关重要。为提升RIS信道估计器的性能，本文提出了一种新颖的观测矩阵设计方案。采用贝叶斯优化框架生成观测矩阵，以最大化接收到的导频信号与RIS信道之间的互信息。为高效求解所构建的问题，我们开发了一种交替黎曼流形优化（ARMO）算法，用于交替更新接收端组合器和RIS相移矩阵。此外，引入了一种自适应核训练策略，可在不增加额外导频资源的情况下，迭代优化信道协方差矩阵。仿真结果表明，所提出的ARMO增强估计器在估计精度方面相比现有最先进方法有显著提升。",
+        "translated_title": "通过观测矩阵设计提升RIS辅助系统中的信道估计",
+        "label": [],
+        "label_reason": "论文研究RIS信道估计，属于通信领域，与推荐系统无直接关联。",
+        "relevance_score": 1,
+        "novelty_score": 6,
+        "novelty_reason": "提出了一种基于贝叶斯优化的观测矩阵设计方法，具有一定的技术新颖性。"
+    },
+    {
+        "title": "Blending Learning to Rank and Dense Representations for Efficient and\n  Effective Cascades",
+        "url": "http://arxiv.org/abs/2510.16393v1",
+        "pub_date": "2025-10-18",
+        "summary": "We investigate the exploitation of both lexical and neural relevance signals for ad-hoc passage retrieval. Our exploration involves a large-scale training dataset in which dense neural representations of MS-MARCO queries and passages are complemented and integrated with 253 hand-crafted lexical features extracted from the same corpus. Blending of the relevance signals from the two different groups of features is learned by a classical Learning-to-Rank (LTR) model based on a forest of decision trees. To evaluate our solution, we employ a pipelined architecture where a dense neural retriever serves as the first stage and performs a nearest-neighbor search over the neural representations of the documents. Our LTR model acts instead as the second stage that re-ranks the set of candidates retrieved by the first stage to enhance effectiveness. The results of reproducible experiments conducted with state-of-the-art dense retrievers on publicly available resources show that the proposed solution significantly enhances the end-to-end ranking performance while relatively minimally impacting efficiency. Specifically, we achieve a boost in nDCG@10 of up to 11% with an increase in average query latency of only 4.3%. This confirms the advantage of seamlessly combining two distinct families of signals that mutually contribute to retrieval effectiveness.",
+        "translated": "我们研究了在即席段落召回中同时利用词汇相关性和神经相关性信号的问题。我们的探索涉及一个大规模训练数据集，其中MS-MARCO查询和段落的密集神经表示与从同一语料库中提取的253个手工构建的词汇特征相结合并融合。我们通过一个基于决策树森林的经典学习排序（LTR）模型，来学习融合这两组特征的相关性信号。为了评估我们的解决方案，我们采用了一种流水线架构，其中密集神经召回器作为第一阶段，通过对文档的神经表示进行最近邻搜索来完成初步召回。而我们的LTR模型则作为第二阶段，对第一阶段召回的候选集合进行重排以提升效果。在公开可用资源上使用最先进的密集召回器进行的可复现实验结果表明，所提出的方案在端到端排序性能上有显著提升，同时对效率的影响相对较小。具体而言，我们实现了nDCG@10提升高达11%，而平均查询延迟仅增加了4.3%。这证实了将两种不同类别的信号无缝融合以共同提升召回效果的优势。",
+        "translated_title": "融合排序学习与密集表征以实现高效且有效的级联系统",
+        "label": [
+            "精排（Ranking）",
+            "重排（Re-ranking）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "论文研究了排序与密集表示的结合，适用于推荐系统中的重排与排序环节。",
+        "relevance_score": 7,
+        "novelty_score": 6,
+        "novelty_reason": "将传统LTR与密集表示结合，有一定组合创新但非突破性方法。"
+    },
+    {
+        "title": "Investigating the Association Between Text-Based Indications of\n  Foodborne Illness from Yelp Reviews and New York City Health Inspection\n  Outcomes (2023)",
+        "url": "http://arxiv.org/abs/2510.16334v1",
+        "pub_date": "2025-10-18",
+        "summary": "Foodborne illnesses are gastrointestinal conditions caused by consuming contaminated food. Restaurants are critical venues to investigate outbreaks because they share sourcing, preparation, and distribution of foods. Public reporting of illness via formal channels is limited, whereas social media platforms host abundant user-generated content that can provide timely public health signals. This paper analyzes signals from Yelp reviews produced by a Hierarchical Sigmoid Attention Network (HSAN) classifier and compares them with official restaurant inspection outcomes issued by the New York City Department of Health and Mental Hygiene (NYC DOHMH) in 2023. We evaluate correlations at the Census tract level, compare distributions of HSAN scores by prevalence of C-graded restaurants, and map spatial patterns across NYC. We find minimal correlation between HSAN signals and inspection scores at the tract level and no significant differences by number of C-graded restaurants. We discuss implications and outline next steps toward address-level analyses.",
+        "translated": "食源性疾病是由于摄入受污染的食物所引起的胃肠道疾病。餐厅是调查疫情爆发的关键场所，因为它们在食品的采购、制备和分发方面具有共通性。通过正式渠道对疾病的公开报告有限，而社交媒体平台则承载了大量用户生成的内容，这些内容可以提供及时的公共卫生信号。本文分析了来自Yelp评论中的信号，并采用层级sigmoid注意力网络（HSAN）分类器进行处理，同时将其与纽约市卫生与心理健康部（NYC DOHMH）于2023年发布的官方餐厅检查结果进行了比较。我们在普查区层面评估相关性，按C级餐厅的分布情况比较HSAN评分的分布，并绘制纽约市范围内的空间模式。我们在普查区层面发现HSAN信号与检查评分之间的相关性极小，并且C级餐厅数量在统计上也没有显著差异。我们讨论了这些发现的含义，并概述了朝向地址级别分析的下一步工作。",
+        "translated_title": "调查Yelp评论中基于文本的食源性疾病迹象与纽约市健康检查结果之间的关联（2023）",
+        "label": [],
+        "label_reason": "论文聚焦公共卫生信号分析，与推荐系统无直接关联",
+        "relevance_score": 2,
+        "novelty_score": 5,
+        "novelty_reason": "提出HSAN分类器分析用户评论信号，方法具有一定新颖性"
     }
 ]
