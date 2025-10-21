@@ -1869,5 +1869,73 @@
         "relevance_score": 4,
         "novelty_score": 7,
         "novelty_reason": "提出三阶段训练框架和高效参数模型，在检索模型设计上有创新。"
+    },
+    {
+        "title": "ConsistEdit: Highly Consistent and Precise Training-free Visual Editing",
+        "url": "http://arxiv.org/abs/2510.17803v1",
+        "pub_date": "2025-10-20",
+        "summary": "Recent advances in training-free attention control methods have enabled flexible and efficient text-guided editing capabilities for existing generation models. However, current approaches struggle to simultaneously deliver strong editing strength while preserving consistency with the source. This limitation becomes particularly critical in multi-round and video editing, where visual errors can accumulate over time. Moreover, most existing methods enforce global consistency, which limits their ability to modify individual attributes such as texture while preserving others, thereby hindering fine-grained editing. Recently, the architectural shift from U-Net to MM-DiT has brought significant improvements in generative performance and introduced a novel mechanism for integrating text and vision modalities. These advancements pave the way for overcoming challenges that previous methods failed to resolve. Through an in-depth analysis of MM-DiT, we identify three key insights into its attention mechanisms. Building on these, we propose ConsistEdit, a novel attention control method specifically tailored for MM-DiT. ConsistEdit incorporates vision-only attention control, mask-guided pre-attention fusion, and differentiated manipulation of the query, key, and value tokens to produce consistent, prompt-aligned edits. Extensive experiments demonstrate that ConsistEdit achieves state-of-the-art performance across a wide range of image and video editing tasks, including both structure-consistent and structure-inconsistent scenarios. Unlike prior methods, it is the first approach to perform editing across all inference steps and attention layers without handcraft, significantly enhancing reliability and consistency, which enables robust multi-round and multi-region editing. Furthermore, it supports progressive adjustment of structural consistency, enabling finer control.",
+        "translated": "近年来，训练无关的注意力控制方法在文本引导的图像编辑任务中取得了显著进展，使得现有生成模型具备了灵活且高效的编辑能力。然而，当前方法在实现强大编辑能力的同时，往往难以保持与原始图像的一致性。这一局限在多轮编辑和视频编辑任务中尤为突出，因为视觉误差可能会随时间累积。此外，大多数现有方法仅强制全局一致性，限制了在保留其他属性的同时修改特定属性（如纹理）的能力，从而阻碍了细粒度的编辑。最近，从 U-Net 架构向 MM-DiT 的转变在生成性能上带来了显著提升，并引入了一种新的文本与视觉模态融合机制。这些进展为克服先前方法未能解决的挑战奠定了基础。通过对 MM-DiT 的深入分析，我们发现了其注意力机制中的三个关键见解。基于这些发现，我们提出了 ConsistEdit，一种专为 MM-DiT 量身定制的全新注意力控制方法。ConsistEdit 融合了仅视觉的注意力控制、掩膜引导的预注意力融合机制，以及对 query、key 和 value token 的差异化操作，以实现一致且与提示对齐的编辑效果。大量实验证明，ConsistEdit 在多种图像和视频编辑任务中均取得了最先进的性能，涵盖了结构一致和结构不一致的场景。与以往方法不同，这是首个无需人工设计，即可在所有推理步骤和注意力层中进行编辑的方法，显著提升了编辑的鲁棒性和一致性，从而支持多轮和多区域的编辑操作。此外，该方法还支持结构一致性的渐进式调整，实现了更精细的控制。",
+        "translated_title": "ConsistEdit: 高一致性且高精度的免训练视觉编辑",
+        "label": [],
+        "label_reason": "论文聚焦图像编辑而非像素级质量复原",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "提出新的注意力控制机制，改进视频和多轮编辑一致性"
+    },
+    {
+        "title": "Glyph: Scaling Context Windows via Visual-Text Compression",
+        "url": "http://arxiv.org/abs/2510.17800v1",
+        "pub_date": "2025-10-20",
+        "summary": "Large language models (LLMs) increasingly rely on long-context modeling for tasks such as document understanding, code analysis, and multi-step reasoning. However, scaling context windows to the million-token level brings prohibitive computational and memory costs, limiting the practicality of long-context LLMs. In this work, we take a different perspective-visual context scaling-to tackle this challenge. Instead of extending token-based sequences, we propose Glyph, a framework that renders long texts into images and processes them with vision-language models (VLMs). This approach substantially compresses textual input while preserving semantic information, and we further design an LLM-driven genetic search to identify optimal visual rendering configurations for balancing accuracy and compression. Through extensive experiments, we demonstrate that our method achieves 3-4x token compression while maintaining accuracy comparable to leading LLMs such as Qwen3-8B on various long-context benchmarks. This compression also leads to around 4x faster prefilling and decoding, and approximately 2x faster SFT training. Furthermore, under extreme compression, a 128K-context VLM could scale to handle 1M-token-level text tasks. In addition, the rendered text data benefits real-world multimodal tasks, such as document understanding. Our code and model are released at https://github.com/thu-coai/Glyph.",
+        "translated": "大语言模型（LLMs）在文档理解、代码分析和多步骤推理等任务中日益依赖于长上下文建模。然而，将上下文窗口扩展到百万级 token 的水平会带来高昂的计算和内存成本，从而限制了长上下文 LLM 的实用性。在本工作中，我们从视觉上下文扩展（visual context scaling）的角度出发，提出了一种不同的方法来应对这一挑战。我们没有扩展基于 token 的序列，而是提出了 Glyph 框架，该框架将长文本渲染为图像，并通过视觉-语言模型（VLMs）进行处理。该方法在保持语义信息的同时显著压缩了文本输入，我们进一步设计了一个由 LLM 驱动的遗传搜索算法，用于寻找在准确性和压缩率之间达到平衡的最佳视觉渲染配置。通过广泛的实验，我们证明了我们的方法在保持与 Qwen3-8B 等领先 LLM 相当的准确性的同时，实现了 3-4 倍的 token 压缩。这种压缩还带来了预填充和解码速度约 4 倍的提升，以及 SFT 训练速度大约 2 倍的提升。此外，在极端压缩的情况下，一个 128K 上下文的 VLM 可以扩展以处理百万级 token 的文本任务。另外，渲染后的文本数据也有助于现实世界中的多模态任务，例如文档理解。我们的代码和模型已发布在 https://github.com/thu-coai/Glyph。",
+        "translated_title": "Glyph: 通过视觉-文本压缩扩展上下文窗口",
+        "label": [],
+        "label_reason": "不属于low-level图像处理任务",
+        "relevance_score": 1,
+        "novelty_score": 6,
+        "novelty_reason": "提出文本压缩新方法，但非图像复原/增强"
+    },
+    {
+        "title": "UltraCUA: A Foundation Model for Computer Use Agents with Hybrid Action",
+        "url": "http://arxiv.org/abs/2510.17790v1",
+        "pub_date": "2025-10-20",
+        "summary": "Multimodal agents for computer use rely exclusively on primitive actions (click, type, scroll) that require accurate visual grounding and lengthy execution chains, leading to cascading failures and performance bottlenecks. While other agents leverage rich programmatic interfaces (APIs, MCP servers, tools), computer-use agents (CUAs) remain isolated from these capabilities. We present UltraCUA, a foundation model that bridges this gap through hybrid action -- seamlessly integrating GUI primitives with high-level programmatic tool calls. To achieve this, our approach comprises four key components: (1) an automated pipeline that scales programmatic tools from software documentation, open-source repositories, and code generation; (2) a synthetic data engine producing over 17,000 verifiable tasks spanning real-world computer-use scenarios; (3) a large-scale high-quality hybrid action trajectory collection with both low-level GUI actions and high-level programmatic tool calls; and (4) a two-stage training pipeline combining supervised fine-tuning with online reinforcement learning, enabling strategic alternation between low-level and high-level actions. Experiments with our 7B and 32B models demonstrate substantial improvements over state-of-the-art agents. On OSWorld, UltraCUA models achieve an average 22% relative improvement over base models, while being 11% faster in terms of steps. Out-of-domain evaluation on WindowsAgentArena shows our model reaches 21.7% success rate, outperforming baselines trained on Windows data. The hybrid action mechanism proves critical, reducing error propagation while maintaining execution efficiency.",
+        "translated": "当前依赖于基本操作（点击、输入、滚动）的多模态计算机使用代理存在视觉定位精度要求高和操作链条长的问题，导致级联失效和性能瓶颈。虽然其他代理能够利用丰富的编程接口（APIs、MCP 服务器、工具），但计算机使用代理（CUAs）仍未具备这些能力。我们提出了 UltraCUA，这是一种通过混合操作弥合这一差距的基础模型——无缝整合 GUI 原语与高层编程工具调用。为此，我们的方法包含四个关键组件：(1) 一个自动化流程，通过软件文档、开源仓库和代码生成扩展编程工具；(2) 一个合成数据引擎，生成超过 17,000 个可验证任务，覆盖现实中的计算机使用场景；(3) 一个大规模高质量的混合操作轨迹集，包含低层 GUI 操作和高层编程工具调用；以及 (4) 一个结合监督微调和在线强化学习的两阶段训练流程，支持低层与高层操作之间的策略切换。在我们的 7B 和 32B 模型上进行的实验表明，UltraCUA 显著优于最先进的代理。在 OSWorld 上，UltraCUA 模型平均比基线模型提升 22%，同时在操作步数上快 11%。在 WindowsAgentArena 上的跨领域评估中，我们的模型达到了 21.7% 的成功率，优于基于 Windows 数据训练的基线模型。混合操作机制被证明是关键，既减少了错误传播，又保持了执行效率。",
+        "translated_title": "UltraCUA：一种具有混合动作能力的计算机使用代理基础模型",
+        "label": [],
+        "label_reason": "论文聚焦计算机代理任务，非图像像素级处理",
+        "relevance_score": 1,
+        "novelty_score": 6,
+        "novelty_reason": "提出混合动作机制并构建任务数据，有一定创新"
+    },
+    {
+        "title": "Botany-Bot: Digital Twin Monitoring of Occluded and Underleaf Plant\n  Structures with Gaussian Splats",
+        "url": "http://arxiv.org/abs/2510.17783v1",
+        "pub_date": "2025-10-20",
+        "summary": "Commercial plant phenotyping systems using fixed cameras cannot perceive many plant details due to leaf occlusion. In this paper, we present Botany-Bot, a system for building detailed \"annotated digital twins\" of living plants using two stereo cameras, a digital turntable inside a lightbox, an industrial robot arm, and 3D segmentated Gaussian Splat models. We also present robot algorithms for manipulating leaves to take high-resolution indexable images of occluded details such as stem buds and the underside/topside of leaves. Results from experiments suggest that Botany-Bot can segment leaves with 90.8% accuracy, detect leaves with 86.2% accuracy, lift/push leaves with 77.9% accuracy, and take detailed overside/underside images with 77.3% accuracy. Code, videos, and datasets are available at https://berkeleyautomation.github.io/Botany-Bot/.",
+        "translated": "商业植物表型分析系统使用固定摄像头难以因叶片遮挡而感知许多植物细节。在本文中，我们提出了 Botany-Bot，这是一个系统，使用两个立体摄像头、一个位于灯光箱中的数字转盘、一个工业机械臂和 3D 分割的 Gaussian Splat 模型，以构建植物的详细“带注释的数字孪生”。我们还提出了用于操控叶片的机器人算法，以获取遮挡细节（如茎芽、叶片上表面和下表面）的高分辨率可检索图像。实验结果表明，Botany-Bot 能够以 90.8% 的精度分割叶片，86.2% 的精度检测叶片，77.9% 的精度提起/压下叶片，并以 77.3% 的精度获取详细的上表面/下表面图像。代码、视频和数据集可在 https://berkeleyautomation.github.io/Botany-Bot/ 获取。",
+        "translated_title": "Botany-Bot: 使用高斯点进行遮挡和叶下植物结构的数字孪生监测",
+        "label": [
+            "图像分割",
+            "遥感图像复原"
+        ],
+        "label_reason": "涉及植物遮挡结构的3D分割与高分辨率图像采集，与low-level图像处理相关",
+        "relevance_score": 6,
+        "novelty_score": 7,
+        "novelty_reason": "提出结合机械臂与Gaussian Splat模型的创新系统，用于植物数字孪生建模"
+    },
+    {
+        "title": "SparseVILA: Decoupling Visual Sparsity for Efficient VLM Inference",
+        "url": "http://arxiv.org/abs/2510.17777v1",
+        "pub_date": "2025-10-20",
+        "summary": "Vision Language Models (VLMs) have rapidly advanced in integrating visual and textual reasoning, powering applications across high-resolution image understanding, long-video analysis, and multi-turn conversation. However, their scalability remains limited by the growing number of visual tokens that dominate inference latency. We present SparseVILA, a new paradigm for efficient VLM inference that decouples visual sparsity across the prefilling and decoding stages. SparseVILA distributes sparsity across stages by pruning redundant visual tokens during prefill and retrieving only query-relevant tokens during decoding. This decoupled design matches leading prefill pruning methods while preserving multi-turn fidelity by retaining most of the visual cache so that query-aware tokens can be retrieved at each conversation round. Built on an AWQ-optimized inference pipeline, SparseVILA achieves up to 4.0 times faster prefilling, 2.5 times faster decoding, and an overall 2.6 times end-to-end speedup on long-context video tasks -- while improving accuracy on document-understanding and reasoning tasks. By decoupling query-agnostic pruning and query-aware retrieval, SparseVILA establishes a new direction for efficient multimodal inference, offering a training-free, architecture-agnostic framework for accelerating large VLMs without sacrificing capability.",
+        "translated": "视觉语言模型（VLMs）在整合视觉与文本推理方面取得了快速进展，并推动了高分辨率图像理解、长视频分析和多轮对话等应用的发展。然而，其可扩展性受到日益增长的视觉token数量的限制，这些token在推理延迟中占据主导地位。我们提出了SparseVILA，这是一种新的高效VLM推理范式，通过在预填充（prefilling）和解码（decoding）阶段解耦视觉稀疏性，提高推理效率。SparseVILA在预填充阶段通过剪枝冗余的视觉token实现稀疏性，而在解码阶段仅检索与查询相关的token，从而将稀疏性分布在不同阶段。该解耦设计在保持多轮对话保真度的同时，与领先的预填充剪枝方法相匹配，通过保留大部分视觉缓存以在每一轮对话中检索查询感知的token。基于AWQ优化的推理管道，SparseVILA在长上下文视频任务中实现了最高4.0倍的预填充加速、2.5倍的解码加速以及整体2.6倍的端到端加速，同时在文档理解和推理任务中提升了准确性。通过将查询无关的剪枝与查询感知的检索解耦，SparseVILA为高效多模态推理开辟了新的方向，提供了一种无需训练、且适用于任意架构的框架，可在不牺牲模型能力的前提下加速大规模VLMs。",
+        "translated_title": "SparseVILA：解耦视觉稀疏性以实现高效的视觉语言模型推理",
+        "label": [],
+        "label_reason": "论文聚焦于视觉语言模型推理效率，不涉及像素级图像质量恢复或增强。",
+        "relevance_score": 1,
+        "novelty_score": 7,
+        "novelty_reason": "提出了一种新的推理范式，通过解耦视觉稀疏性提高效率。"
     }
 ]
