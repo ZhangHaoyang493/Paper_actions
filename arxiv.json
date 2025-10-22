@@ -2445,5 +2445,133 @@
         "relevance_score": 5,
         "novelty_score": 7,
         "novelty_reason": "提出IC-MoE模型和语义引导对比学习方法，具有显著改进"
+    },
+    {
+        "title": "LLMs as Sparse Retrievers:A Framework for First-Stage Product Search",
+        "url": "http://arxiv.org/abs/2510.18527v1",
+        "pub_date": "2025-10-21",
+        "summary": "Product search is a crucial component of modern e-commerce platforms, with billions of user queries every day. In product search systems, first-stage retrieval should achieve high recall while ensuring efficient online deployment. Sparse retrieval is particularly attractive in this context due to its interpretability and storage efficiency. However, sparse retrieval methods suffer from severe vocabulary mismatch issues, leading to suboptimal performance in product search scenarios.With their potential for semantic analysis, large language models (LLMs) offer a promising avenue for mitigating vocabulary mismatch issues and thereby improving retrieval quality. Directly applying LLMs to sparse retrieval in product search exposes two key challenges:(1)Queries and product titles are typically short and highly susceptible to LLM-induced hallucinations, such as generating irrelevant expansion terms or underweighting critical literal terms like brand names and model numbers;(2)The large vocabulary space of LLMs leads to difficulty in initializing training effectively, making it challenging to learn meaningful sparse representations in such ultra-high-dimensional spaces.To address these challenges, we propose PROSPER, a framework for PROduct search leveraging LLMs as SParsE Retrievers. PROSPER incorporates: (1)A literal residual network that alleviates hallucination in lexical expansion by reinforcing underweighted literal terms through a residual compensation mechanism; and (2)A lexical focusing window that facilitates effective training initialization via a coarse-to-fine sparsification strategy.Extensive offline and online experiments show that PROSPER significantly outperforms sparse baselines and achieves recall performance comparable to advanced dense retrievers, while also achieving revenue increments online.",
+        "translated": "产品搜索是现代电子商务平台的关键组成部分，每天处理数十亿用户查询。在产品搜索系统中，第一阶段的召回应在保证高效在线部署的前提下实现高召回率。稀疏召回由于其可解释性和存储效率，在这种场景下尤为具有吸引力。然而，稀疏召回方法在产品搜索场景中会受到严重的词汇不匹配问题，导致性能欠佳。大语言模型（LLMs）由于其在语义分析方面的潜力，为缓解词汇不匹配问题并从而提升召回质量提供了有前景的途径。然而，将LLMs直接应用于产品搜索中的稀疏召回会面临两个关键挑战：(1) 查询和产品标题通常较短，极易受到LLM引发的幻觉影响，例如生成不相关的扩展词汇或低估关键的字面词汇，如品牌名称和型号数字；(2) LLM的庞大词汇空间使得训练初始化变得困难，从而难以在这样的超高维空间中学习到有意义的稀疏表示。\n\n为解决这些挑战，我们提出了PROSPER，一种利用大语言模型作为稀疏召回器的产品搜索框架。PROSPER包含以下两个组成部分：(1) 一个字面残差网络，通过残差补偿机制强化被低估的字面词汇，从而减轻词汇扩展中的幻觉问题；(2) 一个词汇聚焦窗口，通过从粗到细的稀疏化策略促进有效的训练初始化。广泛的离线和在线实验表明，PROSPER显著优于稀疏基线方法，在召回性能上可与先进的密集召回器相媲美，同时在在线环境中也实现了收入增长。",
+        "translated_title": "LLMs 作为稀疏检索器：一个用于第一阶段商品搜索的框架",
+        "label": [
+            "召回（Recall）",
+            "LLM生成式推荐（LLM-based Generative Recommendation）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "论文聚焦于基于LLM的召回框架PROSPER，改进稀疏检索在电商产品搜索中的表现。",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出结合LLM与稀疏检索的新框架，解决词汇不匹配与幻觉问题，具有实用创新性。"
+    },
+    {
+        "title": "ImageGem: In-the-wild Generative Image Interaction Dataset for\n  Generative Model Personalization",
+        "url": "http://arxiv.org/abs/2510.18433v1",
+        "pub_date": "2025-10-21",
+        "summary": "We introduce ImageGem, a dataset for studying generative models that understand fine-grained individual preferences. We posit that a key challenge hindering the development of such a generative model is the lack of in-the-wild and fine-grained user preference annotations. Our dataset features real-world interaction data from 57K users, who collectively have built 242K customized LoRAs, written 3M text prompts, and created 5M generated images. With user preference annotations from our dataset, we were able to train better preference alignment models. In addition, leveraging individual user preference, we investigated the performance of retrieval models and a vision-language model on personalized image retrieval and generative model recommendation. Finally, we propose an end-to-end framework for editing customized diffusion models in a latent weight space to align with individual user preferences. Our results demonstrate that the ImageGem dataset enables, for the first time, a new paradigm for generative model personalization.",
+        "translated": "我们引入 ImageGem 数据集，用于研究能够理解细粒度个性化偏好的生成式模型。我们认为，阻碍此类生成式模型发展的关键挑战之一是缺乏真实场景下的细粒度用户偏好标注。我们的数据集包含了 57K 个用户的真实交互数据，这些用户共同构建了 242K 个定制化的 LoRA 模型，撰写了 3M 条文本提示，并生成了 5M 张图像。借助数据集中提供的用户偏好标注，我们训练出了更优的偏好对齐模型。此外，基于个体用户偏好，我们研究了检索模型和视觉-语言模型在个性化图像检索和生成式模型推荐方面的性能。最后，我们提出了一种端到端的框架，用于在潜在权重空间中编辑定制化的扩散模型，以对齐个体用户偏好。我们的结果表明，ImageGem 数据集首次实现了一种生成式模型个性化的全新范式。",
+        "translated_title": "ImageGem：用于生成模型个性化的野外生成图像交互数据集",
+        "label": [
+            "LLM生成式推荐",
+            "个性化推荐"
+        ],
+        "label_reason": "论文涉及生成式模型个性化与推荐，与生成式推荐系统相关",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "提出新数据集和端到端框架，推动个性化生成模型发展"
+    },
+    {
+        "title": "Censorship Chokepoints: New Battlegrounds for Regional Surveillance,\n  Censorship and Influence on the Internet",
+        "url": "http://arxiv.org/abs/2510.18394v1",
+        "pub_date": "2025-10-21",
+        "summary": "Undoubtedly, the Internet has become one of the most important conduits to information for the general public. Nonetheless, Internet access can be and has been limited systematically or blocked completely during political events in numerous countries and regions by various censorship mechanisms. Depending on where the core filtering component is situated, censorship techniques have been classified as client-based, server-based, or network-based. However, as the Internet evolves rapidly, new and sophisticated censorship techniques have emerged, which involve techniques that cut across locations and involve new forms of hurdles to information access. We argue that modern censorship can be better understood through a new lens that we term chokepoints, which identifies bottlenecks in the content production or delivery cycle where efficient new forms of large-scale client-side surveillance and filtering mechanisms have emerged.",
+        "translated": "毫无疑问，互联网已成为普通公众获取信息最重要的渠道之一。然而，在许多国家和地区，特别是在政治事件期间，互联网的访问权限可能被系统性地限制或完全封锁，这涉及各种审查机制。根据核心过滤组件的位置，审查技术被分为基于客户端、基于服务器或基于网络的类型。然而，随着互联网的快速发展，新的、复杂的审查技术不断涌现，这些技术突破了地理位置的限制，并引入了新型的信息获取障碍。我们认为，通过一个我们称之为“瓶颈点”的新视角，可以更好地理解现代审查机制，该视角识别内容生产或分发周期中的关键瓶颈，在这些瓶颈处已出现了高效的大规模客户端监控和过滤机制。",
+        "translated_title": "审查瓶颈：互联网区域监控、审查与影响的新战场",
+        "label": [],
+        "label_reason": "论文聚焦网络审查，与推荐系统无直接关联。",
+        "relevance_score": 1,
+        "novelty_score": 3,
+        "novelty_reason": "提出新概念‘chokepoints’，但属于社会技术分析，创新性有限。"
+    },
+    {
+        "title": "Evaluating LLM-Based Mobile App Recommendations: An Empirical Study",
+        "url": "http://arxiv.org/abs/2510.18364v1",
+        "pub_date": "2025-10-21",
+        "summary": "Large Language Models (LLMs) are increasingly used to recommend mobile applications through natural language prompts, offering a flexible alternative to keyword-based app store search. Yet, the reasoning behind these recommendations remains opaque, raising questions about their consistency, explainability, and alignment with traditional App Store Optimization (ASO) metrics. In this paper, we present an empirical analysis of how widely-used general purpose LLMs generate, justify, and rank mobile app recommendations. Our contributions are: (i) a taxonomy of 16 generalizable ranking criteria elicited from LLM outputs; (ii) a systematic evaluation framework to analyse recommendation consistency and responsiveness to explicit ranking instructions; and (iii) a replication package to support reproducibility and future research on AI-based recommendation systems. Our findings reveal that LLMs rely on a broad yet fragmented set of ranking criteria, only partially aligned with standard ASO metrics. While top-ranked apps tend to be consistent across runs, variability increases with ranking depth and search specificity. LLMs exhibit varying sensitivity to explicit ranking instructions - ranging from substantial adaptations to near-identical outputs - highlighting their complex reasoning dynamics in conversational app discovery. Our results aim to support end-users, app developers, and recommender-systems researchers in navigating the emerging landscape of conversational app discovery.",
+        "translated": "大语言模型（LLMs）正被越来越多地用于通过自然语言提示推荐移动应用，为传统的基于关键词的商店搜索提供了一种灵活的替代方式。然而，这些推荐背后的推理过程仍然不透明，引发了关于其一致性、可解释性以及与传统应用商店优化（App Store Optimization, ASO）指标对齐程度的疑问。在本文中，我们对广泛使用的通用大语言模型如何生成、证明和排序移动应用推荐进行了实证分析。我们的贡献包括：(i) 从LLM输出中提取出的16种通用排序标准的分类法；(ii) 一个系统性的评估框架，用于分析推荐的一致性以及对显式排序指令的响应能力；以及(iii) 一个复现包，以支持基于人工智能的推荐系统的可复现性和未来研究。我们的研究结果表明，LLM依赖于一个广泛但碎片化的排序标准集合，这些标准仅部分与标准的ASO指标对齐。尽管排名靠前的应用在不同运行中往往具有一致性，但随着排序深度和搜索特定性的增加，变异性也随之上升。LLM对显式排序指令的敏感性各不相同——从显著的适应到几乎完全相同的输出——突显了它们在对话式应用发现中的复杂推理动态。我们的研究结果旨在帮助终端用户、应用开发者和推荐系统研究人员在新兴的对话式应用发现领域中更好地导航。",
+        "translated_title": "基于大语言模型的移动应用推荐评估：一项实证研究",
+        "label": [
+            "LLM生成式推荐",
+            "推荐系统评估"
+        ],
+        "label_reason": "论文研究LLM生成移动应用推荐并评估其一致性，与推荐系统生成及评估相关。",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出LLM推荐的评估框架与排名标准，具有一定新颖性。"
+    },
+    {
+        "title": "KrishokBondhu: A Retrieval-Augmented Voice-Based Agricultural Advisory\n  Call Center for Bengali Farmers",
+        "url": "http://arxiv.org/abs/2510.18355v1",
+        "pub_date": "2025-10-21",
+        "summary": "In Bangladesh, many farmers continue to face challenges in accessing timely, expert-level agricultural guidance. This paper presents KrishokBondhu, a voice-enabled, call-centre-integrated advisory platform built on a Retrieval-Augmented Generation (RAG) framework, designed specifically for Bengali-speaking farmers. The system aggregates authoritative agricultural handbooks, extension manuals, and NGO publications; applies Optical Character Recognition (OCR) and document-parsing pipelines to digitize and structure the content; and indexes this corpus in a vector database for efficient semantic retrieval. Through a simple phone-based interface, farmers can call the system to receive real-time, context-aware advice: speech-to-text converts the Bengali query, the RAG module retrieves relevant content, a large language model (Gemma 3-4B) generates a context-grounded response, and text-to-speech delivers the answer in natural spoken Bengali. In a pilot evaluation, KrishokBondhu produced high-quality responses for 72.7% of diverse agricultural queries covering crop management, disease control, and cultivation practices. Compared to the KisanQRS benchmark, the system achieved a composite score of 4.53 (vs. 3.13) on a 5-point scale, a 44.7% improvement, with especially large gains in contextual richness (+367%) and completeness (+100.4%), while maintaining comparable relevance and technical specificity. Semantic similarity analysis further revealed a strong correlation between retrieved context and answer quality, emphasizing the importance of grounding generative responses in curated documentation. KrishokBondhu demonstrates the feasibility of integrating call-centre accessibility, multilingual voice interaction, and modern RAG techniques to deliver expert-level agricultural guidance to remote Bangladeshi farmers, paving the way toward a fully AI-driven agricultural advisory ecosystem.",
+        "translated": "在孟加拉国，许多农民仍面临难以及时获得专家级农业指导的挑战。本文提出 KrishokBondhu，一个基于检索增强生成（RAG）框架的语音交互、呼叫中心集成的咨询平台，专门为讲孟加拉语的农民设计。该系统汇集了权威的农业手册、推广手册和非政府组织（NGO）出版物；应用光学字符识别（OCR）和文档解析流水线对内容进行数字化和结构化处理；并将该文档集索引至向量数据库中，以实现高效的语义召回。通过一个简单的基于电话的交互界面，农民可以拨打电话，实时获得情境感知的建议：语音转文本将孟加拉语的查询转换为文本，RAG 模块召回相关内容，一个大语言模型（Gemma 3-4B）生成基于上下文的响应，文本转语音则以自然的孟加拉语语音形式输出答案。在试点评估中，KrishokBondhu 对 72.7% 的多样化农业查询（涵盖作物管理、病虫害防治和栽培实践）提供了高质量的回复。与 KisanQRS 基准系统相比，该系统在 5 分制评分体系下获得了 4.53（对比 3.13）的综合得分，提升了 44.7%，尤其是在上下文丰富性（+367%）和完整性（+100.4%）方面表现出显著优势，同时保持了相当的相关性和技术准确性。语义相似性分析进一步揭示了召回上下文与答案质量之间的强相关性，强调了将生成式回复基于精心整理的文档的重要性。KrishokBondhu 证明了将呼叫中心的可访问性、多语言语音交互和现代 RAG 技术相结合，为偏远地区的孟加拉国农民提供专家级农业指导的可行性，为构建一个完全由人工智能驱动的农业咨询服务生态系统铺平了道路。",
+        "translated_title": "KrishokBondhu：一个基于检索增强的语音农业咨询服务热线，面向孟加拉语农民",
+        "label": [
+            "LLM生成式推荐",
+            "多模态推荐"
+        ],
+        "label_reason": "使用RAG和语音交互生成农业建议，间接涉及生成式推荐和多模态交互。",
+        "relevance_score": 5,
+        "novelty_score": 7,
+        "novelty_reason": "将RAG与语音系统结合用于农业咨询，具有实际创新性和跨领域整合能力。"
+    },
+    {
+        "title": "Enhancing Hotel Recommendations with AI: LLM-Based Review Summarization\n  and Query-Driven Insights",
+        "url": "http://arxiv.org/abs/2510.18277v1",
+        "pub_date": "2025-10-21",
+        "summary": "The increasing number of data a booking platform such as Booking.com and AirBnB offers make it challenging for interested parties to browse through the available accommodations and analyze reviews in an efficient way. Efforts have been made from the booking platform providers to utilize recommender systems in an effort to enable the user to filter the results by factors such as stars, amenities, cost but most valuable insights can be provided by the unstructured text-based reviews. Going through these reviews one-by-one requires a substantial amount of time to be devoted while a respectable percentage of the reviews won't provide to the user what they are actually looking for.   This research publication explores how Large Language Models (LLMs) can enhance short rental apartments recommendations by summarizing and mining key insights from user reviews. The web application presented in this paper, named \"instaGuide\", automates the procedure of isolating the text-based user reviews from a property on the Booking.com platform, synthesizing the summary of the reviews, and enabling the user to query specific aspects of the property in an effort to gain feedback on their personal questions/criteria.   During the development of the instaGuide tool, numerous LLM models were evaluated based on accuracy, cost, and response quality. The results suggest that the LLM-powered summarization reduces significantly the amount of time the users need to devote on their search for the right short rental apartment, improving the overall decision-making procedure.",
+        "translated": "随着 Booking.com 和 Airbnb 等预订平台提供的数据量不断增加，使利益相关者以高效的方式浏览可用住宿和分析评论变得具有挑战性。为了使用户能够根据星级、设施、价格等因素过滤结果，平台提供商已尝试采用推荐系统，但最有价值的见解往往来自非结构化的文本评论。逐条阅读这些评论需要用户投入大量时间，且相当一部分评论并不能提供用户真正关心的信息。本文研究探讨了大语言模型（LLM）如何通过总结和挖掘用户评论中的关键信息，提升短租公寓的推荐效果。本文提出了一款名为“instaGuide”的网络应用程序，该应用能够自动化地从 Booking.com 平台上提取某房产的基于文本的用户评论，生成评论摘要，并允许用户查询该房产的具体方面，以获取针对其个人问题或标准的反馈。在 instaGuide 工具的开发过程中，评估了多种 LLM 模型的准确性、成本和响应质量。结果表明，基于 LLM 的摘要显著减少了用户寻找合适的短租公寓所需的时间，从而提升了整体决策过程的效率。",
+        "translated_title": "利用人工智能提升酒店推荐：基于大语言模型的评论摘要与查询驱动的洞察",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "利用LLM进行酒店评论摘要生成，增强推荐系统的实用性。",
+        "relevance_score": 7,
+        "novelty_score": 6,
+        "novelty_reason": "提出基于LLM的评论摘要方法，但未显著突破现有推荐范式。"
+    },
+    {
+        "title": "LIME: Link-based user-item Interaction Modeling with decoupled xor\n  attention for Efficient test time scaling",
+        "url": "http://arxiv.org/abs/2510.18239v1",
+        "pub_date": "2025-10-21",
+        "summary": "Scaling large recommendation systems requires advancing three major frontiers: processing longer user histories, expanding candidate sets, and increasing model capacity. While promising, transformers' computational cost scales quadratically with the user sequence length and linearly with the number of candidates. This trade-off makes it prohibitively expensive to expand candidate sets or increase sequence length at inference, despite the significant performance improvements.   We introduce \\textbf{LIME}, a novel architecture that resolves this trade-off. Through two key innovations, LIME fundamentally reduces computational complexity. First, low-rank ``link embeddings\" enable pre-computation of attention weights by decoupling user and candidate interactions, making the inference cost nearly independent of candidate set size. Second, a linear attention mechanism, \\textbf{LIME-XOR}, reduces the complexity with respect to user sequence length from quadratic ($O(N^2)$) to linear ($O(N)$).   Experiments on public and industrial datasets show LIME achieves near-parity with state-of-the-art transformers but with a 10$\\times$ inference speedup on large candidate sets or long sequence lengths. When tested on a major recommendation platform, LIME improved user engagement while maintaining minimal inference costs with respect to candidate set size and user history length, establishing a new paradigm for efficient and expressive recommendation systems.",
+        "translated": "扩展大规模推荐系统需要推进三个主要方向：处理更长的用户历史、扩大候选集规模以及提升模型容量。虽然Transformer在这些方面表现出潜力，但其计算成本随着用户序列长度呈平方级增长，随着候选数量呈线性增长。这种权衡使得在推理阶段扩展候选集或增加序列长度的成本变得非常高，即便其在性能上有显著提升。我们提出了一种新颖的架构 **LIME**，来解决这一权衡问题。通过两个关键创新，LIME从根本上降低了计算复杂度。首先，低秩的“链接嵌入”（link embeddings）通过解耦用户与候选之间的交互，使得注意力权重可以预先计算，从而使推理成本几乎不再依赖于候选集的规模。其次，线性注意力机制 **LIME-XOR** 将与用户序列长度相关的复杂度从平方级（$O(N^2)$）降低到线性级（$O(N)$）。我们在公开和工业数据集上的实验表明，LIME在性能上接近最先进的Transformer模型，但在处理大规模候选集或长序列时，推理速度提升了10倍。在主流推荐平台上的测试结果表明，LIME在保持候选集规模和用户历史长度的最小推理成本的同时，显著提升了用户参与度，从而为高效且表达能力强的推荐系统建立了一种新的范式。",
+        "translated_title": "LIME：基于链接的用户-物料交互建模与解耦异或注意力，用于高效的在线测试扩展",
+        "label": [
+            "精排（Ranking）",
+            "序列推荐（Sequential Recommendation）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "论文聚焦推荐系统的高效序列建模与大规模候选集处理",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出解耦注意力与线性机制，显著降低推理复杂度"
+    },
+    {
+        "title": "From AutoRecSys to AutoRecLab: A Call to Build, Evaluate, and Govern\n  Autonomous Recommender-Systems Research Labs",
+        "url": "http://arxiv.org/abs/2510.18104v1",
+        "pub_date": "2025-10-20",
+        "summary": "Recommender-systems research has accelerated model and evaluation advances, yet largely neglects automating the research process itself. We argue for a shift from narrow AutoRecSys tools -- focused on algorithm selection and hyper-parameter tuning -- to an Autonomous Recommender-Systems Research Lab (AutoRecLab) that integrates end-to-end automation: problem ideation, literature analysis, experimental design and execution, result interpretation, manuscript drafting, and provenance logging. Drawing on recent progress in automated science (e.g., multi-agent AI Scientist and AI Co-Scientist systems), we outline an agenda for the RecSys community: (1) build open AutoRecLab prototypes that combine LLM-driven ideation and reporting with automated experimentation; (2) establish benchmarks and competitions that evaluate agents on producing reproducible RecSys findings with minimal human input; (3) create review venues for transparently AI-generated submissions; (4) define standards for attribution and reproducibility via detailed research logs and metadata; and (5) foster interdisciplinary dialogue on ethics, governance, privacy, and fairness in autonomous research. Advancing this agenda can increase research throughput, surface non-obvious insights, and position RecSys to contribute to emerging Artificial Research Intelligence. We conclude with a call to organise a community retreat to coordinate next steps and co-author guidance for the responsible integration of automated research systems.",
+        "translated": "推荐系统研究推动了模型和评估方法的进步，但很大程度上忽视了研究过程本身的自动化。我们主张从狭义的 AutoRecSys 工具（专注于算法选择和超参数调优）转向一个自主的推荐系统研究实验室（Autonomous Recommender-Systems Research Lab，AutoRecLab），该实验室集成端到端的自动化：问题构思、文献分析、实验设计与执行、结果解释、论文撰写以及溯源日志记录。借鉴自动化科学领域的最新进展（例如多智能体 AI 科学家和 AI 协同科学家系统），我们为推荐系统社区提出一个研究议程：（1）构建开源的 AutoRecLab 原型，将大语言模型驱动的构思与报告撰写与自动实验相结合；（2）建立基准测试和竞赛，评估智能体在最小人工输入下生成可复现推荐系统发现的能力；（3）创建透明的、针对 AI 生成论文的审阅渠道；（4）通过详细的研究日志和元数据定义归属和可复现性的标准；以及（5）促进关于自主研究中伦理、治理、隐私和公平性的跨学科对话。推动这一议程可以提升研究效率，揭示非显而易见的洞见，并使推荐系统在新兴的人工智能研究智能（Artificial Research Intelligence）中发挥重要作用。最后，我们呼吁组织一次社区退思会，以协调下一步工作，并共同撰写关于自动研究系统负责任整合的指导文件。",
+        "translated_title": "从 AutoRecSys 到 AutoRecLab：呼吁构建、评估与治理自主推荐系统研究实验室",
+        "label": [
+            "推荐系统评估",
+            "通用推荐技术",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "论文提出自动化推荐系统研究实验室框架，涉及生成、评估与治理，与推荐系统紧密相关。",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出将LLM与自动化科学结合的新研究范式，具有一定的创新性和前瞻性。"
     }
 ]
