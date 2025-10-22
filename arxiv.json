@@ -2573,5 +2573,282 @@
         "relevance_score": 8,
         "novelty_score": 7,
         "novelty_reason": "提出将LLM与自动化科学结合的新研究范式，具有一定的创新性和前瞻性。"
+    },
+    {
+        "title": "Grasp Any Region: Towards Precise, Contextual Pixel Understanding for\n  Multimodal LLMs",
+        "url": "http://arxiv.org/abs/2510.18876v1",
+        "pub_date": "2025-10-21",
+        "summary": "While Multimodal Large Language Models (MLLMs) excel at holistic understanding, they struggle in capturing the dense world with complex scenes, requiring fine-grained analysis of intricate details and object inter-relationships. Region-level MLLMs have been a promising step. However, previous attempts are generally optimized to understand given regions in isolation, neglecting crucial global contexts. To address this, we introduce Grasp Any Region (GAR) for comprehen- sive region-level visual understanding. Empowered by an effective RoI-aligned feature replay technique, GAR supports (1) precise perception by leveraging necessary global contexts, and (2) modeling interactions between multiple prompts. Together, it then naturally achieves (3) advanced compositional reasoning to answer specific free-form questions about any region, shifting the paradigm from passive description to active dialogue. Moreover, we construct GAR-Bench, which not only provides a more accurate evaluation of single-region comprehension, but also, more importantly, measures interactions and complex reasoning across multiple regions. Extensive experiments have demonstrated that GAR-1B not only maintains the state-of-the-art captioning capabilities, e.g., outperforming DAM-3B +4.5 on DLC-Bench, but also excels at modeling relationships between multiple prompts with advanced comprehension capabilities, even surpassing InternVL3-78B on GAR-Bench-VQA. More importantly, our zero-shot GAR-8B even outperforms in-domain VideoRefer-7B on VideoRefer-BenchQ, indicating its strong capabilities can be easily transferred to videos.",
+        "translated": "虽然多模态大语言模型（MLLMs）在整体理解方面表现出色，但它们在捕捉具有复杂场景的密集世界方面仍面临挑战，需要对细节和物体之间的关系进行细致分析。区域级别的 MLLMs 提供了一个有前景的方向。然而，以往的尝试通常仅优化了对给定区域的独立理解，忽略了关键的全局上下文。为了解决这一问题，我们提出了 Grasp Any Region（GAR），旨在实现全面的区域级视觉理解。借助有效的 RoI 对齐特征重放技术，GAR 支持（1）通过利用必要的全局上下文实现精确感知，以及（2）对多个提示之间的交互进行建模。结合这两方面的能力，GAR 自然地实现了（3）高级的组合推理能力，以回答关于任意区域的特定自由形式问题，从而将范式从被动描述转变为主动对话。此外，我们构建了 GAR-Bench，它不仅能够更准确地评估单区域理解能力，更重要的是，可以衡量多个区域之间的交互与复杂推理。大量实验表明，GAR-1B 不仅保持了最先进的图像描述能力，例如在 DLC-Bench 上优于 DAM-3B +4.5，而且在具有高级理解能力的多提示关系建模方面表现出色，甚至在 GAR-Bench-VQA 上超越了 InternVL3-78B。更重要的是，我们零样本的 GAR-8B 在 VideoRefer-BenchQ 上的表现甚至优于领域内的 VideoRefer-7B，表明其强大能力可以轻松迁移到视频中。",
+        "translated_title": "Grasp Any Region: Towards Precise, Contextual Pixel Understanding for Multimodal LLMs\n\n抓住任意区域：面向精确、上下文感知像素理解的多模态大语言模型",
+        "label": [],
+        "label_reason": "论文关注区域级视觉理解，偏向high-level任务。",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "提出新的区域级交互建模方法，但属于常规改进。"
+    },
+    {
+        "title": "DSI-Bench: A Benchmark for Dynamic Spatial Intelligence",
+        "url": "http://arxiv.org/abs/2510.18873v1",
+        "pub_date": "2025-10-21",
+        "summary": "Reasoning about dynamic spatial relationships is essential, as both observers and objects often move simultaneously. Although vision-language models (VLMs) and visual expertise models excel in 2D tasks and static scenarios, their ability to fully understand dynamic 3D scenarios remains limited. We introduce Dynamic Spatial Intelligence and propose DSI-Bench, a benchmark with nearly 1,000 dynamic videos and over 1,700 manually annotated questions covering nine decoupled motion patterns of observers and objects. Spatially and temporally symmetric designs reduce biases and enable systematic evaluation of models' reasoning about self-motion and object motion. Our evaluation of 14 VLMs and expert models reveals key limitations: models often conflate observer and object motion, exhibit semantic biases, and fail to accurately infer relative relationships in dynamic scenarios. Our DSI-Bench provides valuable findings and insights about the future development of general and expertise models with dynamic spatial intelligence.",
+        "translated": "动态空域关系的推理至关重要，因为观察者和物体通常会同时运动。尽管视觉-语言模型（VLMs）和视觉专家模型在二维任务和静态场景中表现出色，但它们在全面理解动态三维场景方面的能力仍然有限。我们引入了动态空域智能（Dynamic Spatial Intelligence），并提出了DSI-Bench，这是一个包含近1,000个动态视频和1,700多个手动标注问题的基准测试集，涵盖了观察者与物体之间九种解耦的运动模式。时空对称的设计减少了偏见，并能够系统评估模型对自运动和物体运动的推理能力。我们对14个VLMs和专家模型的评估揭示了关键的局限性：模型常常将观察者运动与物体运动混淆，表现出语义偏见，并且在动态场景中无法准确推断相对关系。我们的DSI-Bench为具备动态空域智能的一般模型和专家模型的未来发展提供了有价值的发现与洞见。",
+        "translated_title": "DSI-Bench：动态空间智能基准",
+        "label": [],
+        "label_reason": "论文关注动态空间推理，属于high-level视觉任务，不涉及像素级图像恢复或增强。",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "提出了新的动态空间智能基准DSI-Bench，但方法上无本质性的low-level图像处理创新。"
+    },
+    {
+        "title": "LightMem: Lightweight and Efficient Memory-Augmented Generation",
+        "url": "http://arxiv.org/abs/2510.18866v1",
+        "pub_date": "2025-10-21",
+        "summary": "Despite their remarkable capabilities, Large Language Models (LLMs) struggle to effectively leverage historical interaction information in dynamic and complex environments. Memory systems enable LLMs to move beyond stateless interactions by introducing persistent information storage, retrieval, and utilization mechanisms. However, existing memory systems often introduce substantial time and computational overhead. To this end, we introduce a new memory system called LightMem, which strikes a balance between the performance and efficiency of memory systems. Inspired by the Atkinson-Shiffrin model of human memory, LightMem organizes memory into three complementary stages. First, cognition-inspired sensory memory rapidly filters irrelevant information through lightweight compression and groups information according to their topics. Next, topic-aware short-term memory consolidates these topic-based groups, organizing and summarizing content for more structured access. Finally, long-term memory with sleep-time update employs an offline procedure that decouples consolidation from online inference. Experiments on LongMemEval with GPT and Qwen backbones show that LightMem outperforms strong baselines in accuracy (up to 10.9% gains) while reducing token usage by up to 117x, API calls by up to 159x, and runtime by over 12x. The code is available at https://github.com/zjunlp/LightMem.",
+        "translated": "尽管大型语言模型（LLMs）具备显著的能力，但它们在动态且复杂的环境中难以有效利用历史交互信息。记忆系统通过引入持续的信息存储、检索和利用机制，使得 LLM 能够超越无状态的交互模式。然而，现有的记忆系统通常会引入较大的时间与计算开销。为此，我们提出了一种新的记忆系统 LightMem，在记忆系统的性能与效率之间取得了平衡。受人类记忆的 Atkinson-Shiffrin 模型启发，LightMem 将记忆组织为三个互补的阶段。首先，受认知启发的感官记忆通过轻量级压缩快速过滤无关信息，并根据主题对信息进行分组。接下来，主题感知的短期记忆对这些基于主题的分组进行整合，组织和总结内容以实现更结构化的访问。最后，具有睡眠时间更新机制的长期记忆采用离线过程，将整合操作与在线推理解耦。在 LongMemEval 上的实验表明，基于 GPT 和 Qwen 的 LightMem 在准确率方面优于强基线（最高提升 10.9%），同时将 token 使用量减少了最多 117 倍，API 调用量减少了最多 159 倍，运行时间减少了超过 12 倍。代码可在 https://github.com/zjunlp/LightMem 获取。",
+        "translated_title": "LightMem: 轻量且高效的记忆增强生成",
+        "label": [],
+        "label_reason": "论文聚焦语言模型记忆系统优化，非图像处理任务",
+        "relevance_score": 2,
+        "novelty_score": 7,
+        "novelty_reason": "提出轻量高效记忆系统，改进信息存储与检索机制"
+    },
+    {
+        "title": "DP$^2$O-SR: Direct Perceptual Preference Optimization for Real-World\n  Image Super-Resolution",
+        "url": "http://arxiv.org/abs/2510.18851v1",
+        "pub_date": "2025-10-21",
+        "summary": "Benefiting from pre-trained text-to-image (T2I) diffusion models, real-world image super-resolution (Real-ISR) methods can synthesize rich and realistic details. However, due to the inherent stochasticity of T2I models, different noise inputs often lead to outputs with varying perceptual quality. Although this randomness is sometimes seen as a limitation, it also introduces a wider perceptual quality range, which can be exploited to improve Real-ISR performance. To this end, we introduce Direct Perceptual Preference Optimization for Real-ISR (DP$^2$O-SR), a framework that aligns generative models with perceptual preferences without requiring costly human annotations. We construct a hybrid reward signal by combining full-reference and no-reference image quality assessment (IQA) models trained on large-scale human preference datasets. This reward encourages both structural fidelity and natural appearance. To better utilize perceptual diversity, we move beyond the standard best-vs-worst selection and construct multiple preference pairs from outputs of the same model. Our analysis reveals that the optimal selection ratio depends on model capacity: smaller models benefit from broader coverage, while larger models respond better to stronger contrast in supervision. Furthermore, we propose hierarchical preference optimization, which adaptively weights training pairs based on intra-group reward gaps and inter-group diversity, enabling more efficient and stable learning. Extensive experiments across both diffusion- and flow-based T2I backbones demonstrate that DP$^2$O-SR significantly improves perceptual quality and generalizes well to real-world benchmarks.",
+        "translated": "借助预训练的文生图（T2I）扩散模型，真实世界图像超分辨率（Real-ISR）方法可以合成丰富的逼真细节。然而，由于 T2I 模型固有的随机性，不同的噪声输入通常会导致具有不同感知质量的输出。尽管这种随机性有时被视为限制，但同时也引入了更广泛的感知质量范围，可以加以利用以提升 Real-ISR 的性能。为此，我们提出面向 Real-ISR 的直接感知偏好优化（Direct Perceptual Preference Optimization for Real-ISR，DP$^2$O-SR），这是一种无需代价高昂的人类标注即可将生成模型与感知偏好对齐的框架。我们通过结合在大规模人类偏好数据集上训练的全参考和无参考图像质量评估（IQA）模型，构建了一个混合奖励信号。该奖励信号同时鼓励结构保真度和自然外观。为了更好地利用感知多样性，我们超越了标准的最佳与最差选择策略，从同一模型的输出中构建多个偏好对。我们的分析表明，最优的选择比例取决于模型容量：小模型受益于更广泛的覆盖，而大模型则对更强的监督对比响应更好。此外，我们提出了分层偏好优化方法，该方法基于组内奖励差距和组间多样性自适应地加权训练对，从而实现更高效和稳定的训练。在基于扩散模型和流模型的 T2I 主干网络上的大量实验表明，DP$^2$O-SR 显著提升了感知质量，并在真实世界基准上表现出良好的泛化能力。",
+        "translated_title": "DP$^2$O-SR：面向真实场景图像超分辨率的直接感知偏好优化",
+        "label": [
+            "超分辨率",
+            "图像增强"
+        ],
+        "label_reason": "论文聚焦真实图像超分辨率，属于图像恢复与增强任务",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出感知偏好优化框架，改进扩散模型用于图像超分辨率"
+    },
+    {
+        "title": "See the Text: From Tokenization to Visual Reading",
+        "url": "http://arxiv.org/abs/2510.18840v1",
+        "pub_date": "2025-10-21",
+        "summary": "People see text. Humans read by recognizing words as visual objects, including their shapes, layouts, and patterns, before connecting them to meaning, which enables us to handle typos, distorted fonts, and various scripts effectively. Modern large language models (LLMs), however, rely on subword tokenization, fragmenting text into pieces from a fixed vocabulary. While effective for high-resource languages, this approach over-segments low-resource languages, yielding long, linguistically meaningless sequences and inflating computation. In this work, we challenge this entrenched paradigm and move toward a vision-centric alternative. Our method, SeeTok, renders text as images (visual-text) and leverages pretrained multimodal LLMs to interpret them, reusing strong OCR and text-vision alignment abilities learned from large-scale multimodal training. Across three different language tasks, SeeTok matches or surpasses subword tokenizers while requiring 4.43 times fewer tokens and reducing FLOPs by 70.5%, with additional gains in cross-lingual generalization, robustness to typographic noise, and linguistic hierarchy. SeeTok signals a shift from symbolic tokenization to human-like visual reading, and takes a step toward more natural and cognitively inspired language models.",
+        "translated": "人们看到的是文本。人类通过将词语识别为视觉对象，包括它们的形状、布局和模式，然后将其与语义联系起来进行阅读，这种机制使我们能够有效地处理拼写错误、变形字体和各种书写系统。然而，现代的大型语言模型（LLMs）依赖于子词分词，将文本分割成来自固定词典的片段。虽然这种方法对于高资源语言是有效的，但它对低资源语言进行了过度分割，产生了长而语言学上无意义的序列，并增加了计算负担。在本研究中，我们挑战了这种根深蒂固的范式，转向一种以视觉为中心的替代方法。我们的方法 SeeTok 将文本渲染为图像（视觉文本），并利用预训练的多模态 LLMs 对其进行解释，复用大规模多模态训练中学到的强大的 OCR 和图文对齐能力。在三个不同的语言任务中，SeeTok 在使用更少 4.43 倍 tokens 和减少 70.5% FLOPs 的前提下，表现与或优于子词分词器，并在跨语言泛化能力、对排版噪声的鲁棒性以及语言层次结构方面获得了额外的提升。SeeTok 标志着从符号化分词向类人视觉阅读方式的转变，并朝着更加自然和受认知启发的语言模型迈出了关键一步。",
+        "translated_title": "从分词到视觉阅读",
+        "label": [],
+        "label_reason": "论文聚焦于文本处理和语言模型，非图像像素级质量改善任务。",
+        "relevance_score": 2,
+        "novelty_score": 7,
+        "novelty_reason": "提出视觉文本表示方法，对低资源语言和计算效率有显著改进。"
+    },
+    {
+        "title": "FedDEAP: Adaptive Dual-Prompt Tuning for Multi-Domain Federated Learning",
+        "url": "http://arxiv.org/abs/2510.18837v1",
+        "pub_date": "2025-10-21",
+        "summary": "Federated learning (FL) enables multiple clients to collaboratively train machine learning models without exposing local data, balancing performance and privacy. However, domain shift and label heterogeneity across clients often hinder the generalization of the aggregated global model. Recently, large-scale vision-language models like CLIP have shown strong zero-shot classification capabilities, raising the question of how to effectively fine-tune CLIP across domains in a federated setting. In this work, we propose an adaptive federated prompt tuning framework, FedDEAP, to enhance CLIP's generalization in multi-domain scenarios. Our method includes the following three key components: (1) To mitigate the loss of domain-specific information caused by label-supervised tuning, we disentangle semantic and domain-specific features in images by using semantic and domain transformation networks with unbiased mappings; (2) To preserve domain-specific knowledge during global prompt aggregation, we introduce a dual-prompt design with a global semantic prompt and a local domain prompt to balance shared and personalized information; (3) To maximize the inclusion of semantic and domain information from images in the generated text features, we align textual and visual representations under the two learned transformations to preserve semantic and domain consistency. Theoretical analysis and extensive experiments on four datasets demonstrate the effectiveness of our method in enhancing the generalization of CLIP for federated image recognition across multiple domains.",
+        "translated": "联邦学习（FL）允许多个客户端在不暴露本地数据的情况下协同训练机器学习模型，从而在性能与隐私之间取得平衡。然而，客户端之间的域偏移和标签异质性通常会限制聚合后的全局模型的泛化能力。最近，像 CLIP 这样的大规模视觉-语言模型展现出了强大的零样本分类能力，引发了一个问题：如何在联邦设置下跨域有效地对 CLIP 进行微调。在本研究中，我们提出了一种自适应联邦提示微调框架 FedDEAP，以增强 CLIP 在多域场景中的泛化能力。我们的方法包括以下三个关键组成部分：(1) 为缓解标签监督微调导致的域特定信息丢失，我们通过语义和域变换网络实现图像中语义特征与域特定特征的解耦，并利用无偏映射；(2) 为在全局提示聚合过程中保留域特定知识，我们引入了包含全局语义提示和本地域提示的双提示设计，以平衡共享信息与个性化信息；(3) 为最大化图像中语义和域信息在生成文本特征中的包含，我们在两种学习变换下对齐文本和视觉表示，以保持语义和域一致性。理论分析和在四个数据集上的大量实验表明，我们的方法在增强 CLIP 联邦图像识别的跨域泛化能力方面是有效的。",
+        "translated_title": "FedDEAP：多域联邦学习的自适应双提示调优",
+        "label": [],
+        "label_reason": "论文聚焦联邦学习中的图像分类，不涉及像素级图像恢复或增强。",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "方法基于CLIP进行改进，设计了双提示机制，有一定创新但属于常规迁移应用。"
+    },
+    {
+        "title": "Unifying and Enhancing Graph Transformers via a Hierarchical Mask\n  Framework",
+        "url": "http://arxiv.org/abs/2510.18825v1",
+        "pub_date": "2025-10-21",
+        "summary": "Graph Transformers (GTs) have emerged as a powerful paradigm for graph representation learning due to their ability to model diverse node interactions. However, existing GTs often rely on intricate architectural designs tailored to specific interactions, limiting their flexibility. To address this, we propose a unified hierarchical mask framework that reveals an underlying equivalence between model architecture and attention mask construction. This framework enables a consistent modeling paradigm by capturing diverse interactions through carefully designed attention masks. Theoretical analysis under this framework demonstrates that the probability of correct classification positively correlates with the receptive field size and label consistency, leading to a fundamental design principle: an effective attention mask should ensure both a sufficiently large receptive field and a high level of label consistency. While no single existing mask satisfies this principle across all scenarios, our analysis reveals that hierarchical masks offer complementary strengths, motivating their effective integration. Then, we introduce M3Dphormer, a Mixture-of-Experts-based Graph Transformer with Multi-Level Masking and Dual Attention Computation. M3Dphormer incorporates three theoretically grounded hierarchical masks and employs a bi-level expert routing mechanism to adaptively integrate multi-level interaction information. To ensure scalability, we further introduce a dual attention computation scheme that dynamically switches between dense and sparse modes based on local mask sparsity. Extensive experiments across multiple benchmarks demonstrate that M3Dphormer achieves state-of-the-art performance, validating the effectiveness of our unified framework and model design.",
+        "translated": "图神经网络中的图变换器（Graph Transformers, GTs）由于能够建模多样化的节点交互，已成为图表示学习的一种强大范式。然而，现有的 GTs 通常依赖于针对特定交互量身定制的复杂架构设计，限制了其灵活性。为了解决这一问题，我们提出了一种统一的层次化掩码框架，揭示了模型架构与注意力掩码构建之间潜在的等价关系。该框架通过精心设计的注意力掩码捕捉多样化的交互，从而实现一致的建模范式。在该框架下的理论分析表明，正确分类的概率与感受野大小和标签一致性呈正相关，由此引出一个基本的设计原则：有效的注意力掩码应同时确保足够大的感受野和较高的标签一致性。虽然现有的任何单一掩码都无法在所有场景中满足这一原则，但我们的分析表明，层次化掩码具有互补的优势，这促使我们对其进行有效的融合。随后，我们介绍了 M3Dphormer，这是一种基于专家混合（Mixture-of-Experts）的图变换器，结合了多级掩码和双注意力计算。M3Dphormer 集成了三种理论支撑的层次化掩码，并采用双层专家路由机制，以自适应地融合多级交互信息。为了确保可扩展性，我们进一步引入了一种双注意力计算方案，根据局部掩码的稀疏性在密集模式和稀疏模式之间动态切换。在多个基准数据集上的大量实验表明，M3Dphormer 取得了最先进的性能，验证了我们统一框架和模型设计的有效性。",
+        "translated_title": "通过分层掩码框架统一并增强图变换器",
+        "label": [],
+        "label_reason": "论文聚焦图神经网络设计，不涉及图像像素级处理",
+        "relevance_score": 1,
+        "novelty_score": 6,
+        "novelty_reason": "提出分层掩码框架和混合专家机制，有一定改进"
+    },
+    {
+        "title": "SAM 2++: Tracking Anything at Any Granularity",
+        "url": "http://arxiv.org/abs/2510.18822v1",
+        "pub_date": "2025-10-21",
+        "summary": "Video tracking aims at finding the specific target in subsequent frames given its initial state. Due to the varying granularity of target states across different tasks, most existing trackers are tailored to a single task and heavily rely on custom-designed modules within the individual task, which limits their generalization and leads to redundancy in both model design and parameters. To unify video tracking tasks, we present SAM 2++, a unified model towards tracking at any granularity, including masks, boxes, and points. First, to extend target granularity, we design task-specific prompts to encode various task inputs into general prompt embeddings, and a unified decoder to unify diverse task results into a unified form pre-output. Next, to satisfy memory matching, the core operation of tracking, we introduce a task-adaptive memory mechanism that unifies memory across different granularities. Finally, we introduce a customized data engine to support tracking training at any granularity, producing a large and diverse video tracking dataset with rich annotations at three granularities, termed Tracking-Any-Granularity, which represents a comprehensive resource for training and benchmarking on unified tracking. Comprehensive experiments on multiple benchmarks confirm that SAM 2++ sets a new state of the art across diverse tracking tasks at different granularities, establishing a unified and robust tracking framework.",
+        "translated": "视频跟踪旨在在给定目标初始状态的情况下，于后续帧中定位该特定目标。由于不同任务中目标状态的粒度存在差异，大多数现有的跟踪器仅适用于单一任务，并高度依赖任务内部定制设计的模块，这限制了其泛化能力，并导致模型设计与参数上的冗余。为了统一视频跟踪任务，我们提出 SAM 2++，一个面向任意粒度跟踪的统一模型，包括掩膜、框和点。首先，为了扩展目标的粒度，我们设计了任务特定的提示，将各种任务输入编码为通用的提示嵌入，并引入统一的解码器，将多样化的任务结果统一为预输出的统一形式。其次，为满足跟踪中的核心操作——记忆匹配，我们引入了一个任务自适应的记忆机制，以统一不同粒度下的记忆信息。最后，我们提出一个定制的数据引擎，以支持任意粒度下的跟踪训练，生成了一个包含三种粒度丰富标注的大规模且多样化的视频跟踪数据集，称为 Tracking-Any-Granularity，该数据集为统一跟踪的训练与基准测试提供了全面的资源。在多个基准测试上的综合性实验表明，SAM 2++ 在不同粒度的多样化跟踪任务中均达到了新的最先进性能，建立了一个统一且鲁棒的跟踪框架。",
+        "translated_title": "SAM 2++：以任意粒度追踪任何对象",
+        "label": [],
+        "label_reason": "论文聚焦视频跟踪，不属于图像像素级恢复或增强任务。",
+        "relevance_score": 2,
+        "novelty_score": 7,
+        "novelty_reason": "提出统一视频跟踪框架，改进了任务适应性和泛化能力。"
+    },
+    {
+        "title": "An Explainable Hybrid AI Framework for Enhanced Tuberculosis and Symptom\n  Detection",
+        "url": "http://arxiv.org/abs/2510.18819v1",
+        "pub_date": "2025-10-21",
+        "summary": "Tuberculosis remains a critical global health issue, particularly in resource-limited and remote areas. Early detection is vital for treatment, yet the lack of skilled radiologists underscores the need for artificial intelligence (AI)-driven screening tools. Developing reliable AI models is challenging due to the necessity for large, high-quality datasets, which are costly to obtain. To tackle this, we propose a teacher--student framework which enhances both disease and symptom detection on chest X-rays by integrating two supervised heads and a self-supervised head. Our model achieves an accuracy of 98.85% for distinguishing between COVID-19, tuberculosis, and normal cases, and a macro-F1 score of 90.09% for multilabel symptom detection, significantly outperforming baselines. The explainability assessments also show the model bases its predictions on relevant anatomical features, demonstrating promise for deployment in clinical screening and triage settings.",
+        "translated": "结核病仍然是一个重要的全球性健康问题，尤其是在资源匮乏和偏远地区。早期检测对于治疗至关重要，然而，专业放射科医生的缺乏凸显了需要基于人工智能（AI）的筛查工具。由于开发可靠的AI模型需要大量的高质量数据集，而这些数据集的获取成本较高，因此这一过程面临挑战。为了解决这一问题，我们提出了一种教师-学生框架，通过整合两个监督头和一个自监督头，以提升胸部X光图像中疾病和症状的检测能力。我们的模型在区分新冠肺炎、结核病和正常病例方面实现了98.85%的准确率，在多标签症状检测中达到了90.09%的宏F1分数，显著优于基线方法。可解释性评估也表明，该模型基于相关的解剖特征进行预测，展现出在临床筛查和分级诊疗中的应用潜力。",
+        "translated_title": "一种用于增强结核病和症状检测的可解释混合人工智能框架",
+        "label": [],
+        "label_reason": "论文主要关注医学图像的疾病分类，不涉及像素级图像恢复或增强",
+        "relevance_score": 2,
+        "novelty_score": 5,
+        "novelty_reason": "提出了一种教师-学生框架，但方法改进较为常规"
+    },
+    {
+        "title": "A Geometric Approach to Steerable Convolutions",
+        "url": "http://arxiv.org/abs/2510.18813v1",
+        "pub_date": "2025-10-21",
+        "summary": "In contrast to the somewhat abstract, group theoretical approach adopted by many papers, our work provides a new and more intuitive derivation of steerable convolutional neural networks in $d$ dimensions. This derivation is based on geometric arguments and fundamental principles of pattern matching. We offer an intuitive explanation for the appearance of the Clebsch--Gordan decomposition and spherical harmonic basis functions. Furthermore, we suggest a novel way to construct steerable convolution layers using interpolation kernels that improve upon existing implementation, and offer greater robustness to noisy data.",
+        "translated": "与许多论文所采用的略显抽象的群论方法不同，我们的工作提供了一种新的、更直观的推导方法，用于 $d$ 维的可操控卷积神经网络。该推导基于几何论证和模式匹配的基本原理。我们对 Clebsch--Gordan 分解和球谐基函数的出现给出了直观的解释。此外，我们提出了一种新颖的构建可操控卷积层的方法，该方法使用插值核，改进了现有的实现方式，并对噪声数据表现出更强的鲁棒性。",
+        "translated_title": "几何可转向卷积方法",
+        "label": [
+            "图像去噪"
+        ],
+        "label_reason": "论文探讨 steerable 卷积的几何方法，可能用于提升图像去噪的鲁棒性。",
+        "relevance_score": 5,
+        "novelty_score": 7,
+        "novelty_reason": "提出基于几何和插值核的新 steerable 卷积实现方式，具有一定创新性。"
+    },
+    {
+        "title": "ProCLIP: Progressive Vision-Language Alignment via LLM-based Embedder",
+        "url": "http://arxiv.org/abs/2510.18795v1",
+        "pub_date": "2025-10-21",
+        "summary": "The original CLIP text encoder is limited by a maximum input length of 77 tokens, which hampers its ability to effectively process long texts and perform fine-grained semantic understanding. In addition, the CLIP text encoder lacks support for multilingual inputs. All these limitations significantly restrict its applicability across a broader range of tasks. Recent studies have attempted to replace the CLIP text encoder with an LLM-based embedder to enhance its ability in processing long texts, multilingual understanding, and fine-grained semantic comprehension. However, because the representation spaces of LLMs and the vision-language space of CLIP are pretrained independently without alignment priors, direct alignment using contrastive learning can disrupt the intrinsic vision-language alignment in the CLIP image encoder, leading to an underutilization of the knowledge acquired during pre-training. To address this challenge, we propose ProCLIP, a curriculum learning-based progressive vision-language alignment framework to effectively align the CLIP image encoder with an LLM-based embedder. Specifically, ProCLIP first distills knowledge from CLIP's text encoder into the LLM-based embedder to leverage CLIP's rich pretrained knowledge while establishing initial alignment between the LLM embedder and CLIP image encoder. Subsequently, ProCLIP further aligns the CLIP image encoder with the LLM-based embedder through image-text contrastive tuning, employing self-distillation regularization to avoid overfitting. To achieve a more effective alignment, instance semantic alignment loss and embedding structure alignment loss are employed during representation inheritance and contrastive tuning. The Code is available at https://github.com/VisionXLab/ProCLIP",
+        "translated": "原始的 CLIP 文本编码器受到最大输入长度为 77 个 token 的限制，这阻碍了其对长文本进行有效处理和实现细粒度语义理解的能力。此外，CLIP 文本编码器不支持多语言输入。所有这些限制显著制约了其在更广泛任务中的适用性。近期的研究尝试将 CLIP 文本编码器替换为基于大语言模型（LLM）的嵌入器，以增强其处理长文本、多语言理解和细粒度语义理解的能力。然而，由于 LLMs 和 CLIP 的视觉-语言空间是独立预训练的，且没有对齐先验知识，直接使用对比学习进行对齐可能会破坏 CLIP 图像编码器中固有的视觉-语言对齐关系，从而导致预训练阶段获得的知识未能充分利用。为了解决这一问题，我们提出 ProCLIP，一种基于课程学习的渐进式视觉-语言对齐框架，以有效地将 CLIP 图像编码器与基于 LLM 的嵌入器对齐。具体来说，ProCLIP 首先将 CLIP 文本编码器的知识蒸馏到基于 LLM 的嵌入器中，从而利用 CLIP 丰富的预训练知识，同时在 LLM 嵌入器和 CLIP 图像编码器之间建立初步对齐。随后，ProCLIP 通过图像-文本对比调优进一步对齐 CLIP 图像编码器与基于 LLM 的嵌入器，并采用自蒸馏正则化方法避免过拟合。为了实现更有效的对齐，在表示继承和对比调优过程中分别引入了实例语义对齐损失和嵌入结构对齐损失。代码已发布于 https://github.com/VisionXLab/ProCLIP",
+        "translated_title": "ProCLIP：基于大语言模型的嵌入器实现渐进式视觉-语言对齐",
+        "label": [],
+        "label_reason": "论文主要涉及视觉-语言对齐，不属于低层图像处理任务。",
+        "relevance_score": 1,
+        "novelty_score": 7,
+        "novelty_reason": "提出基于课程学习的渐进式视觉-语言对齐框架，具有一定创新性。"
+    },
+    {
+        "title": "Rebellious Student: A Complementary Learning Framework for Background\n  Feature Enhancement in Hyperspectral Anomaly Detection",
+        "url": "http://arxiv.org/abs/2510.18781v1",
+        "pub_date": "2025-10-21",
+        "summary": "A recent class of hyperspectral anomaly detection methods that can be trained once on background datasets and then universally deployed -- without per-scene retraining or parameter tuning -- has demonstrated remarkable efficiency and robustness. Building upon this paradigm, we focus on the integration of spectral and spatial cues and introduce a novel \"Rebellious Student\" framework for complementary feature learning. Unlike conventional teacher-student paradigms driven by imitation, our method intentionally trains the spatial branch to diverge from the spectral teacher, thereby learning complementary spatial patterns that the teacher fails to capture. A two-stage learning strategy is adopted: (1) a spectral enhancement network is first trained via reverse distillation to obtain robust background spectral representations; and (2) a spatial network -- the rebellious student -- is subsequently optimized using decorrelation losses that enforce feature orthogonality while maintaining reconstruction fidelity to avoid irrelevant noise. Once trained, the framework enhances both spectral and spatial background features, enabling parameter-free and training-free anomaly detection when paired with conventional detectors. Extensive experiments on the HAD100 benchmark show substantial improvements over several established baselines with minimal computational overhead, confirming the effectiveness and generality of the proposed complementary learning paradigm. Our code is publicly available at https://github.com/xjpp2016/FERS.",
+        "translated": "近年来，一类高光谱异常检测方法在背景数据集上可以一次性训练，然后无需按场景重新训练或参数调优即可通用部署，表现出显著的效率和鲁棒性。在这一范式的基础上，我们专注于光谱与空域线索的融合，并提出了一种新颖的“Rebellious Student”框架，用于互补特征学习。与传统依赖模仿的师生范式不同，我们的方法有意训练空域分支与光谱教师模型产生分歧，从而学习教师模型未能捕捉的互补空域模式。我们采用了两阶段学习策略：(1) 首先通过反向蒸馏训练光谱增强网络，以获得稳健的背景光谱表示；(2) 随后使用去相关损失对空域网络（即叛逆学生）进行优化，该损失在保持重建保真度的同时强制特征正交，以避免无关噪声的干扰。一旦训练完成，该框架即可增强背景的光谱与空域特征，使得在与传统检测器配对使用时，能够实现无参数且无需训练的异常检测。在 HAD100 基准上的大量实验表明，与多个已有基线方法相比，该方法在计算开销最小的情况下实现了显著性能提升，验证了所提出的互补学习范式的有效性与通用性。我们的代码已公开在 https://github.com/xjpp2016/FERS。",
+        "translated_title": "反叛学生：一种用于高光谱异常检测中背景特征增强的互补学习框架",
+        "label": [
+            "遥感图像复原",
+            "图像增强"
+        ],
+        "label_reason": "论文涉及高光谱异常检测中的背景特征增强，属于遥感图像复原和增强范畴。",
+        "relevance_score": 6,
+        "novelty_score": 7,
+        "novelty_reason": "提出新颖的互补学习框架，通过反向蒸馏和去相关损失实现特征增强。"
+    },
+    {
+        "title": "UltraGen: High-Resolution Video Generation with Hierarchical Attention",
+        "url": "http://arxiv.org/abs/2510.18775v1",
+        "pub_date": "2025-10-21",
+        "summary": "Recent advances in video generation have made it possible to produce visually compelling videos, with wide-ranging applications in content creation, entertainment, and virtual reality. However, most existing diffusion transformer based video generation models are limited to low-resolution outputs (&lt;=720P) due to the quadratic computational complexity of the attention mechanism with respect to the output width and height. This computational bottleneck makes native high-resolution video generation (1080P/2K/4K) impractical for both training and inference. To address this challenge, we present UltraGen, a novel video generation framework that enables i) efficient and ii) end-to-end native high-resolution video synthesis. Specifically, UltraGen features a hierarchical dual-branch attention architecture based on global-local attention decomposition, which decouples full attention into a local attention branch for high-fidelity regional content and a global attention branch for overall semantic consistency. We further propose a spatially compressed global modeling strategy to efficiently learn global dependencies, and a hierarchical cross-window local attention mechanism to reduce computational costs while enhancing information flow across different local windows. Extensive experiments demonstrate that UltraGen can effectively scale pre-trained low-resolution video models to 1080P and even 4K resolution for the first time, outperforming existing state-of-the-art methods and super-resolution based two-stage pipelines in both qualitative and quantitative evaluations.",
+        "translated": "近期在视频生成领域的进展使得生成视觉上具有吸引力的视频成为可能，并在内容创作、娱乐和虚拟现实等领域具有广泛的应用前景。然而，由于注意力机制的计算复杂度与输出宽度和高度呈平方关系，大多数现有的基于扩散变换器的视频生成模型在输出分辨率上受到限制（<=720P）。这种计算瓶颈使得在训练和推理阶段实现原生的高分辨率视频生成（1080P/2K/4K）变得不切实际。为了解决这一挑战，我们提出了 UltraGen，一种新颖的视频生成框架，能够在 i) 高效性和 ii) 原生高分辨率视频的端到端合成方面取得突破。具体而言，UltraGen 采用基于全局-局部注意力分解的层次化双分支注意力架构，将完整的注意力机制拆分为用于高保真区域内容的局部注意力分支和用于整体语义一致性的全局注意力分支。我们进一步提出了一种空间压缩的全局建模策略，以高效地学习全局依赖关系，并引入了一种层次化的跨窗口局部注意力机制，以在降低计算成本的同时增强不同局部窗口之间的信息流动。大量实验表明，UltraGen 能够首次有效地将预训练的低分辨率视频模型扩展至 1080P，甚至 4K 分辨率，在定性和定量评估中均优于现有的最先进方法以及基于超分辨率的两阶段流水线方法。",
+        "translated_title": "UltraGen：基于层次注意力的高分辨率视频生成",
+        "label": [],
+        "label_reason": "论文聚焦视频生成，非图像像素级恢复任务",
+        "relevance_score": 3,
+        "novelty_score": 8,
+        "novelty_reason": "提出分层注意力机制，显著提升高分辨率视频生成效率"
+    },
+    {
+        "title": "Detection and Simulation of Urban Heat Islands Using a Fine-Tuned\n  Geospatial Foundation Model for Microclimate Impact Prediction",
+        "url": "http://arxiv.org/abs/2510.18773v1",
+        "pub_date": "2025-10-21",
+        "summary": "As urbanization and climate change progress, urban heat island effects are becoming more frequent and severe. To formulate effective mitigation plans, cities require detailed air temperature data, yet conventional machine learning models with limited data often produce inaccurate predictions, particularly in underserved areas. Geospatial foundation models trained on global unstructured data offer a promising alternative by demonstrating strong generalization and requiring only minimal fine-tuning. In this study, an empirical ground truth of urban heat patterns is established by quantifying cooling effects from green spaces and benchmarking them against model predictions to evaluate the model's accuracy. The foundation model is subsequently fine-tuned to predict land surface temperatures under future climate scenarios, and its practical value is demonstrated through a simulated inpainting that highlights its role for mitigation support. The results indicate that foundation models offer a powerful way for evaluating urban heat island mitigation strategies in data-scarce regions to support more climate-resilient cities.",
+        "translated": "随着城市化和气候变化的加剧，城市热岛效应变得越来越频繁和严重。为制定有效的缓解计划，城市需要详细的空气温度数据，然而基于有限数据的传统机器学习模型常常产生不准确的预测，特别是在数据匮乏的地区。在全局非结构化数据上训练的地理空间基础模型提供了一个有前景的替代方案，因为它们表现出良好的泛化能力，且仅需少量微调即可使用。本研究中，通过量化绿地的降温效应，并将其与模型预测进行基准比较，建立了一个城市热岛模式的经验性真实数据，以评估模型的准确性。随后对基础模型进行微调，以预测未来气候情景下的地表温度，并通过模拟补全展示了其在缓解支持中的实际价值。结果表明，基础模型为在数据稀缺地区评估城市热岛缓解策略提供了一种有力的方法，有助于建设更具气候韧性的城市。",
+        "translated_title": "基于微气候影响预测的微调地理空间基础模型用于城市热岛的检测与模拟",
+        "label": [],
+        "label_reason": "不属于低级图像处理，主要涉及地理空间建模和气候预测",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "对基础模型进行微调用于模拟城市热岛效应，具有一定新颖性"
+    },
+    {
+        "title": "Seg the HAB: Language-Guided Geospatial Algae Bloom Reasoning and\n  Segmentation",
+        "url": "http://arxiv.org/abs/2510.18751v1",
+        "pub_date": "2025-10-21",
+        "summary": "Climate change is intensifying the occurrence of harmful algal bloom (HAB), particularly cyanobacteria, which threaten aquatic ecosystems and human health through oxygen depletion, toxin release, and disruption of marine biodiversity. Traditional monitoring approaches, such as manual water sampling, remain labor-intensive and limited in spatial and temporal coverage. Recent advances in vision-language models (VLMs) for remote sensing have shown potential for scalable AI-driven solutions, yet challenges remain in reasoning over imagery and quantifying bloom severity. In this work, we introduce ALGae Observation and Segmentation (ALGOS), a segmentation-and-reasoning system for HAB monitoring that combines remote sensing image understanding with severity estimation. Our approach integrates GeoSAM-assisted human evaluation for high-quality segmentation mask curation and fine-tunes vision language model on severity prediction using the Cyanobacteria Aggregated Manual Labels (CAML) from NASA. Experiments demonstrate that ALGOS achieves robust performance on both segmentation and severity-level estimation, paving the way toward practical and automated cyanobacterial monitoring systems.",
+        "translated": "气候变化加剧了有害藻类水华（HAB）的出现，特别是蓝藻，它们通过耗氧、释放毒素和破坏海洋生物多样性而威胁水生生态系统和人类健康。传统的监测方法，如人工采水样，仍然劳动密集且在空间和时间覆盖范围上受到限制。最近在遥感领域中视觉-语言模型（VLM）的进展表明了可扩展的AI驱动解决方案的潜力，但如何对图像进行推理和量化水华严重程度仍是挑战。在此工作中，我们提出了ALGae Observation and Segmentation（ALGOS），一个用于HAB监测的分割与推理系统，该系统结合了遥感图像理解和严重程度估计。我们的方法整合了由GeoSAM辅助的人工评估，以生成高质量的分割掩码，并利用美国宇航局（NASA）提供的蓝藻聚集人工标签（Cyanobacteria Aggregated Manual Labels, CAML）对视觉语言模型进行严重程度预测的微调。实验表明，ALGOS在分割和严重程度估计方面均表现出稳健的性能，为实用且自动化的蓝藻监测系统铺平了道路。",
+        "translated_title": "Seg the HAB：语言引导的地理空间藻华推理与分割",
+        "label": [
+            "遥感图像复原",
+            "图像分割"
+        ],
+        "label_reason": "涉及遥感图像分割，但主要用于地理场景理解",
+        "relevance_score": 5,
+        "novelty_score": 7,
+        "novelty_reason": "结合 GeoSAM 和语言模型，改进遥感 HAB 分析"
+    },
+    {
+        "title": "SEAL: Semantic-Aware Hierarchical Learning for Generalized Category\n  Discovery",
+        "url": "http://arxiv.org/abs/2510.18740v1",
+        "pub_date": "2025-10-21",
+        "summary": "This paper investigates the problem of Generalized Category Discovery (GCD). Given a partially labelled dataset, GCD aims to categorize all unlabelled images, regardless of whether they belong to known or unknown classes. Existing approaches typically depend on either single-level semantics or manually designed abstract hierarchies, which limit their generalizability and scalability. To address these limitations, we introduce a SEmantic-aware hierArchical Learning framework (SEAL), guided by naturally occurring and easily accessible hierarchical structures. Within SEAL, we propose a Hierarchical Semantic-Guided Soft Contrastive Learning approach that exploits hierarchical similarity to generate informative soft negatives, addressing the limitations of conventional contrastive losses that treat all negatives equally. Furthermore, a Cross-Granularity Consistency (CGC) module is designed to align the predictions from different levels of granularity. SEAL consistently achieves state-of-the-art performance on fine-grained benchmarks, including the SSB benchmark, Oxford-Pet, and the Herbarium19 dataset, and further demonstrates generalization on coarse-grained datasets. Project page: https://visual-ai.github.io/seal/",
+        "translated": "本文研究了广义类别发现（Generalized Category Discovery, GCD）问题。在给定一个部分标注的数据集的情况下，GCD 的目标是将所有未标注的图像进行分类，无论它们属于已知类别还是未知类别。现有方法通常依赖于单一层级的语义或手动设计的抽象层次结构，这限制了它们的泛化能力和可扩展性。为了解决这些局限，我们引入了一种语义感知的层次化学习框架（SEmantic-aware hierArchical Learning framework, SEAL），该框架以自然存在且易于获取的层次化结构为指导。在 SEAL 中，我们提出了一种层次语义引导的软对比学习（Hierarchical Semantic-Guided Soft Contrastive Learning）方法，该方法利用层次相似性生成具有信息量的软负样本，从而解决了传统对比损失函数将所有负样本一视同仁的局限。此外，我们设计了一个跨粒度一致性（Cross-Granularity Consistency, CGC）模块，用于对齐不同粒度层级的预测结果。SEAL 在细粒度基准数据集上始终实现了最先进的性能，包括 SSB 基准、Oxford-Pet 以及 Herbarium19 数据集，并在粗粒度数据集上进一步展示了其泛化能力。项目主页：https://visual-ai.github.io/seal/",
+        "translated_title": "SEAL：面向广义类别发现的语义感知层次化学习",
+        "label": [],
+        "label_reason": "论文聚焦分类任务，不涉及像素级图像恢复或增强",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "提出层次化语义学习框架，有一定方法改进但非本质创新"
+    },
+    {
+        "title": "Moving Light Adaptive Colonoscopy Reconstruction via\n  Illumination-Attenuation-Aware 3D Gaussian Splatting",
+        "url": "http://arxiv.org/abs/2510.18739v1",
+        "pub_date": "2025-10-21",
+        "summary": "3D Gaussian Splatting (3DGS) has emerged as a pivotal technique for real-time view synthesis in colonoscopy, enabling critical applications such as virtual colonoscopy and lesion tracking. However, the vanilla 3DGS assumes static illumination and that observed appearance depends solely on viewing angle, which causes incompatibility with the photometric variations in colonoscopic scenes induced by dynamic light source/camera. This mismatch forces most 3DGS methods to introduce structure-violating vaporous Gaussian blobs between the camera and tissues to compensate for illumination attenuation, ultimately degrading the quality of 3D reconstructions. Previous works only consider the illumination attenuation caused by light distance, ignoring the physical characters of light source and camera. In this paper, we propose ColIAGS, an improved 3DGS framework tailored for colonoscopy. To mimic realistic appearance under varying illumination, we introduce an Improved Appearance Modeling with two types of illumination attenuation factors, which enables Gaussians to adapt to photometric variations while preserving geometry accuracy. To ensure the geometry approximation condition of appearance modeling, we propose an Improved Geometry Modeling using high-dimensional view embedding to enhance Gaussian geometry attribute prediction. Furthermore, another cosine embedding input is leveraged to generate illumination attenuation solutions in an implicit manner. Comprehensive experimental results on standard benchmarks demonstrate that our proposed ColIAGS achieves the dual capabilities of novel view synthesis and accurate geometric reconstruction. It notably outperforms other state-of-the-art methods by achieving superior rendering fidelity while significantly reducing Depth MSE. Code will be available.",
+        "translated": "3D Gaussian Splatting（3DGS）已成为结肠镜检查中实时视图合成的关键技术，使虚拟结肠镜和病灶跟踪等重要应用成为可能。然而，原始的3DGS假设照明是静态的，且所观察到的外观仅依赖于视角，这导致其与由动态光源/相机引起的结肠镜场景中的光度变化不兼容。这种不匹配迫使大多数3DGS方法在相机和组织之间引入破坏结构的雾状高斯斑点，以补偿照明衰减，最终降低了3D重建的质量。之前的工作只考虑了由光源距离引起的照明衰减，而忽略了光源和相机的物理特性。在本文中，我们提出ColIAGS，这是一种专为结肠镜检查改进的3DGS框架。为了在不同照明条件下模拟逼真的外观，我们引入了一种改进的外观建模方法，包含两种类型的照明衰减因子，这使得高斯模型能够适应光度变化，同时保持几何精度。为确保外观建模的几何逼近条件，我们提出了一种改进的几何建模方法，使用高维视角嵌入来增强高斯几何属性的预测能力。此外，还利用另一个余弦嵌入输入以隐式方式生成照明衰减解。在标准基准上的全面实验结果表明，我们提出的ColIAGS实现了新视角合成与精确几何重建的双重能力。它在显著降低深度均方误差的同时，实现了优于其他最先进方法的渲染保真度。代码将公开。",
+        "translated_title": "通过光照衰减感知的3D高斯点绘实现动态光照自适应结肠镜重建",
+        "label": [
+            "医学图像增强",
+            "图像恢复",
+            "多帧/视频图像恢复"
+        ],
+        "label_reason": "论文针对内窥镜场景的光照变化进行3D重建优化，属于医学图像增强与图像恢复",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "引入光照衰减因子与改进的几何建模，对3DGS方法有一定创新"
+    },
+    {
+        "title": "IF-VidCap: Can Video Caption Models Follow Instructions?",
+        "url": "http://arxiv.org/abs/2510.18726v1",
+        "pub_date": "2025-10-21",
+        "summary": "Although Multimodal Large Language Models (MLLMs) have demonstrated proficiency in video captioning, practical applications require captions that follow specific user instructions rather than generating exhaustive, unconstrained descriptions. Current benchmarks, however, primarily assess descriptive comprehensiveness while largely overlooking instruction-following capabilities. To address this gap, we introduce IF-VidCap, a new benchmark for evaluating controllable video captioning, which contains 1,400 high-quality samples. Distinct from existing video captioning or general instruction-following benchmarks, IF-VidCap incorporates a systematic framework that assesses captions on two dimensions: format correctness and content correctness. Our comprehensive evaluation of over 20 prominent models reveals a nuanced landscape: despite the continued dominance of proprietary models, the performance gap is closing, with top-tier open-source solutions now achieving near-parity. Furthermore, we find that models specialized for dense captioning underperform general-purpose MLLMs on complex instructions, indicating that future work should simultaneously advance both descriptive richness and instruction-following fidelity.",
+        "translated": "尽管多模态大语言模型（MLLMs）在视频字幕生成方面表现出色，但实际应用中需要的是遵循特定用户指令的字幕，而不是生成详尽且无约束的描述。然而，目前的基准测试主要评估描述的全面性，而几乎忽视了对指令遵循能力的考量。为填补这一空白，我们引入了 IF-VidCap，一个新的用于评估可控视频字幕生成的基准，包含 1,400 个高质量样本。与现有的视频字幕生成或通用指令遵循基准不同，IF-VidCap 采用了一个系统化的框架，从两个维度对字幕进行评估：格式正确性和内容正确性。我们对 20 多个主流模型进行了全面评估，结果揭示了一个复杂而细致的图景：尽管专有模型依然占据主导地位，但性能差距正在缩小，顶级开源解决方案如今已接近其水平。此外，我们发现专门用于密集字幕的模型在处理复杂指令时表现不如通用型 MLLMs，这表明未来的工作应同时推进描述的丰富性和指令遵循的准确性。",
+        "translated_title": "IF-VidCap: 视频标题模型能否遵循指令？",
+        "label": [],
+        "label_reason": "论文聚焦视频描述生成，不涉及图像像素级质量恢复或增强",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "提出了新的可控视频描述基准IF-VidCap，具有系统性评估框架"
+    },
+    {
+        "title": "SSD: Spatial-Semantic Head Decoupling for Efficient Autoregressive Image\n  Generation",
+        "url": "http://arxiv.org/abs/2510.18716v1",
+        "pub_date": "2025-10-21",
+        "summary": "Autoregressive image generation models like Janus-Pro produce high-quality images, but at the significant cost of high memory and ever-growing computational demands due to the large number of visual tokens. While KV cache compression has been extensively studied in language modeling, it still remains largely unexplored for the image generation domain. In this work, we begin by identifying a distinct and prominent attention phenomenon, which we term spatial locality and emergent semantic sink. To leverage this key insight, we introduce a novel KV cache compression framework. Specifically, we compress the KV cache for all visual tokens by adaptively decoupling attention heads into two separate types: for spatial-locality heads, our method maintains a short recent token window; for semantic-sink heads, it strategically preserves a compact set of highly-attended tokens. Our extensive experiments demonstrate that the proposed method achieves a 5$\\times$ reduction in memory usage and a notable 6.6$\\times$ speedup in overall throughput with only minimal visual quality loss, thereby enabling highly efficient native autoregressive image generation on resource-constrained hardware.",
+        "translated": "Janus-Pro 等自回归图像生成模型能够生成高质量图像，但由于视觉 token 数量庞大，其代价是高昂的内存占用和不断增长的计算需求。尽管在语言建模领域对键值缓存（KV cache）压缩已进行了广泛研究，但在图像生成领域中，这一技术仍鲜有探索。在本研究中，我们首先识别出一种独特且显著的注意力现象，我们称之为“空间局部性”和“涌现语义沉降”。为利用这一关键发现，我们引入了一种新颖的 KV cache 压缩框架。具体而言，我们通过自适应地将注意力头解耦为两种类型来压缩所有视觉 token 的 KV cache：对于空间局部性头，我们的方法保留一个短的最近 token 窗口；对于语义沉降头，则策略性地保留一组被高度关注的 token。大量实验表明，所提出的方法在仅造成极小视觉质量损失的情况下，实现了 5$\\times$ 的内存使用减少和整体吞吐量 6.6$\\times$ 的加速，从而使得在资源受限的硬件上实现高效原生自回归图像生成成为可能。",
+        "translated_title": "SSD：用于高效自回归图像生成的空域-语义头解耦",
+        "label": [],
+        "label_reason": "论文聚焦于图像生成效率，非图像恢复或增强任务",
+        "relevance_score": 2,
+        "novelty_score": 7,
+        "novelty_reason": "提出KV缓存压缩框架，提升生成效率具创新性"
+    },
+    {
+        "title": "PLANA3R: Zero-shot Metric Planar 3D Reconstruction via Feed-Forward\n  Planar Splatting",
+        "url": "http://arxiv.org/abs/2510.18714v1",
+        "pub_date": "2025-10-21",
+        "summary": "This paper addresses metric 3D reconstruction of indoor scenes by exploiting their inherent geometric regularities with compact representations. Using planar 3D primitives - a well-suited representation for man-made environments - we introduce PLANA3R, a pose-free framework for metric Planar 3D Reconstruction from unposed two-view images. Our approach employs Vision Transformers to extract a set of sparse planar primitives, estimate relative camera poses, and supervise geometry learning via planar splatting, where gradients are propagated through high-resolution rendered depth and normal maps of primitives. Unlike prior feedforward methods that require 3D plane annotations during training, PLANA3R learns planar 3D structures without explicit plane supervision, enabling scalable training on large-scale stereo datasets using only depth and normal annotations. We validate PLANA3R on multiple indoor-scene datasets with metric supervision and demonstrate strong generalization to out-of-domain indoor environments across diverse tasks under metric evaluation protocols, including 3D surface reconstruction, depth estimation, and relative pose estimation. Furthermore, by formulating with planar 3D representation, our method emerges with the ability for accurate plane segmentation. The project page is available at https://lck666666.github.io/plana3r",
+        "translated": "本文通过利用室内场景固有的几何规律并采用紧凑表示方法，研究了度量意义上的三维重建问题。我们引入了 PLANA3R，这是一个用于从无姿态的双视角图像中进行度量平面三维重建的无姿态框架。该方法采用视觉变换器（Vision Transformers）提取一组稀疏的平面基元（planar primitives），估计相对相机姿态，并通过平面溅射（planar splatting）监督几何学习，其中梯度通过基元的高分辨率渲染深度图和法线图进行传播。与以往需要在训练过程中使用三维平面标注的前馈方法不同，PLANA3R 在没有显式平面监督的情况下学习三维平面结构，从而仅利用深度和法线标注即可在大规模立体数据集上进行可扩展的训练。我们在多个具有度量监督的室内场景数据集上验证了 PLANA3R，并在多种任务中展示了其对域外室内环境的强泛化能力，包括三维表面重建、深度估计和相对姿态估计。此外，通过采用平面三维表示方法，我们的方法还具备了准确的平面分割能力。项目页面见 https://lck666666.github.io/plana3r",
+        "translated_title": "PLANA3R：通过前馈平面泼溅实现零样本度量平面三维重建",
+        "label": [
+            "3D重建"
+        ],
+        "label_reason": "方法涉及3D重建但非图像像素级恢复任务",
+        "relevance_score": 5,
+        "novelty_score": 7,
+        "novelty_reason": "提出一种无需显式平面监督的3D平面重建方法"
     }
 ]
