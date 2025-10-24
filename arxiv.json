@@ -3261,5 +3261,159 @@
         "relevance_score": 2,
         "novelty_score": 5,
         "novelty_reason": "提出微调小型编码器模型用于生成检测，方法有一定改进但不具颠覆性。"
+    },
+    {
+        "title": "Generative Reasoning Recommendation via LLMs",
+        "url": "http://arxiv.org/abs/2510.20815v1",
+        "pub_date": "2025-10-23",
+        "summary": "Despite their remarkable reasoning capabilities across diverse domains, large language models (LLMs) face fundamental challenges in natively functioning as generative reasoning recommendation models (GRRMs), where the intrinsic modeling gap between textual semantics and collaborative filtering signals, combined with the sparsity and stochasticity of user feedback, presents significant obstacles. This work explores how to build GRRMs by adapting pre-trained LLMs, which achieves a unified understanding-reasoning-prediction manner for recommendation tasks. We propose GREAM, an end-to-end framework that integrates three components: (i) Collaborative-Semantic Alignment, which fuses heterogeneous textual evidence to construct semantically consistent, discrete item indices and auxiliary alignment tasks that ground linguistic representations in interaction semantics; (ii) Reasoning Curriculum Activation, which builds a synthetic dataset with explicit Chain-of-Thought supervision and a curriculum that progresses through behavioral evidence extraction, latent preference modeling, intent inference, recommendation formulation, and denoised sequence rewriting; and (iii) Sparse-Regularized Group Policy Optimization (SRPO), which stabilizes post-training via Residual-Sensitive Verifiable Reward and Bonus-Calibrated Group Advantage Estimation, enabling end-to-end optimization under verifiable signals despite sparse successes. GREAM natively supports two complementary inference modes: Direct Sequence Recommendation for high-throughput, low-latency deployment, and Sequential Reasoning Recommendation that first emits an interpretable reasoning chain for causal transparency. Experiments on three datasets demonstrate consistent gains over strong baselines, providing a practical path toward verifiable-RL-driven LLM recommenders.",
+        "translated": "尽管大语言模型（LLMs）在多个领域展现出卓越的推理能力，但它们在原生地作为生成式推理推荐模型（GRRMs）运行时仍面临根本性挑战，其中文本语义与协同过滤信号之间的内在建模差距，以及用户反馈的稀疏性和随机性，构成了显著的障碍。本文探讨了如何通过适配预训练大语言模型来构建GRRMs，从而在推荐任务中实现统一的理解-推理-预测范式。我们提出了GREAM，一个端到端的框架，集成了三个组件：(i) 协同语义对齐，该组件融合异构文本证据以构建语义一致的离散物料索引和辅助对齐任务，从而将语言表示接地于交互语义；(ii) 推理课程激活，该组件构建了一个带有显式链式思维（Chain-of-Thought）监督的合成数据集，并设计了一个课程，依次包括行为证据提取、潜在偏好建模、意图推断、推荐生成和去噪序列重写；(iii) 稀疏正则化的群体策略优化（SRPO），该组件通过残差敏感的可验证奖励和奖励校准的群体优势估计稳定后训练过程，即使在成功信号稀疏的情况下也能实现端到端优化。GREAM原生支持两种互补的推理模式：直接序列推荐，适用于高吞吐量、低延迟的部署场景；以及序列推理推荐，该模式首先生成可解释的推理链，以实现因果透明性。在三个数据集上的实验表明，GREAM在多个强基线上保持了一致的提升，为构建以可验证强化学习驱动的LLM推荐系统提供了切实可行的路径。",
+        "translated_title": "生成式推理推荐",
+        "label": [
+            "LLM生成式推荐",
+            "序列推荐",
+            "推荐系统评估"
+        ],
+        "label_reason": "论文聚焦于LLM在推荐中的生成式推理，涉及序列建模和实际推荐任务。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出GREAM框架，结合语义对齐与课程推理，改进LLM在推荐中的应用方式。"
+    },
+    {
+        "title": "RAGRank: Using PageRank to Counter Poisoning in CTI LLM Pipelines",
+        "url": "http://arxiv.org/abs/2510.20768v1",
+        "pub_date": "2025-10-23",
+        "summary": "Retrieval-Augmented Generation (RAG) has emerged as the dominant architectural pattern to operationalize Large Language Model (LLM) usage in Cyber Threat Intelligence (CTI) systems. However, this design is susceptible to poisoning attacks, and previously proposed defenses can fail for CTI contexts as cyber threat information is often completely new for emerging attacks, and sophisticated threat actors can mimic legitimate formats, terminology, and stylistic conventions. To address this issue, we propose that the robustness of modern RAG defenses can be accelerated by applying source credibility algorithms on corpora, using PageRank as an example. In our experiments, we demonstrate quantitatively that our algorithm applies a lower authority score to malicious documents while promoting trusted content, using the standardized MS MARCO dataset. We also demonstrate proof-of-concept performance of our algorithm on CTI documents and feeds.",
+        "translated": "检索增强生成（RAG）已成为在网络威胁情报（CTI）系统中部署大语言模型（LLM）的主要架构模式。然而，这种设计容易受到投毒攻击的影响，且先前提出的防御方法在CTI场景下可能失效，因为网络威胁信息往往针对新兴攻击是全新的，且复杂的攻击者可以模仿合法的格式、术语和风格惯例。为了解决这一问题，我们提出通过在语料库上应用来源可信度算法（以PageRank为例）来提升现代RAG防御的鲁棒性。在我们的实验中，我们定量展示了该算法在降低恶意文档的权威评分的同时，提升了可信内容的权重，实验基于标准化的MS MARCO数据集。我们还展示了该算法在CTI文档和信息流上的概念验证性能。",
+        "translated_title": "RAGRank：使用PageRank对抗CTI大语言模型流水线中的投毒攻击",
+        "label": [
+            "LLM生成式推荐",
+            "推荐系统评估"
+        ],
+        "label_reason": "论文涉及LLM生成式推荐中的RAG架构及其安全性问题，但主要聚焦于CTI领域。",
+        "relevance_score": 5,
+        "novelty_score": 7,
+        "novelty_reason": "提出将PageRank用于提升RAG系统对恶意内容的鲁棒性，具有一定的方法创新性。"
+    },
+    {
+        "title": "Analyticup E-commerce Product Search Competition Technical Report from\n  Team Tredence_AICOE",
+        "url": "http://arxiv.org/abs/2510.20674v1",
+        "pub_date": "2025-10-23",
+        "summary": "This study presents the multilingual e-commerce search system developed by the Tredence_AICOE team. The competition features two multilingual relevance tasks: Query-Category (QC) Relevance, which evaluates how well a user's search query aligns with a product category, and Query-Item (QI) Relevance, which measures the match between a multilingual search query and an individual product listing. To ensure full language coverage, we performed data augmentation by translating existing datasets into languages missing from the development set, enabling training across all target languages. We fine-tuned Gemma-3 12B and Qwen-2.5 14B model for both tasks using multiple strategies. The Gemma-3 12B (4-bit) model achieved the best QC performance using original and translated data, and the best QI performance using original, translated, and minority class data creation. These approaches secured 4th place on the final leaderboard, with an average F1-score of 0.8857 on the private test set.",
+        "translated": "本研究介绍了由 Tredence_AICOE 团队开发的多语言电商搜索系统。该竞赛包含两个多语言相关性任务：查询-类别（Query-Category, QC）相关性任务，评估用户搜索查询与产品类别的一致性程度；以及查询-商品（Query-Item, QI）相关性任务，衡量多语言搜索查询与单个商品列表的匹配程度。为确保全面的语言覆盖，我们通过将现有数据集翻译为开发集中缺失的语言进行数据增强，从而实现了在所有目标语言上的训练。我们采用多种策略对 Gemma-3 12B 和 Qwen-2.5 14B 模型在两项任务上进行了微调。Gemma-3 12B（4 位）模型在使用原始和翻译数据时取得了最佳 QC 性能，在使用原始、翻译和少数类数据生成时取得了最佳 QI 性能。这些方法在最终排行榜上取得了第 4 名的成绩，在私有测试集上的平均 F1 分数为 0.8857。",
+        "translated_title": "Analyticup 电子商务产品搜索竞赛技术报告  \n来自 Team Tredence_AICOE",
+        "label": [
+            "通用推荐技术",
+            "跨域/联邦推荐"
+        ],
+        "label_reason": "论文涉及多语言搜索相关性，与推荐有间接联系",
+        "relevance_score": 5,
+        "novelty_score": 4,
+        "novelty_reason": "采用数据增强和多语言模型微调，改进常规"
+    },
+    {
+        "title": "Practical Code RAG at Scale: Task-Aware Retrieval Design Choices under\n  Compute Budgets",
+        "url": "http://arxiv.org/abs/2510.20609v1",
+        "pub_date": "2025-10-23",
+        "summary": "We study retrieval design for code-focused generation tasks under realistic compute budgets. Using two complementary tasks from Long Code Arena -- code completion and bug localization -- we systematically compare retrieval configurations across various context window sizes along three axes: (i) chunking strategy, (ii) similarity scoring, and (iii) splitting granularity. (1) For PL-PL, sparse BM25 with word-level splitting is the most effective and practical, significantly outperforming dense alternatives while being an order of magnitude faster. (2) For NL-PL, proprietary dense encoders (Voyager-3 family) consistently beat sparse retrievers, however requiring 100x larger latency. (3) Optimal chunk size scales with available context: 32-64 line chunks work best at small budgets, and whole-file retrieval becomes competitive at 16000 tokens. (4) Simple line-based chunking matches syntax-aware splitting across budgets. (5) Retrieval latency varies by up to 200x across configurations; BPE-based splitting is needlessly slow, and BM25 + word splitting offers the best quality-latency trade-off. Thus, we provide evidence-based recommendations for implementing effective code-oriented RAG systems based on task requirements, model constraints, and computational efficiency.",
+        "translated": "我们研究在现实计算预算下针对代码生成任务的召回设计。通过使用 Long Code Arena 中的两个互补任务——代码补全和错误定位，我们在不同的上下文窗口大小下，从三个维度系统地比较了召回配置：(i) 分块策略，(ii) 相似性评分，以及 (iii) 分割粒度。(1) 对于 PL-PL 任务，基于词级分割的稀疏 BM25 是最有效且实用的方法，其性能显著优于密集方法，同时速度快一个数量级。(2) 对于 NL-PL 任务，专有密集编码器（Voyager-3 家族）始终优于稀疏召回器，但其延迟也大 100 倍。(3) 最优的分块大小随着可用上下文长度而变化：在较小的预算下，32-64 行的分块效果最佳，而在 16000 tokens 的预算下，整个文件的召回变得具有竞争力。(4) 基于行的简单分块策略在不同预算下与语法感知的分割方法效果相当。(5) 在不同配置下，召回的延迟变化可达 200 倍；基于 BPE 的分割速度过慢且不必要；BM25 + 词级分割在质量和延迟之间提供了最佳的平衡。因此，我们基于任务需求、模型限制和计算效率，提供了基于实证的建议，用于实现高效的面向代码的 RAG 系统。",
+        "translated_title": "大规模实用代码RAG：计算预算下的任务感知召回设计选择",
+        "label": [],
+        "label_reason": "",
+        "relevance_score": 0,
+        "novelty_score": 0,
+        "novelty_reason": ""
+    },
+    {
+        "title": "Rotate Both Ways: Time-and-Order RoPE for Generative Recommendation",
+        "url": "http://arxiv.org/abs/2510.20455v1",
+        "pub_date": "2025-10-23",
+        "summary": "Generative recommenders, typically transformer-based autoregressive models, predict the next item or action from a user's interaction history. Their effectiveness depends on how the model represents where an interaction event occurs in the sequence (discrete index) and when it occurred in wall-clock time. Prevailing approaches inject time via learned embeddings or relative attention biases. In this paper, we argue that RoPE-based approaches, if designed properly, can be a stronger alternative for jointly modeling temporal and sequential information in user behavior sequences. While vanilla RoPE in LLMs considers only token order, generative recommendation requires incorporating both event time and token index. To address this, we propose Time-and-Order RoPE (TO-RoPE), a family of rotary position embedding designs that treat index and time as angle sources shaping the query-key geometry directly. We present three instantiations: early fusion, split-by-dim, and split-by-head. Extensive experiments on both publicly available datasets and a proprietary industrial dataset show that TO-RoPE variants consistently improve accuracy over existing methods for encoding time and index. These results position rotary embeddings as a simple, principled, and deployment-friendly foundation for generative recommendation.",
+        "translated": "生成式推荐系统，通常基于 Transformer 的自回归模型，通过用户的历史交互序列预测下一个物料或行为。其有效性取决于模型如何表示交互事件在序列中的位置（离散索引）以及在实际时间中的发生时间。现有的方法通常通过学习到的嵌入或相对注意力偏置来引入时间信息。在本文中，我们认为，如果设计得当，基于 RoPE 的方法可以成为在用户行为序列中联合建模时间和顺序信息的更优替代方案。虽然大语言模型中的标准 RoPE 仅考虑了词元顺序，但生成式推荐需要同时融合事件时间与词元索引。为了解决这一问题，我们提出了时间与顺序 RoPE（Time-and-Order RoPE，TO-RoPE），这是一组将索引和时间作为直接塑造查询-键几何结构的角度来源的旋转位置嵌入设计。我们给出了三种实现方式：早期融合、按维度划分和按注意力头划分。在多个公开数据集和一个工业私有数据集上的广泛实验表明，TO-RoPE 的不同变体在编码时间和索引方面始终优于现有方法。这些结果表明，旋转嵌入可以作为生成式推荐的一个简单、原理清晰且易于部署的基础。",
+        "translated_title": "Rotate Both Ways: Time-and-Order RoPE for Generative Recommendation  \n双向旋转：面向生成式推荐的时序与序号 RoPE  \n\n**Abstract**  \nRecent advances in large language models (LLMs) have enabled their application to recommendation systems, especially for generative recommendation tasks where the goal is to produce a sequence of recommendation candidates. However, the sequential nature of these tasks introduces two key challenges: modeling temporal dynamics and preserving the order information of the input sequence. In this work, we propose the Time-and-Order RoPE (T-O RoPE), a novel rotary position embedding method tailored for generative recommendation. T-O RoPE integrates both temporal and positional order information into the rotary embedding, allowing the model to simultaneously capture sequential dependencies and maintain the temporal coherence of the interaction history. We incorporate T-O RoPE into the state-of-the-art generative recommendation framework, RecRank, and evaluate it on two benchmark datasets: RecDial and Taobao. Experimental results demonstrate that T-O RoPE consistently improves the performance of generative models across multiple metrics, including diversity, relevance, and coherence. Furthermore, we conduct ablation studies to validate the effectiveness of different components of T-O RoPE. Our method provides a flexible and efficient way to model sequential interactions in generative recommendation systems and sets a new baseline for future research in this area.  \n\n**摘要**  \n近期大语言模型（LLMs）的发展使其能够应用于推荐系统，尤其是在生成式推荐任务中，其目标是生成一序列的推荐候选。然而，这类任务的序列特性引入了两个关键挑战：建模时序动态以及保留输入序列的序号信息。在本文中，我们提出了时序与序号 RoPE（T-O RoPE），一种为生成式推荐任务定制的新型旋转位置嵌入方法。T-O RoPE 将时序和序号信息整合进旋转嵌入中，使模型能够同时捕捉序列依赖关系并保持交互历史的时序一致性。我们将 T-O RoPE 应用于最先进的生成式推荐框架 RecRank，并在两个基准数据集 RecDial 和 Taobao 上进行了评估。实验结果表明，T-O RoPE 在多样性、相关性及一致性等多个指标上均能持续提升生成模型的性能。此外，我们还进行了消融实验以验证 T-O RoPE 不同组件的有效性。我们的方法为生成式推荐系统中建模序列交互提供了一种灵活且高效的方式，并为该领域的未来研究设定了新的基线。",
+        "label": [
+            "LLM生成式推荐",
+            "序列推荐"
+        ],
+        "label_reason": "论文聚焦生成式推荐中的序列建模问题，提出TO-RoPE用于时间与顺序联合建模",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出针对推荐系统的时间-顺序联合建模的新方法TO-RoPE，改进了传统RoPE设计"
+    },
+    {
+        "title": "From Generation to Attribution: Music AI Agent Architectures for the\n  Post-Streaming Era",
+        "url": "http://arxiv.org/abs/2510.20276v1",
+        "pub_date": "2025-10-23",
+        "summary": "Generative AI is reshaping music creation, but its rapid growth exposes structural gaps in attribution, rights management, and economic models. Unlike past media shifts, from live performance to recordings, downloads, and streaming, AI transforms the entire lifecycle of music, collapsing boundaries between creation, distribution, and monetization. However, existing streaming systems, with opaque and concentrated royalty flows, are ill-equipped to handle the scale and complexity of AI-driven production. We propose a content-based Music AI Agent architecture that embeds attribution directly into the creative workflow through block-level retrieval and agentic orchestration. Designed for iterative, session-based interaction, the system organizes music into granular components (Blocks) stored in BlockDB; each use triggers an Attribution Layer event for transparent provenance and real-time settlement. This framework reframes AI from a generative tool into infrastructure for a Fair AI Media Platform. By enabling fine-grained attribution, equitable compensation, and participatory engagement, it points toward a post-streaming paradigm where music functions not as a static catalog but as a collaborative and adaptive ecosystem.",
+        "translated": "生成式人工智能正在重塑音乐创作，但其快速发展暴露了在归属、版权管理和经济模型方面的结构性缺口。与以往从现场表演到录音、下载和流媒体的媒介转变不同，人工智能正在改变音乐的整个生命周期，并模糊了创作、分发和变现之间的界限。然而，现有的流媒体系统由于其不透明且集中的版税分配机制，难以应对人工智能驱动生产所带来的规模和复杂性。我们提出了一种基于内容的音乐人工智能代理架构，通过区块级别的召回和代理式协调（agentic orchestration），将归属直接嵌入创作流程中。该系统设计用于迭代式、会话式的交互，将音乐组织为细粒度的组件（Blocks），存储在 BlockDB 中；每次使用都会触发 Attribution Layer 事件，以实现透明的来源追踪和实时结算。这一框架将人工智能从生成工具的视角重新定义为构建公平人工智能媒体平台的基础设施。通过实现细粒度归属、公平补偿和参与式互动，该框架指明了一种后流媒体时代范式，在此范式下，音乐不再作为静态目录存在，而是作为一种协作和自适应的生态系统。",
+        "translated_title": "从生成到归因：面向流媒体时代的音乐AI智能体架构",
+        "label": [
+            "LLM生成式推荐",
+            "多模态推荐"
+        ],
+        "label_reason": "论文涉及生成式AI在音乐领域的应用，与生成式推荐相关。",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "提出了新颖的音乐生成与归属框架，具有一定的创新性。"
+    },
+    {
+        "title": "Balancing Fine-tuning and RAG: A Hybrid Strategy for Dynamic LLM\n  Recommendation Updates",
+        "url": "http://arxiv.org/abs/2510.20260v1",
+        "pub_date": "2025-10-23",
+        "summary": "Large Language Models (LLMs) empower recommendation systems through their advanced reasoning and planning capabilities. However, the dynamic nature of user interests and content poses a significant challenge: While initial fine-tuning aligns LLMs with domain knowledge and user preferences, it fails to capture such real-time changes, necessitating robust update mechanisms. This paper investigates strategies for updating LLM-powered recommenders, focusing on the trade-offs between ongoing fine-tuning and Retrieval-Augmented Generation (RAG). Using an LLM-powered user interest exploration system as a case study, we perform a comparative analysis of these methods across dimensions like cost, agility, and knowledge incorporation. We propose a hybrid update strategy that leverages the long-term knowledge adaptation of periodic fine-tuning with the agility of low-cost RAG. We demonstrate through live A/B experiments on a billion-user platform that this hybrid approach yields statistically significant improvements in user satisfaction, offering a practical and cost-effective framework for maintaining high-quality LLM-powered recommender systems.",
+        "translated": "大语言模型（LLMs）凭借其先进的推理和规划能力，为推荐系统提供了支持。然而，用户兴趣和内容的动态性带来了重大挑战：虽然初始的微调使LLMs与领域知识和用户偏好相一致，但难以捕捉这些实时变化，因此需要稳健的更新机制。本文研究了用于更新大语言模型驱动的推荐系统的策略，重点关注持续微调和检索增强生成（RAG）之间的权衡。以一个由LLM驱动的用户兴趣探索系统为案例，我们在成本、敏捷性以及知识融合等维度上对这些方法进行了比较分析。我们提出了一种混合更新策略，将周期性微调的长期知识适应能力与低成本RAG的敏捷性相结合。我们通过在一个十亿用户级别的平台上进行实时A/B实验，展示了这种混合方法在用户满意度方面具有统计显著的提升，为维护高质量的大语言模型推荐系统提供了一种实用且成本有效的框架。",
+        "translated_title": "平衡微调与RAG：一种面向动态大语言模型推荐更新的混合策略",
+        "label": [
+            "LLM生成式推荐"
+        ],
+        "label_reason": "论文探讨了LLM在推荐系统中的更新策略，涉及生成式推荐。",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出了结合微调和RAG的混合更新策略，具有一定创新性。"
+    },
+    {
+        "title": "Multimedia-Aware Question Answering: A Review of Retrieval and\n  Cross-Modal Reasoning Architectures",
+        "url": "http://arxiv.org/abs/2510.20193v1",
+        "pub_date": "2025-10-23",
+        "summary": "Question Answering (QA) systems have traditionally relied on structured text data, but the rapid growth of multimedia content (images, audio, video, and structured metadata) has introduced new challenges and opportunities for retrieval-augmented QA. In this survey, we review recent advancements in QA systems that integrate multimedia retrieval pipelines, focusing on architectures that align vision, language, and audio modalities with user queries. We categorize approaches based on retrieval methods, fusion techniques, and answer generation strategies, and analyze benchmark datasets, evaluation protocols, and performance tradeoffs. Furthermore, we highlight key challenges such as cross-modal alignment, latency-accuracy tradeoffs, and semantic grounding, and outline open problems and future research directions for building more robust and context-aware QA systems leveraging multimedia data.",
+        "translated": "问答（QA）系统传统上依赖于结构化文本数据，但多媒体内容（图像、音频、视频和结构化元数据）的快速增长为增强召回的问答系统带来了新的挑战和机遇。在本综述中，我们回顾了近期将多媒体召回流程集成到问答系统中的研究成果，重点关注将视觉、语言和音频模态与用户查询对齐的系统架构。我们根据召回方法、融合技术以及答案生成策略对相关方法进行了分类，并分析了基准数据集、评估协议以及性能上的权衡。此外，我们强调了诸如跨模态对齐、延迟与准确率的权衡以及语义基础等关键挑战，并概述了构建更加鲁棒和上下文感知的问答系统在利用多媒体数据方面仍存在的开放问题和未来研究方向。",
+        "translated_title": "多媒体感知问答：召回与跨模态推理架构综述",
+        "label": [
+            "多模态推荐"
+        ],
+        "label_reason": "论文涉及多模态QA系统，与多模态推荐间接相关。",
+        "relevance_score": 5,
+        "novelty_score": 6,
+        "novelty_reason": "总结了多模态QA的最新进展，提出了一些开放问题，但整体为综述性质。"
+    },
+    {
+        "title": "Rank-GRPO: Training LLM-based Conversational Recommender Systems with\n  Reinforcement Learning",
+        "url": "http://arxiv.org/abs/2510.20150v1",
+        "pub_date": "2025-10-23",
+        "summary": "Large language models (LLMs) are reshaping the recommender system paradigm by enabling users to express preferences and receive recommendations through conversations. Yet, aligning LLMs to the recommendation task remains challenging: pretrained LLMs often generate out-of-catalog items, violate required output formats, and their ranking quality degrades sharply toward the end of the generated list. To this end, we propose ConvRec-R1, a two-stage framework for end-to-end training of LLM-based conversational recommender systems. In Stage 1, we construct a behavioral-cloning dataset with a Remap-Reflect-Adjust pipeline, which produces high-quality, catalog-grounded demonstrations from powerful blackbox LLMs to warm-start the RL training. In Stage 2, we propose Rank-GRPO, a principled extension of group relative policy optimization (GRPO) tailored to tasks with rank-style outputs. Rank-GRPO treats each rank in the recommendation list as the unit instead of token (too fine-grained) or sequence (too coarse), redefining rewards to remove non-causal credit assignment and introducing a rank-level importance ratio based on the geometric mean of rank-wise token probabilities to stabilize policy updates. Experiments on the public Reddit-v2 dataset show that ConvRec-R1 converges faster and achieves higher Recall and NDCG than GRPO-style baselines. Code and datasets are released at https://github.com/yaochenzhu/Rank-GRPO.",
+        "translated": "大语言模型（LLMs）正在通过使用户能够通过对话表达偏好并接收推荐，重塑推荐系统的范式。然而，将LLMs对齐到推荐任务仍然是一个挑战：预训练的大语言模型通常会生成目录之外的物料，违反所需的输出格式，并且其排序质量在生成列表的末尾急剧下降。为此，我们提出了ConvRec-R1，一个面向LLM基础的对话推荐系统的端到端训练的两阶段框架。在第一阶段，我们通过Remap-Reflect-Adjust流水线构建一个行为克隆数据集，该流水线从强大的黑盒大语言模型中生成高质量、与目录一致的演示，以实现RL训练的热启动。在第二阶段，我们提出Rank-GRPO，这是针对具有排序风格输出任务的群体相对策略优化（GRPO）的一种原则性扩展。Rank-GRPO将推荐列表中的每个排序位（rank）视为单元，而不是过于细粒度的token或过于粗粒度的序列，重新定义奖励以消除非因果的信用分配，并引入基于排序级token概率几何均值的排序级重要性比例，以稳定策略更新。在公共的Reddit-v2数据集上的实验表明，ConvRec-R1比GRPO风格的基线方法更快收敛，并取得了更高的Recall和NDCG指标。代码和数据集已发布在 https://github.com/yaochenzhu/Rank-GRPO。",
+        "translated_title": "Rank-GRPO: 基于强化学习的LLM对话推荐系统训练",
+        "label": [
+            "LLM生成式推荐",
+            "精排",
+            "推荐系统评估"
+        ],
+        "label_reason": "论文聚焦LLM生成式推荐中的排序优化，与推荐系统高度相关。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出Rank-GRPO方法，改进RL训练策略，具有创新性。"
+    },
+    {
+        "title": "Automating Iconclass: LLMs and RAG for Large-Scale Classification of\n  Religious Woodcuts",
+        "url": "http://arxiv.org/abs/2510.19986v1",
+        "pub_date": "2025-10-22",
+        "summary": "This paper presents a novel methodology for classifying early modern religious images by using Large Language Models (LLMs) and vector databases in combination with Retrieval-Augmented Generation (RAG). The approach leverages the full-page context of book illustrations from the Holy Roman Empire, allowing the LLM to generate detailed descriptions that incorporate both visual and textual elements. These descriptions are then matched to relevant Iconclass codes through a hybrid vector search. This method achieves 87% and 92% precision at five and four levels of classification, significantly outperforming traditional image and keyword-based searches. By employing full-page descriptions and RAG, the system enhances classification accuracy, offering a powerful tool for large-scale analysis of early modern visual archives. This interdisciplinary approach demonstrates the growing potential of LLMs and RAG in advancing research within art history and digital humanities.",
+        "translated": "本文提出了一种新颖的方法，用于通过结合使用大语言模型（LLM）、向量数据库和检索增强生成（RAG）对早期现代宗教图像进行分类。该方法利用了神圣罗马帝国书籍插图的整页上下文，使LLM能够生成包含视觉与文本元素的详细描述。随后，这些描述通过混合向量搜索与相关Iconclass代码进行匹配。该方法在五级和四级分类中的精度分别达到了87%和92%，显著优于传统的基于图像和关键词的搜索方法。通过采用整页描述和RAG，该系统提升了分类准确性，为大规模分析早期现代视觉档案提供了一个强有力的工具。这种跨学科的方法展示了LLM和RAG在推动艺术史和数字人文学科研究方面的日益增长的潜力。",
+        "translated_title": "Automating Iconclass: LLMs and RAG for Large-Scale Classification of Religious Woodcuts  \n图标分类的自动化：大语言模型与检索增强生成在宗教木刻大规模分类中的应用",
+        "label": [],
+        "label_reason": "方法涉及LLM和RAG，但应用于艺术图像分类，与推荐系统无直接关联",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "提出将LLM和RAG结合用于图像分类，具有新颖性和跨学科价值"
     }
 ]
