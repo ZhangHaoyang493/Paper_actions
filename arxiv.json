@@ -4029,5 +4029,116 @@
         "relevance_score": 1,
         "novelty_score": 7,
         "novelty_reason": "提出自动化人类活动分析方法并构建大规模数据集，对VLA模型预训练有显著创新。"
+    },
+    {
+        "title": "CausalRec: A CausalBoost Attention Model for Sequential Recommendation",
+        "url": "http://arxiv.org/abs/2510.21333v1",
+        "pub_date": "2025-10-24",
+        "summary": "Recent advances in correlation-based sequential recommendation systems have demonstrated substantial success. Specifically, the attention-based model outperforms other RNN-based and Markov chains-based models by capturing both short- and long-term dependencies more effectively. However, solely focusing on item co-occurrences overlooks the underlying motivations behind user behaviors, leading to spurious correlations and potentially inaccurate recommendations. To address this limitation, we present a novel framework that integrates causal attention for sequential recommendation, CausalRec. It incorporates a causal discovery block and a CausalBooster. The causal discovery block learns the causal graph in user behavior sequences, and we provide a theory to guarantee the identifiability of the learned causal graph. The CausalBooster utilizes the discovered causal graph to refine the attention mechanism, prioritizing behaviors with causal significance. Experimental evaluations on real-world datasets indicate that CausalRec outperforms several state-of-the-art methods, with average improvements of 7.21% in Hit Rate (HR) and 8.65% in Normalized Discounted Cumulative Gain (NDCG). To the best of our knowledge, this is the first model to incorporate causality through the attention mechanism in sequential recommendation, demonstrating the value of causality in generating more accurate and reliable recommendations.",
+        "translated": "近年来，基于关联性的序列推荐系统取得了显著进展。特别是，基于注意力机制的模型通过更有效地捕捉用户行为序列中的短期和长期依赖关系，优于其他基于RNN和马尔可夫链的模型。然而，仅关注物料共现关系会忽略用户行为背后的潜在动机，从而导致虚假相关性，并可能产生不准确的推荐结果。为解决这一局限性，我们提出了一种新颖的框架——CausalRec，用于序列推荐中的因果注意力机制。该框架包含一个因果发现模块和一个CausalBooster模块。因果发现模块学习用户行为序列中的因果图，并我们提供了理论保证以确保所学习因果图的可识别性。CausalBooster模块利用所发现的因果图来优化注意力机制，优先考虑具有因果重要性的行为。在真实数据集上的实验评估表明，CausalRec优于多种最先进的方法，平均在命中率（HR）上提升7.21%，在归一化折损累计增益（NDCG）上提升8.65%。据我们所知，这是首个通过注意力机制引入因果性以进行序列推荐的模型，展示了因果性在生成更准确、更可靠推荐中的重要价值。",
+        "translated_title": "CausalRec：一种用于序列推荐的因果增强注意力模型",
+        "label": [
+            "序列推荐",
+            "因果推荐",
+            "精排"
+        ],
+        "label_reason": "论文针对序列推荐提出因果注意力机制，显著提升推荐准确性，属于推荐系统核心环节",
+        "relevance_score": 9,
+        "novelty_score": 9,
+        "novelty_reason": "首次将因果发现与注意力机制结合，提出CausalBooster模块，创新性强"
+    },
+    {
+        "title": "Pctx: Tokenizing Personalized Context for Generative Recommendation",
+        "url": "http://arxiv.org/abs/2510.21276v1",
+        "pub_date": "2025-10-24",
+        "summary": "Generative recommendation (GR) models tokenize each action into a few discrete tokens (called semantic IDs) and autoregressively generate the next tokens as predictions, showing advantages such as memory efficiency, scalability, and the potential to unify retrieval and ranking. Despite these benefits, existing tokenization methods are static and non-personalized. They typically derive semantic IDs solely from item features, assuming a universal item similarity that overlooks user-specific perspectives. However, under the autoregressive paradigm, semantic IDs with the same prefixes always receive similar probabilities, so a single fixed mapping implicitly enforces a universal item similarity standard across all users. In practice, the same item may be interpreted differently depending on user intentions and preferences. To address this issue, we propose a personalized context-aware tokenizer that incorporates a user's historical interactions when generating semantic IDs. This design allows the same item to be tokenized into different semantic IDs under different user contexts, enabling GR models to capture multiple interpretive standards and produce more personalized predictions. Experiments on three public datasets demonstrate up to 11.44% improvement in NDCG@10 over non-personalized action tokenization baselines. Our code is available at https://github.com/YoungZ365/Pctx.",
+        "translated": "生成式推荐（GR）模型将每个行为编码为若干离散的token（称为语义ID），并以自回归方式生成下一个token作为预测，展现出内存高效、可扩展性强以及有望统一召回与排序等优势。尽管如此，现有token化方法仍为静态且非个性化。它们通常仅基于物料特征生成语义ID，假设存在一种通用的物料相似性标准，而忽略了用户特定视角。然而，在自回归范式下，具有相同前缀的语义ID始终会获得相似的概率，因此单一固定的映射隐式地强制所有用户遵循统一的物料相似性标准。在实际场景中，同一物料可能因用户意图和偏好不同而被赋予不同解读。为解决该问题，我们提出一种个性化上下文感知的token化器，该方法在生成语义ID时融入用户的历史交互信息。该设计允许同一物料在不同用户上下文中被编码为不同的语义ID，从而使得GR模型能够捕捉多种解读标准，生成更具个性化的预测结果。在三个公开数据集上的实验表明，相较于非个性化行为token化基线，我们的方法在NDCG@10指标上最高提升11.44%。我们的代码开源于https://github.com/YoungZ365/Pctx。",
+        "translated_title": "Pctx：用于生成式推荐的个性化上下文令牌化",
+        "label": [
+            "LLM生成式推荐（LLM-based Generative Recommendation）",
+            "序列推荐（Sequential Recommendation）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "论文聚焦生成式推荐中的个性化上下文建模，直接提升推荐精度，属核心推荐问题。",
+        "relevance_score": 10,
+        "novelty_score": 9,
+        "novelty_reason": "提出个性化上下文感知分词器，打破静态语义ID限制，实现用户特定的动态编码，创新性强。"
+    },
+    {
+        "title": "Bi-Level Optimization for Generative Recommendation: Bridging\n  Tokenization and Generation",
+        "url": "http://arxiv.org/abs/2510.21242v1",
+        "pub_date": "2025-10-24",
+        "summary": "Generative recommendation is emerging as a transformative paradigm by directly generating recommended items, rather than relying on matching. Building such a system typically involves two key components: (1) optimizing the tokenizer to derive suitable item identifiers, and (2) training the recommender based on those identifiers. Existing approaches often treat these components separately--either sequentially or in alternation--overlooking their interdependence. This separation can lead to misalignment: the tokenizer is trained without direct guidance from the recommendation objective, potentially yielding suboptimal identifiers that degrade recommendation performance.   To address this, we propose BLOGER, a Bi-Level Optimization for GEnerative Recommendation framework, which explicitly models the interdependence between the tokenizer and the recommender in a unified optimization process. The lower level trains the recommender using tokenized sequences, while the upper level optimizes the tokenizer based on both the tokenization loss and recommendation loss. We adopt a meta-learning approach to solve this bi-level optimization efficiently, and introduce gradient surgery to mitigate gradient conflicts in the upper-level updates, thereby ensuring that item identifiers are both informative and recommendation-aligned. Extensive experiments on real-world datasets demonstrate that BLOGER consistently outperforms state-of-the-art generative recommendation methods while maintaining practical efficiency with no significant additional computational overhead, effectively bridging the gap between item tokenization and autoregressive generation.",
+        "translated": "生成式推荐正作为一种变革性范式崭露头角，其通过直接生成推荐物料，而非依赖匹配机制。构建此类系统通常包含两个关键组件：（1）优化分词器以获得合适的物料标识符；（2）基于这些标识符训练推荐模型。现有方法通常将这两个组件独立处理——无论是顺序进行还是交替训练——忽视了它们之间的相互依赖性。这种分离可能导致对齐偏差：分词器在缺乏推荐目标直接指导的情况下进行训练，可能生成次优的标识符，从而降低推荐性能。\n\n为解决这一问题，我们提出 BLOGER，即面向生成式推荐的双层优化框架，其显式地在统一优化过程中建模分词器与推荐器之间的相互依赖性。底层利用分词后的序列训练推荐器，而上层则基于分词损失和推荐损失共同优化分词器。我们采用元学习方法高效求解该双层优化问题，并引入梯度手术以缓解上层更新中的梯度冲突，从而确保物料标识符既具有信息性又与推荐目标对齐。在多个真实数据集上的大量实验表明，BLOGER 在保持实用效率且无显著额外计算开销的前提下，始终优于当前最先进的生成式推荐方法，有效弥合了物料分词与自回归生成之间的鸿沟。",
+        "translated_title": "生成式推荐的双层优化：连接分词与生成",
+        "label": [
+            "LLM生成式推荐（LLM-based Generative Recommendation）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "论文聚焦生成式推荐中tokenization与生成的联合优化，直接解决推荐系统核心问题。",
+        "relevance_score": 10,
+        "novelty_score": 9,
+        "novelty_reason": "提出双层优化框架BLOGER，巧妙整合tokenizer与推荐器训练，显著提升生成式推荐性能。"
+    },
+    {
+        "title": "VOGUE: A Multimodal Dataset for Conversational Recommendation in Fashion",
+        "url": "http://arxiv.org/abs/2510.21151v1",
+        "pub_date": "2025-10-24",
+        "summary": "Multimodal conversational recommendation has emerged as a promising paradigm for delivering personalized experiences through natural dialogue enriched by visual and contextual grounding. Yet, current multimodal conversational recommendation datasets remain limited: existing resources either simulate conversations, omit user history, or fail to collect sufficiently detailed feedback, all of which constrain the types of research and evaluation they support.   To address these gaps, we introduce VOGUE, a novel dataset of 60 humanhuman dialogues in realistic fashion shopping scenarios. Each dialogue is paired with a shared visual catalogue, item metadata, user fashion profiles and histories, and post-conversation ratings from both Seekers and Assistants. This design enables rigorous evaluation of conversational inference, including not only alignment between predicted and ground-truth preferences, but also calibration against full rating distributions and comparison with explicit and implicit user satisfaction signals.   Our initial analyses of VOGUE reveal distinctive dynamics of visually grounded dialogue. For example, recommenders frequently suggest items simultaneously in feature-based groups, which creates distinct conversational phases bridged by Seeker critiques and refinements. Benchmarking multimodal large language models against human recommenders shows that while MLLMs approach human-level alignment in aggregate, they exhibit systematic distribution errors in reproducing human ratings and struggle to generalize preference inference beyond explicitly discussed items. These findings establish VOGUE as both a unique resource for studying multimodal conversational systems and as a challenge dataset beyond the current recommendation capabilities of existing top-tier multimodal foundation models such as GPT-4o-mini, GPT-5-mini, and Gemini-2.5-Flash.",
+        "translated": "多模态对话推荐已成为通过融合视觉和上下文信息的自然对话实现个性化体验的有前景范式。然而，当前的多模态对话推荐数据集仍存在局限：现有资源要么模拟对话，要么忽略用户历史，要么未能收集足够详尽的反馈，这些都限制了其支持的研究类型和评估能力。\n\n为弥补这些空白，我们提出VOGUE，一个包含60组真实时尚购物场景中的人与人对话的新数据集。每组对话均配有共享的视觉商品目录、物品元数据、用户时尚画像与历史记录，以及对话结束后由Seeker和Assistant双方提供的评分。该设计支持对对话推理进行严格评估，不仅包括预测偏好与真实偏好之间的一致性，还可与完整的评分分布进行校准，并与显式和隐式用户满意度信号进行对比。\n\n对VOGUE的初步分析揭示了视觉化对话的独特动态。例如，推荐系统常以基于特征的分组方式同时推荐多个物品，从而形成由Seeker的批评与细化所连接的特定对话阶段。将多模态大语言模型与人类推荐者进行基准对比显示，尽管MLLMs在整体对齐度上接近人类水平，但其在复现人类评分分布时存在系统性偏差，并且在超越明确讨论物品的偏好推断方面表现不佳。这些发现确立了VOGUE作为研究多模态对话系统独特资源的地位，并表明其作为对现有顶级多模态基础模型（如GPT-4o-mini、GPT-5-mini和Gemini-2.5-Flash）推荐能力的挑战性数据集。",
+        "translated_title": "VOGUE：一个面向时尚领域对话式推荐的多模态数据集",
+        "label": [
+            "多模态推荐",
+            "LLM生成式推荐",
+            "对话推荐",
+            "推荐系统评估"
+        ],
+        "label_reason": "论文构建多模态对话推荐数据集，支持LLM生成式推荐评估，涉及推荐系统核心环节",
+        "relevance_score": 8,
+        "novelty_score": 8,
+        "novelty_reason": "提出真实场景对话数据集VOGUE，支持多模态LLM评估，推动生成式推荐研究"
+    },
+    {
+        "title": "From Questions to Queries: An AI-powered Multi-Agent Framework for\n  Spatial Text-to-SQL",
+        "url": "http://arxiv.org/abs/2510.21045v1",
+        "pub_date": "2025-10-23",
+        "summary": "The complexity of Structured Query Language (SQL) and the specialized nature of geospatial functions in tools like PostGIS present significant barriers to non-experts seeking to analyze spatial data. While Large Language Models (LLMs) offer promise for translating natural language into SQL (Text-to-SQL), single-agent approaches often struggle with the semantic and syntactic complexities of spatial queries. To address this, we propose a multi-agent framework designed to accurately translate natural language questions into spatial SQL queries. The framework integrates several innovative components, including a knowledge base with programmatic schema profiling and semantic enrichment, embeddings for context retrieval, and a collaborative multi-agent pipeline as its core. This pipeline comprises specialized agents for entity extraction, metadata retrieval, query logic formulation, SQL generation, and a review agent that performs programmatic and semantic validation of the generated SQL to ensure correctness (self-verification). We evaluate our system using both the non-spatial KaggleDBQA benchmark and a new, comprehensive SpatialQueryQA benchmark that includes diverse geometry types, predicates, and three levels of query complexity. On KaggleDBQA, the system achieved an overall accuracy of 81.2% (221 out of 272 questions) after the review agent's review and corrections. For spatial queries, the system achieved an overall accuracy of 87.7% (79 out of 90 questions), compared with 76.7% without the review agent. Beyond accuracy, results also show that in some instances the system generates queries that are more semantically aligned with user intent than those in the benchmarks. This work makes spatial analysis more accessible, and provides a robust, generalizable foundation for spatial Text-to-SQL systems, advancing the development of autonomous GIS.",
+        "translated": "结构化查询语言（SQL）的复杂性以及在PostGIS等工具中地理空间函数的专业性，为非专业人士分析空间数据带来了显著障碍。尽管大语言模型（LLM）在将自然语言转化为SQL（文本到SQL）方面展现出潜力，但单智能体方法在处理空间查询的语义和语法复杂性时往往表现不佳。为此，我们提出了一种多智能体框架，旨在准确地将自然语言问题转化为空间SQL查询。该框架集成了多个创新组件，包括具有程序化模式剖析和语义增强的知识库、用于上下文检索的嵌入，以及作为核心的协作式多智能体流水线。该流水线包含专门用于实体提取、元数据检索、查询逻辑构建、SQL生成的智能体，以及一个审查智能体，该智能体对生成的SQL进行程序化和语义验证以确保其正确性（自验证）。我们使用非空间的KaggleDBQA基准测试和一个新的综合性SpatialQueryQA基准测试对系统进行了评估，后者涵盖了多种几何类型、谓词以及三个层次的查询复杂度。在KaggleDBQA上，系统在审查智能体进行审查和修正后，整体准确率达到81.2%（272个问题中正确回答221个）。对于空间查询，系统整体准确率达到87.7%（90个问题中正确回答79个），而未使用审查智能体时准确率为76.7%。除了准确率外，结果还表明，在某些情况下，系统生成的查询在语义上比基准测试中的查询更符合用户意图。本工作使空间分析更加易于访问，并为空间文本到SQL系统提供了稳健、可泛化的基础，推动了自主地理信息系统（GIS）的发展。",
+        "translated_title": "从问题到查询：一种用于空间文本到SQL的AI驱动多智能体框架",
+        "label": [],
+        "label_reason": "论文聚焦于自然语言到SQL的转换，属于数据库查询生成，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 7,
+        "novelty_reason": "提出多智能体协作框架，结合知识库与验证机制，改进了Text-to-SQL的准确性与鲁棒性。"
+    },
+    {
+        "title": "Communication Platform for Non-verbal Autistic children in Oman using\n  Android mobile",
+        "url": "http://arxiv.org/abs/2510.21028v1",
+        "pub_date": "2025-10-23",
+        "summary": "This paper discusses the issue regarding Non-verbal Autism Spectrum Disorder. It has been observed that this mental disorder is listed in major parts of the world including the US, UK, and India. To mitigate this type of disorder, a wide range of smartphones, computers, and artificial intelligence technologies have been used. This technology has helped the population cope with socialization and communication needs. Many applications have been developed to enhance the communication capabilities of non-verbal autistic children. This thesis project proposes the development of a platform that includes a web panel and an Android mobile application to assist non-verbal autistic children in communication, especially in Oman. Different interventions have been merged to improve the quality of life for people on the autism spectrum. The main problem identified in this case is that fragmented approaches are not suitable for autistic children. The augmented reality framework provides the capability to engage autistic children in creative play and self-reflection through interactive screen-based activities.",
+        "translated": "本文讨论了非言语型自闭症谱系障碍（Autism Spectrum Disorder）相关的问题。观察发现，该精神障碍在世界多个地区（包括美国、英国和印度）均有广泛报道。为缓解此类障碍，人们已广泛采用智能手机、计算机及人工智能技术。这些技术帮助患者应对社交与沟通需求。许多应用程序已被开发，以提升非言语型自闭症儿童的沟通能力。本论文项目提出开发一个包含网页管理面板和安卓移动应用程序的平台，旨在协助非言语型自闭症儿童进行沟通，尤其适用于阿曼地区。多种干预措施被整合，以提升自闭症谱系人群的生活质量。本研究识别出的主要问题是，碎片化的干预方法并不适合自闭症儿童。增强现实框架通过基于交互式屏幕的活动，使自闭症儿童能够参与创造性游戏和自我反思，从而提供有效的支持。",
+        "translated_title": "基于安卓移动设备的阿曼非语言自闭症儿童沟通平台",
+        "label": [],
+        "label_reason": "论文聚焦于自闭症儿童沟通辅助平台，与推荐系统无直接关联，属教育科技应用。",
+        "relevance_score": 1,
+        "novelty_score": 2,
+        "novelty_reason": "采用AR框架增强互动，属于应用层面常规设计，无推荐系统领域创新。"
+    },
+    {
+        "title": "Gaussian Mixture Flow Matching with Domain Alignment for Multi-Domain\n  Sequential Recommendation",
+        "url": "http://arxiv.org/abs/2510.21021v1",
+        "pub_date": "2025-10-23",
+        "summary": "Users increasingly interact with content across multiple domains, resulting in sequential behaviors marked by frequent and complex transitions. While Cross-Domain Sequential Recommendation (CDSR) models two-domain interactions, Multi-Domain Sequential Recommendation (MDSR) introduces significantly more domain transitions, compounded by challenges such as domain heterogeneity and imbalance. Existing approaches often overlook the intricacies of domain transitions, tend to overfit to dense domains while underfitting sparse ones, and struggle to scale effectively as the number of domains increases. We propose \\textit{GMFlowRec}, an efficient generative framework for MDSR that models domain-aware transition trajectories via Gaussian Mixture Flow Matching. GMFlowRec integrates: (1) a unified dual-masked Transformer to disentangle domain-invariant and domain-specific intents, (2) a Gaussian Mixture flow field to capture diverse behavioral patterns, and (3) a domain-aligned prior to support frequent and sparse transitions. Extensive experiments on JD and Amazon datasets demonstrate that GMFlowRec achieves state-of-the-art performance with up to 44\\% improvement in NDCG@5, while maintaining high efficiency via a single unified backbone, making it scalable for real-world multi-domain sequential recommendation.",
+        "translated": "用户在多个领域内日益频繁地交互内容，导致其序列行为呈现出频繁且复杂的领域转换特征。虽然跨领域序列推荐（CDSR）建模了两个领域的交互，但多领域序列推荐（MDSR）引入了显著更多的领域转换，并伴随领域异质性与不平衡等挑战。现有方法往往忽视领域转换的复杂性，倾向于对密集领域过拟合而对稀疏领域欠拟合，且随着领域数量增加，难以有效扩展。我们提出 \\textit{GMFlowRec}，一种高效的生成式框架用于MDSR，通过高斯混合流匹配（Gaussian Mixture Flow Matching）建模领域感知的转换轨迹。GMFlowRec集成以下三部分：(1) 统一的双掩码Transformer，以解耦领域不变与领域特定的意图；(2) 高斯混合流场，以捕捉多样的行为模式；(3) 领域对齐先验，以支持频繁与稀疏的领域转换。在JD和Amazon数据集上的大量实验表明，GMFlowRec在NDCG@5指标上实现了最高达44%的性能提升，同时通过单一统一的主干结构保持了高效率，使其适用于实际场景中的多领域序列推荐。",
+        "translated_title": "高斯混合流匹配与领域对齐的多领域序列推荐",
+        "label": [
+            "序列推荐",
+            "多模态推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "论文针对多域序列推荐提出生成式框架，建模跨域行为轨迹，直接解决推荐系统核心问题",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新性引入高斯混合流匹配建模行为轨迹，结合域对齐先验，提升跨域推荐性能"
     }
 ]
