@@ -3685,5 +3685,84 @@
         "relevance_score": 1,
         "novelty_score": 5,
         "novelty_reason": "提出基于代理的架构改进视觉推理"
+    },
+    {
+        "title": "A Data-Centric Approach to Multilingual E-Commerce Product Search: Case\n  Study on Query-Category and Query-Item Relevance",
+        "url": "http://arxiv.org/abs/2510.21671v1",
+        "pub_date": "2025-10-24",
+        "summary": "Multilingual e-commerce search suffers from severe data imbalance across languages, label noise, and limited supervision for low-resource languages--challenges that impede the cross-lingual generalization of relevance models despite the strong capabilities of large language models (LLMs). In this work, we present a practical, architecture-agnostic, data-centric framework to enhance performance on two core tasks: Query-Category (QC) relevance (matching queries to product categories) and Query-Item (QI) relevance (matching queries to product titles). Rather than altering the model, we redesign the training data through three complementary strategies: (1) translation-based augmentation to synthesize examples for languages absent in training, (2) semantic negative sampling to generate hard negatives and mitigate class imbalance, and (3) self-validation filtering to detect and remove likely mislabeled instances. Evaluated on the CIKM AnalytiCup 2025 dataset, our approach consistently yields substantial F1 score improvements over strong LLM baselines, achieving competitive results in the official competition. Our findings demonstrate that systematic data engineering can be as impactful as--and often more deployable than--complex model modifications, offering actionable guidance for building robust multilingual search systems in the real-world e-commerce settings.",
+        "translated": "多语言电商搜索面临语言间数据严重不平衡、标签噪声以及低资源语言监督信号不足等挑战，这些问题阻碍了相关性模型在跨语言场景下的泛化能力，即使大型语言模型（LLM）具备强大能力亦然。在本工作中，我们提出了一种实用、架构无关、以数据为中心的框架，旨在提升两个核心任务的性能：查询-类别（Query-Category, QC）相关性（将查询匹配至商品类别）和查询-物料（Query-Item, QI）相关性（将查询匹配至商品标题）。我们并未对模型结构进行修改，而是通过三种互补策略重新设计训练数据：（1）基于翻译的数据增强，为训练数据中缺失的语言合成样本；（2）语义负采样，生成难负例并缓解类别不平衡问题；（3）自验证过滤，检测并移除可能的错误标注样本。在CIKM AnalytiCup 2025数据集上的评估表明，我们的方法在多个强LLM基线模型上持续实现显著的F1分数提升，并在官方竞赛中取得具有竞争力的结果。研究结果表明，系统性的数据工程在提升性能方面可以与复杂的模型修改相媲美，且通常更具可部署性，为构建面向真实电商场景的稳健多语言搜索系统提供了可操作的指导。",
+        "translated_title": "以数据为中心的多语言电商产品搜索方法：查询-类别与查询-物料相关性案例研究",
+        "label": [
+            "Query-Item Relevance",
+            "Query-Category Relevance",
+            "负采样与对比学习",
+            "通用推荐技术"
+        ],
+        "label_reason": "聚焦多语言电商搜索中查询与商品/类目相关性，涉及负采样与数据增强，属于推荐系统相关任务",
+        "relevance_score": 6,
+        "novelty_score": 7,
+        "novelty_reason": "提出数据为中心的框架，结合翻译增强与自验证过滤，提升低资源语言性能，方法新颖且实用"
+    },
+    {
+        "title": "DeepAgent: A General Reasoning Agent with Scalable Toolsets",
+        "url": "http://arxiv.org/abs/2510.21618v1",
+        "pub_date": "2025-10-24",
+        "summary": "Large reasoning models have demonstrated strong problem-solving abilities, yet real-world tasks often require external tools and long-horizon interactions. Existing agent frameworks typically follow predefined workflows, which limit autonomous and global task completion. In this paper, we introduce DeepAgent, an end-to-end deep reasoning agent that performs autonomous thinking, tool discovery, and action execution within a single, coherent reasoning process. To address the challenges of long-horizon interactions, particularly the context length explosion from multiple tool calls and the accumulation of interaction history, we introduce an autonomous memory folding mechanism that compresses past interactions into structured episodic, working, and tool memories, reducing error accumulation while preserving critical information. To teach general-purpose tool use efficiently and stably, we develop an end-to-end reinforcement learning strategy, namely ToolPO, that leverages LLM-simulated APIs and applies tool-call advantage attribution to assign fine-grained credit to the tool invocation tokens. Extensive experiments on eight benchmarks, including general tool-use tasks (ToolBench, API-Bank, TMDB, Spotify, ToolHop) and downstream applications (ALFWorld, WebShop, GAIA, HLE), demonstrate that DeepAgent consistently outperforms baselines across both labeled-tool and open-set tool retrieval scenarios. This work takes a step toward more general and capable agents for real-world applications. The code and demo are available at https://github.com/RUC-NLPIR/DeepAgent.",
+        "translated": "大型推理模型已展现出强大的问题求解能力，然而现实世界任务通常需要外部工具支持以及长跨度交互。现有代理框架通常遵循预定义的工作流，这限制了自主性和全局任务完成能力。本文提出 DeepAgent，一种端到端的深度推理代理，能够在单一、连贯的推理过程中自主进行思考、工具发现与动作执行。为应对长跨度交互带来的挑战，特别是多次工具调用导致的上下文长度爆炸以及交互历史的累积问题，我们引入了一种自主记忆折叠机制，将过往交互压缩为结构化的场景记忆、工作记忆和工具记忆，从而在减少误差累积的同时保留关键信息。为高效且稳定地学习通用工具使用能力，我们开发了一种端到端强化学习策略，即 ToolPO，该策略利用大语言模型模拟的 API，并通过工具调用优势归因方法，对工具调用令牌进行细粒度的奖励分配。在八个基准数据集上的广泛实验，包括通用工具使用任务（ToolBench、API-Bank、TMDB、Spotify、ToolHop）以及下游应用（ALFWorld、WebShop、GAIA、HLE），表明 DeepAgent 在标注工具和开放集工具召回场景下均显著优于基线方法。本工作朝着面向实际应用的更通用、更强能力的代理迈出了重要一步。代码与演示可访问 https://github.com/RUC-NLPIR/DeepAgent。",
+        "translated_title": "DeepAgent：一种具备可扩展工具集的通用推理代理",
+        "label": [],
+        "label_reason": "论文聚焦通用推理智能体与工具调用，未针对推荐系统设计，无直接关联。",
+        "relevance_score": 3,
+        "novelty_score": 8,
+        "novelty_reason": "提出自主记忆折叠与ToolPO强化学习策略，对通用智能体有创新，但非推荐领域。"
+    },
+    {
+        "title": "Doc-Researcher: A Unified System for Multimodal Document Parsing and\n  Deep Research",
+        "url": "http://arxiv.org/abs/2510.21603v1",
+        "pub_date": "2025-10-24",
+        "summary": "Deep Research systems have revolutionized how LLMs solve complex questions through iterative reasoning and evidence gathering. However, current systems remain fundamentally constrained to textual web data, overlooking the vast knowledge embedded in multimodal documents Processing such documents demands sophisticated parsing to preserve visual semantics (figures, tables, charts, and equations), intelligent chunking to maintain structural coherence, and adaptive retrieval across modalities, which are capabilities absent in existing systems. In response, we present Doc-Researcher, a unified system that bridges this gap through three integrated components: (i) deep multimodal parsing that preserves layout structure and visual semantics while creating multi-granular representations from chunk to document level, (ii) systematic retrieval architecture supporting text-only, vision-only, and hybrid paradigms with dynamic granularity selection, and (iii) iterative multi-agent workflows that decompose complex queries, progressively accumulate evidence, and synthesize comprehensive answers across documents and modalities. To enable rigorous evaluation, we introduce M4DocBench, the first benchmark for Multi-modal, Multi-hop, Multi-document, and Multi-turn deep research. Featuring 158 expert-annotated questions with complete evidence chains across 304 documents, M4DocBench tests capabilities that existing benchmarks cannot assess. Experiments demonstrate that Doc-Researcher achieves 50.6% accuracy, 3.4xbetter than state-of-the-art baselines, validating that effective document research requires not just better retrieval, but fundamentally deep parsing that preserve multimodal integrity and support iterative research. Our work establishes a new paradigm for conducting deep research on multimodal document collections.",
+        "translated": "深度研究系统通过迭代推理和证据收集，彻底改变了大语言模型（LLM）解决复杂问题的方式。然而，当前系统仍从根本上受限于文本形式的网络数据，忽视了嵌入在多模态文档中的海量知识。处理此类文档需要复杂的解析技术以保留视觉语义（如图表、表格、图表和公式），智能的分块策略以维持结构连贯性，以及跨模态的自适应检索能力，而这些能力在现有系统中均缺失。为此，我们提出Doc-Researcher，一个统一的系统，通过三个集成组件弥合这一差距：（i）深度多模态解析，能够在保持布局结构和视觉语义的同时，从分块到文档级别生成多粒度表示；（ii）系统化的检索架构，支持纯文本、纯视觉以及混合范式，并具备动态粒度选择能力；（iii）迭代多智能体工作流，能够分解复杂查询，逐步积累证据，并在跨文档和跨模态的场景下合成全面的答案。为实现严格评估，我们引入M4DocBench，这是首个用于多模态、多跳、多文档和多轮次深度研究的基准测试。该基准包含158个专家标注的问题，覆盖304个文档的完整证据链，测试了现有基准无法评估的能力。实验表明，Doc-Researcher实现了50.6%的准确率，比现有最先进基线高出3.4倍，验证了有效的文档研究不仅需要更优的检索，更需要从根本上具备保持多模态完整性的深度解析能力，并支持迭代式研究。本工作为在多模态文档集合上开展深度研究建立了新的范式。",
+        "translated_title": "Doc-Researcher：一种用于多模态文档解析与深度研究的统一系统",
+        "label": [],
+        "label_reason": "论文聚焦多模态文档解析与深度研究，核心为信息检索与推理，非推荐系统任务。",
+        "relevance_score": 3,
+        "novelty_score": 8,
+        "novelty_reason": "提出统一多模态解析与检索框架，支持动态粒度选择与多智能体协作，创新性强。"
+    },
+    {
+        "title": "Redefining Retrieval Evaluation in the Era of LLMs",
+        "url": "http://arxiv.org/abs/2510.21440v1",
+        "pub_date": "2025-10-24",
+        "summary": "Traditional Information Retrieval (IR) metrics, such as nDCG, MAP, and MRR, assume that human users sequentially examine documents with diminishing attention to lower ranks. This assumption breaks down in Retrieval Augmented Generation (RAG) systems, where search results are consumed by Large Language Models (LLMs), which, unlike humans, process all retrieved documents as a whole rather than sequentially. Additionally, traditional IR metrics do not account for related but irrelevant documents that actively degrade generation quality, rather than merely being ignored. Due to these two major misalignments, namely human vs. machine position discount and human relevance vs. machine utility, classical IR metrics do not accurately predict RAG performance. We introduce a utility-based annotation schema that quantifies both the positive contribution of relevant passages and the negative impact of distracting ones. Building on this foundation, we propose UDCG (Utility and Distraction-aware Cumulative Gain), a metric using an LLM-oriented positional discount to directly optimize the correlation with the end-to-end answer accuracy. Experiments on five datasets and six LLMs demonstrate that UDCG improves correlation by up to 36% compared to traditional metrics. Our work provides a critical step toward aligning IR evaluation with LLM consumers and enables more reliable assessment of RAG components",
+        "translated": "传统信息检索（IR）指标，如 nDCG、MAP 和 MRR，假设人类用户会依次检视文档，并对排名较低的文档注意力逐渐降低。这一假设在检索增强生成（RAG）系统中不再成立，因为在 RAG 中，检索结果由大语言模型（LLM）消费，而 LLM 与人类不同，会整体处理所有检索到的文档，而非逐个顺序处理。此外，传统 IR 指标未考虑那些相关但无关的文档，这些文档会主动降低生成质量，而非仅仅被忽略。由于这两个主要错配——即人类与机器在位置衰减上的差异，以及人类相关性与机器效用之间的差异——经典 IR 指标无法准确预测 RAG 系统的性能。我们提出了一种基于效用的标注方案，用于量化相关段落的正向贡献以及干扰性段落的负向影响。在此基础上，我们提出了 UDCG（Utility and Distraction-aware Cumulative Gain），一种采用面向 LLM 的位置衰减策略的指标，直接优化与端到端答案准确率的相关性。在五个数据集和六种 LLM 上的实验表明，与传统指标相比，UDCG 的相关性提升了最高达 36%。我们的工作为实现 IR 评估与 LLM 消费者的对齐迈出了关键一步，并有助于更可靠地评估 RAG 各组件的性能。",
+        "translated_title": "重定义大语言模型时代下的召回评估",
+        "label": [
+            "召回",
+            "LLM生成式推荐",
+            "推荐系统评估"
+        ],
+        "label_reason": "论文聚焦RAG系统中召回评估，提出LLM导向的评估指标，与生成式推荐相关",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "提出UDCG新指标，结合LLM特性优化评估，提升与生成质量相关性"
+    },
+    {
+        "title": "SciNUP: Natural Language User Interest Profiles for Scientific\n  Literature Recommendation",
+        "url": "http://arxiv.org/abs/2510.21352v1",
+        "pub_date": "2025-10-24",
+        "summary": "The use of natural language (NL) user profiles in recommender systems offers greater transparency and user control compared to traditional representations. However, there is scarcity of large-scale, publicly available test collections for evaluating NL profile-based recommendation. To address this gap, we introduce SciNUP, a novel synthetic dataset for scholarly recommendation that leverages authors' publication histories to generate NL profiles and corresponding ground truth items. We use this dataset to conduct a comparison of baseline methods, ranging from sparse and dense retrieval approaches to state-of-the-art LLM-based rerankers. Our results show that while baseline methods achieve comparable performance, they often retrieve different items, indicating complementary behaviors. At the same time, considerable headroom for improvement remains, highlighting the need for effective NL-based recommendation approaches. The SciNUP dataset thus serves as a valuable resource for fostering future research and development in this area.",
+        "translated": "在推荐系统中使用自然语言（NL）用户画像相比传统表示方式提供了更高的透明度和用户控制能力。然而，目前缺乏大规模、公开可用的测试集用于评估基于NL画像的推荐方法。为弥补这一空白，我们提出了SciNUP，一个面向学术推荐的新型合成数据集，该数据集利用作者的发表历史生成NL画像及其对应的 ground truth 物料。我们利用该数据集对基线方法进行了对比，涵盖从稀疏和密集检索方法到最先进的大语言模型（LLM）重排器。实验结果表明，尽管基线方法在性能上表现相当，但它们召回的物料往往不同，显示出互补的行为特性。同时，仍存在显著的性能提升空间，凸显了有效NL推荐方法的必要性。因此，SciNUP数据集为推动该领域未来的研究与开发提供了宝贵的资源。",
+        "translated_title": "SciNUP：面向科学文献推荐的自然语言用户兴趣画像",
+        "label": [
+            "召回",
+            "重排",
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "论文构建NL用户画像用于学术推荐，涉及召回与重排，采用LLM等前沿方法，与推荐系统紧密相关。",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出合成数据集SciNUP，支持NL画像推荐，方法组合新颖，但未突破核心范式。"
     }
 ]
