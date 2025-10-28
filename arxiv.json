@@ -4140,5 +4140,307 @@
         "relevance_score": 9,
         "novelty_score": 8,
         "novelty_reason": "创新性引入高斯混合流匹配建模行为轨迹，结合域对齐先验，提升跨域推荐性能"
+    },
+    {
+        "title": "LimRank: Less is More for Reasoning-Intensive Information Reranking",
+        "url": "http://arxiv.org/abs/2510.23544v1",
+        "pub_date": "2025-10-27",
+        "summary": "Existing approaches typically rely on large-scale fine-tuning to adapt LLMs for information reranking tasks, which is computationally expensive. In this work, we demonstrate that modern LLMs can be effectively adapted using only minimal, high-quality supervision. To enable this, we design LIMRANK-SYNTHESIZER, a reusable and open-source pipeline for generating diverse, challenging, and realistic reranking examples. Using this synthetic data, we fine-tune our reranker model, LIMRANK. We evaluate LIMRANK on two challenging benchmarks, i.e., BRIGHT for reasoning-intensive retrieval and FollowIR for instruction-following retrieval. Our experiments demonstrate that LIMRANK achieves competitive performance, while being trained on less than 5% of the data typically used in prior work. Further ablation studies demonstrate the effectiveness of LIMRANK-SYNTHESIZER and the strong generalization capabilities of LIMRANK across downstream tasks, including scientific literature search and retrieval-augmented generation for knowledge-intensive problem solving.",
+        "translated": "现有方法通常依赖大规模微调来适配大语言模型（LLM）以完成信息重排任务，计算成本较高。在本研究中，我们证明现代大语言模型仅需少量高质量监督即可有效适配。为此，我们设计了 LIMRANK-SYNTHESIZER，一个可复用且开源的流水线，用于生成多样化、具有挑战性且贴近真实场景的重排示例。基于该合成数据，我们微调了重排模型 LIMRANK。我们在两个具有挑战性的基准数据集上评估了 LIMRANK，即用于推理密集型检索的 BRIGHT 和用于指令跟随型检索的 FollowIR。实验结果表明，LIMRANK 在仅使用先前工作通常所需数据量不到 5% 的情况下，仍能取得具有竞争力的性能。进一步的消融实验验证了 LIMRANK-SYNTHESIZER 的有效性，以及 LIMRANK 在下游任务中的强大泛化能力，涵盖科学文献检索和知识密集型问题求解中的检索增强生成等场景。",
+        "translated_title": "LimRank：少即是多——面向推理密集型信息重排的高效方法",
+        "label": [
+            "重排（Re-ranking）",
+            "LLM生成式推荐（LLM-based Generative Recommendation）"
+        ],
+        "label_reason": "论文聚焦LLM在信息重排任务中的高效微调，直接应用于推荐系统的重排环节，具备推荐系统相关性。",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出轻量级微调策略与合成数据生成框架，提升效率与泛化能力，属方法层面创新。"
+    },
+    {
+        "title": "Accurate and Scalable Multimodal Pathology Retrieval via Attentive\n  Vision-Language Alignment",
+        "url": "http://arxiv.org/abs/2510.23224v1",
+        "pub_date": "2025-10-27",
+        "summary": "The rapid digitization of histopathology slides has opened up new possibilities for computational tools in clinical and research workflows. Among these, content-based slide retrieval stands out, enabling pathologists to identify morphologically and semantically similar cases, thereby supporting precise diagnoses, enhancing consistency across observers, and assisting example-based education. However, effective retrieval of whole slide images (WSIs) remains challenging due to their gigapixel scale and the difficulty of capturing subtle semantic differences amid abundant irrelevant content. To overcome these challenges, we present PathSearch, a retrieval framework that unifies fine-grained attentive mosaic representations with global-wise slide embeddings aligned through vision-language contrastive learning. Trained on a corpus of 6,926 slide-report pairs, PathSearch captures both fine-grained morphological cues and high-level semantic patterns to enable accurate and flexible retrieval. The framework supports two key functionalities: (1) mosaic-based image-to-image retrieval, ensuring accurate and efficient slide research; and (2) multi-modal retrieval, where text queries can directly retrieve relevant slides. PathSearch was rigorously evaluated on four public pathology datasets and three in-house cohorts, covering tasks including anatomical site retrieval, tumor subtyping, tumor vs. non-tumor discrimination, and grading across diverse organs such as breast, lung, kidney, liver, and stomach. External results show that PathSearch outperforms traditional image-to-image retrieval frameworks. A multi-center reader study further demonstrates that PathSearch improves diagnostic accuracy, boosts confidence, and enhances inter-observer agreement among pathologists in real clinical scenarios. These results establish PathSearch as a scalable and generalizable retrieval solution for digital pathology.",
+        "translated": "组织病理切片的快速数字化为临床和研究工作流程中的计算工具开辟了新的可能性。其中，基于内容的切片检索尤为突出，使病理学家能够识别形态和语义上相似的病例，从而支持精准诊断、提升观察者间的一致性，并辅助基于实例的教学。然而，由于全切片图像（WSIs）具有数十亿像素的规模，且在大量无关内容中捕捉细微语义差异存在困难，因此有效检索全切片图像仍面临挑战。为克服这些挑战，我们提出PathSearch，一种融合了细粒度注意力马赛克表示与全局切片嵌入的检索框架，通过视觉-语言对比学习对齐二者。PathSearch在包含6,926个切片-报告对的语料库上进行训练，能够同时捕捉细粒度形态特征和高层次语义模式，从而实现准确且灵活的检索。该框架支持两大核心功能：（1）基于马赛克的图像到图像检索，确保切片检索的准确性和效率；（2）多模态检索，允许文本查询直接检索相关切片。PathSearch在四个公开病理数据集和三个内部队列上进行了严格评估，涵盖的任务包括解剖部位检索、肿瘤亚型识别、肿瘤与非肿瘤区分以及在乳腺、肺、肾、肝和胃等不同器官中的分级任务。外部评估结果表明，PathSearch优于传统的图像到图像检索框架。一项多中心读者研究进一步证明，在真实临床场景中，PathSearch能够提高诊断准确性、增强病理学家的信心，并提升观察者间的一致性。这些结果确立了PathSearch作为数字病理学中可扩展且具备泛化能力的检索解决方案的地位。",
+        "translated_title": "基于注意力机制的视觉-语言对齐实现准确且可扩展的多模态病理学检索",
+        "label": [],
+        "label_reason": "论文聚焦医学图像检索，属计算机视觉与医疗信息学，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 7,
+        "novelty_reason": "提出注意力机制与对比学习结合的新框架，方法新颖，但应用于医学图像检索而非推荐。"
+    },
+    {
+        "title": "Leveraging Hierarchical Organization for Medical Multi-document\n  Summarization",
+        "url": "http://arxiv.org/abs/2510.23104v1",
+        "pub_date": "2025-10-27",
+        "summary": "Medical multi-document summarization (MDS) is a complex task that requires effectively managing cross-document relationships. This paper investigates whether incorporating hierarchical structures in the inputs of MDS can improve a model's ability to organize and contextualize information across documents compared to traditional flat summarization methods. We investigate two ways of incorporating hierarchical organization across three large language models (LLMs), and conduct comprehensive evaluations of the resulting summaries using automated metrics, model-based metrics, and domain expert evaluation of preference, understandability, clarity, complexity, relevance, coverage, factuality, and coherence. Our results show that human experts prefer model-generated summaries over human-written summaries. Hierarchical approaches generally preserve factuality, coverage, and coherence of information, while also increasing human preference for summaries. Additionally, we examine whether simulated judgments from GPT-4 align with human judgments, finding higher agreement along more objective evaluation facets. Our findings demonstrate that hierarchical structures can improve the clarity of medical summaries generated by models while maintaining content coverage, providing a practical way to improve human preference for generated summaries.",
+        "translated": "医学多文档摘要（MDS）是一项复杂的任务，需要有效管理跨文档之间的关系。本文探讨了在MDS输入中引入层次结构是否能够相比传统平面摘要方法，提升模型在跨文档组织和上下文化信息方面的能力。我们研究了在三种大语言模型（LLMs）中引入层次组织的两种方式，并通过自动化指标、基于模型的指标以及领域专家对偏好、可理解性、清晰度、复杂度、相关性、覆盖率、事实性及连贯性等方面的评估，对生成的摘要进行了全面评测。实验结果表明，人类专家更偏好模型生成的摘要而非人工撰写的摘要。层次化方法通常能保持信息的事实性、覆盖率和连贯性，同时提升人类对摘要的偏好程度。此外，我们还考察了GPT-4模拟判断与人类判断的一致性，发现在更客观的评估维度上一致性更高。我们的研究结果表明，层次结构能够提升模型生成医学摘要的清晰度，同时保持内容覆盖率，为提升生成摘要的人类偏好提供了一种实用途径。",
+        "translated_title": "利用层级结构进行医学多文档摘要",
+        "label": [],
+        "label_reason": "论文聚焦医学多文档摘要，属NLP任务，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "提出层次化输入结构提升摘要质量，属NLP领域常规改进，非推荐系统创新。"
+    },
+    {
+        "title": "Think before Recommendation: Autonomous Reasoning-enhanced Recommender",
+        "url": "http://arxiv.org/abs/2510.23077v1",
+        "pub_date": "2025-10-27",
+        "summary": "The core task of recommender systems is to learn user preferences from historical user-item interactions. With the rapid development of large language models (LLMs), recent research has explored leveraging the reasoning capabilities of LLMs to enhance rating prediction tasks. However, existing distillation-based methods suffer from limitations such as the teacher model's insufficient recommendation capability, costly and static supervision, and superficial transfer of reasoning ability. To address these issues, this paper proposes RecZero, a reinforcement learning (RL)-based recommendation paradigm that abandons the traditional multi-model and multi-stage distillation approach. Instead, RecZero trains a single LLM through pure RL to autonomously develop reasoning capabilities for rating prediction. RecZero consists of two key components: (1) \"Think-before-Recommendation\" prompt construction, which employs a structured reasoning template to guide the model in step-wise analysis of user interests, item features, and user-item compatibility; and (2) rule-based reward modeling, which adopts group relative policy optimization (GRPO) to compute rewards for reasoning trajectories and optimize the LLM. Additionally, the paper explores a hybrid paradigm, RecOne, which combines supervised fine-tuning with RL, initializing the model with cold-start reasoning samples and further optimizing it with RL. Experimental results demonstrate that RecZero and RecOne significantly outperform existing baseline methods on multiple benchmark datasets, validating the superiority of the RL paradigm in achieving autonomous reasoning-enhanced recommender systems.",
+        "translated": "推荐系统的核心任务是从历史用户-物料交互中学习用户偏好。随着大语言模型（LLM）的快速发展，近期研究探索了利用LLM的推理能力来增强评分预测任务。然而，现有的基于蒸馏的方法存在诸多局限，例如教师模型推荐能力不足、监督成本高且静态、推理能力转移流于表面等。为解决这些问题，本文提出RecZero，一种基于强化学习（RL）的推荐范式，摒弃了传统的多模型、多阶段蒸馏方法。RecZero通过纯强化学习训练单个LLM，使其自主发展用于评分预测的推理能力。RecZero包含两个关键组件：（1）“先思考后推荐”提示构造，采用结构化推理模板，引导模型逐步分析用户兴趣、物料特征以及用户-物料匹配度；（2）基于规则的奖励建模，采用群体相对策略优化（GRPO）计算推理路径的奖励，并优化LLM。此外，本文还探索了一种混合范式RecOne，结合监督微调与强化学习，利用冷启动推理样本初始化模型，并进一步通过强化学习进行优化。实验结果表明，RecZero和RecOne在多个基准数据集上显著优于现有基线方法，验证了强化学习范式在实现具备自主推理能力的推荐系统方面的优越性。",
+        "translated_title": "推荐前思考：自主推理增强的推荐系统",
+        "label": [
+            "LLM生成式推荐（LLM-based Generative Recommendation）",
+            "精排（Ranking）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "论文提出基于强化学习的LLM自主推理推荐框架，直接提升精排阶段的预测能力，属推荐系统核心环节。",
+        "relevance_score": 10,
+        "novelty_score": 9,
+        "novelty_reason": "首创纯强化学习训练LLM进行推荐推理，脱离传统蒸馏范式，具备显著创新性与技术突破。"
+    },
+    {
+        "title": "Multi-Stage Field Extraction of Financial Documents with OCR and Compact\n  Vision-Language Models",
+        "url": "http://arxiv.org/abs/2510.23066v1",
+        "pub_date": "2025-10-27",
+        "summary": "Financial documents are essential sources of information for regulators, auditors, and financial institutions, particularly for assessing the wealth and compliance of Small and Medium-sized Businesses. However, SMB documents are often difficult to parse. They are rarely born digital and instead are distributed as scanned images that are none machine readable. The scans themselves are low in resolution, affected by skew or rotation, and often contain noisy backgrounds. These documents also tend to be heterogeneous, mixing narratives, tables, figures, and multilingual content within the same report. Such characteristics pose major challenges for automated information extraction, especially when relying on end to end large Vision Language Models, which are computationally expensive, sensitive to noise, and slow when applied to files with hundreds of pages.   We propose a multistage pipeline that leverages traditional image processing models and OCR extraction, together with compact VLMs for structured field extraction of large-scale financial documents. Our approach begins with image pre-processing, including segmentation, orientation detection, and size normalization. Multilingual OCR is then applied to recover page-level text. Upon analyzing the text information, pages are retrieved for coherent sections. Finally, compact VLMs are operated within these narrowed-down scopes to extract structured financial indicators.   Our approach is evaluated using an internal corpus of multi-lingual, scanned financial documents. The results demonstrate that compact VLMs, together with a multistage pipeline, achieves 8.8 times higher field level accuracy relative to directly feeding the whole document into large VLMs, only at 0.7 percent of the GPU cost and 92.6 percent less end-to-end service latency.",
+        "translated": "财务文件是监管机构、审计师及金融机构的重要信息来源，尤其在评估中小型企业（SMB）的资产状况与合规性方面具有关键作用。然而，SMB的文件通常难以解析：它们极少以数字形式生成，而是以扫描图像形式分发，且不具备机器可读性。这些扫描件分辨率较低，常存在倾斜或旋转问题，且背景通常含有噪声。此外，这些文档往往具有异构性，同一个报告中混合了叙述文本、表格、图表以及多语言内容。这些特征给自动化信息抽取带来了重大挑战，尤其是在依赖端到端大语言模型（VLM）时，因为此类模型在处理数百页文件时计算成本高昂、对噪声敏感且运行速度缓慢。\n\n我们提出了一种多阶段流水线方法，结合传统图像处理模型与OCR提取技术，并利用紧凑型视觉语言模型（VLM）实现大规模财务文档的结构化字段抽取。该方法首先进行图像预处理，包括分割、方向检测与尺寸归一化。随后，采用多语言OCR技术恢复页面级文本内容。在分析文本信息后，对页面进行检索，以定位语义连贯的章节。最后，在这些缩小的上下文范围内应用紧凑型VLM，提取结构化财务指标。\n\n本方法在内部构建的多语言扫描财务文档语料库上进行了评估。实验结果表明，相较于直接将整份文档输入大VLM，所提出的多阶段流水线与紧凑型VLM相结合的方法，在字段级准确率上提升了8.8倍，同时仅消耗0.7%的GPU计算成本，端到端服务延迟减少了92.6%。",
+        "translated_title": "多阶段金融文档字段提取：基于OCR与紧凑型视觉-语言模型的方法",
+        "label": [],
+        "label_reason": "论文聚焦金融文档信息抽取，涉及OCR与视觉语言模型，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "提出多阶段处理流程，结合轻量VLM与OCR，提升效率与精度，属常规改进。"
+    },
+    {
+        "title": "Improving Product Search Relevance with EAR-MP: A Solution for the CIKM\n  2025 AnalytiCup",
+        "url": "http://arxiv.org/abs/2510.23018v1",
+        "pub_date": "2025-10-27",
+        "summary": "Multilingual e-commerce search is challenging due to linguistic diversity and the noise inherent in user-generated queries. This paper documents the solution employed by our team (EAR-MP) for the CIKM 2025 AnalytiCup, which addresses two core tasks: Query-Category (QC) relevance and Query-Item (QI) relevance. Our approach first normalizes the multilingual dataset by translating all text into English, then mitigates noise through extensive data cleaning and normalization. For model training, we build on DeBERTa-v3-large and improve performance with label smoothing, self-distillation, and dropout. In addition, we introduce task-specific upgrades, including hierarchical token injection for QC and a hybrid scoring mechanism for QI. Under constrained compute, our method achieves competitive results, attaining an F1 score of 0.8796 on QC and 0.8744 on QI. These findings underscore the importance of systematic data preprocessing and tailored training strategies for building robust, resource-efficient multilingual relevance systems.",
+        "translated": "多语言电商搜索因语言多样性以及用户生成查询中固有的噪声而面临挑战。本文记录了我们团队（EAR-MP）在CIKM 2025 AnalytiCup竞赛中采用的解决方案，该方案针对两个核心任务：查询-类别（QC）相关性和查询-物料（QI）相关性。我们的方法首先通过对所有文本进行翻译，将多语言数据集统一归一化为英文，随后通过大规模的数据清洗与归一化处理降低噪声。在模型训练方面，我们基于DeBERTa-v3-large架构，并通过标签平滑、自蒸馏和Dropout技术提升性能。此外，我们引入了针对任务的优化策略，包括面向QC任务的层次化token注入，以及面向QI任务的混合打分机制。在计算资源受限的条件下，我们的方法取得了具有竞争力的结果，在QC任务上F1得分为0.8796，在QI任务上F1得分为0.8744。这些发现强调了系统性数据预处理与定制化训练策略在构建鲁棒且资源高效的多语言相关性系统中的重要性。",
+        "translated_title": "提升产品搜索相关性：EAR-MP 解决方案在 CIKM 2025 AnalytiCup 中的应用",
+        "label": [],
+        "label_reason": "论文聚焦多语言电商搜索相关性，属于信息检索范畴，与推荐系统无直接关联。",
+        "relevance_score": 3,
+        "novelty_score": 5,
+        "novelty_reason": "采用DeBERTa改进策略，属常规优化，无突破性创新。"
+    },
+    {
+        "title": "Tagging-Augmented Generation: Assisting Language Models in Finding\n  Intricate Knowledge In Long Contexts",
+        "url": "http://arxiv.org/abs/2510.22956v1",
+        "pub_date": "2025-10-27",
+        "summary": "Recent investigations into effective context lengths of modern flagship large language models (LLMs) have revealed major limitations in effective question answering (QA) and reasoning over long and complex contexts for even the largest and most impressive cadre of models. While approaches like retrieval-augmented generation (RAG) and chunk-based re-ranking attempt to mitigate this issue, they are sensitive to chunking, embedding and retrieval strategies and models, and furthermore, rely on extensive pre-processing, knowledge acquisition and indexing steps. In this paper, we propose Tagging-Augmented Generation (TAG), a lightweight data augmentation strategy that boosts LLM performance in long-context scenarios, without degrading and altering the integrity and composition of retrieved documents. We validate our hypothesis by augmenting two challenging and directly relevant question-answering benchmarks -- NoLima and NovelQA -- and show that tagging the context or even just adding tag definitions into QA prompts leads to consistent performance gains over the baseline -- up to 17% for 32K token contexts, and 2.9% in complex reasoning question-answering for multi-hop queries requiring knowledge across a wide span of text. Additional details are available at https://sites.google.com/view/tag-emnlp.",
+        "translated": "近期对现代主流大语言模型（LLM）有效上下文长度的研究表明，即使是最先进、规模最大的模型，在处理长且复杂的上下文时，其在问答（QA）和推理任务上的表现仍存在显著局限。尽管诸如检索增强生成（RAG）和基于片段的重排等方法试图缓解这一问题，但它们对片段划分、嵌入和检索策略及模型高度敏感，且依赖大量预处理、知识获取和索引步骤。本文提出一种轻量级数据增强策略——标签增强生成（TAG），用于提升LLM在长上下文场景下的性能，同时不破坏检索文档的完整性和结构组成。我们通过增强两个具有挑战性且直接相关的问答基准数据集——NoLima 和 NovelQA——验证了该假设，结果表明，在问答提示中对上下文进行标签标注，或仅添加标签定义，均能相对于基线模型带来稳定的性能提升：在32K token上下文场景下最高提升达17%，在需要跨越广泛文本跨度的知识多跳推理问答任务中提升2.9%。更多细节可参见 https://sites.google.com/view/tag-emnlp。",
+        "translated_title": "标签增强生成：辅助语言模型在长上下文中发现复杂知识",
+        "label": [],
+        "label_reason": "论文聚焦LLM长上下文问答增强，与推荐系统无直接关联，属通用NLP任务。",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "提出轻量级标签增强策略，提升长文本理解，属常规改进，非核心推荐创新。"
+    },
+    {
+        "title": "GTR-Mamba: Geometry-to-Tangent Routing for Hyperbolic POI Recommendation",
+        "url": "http://arxiv.org/abs/2510.22942v1",
+        "pub_date": "2025-10-27",
+        "summary": "Next Point-of-Interest (POI) recommendation is a critical task in modern Location-Based Social Networks (LBSNs), aiming to model the complex decision-making process of human mobility to provide personalized recommendations for a user's next check-in location. Existing POI recommendation models, predominantly based on Graph Neural Networks and sequential models, have been extensively studied. However, these models face a fundamental limitation: they struggle to simultaneously capture the inherent hierarchical structure of spatial choices and the dynamics and irregular shifts of user-specific temporal contexts. To overcome this limitation, we propose GTR-Mamba, a novel framework for cross-manifold conditioning and routing. GTR-Mamba leverages the distinct advantages of different mathematical spaces for different tasks: it models the static, tree-like preference hierarchies in hyperbolic geometry, while routing the dynamic sequence updates to a novel Mamba layer in the computationally stable and efficient Euclidean tangent space. This process is coordinated by a cross-manifold channel that fuses spatio-temporal information to explicitly steer the State Space Model (SSM), enabling flexible adaptation to contextual changes. Extensive experiments on three real-world datasets demonstrate that GTR-Mamba consistently outperforms state-of-the-art baseline models in next POI recommendation.",
+        "translated": "下一点兴趣点（POI）推荐是现代基于位置的社交网络（LBSNs）中的关键任务，旨在建模人类移动行为的复杂决策过程，为用户提供个性化的下一个签到地点推荐。现有的POI推荐模型主要基于图神经网络和序列模型，已被广泛研究。然而，这些模型面临一个根本性局限：难以同时捕捉空间选择的内在层次结构，以及用户特定时间上下文的动态性和不规则变化。为克服这一局限，我们提出GTR-Mamba，一种新型的跨流形条件与路由框架。GTR-Mamba利用不同数学空间在不同任务中的独特优势：在双曲几何空间中建模静态、树状的偏好层次结构，同时将动态序列更新路由至计算稳定且高效的欧几里得切空间中的新型Mamba层。该过程由一个跨流形通道协调，该通道融合时空信息以显式引导状态空间模型（SSM），从而实现对上下文变化的灵活适应。在三个真实数据集上的大量实验表明，GTR-Mamba在下一点POI推荐任务中始终优于当前最先进的基线模型。",
+        "translated_title": "GTR-Mamba：用于超球面POI推荐的几何到切空间路由机制",
+        "label": [
+            "序列推荐",
+            "图神经网络推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "论文聚焦POI推荐，融合超球面几何与Mamba序列建模，解决时空动态建模问题，属于推荐系统核心环节。",
+        "relevance_score": 8,
+        "novelty_score": 8,
+        "novelty_reason": "提出跨流形路由机制，结合超球面与欧氏空间建模，创新性地融合几何与序列建模，提升推荐动态适应性。"
+    },
+    {
+        "title": "MGFRec: Towards Reinforced Reasoning Recommendation with Multiple\n  Groundings and Feedback",
+        "url": "http://arxiv.org/abs/2510.22888v1",
+        "pub_date": "2025-10-27",
+        "summary": "The powerful reasoning and generative capabilities of large language models (LLMs) have inspired researchers to apply them to reasoning-based recommendation tasks, which require in-depth reasoning about user interests and the generation of recommended items. However, previous reasoning-based recommendation methods have typically performed inference within the language space alone, without incorporating the actual item space. This has led to over-interpreting user interests and deviating from real items. Towards this research gap, we propose performing multiple rounds of grounding during inference to help the LLM better understand the actual item space, which could ensure that its reasoning remains aligned with real items. Furthermore, we introduce a user agent that provides feedback during each grounding step, enabling the LLM to better recognize and adapt to user interests. Comprehensive experiments conducted on three Amazon review datasets demonstrate the effectiveness of incorporating multiple groundings and feedback. These findings underscore the critical importance of reasoning within the actual item space, rather than being confined to the language space, for recommendation tasks.",
+        "translated": "大语言模型（LLM）强大的推理与生成能力激发了研究者将其应用于基于推理的推荐任务，这类任务要求对用户兴趣进行深度推理，并生成推荐物料。然而，以往的基于推理的推荐方法通常仅在语言空间内执行推理，未融入真实的物料空间，导致对用户兴趣的过度解读，并偏离真实物料。针对这一研究空白，我们提出在推理过程中执行多轮接地操作，以帮助LLM更好地理解真实物料空间，从而确保其推理过程与真实物料保持一致。此外，我们引入了一个用户代理，在每一阶段的接地过程中提供反馈，使LLM能够更好地识别并适应用户兴趣。在三个Amazon评论数据集上进行的综合性实验表明，引入多轮接地与反馈机制具有显著有效性。这些发现凸显了在推荐任务中，推理应基于真实物料空间，而非局限于语言空间，具有关键重要性。",
+        "translated_title": "MGFRec：基于多锚点与反馈的强化推理推荐",
+        "label": [
+            "LLM生成式推荐（LLM-based Generative Recommendation）",
+            "序列推荐（Sequential Recommendation）",
+            "召回（Recall）"
+        ],
+        "label_reason": "论文聚焦LLM在推荐中推理与生成，通过多轮接地和用户反馈增强推荐准确性，直接关联推荐系统核心环节。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出多轮接地与用户反馈机制，提升LLM在真实物品空间的推理能力，改进现有生成式推荐方法。"
+    },
+    {
+        "title": "Civic Ground Truth in News Recommenders: A Method for Public Value\n  Scoring",
+        "url": "http://arxiv.org/abs/2510.22865v1",
+        "pub_date": "2025-10-26",
+        "summary": "Research in news recommendation systems (NRS) continues to explore the best ways to integrate normative goals such as editorial objectives and public service values into existing systems. Prior efforts have incorporated expert input or audience feedback to quantify these values, laying the groundwork for more civic-minded recommender systems. This paper contributes to that trajectory, introducing a method for embedding civic values into NRS through large-scale, structured audience evaluations. The proposed civic ground truth approach aims to generate value-based labels through a nationally representative survey that are generalisable across a wider news corpus, using automated metadata enrichment.",
+        "translated": "新闻推荐系统（NRS）的研究持续探索将规范性目标（如编辑目标与公共服务价值）融入现有系统中的最佳方式。先前的研究已通过引入专家意见或受众反馈来量化这些价值，为构建更具公共责任感的推荐系统奠定了基础。本文沿着这一研究路径做出贡献，提出一种通过大规模、结构化的受众评估将公共价值嵌入NRS的方法。所提出的公共价值基准方法旨在通过一项具有全国代表性的调查生成基于价值的标签，并利用自动化元数据增强技术，使这些标签能够推广至更广泛的新闻语料库。",
+        "translated_title": "新闻推荐系统中的公民事实真相：一种公共价值评分方法",
+        "label": [
+            "通用推荐技术",
+            "推荐系统评估"
+        ],
+        "label_reason": "论文聚焦新闻推荐中公共价值评估，提出基于大规模受众调查的地面真值构建方法，属推荐系统评估与价值导向技术。",
+        "relevance_score": 7,
+        "novelty_score": 6,
+        "novelty_reason": "方法基于调查数据与自动化元数据增强，属现有评估框架的扩展，无颠覆性创新。"
+    },
+    {
+        "title": "REVISION:Reflective Intent Mining and Online Reasoning Auxiliary for\n  E-commerce Visual Search System Optimization",
+        "url": "http://arxiv.org/abs/2510.22739v1",
+        "pub_date": "2025-10-26",
+        "summary": "In Taobao e-commerce visual search, user behavior analysis reveals a large proportion of no-click requests, suggesting diverse and implicit user intents. These intents are expressed in various forms and are difficult to mine and discover, thereby leading to the limited adaptability and lag in platform strategies. This greatly restricts users' ability to express diverse intents and hinders the scalability of the visual search system. This mismatch between user implicit intent expression and system response defines the User-SearchSys Intent Discrepancy. To alleviate the issue, we propose a novel framework REVISION. This framework integrates offline reasoning mining with online decision-making and execution, enabling adaptive strategies to solve implicit user demands. In the offline stage, we construct a periodic pipeline to mine discrepancies from historical no-click requests. Leveraging large models, we analyze implicit intent factors and infer optimal suggestions by jointly reasoning over query and product metadata. These inferred suggestions serve as actionable insights for refining platform strategies. In the online stage, REVISION-R1-3B, trained on the curated offline data, performs holistic analysis over query images and associated historical products to generate optimization plans and adaptively schedule strategies across the search pipeline. Our framework offers a streamlined paradigm for integrating large models with traditional search systems, enabling end-to-end intelligent optimization across information aggregation and user interaction. Experimental results demonstrate that our approach improves the efficiency of implicit intent mining from large-scale search logs and significantly reduces the no-click rate.",
+        "translated": "在淘宝电商视觉搜索中，用户行为分析显示存在大量无点击请求，表明用户意图具有多样性且具有隐性特征。这些意图以多种形式表达，难以挖掘和发现，导致平台策略的适应性受限且响应滞后。这极大地限制了用户表达多样化意图的能力，阻碍了视觉搜索系统的扩展性。用户隐性意图表达与系统响应之间的不匹配定义为“用户-搜索系统意图差异”（User-SearchSys Intent Discrepancy）。为缓解该问题，我们提出一种新颖的框架 REVISION。该框架融合离线推理挖掘与在线决策执行，支持自适应策略以解决隐性用户需求。在离线阶段，我们构建周期性流程，从历史无点击请求中挖掘意图差异。借助大语言模型，我们联合推理查询与商品元数据，分析隐性意图因素并推断最优建议。这些推断出的建议作为可操作的洞察，用于优化平台策略。在在线阶段，基于精心整理的离线数据训练得到的 REVISION-R1-3B，对查询图像及关联历史物料进行整体分析，生成优化方案，并在搜索流程中自适应调度策略。本框架为大语言模型与传统搜索系统的集成提供了简洁范式，支持在信息聚合与用户交互中实现端到端智能优化。实验结果表明，我们的方法提升了从大规模搜索日志中挖掘隐性意图的效率，并显著降低了无点击率。",
+        "translated_title": "修订：面向电商视觉搜索系统优化的反思意图挖掘与在线推理辅助机制",
+        "label": [
+            "LLM生成式推荐（LLM-based Generative Recommendation）",
+            "序列推荐（Sequential Recommendation）",
+            "召回（Recall）"
+        ],
+        "label_reason": "论文通过LLM挖掘用户隐式意图，辅助电商视觉搜索优化，涉及召回与生成式推荐环节",
+        "relevance_score": 8,
+        "novelty_score": 8,
+        "novelty_reason": "结合离线意图挖掘与在线推理调度，提出端到端优化框架，具有显著创新性"
+    },
+    {
+        "title": "$\\text{E}^2\\text{Rank}$: Your Text Embedding can Also be an Effective\n  and Efficient Listwise Reranker",
+        "url": "http://arxiv.org/abs/2510.22733v1",
+        "pub_date": "2025-10-26",
+        "summary": "Text embedding models serve as a fundamental component in real-world search applications. By mapping queries and documents into a shared embedding space, they deliver competitive retrieval performance with high efficiency. However, their ranking fidelity remains limited compared to dedicated rerankers, especially recent LLM-based listwise rerankers, which capture fine-grained query-document and document-document interactions. In this paper, we propose a simple yet effective unified framework $\\text{E}^2\\text{Rank}$, means Efficient Embedding-based Ranking (also means Embedding-to-Rank), which extends a single text embedding model to perform both high-quality retrieval and listwise reranking through continued training under a listwise ranking objective, thereby achieving strong effectiveness with remarkable efficiency. By applying cosine similarity between the query and document embeddings as a unified ranking function, the listwise ranking prompt, which is constructed from the original query and its candidate documents, serves as an enhanced query enriched with signals from the top-K documents, akin to pseudo-relevance feedback (PRF) in traditional retrieval models. This design preserves the efficiency and representational quality of the base embedding model while significantly improving its reranking performance. Empirically, $\\textrm{E}^2\\text{Rank}$ achieves state-of-the-art results on the BEIR reranking benchmark and demonstrates competitive performance on the reasoning-intensive BRIGHT benchmark, with very low reranking latency. We also show that the ranking training process improves embedding performance on the MTEB benchmark. Our findings indicate that a single embedding model can effectively unify retrieval and reranking, offering both computational efficiency and competitive ranking accuracy.",
+        "translated": "文本嵌入模型是实际搜索应用中的基础组件。通过将查询与文档映射到共享的嵌入空间，它们在保证高效率的同时实现了具有竞争力的召回性能。然而，其排序保真度相较于专用的重排模型仍显不足，尤其是近期基于大语言模型（LLM）的列表式重排模型，后者能够捕捉细粒度的查询-文档和文档-文档交互。本文提出了一种简单而有效的统一框架 $\\text{E}^2\\text{Rank}$，即高效嵌入式排序（也称嵌入到排序），该框架通过在列表式排序目标下对单一文本嵌入模型进行持续训练，使其同时具备高质量的召回与列表式重排能力，从而在显著提升效率的同时实现强大的有效性。通过在查询与文档嵌入之间采用余弦相似度作为统一的排序函数，由原始查询及其候选文档构建的列表式排序提示，相当于一个融合了前K个文档信号的增强查询，类似于传统检索模型中的伪相关反馈（PRF）。该设计在保持基础嵌入模型效率与表征质量的同时，显著提升了其重排性能。实验表明，$\\textrm{E}^2\\text{Rank}$ 在 BEIR 重排基准测试中达到了当前最佳水平，在推理密集型的 BRIGHT 基准测试中也展现出具有竞争力的表现，且重排延迟极低。我们还发现，排序训练过程能够提升嵌入模型在 MTEB 基准测试上的性能。我们的研究结果表明，单一嵌入模型能够有效统一召回与重排，兼具计算效率与具有竞争力的排序精度。",
+        "translated_title": "$\\text{E}^2\\text{Rank}$：你的文本嵌入也可以成为一种高效且有效的列表式重排模型",
+        "label": [
+            "重排（Re-ranking）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "论文提出将文本嵌入模型扩展为高效重排器，直接应用于推荐系统重排环节，提升排序质量与效率。",
+        "relevance_score": 8,
+        "novelty_score": 8,
+        "novelty_reason": "通过统一框架将嵌入模型用于重排，结合列表排序目标训练，创新性地提升效率与效果，非传统方法。"
+    },
+    {
+        "title": "ATLAS: Actor-Critic Task-Completion with Look-ahead Action Simulation",
+        "url": "http://arxiv.org/abs/2510.22732v1",
+        "pub_date": "2025-10-26",
+        "summary": "We observe that current state-of-the-art web-agents are unable to effectively adapt to new environments without neural network fine-tuning, without which they produce inefficient execution plans due to a lack of awareness of the structure and dynamics of the new environment. To address this limitation, we introduce ATLAS (Actor-Critic Task-completion with Look-ahead Action Simulation), a memory-augmented agent that is able to make plans grounded in a model of the environment by simulating the consequences of those actions in cognitive space. Our agent starts by building a \"cognitive map\" by performing a lightweight curiosity driven exploration of the environment. The planner proposes candidate actions; the simulator predicts their consequences in cognitive space; a critic analyzes the options to select the best roll-out and update the original plan; and a browser executor performs the chosen action. On the WebArena-Lite Benchmark, we achieve a 63% success rate compared to 53.9% success rate for the previously published state-of-the-art. Unlike previous systems, our modular architecture requires no website-specific LLM fine-tuning. Ablations show sizable drops without the world-model, hierarchical planner, and look-ahead-based replanner confirming their complementary roles within the design of our system",
+        "translated": "我们观察到，当前最先进的网页智能体在未进行神经网络微调的情况下，无法有效适应新环境，从而因缺乏对新环境结构与动态特性的认知，产生低效的执行计划。为解决这一局限，我们提出 ATLAS（Actor-Critic Task-completion with Look-ahead Action Simulation），一种具备记忆增强能力的智能体，其能够通过在认知空间中模拟动作后果，基于环境模型制定计划。该智能体首先通过轻量级好奇心驱动的探索构建“认知地图”。规划器提出候选动作；模拟器预测这些动作在认知空间中的后果；评判器分析各选项以选择最优执行路径并更新原始计划；浏览器执行器则执行选定的动作。在 WebArena-Lite 基准测试中，我们实现了 63% 的成功率，而此前发表的最先进方法的成功率为 53.9%。与以往系统不同，我们的模块化架构无需针对特定网站进行大语言模型微调。消融实验表明，在缺少世界模型、分层规划器和基于前瞻的重规划器的情况下，性能显著下降，验证了它们在系统设计中的互补作用。",
+        "translated_title": "ATLAS：基于前瞻动作模拟的演员-评论家任务完成方法",
+        "label": [],
+        "label_reason": "论文聚焦于网页智能体任务执行与环境建模，未涉及推荐系统核心环节。",
+        "relevance_score": 2,
+        "novelty_score": 7,
+        "novelty_reason": "提出模块化智能体架构与前瞻行动模拟，对任务规划有创新性改进。"
+    },
+    {
+        "title": "Windsock is Dancing: Adaptive Multimodal Retrieval-Augmented Generation",
+        "url": "http://arxiv.org/abs/2510.22694v1",
+        "pub_date": "2025-10-26",
+        "summary": "Multimodal Retrieval-Augmented Generation (MRAG) has emerged as a promising method to generate factual and up-to-date responses of Multimodal Large Language Models (MLLMs) by incorporating non-parametric knowledge from external knowledge bases. However, existing MRAG approaches suffer from static retrieval strategies, inflexible modality selection, and suboptimal utilization of retrieved information, leading to three critical challenges: determining when to retrieve, what modality to incorporate, and how to utilize retrieved information effectively. To address these challenges, we introduce Windsock, a query-dependent module making decisions on retrieval necessity and modality selection, effectively reducing computational overhead and improving response quality. Additionally, we propose Dynamic Noise-Resistance (DANCE) Instruction Tuning, an adaptive training strategy that enhances MLLMs' ability to utilize retrieved information while maintaining robustness against noise. Moreover, we adopt a self-assessment approach leveraging knowledge within MLLMs to convert question-answering datasets to MRAG training datasets. Extensive experiments demonstrate that our proposed method significantly improves the generation quality by 17.07% while reducing 8.95% retrieval times.",
+        "translated": "多模态检索增强生成（MRAG）作为一种有前景的方法，通过融合外部知识库中的非参数化知识，提升了多模态大语言模型（MLLMs）生成事实性且时效性强的回答的能力。然而，现有MRAG方法受限于静态的检索策略、缺乏灵活性的模态选择机制，以及对检索信息利用不足，导致三个关键挑战：何时进行检索、应引入何种模态，以及如何有效利用检索到的信息。为应对这些挑战，我们提出Windsock，一种依赖于查询的模块，用于决策是否进行检索及选择何种模态，从而有效降低计算开销并提升响应质量。此外，我们提出动态抗噪（DANCE）指令微调，一种自适应训练策略，在增强MLLMs利用检索信息能力的同时，保持其对噪声的鲁棒性。同时，我们采用一种自评估方法，利用MLLMs内部知识将问答数据集转换为MRAG训练数据集。大量实验表明，所提出的方法在生成质量上显著提升17.07%，同时将检索次数减少8.95%。",
+        "translated_title": "风袜在舞动：自适应多模态检索增强生成",
+        "label": [
+            "LLM生成式推荐",
+            "多模态推荐",
+            "召回"
+        ],
+        "label_reason": "论文聚焦多模态检索增强生成，涉及LLM生成式推荐中的召回与模态选择，与推荐系统中信息检索环节相关。",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "提出动态噪声抵抗训练与自评估数据转换，改进检索策略与信息利用，具有显著创新性。"
+    },
+    {
+        "title": "Diversification as Risk Minimization",
+        "url": "http://arxiv.org/abs/2510.22681v1",
+        "pub_date": "2025-10-26",
+        "summary": "Users tend to remember failures of a search session more than its many successes. This observation has led to work on search robustness, where systems are penalized if they perform very poorly on some queries. However, this principle of robustness has been overlooked within a single query. An ambiguous or underspecified query (e.g., ``jaguar'') can have several user intents, where popular intents often dominate the ranking, leaving users with minority intents unsatisfied. Although the diversification literature has long recognized this issue, existing metrics only model the average relevance across intents and provide no robustness guarantees. More surprisingly, we show theoretically and empirically that many well-known diversification algorithms are no more robust than a naive, non-diversified algorithm. To address this critical gap, we propose to frame diversification as a risk-minimization problem. We introduce VRisk, which measures the expected risk faced by the least-served fraction of intents in a query. Optimizing VRisk produces a robust ranking, reducing the likelihood of poor user experiences. We then propose VRisker, a fast greedy re-ranker with provable approximation guarantees. Finally, experiments on NTCIR INTENT-2, TREC Web 2012, and MovieLens show the vulnerability of existing methods. VRisker reduces worst-case intent failures by up to 33% with a minimal 2% drop in average performance.",
+        "translated": "用户往往对搜索会话中的失败记忆更为深刻，而非其诸多成功。这一观察促使人们开展搜索鲁棒性研究，即当系统在某些查询上表现极差时，会受到惩罚。然而，这种鲁棒性原则在单个查询内部却未被充分重视。一个模糊或定义不足的查询（如“jaguar”）可能对应多个用户意图，其中主流意图通常主导排序结果，导致少数意图的用户需求得不到满足。尽管多样性相关文献早已意识到这一问题，但现有指标仅建模各意图的平均相关性，无法提供任何鲁棒性保障。更令人惊讶的是，我们从理论和实验两方面证明，许多知名的多样性算法在鲁棒性上并不优于朴素的非多样性算法。为弥补这一关键空白，我们提出将多样性建模为一种风险最小化问题。我们引入VRisk，用于衡量查询中服务最差的意图子集所面临的预期风险。优化VRisk可生成鲁棒排序，降低用户糟糕体验的可能性。随后，我们提出VRisker，一种快速贪心重排算法，具有可证明的近似保证。最后，在NTCIR INTENT-2、TREC Web 2012和MovieLens数据集上的实验表明现有方法存在脆弱性，VRisker在平均性能仅下降2%的情况下，将最坏情况下的意图失败率最高降低33%。",
+        "translated_title": "多样化作为风险最小化",
+        "label": [
+            "重排（Re-ranking）",
+            "推荐系统评估（Evaluation Metrics / Offline/Online Testing）"
+        ],
+        "label_reason": "论文聚焦查询内意图多样性优化，提出风险最小化框架与重排算法，直接应用于推荐系统重排环节。",
+        "relevance_score": 8,
+        "novelty_score": 8,
+        "novelty_reason": "提出VRisk新指标与VRisker重排算法，理论与实验双重验证，显著提升重排鲁棒性，属创新性工作。"
+    },
+    {
+        "title": "Tools are under-documented: Simple Document Expansion Boosts Tool\n  Retrieval",
+        "url": "http://arxiv.org/abs/2510.22670v1",
+        "pub_date": "2025-10-26",
+        "summary": "Large Language Models (LLMs) have recently demonstrated strong capabilities in tool use, yet progress in tool retrieval remains hindered by incomplete and heterogeneous tool documentation. To address this challenge, we introduce Tool-DE, a new benchmark and framework that systematically enriches tool documentation with structured fields to enable more effective tool retrieval, together with two dedicated models, Tool-Embed and Tool-Rank. We design a scalable document expansion pipeline that leverages both open- and closed-source LLMs to generate, validate, and refine enriched tool profiles at low cost, producing large-scale corpora with 50k instances for embedding-based retrievers and 200k for rerankers. On top of this data, we develop two models specifically tailored for tool retrieval: Tool-Embed, a dense retriever, and Tool-Rank, an LLM-based reranker. Extensive experiments on ToolRet and Tool-DE demonstrate that document expansion substantially improves retrieval performance, with Tool-Embed and Tool-Rank achieving new state-of-the-art results on both benchmarks. We further analyze the contribution of individual fields to retrieval effectiveness, as well as the broader impact of document expansion on both training and evaluation. Overall, our findings highlight both the promise and limitations of LLM-driven document expansion, positioning Tool-DE, along with the proposed Tool-Embed and Tool-Rank, as a foundation for future research in tool retrieval.",
+        "translated": "大语言模型（LLM）近期在工具使用方面展现出强大的能力，然而工具召回的进展仍受限于工具文档的不完整性和异构性。为应对这一挑战，我们提出Tool-DE，一个全新的基准和框架，该框架系统性地通过结构化字段丰富工具文档，以实现更有效的工具召回，并配套提出两个专用模型：Tool-Embed与Tool-Rank。我们设计了一条可扩展的文档扩展流水线，利用开源和闭源大语言模型以低成本生成、验证并优化增强后的工具档案，构建了大规模语料库，包含50k实例用于基于嵌入的召回模型，以及200k实例用于重排模型。在此数据基础上，我们开发了两个专门针对工具召回设计的模型：Tool-Embed（一种稠密召回模型）和Tool-Rank（一种基于大语言模型的重排模型）。在ToolRet和Tool-DE两个基准上的大量实验表明，文档扩展显著提升了召回性能，Tool-Embed和Tool-Rank在两个基准上均取得了新的最先进结果。我们进一步分析了各个结构化字段对召回效果的贡献，以及文档扩展对训练和评估的整体影响。总体而言，我们的研究揭示了基于大语言模型的文档扩展的潜力与局限性，确立了Tool-DE及所提出的Tool-Embed和Tool-Rank作为未来工具召回研究的重要基础。",
+        "translated_title": "工具文档不足：简单的文档扩展提升工具召回",
+        "label": [
+            "召回",
+            "重排",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "论文聚焦工具检索中的召回与重排，使用LLM生成文档扩展，提升检索效果，属于推荐系统中信息检索环节的延伸应用。",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "提出基于LLM的文档扩展框架并构建专用模型，对工具检索有显著改进，创新性较强但非推荐系统核心问题。"
+    },
+    {
+        "title": "ATOM: AdapTive and OptiMized dynamic temporal knowledge graph\n  construction using LLMs",
+        "url": "http://arxiv.org/abs/2510.22590v1",
+        "pub_date": "2025-10-26",
+        "summary": "In today's rapidly expanding data landscape, knowledge extraction from unstructured text is vital for real-time analytics, temporal inference, and dynamic memory frameworks. However, traditional static knowledge graph (KG) construction often overlooks the dynamic and time-sensitive nature of real-world data, limiting adaptability to continuous changes. Moreover, recent zero- or few-shot approaches that avoid domain-specific fine-tuning or reliance on prebuilt ontologies often suffer from instability across multiple runs, as well as incomplete coverage of key facts. To address these challenges, we introduce ATOM (AdapTive and OptiMized), a few-shot and scalable approach that builds and continuously updates Temporal Knowledge Graphs (TKGs) from unstructured texts. ATOM splits input documents into minimal, self-contained \"atomic\" facts, improving extraction exhaustivity and stability. Then, it constructs atomic TKGs from these facts while employing a dual-time modeling that distinguishes when information is observed from when it is valid. The resulting atomic TKGs are subsequently merged in parallel. Empirical evaluations demonstrate that ATOM achieves ~18% higher exhaustivity, ~17% better stability, and over 90% latency reduction compared to baseline methods, demonstrating a strong scalability potential for dynamic TKG construction.",
+        "translated": "在当今快速增长的数据环境中，从非结构化文本中提取知识对于实时分析、时序推理和动态记忆框架至关重要。然而，传统的静态知识图谱（KG）构建方法通常忽视了现实世界数据的动态性和时效性，限制了其对持续变化的适应能力。此外，近期提出的零样本或少样本方法，虽避免了领域特定微调或依赖预构建本体，但往往在多次运行中表现出不稳定性，并且对关键事实的覆盖不完整。为应对这些挑战，我们提出 ATOM（AdapTive and OptiMized），一种少样本且可扩展的方法，用于从非结构化文本中构建并持续更新时序知识图谱（TKGs）。ATOM 将输入文档分解为最小、自包含的“原子”事实，从而提升提取的完备性和稳定性。随后，它基于这些原子事实构建原子 TKG，并采用双时间建模机制，区分信息被观测到的时间与信息有效的时间。最终，这些原子 TKG 以并行方式合并。实证评估表明，与基线方法相比，ATOM 的提取完备性提高约 18%，稳定性提升约 17%，延迟降低超过 90%，展现出在动态 TKG 构建中强大的可扩展性潜力。",
+        "translated_title": "ATOM：基于大语言模型的自适应与优化动态时序知识图谱构建",
+        "label": [
+            "多模态推荐",
+            "负采样与对比学习"
+        ],
+        "label_reason": "论文聚焦动态知识图谱构建，与推荐系统间接相关，可应用于多模态推荐中的知识增强",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出原子化事实提取与双时间建模，提升稳定性与覆盖度，为知识图谱构建提供新方法"
+    },
+    {
+        "title": "Open Multimodal Retrieval-Augmented Factual Image Generation",
+        "url": "http://arxiv.org/abs/2510.22521v1",
+        "pub_date": "2025-10-26",
+        "summary": "Large Multimodal Models (LMMs) have achieved remarkable progress in generating photorealistic and prompt-aligned images, but they often produce outputs that contradict verifiable knowledge, especially when prompts involve fine-grained attributes or time-sensitive events. Conventional retrieval-augmented approaches attempt to address this issue by introducing external information, yet they are fundamentally incapable of grounding generation in accurate and evolving knowledge due to their reliance on static sources and shallow evidence integration. To bridge this gap, we introduce ORIG, an agentic open multimodal retrieval-augmented framework for Factual Image Generation (FIG), a new task that requires both visual realism and factual grounding. ORIG iteratively retrieves and filters multimodal evidence from the web and incrementally integrates the refined knowledge into enriched prompts to guide generation. To support systematic evaluation, we build FIG-Eval, a benchmark spanning ten categories across perceptual, compositional, and temporal dimensions. Experiments demonstrate that ORIG substantially improves factual consistency and overall image quality over strong baselines, highlighting the potential of open multimodal retrieval for factual image generation.",
+        "translated": "大语言多模态模型（LMMs）在生成逼真且与提示对齐的图像方面取得了显著进展，但它们常常生成与可验证知识相矛盾的结果，尤其是在提示涉及细粒度属性或时间敏感事件时。传统的检索增强方法试图通过引入外部信息来解决这一问题，但由于其依赖静态信息源和浅层证据整合，本质上无法将生成过程扎根于准确且不断演化的知识体系。为弥合这一差距，我们提出ORIG，一个面向事实图像生成（FIG）任务的代理式开放多模态检索增强框架。该任务要求图像在具备视觉真实感的同时，还需具备事实性支撑。ORIG通过迭代地从网络中检索并过滤多模态证据，逐步将精炼后的知识整合进增强的提示中，以引导图像生成。为支持系统性评估，我们构建了FIG-Eval基准，涵盖感知、组合和时间三个维度的十个类别。实验表明，ORIG在事实一致性与整体图像质量方面显著优于强基线方法，凸显了开放多模态检索在事实图像生成中的潜力。",
+        "translated_title": "开放多模态检索增强事实性图像生成",
+        "label": [],
+        "label_reason": "论文聚焦于多模态图像生成与事实一致性，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 7,
+        "novelty_reason": "提出开放多模态检索增强框架，改进事实一致性，方法新颖但非推荐领域。"
+    },
+    {
+        "title": "FAIR-RAG: Faithful Adaptive Iterative Refinement for Retrieval-Augmented\n  Generation",
+        "url": "http://arxiv.org/abs/2510.22344v1",
+        "pub_date": "2025-10-25",
+        "summary": "While Retrieval-Augmented Generation (RAG) mitigates hallucination and knowledge staleness in Large Language Models (LLMs), existing frameworks often falter on complex, multi-hop queries that require synthesizing information from disparate sources. Current advanced RAG methods, employing iterative or adaptive strategies, lack a robust mechanism to systematically identify and fill evidence gaps, often propagating noise or failing to gather a comprehensive context. We introduce FAIR-RAG, a novel agentic framework that transforms the standard RAG pipeline into a dynamic, evidence-driven reasoning process. At its core is an Iterative Refinement Cycle governed by a module we term Structured Evidence Assessment (SEA). The SEA acts as an analytical gating mechanism: it deconstructs the initial query into a checklist of required findings and audits the aggregated evidence to identify confirmed facts and, critically, explicit informational gaps. These gaps provide a precise signal to an Adaptive Query Refinement agent, which generates new, targeted sub-queries to retrieve missing information. This cycle repeats until the evidence is verified as sufficient, ensuring a comprehensive context for a final, strictly faithful generation. We conducted experiments on challenging multi-hop QA benchmarks, including HotpotQA, 2WikiMultiHopQA, and MusiQue. In a unified experimental setup, FAIR-RAG significantly outperforms strong baselines. On HotpotQA, it achieves an F1-score of 0.453 -- an absolute improvement of 8.3 points over the strongest iterative baseline -- establishing a new state-of-the-art for this class of methods on these benchmarks. Our work demonstrates that a structured, evidence-driven refinement process with explicit gap analysis is crucial for unlocking reliable and accurate reasoning in advanced RAG systems for complex, knowledge-intensive tasks.",
+        "translated": "尽管检索增强生成（RAG）缓解了大语言模型（LLM）中的幻觉和知识陈旧问题，但现有框架在处理需要从多个来源综合信息的复杂多跳查询时往往表现不佳。当前先进的RAG方法，采用迭代或自适应策略，缺乏一种稳健机制来系统性地识别和填补证据空白，常常传播噪声或无法获取全面的上下文。我们提出FAIR-RAG，一种新颖的智能体框架，将标准RAG流程转化为动态、以证据驱动的推理过程。其核心是一个由我们称为结构化证据评估（SEA）模块所控制的迭代优化循环。SEA作为分析性门控机制：它将初始查询解构为所需发现的清单，并审核聚合后的证据，以识别已确认的事实，以及关键的、明确的信息空白。这些空白为自适应查询优化智能体提供精确信号，该智能体生成新的、有针对性的子查询以检索缺失信息。此循环持续进行，直至证据被验证为充分，从而确保最终生成阶段具备全面的上下文，且严格忠实于事实。我们在具有挑战性的多跳问答基准测试集上进行了实验，包括HotpotQA、2WikiMultiHopQA和MusiQue。在统一的实验设置下，FAIR-RAG显著超越了强基线方法。在HotpotQA上，其F1得分达到0.453——比最强的迭代基线方法绝对提升8.3个百分点——在这些基准测试中确立了该类方法的新state-of-the-art。我们的工作表明，具有显式空白分析的结构化、以证据驱动的优化过程，对于在复杂、知识密集型任务中实现先进RAG系统的可靠且准确的推理至关重要。",
+        "translated_title": "FAIR-RAG：面向检索增强生成的忠实自适应迭代优化方法",
+        "label": [],
+        "label_reason": "论文聚焦RAG框架的迭代优化，用于多跳问答，非推荐系统核心环节",
+        "relevance_score": 3,
+        "novelty_score": 8,
+        "novelty_reason": "提出结构化证据评估与自适应查询优化机制，显著提升复杂问答性能"
+    },
+    {
+        "title": "PatenTEB: A Comprehensive Benchmark and Model Family for Patent Text\n  Embedding",
+        "url": "http://arxiv.org/abs/2510.22264v1",
+        "pub_date": "2025-10-25",
+        "summary": "Patent text embeddings enable prior art search, technology landscaping, and patent analysis, yet existing benchmarks inadequately capture patent-specific challenges. We introduce PatenTEB, a comprehensive benchmark comprising 15 tasks across retrieval, classification, paraphrase, and clustering, with 2.06 million examples. PatenTEB employs domain-stratified splits, domain specific hard negative mining, and systematic coverage of asymmetric fragment-to-document matching scenarios absent from general embedding benchmarks. We develop the patembed model family through multi-task training, spanning 67M to 344M parameters with context lengths up to 4096 tokens. External validation shows strong generalization: patembed-base achieves state-of-the-art on MTEB BigPatentClustering.v2 (0.494 V-measure vs. 0.445 previous best), while patembed-large achieves 0.377 NDCG@100 on DAPFAM. Systematic ablations reveal that multi-task training improves external generalization despite minor benchmark costs, and that domain-pretrained initialization provides consistent advantages across task families. All resources will be made available at https://github.com/iliass-y/patenteb. Keywords: patent retrieval, sentence embeddings, multi-task learning, asymmetric retrieval, benchmark evaluation, contrastive learning.",
+        "translated": "专利文本嵌入能够支持现有技术检索、技术布局分析以及专利分析，然而现有的基准测试未能充分捕捉专利领域特有的挑战。我们提出 PatenTEB，一个综合性基准测试，包含检索、分类、改写和聚类等15项任务，共涵盖206万例样本。PatenTEB采用领域分层划分、领域特定的难负例挖掘，并系统性覆盖了通用嵌入基准中缺失的非对称片段-文档匹配场景。我们通过多任务训练开发了 patembed 模型系列，参数规模从67M到344M不等，上下文长度最高达4096个token。外部验证表明其具有良好的泛化能力：patembed-base 在 MTEB BigPatentClustering.v2 上达到最新性能（0.494 V-measure，优于此前最佳的0.445），而 patembed-large 在 DAPFAM 上取得0.377的 NDCG@100。系统性消融实验表明，尽管在基准测试中成本略有增加，多任务训练仍能提升外部泛化性能；同时，领域预训练初始化在各类任务中均表现出持续优势。所有资源将公开于 https://github.com/iliass-y/patenteb。关键词：专利检索、句子嵌入、多任务学习、非对称检索、基准评估、对比学习。",
+        "translated_title": "PatenTEB：面向专利文本嵌入的综合基准与模型家族",
+        "label": [
+            "负采样与对比学习",
+            "推荐系统评估"
+        ],
+        "label_reason": "论文聚焦专利文本嵌入与检索，与推荐系统无直接关联，但涉及对比学习与评估方法",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "提出多任务训练与领域特定硬负样本挖掘，方法新颖且有效"
     }
 ]
