@@ -4959,5 +4959,141 @@
         "relevance_score": 1,
         "novelty_score": 5,
         "novelty_reason": "提出BEV投影与关键点匹配策略，但未涉及图像处理创新，属传感器融合与定位方法改进。"
+    },
+    {
+        "title": "Physics-Inspired Gaussian Kolmogorov-Arnold Networks for X-ray Scatter\n  Correction in Cone-Beam CT",
+        "url": "http://arxiv.org/abs/2510.24579v1",
+        "pub_date": "2025-10-28",
+        "summary": "Cone-beam CT (CBCT) employs a flat-panel detector to achieve three-dimensional imaging with high spatial resolution. However, CBCT is susceptible to scatter during data acquisition, which introduces CT value bias and reduced tissue contrast in the reconstructed images, ultimately degrading diagnostic accuracy. To address this issue, we propose a deep learning-based scatter artifact correction method inspired by physical prior knowledge. Leveraging the fact that the observed point scatter probability density distribution exhibits rotational symmetry in the projection domain. The method uses Gaussian Radial Basis Functions (RBF) to model the point scatter function and embeds it into the Kolmogorov-Arnold Networks (KAN) layer, which provides efficient nonlinear mapping capabilities for learning high-dimensional scatter features. By incorporating the physical characteristics of the scattered photon distribution together with the complex function mapping capacity of KAN, the model improves its ability to accurately represent scatter. The effectiveness of the method is validated through both synthetic and real-scan experiments. Experimental results show that the model can effectively correct the scatter artifacts in the reconstructed images and is superior to the current methods in terms of quantitative metrics.",
+        "translated": "锥形束CT（CBCT）采用平板探测器实现高空间分辨率的三维成像。然而，CBCT在数据采集过程中易受散射影响，导致重建图像中CT值出现偏差且组织对比度降低，最终影响诊断准确性。为解决这一问题，本文提出一种基于物理先验知识的深度学习散射伪影校正方法。该方法利用观测到的点散射概率密度分布在投影域中具有旋转对称性的特点，采用高斯径向基函数（RBF）对点散射函数进行建模，并将其嵌入到Kolmogorov-Arnold网络（KAN）层中，以提供高效非线性映射能力，用于学习高维散射特征。通过结合散射光子分布的物理特性与KAN的复杂函数映射能力，模型增强了对散射现象的准确表征能力。该方法的有效性通过合成数据和真实扫描实验进行了验证。实验结果表明，该模型能够有效校正重建图像中的散射伪影，在定量指标上优于现有方法。",
+        "translated_title": "受物理启发的高斯科尔莫戈洛夫-阿诺德网络在锥束CT中用于X射线散射校正",
+        "label": [
+            "CT金属伪影消除",
+            "医学图像增强"
+        ],
+        "label_reason": "针对CBCT散射伪影进行校正，提升图像对比度与诊断质量，属于医学图像恢复范畴。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "融合物理先验与KAN网络，构建新型散射建模方法，具有显著结构创新。"
+    },
+    {
+        "title": "OSWorld-MCP: Benchmarking MCP Tool Invocation In Computer-Use Agents",
+        "url": "http://arxiv.org/abs/2510.24563v1",
+        "pub_date": "2025-10-28",
+        "summary": "With advances in decision-making and reasoning capabilities, multimodal agents show strong potential in computer application scenarios. Past evaluations have mainly assessed GUI interaction skills, while tool invocation abilities, such as those enabled by the Model Context Protocol (MCP), have been largely overlooked. Comparing agents with integrated tool invocation to those evaluated only on GUI interaction is inherently unfair. We present OSWorld-MCP, the first comprehensive and fair benchmark for assessing computer-use agents' tool invocation, GUI operation, and decision-making abilities in a real-world environment. We design a novel automated code-generation pipeline to create tools and combine them with a curated selection from existing tools. Rigorous manual validation yields 158 high-quality tools (covering 7 common applications), each verified for correct functionality, practical applicability, and versatility. Extensive evaluations of state-of-the-art multimodal agents on OSWorld-MCP show that MCP tools generally improve task success rates (e.g., from 8.3% to 20.4% for OpenAI o3 at 15 steps, from 40.1% to 43.3% for Claude 4 Sonnet at 50 steps), underscoring the importance of assessing tool invocation capabilities. However, even the strongest models have relatively low tool invocation rates, Only 36.3%, indicating room for improvement and highlighting the benchmark's challenge. By explicitly measuring MCP tool usage skills, OSWorld-MCP deepens understanding of multimodal agents and sets a new standard for evaluating performance in complex, tool-assisted environments. Our code, environment, and data are publicly available at https://osworld-mcp.github.io.",
+        "translated": "随着决策与推理能力的进步，多模态智能体在计算机应用场景中展现出巨大潜力。以往的评估主要集中于图形用户界面（GUI）交互能力，而工具调用能力（如通过模型上下文协议 Model Context Protocol, MCP 实现的能力）则被广泛忽视。将具备集成工具调用能力的智能体与仅在GUI交互上进行评估的智能体进行比较，本质上是不公平的。我们提出 OSWorld-MCP，这是首个在真实环境中全面且公平评估计算机使用智能体工具调用、GUI操作及决策能力的基准测试。我们设计了一种新颖的自动化代码生成流水线，用于创建工具，并将其与精选的现有工具相结合。通过严格的逐项人工验证，我们构建了158个高质量工具（覆盖7个常用应用程序），每个工具均经过功能正确性、实际适用性和通用性的验证。在OSWorld-MCP上对当前最先进的多模态智能体进行广泛评估表明，MCP工具通常能显著提升任务成功率（例如，OpenAI o3在15步内成功率从8.3%提升至20.4%，Claude 4 Sonnet在50步内从40.1%提升至43.3%），凸显了评估工具调用能力的重要性。然而，即便是最强的模型，其工具调用率也相对较低，仅为36.3%，表明仍有改进空间，并凸显了该基准测试的挑战性。通过明确测量MCP工具使用技能，OSWorld-MCP深化了对多模态智能体的理解，并为在复杂、工具辅助环境中的性能评估树立了新标准。我们的代码、环境和数据已公开发布于 https://osworld-mcp.github.io。",
+        "translated_title": "OSWorld-MCP：计算机使用代理中MCP工具调用的基准测试",
+        "label": [],
+        "label_reason": "论文聚焦多模态代理的工具调用与决策能力，属于高阶任务，不涉及图像像素级处理。",
+        "relevance_score": 1,
+        "novelty_score": 5,
+        "novelty_reason": "提出新基准和工具生成流程，但未涉及低层视觉创新，属通用评测框架改进。"
+    },
+    {
+        "title": "Latent Sketchpad: Sketching Visual Thoughts to Elicit Multimodal\n  Reasoning in MLLMs",
+        "url": "http://arxiv.org/abs/2510.24514v1",
+        "pub_date": "2025-10-28",
+        "summary": "While Multimodal Large Language Models (MLLMs) excel at visual understanding, they often struggle in complex scenarios that require visual planning and imagination. Inspired by how humans use sketching as a form of visual thinking to develop and communicate ideas, we introduce Latent Sketchpad, a framework that equips MLLMs with an internal visual scratchpad. The internal visual representations of MLLMs have traditionally been confined to perceptual understanding. We repurpose them to support generative visual thought without compromising reasoning ability. Building on frontier MLLMs, our approach integrates visual generation directly into their native autoregressive reasoning process. It allows the model to interleave textual reasoning with the generation of visual latents. These latents guide the internal thought process and can be translated into sketch images for interpretability. To realize this, we introduce two components: a Context-Aware Vision Head autoregressively produces visual representations, and a pretrained Sketch Decoder renders these into human-interpretable images. We evaluate the framework on our new dataset MazePlanning. Experiments across various MLLMs show that Latent Sketchpad delivers comparable or even superior reasoning performance to their backbone. It further generalizes across distinct frontier MLLMs, including Gemma3 and Qwen2.5-VL. By extending model's textual reasoning to visual thinking, our framework opens new opportunities for richer human-computer interaction and broader applications. More details and resources are available on our project page: https://latent-sketchpad.github.io/.",
+        "translated": "尽管多模态大语言模型（MLLMs）在视觉理解方面表现出色，但在需要视觉规划与想象的复杂场景中往往表现不佳。受人类通过草图作为视觉思维形式来发展和交流想法的启发，我们提出了一种名为 Latent Sketchpad 的框架，该框架为 MLLMs 赋予一个内部的视觉草稿板。传统上，MLLMs 的内部视觉表征仅限于感知理解。我们重新利用这些表征，使其支持生成式视觉思维，同时不损害其推理能力。基于前沿的 MLLMs，我们的方法将视觉生成直接整合到其原生的自回归推理过程中，使模型能够交错进行文本推理与视觉隐变量的生成。这些隐变量引导模型的内部思维过程，并可被转化为草图图像以增强可解释性。为此，我们引入了两个组件：一个上下文感知的视觉头（Context-Aware Vision Head）自回归地生成视觉表征，以及一个预训练的草图解码器（Sketch Decoder）将这些表征渲染为人类可理解的图像。我们在新构建的数据集 MazePlanning 上对框架进行了评估。在多种 MLLMs 上的实验表明，Latent Sketchpad 在推理性能上可与基座模型持平甚至更优，并且能够跨不同前沿 MLLMs（包括 Gemma3 和 Qwen2.5-VL）实现良好泛化。通过将模型的文本推理延伸至视觉思维，我们的框架为更丰富的人机交互和更广泛的应用开辟了新的可能性。更多细节和资源可访问我们的项目页面：https://latent-sketchpad.github.io/。",
+        "translated_title": "潜显草图板：通过草绘视觉思维激发多模态大语言模型的多模态推理",
+        "label": [],
+        "label_reason": "论文聚焦多模态大模型的视觉推理增强，属高阶视觉理解，非像素级图像恢复或增强任务。",
+        "relevance_score": 1,
+        "novelty_score": 7,
+        "novelty_reason": "提出视觉思维框架，将生成式视觉表征融入推理过程，对MMLMs有显著创新。"
+    },
+    {
+        "title": "Local Performance vs. Out-of-Distribution Generalization: An Empirical\n  Analysis of Personalized Federated Learning in Heterogeneous Data\n  Environments",
+        "url": "http://arxiv.org/abs/2510.24503v1",
+        "pub_date": "2025-10-28",
+        "summary": "In the context of Federated Learning with heterogeneous data environments, local models tend to converge to their own local model optima during local training steps, deviating from the overall data distributions. Aggregation of these local updates, e.g., with FedAvg, often does not align with the global model optimum (client drift), resulting in an update that is suboptimal for most clients. Personalized Federated Learning approaches address this challenge by exclusively focusing on the average local performances of clients' models on their own data distribution. Generalization to out-of-distribution samples, which is a substantial benefit of FedAvg and represents a significant component of robustness, appears to be inadequately incorporated into the assessment and evaluation processes. This study involves a thorough evaluation of Federated Learning approaches, encompassing both their local performance and their generalization capabilities. Therefore, we examine different stages within a single communication round to enable a more nuanced understanding of the considered metrics. Furthermore, we propose and incorporate a modified approach of FedAvg, designated as Federated Learning with Individualized Updates (FLIU), extending the algorithm by a straightforward individualization step with an adaptive personalization factor. We evaluate and compare the approaches empirically using MNIST and CIFAR-10 under various distributional conditions, including benchmark IID and pathological non-IID, as well as additional novel test environments with Dirichlet distribution specifically developed to stress the algorithms on complex data heterogeneity.",
+        "translated": "在异构数据环境下的联邦学习中，本地模型在本地训练阶段倾向于收敛至各自局部最优解，从而偏离整体数据分布。对这些本地更新进行聚合（例如采用FedAvg方法）通常无法与全局模型最优解对齐（即客户端漂移），导致对大多数客户端而言更新结果次优。个性化联邦学习方法通过专门关注客户端模型在其自身数据分布上的平均本地性能来应对这一挑战。然而，FedAvg所具备的对分布外样本的泛化能力——这一能力构成了模型鲁棒性的重要组成部分——在当前的评估与衡量过程中却未得到充分考虑。本研究对联邦学习方法进行了全面评估，涵盖其本地性能与泛化能力两个方面。为此，我们分析单次通信轮次中的不同阶段，以更细致地理解所考虑的评估指标。此外，我们提出并引入一种改进的FedAvg方法，称为具有个性化更新的联邦学习（Federated Learning with Individualized Updates, FLIU），通过一个简单而直观的个性化步骤，并引入自适应个性化因子，对算法进行扩展。我们在MNIST和CIFAR-10数据集上，针对多种数据分布条件（包括基准IID、病态非IID，以及专为强调复杂数据异构性而设计的Dirichlet分布下的新型测试环境）对所提方法进行了实验评估与对比。",
+        "translated_title": "局部性能与分布外泛化能力：异构数据环境下个性化联邦学习的实证分析",
+        "label": [],
+        "label_reason": "论文聚焦联邦学习在异构数据环境下的个性化优化，属于高阶机器学习任务，不涉及像素级图像处理。",
+        "relevance_score": 1,
+        "novelty_score": 4,
+        "novelty_reason": "提出FLIU改进FedAvg，属联邦学习领域常规方法改进，无低级图像处理创新。"
+    },
+    {
+        "title": "Fast and accurate neural reflectance transformation imaging through\n  knowledge distillation",
+        "url": "http://arxiv.org/abs/2510.24486v1",
+        "pub_date": "2025-10-28",
+        "summary": "Reflectance Transformation Imaging (RTI) is very popular for its ability to visually analyze surfaces by enhancing surface details through interactive relighting, starting from only a few tens of photographs taken with a fixed camera and variable illumination. Traditional methods like Polynomial Texture Maps (PTM) and Hemispherical Harmonics (HSH) are compact and fast, but struggle to accurately capture complex reflectance fields using few per-pixel coefficients and fixed bases, leading to artifacts, especially in highly reflective or shadowed areas. The NeuralRTI approach, which exploits a neural autoencoder to learn a compact function that better approximates the local reflectance as a function of light directions, has been shown to produce superior quality at comparable storage cost. However, as it performs interactive relighting with custom decoder networks with many parameters, the rendering step is computationally expensive and not feasible at full resolution for large images on limited hardware. Earlier attempts to reduce costs by directly training smaller networks have failed to produce valid results. For this reason, we propose to reduce its computational cost through a novel solution based on Knowledge Distillation (DisK-NeuralRTI). ...",
+        "translated": "反射率变换成像（Reflectance Transformation Imaging, RTI）因其能够通过交互式重光照增强表面细节，从而实现对表面的可视化分析而广受欢迎。该方法仅需使用固定相机和可变光照拍摄的数十张照片即可完成。传统的PTM（多项式纹理图）和HSH（半球谐波）方法具有结构紧凑、计算快速的优点，但受限于每个像素仅使用少量系数和固定基函数来近似复杂的反射场，难以精确捕捉细节，尤其在高反射或阴影区域容易产生伪影。NeuralRTI方法通过利用神经自编码器学习一个紧凑函数，将局部反射率表示为光照方向的函数，已被证明在相近存储成本下可获得更优的重建质量。然而，由于其采用参数量较大的定制解码器网络进行交互式重光照，渲染步骤计算开销巨大，在有限硬件上难以对大尺寸图像实现全分辨率实时处理。此前尝试通过直接训练更小网络以降低成本的方法未能获得有效结果。为此，我们提出一种基于知识蒸馏（Knowledge Distillation）的新型解决方案（DisK-NeuralRTI），以降低其计算成本。...",
+        "translated_title": "快速且准确的神经反射变换成像：基于知识蒸馏的方法",
+        "label": [
+            "图像去反射",
+            "图像恢复"
+        ],
+        "label_reason": "通过知识蒸馏优化神经反射成像，提升反射细节重建质量，属图像恢复范畴",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "首次将知识蒸馏用于NeuralRTI，降低渲染开销并保持重建质量"
+    },
+    {
+        "title": "Decoupled MeanFlow: Turning Flow Models into Flow Maps for Accelerated\n  Sampling",
+        "url": "http://arxiv.org/abs/2510.24474v1",
+        "pub_date": "2025-10-28",
+        "summary": "Denoising generative models, such as diffusion and flow-based models, produce high-quality samples but require many denoising steps due to discretization error. Flow maps, which estimate the average velocity between timesteps, mitigate this error and enable faster sampling. However, their training typically demands architectural changes that limit compatibility with pretrained flow models. We introduce Decoupled MeanFlow, a simple decoding strategy that converts flow models into flow map models without architectural modifications. Our method conditions the final blocks of diffusion transformers on the subsequent timestep, allowing pretrained flow models to be directly repurposed as flow maps. Combined with enhanced training techniques, this design enables high-quality generation in as few as 1 to 4 steps. Notably, we find that training flow models and subsequently converting them is more efficient and effective than training flow maps from scratch. On ImageNet 256x256 and 512x512, our models attain 1-step FID of 2.16 and 2.12, respectively, surpassing prior art by a large margin. Furthermore, we achieve FID of 1.51 and 1.68 when increasing the steps to 4, which nearly matches the performance of flow models while delivering over 100x faster inference.",
+        "translated": "去噪生成模型，如扩散模型和基于流的模型，能够生成高质量样本，但由于离散化误差，通常需要大量去噪步数。流图（flow maps）通过估计时间步之间的平均速度，能够缓解该误差并实现更快的采样。然而，其训练通常需要对模型架构进行修改，从而限制了与预训练流模型的兼容性。我们提出了一种简单的解码策略——解耦均值流（Decoupled MeanFlow），可在不改变架构的前提下，将流模型转化为流图模型。我们的方法通过将扩散变换器（diffusion transformers）的最终模块条件于后续时间步，使得预训练的流模型可以直接被复用于流图任务。结合增强的训练技术，该设计能够在仅1至4步内实现高质量生成。值得注意的是，我们发现先训练流模型再将其转化为流图，比从零开始训练流图更高效且更有效。在ImageNet 256x256和512x512数据集上，我们的模型分别在1步采样下达到FID值2.16和2.12，显著超越现有方法。此外，当步数增加至4步时，FID值分别达到1.51和1.68，性能几乎与流模型相当，同时推理速度提升超过100倍。",
+        "translated_title": "解耦的MeanFlow：将流模型转化为流图以实现加速采样",
+        "label": [],
+        "label_reason": "论文聚焦图像生成，非像素级图像恢复或增强，属high-level任务",
+        "relevance_score": 1,
+        "novelty_score": 8,
+        "novelty_reason": "提出解耦策略加速采样，对预训练模型高效复用，有显著改进"
+    },
+    {
+        "title": "Kineo: Calibration-Free Metric Motion Capture From Sparse RGB Cameras",
+        "url": "http://arxiv.org/abs/2510.24464v1",
+        "pub_date": "2025-10-28",
+        "summary": "Markerless multiview motion capture is often constrained by the need for precise camera calibration, limiting accessibility for non-experts and in-the-wild captures. Existing calibration-free approaches mitigate this requirement but suffer from high computational cost and reduced reconstruction accuracy.   We present Kineo, a fully automatic, calibration-free pipeline for markerless motion capture from videos captured by unsynchronized, uncalibrated, consumer-grade RGB cameras. Kineo leverages 2D keypoints from off-the-shelf detectors to simultaneously calibrate cameras, including Brown-Conrady distortion coefficients, and reconstruct 3D keypoints and dense scene point maps at metric scale. A confidence-driven spatio-temporal keypoint sampling strategy, combined with graph-based global optimization, ensures robust calibration at a fixed computational cost independent of sequence length. We further introduce a pairwise reprojection consensus score to quantify 3D reconstruction reliability for downstream tasks.   Evaluations on EgoHumans and Human3.6M demonstrate substantial improvements over prior calibration-free methods. Compared to previous state-of-the-art approaches, Kineo reduces camera translation error by approximately 83-85%, camera angular error by 86-92%, and world mean-per-joint error (W-MPJPE) by 83-91%.   Kineo is also efficient in real-world scenarios, processing multi-view sequences faster than their duration in specific configuration (e.g., 36min to process 1h20min of footage). The full pipeline and evaluation code are openly released to promote reproducibility and practical adoption at https://liris-xr.github.io/kineo/.",
+        "translated": "无标记多视角动作捕捉通常受限于精确相机标定的需求，这限制了非专家用户和野外场景下的应用可及性。现有的无标定方法虽缓解了这一需求，但往往计算成本高且重建精度降低。\n\n我们提出 Kineo，一种完全自动、无需标定的无标记动作捕捉流水线，可从未同步、未标定的消费级 RGB 相机所拍摄的视频中实现动作捕捉。Kineo 利用现成检测器提取的 2D 关键点，同时完成相机标定（包括 Brown-Conrady 畸变系数），并以度量尺度重建 3D 关键点和稠密场景点图。一种基于置信度驱动的时空关键点采样策略，结合基于图的全局优化方法，保证了在固定计算成本下、与序列长度无关的鲁棒标定。我们进一步引入了一种成对重投影一致性得分（pairwise reprojection consensus score），用于量化 3D 重建的可靠性，以服务于下游任务。\n\n在 EgoHumans 和 Human3.6M 数据集上的评估表明，Kineo 相较于现有无标定方法取得了显著提升。与之前最先进的方法相比，Kineo 将相机平移误差降低约 83–85%，相机角度误差降低 86–92%，世界坐标系下的关节平均误差（W-MPJPE）降低 83–91%。\n\nKineo 在真实场景中也表现出高效性，在特定配置下处理多视角序列的速度快于视频时长（例如，36 分钟处理 1 小时 20 分钟的视频）。完整的流水线和评估代码已公开发布，以促进可复现性和实际应用，详见 https://liris-xr.github.io/kineo/。",
+        "translated_title": "Kineo：基于稀疏RGB相机的无需标定的度量级运动捕捉",
+        "label": [],
+        "label_reason": "论文聚焦3D运动捕捉，属于高阶视觉任务，不涉及图像像素级恢复或增强。",
+        "relevance_score": 1,
+        "novelty_score": 7,
+        "novelty_reason": "提出新型无标定运动捕捉框架，优化校准与重建流程，具有显著技术改进。"
+    },
+    {
+        "title": "A Critical Study towards the Detection of Parkinsons Disease using ML\n  Technologies",
+        "url": "http://arxiv.org/abs/2510.24456v1",
+        "pub_date": "2025-10-28",
+        "summary": "The proposed solution is Deep Learning Technique that will be able classify three types of tea leaves diseases from which two diseases are caused by the pests and one due to pathogens (infectious organisms) and environmental conditions and also show the area damaged by a disease in leaves. Namely Red Rust, Helopeltis and Red spider mite respectively. In this paper we have evaluated two models namely SSD MobileNet V2 and Faster R-CNN ResNet50 V1 for the object detection. The SSD MobileNet V2 gave precision of 0.209 for IOU range of 0.50:0.95 with recall of 0.02 on IOU 0.50:0.95 and final mAP of 20.9%. While Faster R-CNN ResNet50 V1 has precision of 0.252 on IOU range of 0.50:0.95 and recall of 0.044 on IOU of 0.50:0.95 with a mAP of 25%, which is better than SSD. Also used Mask R-CNN for Object Instance Segmentation where we have implemented our custom method to calculate the damaged diseased portion of leaves. Keywords: Tea Leaf Disease, Deep Learning, Red Rust, Helopeltis and Red Spider Mite, SSD MobileNet V2, Faster R-CNN ResNet50 V1 and Mask RCNN.",
+        "translated": "本研究提出了一种深度学习方法，能够对三种茶叶病害进行分类，其中两种由害虫引起，一种由病原体（感染性生物）及环境因素导致，并可显示叶片上病害所造成的受损区域。这三种病害分别为红锈病、Helopeltis病害和红蜘蛛螨病。本文评估了两种目标检测模型，即SSD MobileNet V2和Faster R-CNN ResNet50 V1。SSD MobileNet V2在IOU范围0.50:0.95下达到0.209的精确率，召回率为0.02，最终mAP为20.9%。Faster R-CNN ResNet50 V1在相同IOU范围内精确率为0.252，召回率为0.044，mAP为25%，优于SSD模型。此外，还采用Mask R-CNN进行实例分割，实现了自定义方法以计算叶片上病害受损区域。关键词：茶叶病害、深度学习、红锈病、Helopeltis病害、红蜘蛛螨病、SSD MobileNet V2、Faster R-CNN ResNet50 V1、Mask R-CNN。",
+        "translated_title": "一项基于机器学习技术的帕金森病检测关键研究",
+        "label": [],
+        "label_reason": "论文聚焦于茶树叶病检测与实例分割，属于高阶目标检测与语义理解任务，非像素级图像恢复。",
+        "relevance_score": 1,
+        "novelty_score": 2,
+        "novelty_reason": "方法为常规目标检测模型应用，无显著创新，仅在特定数据集上评估性能。"
+    },
+    {
+        "title": "Rethinking Visual Intelligence: Insights from Video Pretraining",
+        "url": "http://arxiv.org/abs/2510.24448v1",
+        "pub_date": "2025-10-28",
+        "summary": "Large language models (LLMs) have demonstrated that large-scale pretraining enables systems to adapt rapidly to new problems with little supervision in the language domain. This success, however, has not translated as effectively to the visual domain, where models, including LLMs, continue to struggle with compositional understanding, sample efficiency, and general-purpose problem-solving. We investigate Video Diffusion Models (VDMs) as a promising direction for bridging this gap. Pretraining on spatiotemporal data endows these models with strong inductive biases for structure and dynamics, which we hypothesize can support broad task adaptability. To test this, we design a controlled evaluation in which both a pretrained LLM and a pretrained VDM are equipped with lightweight adapters and presented with tasks in their natural modalities. Across benchmarks including ARC-AGI, ConceptARC, visual games, route planning, and cellular automata, VDMs demonstrate higher data efficiency than their language counterparts. Taken together, our results indicate that video pretraining offers inductive biases that support progress toward visual foundation models.",
+        "translated": "大型语言模型（LLMs）已证明，大规模预训练能够使系统在语言领域中仅需少量监督即可快速适应新问题。然而，这一成功尚未在视觉领域得到有效迁移，包括LLMs在内的模型在组合理解、样本效率以及通用问题求解方面仍面临挑战。我们探讨视频扩散模型（VDMs）作为弥合这一差距的有前景方向。在时空数据上进行预训练赋予这些模型对结构和动态的强烈归纳偏置，我们假设这可以支持广泛的 task 适应能力。为验证这一假设，我们设计了一项受控评估实验，其中预训练的LLM和预训练的VDM均配备轻量级适配器，并在各自自然模态下执行任务。在ARC-AGI、ConceptARC、视觉游戏、路径规划和细胞自动机等基准任务中，VDMs展现出优于语言模型的数据效率。综合来看，我们的结果表明，视频预训练所提供的归纳偏置有助于推动视觉基础模型的发展。",
+        "translated_title": "重思视觉智能：来自视频预训练的洞见",
+        "label": [],
+        "label_reason": "论文聚焦视频预训练与视觉基础模型，属于高层视觉理解，非像素级图像恢复或增强。",
+        "relevance_score": 1,
+        "novelty_score": 5,
+        "novelty_reason": "提出视频扩散模型用于视觉任务适应性，但未涉及low-level图像处理创新。"
+    },
+    {
+        "title": "SPARTA: Evaluating Reasoning Segmentation Robustness through Black-Box\n  Adversarial Paraphrasing in Text Autoencoder Latent Space",
+        "url": "http://arxiv.org/abs/2510.24446v1",
+        "pub_date": "2025-10-28",
+        "summary": "Multimodal large language models (MLLMs) have shown impressive capabilities in vision-language tasks such as reasoning segmentation, where models generate segmentation masks based on textual queries. While prior work has primarily focused on perturbing image inputs, semantically equivalent textual paraphrases-crucial in real-world applications where users express the same intent in varied ways-remain underexplored. To address this gap, we introduce a novel adversarial paraphrasing task: generating grammatically correct paraphrases that preserve the original query meaning while degrading segmentation performance. To evaluate the quality of adversarial paraphrases, we develop a comprehensive automatic evaluation protocol validated with human studies. Furthermore, we introduce SPARTA-a black-box, sentence-level optimization method that operates in the low-dimensional semantic latent space of a text autoencoder, guided by reinforcement learning. SPARTA achieves significantly higher success rates, outperforming prior methods by up to 2x on both the ReasonSeg and LLMSeg-40k datasets. We use SPARTA and competitive baselines to assess the robustness of advanced reasoning segmentation models. We reveal that they remain vulnerable to adversarial paraphrasing-even under strict semantic and grammatical constraints. All code and data will be released publicly upon acceptance.",
+        "translated": "多模态大语言模型（MLLMs）在视觉-语言任务（如推理分割）中展现了令人印象深刻的能力，模型能够根据文本查询生成分割掩码。尽管先前的研究主要集中在扰动图像输入方面，但语义等价的文本改写——在现实应用中至关重要，因为用户常以不同方式表达相同意图——却尚未得到充分探索。为弥补这一空白，我们提出一种新颖的对抗性改写任务：生成语法正确的文本改写，使其在保持原始查询语义的同时降低分割性能。为评估对抗性改写的质量，我们开发了一套全面的自动评估协议，并通过人工实验进行了验证。此外，我们提出SPARTA——一种基于文本自编码器低维语义潜在空间的黑盒、句子级优化方法，该方法由强化学习引导。SPARTA在ReasonSeg和LLMSeg-40k数据集上均实现了显著更高的成功 rate，相较于先前方法最高提升达2倍。我们利用SPARTA及竞争性基线方法评估了先进推理分割模型的鲁棒性，结果表明，即使在严格的语义和语法约束下，这些模型仍易受到对抗性改写的影响。所有代码和数据将在论文被接受后公开发布。",
+        "translated_title": "SPARTA：通过文本自编码器潜在空间中的黑盒对抗性重述评估推理分割的鲁棒性",
+        "label": [],
+        "label_reason": "论文聚焦于多模态大模型的文本查询鲁棒性，属于high-level视觉任务，非像素级图像处理。",
+        "relevance_score": 1,
+        "novelty_score": 7,
+        "novelty_reason": "提出在文本自编码器潜空间中进行黑盒对抗重述，方法新颖，但不涉及图像恢复或增强。"
     }
 ]
