@@ -4702,5 +4702,132 @@
         "relevance_score": 3,
         "novelty_score": 7,
         "novelty_reason": "提出混合框架结合扩散模型与物理渲染，创新性较强但不针对低层视觉任务。"
+    },
+    {
+        "title": "Tongyi DeepResearch Technical Report",
+        "url": "http://arxiv.org/abs/2510.24701v1",
+        "pub_date": "2025-10-28",
+        "summary": "We present Tongyi DeepResearch, an agentic large language model, which is specifically designed for long-horizon, deep information-seeking research tasks. To incentivize autonomous deep research agency, Tongyi DeepResearch is developed through an end-to-end training framework that combines agentic mid-training and agentic post-training, enabling scalable reasoning and information seeking across complex tasks. We design a highly scalable data synthesis pipeline that is fully automatic, without relying on costly human annotation, and empowers all training stages. By constructing customized environments for each stage, our system enables stable and consistent interactions throughout. Tongyi DeepResearch, featuring 30.5 billion total parameters, with only 3.3 billion activated per token, achieves state-of-the-art performance across a range of agentic deep research benchmarks, including Humanity's Last Exam, BrowseComp, BrowseComp-ZH, WebWalkerQA, xbench-DeepSearch, FRAMES and xbench-DeepSearch-2510. We open-source the model, framework, and complete solutions to empower the community.",
+        "translated": "我们提出 Tongyi DeepResearch，一种专为长期、深度信息探索研究任务设计的智能体大语言模型。为激励自主深度研究智能体行为，Tongyi DeepResearch 通过融合智能体中期训练与智能体后期训练的端到端训练框架进行开发，从而支持在复杂任务中实现可扩展的推理与信息探索能力。我们设计了一条高度可扩展的自动数据合成流水线，无需依赖昂贵的人工标注，全面赋能所有训练阶段。通过为每个训练阶段构建定制化环境，系统实现了稳定且一致的交互过程。Tongyi DeepResearch 拥有总计 305 亿参数，每处理一个 token 仅激活 33 亿参数，在多个智能体深度研究基准测试中均达到当前最优水平，包括 Humanity's Last Exam、BrowseComp、BrowseComp-ZH、WebWalkerQA、xbench-DeepSearch、FRAMES 以及 xbench-DeepSearch-2510。我们开源了模型、训练框架及完整解决方案，以赋能学术与产业社区。",
+        "translated_title": "通义深度研究技术报告",
+        "label": [],
+        "label_reason": "论文聚焦于通用智能体模型的深度研究任务，未直接涉及推荐系统核心环节。",
+        "relevance_score": 3,
+        "novelty_score": 8,
+        "novelty_reason": "提出端到端智能体训练框架，数据合成自动化，具创新性但非推荐领域"
+    },
+    {
+        "title": "Optimizing Retrieval for RAG via Reinforced Contrastive Learning",
+        "url": "http://arxiv.org/abs/2510.24652v1",
+        "pub_date": "2025-10-28",
+        "summary": "As retrieval-augmented generation (RAG) becomes increasingly widespread, the role of information retrieval (IR) is shifting from retrieving information for human users to retrieving contextual knowledge for artificial intelligence (AI) systems, where relevance becomes difficult to define or annotate beforehand. To address this challenge, we propose R3, a Retrieval framework optimized for RAG through trialand-feedback Reinforced contrastive learning. Unlike prior approaches that rely on annotated or synthetic data for supervised fine-tuning, R3 enables the retriever to dynamically explore and optimize relevance within the RAG environment. During training, the retrieved results interact with the environment to produce contrastive signals that automatically guide the retriever's self-improvement. Extensive experiments across diverse tasks demonstrate that R3 improves RAG performance by 5.2% over the original retriever and surpasses state-of-the-art retrievers by 4.9%, while achieving comparable results to LLM-augmented retrieval and RAG systems built on post-trained or instruction-tuned LLMs. It is both efficient and practical, requiring only 4 GPUs and completing training within a single day.",
+        "translated": "随着检索增强生成（RAG）技术的日益普及，信息检索（IR）的作用正从为人类用户检索信息，转变为为人工智能（AI）系统检索上下文知识，其中相关性变得难以预先定义或标注。为应对这一挑战，我们提出R3，一种通过试错与反馈强化对比学习优化的RAG检索框架。与以往依赖标注数据或合成数据进行监督微调的方法不同，R3使检索器能够在RAG环境中动态探索并优化相关性。在训练过程中，检索结果与环境交互，产生对比信号，自动引导检索器的自我改进。在多种任务上的大量实验表明，R3相较于原始检索器将RAG性能提升了5.2%，并超越了当前最先进的检索器4.9%，同时其性能可与基于大语言模型（LLM）增强的检索及建立在后训练或指令调优LLM上的RAG系统相媲美。R3兼具高效性与实用性，仅需4块GPU，且可在单日内完成训练。",
+        "translated_title": "优化检索以用于RAG的强化对比学习",
+        "label": [
+            "召回",
+            "负采样与对比学习"
+        ],
+        "label_reason": "论文聚焦RAG中的召回优化，通过强化对比学习提升检索质量，与推荐召回有间接关联。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出R3框架，利用环境反馈动态优化检索，创新性较强，但非推荐领域原创。"
+    },
+    {
+        "title": "Iterative Critique-Refine Framework for Enhancing LLM Personalization",
+        "url": "http://arxiv.org/abs/2510.24469v1",
+        "pub_date": "2025-10-28",
+        "summary": "Personalized text generation requires models not only to produce coherent text but also to align with a target user's style, tone, and topical focus. Existing retrieval-augmented approaches such as LaMP and PGraphRAG enrich profiles with user and neighbor histories, but they stop at generation and often yield outputs that drift in tone, topic, or style. We present PerFine, a unified, training-free critique-refine framework that enhances personalization through iterative, profile-grounded feedback. In each iteration, an LLM generator produces a draft conditioned on the retrieved profile, and a critic LLM - also conditioned on the same profile - provides structured feedback on tone, vocabulary, sentence structure, and topicality. The generator then revises, while a novel knockout strategy retains the stronger draft across iterations. We further study additional inference-time strategies such as Best-of-N and Topic Extraction to balance quality and efficiency. Across Yelp, Goodreads, and Amazon datasets, PerFine consistently improves personalization over PGraphRAG, with GEval gains of +7-13%, steady improvements over 3-5 refinement iterations, and scalability with increasing critic size. These results highlight that post-hoc, profile-aware feedback offers a powerful paradigm for personalized LLM generation that is both training-free and model-agnostic.",
+        "translated": "个性化文本生成要求模型不仅生成连贯的文本，还需与目标用户的风格、语调和主题焦点保持一致。现有的检索增强方法（如 LaMP 和 PGraphRAG）通过整合用户及其邻居的历史记录来丰富用户画像，但它们仅止于生成阶段，往往导致输出在语调、主题或风格上出现偏移。我们提出 PerFine，一种统一的、无需训练的批判-优化框架，通过迭代的、基于用户画像的反馈机制提升个性化效果。在每次迭代中，大语言模型（LLM）生成器在检索到的用户画像条件下生成初稿，同时一个同样以该画像为条件的批判型 LLM 提供关于语调、词汇、句式结构和主题相关性的结构化反馈。生成器随后根据反馈进行修订，而一种新颖的“淘汰策略”则在各次迭代中保留表现更优的文稿版本。此外，我们进一步研究了多种推理阶段策略，如 Best-of-N 和主题提取，以在生成质量与效率之间取得平衡。在 Yelp、Goodreads 和 Amazon 数据集上的实验表明，PerFine 在个性化性能上始终优于 PGraphRAG，GEval 指标提升达 +7–13%，在 3–5 次优化迭代中持续改进，且随着批判模型规模增大具有良好的可扩展性。这些结果表明，后置的、基于画像的反馈机制为个性化大语言模型生成提供了一种强大范式，该范式无需训练且对模型类型具有无关性。",
+        "translated_title": "迭代批评-优化框架用于增强大语言模型个性化",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "论文聚焦LLM个性化生成，通过迭代反馈提升内容风格对齐，可应用于推荐系统中的生成式推荐环节。",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "提出训练无关的迭代批评-优化框架，结合结构化反馈与淘汰策略，显著提升个性化生成质量。"
+    },
+    {
+        "title": "MiniOneRec: An Open-Source Framework for Scaling Generative\n  Recommendation",
+        "url": "http://arxiv.org/abs/2510.24431v1",
+        "pub_date": "2025-10-28",
+        "summary": "The recent success of large language models (LLMs) has renewed interest in whether recommender systems can achieve similar scaling benefits. Conventional recommenders, dominated by massive embedding tables, tend to plateau as embedding dimensions grow. In contrast, the emerging generative paradigm replaces embeddings with compact Semantic ID (SID) sequences produced by autoregressive Transformers. Yet most industrial deployments remain proprietary, leaving two fundamental questions open: (1) Do the expected scaling laws hold on public benchmarks? (2) What is the minimal post-training recipe that enables competitive performance?   We present MiniOneRec, to the best of our knowledge, the first fully open-source generative recommendation framework, which provides an end-to-end workflow spanning SID construction, supervised fine-tuning, and recommendation-oriented reinforcement learning. We generate SIDs via a Residual Quantized VAE and post-train Qwen backbones ranging from 0.5B to 7B parameters on the Amazon Review dataset. Our experiments reveal a consistent downward trend in both training and evaluation losses with increasing model size, validating the parameter efficiency of the generative approach. To further enhance performance, we propose a lightweight yet effective post-training pipeline that (1) enforces full-process SID alignment and (2) applies reinforcement learning with constrained decoding and hybrid rewards. Together, these techniques yield significant improvements in both ranking accuracy and candidate diversity.",
+        "translated": "近期大语言模型（LLM）的成功重新引发了人们对于推荐系统能否实现类似扩展性收益的关注。传统的推荐系统主要依赖庞大的嵌入表，随着嵌入维度的增长，其性能往往趋于饱和。相比之下，新兴的生成式范式通过自回归Transformer生成紧凑的语义ID（SID）序列，取代了传统的嵌入表示。然而，大多数工业级部署仍为专有系统，导致两个根本性问题尚未解决：（1）在公开基准数据集上，预期的扩展规律是否成立？（2）实现具有竞争力性能所需的最小后训练方案是什么？  \n\n我们提出MiniOneRec，据我们所知，这是首个完全开源的生成式推荐框架，提供了一个端到端的工作流，涵盖SID构建、监督微调以及面向推荐的强化学习。我们在Amazon Review数据集上，通过残差量化变分自编码器（VAE）生成SID，并对参数量从0.5B到7B的Qwen主干模型进行后训练。实验结果表明，随着模型规模增大，训练损失和评估损失均呈现出稳定下降趋势，验证了生成式方法在参数效率上的优势。为进一步提升性能，我们提出了一种轻量但有效的后训练流程，其包含两个关键设计：（1）强制全链路SID对齐；（2）采用受限解码与混合奖励的强化学习策略。这些技术共同显著提升了排序准确率和候选物料多样性。",
+        "translated_title": "MiniOneRec：一个用于扩展生成式推荐的开源框架",
+        "label": [
+            "LLM生成式推荐（LLM-based Generative Recommendation）",
+            "精排（Ranking）",
+            "序列推荐（Sequential Recommendation）",
+            "推荐系统评估（Evaluation Metrics / Offline/Online Testing）"
+        ],
+        "label_reason": "论文聚焦LLM生成式推荐框架，涵盖SID构建、微调与强化学习，直接解决推荐系统核心问题。",
+        "relevance_score": 10,
+        "novelty_score": 9,
+        "novelty_reason": "提出首个开源生成式推荐框架，结合轻量级微调与强化学习，显著提升准确率与多样性。"
+    },
+    {
+        "title": "From Time and Place to Preference: LLM-Driven Geo-Temporal Context in\n  Recommendations",
+        "url": "http://arxiv.org/abs/2510.24430v1",
+        "pub_date": "2025-10-28",
+        "summary": "Most recommender systems treat timestamps as numeric or cyclical values, overlooking real-world context such as holidays, events, and seasonal patterns. We propose a scalable framework that uses large language models (LLMs) to generate geo-temporal embeddings from only a timestamp and coarse location, capturing holidays, seasonal trends, and local/global events. We then introduce a geo-temporal embedding informativeness test as a lightweight diagnostic, demonstrating on MovieLens, LastFM, and a production dataset that these embeddings provide predictive signal consistent with the outcomes of full model integrations. Geo-temporal embeddings are incorporated into sequential models through (1) direct feature fusion with metadata embeddings or (2) an auxiliary loss that enforces semantic and geo-temporal alignment. Our findings highlight the need for adaptive or hybrid recommendation strategies, and we release a context-enriched MovieLens dataset to support future research.",
+        "translated": "大多数推荐系统将时间戳视为数值或循环变量，忽略了节假日、事件和季节性模式等现实世界上下文信息。我们提出了一种可扩展的框架，仅基于时间戳和粗粒度地理位置，利用大语言模型（LLM）生成地理-时间嵌入，从而捕捉节假日、季节性趋势以及本地和全球事件。随后，我们引入了一种地理-时间嵌入信息量测试，作为一种轻量级诊断工具，通过在MovieLens、LastFM以及一个生产数据集上的实验表明，这些嵌入提供了与完整模型集成结果一致的预测信号。地理-时间嵌入通过两种方式融入序列模型：（1）与元数据嵌入进行直接特征融合，或（2）引入辅助损失函数，以强制实现语义和地理-时间对齐。我们的研究结果强调了采用自适应或混合推荐策略的必要性，并发布了一个上下文增强的MovieLens数据集，以支持未来的研究工作。",
+        "translated_title": "从时间与地点到偏好：大语言模型驱动的时空上下文在推荐系统中的应用",
+        "label": [
+            "LLM生成式推荐（LLM-based Generative Recommendation）",
+            "序列推荐（Sequential Recommendation）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "利用LLM生成时空上下文嵌入，增强推荐系统对时间地点的建模，适用于序列推荐与通用推荐场景",
+        "relevance_score": 8,
+        "novelty_score": 8,
+        "novelty_reason": "创新性地将LLM用于生成地理时间上下文嵌入，提升推荐系统对动态场景的感知能力"
+    },
+    {
+        "title": "Metadata-Driven Retrieval-Augmented Generation for Financial Question\n  Answering",
+        "url": "http://arxiv.org/abs/2510.24402v1",
+        "pub_date": "2025-10-28",
+        "summary": "Retrieval-Augmented Generation (RAG) struggles on long, structured financial filings where relevant evidence is sparse and cross-referenced. This paper presents a systematic investigation of advanced metadata-driven Retrieval-Augmented Generation (RAG) techniques, proposing and evaluating a novel, multi-stage RAG architecture that leverages LLM-generated metadata. We introduce a sophisticated indexing pipeline to create contextually rich document chunks and benchmark a spectrum of enhancements, including pre-retrieval filtering, post-retrieval reranking, and enriched embeddings, benchmarked on the FinanceBench dataset. Our results reveal that while a powerful reranker is essential for precision, the most significant performance gains come from embedding chunk metadata directly with text (\"contextual chunks\"). Our proposed optimal architecture combines LLM-driven pre-retrieval optimizations with these contextual embeddings to achieve superior performance. Additionally, we present a custom metadata reranker that offers a compelling, cost-effective alternative to commercial solutions, highlighting a practical trade-off between peak performance and operational efficiency. This study provides a blueprint for building robust, metadata-aware RAG systems for financial document analysis.",
+        "translated": "检索增强生成（RAG）在处理长篇、结构化的财务文件时面临挑战，因为相关证据稀疏且存在交叉引用。本文对先进的元数据驱动式检索增强生成（RAG）技术进行了系统性研究，提出并评估了一种新颖的多阶段RAG架构，该架构利用大语言模型（LLM）生成的元数据。我们引入了一套复杂的索引流程，用于构建上下文丰富的文档片段，并在FinanceBench数据集上对一系列改进技术进行基准测试，包括检索前过滤、检索后重排以及增强嵌入。实验结果表明，尽管强大的重排器对精度至关重要，但性能提升最显著的来源是将片段元数据与文本直接嵌入（“上下文片段”）。我们提出的最优架构结合了LLM驱动的检索前优化与这些上下文嵌入，从而实现了卓越的性能。此外，我们提出了一种定制化的元数据重排器，作为商业解决方案的高效、低成本替代方案，揭示了峰值性能与运营效率之间的实用权衡。本研究为构建稳健、具备元数据感知能力的RAG系统提供了适用于财务文档分析的蓝图。",
+        "translated_title": "元数据驱动的检索增强生成在金融问答中的应用",
+        "label": [
+            "召回",
+            "重排",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "论文聚焦RAG架构，涉及召回与重排，虽为金融问答，但方法可迁移至推荐系统。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出多阶段RAG架构与上下文嵌入，结合LLM生成元数据，具创新性但非推荐领域首创。"
+    },
+    {
+        "title": "DUET: Dual Model Co-Training for Entire Space CTR Prediction",
+        "url": "http://arxiv.org/abs/2510.24369v1",
+        "pub_date": "2025-10-28",
+        "summary": "The pre-ranking stage plays a pivotal role in large-scale recommender systems but faces an intrinsic trade-off between model expressiveness and computational efficiency. Owing to the massive candidate pool and strict latency constraints, industry systems often rely on lightweight two-tower architectures, which are computationally efficient yet limited in estimation capability. As a result, they struggle to capture the complex synergistic and suppressive relationships among candidate items, which are essential for producing contextually coherent and diverse recommendation lists. Moreover, this simplicity further amplifies the Sample Selection Bias (SSB) problem, as coarse-grained models trained on biased exposure data must generalize to a much larger candidate space with distinct distributions.   To address these issues, we propose \\textbf{DUET} (\\textbf{DU}al Model Co-Training for \\textbf{E}ntire Space C\\textbf{T}R Prediction), a set-wise pre-ranking framework that achieves expressive modeling under tight computational budgets. Instead of scoring items independently, DUET performs set-level prediction over the entire candidate subset in a single forward pass, enabling information-aware interactions among candidates while amortizing the computational cost across the set. Moreover, a dual model co-training mechanism extends supervision to unexposed items via mutual pseudo-label refinement, effectively mitigating SSB. Validated through extensive offline experiments and online A/B testing, DUET consistently outperforms state-of-the-art baselines and achieves improvements across multiple core business metrics. At present, DUET has been fully deployed in Kuaishou and Kuaishou Lite Apps, serving the main traffic for hundreds of millions of users.",
+        "translated": "粗排阶段在大规模推荐系统中起着关键作用，但面临着模型表达能力与计算效率之间的内在权衡。由于候选物料池规模庞大且存在严格的延迟约束，工业界系统通常依赖轻量级的双塔架构，这类架构计算高效，但估计能力有限。因此，它们难以捕捉候选物料之间复杂的协同与抑制关系，而这些关系对于生成上下文连贯且多样化的推荐列表至关重要。此外，这种简单性进一步加剧了样本选择偏差（SSB）问题，因为基于有偏曝光数据训练的粗粒度模型，必须泛化到分布截然不同的更大候选空间中。\n\n为解决上述问题，我们提出 **DUET**（**DU**al Model Co-Training for **E**ntire Space C**T**R Prediction），一种在严格计算预算下实现高表达能力建模的集合式粗排框架。DUET不单独对每个物料打分，而是在单次前向传播中对整个候选子集进行集合级预测，从而在候选物料之间实现信息感知的交互，同时将计算成本在集合中摊薄。此外，通过引入双模型协同训练机制，DUET利用互相对伪标签进行优化，将监督信号扩展至未曝光物料，有效缓解了SSB问题。经过大量离线实验和线上A/B测试验证，DUET持续优于当前最先进的基线方法，并在多个核心业务指标上实现了提升。目前，DUET已在快手和快手极速版App中全面部署，服务于数亿用户的主流量推荐场景。",
+        "translated_title": "DUET：用于全空间点击率预测的双模型协同训练",
+        "label": [
+            "粗排（Pre-ranking）",
+            "负采样与对比学习（Negative Sampling / Contrastive Learning）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "论文聚焦推荐系统粗排阶段，提出双模型协同训练框架，解决样本偏差与计算效率问题，直接应用于推荐系统。",
+        "relevance_score": 8,
+        "novelty_score": 8,
+        "novelty_reason": "提出集级别预测与双模型伪标签互训机制，有效缓解SSB，提升表达能力与效率，为粗排带来显著改进。"
+    },
+    {
+        "title": "Resource-Efficient LLM Application for Structured Transformation of\n  Unstructured Financial Contracts",
+        "url": "http://arxiv.org/abs/2510.23990v1",
+        "pub_date": "2025-10-28",
+        "summary": "The transformation of unstructured legal contracts into standardized, machine-readable formats is essential for automating financial workflows. The Common Domain Model (CDM) provides a standardized framework for this purpose, but converting complex legal documents like Credit Support Annexes (CSAs) into CDM representations remains a significant challenge. In this paper, we present an extension of the CDMizer framework, a template-driven solution that ensures syntactic correctness and adherence to the CDM schema during contract-to-CDM conversion. We apply this extended framework to a real-world task, comparing its performance with a benchmark developed by the International Swaps and Derivatives Association (ISDA) for CSA clause extraction. Our results show that CDMizer, when integrated with a significantly smaller, open-source Large Language Model (LLM), achieves competitive performance in terms of accuracy and efficiency against larger, proprietary models. This work underscores the potential of resource-efficient solutions to automate legal contract transformation, offering a cost-effective and scalable approach that can meet the needs of financial institutions with constrained resources or strict data privacy requirements.",
+        "translated": "将非结构化的法律合同转换为标准化、机器可读的格式，对于自动化金融业务流程至关重要。通用领域模型（Common Domain Model, CDM）为此提供了标准化框架，但将复杂的法律文件（如信用支持附加协议，Credit Support Annexes, CSAs）转换为CDM表示形式仍是一项重大挑战。本文提出了CDMizer框架的扩展版本，这是一种基于模板的解决方案，能够在合同到CDM的转换过程中确保语法正确性并严格遵循CDM模式。我们将该扩展框架应用于一项真实任务，与国际互换与衍生品协会（International Swaps and Derivatives Association, ISDA）为CSA条款提取开发的基准进行性能对比。实验结果表明，当CDMizer与一个规模显著较小、开源的大语言模型（Large Language Model, LLM）集成时，其在准确性和效率方面均能与更大规模的专有模型相媲美。本研究凸显了资源高效型解决方案在自动化法律合同转换中的潜力，提供了一种成本低廉且可扩展的方法，能够满足资源受限或数据隐私要求严格的金融机构的需求。",
+        "translated_title": "资源高效的大语言模型在非结构化金融合约结构化转换中的应用",
+        "label": [],
+        "label_reason": "论文聚焦法律合同结构化转换，属NLP文档处理，与推荐系统无关。",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "提出轻量级LLM用于合同转换，方法为NLP领域改进，非推荐系统创新。"
     }
 ]
