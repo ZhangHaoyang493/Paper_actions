@@ -6035,5 +6035,21 @@
         "relevance_score": 3,
         "novelty_score": 6,
         "novelty_reason": "提出针对MRI的SAM微调策略，提升泛化性，但方法基于现有架构，创新有限。"
+    },
+    {
+        "title": "ORBIT -- Open Recommendation Benchmark for Reproducible Research with\n  Hidden Tests",
+        "url": "http://arxiv.org/abs/2510.26095v1",
+        "pub_date": "2025-10-30",
+        "summary": "Recommender systems are among the most impactful AI applications, interacting with billions of users every day, guiding them to relevant products, services, or information tailored to their preferences. However, the research and development of recommender systems are hindered by existing datasets that fail to capture realistic user behaviors and inconsistent evaluation settings that lead to ambiguous conclusions. This paper introduces the Open Recommendation Benchmark for Reproducible Research with HIdden Tests (ORBIT), a unified benchmark for consistent and realistic evaluation of recommendation models. ORBIT offers a standardized evaluation framework of public datasets with reproducible splits and transparent settings for its public leaderboard. Additionally, ORBIT introduces a new webpage recommendation task, ClueWeb-Reco, featuring web browsing sequences from 87 million public, high-quality webpages. ClueWeb-Reco is a synthetic dataset derived from real, user-consented, and privacy-guaranteed browsing data. It aligns with modern recommendation scenarios and is reserved as the hidden test part of our leaderboard to challenge recommendation models' generalization ability. ORBIT measures 12 representative recommendation models on its public benchmark and introduces a prompted LLM baseline on the ClueWeb-Reco hidden test. Our benchmark results reflect general improvements of recommender systems on the public datasets, with variable individual performances. The results on the hidden test reveal the limitations of existing approaches in large-scale webpage recommendation and highlight the potential for improvements with LLM integrations. ORBIT benchmark, leaderboard, and codebase are available at https://www.open-reco-bench.ai.",
+        "translated": "推荐系统是影响力最大的人工智能应用之一，每天与数十亿用户交互，引导他们发现符合其偏好的相关产品、服务或信息。然而，推荐系统的研究与开发受到现有数据集的制约，这些数据集无法真实反映用户行为，且评估设置不一致，导致研究结论模糊不清。本文提出 Open Recommendation Benchmark for Reproducible Research with HIdden Tests（ORBIT），一个用于推荐模型一致且真实评估的统一基准。ORBIT 提供了公共数据集的标准评估框架，包含可复现的数据划分和透明的评估设置，并支持公开排行榜。此外，ORBIT 引入了一个新的网页推荐任务 ClueWeb-Reco，包含来自 8700 万高质量公共网页的浏览序列。ClueWeb-Reco 是一个基于真实、用户同意且隐私保障的浏览数据生成的合成数据集，符合现代推荐场景，并作为排行榜的隐藏测试部分，用于挑战推荐模型的泛化能力。ORBIT 在其公开基准上评估了 12 个代表性推荐模型，并在 ClueWeb-Reco 隐藏测试集上引入了一个基于提示的 LLM 基线模型。我们的基准测试结果反映出推荐系统在公开数据集上的整体性能提升，但各模型表现存在差异。隐藏测试集的结果揭示了现有方法在大规模网页推荐任务中的局限性，并凸显了通过集成 LLM 实现性能提升的潜力。ORBIT 基准、排行榜及代码库可访问 https://www.open-reco-bench.ai。",
+        "translated_title": "ORBIT —— 带隐藏测试集的可复现研究开放推荐系统基准",
+        "label": [
+            "推荐系统评估",
+            "通用推荐技术"
+        ],
+        "label_reason": "构建推荐系统评估基准，包含公开与隐藏测试集，支持模型泛化能力评估",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出统一可复现的评估框架与隐藏测试任务，提升评估可信度"
     }
 ]
