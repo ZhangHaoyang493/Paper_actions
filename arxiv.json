@@ -5574,5 +5574,202 @@
         "relevance_score": 4,
         "novelty_score": 7,
         "novelty_reason": "提出多模态RAG评估框架MiRAGE，包含新指标，对现有文本中心评估方法有显著改进。"
+    },
+    {
+        "title": "ProfOlaf: Semi-Automated Tool for Systematic Literature Reviews",
+        "url": "http://arxiv.org/abs/2510.26750v1",
+        "pub_date": "2025-10-30",
+        "summary": "Systematic reviews and mapping studies are critical for synthesizing research, identifying gaps, and guiding future work, but they are often labor-intensive and time-consuming. Existing tools provide partial support for specific steps, leaving much of the process manual and error-prone. We present ProfOlaf, a semi-automated tool designed to streamline systematic reviews while maintaining methodological rigor. ProfOlaf supports iterative snowballing for article collection with human-in-the-loop filtering and uses large language models to assist in analyzing articles, extracting key topics, and answering queries about the content of papers. By combining automation with guided manual effort, ProfOlaf enhances the efficiency, quality, and reproducibility of systematic reviews across research fields. A video describing and demonstrating ProfOlaf is available at: https://youtu.be/4noUXfcmxsE",
+        "translated": "系统综述与映射研究对于整合研究成果、识别研究空白以及指导未来工作至关重要，但这些过程通常耗时耗力。现有工具仅对特定步骤提供部分支持，导致大部分流程仍需人工操作，易出错。我们提出 ProfOlaf，一种半自动化工具，旨在简化系统综述流程，同时保持方法学严谨性。ProfOlaf 支持带有人工介入过滤的迭代滚雪球式文献收集，并利用大语言模型辅助分析文献、提取关键主题以及回答关于论文内容的查询。通过结合自动化与引导式人工努力，ProfOlaf 提升了跨研究领域系统综述的效率、质量与可复现性。介绍并演示 ProfOlaf 的视频可访问：https://youtu.be/4noUXfcmxsE",
+        "translated_title": "ProfOlaf: 用于系统性文献综述的半自动化工具",
+        "label": [],
+        "label_reason": "论文为文献综述工具，不涉及推荐系统任何环节",
+        "relevance_score": 1,
+        "novelty_score": 4,
+        "novelty_reason": "基于LLM辅助文献分析，属通用NLP应用，无推荐领域创新"
+    },
+    {
+        "title": "AdSum: Two-stream Audio-visual Summarization for Automated Video\n  Advertisement Clipping",
+        "url": "http://arxiv.org/abs/2510.26569v1",
+        "pub_date": "2025-10-30",
+        "summary": "Advertisers commonly need multiple versions of the same advertisement (ad) at varying durations for a single campaign. The traditional approach involves manually selecting and re-editing shots from longer video ads to create shorter versions, which is labor-intensive and time-consuming. In this paper, we introduce a framework for automated video ad clipping using video summarization techniques. We are the first to frame video clipping as a shot selection problem, tailored specifically for advertising. Unlike existing general video summarization methods that primarily focus on visual content, our approach emphasizes the critical role of audio in advertising. To achieve this, we develop a two-stream audio-visual fusion model that predicts the importance of video frames, where importance is defined as the likelihood of a frame being selected in the firm-produced short ad. To address the lack of ad-specific datasets, we present AdSum204, a novel dataset comprising 102 pairs of 30-second and 15-second ads from real advertising campaigns. Extensive experiments demonstrate that our model outperforms state-of-the-art methods across various metrics, including Average Precision, Area Under Curve, Spearman, and Kendall.",
+        "translated": "广告商通常需要在单个广告活动中为同一则广告（ad）提供不同时长的多个版本。传统方法需要人工从较长的视频广告中选取并重新编辑镜头，以生成较短版本，这一过程耗时且劳动密集。本文提出一种基于视频摘要技术的自动化视频广告剪辑框架。我们首次将视频剪辑问题形式化为一个面向广告场景的镜头选择问题。与现有通用视频摘要方法主要关注视觉内容不同，我们的方法强调音频在广告中的关键作用。为此，我们构建了一个双流音视频融合模型，用于预测视频帧的重要性，其中重要性定义为某帧被选入广告公司制作的短版广告中的概率。为解决广告专用数据集缺失的问题，我们发布了AdSum204，一个包含102对来自真实广告活动的30秒与15秒广告的新数据集。大量实验表明，我们的模型在平均精度（Average Precision）、曲线下面积（Area Under Curve）、斯皮尔曼相关系数（Spearman）和肯德尔相关系数（Kendall）等多个指标上均优于现有最先进方法。",
+        "translated_title": "AdSum：面向自动化视频广告剪辑的双流音视频摘要方法",
+        "label": [],
+        "label_reason": "论文聚焦广告视频剪辑，属于视频处理与内容生成，与推荐系统无直接关联。",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "提出双流音视频融合模型，创新性地引入音频特征，对广告剪辑任务有显著改进。"
+    },
+    {
+        "title": "WeaveRec: An LLM-Based Cross-Domain Sequential Recommendation Framework\n  with Model Merging",
+        "url": "http://arxiv.org/abs/2510.26546v1",
+        "pub_date": "2025-10-30",
+        "summary": "Cross-Domain Sequential Recommendation (CDSR) seeks to improve user preference modeling by transferring knowledge from multiple domains. Despite the progress made in CDSR, most existing methods rely on overlapping users or items to establish cross-domain correlations-a requirement that rarely holds in real-world settings. The advent of large language models (LLM) and model-merging techniques appears to overcome this limitation by unifying multi-domain data without explicit overlaps. Yet, our empirical study shows that naively training an LLM on combined domains-or simply merging several domain-specific LLMs-often degrades performance relative to a model trained solely on the target domain. To address these challenges, we first experimentally investigate the cause of suboptimal performance in LLM-based cross-domain recommendation and model merging. Building on these insights, we introduce WeaveRec, which cross-trains multiple LoRA modules with source and target domain data in a weaving fashion, and fuses them via model merging. WeaveRec can be extended to multi-source domain scenarios and notably does not introduce additional inference-time cost in terms of latency or memory. Furthermore, we provide a theoretical guarantee that WeaveRec can reduce the upper bound of the expected error in the target domain. Extensive experiments on single-source, multi-source, and cross-platform cross-domain recommendation scenarios validate that WeaveRec effectively mitigates performance degradation and consistently outperforms baseline approaches in real-world recommendation tasks.",
+        "translated": "跨域序列推荐（CDSR）旨在通过从多个领域迁移知识来提升用户偏好建模能力。尽管CDSR领域已取得一定进展，但现有大多数方法依赖于用户或物料在不同领域间的重叠来建立跨域关联——这一前提在真实场景中往往难以满足。大型语言模型（LLM）与模型融合技术的出现，似乎通过无需显式重叠即可统一多域数据的方式克服了这一限制。然而，我们的实证研究表明，简单地在合并后的多域数据上训练LLM，或直接合并多个领域专用LLM，通常会导致性能劣于仅在目标域上训练的模型。为应对这些挑战，我们首先实验性地探究了基于LLM的跨域推荐及模型融合中性能欠佳的原因。基于这些洞察，我们提出WeaveRec，该方法以“交织”方式利用源域与目标域数据交叉训练多个LoRA模块，并通过模型融合进行整合。WeaveRec可扩展至多源域场景，且在推理阶段不引入额外的延迟或内存开销。此外，我们提供了理论保证，表明WeaveRec能够降低目标域预期误差的上界。在单源、多源及跨平台跨域推荐场景下的大量实验验证表明，WeaveRec有效缓解了性能退化问题，并在真实推荐任务中始终优于基线方法。",
+        "translated_title": "WeaveRec：一种基于大语言模型的跨域序列推荐框架及其模型融合方法",
+        "label": [
+            "序列推荐",
+            "跨域/联邦推荐",
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "论文聚焦跨域序列推荐，结合LLM与模型合并技术，直接解决推荐系统核心问题",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出WeaveRec框架，创新性地结合LoRA与模型合并，提升跨域推荐性能"
+    },
+    {
+        "title": "Inside CORE-KG: Evaluating Structured Prompting and Coreference\n  Resolution for Knowledge Graphs",
+        "url": "http://arxiv.org/abs/2510.26512v1",
+        "pub_date": "2025-10-30",
+        "summary": "Human smuggling networks are increasingly adaptive and difficult to analyze. Legal case documents offer critical insights but are often unstructured, lexically dense, and filled with ambiguous or shifting references, which pose significant challenges for automated knowledge graph (KG) construction. While recent LLM-based approaches improve over static templates, they still generate noisy, fragmented graphs with duplicate nodes due to the absence of guided extraction and coreference resolution. The recently proposed CORE-KG framework addresses these limitations by integrating a type-aware coreference module and domain-guided structured prompts, significantly reducing node duplication and legal noise. In this work, we present a systematic ablation study of CORE-KG to quantify the individual contributions of its two key components. Our results show that removing coreference resolution results in a 28.32% increase in node duplication and a 4.32% increase in noisy nodes, while removing structured prompts leads to a 4.34% increase in node duplication and a 73.33% increase in noisy nodes. These findings offer empirical insights for designing robust LLM-based pipelines for extracting structured representations from complex legal texts.",
+        "translated": "人口走私网络日益具有适应性，分析难度不断加大。法律案件文档虽提供了关键信息，但通常结构松散、词汇密集，且包含大量模糊或指代变化的表达，给自动化知识图谱（KG）构建带来显著挑战。尽管近期基于大语言模型（LLM）的方法相较于静态模板有所改进，但由于缺乏引导式抽取和共指消解，仍会产生带有噪声、碎片化且存在重复节点的知识图谱。最近提出的 CORE-KG 框架通过集成类型感知的共指消解模块和领域引导的结构化提示，显著减少了节点重复和法律噪声。在本研究中，我们对 CORE-KG 进行了系统的消融实验，以量化其两个核心组件的独立贡献。实验结果表明，移除共指消解会导致节点重复率增加 28.32%，噪声节点增加 4.32%；而移除结构化提示则导致节点重复率增加 4.34%，噪声节点增加 73.33%。这些发现为设计稳健的基于大语言模型的复杂法律文本结构化表示抽取流水线提供了实证依据。",
+        "translated_title": "在CORE-KG中：评估知识图谱的结构化提示与共指消解",
+        "label": [],
+        "label_reason": "论文聚焦法律文本知识图谱构建，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "提出结构化提示与共指消解模块，对LLM抽取有改进，但非推荐领域创新。"
+    },
+    {
+        "title": "LINK-KG: LLM-Driven Coreference-Resolved Knowledge Graphs for Human\n  Smuggling Networks",
+        "url": "http://arxiv.org/abs/2510.26486v1",
+        "pub_date": "2025-10-30",
+        "summary": "Human smuggling networks are complex and constantly evolving, making them difficult to analyze comprehensively. Legal case documents offer rich factual and procedural insights into these networks but are often long, unstructured, and filled with ambiguous or shifting references, posing significant challenges for automated knowledge graph (KG) construction. Existing methods either overlook coreference resolution or fail to scale beyond short text spans, leading to fragmented graphs and inconsistent entity linking. We propose LINK-KG, a modular framework that integrates a three-stage, LLM-guided coreference resolution pipeline with downstream KG extraction. At the core of our approach is a type-specific Prompt Cache, which consistently tracks and resolves references across document chunks, enabling clean and disambiguated narratives for structured knowledge graph construction from both short and long legal texts. LINK-KG reduces average node duplication by 45.21% and noisy nodes by 32.22% compared to baseline methods, resulting in cleaner and more coherent graph structures. These improvements establish LINK-KG as a strong foundation for analyzing complex criminal networks.",
+        "translated": "人口走私网络复杂且持续演变，难以进行全面分析。法律案件文件虽提供了关于这些网络的丰富事实与程序性信息，但通常篇幅较长、结构松散，且包含大量模糊或指代变化的表达，给自动化知识图谱（KG）构建带来了显著挑战。现有方法要么忽略共指消解，要么无法扩展至长文本片段，导致生成的知识图谱碎片化且实体链接不一致。我们提出LINK-KG，一种模块化框架，将三阶段、大语言模型（LLM）引导的共指消解流水线与下游知识图谱抽取相结合。本方法的核心是类型特定的Prompt缓存，它能够持续追踪并消解文档片段中的指代关系，从而为短文本和长法律文本的结构化知识图谱构建提供清晰、无歧义的叙述。与基线方法相比，LINK-KG将平均节点重复率降低45.21%，噪声节点减少32.22%，生成更干净、更连贯的图结构。这些改进使LINK-KG成为分析复杂犯罪网络的坚实基础。",
+        "translated_title": "LINK-KG：基于大语言模型的共指消解知识图谱在人口走私网络中的应用",
+        "label": [],
+        "label_reason": "论文聚焦于法律文本中的知识图谱构建与指代消解，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 7,
+        "novelty_reason": "提出LLM引导的三阶段指代消解框架，结合类型特定提示缓存，具有创新性，但非推荐领域。"
+    },
+    {
+        "title": "Vectorized Context-Aware Embeddings for GAT-Based Collaborative\n  Filtering",
+        "url": "http://arxiv.org/abs/2510.26461v1",
+        "pub_date": "2025-10-30",
+        "summary": "Recommender systems often struggle with data sparsity and cold-start scenarios, limiting their ability to provide accurate suggestions for new or infrequent users. This paper presents a Graph Attention Network (GAT) based Collaborative Filtering (CF) framework enhanced with Large Language Model (LLM) driven context aware embeddings. Specifically, we generate concise textual user profiles and unify item metadata (titles, genres, overviews) into rich textual embeddings, injecting these as initial node features in a bipartite user item graph. To further optimize ranking performance, we introduce a hybrid loss function that combines Bayesian Personalized Ranking (BPR) with a cosine similarity term and robust negative sampling, ensuring explicit negative feedback is distinguished from unobserved data. Experiments on the MovieLens 100k and 1M datasets show consistent improvements over state-of-the-art baselines in Precision, NDCG, and MAP while demonstrating robustness for users with limited interaction history. Ablation studies confirm the critical role of LLM-augmented embeddings and the cosine similarity term in capturing nuanced semantic relationships. Our approach effectively mitigates sparsity and cold-start limitations by integrating LLM-derived contextual understanding into graph-based architectures. Future directions include balancing recommendation accuracy with coverage and diversity, and introducing fairness-aware constraints and interpretability features to enhance system performance further.",
+        "translated": "推荐系统常面临数据稀疏性和冷启动场景的挑战，限制了其为新用户或交互较少用户提供准确建议的能力。本文提出一种基于图注意力网络（GAT）的协同过滤（CF）框架，并引入由大语言模型（LLM）驱动的上下文感知嵌入。具体而言，我们生成简洁的文本化用户画像，并将物料元数据（如标题、类型、简介）统一整合为丰富的文本嵌入，将其作为二分图用户-物料图中的初始节点特征注入。为进一步优化排序性能，我们引入一种混合损失函数，结合贝叶斯个性化排序（BPR）与余弦相似度项，并采用鲁棒的负采样策略，确保显式负反馈与未观测数据能够被有效区分。在MovieLens 100k和1M数据集上的实验表明，与当前主流基线相比，我们的方法在精确率（Precision）、NDCG和MAP等指标上均取得稳定提升，同时对交互历史较少的用户表现出良好的鲁棒性。消融实验验证了LLM增强嵌入和余弦相似度项在捕捉细微语义关系中的关键作用。通过将LLM衍生的上下文理解融入图结构架构，我们的方法有效缓解了数据稀疏性和冷启动问题。未来研究方向包括在推荐准确率与覆盖率、多样性之间取得平衡，并引入公平性约束与可解释性特征，以进一步提升系统性能。",
+        "translated_title": "向量化上下文感知嵌入用于基于GAT的协同过滤",
+        "label": [
+            "图神经网络推荐（GNN for Recommendation）",
+            "序列推荐（Sequential Recommendation）",
+            "LLM生成式推荐（LLM-based Generative Recommendation）",
+            "负采样与对比学习（Negative Sampling / Contrastive Learning）"
+        ],
+        "label_reason": "基于GAT的协同过滤框架结合LLM生成上下文感知嵌入，解决稀疏性与冷启动，直接用于推荐精排环节。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新性融合LLM与GAT，引入混合损失函数优化排序，显著提升推荐性能与鲁棒性。"
+    },
+    {
+        "title": "Barlow Twins for Sequential Recommendation",
+        "url": "http://arxiv.org/abs/2510.26407v1",
+        "pub_date": "2025-10-30",
+        "summary": "Sequential recommendation models must navigate sparse interaction data popularity bias and conflicting objectives like accuracy versus diversity While recent contrastive selfsupervised learning SSL methods offer improved accuracy they come with tradeoffs large batch requirements reliance on handcrafted augmentations and negative sampling that can reinforce popularity bias In this paper we introduce BT-SR a novel noncontrastive SSL framework that integrates the Barlow Twins redundancyreduction principle into a Transformerbased nextitem recommender BTSR learns embeddings that align users with similar shortterm behaviors while preserving longterm distinctionswithout requiring negative sampling or artificial perturbations This structuresensitive alignment allows BT-SR to more effectively recognize emerging user intent and mitigate the influence of noisy historical context Our experiments on five public benchmarks demonstrate that BTSR consistently improves nextitem prediction accuracy and significantly enhances longtail item coverage and recommendation calibration Crucially we show that a single hyperparameter can control the accuracydiversity tradeoff enabling practitioners to adapt recommendations to specific application needs",
+        "translated": "序列推荐模型必须应对稀疏交互数据、流行度偏差以及准确性与多样性之间的冲突目标。尽管近期的对比自监督学习（SSL）方法在提升准确性方面取得进展，但其存在若干权衡：需要较大的批次规模、依赖于手工设计的数据增强策略，以及负采样机制可能加剧流行度偏差。本文提出 BT-SR，一种新颖的非对比式 SSL 框架，将 Barlow Twins 的冗余消除原则集成到基于 Transformer 的下一项推荐模型中。BT-SR 学习用户嵌入，使其在相似短期行为上对齐，同时保留长期行为的区分性，且无需负采样或人工扰动。这种结构敏感的对齐机制使 BT-SR 能更有效地识别用户新兴意图，并减轻噪声历史上下文的影响。在五个公开基准数据集上的实验表明，BT-SR 一致提升了下一项预测的准确性，显著增强了长尾物料的覆盖率和推荐校准性能。尤为重要的是，我们证明单个超参数即可控制准确性与多样性的权衡，使实践者能够根据具体应用场景灵活调整推荐策略。",
+        "translated_title": "Barlow Twins 用于序列推荐",
+        "label": [
+            "序列推荐",
+            "负采样与对比学习",
+            "通用推荐技术"
+        ],
+        "label_reason": "论文提出非对比式自监督框架用于序列推荐，解决负采样偏差问题，直接关联推荐系统核心环节。",
+        "relevance_score": 8,
+        "novelty_score": 8,
+        "novelty_reason": "创新性引入Barlow Twins机制替代传统对比学习，无需负采样，有效缓解流行度偏差，提升长尾覆盖。"
+    },
+    {
+        "title": "GraphCompliance: Aligning Policy and Context Graphs for LLM-Based\n  Regulatory Compliance",
+        "url": "http://arxiv.org/abs/2510.26309v1",
+        "pub_date": "2025-10-30",
+        "summary": "Compliance at web scale poses practical challenges: each request may require a regulatory assessment. Regulatory texts (e.g., the General Data Protection Regulation, GDPR) are cross-referential and normative, while runtime contexts are expressed in unstructured natural language. This setting motivates us to align semantic information in unstructured text with the structured, normative elements of regulations. To this end, we introduce GraphCompliance, a framework that represents regulatory texts as a Policy Graph and runtime contexts as a Context Graph, and aligns them. In this formulation, the policy graph encodes normative structure and cross-references, whereas the context graph formalizes events as subject-action-object (SAO) and entity-relation triples. This alignment anchors the reasoning of a judge large language model (LLM) in structured information and helps reduce the burden of regulatory interpretation and event parsing, enabling a focus on the core reasoning step. In experiments on 300 GDPR-derived real-world scenarios spanning five evaluation tasks, GraphCompliance yields 4.1-7.2 percentage points (pp) higher micro-F1 than LLM-only and RAG baselines, with fewer under- and over-predictions, resulting in higher recall and lower false positive rates. Ablation studies indicate contributions from each graph component, suggesting that structured representations and a judge LLM are complementary for normative reasoning.",
+        "translated": "在大规模网络场景下，合规性面临实际挑战：每个请求可能都需要进行法规评估。法规文本（例如《通用数据保护条例》，GDPR）具有交叉引用和规范性特征，而运行时上下文则以非结构化的自然语言表达。这一设定促使我们对非结构化文本中的语义信息与法规的结构化、规范性要素进行对齐。为此，我们提出 GraphCompliance 框架，该框架将法规文本表示为政策图（Policy Graph），将运行时上下文表示为上下文图（Context Graph），并实现二者对齐。在此建模中，政策图编码了规范性结构和交叉引用，而上下文图则将事件形式化为“主体-动作-客体”（SAO）三元组和“实体-关系”三元组。这种对齐方式将判别大语言模型（LLM）的推理锚定于结构化信息，有助于减轻法规解释和事件解析的负担，使模型能够专注于核心推理步骤。在涵盖五个评估任务的300个源自GDPR的真实场景实验中，GraphCompliance 相较于仅使用LLM和RAG的基线方法，微F1得分高出4.1至7.2个百分点（pp），且误判和过判情况更少，从而实现了更高的召回率和更低的误报率。消融实验表明，各图组件均对性能提升有贡献，说明结构化表示与判别LLM在规范性推理中具有互补性。",
+        "translated_title": "GraphCompliance：对齐策略图与上下文图以实现基于大语言模型的合规性监管",
+        "label": [],
+        "label_reason": "论文聚焦法律合规判断，虽用LLM和图结构，但非推荐系统核心问题，与推荐无直接关联。",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "提出政策图与上下文图对齐新框架，结合LLM提升合规判断准确率，方法新颖但非推荐领域。"
+    },
+    {
+        "title": "DiSE: A diffusion probabilistic model for automatic structure\n  elucidation of organic compounds",
+        "url": "http://arxiv.org/abs/2510.26231v1",
+        "pub_date": "2025-10-30",
+        "summary": "Automatic structure elucidation is essential for self-driving laboratories as it enables the system to achieve truly autonomous. This capability closes the experimental feedback loop, ensuring that machine learning models receive reliable structure information for real-time decision-making and optimization. Herein, we present DiSE, an end-to-end diffusion-based generative model that integrates multiple spectroscopic modalities, including MS, 13C and 1H chemical shifts, HSQC, and COSY, to achieve automated yet accurate structure elucidation of organic compounds. By learning inherent correlations among spectra through data-driven approaches, DiSE achieves superior accuracy, strong generalization across chemically diverse datasets, and robustness to experimental data despite being trained on calculated spectra. DiSE thus represents a significant advance toward fully automated structure elucidation, with broad potential in natural product research, drug discovery, and self-driving laboratories.",
+        "translated": "自动结构解析对于自动驾驶实验室至关重要，因为它使系统能够实现真正的自主性。该能力闭合了实验反馈回路，确保机器学习模型能够获得可靠的结构信息，以支持实时决策与优化。本文提出DiSE，一种端到端的基于扩散的生成模型，该模型整合了多种光谱模态，包括MS、13C和1H化学位移、HSQC以及COSY，以实现有机化合物的自动化且准确的结构解析。通过数据驱动的方法学习光谱之间的内在关联，DiSE在准确性、跨化学多样性数据集的泛化能力以及对实验数据的鲁棒性方面均表现出色，尽管其训练数据为计算得到的光谱。因此，DiSE代表了迈向完全自动化结构解析的重要进展，在天然产物研究、药物发现以及自动驾驶实验室等领域具有广阔的应用潜力。",
+        "translated_title": "DiSE：一种用于有机化合物自动结构阐明的扩散概率模型",
+        "label": [],
+        "label_reason": "论文聚焦有机化合物结构解析，属于化学信息学，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 7,
+        "novelty_reason": "提出基于扩散模型的多模态生成方法，对结构解析有创新，但非推荐领域。"
+    },
+    {
+        "title": "ReaKase-8B: Legal Case Retrieval via Knowledge and Reasoning\n  Representations with LLMs",
+        "url": "http://arxiv.org/abs/2510.26178v1",
+        "pub_date": "2025-10-30",
+        "summary": "Legal case retrieval (LCR) is a cornerstone of real-world legal decision making, as it enables practitioners to identify precedents for a given query case. Existing approaches mainly rely on traditional lexical models and pretrained language models to encode the texts of legal cases. Yet there are rich information in the relations among different legal entities as well as the crucial reasoning process that uncovers how legal facts and legal issues can lead to judicial decisions. Such relational reasoning process reflects the distinctive characteristics of each case that can distinguish one from another, mirroring the real-world judicial process. Naturally, incorporating such information into the precise case embedding could further enhance the accuracy of case retrieval. In this paper, a novel ReaKase-8B framework is proposed to leverage extracted legal facts, legal issues, legal relation triplets and legal reasoning for effective legal case retrieval. ReaKase-8B designs an in-context legal case representation learning paradigm with a fine-tuned large language model. Extensive experiments on two benchmark datasets from COLIEE 2022 and COLIEE 2023 demonstrate that our knowledge and reasoning augmented embeddings substantially improve retrieval performance over baseline models, highlighting the potential of integrating legal reasoning into legal case retrieval systems. The code has been released on https://github.com/yanran-tang/ReaKase-8B.",
+        "translated": "法律案例检索（Legal Case Retrieval, LCR）是现实世界法律决策的核心环节，它使从业者能够为给定的查询案例识别出相关判例。现有方法主要依赖传统词法模型和预训练语言模型对法律案例文本进行编码。然而，不同法律实体之间的关系蕴含着丰富的信息，同时，揭示法律事实与法律问题如何导向司法判决的关键推理过程同样至关重要。这种关系推理过程反映了每个案例的独特特征，能够有效区分不同案例，体现了真实的司法推理流程。因此，将此类信息融入精确的案例嵌入表示中，有望进一步提升案例检索的准确性。本文提出了一种新颖的 ReaKase-8B 框架，旨在利用提取出的法律事实、法律问题、法律关系三元组以及法律推理过程，实现高效的法律案例检索。ReaKase-8B 设计了一种基于微调大语言模型的上下文法律案例表示学习范式。在 COLIEE 2022 和 COLIEE 2023 两个基准数据集上的大量实验表明，我们的知识与推理增强型嵌入显著优于基线模型，验证了将法律推理融入法律案例检索系统的潜力。代码已发布于 https://github.com/yanran-tang/ReaKase-8B。",
+        "translated_title": "ReaKase-8B：基于大语言模型的知识与推理表示的法律案例检索",
+        "label": [
+            "召回",
+            "LLM生成式推荐",
+            "负采样与对比学习"
+        ],
+        "label_reason": "论文聚焦法律案例检索，属信息检索范畴，与推荐系统间接相关，核心为召回环节。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出基于LLM的上下文法律案例表示学习范式，结合知识与推理增强嵌入，方法新颖且有效。"
+    },
+    {
+        "title": "OneTrans: Unified Feature Interaction and Sequence Modeling with One\n  Transformer in Industrial Recommender",
+        "url": "http://arxiv.org/abs/2510.26104v1",
+        "pub_date": "2025-10-30",
+        "summary": "In recommendation systems, scaling up feature-interaction modules (e.g., Wukong, RankMixer) or user-behavior sequence modules (e.g., LONGER) has achieved notable success. However, these efforts typically proceed on separate tracks, which not only hinders bidirectional information exchange but also prevents unified optimization and scaling. In this paper, we propose OneTrans, a unified Transformer backbone that simultaneously performs user-behavior sequence modeling and feature interaction. OneTrans employs a unified tokenizer to convert both sequential and non-sequential attributes into a single token sequence. The stacked OneTrans blocks share parameters across similar sequential tokens while assigning token-specific parameters to non-sequential tokens. Through causal attention and cross-request KV caching, OneTrans enables precomputation and caching of intermediate representations, significantly reducing computational costs during both training and inference. Experimental results on industrial-scale datasets demonstrate that OneTrans scales efficiently with increasing parameters, consistently outperforms strong baselines, and yields a 5.68% lift in per-user GMV in online A/B tests.",
+        "translated": "在推荐系统中，扩展特征交互模块（如 Wukong、RankMixer）或用户行为序列模块（如 LONGER）已取得显著成效。然而，这些努力通常在独立的路径上进行，不仅阻碍了双向信息交换，也妨碍了统一优化与扩展。本文提出 OneTrans，一种统一的 Transformer 主干网络，能够同时完成用户行为序列建模与特征交互。OneTrans 采用统一的分词器，将序列化与非序列化属性均转换为单一的 token 序列。堆叠的 OneTrans 模块在相似的序列化 token 间共享参数，同时为非序列化 token 分配特定的参数。通过因果注意力机制与跨请求 KV 缓存，OneTrans 实现了中间表示的预计算与缓存，显著降低了训练与推理阶段的计算成本。在工业级数据集上的实验结果表明，OneTrans 能够随着参数量增加高效扩展，持续优于强基线模型，并在在线 A/B 测试中实现每用户 GMV 提升 5.68%。",
+        "translated_title": "OneTrans：工业推荐系统中基于单一Transformer的统一特征交互与序列建模",
+        "label": [
+            "精排（Ranking）",
+            "序列推荐（Sequential Recommendation）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "论文提出统一Transformer架构，融合序列建模与特征交互，直接用于推荐系统精排环节，显著提升性能。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新性地统一序列与非序列特征处理，共享参数并支持KV缓存，提升效率与可扩展性，属结构化改进。"
+    },
+    {
+        "title": "ORBIT - Open Recommendation Benchmark for Reproducible Research with\n  Hidden Tests",
+        "url": "http://arxiv.org/abs/2510.26095v1",
+        "pub_date": "2025-10-30",
+        "summary": "Recommender systems are among the most impactful AI applications, interacting with billions of users every day, guiding them to relevant products, services, or information tailored to their preferences. However, the research and development of recommender systems are hindered by existing datasets that fail to capture realistic user behaviors and inconsistent evaluation settings that lead to ambiguous conclusions. This paper introduces the Open Recommendation Benchmark for Reproducible Research with HIdden Tests (ORBIT), a unified benchmark for consistent and realistic evaluation of recommendation models. ORBIT offers a standardized evaluation framework of public datasets with reproducible splits and transparent settings for its public leaderboard. Additionally, ORBIT introduces a new webpage recommendation task, ClueWeb-Reco, featuring web browsing sequences from 87 million public, high-quality webpages. ClueWeb-Reco is a synthetic dataset derived from real, user-consented, and privacy-guaranteed browsing data. It aligns with modern recommendation scenarios and is reserved as the hidden test part of our leaderboard to challenge recommendation models' generalization ability. ORBIT measures 12 representative recommendation models on its public benchmark and introduces a prompted LLM baseline on the ClueWeb-Reco hidden test. Our benchmark results reflect general improvements of recommender systems on the public datasets, with variable individual performances. The results on the hidden test reveal the limitations of existing approaches in large-scale webpage recommendation and highlight the potential for improvements with LLM integrations. ORBIT benchmark, leaderboard, and codebase are available at https://www.open-reco-bench.ai.",
+        "translated": "推荐系统是影响力最大的人工智能应用之一，每天与数十亿用户交互，引导他们发现符合其偏好的相关产品、服务或信息。然而，推荐系统的研究与开发受到现有数据集的制约，这些数据集无法准确捕捉真实用户行为，且评估设置不一致，导致结论模糊。本文提出了面向可复现研究的隐藏测试开放推荐基准（Open Recommendation Benchmark for Reproducible Research with HIdden Tests, ORBIT），这是一个用于一致且真实评估推荐模型的统一基准。ORBIT 提供了包含可复现划分和透明设置的公开数据集标准化评估框架，并为公开排行榜提供支持。此外，ORBIT 引入了一个新的网页推荐任务 ClueWeb-Reco，该任务基于 8700 万份公开、高质量网页的浏览序列。ClueWeb-Reco 是一个从真实、用户同意且隐私保障的浏览数据中衍生出的合成数据集，契合现代推荐场景，并作为排行榜的隐藏测试部分，用于挑战推荐模型的泛化能力。ORBIT 在其公开基准上评估了 12 个代表性推荐模型，并在 ClueWeb-Reco 隐藏测试集上引入了一个提示式大语言模型（LLM）基线。我们的基准测试结果反映出推荐系统在公开数据集上的整体性能提升，但各模型个体表现存在差异。隐藏测试集的结果揭示了现有方法在大规模网页推荐场景中的局限性，并凸显了通过集成大语言模型实现性能提升的潜力。ORBIT 基准、排行榜及代码库可通过 https://www.open-reco-bench.ai 获取。",
+        "translated_title": "ORBIT —— 带隐藏测试集的可复现研究开放推荐系统基准",
+        "label": [
+            "推荐系统评估",
+            "通用推荐技术"
+        ],
+        "label_reason": "论文构建推荐系统基准ORBIT，含公开与隐藏测试集，用于评估推荐模型，属推荐系统评估与通用技术范畴。",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出标准化评估框架与隐藏测试集，提升可复现性，但未提出新算法或模型架构。"
+    },
+    {
+        "title": "The Quest for Reliable Metrics of Responsible AI",
+        "url": "http://arxiv.org/abs/2510.26007v1",
+        "pub_date": "2025-10-29",
+        "summary": "The development of Artificial Intelligence (AI), including AI in Science (AIS), should be done following the principles of responsible AI. Progress in responsible AI is often quantified through evaluation metrics, yet there has been less work on assessing the robustness and reliability of the metrics themselves. We reflect on prior work that examines the robustness of fairness metrics for recommender systems as a type of AI application and summarise their key takeaways into a set of non-exhaustive guidelines for developing reliable metrics of responsible AI. Our guidelines apply to a broad spectrum of AI applications, including AIS.",
+        "translated": "人工智能（AI）的发展，包括科学领域的人工智能（AIS），应遵循负责任AI的原则。负责任AI的进展通常通过评估指标进行量化，然而针对这些指标本身稳健性与可靠性的评估工作却相对较少。我们回顾了先前研究中关于推荐系统（一种AI应用）公平性指标稳健性的相关工作，并将其核心结论总结为一套非穷尽的指导原则，用于开发负责任AI的可靠评估指标。这些指导原则适用于广泛的AI应用场景，包括AIS。",
+        "translated_title": "负责任人工智能可靠指标的探索",
+        "label": [
+            "推荐系统公平性/可解释性",
+            "推荐系统评估"
+        ],
+        "label_reason": "论文聚焦推荐系统公平性评估指标的可靠性，与推荐系统评估和公平性相关",
+        "relevance_score": 4,
+        "novelty_score": 5,
+        "novelty_reason": "提出评估指标可靠性的指南，非全新方法，属总结性改进"
     }
 ]
