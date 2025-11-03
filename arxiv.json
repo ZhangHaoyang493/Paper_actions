@@ -6231,5 +6231,70 @@
         "relevance_score": 4,
         "novelty_score": 6,
         "novelty_reason": "识别两种新偏差类型并提出缓解策略，但方法未突破现有框架"
+    },
+    {
+        "title": "LifWavNet: Lifting Wavelet-based Network for Non-contact ECG\n  Reconstruction from Radar",
+        "url": "http://arxiv.org/abs/2510.27692v1",
+        "pub_date": "2025-10-31",
+        "summary": "Non-contact electrocardiogram (ECG) reconstruction from radar signals offers a promising approach for unobtrusive cardiac monitoring. We present LifWavNet, a lifting wavelet network based on a multi-resolution analysis and synthesis (MRAS) model for radar-to-ECG reconstruction. Unlike prior models that use fixed wavelet approaches, LifWavNet employs learnable lifting wavelets with lifting and inverse lifting units to adaptively capture radar signal features and synthesize physiologically meaningful ECG waveforms. To improve reconstruction fidelity, we introduce a multi-resolution short-time Fourier transform (STFT) loss, that enforces consistency with the ground-truth ECG in both temporal and spectral domains. Evaluations on two public datasets demonstrate that LifWavNet outperforms state-of-the-art methods in ECG reconstruction and downstream vital sign estimation (heart rate and heart rate variability). Furthermore, intermediate feature visualization highlights the interpretability of multi-resolution decomposition and synthesis in radar-to-ECG reconstruction. These results establish LifWavNet as a robust framework for radar-based non-contact ECG measurement.",
+        "translated": "非接触式心电图（ECG）从雷达信号中重建为无干扰心脏监测提供了一种有前景的方法。我们提出LifWavNet，一种基于多分辨率分析与合成（MRAS）模型的提升小波网络，用于雷达信号到ECG的重建。与以往采用固定小波方法的模型不同，LifWavNet采用可学习的提升小波，通过提升单元和逆提升单元自适应地捕捉雷达信号特征，并合成具有生理意义的ECG波形。为提高重建保真度，我们引入了一种多分辨率短时傅里叶变换（STFT）损失函数，强制在时域和频域上与真实ECG保持一致。在两个公开数据集上的评估表明，LifWavNet在ECG重建及下游生命体征估计（心率和心率变异性）方面均优于现有最先进方法。此外，中间特征可视化结果突显了多分辨率分解与合成在雷达到ECG重建中的可解释性。这些结果确立了LifWavNet作为基于雷达的非接触式ECG测量的稳健框架。",
+        "translated_title": "LifWavNet：基于提升小波的网络用于从雷达信号中重建无接触式心电图",
+        "label": [],
+        "label_reason": "论文聚焦雷达信号到ECG重建，属于信号处理与生物医学信号恢复，非图像像素级处理，不属于low-level图像任务。",
+        "relevance_score": 1,
+        "novelty_score": 6,
+        "novelty_reason": "提出可学习小波网络与多分辨率STFT损失，对信号重建有改进，但非图像处理领域创新。"
+    },
+    {
+        "title": "Phased DMD: Few-step Distribution Matching Distillation via Score\n  Matching within Subintervals",
+        "url": "http://arxiv.org/abs/2510.27684v1",
+        "pub_date": "2025-10-31",
+        "summary": "Distribution Matching Distillation (DMD) distills score-based generative models into efficient one-step generators, without requiring a one-to-one correspondence with the sampling trajectories of their teachers. However, limited model capacity causes one-step distilled models underperform on complex generative tasks, e.g., synthesizing intricate object motions in text-to-video generation. Directly extending DMD to multi-step distillation increases memory usage and computational depth, leading to instability and reduced efficiency. While prior works propose stochastic gradient truncation as a potential solution, we observe that it substantially reduces the generation diversity of multi-step distilled models, bringing it down to the level of their one-step counterparts. To address these limitations, we propose Phased DMD, a multi-step distillation framework that bridges the idea of phase-wise distillation with Mixture-of-Experts (MoE), reducing learning difficulty while enhancing model capacity. Phased DMD is built upon two key ideas: progressive distribution matching and score matching within subintervals. First, our model divides the SNR range into subintervals, progressively refining the model to higher SNR levels, to better capture complex distributions. Next, to ensure the training objective within each subinterval is accurate, we have conducted rigorous mathematical derivations. We validate Phased DMD by distilling state-of-the-art image and video generation models, including Qwen-Image (20B parameters) and Wan2.2 (28B parameters). Experimental results demonstrate that Phased DMD preserves output diversity better than DMD while retaining key generative capabilities. We will release our code and models.",
+        "translated": "分布匹配蒸馏（Distribution Matching Distillation, DMD）将基于分数的生成模型蒸馏为高效的单步生成器，无需与教师模型的采样轨迹建立一一对应关系。然而，受限的模型容量导致单步蒸馏模型在复杂生成任务（如文本到视频生成中合成精细物体运动）上表现不佳。直接将DMD扩展至多步蒸馏会增加内存占用和计算深度，导致训练不稳定并降低效率。尽管先前工作提出随机梯度截断作为潜在解决方案，我们观察到该方法显著降低了多步蒸馏模型的生成多样性，使其降至与单步模型相当的水平。为克服这些局限，我们提出分阶段DMD（Phased DMD），一种将分阶段蒸馏思想与专家混合（Mixture-of-Experts, MoE）相结合的多步蒸馏框架，旨在降低学习难度的同时增强模型容量。Phased DMD基于两个核心思想：渐进式分布匹配和子区间内的分数匹配。首先，我们的模型将SNR范围划分为多个子区间，逐步将模型优化至更高SNR水平，以更好地捕捉复杂分布。其次，为确保每个子区间内训练目标的准确性，我们进行了严格的数学推导。我们通过蒸馏当前最先进的图像与视频生成模型（包括Qwen-Image（20B参数）和Wan2.2（28B参数））验证了Phased DMD的有效性。实验结果表明，与DMD相比，Phased DMD在保持关键生成能力的同时，更好地保留了输出多样性。我们将公开代码和模型。",
+        "translated_title": "分阶段DMD：基于子区间内得分匹配的少步分布匹配蒸馏",
+        "label": [],
+        "label_reason": "论文聚焦图像/视频生成模型蒸馏，属于高阶生成任务，非像素级图像恢复或增强。",
+        "relevance_score": 1,
+        "novelty_score": 7,
+        "novelty_reason": "提出分阶段蒸馏与子区间分数匹配，改进多步蒸馏稳定性，创新性较强。"
+    },
+    {
+        "title": "PETAR: Localized Findings Generation with Mask-Aware Vision-Language\n  Modeling for PET Automated Reporting",
+        "url": "http://arxiv.org/abs/2510.27680v1",
+        "pub_date": "2025-10-31",
+        "summary": "Recent advances in vision-language models (VLMs) have enabled impressive multimodal reasoning, yet most medical applications remain limited to 2D imaging. In this work, we extend VLMs to 3D positron emission tomography and computed tomography (PET/CT), a domain characterized by large volumetric data, small and dispersed lesions, and lengthy radiology reports. We introduce a large-scale dataset comprising over 11,000 lesion-level descriptions paired with 3D segmentations from more than 5,000 PET/CT exams, extracted via a hybrid rule-based and large language model (LLM) pipeline. Building upon this dataset, we propose PETAR-4B, a 3D mask-aware vision-language model that integrates PET, CT, and lesion contours for spatially grounded report generation. PETAR bridges global contextual reasoning with fine-grained lesion awareness, producing clinically coherent and localized findings. Comprehensive automated and human evaluations demonstrate that PETAR substantially improves PET/CT report generation quality, advancing 3D medical vision-language understanding.",
+        "translated": "近期，视觉-语言模型（VLMs）在多模态推理方面取得了显著进展，但大多数医学应用仍局限于二维成像。本研究将VLMs扩展至三维正电子发射断层扫描与计算机断层扫描（PET/CT）领域，该领域具有大规模体数据、病灶小且分散、放射学报告冗长等特点。我们构建了一个大规模数据集，包含超过11,000条病灶级别的描述，与来自5,000余例PET/CT检查的三维分割结果配对，通过混合规则与大语言模型（LLM）的流水线提取。基于该数据集，我们提出PETAR-4B，一种三维掩码感知的视觉-语言模型，整合PET、CT及病灶轮廓信息，实现空间定位的报告生成。PETAR将全局上下文推理与细粒度病灶感知相结合，生成具有临床连贯性且定位准确的发现结果。全面的自动化评估与人工评估表明，PETAR显著提升了PET/CT报告生成的质量，推动了三维医学视觉-语言理解的发展。",
+        "translated_title": "PETAR：基于掩码感知视觉-语言建模的PET自动化报告局部发现生成",
+        "label": [],
+        "label_reason": "论文聚焦3D PET/CT报告生成，属高阶医学图像理解，非像素级图像恢复或增强。",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "提出mask-aware VLM架构，结合3D分割与语言模型，属多模态融合创新，但非low-level任务核心突破。"
+    },
+    {
+        "title": "Dark-Field X-Ray Imaging Significantly Improves Deep-Learning based\n  Detection of Synthetic Early-Stage Lung Tumors in Preclinical Models",
+        "url": "http://arxiv.org/abs/2510.27679v1",
+        "pub_date": "2025-10-31",
+        "summary": "Low-dose computed tomography (LDCT) is the current standard for lung cancer screening, yet its adoption and accessibility remain limited. Many regions lack LDCT infrastructure, and even among those screened, early-stage cancer detection often yield false positives, as shown in the National Lung Screening Trial (NLST) with a sensitivity of 93.8 percent and a false-positive rate of 26.6 percent. We aim to investigate whether X-ray dark-field imaging (DFI) radiograph, a technique sensitive to small-angle scatter from alveolar microstructure and less susceptible to organ shadowing, can significantly improve early-stage lung tumor detection when coupled with deep-learning segmentation. Using paired attenuation (ATTN) and DFI radiograph images of euthanized mouse lungs, we generated realistic synthetic tumors with irregular boundaries and intensity profiles consistent with physical lung contrast. A U-Net segmentation network was trained on small patches using either ATTN, DFI, or a combination of ATTN and DFI channels.Results show that the DFI-only model achieved a true-positive detection rate of 83.7 percent, compared with 51 percent for ATTN-only, while maintaining comparable specificity (90.5 versus 92.9 percent). The combined ATTN and DFI input achieved 79.6 percent sensitivity and 97.6 percent specificity. In conclusion, DFI substantially improves early-tumor detectability in comparison to standard attenuation radiography and shows potential as an accessible, low-cost, low-dose alternative for pre-clinical or limited-resource screening where LDCT is unavailable.",
+        "translated": "低剂量计算机断层扫描（LDCT）目前是肺癌筛查的标准方法，但其应用和可及性仍受到限制。许多地区缺乏LDCT基础设施，即使在已接受筛查的人群中，早期癌症检测也常出现假阳性结果，如国家肺癌筛查试验（NLST）所示，其敏感度为93.8%，假阳性率为26.6%。我们旨在研究X射线暗场成像（DFI）技术是否能显著提升早期肺肿瘤的检测能力，该技术对肺泡微结构产生的小角度散射敏感，且不易受器官阴影干扰，当与深度学习分割方法结合使用时。我们利用安乐死小鼠肺部的配对衰减（ATTN）和DFI图像，生成了具有不规则边界和与真实肺组织对比度一致的强度分布的逼真合成肿瘤。采用U-Net分割网络，在小尺寸图像块上分别使用ATTN、DFI或ATTN与DFI通道组合进行训练。结果表明，仅使用DFI的模型实现了83.7%的真阳性检测率，而仅使用ATTN的模型为51%，同时保持了相近的特异性（90.5%对比92.9%）。结合ATTN与DFI输入的模型则达到了79.6%的敏感度和97.6%的特异性。综上所述，与标准衰减成像相比，DFI显著提升了早期肿瘤的可检测性，展现出作为LDCT不可及的临床前或资源有限场景下的一种可及、低成本、低剂量替代方案的潜力。",
+        "translated_title": "暗场X射线成像显著提升基于深度学习的临床前模型中合成早期肺癌检测性能",
+        "label": [],
+        "label_reason": "论文聚焦于肿瘤检测，属高阶视觉任务，非图像像素级恢复或增强。",
+        "relevance_score": 3,
+        "novelty_score": 5,
+        "novelty_reason": "提出DFI与深度学习结合检测肿瘤，属应用创新，非底层图像处理方法创新。"
+    },
+    {
+        "title": "Vision Transformer for Robust Occluded Person Reidentification in\n  Complex Surveillance Scenes",
+        "url": "http://arxiv.org/abs/2510.27677v1",
+        "pub_date": "2025-10-31",
+        "summary": "Person re-identification (ReID) in surveillance is challenged by occlusion, viewpoint distortion, and poor image quality. Most existing methods rely on complex modules or perform well only on clear frontal images. We propose Sh-ViT (Shuffling Vision Transformer), a lightweight and robust model for occluded person ReID. Built on ViT-Base, Sh-ViT introduces three components: First, a Shuffle module in the final Transformer layer to break spatial correlations and enhance robustness to occlusion and blur; Second, scenario-adapted augmentation (geometric transforms, erasing, blur, and color adjustment) to simulate surveillance conditions; Third, DeiT-based knowledge distillation to improve learning with limited labels.To support real-world evaluation, we construct the MyTT dataset, containing over 10,000 pedestrians and 30,000+ images from base station inspections, with frequent equipment occlusion and camera variations. Experiments show that Sh-ViT achieves 83.2% Rank-1 and 80.1% mAP on MyTT, outperforming CNN and ViT baselines, and 94.6% Rank-1 and 87.5% mAP on Market1501, surpassing state-of-the-art methods.In summary, Sh-ViT improves robustness to occlusion and blur without external modules, offering a practical solution for surveillance-based personnel monitoring.",
+        "translated": "监控场景中的人重识别（ReID）面临遮挡、视角畸变和图像质量差等挑战。现有大多数方法依赖复杂的模块，或仅在清晰的正面图像上表现良好。我们提出Sh-ViT（Shuffling Vision Transformer），一种轻量且鲁棒的遮挡人重识别模型。该模型基于ViT-Base构建，引入三个关键组件：首先，在最终Transformer层中引入Shuffle模块，打破空间相关性，增强对遮挡和模糊的鲁棒性；其次，采用场景自适应数据增强（包括几何变换、擦除、模糊和色彩调整），模拟真实监控环境；第三，采用DeiT-based知识蒸馏，在有限标注条件下提升模型学习能力。为支持真实场景评估，我们构建了MyTT数据集，包含来自基站巡检的超过10,000名行人和30,000+张图像，具有频繁的设备遮挡和相机变化。实验表明，Sh-ViT在MyTT数据集上达到83.2%的Rank-1和80.1%的mAP，优于CNN和ViT基线模型；在Market1501数据集上达到94.6%的Rank-1和87.5%的mAP，超越当前主流方法。综上，Sh-ViT在无需外部模块的前提下提升了对遮挡和模糊的鲁棒性，为基于监控的人员监测提供了实用解决方案。",
+        "translated_title": "视觉Transformer在复杂监控场景下对遮挡行人重识别的鲁棒性研究",
+        "label": [],
+        "label_reason": "论文聚焦于行人重识别（ReID），属于high-level任务，不涉及像素级图像质量恢复或增强。",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "提出Shuffle模块和数据增强策略，对ViT进行改进，但未解决low-level图像退化问题。"
     }
 ]
