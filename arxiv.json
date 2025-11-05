@@ -6730,5 +6730,309 @@
         "relevance_score": 1,
         "novelty_score": 7,
         "novelty_reason": "提出VCFlow架构与对比学习策略，提升跨被试泛化能力，方法设计有创新性。"
+    },
+    {
+        "title": "Beyond Single Embeddings: Capturing Diverse Targets with Multi-Query\n  Retrieval",
+        "url": "http://arxiv.org/abs/2511.02770v1",
+        "pub_date": "2025-11-04",
+        "summary": "Most text retrievers generate \\emph{one} query vector to retrieve relevant documents. Yet, the conditional distribution of relevant documents for the query may be multimodal, e.g., representing different interpretations of the query. We first quantify the limitations of existing retrievers. All retrievers we evaluate struggle more as the distance between target document embeddings grows. To address this limitation, we develop a new retriever architecture, \\emph{A}utoregressive \\emph{M}ulti-\\emph{E}mbedding \\emph{R}etriever (AMER). Our model autoregressively generates multiple query vectors, and all the predicted query vectors are used to retrieve documents from the corpus. We show that on the synthetic vectorized data, the proposed method could capture multiple target distributions perfectly, showing 4x better performance than single embedding model. We also fine-tune our model on real-world multi-answer retrieval datasets and evaluate in-domain. AMER presents 4 and 21\\% relative gains over single-embedding baselines on two datasets we evaluate on. Furthermore, we consistently observe larger gains on the subset of dataset where the embeddings of the target documents are less similar to each other. We demonstrate the potential of using a multi-query vector retriever and open up a new direction for future work.",
+        "translated": "大多数文本检索器仅生成一个查询向量以检索相关文档。然而，查询对应的文档条件分布可能是多模态的，例如代表查询的不同解释。我们首先量化了现有检索器的局限性：我们评估的所有检索器在目标文档嵌入之间的距离增大时，性能均显著下降。为解决这一局限，我们提出了一种新的检索器架构——自回归多嵌入检索器（Autoregressive Multi-Embedding Retriever, AMER）。该模型自回归地生成多个查询向量，并利用所有预测的查询向量从语料库中检索文档。我们在合成的向量化数据上验证了该方法，结果表明其能够完美捕捉多个目标分布，性能优于单嵌入模型4倍。此外，我们在真实世界的多答案检索数据集上对模型进行微调，并在领域内进行评估。AMER在我们评估的两个数据集上，相对于单嵌入基线模型分别实现了4%和21%的相对性能提升。进一步，我们在目标文档嵌入彼此差异较大的数据子集上，始终观察到更大的性能增益。本研究展示了多查询向量检索器的潜力，并为未来研究开辟了新方向。",
+        "translated_title": "超越单一嵌入：利用多查询召回捕捉多样化目标",
+        "label": [
+            "召回",
+            "负采样与对比学习"
+        ],
+        "label_reason": "论文提出多查询向量检索架构，用于捕捉多模态目标分布，适用于推荐系统召回环节",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "提出自回归生成多查询向量的新架构，显著提升检索性能，具有创新性"
+    },
+    {
+        "title": "Relational Deep Dive: Error-Aware Queries Over Unstructured Data",
+        "url": "http://arxiv.org/abs/2511.02711v1",
+        "pub_date": "2025-11-04",
+        "summary": "Unstructured data is pervasive, but analytical queries demand structured representations, creating a significant extraction challenge. Existing methods like RAG lack schema awareness and struggle with cross-document alignment, leading to high error rates. We propose ReDD (Relational Deep Dive), a framework that dynamically discovers query-specific schemas, populates relational tables, and ensures error-aware extraction with provable guarantees. ReDD features a two-stage pipeline: (1) Iterative Schema Discovery (ISD) identifies minimal, joinable schemas tailored to each query, and (2) Tabular Data Population (TDP) extracts and corrects data using lightweight classifiers trained on LLM hidden states. A main contribution of ReDD is SCAPE, a statistically calibrated method for error detection with coverage guarantees, and SCAPE-HYB, a hybrid approach that optimizes the trade-off between accuracy and human correction costs. Experiments across diverse datasets demonstrate ReDD's effectiveness, reducing data extraction errors from up to 30% to below 1% while maintaining high schema completeness (100% recall) and precision. ReDD's modular design enables fine-grained control over accuracy-cost trade-offs, making it a robust solution for high-stakes analytical queries over unstructured corpora.",
+        "translated": "非结构化数据普遍存在，但分析查询需要结构化表示，由此产生显著的提取挑战。现有方法如RAG缺乏模式感知能力，且在跨文档对齐方面存在困难，导致高错误率。我们提出ReDD（Relational Deep Dive），一种框架，能够动态发现查询特定的模式、填充关系表，并在可证明保证下实现错误感知的提取。ReDD采用两阶段流水线：（1）迭代模式发现（ISD）识别出针对每个查询的最小、可连接的模式；（2）表格数据填充（TDP）利用基于大语言模型（LLM）隐藏状态训练的轻量级分类器提取并校正数据。ReDD的一项主要贡献是SCAPE，一种具有覆盖率保证的统计校准错误检测方法，以及SCAPE-HYB，一种混合方法，用于优化准确率与人工校正成本之间的权衡。在多种数据集上的实验表明，ReDD具有显著有效性，将数据提取错误率从最高30%降低至低于1%，同时保持高模式完整性（100%召回率）和高精度。ReDD的模块化设计支持对准确率-成本权衡的细粒度控制，使其成为在非结构化语料库上执行高风险分析查询的稳健解决方案。",
+        "translated_title": "关系深度探索：面向非结构化数据的错误感知查询",
+        "label": [],
+        "label_reason": "论文聚焦非结构化数据的结构化提取与错误检测，属于信息抽取与数据库领域，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 8,
+        "novelty_reason": "提出SCAPE与SCAPE-HYB等新颖错误检测方法，结合LLM隐藏状态与轻量分类器，具有创新性。"
+    },
+    {
+        "title": "Average Precision at Cutoff k under Random Rankings: Expectation and\n  Variance",
+        "url": "http://arxiv.org/abs/2511.02571v1",
+        "pub_date": "2025-11-04",
+        "summary": "Recommender systems and information retrieval platforms rely on ranking algorithms to present the most relevant items to users, thereby improving engagement and satisfaction. Assessing the quality of these rankings requires reliable evaluation metrics. Among them, Mean Average Precision at cutoff k (MAP@k) is widely used, as it accounts for both the relevance of items and their positions in the list.   In this paper, the expectation and variance of Average Precision at k (AP@k) are derived since they can be used as biselines for MAP@k. Here, we covered two widely used evaluation models: offline and online. The expectation establishes the baseline, indicating the level of MAP@k that can be achieved by pure chance. The variance complements this baseline by quantifying the extent of random fluctuations, enabling a more reliable interpretation of observed scores.",
+        "translated": "推荐系统与信息检索平台依赖排序算法向用户呈现最相关的物料，从而提升用户参与度与满意度。评估这些排序质量需要可靠的评价指标。其中，截断k位的平均精度均值（MAP@k）被广泛使用，因为它同时考虑了物料的相关性及其在列表中的位置。本文推导了截断k位的平均精度（AP@k）的期望与方差，因其可作为MAP@k的基准。本文涵盖了两种广泛使用的评估模型：离线与在线。期望值建立了基准，表明仅凭随机性可达到的MAP@k水平；方差则补充了该基准，通过量化随机波动的程度，使得对观测得分的解释更加可靠。",
+        "translated_title": "在随机排序下截止k位置的平均精度：期望与方差",
+        "label": [
+            "推荐系统评估"
+        ],
+        "label_reason": "论文聚焦推荐系统评估指标MAP@k的期望与方差，为评估提供理论基线，直接服务于推荐系统性能分析。",
+        "relevance_score": 8,
+        "novelty_score": 6,
+        "novelty_reason": "推导AP@k的期望与方差，为评估提供理论支撑，属常规理论分析，无范式创新。"
+    },
+    {
+        "title": "Let Multimodal Embedders Learn When to Augment Query via Adaptive Query\n  Augmentation",
+        "url": "http://arxiv.org/abs/2511.02358v1",
+        "pub_date": "2025-11-04",
+        "summary": "Query augmentation makes queries more meaningful by appending further information to the queries to find relevant documents. Current studies have proposed Large Language Model (LLM)-based embedders, which learn representation for embedding and generation for query augmentation in a multi-task manner by leveraging the generative capabilities of LLM. During inference, these jointly trained embedders have conducted query augmentation followed by embedding, showing effective results. However, augmenting every query leads to substantial embedding latency and query augmentation can be detrimental to performance for some queries. Also, previous methods have not been explored in multimodal environments. To tackle these problems, we propose M-Solomon, a universal multimodal embedder that can adaptively determine when to augment queries. Our approach first divides the queries of the training datasets into two groups at the dataset level. One includes queries that require augmentation and the other includes queries that do not. Then, we introduces a synthesis process that generates appropriate augmentations for queries that require them by leveraging a powerful Multimodal LLM (MLLM). Next, we present adaptive query augmentation. Through this step, M-Solomon can conduct query augmentation only when necessary by learning to generate synthetic augmentations with the prefix /augment for queries that demand them and to generate the simple string /embed for others. Experimental results showed that M-Solomon not only surpassed the baseline without augmentation by a large margin but also outperformed the baseline that always used augmentation, providing much faster embedding latency.",
+        "translated": "查询增强通过向查询中附加额外信息，使其更具意义，从而更有效地检索相关文档。当前研究提出了基于大语言模型（LLM）的嵌入器，通过利用LLM的生成能力，以多任务方式同时学习嵌入表示和查询增强的生成。在推理阶段，这些联合训练的嵌入器先进行查询增强，再进行嵌入，取得了良好的效果。然而，对每个查询都进行增强会导致显著的嵌入延迟，且对部分查询而言，增强反而可能损害性能。此外，先前的方法尚未在多模态环境中进行探索。为解决这些问题，我们提出M-Solomon，一种通用的多模态嵌入器，能够自适应地判断何时对查询进行增强。我们的方法首先在数据集层面将训练数据中的查询划分为两组：一组是需要增强的查询，另一组是无需增强的查询。接着，我们引入一个合成过程，利用强大的多模态大语言模型（MLLM）为需要增强的查询生成合适的增强内容。随后，我们提出自适应查询增强机制：通过该步骤，M-Solomon仅在必要时执行查询增强，具体通过学习为需要增强的查询生成带有前缀/augment的合成增强内容，而对其他查询则生成简单的字符串/embed。实验结果表明，M-Solomon不仅大幅超越了无增强的基线方法，还优于始终使用增强的基线方法，并且显著降低了嵌入延迟。",
+        "translated_title": "让多模态嵌入器通过自适应查询增强学习何时增强查询",
+        "label": [
+            "多模态推荐",
+            "召回",
+            "负采样与对比学习"
+        ],
+        "label_reason": "论文聚焦多模态检索中查询增强，虽非直接推荐，但适用于推荐系统召回环节，属间接相关。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出自适应查询增强机制，结合MLLM生成增强内容，提升效率与效果，属显著改进。"
+    },
+    {
+        "title": "Library and Culture: A Scientometric Analysis and Visualization of\n  Research Trends",
+        "url": "http://arxiv.org/abs/2511.02296v1",
+        "pub_date": "2025-11-04",
+        "summary": "The significance of libraries in preserving and maintaining history and traditional culture cannot be overlooked. It is from this purpose that libraries are to envisage in their programmes cultural activities which must be collected, documented and preserved for posterity. The usefulness of preserved information lies in the fact that the generation to come will be able to establish their identity. This will also assist them with a foundation to build from. This study focus on the growth and development of Library and Culture research in forms of publications reflected in Web of Science database, during the span of 2010-2019. A total 890 publications were found and the highest 124 (13.93%) publications published in 2019.The analysis maps comprehensively the parameters of total output, growth of output, authorship, institution wise and country-level collaboration patterns, major contributors (individuals, top publication sources, institutions, and countries). It exposed that the most prolific author is Lo P secured first place by contributing 4 (0.45%) publications, followed by Bressan V 3 (0.34%) publications in Library and Culture literature. Journal of Academic Librarianship produced the highest number of records 29 (3.26%) followed by Australian Library Journal having contributed 21 (2.36%).It is identified the domination of Wuhan University; School Information Management had contributed 6 (0.67%) of total research output. Authors from USA published the highest number of publications with a total of 244 (27.42%), followed by UK and Australia with 118 (13.26%) and 76 (8.54%) publications were produced respectively.",
+        "translated": "图书馆在保存和维护历史及传统文化方面的重要性不容忽视。正是基于这一目的，图书馆应在各项计划中策划文化活动，并将这些活动系统地收集、记录和保存，以供后世传承。保存信息的价值在于，后代能够借此确立自身身份认同，同时获得进一步发展的基础。本研究聚焦于2010至2019年间Web of Science数据库中关于“图书馆与文化”研究的出版物，探讨其发展态势。共检索到890篇文献，其中2019年发表的文献最多，达124篇（占13.93%）。分析全面覆盖了总产出量、产出增长趋势、作者分布、机构层面及国家层面的合作模式，以及主要贡献者（包括个人、高产期刊、机构和国家）。研究发现，发表数量最多的作者是Lo P，共发表4篇（占0.45%），位居首位；其次为Bressan V，发表3篇（占0.34%）。在期刊方面，《Journal of Academic Librarianship》发表文献最多，达29篇（占3.26%），其次是《Australian Library Journal》，贡献21篇（占2.36%）。在机构层面，武汉大学信息管理学院贡献了6篇（占0.67%）的研究成果，位居前列。从国家层面看，美国学者发表的文献数量最多，共244篇（占27.42%），其次为英国（118篇，占13.26%）和澳大利亚（76篇，占8.54%）。",
+        "translated_title": "图书馆与文化：研究趋势的科学计量分析与可视化",
+        "label": [],
+        "label_reason": "论文为图书馆与文化研究的文献计量分析，与推荐系统无直接关联。",
+        "relevance_score": 1,
+        "novelty_score": 1,
+        "novelty_reason": "研究方法为传统文献计量，无推荐系统相关创新。"
+    },
+    {
+        "title": "Research Output on Alopecia Areata Disease: A Scientometric Analysis of\n  Publications from 2010 to 2019",
+        "url": "http://arxiv.org/abs/2511.02275v1",
+        "pub_date": "2025-11-04",
+        "summary": "The present study is undertaken to find out the publication trends on Alopecia Areata Disease during 2010-2019 from the global perspective. The study mainly focus on distribution of research output, top journals for publications, most prolific authors, authorship pattern, and citations pattern on Alopecia Areata Disease. The results indicate that highest growth rate of publications occurred during the year 2019. Columbia University topped the scene among all institutes. The maximum publications were more than four authored publications. Christiano AM and Clynes R were found to be the most prolific authors. It is also found that most of the prolific authors (by number of publications) do appear in highly cited publications list. Alopecia Areata Disease researchers mostly preferred using article publications to communicate their findings.",
+        "translated": "本研究旨在从全球视角探讨2010–2019年间斑秃疾病（Alopecia Areata Disease）领域的出版趋势。研究主要聚焦于研究成果的分布、发表论文的顶级期刊、高产作者、作者合作模式以及引用模式。研究结果表明，论文发表数量的增长率在2019年达到最高。在所有研究机构中，哥伦比亚大学（Columbia University）位居榜首。发表论文数量最多的为四人及以上合著的论文。Christiano AM 和 Clynes R 被发现是该领域最富产的作者。此外，研究还发现，大多数高产作者（按论文数量统计）均出现在高被引论文列表中。斑秃疾病领域的研究人员大多倾向于通过期刊文章形式发表研究成果。",
+        "translated_title": "斑秃疾病研究产出：2010至2019年文献的科学计量学分析",
+        "label": [],
+        "label_reason": "论文为医学文献计量分析，与推荐系统无直接关联。",
+        "relevance_score": 1,
+        "novelty_score": 1,
+        "novelty_reason": "研究方法为传统文献统计，无创新性推荐算法或技术。"
+    },
+    {
+        "title": "KGBridge: Knowledge-Guided Prompt Learning for Non-overlapping\n  Cross-Domain Recommendation",
+        "url": "http://arxiv.org/abs/2511.02181v1",
+        "pub_date": "2025-11-04",
+        "summary": "Knowledge Graphs (KGs), as structured knowledge bases that organize relational information across diverse domains, provide a unified semantic foundation for cross-domain recommendation (CDR). By integrating symbolic knowledge with user-item interactions, KGs enrich semantic representations, support reasoning, and enhance model interpretability. Despite this potential, existing KG-based methods still face major challenges in CDR, particularly under non-overlapping user scenarios. These challenges arise from: (C1) sensitivity to KG sparsity and popularity bias, (C2) dependence on overlapping users for domain alignment and (C3) lack of explicit disentanglement between transferable and domain-specific knowledge, which limit effective and stable knowledge transfer. To this end, we propose KGBridge, a knowledge-guided prompt learning framework for cross-domain sequential recommendation under non-overlapping user scenarios. KGBridge comprises two core components: a KG-enhanced Prompt Encoder, which models relation-level semantics as soft prompts to provide structured and dynamic priors for user sequence modeling (addressing C1), and a Two-stage Training Paradigm, which combines cross-domain pretraining and privacy-preserving fine-tuning to enable knowledge transfer without user overlap (addressing C2). By combining relation-aware semantic control with correspondence-driven disentanglement, KGBridge explicitly separates and balances domain-shared and domain-specific semantics, thereby maintaining complementarity and stabilizing adaptation during fine-tuning (addressing C3). Extensive experiments on benchmark datasets demonstrate that KGBridge consistently outperforms state-of-the-art baselines and remains robust under varying KG sparsity, highlighting its effectiveness in mitigating structural imbalance and semantic entanglement in KG-enhanced cross-domain recommendation.",
+        "translated": "知识图谱（KGs）作为组织跨领域关系信息的结构化知识库，为跨域推荐（CDR）提供了统一的语义基础。通过将符号化知识与用户-物料交互相结合，KGs能够丰富语义表示、支持推理并提升模型可解释性。尽管具有这些潜力，现有的基于KG的方法在CDR中仍面临重大挑战，尤其是在用户非重叠的场景下。这些挑战主要源于：（C1）对KG稀疏性和流行度偏差的敏感性，（C2）依赖重叠用户进行领域对齐，以及（C3）缺乏对可迁移知识与领域特定知识的显式解耦，从而限制了知识迁移的有效性与稳定性。为此，我们提出KGBridge，一种面向非重叠用户场景的、基于知识引导的提示学习框架，用于跨域序列推荐。KGBridge包含两个核心组件：一是KG增强的提示编码器，其将关系级语义建模为软提示，为用户序列建模提供结构化且动态的先验知识（解决C1）；二是两阶段训练范式，结合跨域预训练与隐私保护微调，实现无用户重叠情况下的知识迁移（解决C2）。通过融合关系感知的语义控制与对应驱动的解耦机制，KGBridge显式分离并平衡了领域共享与领域特定语义，从而在微调过程中保持互补性并稳定适应（解决C3）。在基准数据集上的大量实验表明，KGBridge始终优于现有最先进基线方法，并在不同KG稀疏度下保持鲁棒性，验证了其在缓解KG增强跨域推荐中结构不平衡与语义纠缠问题的有效性。",
+        "translated_title": "KGBridge：基于知识引导的提示学习在非重叠跨域推荐中的应用",
+        "label": [
+            "跨域/联邦推荐",
+            "序列推荐",
+            "图神经网络推荐",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "论文聚焦非重叠用户跨域推荐，结合知识图谱与提示学习，直接解决推荐系统核心问题",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出知识引导提示学习框架，结合两阶段训练，有效解决KG稀疏与领域对齐问题"
+    },
+    {
+        "title": "Enhancing Multimodal Recommendations with Vision-Language Models and\n  Information-Aware Fusion",
+        "url": "http://arxiv.org/abs/2511.02113v1",
+        "pub_date": "2025-11-03",
+        "summary": "Recent advances in multimodal recommendation (MMR) have shown that incorporating rich content sources such as images and text can lead to significant gains representation quality. However, existing methods often rely on coarse visual features and uncontrolled fusion, leading to redundant or misaligned representations. As a result, visual encoders often fail to capture salient, item-relevant semantics, limiting their contribution in multimodal fusion. From an information-theoretic perspective, effective fusion should balance the unique, shared, and redundant information across modalities, preserving complementary cues while avoiding correlation bias. This paper presents VLIF, a vision-language and information-theoretic fusion framework that enhances multimodal recommendation through two key components. (i) A VLM-based visual enrichment module generates fine-grained, title-guided descriptions to transform product images into semantically aligned representations. (ii) An information-aware fusion module, inspired by Partial Information Decomposition (PID), disentangles redundant and synergistic signals across modalities for controlled integration. Experiments on three Amazon datasets demonstrate that VLIF consistently outperforms recent multimodal baselines and substantially strengthens the contribution of visual features.",
+        "translated": "近年来，多模态推荐（MMR）领域的进展表明，融合图像和文本等丰富内容源可显著提升表示质量。然而，现有方法通常依赖于粗糙的视觉特征和不受控的模态融合，导致生成的表示存在冗余或对齐偏差。因此，视觉编码器往往难以捕捉与物料相关的关键语义信息，限制了其在多模态融合中的贡献。从信息论的角度来看，有效的融合应平衡不同模态间的独特信息、共享信息和冗余信息，在保留互补线索的同时避免相关性偏差。本文提出VLIF，一种基于视觉-语言与信息论的融合框架，通过两个核心组件增强多模态推荐性能：(i) 基于VLM的视觉增强模块，生成细粒度、标题引导的描述，将产品图像转化为语义对齐的表示；(ii) 信息感知融合模块，受部分信息分解（Partial Information Decomposition, PID）启发，解耦模态间的冗余信号与协同信号，实现可控的融合。在三个Amazon数据集上的实验表明，VLIF在性能上始终优于近期的多模态基线方法，并显著增强了视觉特征的贡献。",
+        "translated_title": "增强多模态推荐：基于视觉-语言模型与信息感知融合方法",
+        "label": [
+            "多模态推荐（Multimodal Recommendation）",
+            "LLM生成式推荐（LLM-based Generative Recommendation）",
+            "序列推荐（Sequential Recommendation）"
+        ],
+        "label_reason": "论文聚焦多模态推荐，提出基于VLM的视觉增强与信息感知融合，直接提升推荐系统中跨模态表示质量。",
+        "relevance_score": 8,
+        "novelty_score": 8,
+        "novelty_reason": "创新性结合VLM与信息论分解，实现可控融合，提升视觉特征贡献，方法新颖且效果显著。"
+    },
+    {
+        "title": "Solving cold start in news recommendations: a RippleNet-based system for\n  large scale media outlet",
+        "url": "http://arxiv.org/abs/2511.02052v1",
+        "pub_date": "2025-11-03",
+        "summary": "We present a scalable recommender system implementation based on RippleNet, tailored for the media domain with a production deployment in Onet.pl, one of Poland's largest online media platforms. Our solution addresses the cold-start problem for newly published content by integrating content-based item embeddings into the knowledge propagation mechanism of RippleNet, enabling effective scoring of previously unseen items. The system architecture leverages Amazon SageMaker for distributed training and inference, and Apache Airflow for orchestrating data pipelines and model retraining workflows. To ensure high-quality training data, we constructed a comprehensive golden dataset consisting of user and item features and a separate interaction table, all enabling flexible extensions and integration of new signals.",
+        "translated": "我们提出了一种基于RippleNet的可扩展推荐系统实现方案，专为媒体领域设计，并已在波兰最大的在线媒体平台之一Onet.pl上完成生产部署。我们的解决方案通过将基于内容的物料嵌入整合到RippleNet的知识传播机制中，有效解决了新发布内容的冷启动问题，从而能够对之前未见过的物料进行准确评分。系统架构利用Amazon SageMaker实现分布式训练与推理，并采用Apache Airflow编排数据管道和模型重训练工作流。为确保高质量的训练数据，我们构建了一个全面的黄金数据集，包含用户和物料特征，以及独立的交互表，所有组件均支持灵活扩展和新信号的集成。",
+        "translated_title": "解决新闻推荐中的冷启动问题：面向大规模媒体平台的RippleNet系统",
+        "label": [
+            "召回",
+            "图神经网络推荐",
+            "冷启动",
+            "通用推荐技术"
+        ],
+        "label_reason": "基于RippleNet解决新闻推荐冷启动，涉及图神经网络与召回机制，专为推荐设计",
+        "relevance_score": 8,
+        "novelty_score": 6,
+        "novelty_reason": "将内容嵌入融入RippleNet知识传播，改进冷启动，但非全新架构"
+    },
+    {
+        "title": "InteracSPARQL: An Interactive System for SPARQL Query Refinement Using\n  Natural Language Explanations",
+        "url": "http://arxiv.org/abs/2511.02002v1",
+        "pub_date": "2025-11-03",
+        "summary": "In recent years, querying semantic web data using SPARQL has remained challenging, especially for non-expert users, due to the language's complex syntax and the prerequisite of understanding intricate data structures. To address these challenges, we propose InteracSPARQL, an interactive SPARQL query generation and refinement system that leverages natural language explanations (NLEs) to enhance user comprehension and facilitate iterative query refinement. InteracSPARQL integrates LLMs with a rule-based approach to first produce structured explanations directly from SPARQL abstract syntax trees (ASTs), followed by LLM-based linguistic refinements. Users can interactively refine queries through direct feedback or LLM-driven self-refinement, enabling the correction of ambiguous or incorrect query components in real time. We evaluate InteracSPARQL on standard benchmarks, demonstrating significant improvements in query accuracy, explanation clarity, and overall user satisfaction compared to baseline approaches. Our experiments further highlight the effectiveness of combining rule-based methods with LLM-driven refinements to create more accessible and robust SPARQL interfaces.",
+        "translated": "近年来，由于SPARQL语言语法复杂且要求用户理解复杂的数据结构，使用SPARQL查询语义网数据对非专业用户而言仍具有挑战性。为应对这些挑战，我们提出InteracSPARQL，一种交互式SPARQL查询生成与优化系统，通过自然语言解释（NLEs）增强用户理解并支持迭代查询优化。InteracSPARQL结合大语言模型（LLM）与基于规则的方法，首先从SPARQL抽象语法树（AST）直接生成结构化解释，随后通过基于LLM的语言优化进一步完善解释内容。用户可通过直接反馈或LLM驱动的自我优化方式交互式地调整查询，实现实时修正模糊或错误的查询组件。我们在标准基准数据集上对InteracSPARQL进行评估，结果表明其在查询准确性、解释清晰度及整体用户满意度方面均显著优于基线方法。实验进一步验证了将基于规则的方法与LLM驱动优化相结合，能够构建更易用且鲁棒的SPARQL交互界面的有效性。",
+        "translated_title": "InteracSPARQL：一种基于自然语言解释的SPARQL查询优化交互系统",
+        "label": [],
+        "label_reason": "论文聚焦SPARQL查询生成与优化，属于数据库与自然语言接口领域，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "结合规则与LLM进行查询解释与修正，方法新颖但应用于非推荐场景。"
+    },
+    {
+        "title": "Trove: A Flexible Toolkit for Dense Retrieval",
+        "url": "http://arxiv.org/abs/2511.01857v1",
+        "pub_date": "2025-11-03",
+        "summary": "We introduce Trove, an easy-to-use open-source retrieval toolkit that simplifies research experiments without sacrificing flexibility or speed. For the first time, we introduce efficient data management features that load and process (filter, select, transform, and combine) retrieval datasets on the fly, with just a few lines of code. This gives users the flexibility to easily experiment with different dataset configurations without the need to compute and store multiple copies of large datasets. Trove is highly customizable: in addition to many built-in options, it allows users to freely modify existing components or replace them entirely with user-defined objects. It also provides a low-code and unified pipeline for evaluation and hard negative mining, which supports multi-node execution without any code changes. Trove's data management features reduce memory consumption by a factor of 2.6. Moreover, Trove's easy-to-use inference pipeline incurs no overhead, and inference times decrease linearly with the number of available nodes. Most importantly, we demonstrate how Trove simplifies retrieval experiments and allows for arbitrary customizations, thus facilitating exploratory research.",
+        "translated": "我们提出Trove，一个易于使用且开源的召回工具包，能够在不牺牲灵活性和速度的前提下简化研究实验。首次，我们引入了高效的数据管理功能，仅需几行代码即可实时加载和处理（过滤、选择、转换和合并）召回数据集。这为用户提供了灵活的实验能力，可轻松尝试不同的数据集配置，而无需预先计算和存储大量数据集的多个副本。Trove具有高度可定制性：除了提供多种内置选项外，还允许用户自由修改现有组件，或完全替换为自定义对象。此外，Trove提供低代码、统一的评估和难负样本挖掘流水线，支持多节点执行且无需任何代码修改。Trove的数据管理功能将内存消耗降低了2.6倍。此外，Trove的易用推理流水线无额外开销，推理时间随可用节点数量线性减少。最重要的是，我们展示了Trove如何简化召回实验并支持任意定制，从而促进探索性研究。",
+        "translated_title": "Trove：一种用于稠密检索的灵活工具包",
+        "label": [
+            "召回",
+            "通用推荐技术"
+        ],
+        "label_reason": "论文聚焦稠密检索工具包，支持推荐召回环节数据管理与实验，但非专为推荐设计。",
+        "relevance_score": 4,
+        "novelty_score": 6,
+        "novelty_reason": "提出高效数据管理与低代码流程，提升实验灵活性，属工具层面改进，非核心算法创新。"
+    },
+    {
+        "title": "A Graph-based RAG for Energy Efficiency Question Answering",
+        "url": "http://arxiv.org/abs/2511.01643v1",
+        "pub_date": "2025-11-03",
+        "summary": "In this work, we investigate the use of Large Language Models (LLMs) within a graph-based Retrieval Augmented Generation (RAG) architecture for Energy Efficiency (EE) Question Answering. First, the system automatically extracts a Knowledge Graph (KG) from guidance and regulatory documents in the energy field. Then, the generated graph is navigated and reasoned upon to provide users with accurate answers in multiple languages. We implement a human-based validation using the RAGAs framework properties, a validation dataset comprising 101 question-answer pairs, and domain experts. Results confirm the potential of this architecture and identify its strengths and weaknesses. Validation results show how the system correctly answers in about three out of four of the cases (75.2 +- 2.7%), with higher results on questions related to more general EE answers (up to 81.0 +- 4.1%), and featuring promising multilingual abilities (4.4% accuracy loss due to translation).",
+        "translated": "本研究探讨了在基于图的检索增强生成（RAG）架构中使用大语言模型（LLM）进行能源效率（EE）问答的应用。首先，系统自动从能源领域的指导文件和法规文档中提取知识图谱（KG）。随后，通过对生成的图谱进行导航和推理，为用户提供多语言的准确答案。我们采用RAGAs框架的评估属性、包含101个问答对的验证数据集以及领域专家进行人工验证。结果验证了该架构的潜力，并识别出其优势与不足。验证结果显示，系统在约四分之三的案例中能够正确作答（75.2 ± 2.7%），在涉及更通用能源效率答案的问题上表现更优（最高达81.0 ± 4.1%），并展现出良好的多语言能力（因翻译导致的准确率损失仅为4.4%）。",
+        "translated_title": "基于图的RAG用于能源效率问答",
+        "label": [],
+        "label_reason": "论文聚焦于能源效率问答系统，基于图的RAG架构，非推荐系统核心问题。",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "提出图结构增强RAG，用于问答任务，对推荐无直接贡献。"
+    },
+    {
+        "title": "Vote-in-Context: Turning VLMs into Zero-Shot Rank Fusers",
+        "url": "http://arxiv.org/abs/2511.01617v1",
+        "pub_date": "2025-11-03",
+        "summary": "In the retrieval domain, candidates' fusion from heterogeneous retrievers is a long-standing challenge, particularly for complex, multi-modal data such as videos. While typical fusion techniques are training-free, they rely solely on rank or score signals, disregarding candidates' representations. This work introduces Vote-in-Context (ViC), a generalized, training-free framework that re-thinks list-wise reranking and fusion as a zero-shot reasoning task for a Vision-Language Model (VLM). The core insight is to serialize both content evidence and retriever metadata directly within the VLM's prompt, allowing the model to adaptively weigh retriever consensus against visual-linguistic content. We demonstrate the generality of this framework by applying it to the challenging domain of cross-modal video retrieval. To this end, we introduce the S-Grid, a compact serialization map that represents each video as an image grid, optionally paired with subtitles to enable list-wise reasoning over video candidates. ViC is evaluated both as a single-list reranker, where it dramatically improves the precision of individual retrievers, and as an ensemble fuser, where it consistently outperforms strong baselines like CombSUM. Across video retrieval benchmarks including ActivityNet and VATEX, the framework establishes new state-of-the-art zero-shot retrieval performance, demonstrating its effectiveness in handling complex visual and temporal signals alongside text. In zero-shot settings, ViC achieves Recall@1 scores of 87.1% (t2v) / 89.0% (v2t) on MSR-VTT and 99.6% (v2t) on VATEX, representing massive gains of up to +40 Recall@1 over previous state-of-the-art baselines. We present ViC as a simple, reproducible, and highly effective recipe for turning modern VLMs into powerful zero-shot rerankers and fusers. Code and resources are publicly available at: https://github.com/mohammad2012191/ViC",
+        "translated": "在召回领域，从异构检索器中融合候选结果长期以来是一个挑战，尤其对于视频等复杂、多模态数据而言。尽管典型的融合技术无需训练，但它们仅依赖排序或得分信号，忽略了候选结果的表示信息。本文提出Vote-in-Context（ViC），一种通用的、无需训练的框架，将列表级重排与融合重新定义为大语言模型（VLM）的零样本推理任务。其核心思想是将内容证据与检索器元数据直接序列化至VLM的提示（prompt）中，使模型能够自适应地权衡检索器的一致性与视觉-语言内容。我们通过将其应用于跨模态视频检索这一具有挑战性的领域，验证了该框架的通用性。为此，我们引入了S-Grid，一种紧凑的序列化映射，将每个视频表示为图像网格，可选配字幕，以支持对视频候选结果进行列表级推理。ViC既可作为单列表重排器使用，在此场景下显著提升单个检索器的精度；也可作为集成融合器使用，在此场景下始终优于CombSUM等强基线方法。在包括ActivityNet和VATEX在内的多个视频检索基准上，该框架实现了新的零样本检索最优性能，证明其在处理复杂视觉与时间信号及文本方面具有有效性。在零样本设置下，ViC在MSR-VTT上实现了87.1%（t2v）/89.0%（v2t）的Recall@1，在VATEX上实现了99.6%（v2t）的Recall@1，相比此前最优基线，Recall@1提升高达+40个百分点。我们提出ViC作为一种简单、可复现且高度有效的方案，可将现代VLM转化为强大的零样本重排器与融合器。代码与资源已公开于：https://github.com/mohammad2012191/ViC",
+        "translated_title": "Vote-in-Context：将视觉语言模型转化为零样本排序融合器",
+        "label": [
+            "重排（Re-ranking）",
+            "多模态推荐（Multimodal Recommendation）",
+            "LLM生成式推荐（LLM-based Generative Recommendation）"
+        ],
+        "label_reason": "论文提出基于VLM的零样本重排与融合框架，适用于多模态视频检索，属推荐系统重排环节创新",
+        "relevance_score": 8,
+        "novelty_score": 9,
+        "novelty_reason": "首次将VLM用于零样本重排与融合，通过上下文投票机制实现自适应加权，显著提升性能"
+    },
+    {
+        "title": "Calculating Web Impact Factor for University Websites of Jammu and\n  Kashmir: A Study",
+        "url": "http://arxiv.org/abs/2511.01496v1",
+        "pub_date": "2025-11-03",
+        "summary": "This paper examines and explores the web impact factor through a webometric study of the present 12 University Websites of Jammu and Kashmir. Identifies the domain systems of the websites; analyzes the number of web pages and link pages, and calculates the External Link WIF or simple web impact factor (WIF) and external web impact factor of all the University websites. Also reflects that some university websites have higher number of web pages, but correspondingly their link pages are very small in number and websites fall behind in their simple and external link web impact factor. It found that the Cluster University of Jammu ranked 1 (0.9018) in Internal Link WIF of Websites in Jammu and Kashmir. Shri Mata Vaishno Devi University ranked 1 (0.7249) in External Link Web Impact Factor.",
+        "translated": "本文通过针对查谟和克什米尔地区当前12所大学网站的网络计量学研究，考察并探讨了网络影响因子。研究识别了各网站的域名系统，分析了网页数量与链接页面数量，并计算了所有大学网站的外部链接网络影响因子（External Link WIF）以及简单网络影响因子（WIF）。研究还发现，部分大学网站虽拥有较多网页，但其链接页面数量却相对较少，导致其简单网络影响因子和外部链接网络影响因子均处于较低水平。研究结果表明，在查谟和克什米尔地区大学网站的内部链接网络影响因子（Internal Link WIF）排名中，查谟集群大学（Cluster University of Jammu）位列第一（0.9018）；而在外部链接网络影响因子排名中，希里·玛塔·瓦伊什诺·德维大学（Shri Mata Vaishno Devi University）位列第一（0.7249）。",
+        "translated_title": "计算查谟和克什米尔地区大学网站的网络影响力因子：一项研究",
+        "label": [],
+        "label_reason": "论文研究大学网站的网络影响力指标，属于信息计量学，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 3,
+        "novelty_reason": "方法为传统网络计量分析，无创新性，仅对现有指标进行应用统计。"
+    },
+    {
+        "title": "Impact and Relevance of Cognition Journal in the Field of Cognitive\n  Science: An Evaluation",
+        "url": "http://arxiv.org/abs/2511.01485v1",
+        "pub_date": "2025-11-03",
+        "summary": "This study aims to present a scientometric analysis of the journal titled Cognition for a period of 20 years from 1999 to 2018. The present study was conducted with an aim to provide a summary of research activity in current journal and characterize its most aspects. The research coverage includes the year wise distribution of articles, authors, institutions, countries and citation analysis of the journal. The analysis showed that 2870 papers were published in journal of Cognition from 1999 to 2018. The study identified top 20 prolific authors, institutions and countries of the journal. Researchers from USA have been made the most percentage of contributions.",
+        "translated": "本研究旨在对期刊《Cognition》在1999年至2018年这20年期间的文献计量学特征进行分析。本研究旨在总结该期刊当前的研究活动，并对其主要方面进行刻画。研究内容涵盖按年份分布的论文、作者、机构、国家以及期刊的引文分析。分析结果显示，1999年至2018年间，《Cognition》期刊共发表了2870篇论文。研究识别出了该期刊最具产出力的前20位作者、机构和国家。来自美国的研究人员贡献比例最高。",
+        "translated_title": "认知科学领域中《认知期刊》的影响与相关性评估",
+        "label": [],
+        "label_reason": "论文为认知科学期刊的文献计量分析，与推荐系统无直接关联。",
+        "relevance_score": 1,
+        "novelty_score": 1,
+        "novelty_reason": "仅进行统计分析，无新方法或技术贡献。"
+    },
+    {
+        "title": "CAT-ID$^2$: Category-Tree Integrated Document Identifier Learning for\n  Generative Retrieval In E-commerce",
+        "url": "http://arxiv.org/abs/2511.01461v2",
+        "pub_date": "2025-11-03",
+        "summary": "Generative retrieval (GR) has gained significant attention as an effective paradigm that integrates the capabilities of large language models (LLMs). It generally consists of two stages: constructing discrete semantic identifiers (IDs) for documents and retrieving documents by autoregressively generating ID tokens. The core challenge in GR is how to construct document IDs (DocIDS) with strong representational power. Good IDs should exhibit two key properties: similar documents should have more similar IDs, and each document should maintain a distinct and unique ID. However, most existing methods ignore native category information, which is common and critical in E-commerce. Therefore, we propose a novel ID learning method, CAtegory-Tree Integrated Document IDentifier (CAT-ID$^2$), incorporating prior category information into the semantic IDs. CAT-ID$^2$ includes three key modules: a Hierarchical Class Constraint Loss to integrate category information layer by layer during quantization, a Cluster Scale Constraint Loss for uniform ID token distribution, and a Dispersion Loss to improve the distinction of reconstructed documents. These components enable CAT-ID$^2$ to generate IDs that make similar documents more alike while preserving the uniqueness of different documents' representations. Extensive offline and online experiments confirm the effectiveness of our method, with online A/B tests showing a 0.33% increase in average orders per thousand users for ambiguous intent queries and 0.24% for long-tail queries.",
+        "translated": "生成式召回（Generative Retrieval, GR）作为一种有效整合大语言模型（Large Language Model, LLM）能力的范式，已受到广泛关注。它通常包含两个阶段：为文档构建离散的语义标识符（IDs），并通过自回归生成ID token的方式检索文档。GR的核心挑战在于如何构建具有强表征能力的文档ID（DocIDS）。理想的ID应具备两个关键特性：相似文档应具有更相似的ID，且每个文档应保持独特且唯一的ID。然而，现有大多数方法忽略了本源的类别信息，而这类信息在电子商务场景中普遍存在且至关重要。因此，我们提出一种新颖的ID学习方法——CAtegory-Tree Integrated Document IDentifier（CAT-ID²），将先验类别信息融入语义ID中。CAT-ID²包含三个关键模块：分层类别约束损失（Hierarchical Class Constraint Loss），用于在量化过程中逐层整合类别信息；聚类规模约束损失（Cluster Scale Constraint Loss），用于实现ID token的均匀分布；以及分散损失（Dispersion Loss），用于提升重构文档的区分度。这些组件使CAT-ID²能够生成使相似文档更接近、同时保持不同文档表征唯一性的ID。大量离线与在线实验验证了本方法的有效性，在线A/B测试表明，对于语义模糊意图查询，每千用户平均订单数提升0.33%；对于长尾查询，提升0.24%。",
+        "translated_title": "CAT-ID²：面向电商生成式召回的类别树集成文档标识符学习",
+        "label": [
+            "召回",
+            "LLM生成式推荐",
+            "负采样与对比学习"
+        ],
+        "label_reason": "论文聚焦电商场景生成式召回，融合类别树信息构建语义ID，直接服务于推荐系统召回环节。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出CAT-ID²框架，创新性融合类别树信息与对比学习，提升ID表示能力，非简单模块替换。"
+    },
+    {
+        "title": "LiCoMemory: Lightweight and Cognitive Agentic Memory for Efficient\n  Long-Term Reasoning",
+        "url": "http://arxiv.org/abs/2511.01448v1",
+        "pub_date": "2025-11-03",
+        "summary": "Large Language Model (LLM) agents exhibit remarkable conversational and reasoning capabilities but remain constrained by limited context windows and the lack of persistent memory. Recent efforts address these limitations via external memory architectures, often employing graph-based representations, yet most adopt flat, entangled structures that intertwine semantics with topology, leading to redundant representations, unstructured retrieval, and degraded efficiency and accuracy. To resolve these issues, we propose LiCoMemory, an end-to-end agentic memory framework for real-time updating and retrieval, which introduces CogniGraph, a lightweight hierarchical graph that utilizes entities and relations as semantic indexing layers, and employs temporal and hierarchy-aware search with integrated reranking for adaptive and coherent knowledge retrieval. Experiments on long-term dialogue benchmarks, LoCoMo and LongMemEval, show that LiCoMemory not only outperforms established baselines in temporal reasoning, multi-session consistency, and retrieval efficiency, but also notably reduces update latency. Our official code and data are available at https://github.com/EverM0re/LiCoMemory.",
+        "translated": "大语言模型（LLM）代理展现出卓越的对话与推理能力，但仍受限于有限的上下文窗口和缺乏持久性记忆。近期研究通过外部记忆架构来应对这些局限，通常采用基于图的表示方法，但大多数采用扁平化、纠缠的结构，将语义与拓扑结构混杂在一起，导致表示冗余、检索无序，进而降低效率与准确性。为解决这些问题，我们提出 LiCoMemory，一种端到端的代理记忆框架，支持实时更新与检索。该框架引入 CogniGraph，一种轻量级层次化图结构，利用实体与关系作为语义索引层，并采用结合时间与层次感知的检索策略，辅以集成重排机制，实现自适应且连贯的知识检索。在长期对话基准数据集 LoCoMo 和 LongMemEval 上的实验表明，LiCoMemory 不仅在时间推理、多会话一致性及检索效率方面显著优于现有基线方法，同时大幅降低了更新延迟。我们的官方代码与数据可在 https://github.com/EverM0re/LiCoMemory 获取。",
+        "translated_title": "LiCoMemory：轻量级认知代理记忆机制用于高效长期推理",
+        "label": [
+            "LLM生成式推荐",
+            "重排"
+        ],
+        "label_reason": "论文提出LLM记忆框架，含重排机制，可适配推荐系统中的长期记忆与生成式推荐场景",
+        "relevance_score": 5,
+        "novelty_score": 8,
+        "novelty_reason": "提出轻量认知图结构与时序感知重排，提升检索效率与一致性，属创新性架构设计"
+    },
+    {
+        "title": "A Soft-partitioned Semi-supervised Collaborative Transfer Learning\n  Approach for Multi-Domain Recommendation",
+        "url": "http://arxiv.org/abs/2511.01404v1",
+        "pub_date": "2025-11-03",
+        "summary": "In industrial practice, Multi-domain Recommendation (MDR) plays a crucial role. Shared-specific architectures are widely used in industrial solutions to capture shared and unique attributes via shared and specific parameters. However, with imbalanced data across different domains, these models face two key issues: (1) Overwhelming: Dominant domain data skews model performance, neglecting non-dominant domains. (2) Overfitting: Sparse data in non-dominant domains leads to overfitting in specific parameters. To tackle these challenges, we propose Soft-partitioned Semi-supervised Collaborative Transfer Learning (SSCTL) for multi-domain recommendation. SSCTL generates dynamic parameters to address the overwhelming issue, thus shifting focus towards samples from non-dominant domains. To combat overfitting, it leverages pseudo-labels with weights from dominant domain instances to enhance non-dominant domain data. We conduct comprehensive experiments, both online and offline, to validate the efficacy of our proposed method. Online tests yielded significant improvements across various domains, with increases in GMV ranging from 0.54% to 2.90% and enhancements in CTR ranging from 0.22% to 1.69%.",
+        "translated": "在工业实践中，多领域推荐（Multi-domain Recommendation, MDR）发挥着至关重要的作用。共享-特定架构（shared-specific architectures）广泛应用于工业解决方案中，通过共享参数与特定参数分别捕捉不同领域间的共性与个性特征。然而，由于不同领域间数据分布不均衡，这些模型面临两个关键问题：（1）主导效应（Overwhelming）：主导领域数据过多导致模型性能偏向该领域，忽视了非主导领域；（2）过拟合（Overfitting）：非主导领域数据稀疏，导致特定参数出现过拟合现象。为应对上述挑战，我们提出一种软划分半监督协同迁移学习方法（Soft-partitioned Semi-supervised Collaborative Transfer Learning, SSCTL）用于多领域推荐。SSCTL通过生成动态参数来缓解主导效应问题，从而将模型关注点转向非主导领域的样本。为应对过拟合问题，SSCTL利用主导领域样本生成带权重的伪标签，以增强非主导领域的数据质量。我们通过离线与在线实验全面验证了所提方法的有效性。在线测试结果表明，各领域均取得显著提升，GMV增幅介于0.54%至2.90%之间，点击率（CTR）提升范围为0.22%至1.69%。",
+        "translated_title": "一种基于软划分的半监督协同迁移学习多领域推荐方法",
+        "label": [
+            "跨域/联邦推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "论文针对多域推荐中的数据不平衡与过拟合问题，提出半监督协同迁移学习方法，直接服务于推荐系统跨域场景。",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出软划分动态参数与伪标签加权机制，有效缓解主导域主导和稀疏域过拟合，属结构化改进而非范式创新。"
+    },
+    {
+        "title": "RAGSmith: A Framework for Finding the Optimal Composition of\n  Retrieval-Augmented Generation Methods Across Datasets",
+        "url": "http://arxiv.org/abs/2511.01386v1",
+        "pub_date": "2025-11-03",
+        "summary": "Retrieval-Augmented Generation (RAG) quality depends on many interacting choices across retrieval, ranking, augmentation, prompting, and generation, so optimizing modules in isolation is brittle. We introduce RAGSmith, a modular framework that treats RAG design as an end-to-end architecture search over nine technique families and 46{,}080 feasible pipeline configurations. A genetic search optimizes a scalar objective that jointly aggregates retrieval metrics (recall@k, mAP, nDCG, MRR) and generation metrics (LLM-Judge and semantic similarity). We evaluate on six Wikipedia-derived domains (Mathematics, Law, Finance, Medicine, Defense Industry, Computer Science), each with 100 questions spanning factual, interpretation, and long-answer types. RAGSmith finds configurations that consistently outperform naive RAG baseline by +3.8\\% on average (range +1.2\\% to +6.9\\% across domains), with gains up to +12.5\\% in retrieval and +7.5\\% in generation. The search typically explores $\\approx 0.2\\%$ of the space ($\\sim 100$ candidates) and discovers a robust backbone -- vector retrieval plus post-generation reflection/revision -- augmented by domain-dependent choices in expansion, reranking, augmentation, and prompt reordering; passage compression is never selected. Improvement magnitude correlates with question type, with larger gains on factual/long-answer mixes than interpretation-heavy sets. These results provide practical, domain-aware guidance for assembling effective RAG systems and demonstrate the utility of evolutionary search for full-pipeline optimization.",
+        "translated": "检索增强生成（RAG）的质量取决于检索、排序、增强、提示设计和生成等多个环节相互作用的选择，因此孤立地优化各模块容易导致系统脆弱。我们提出 RAGSmith，一个模块化框架，将 RAG 设计视为在九个技术家族和 46,080 种可行流水线配置上的端到端架构搜索。通过遗传搜索优化一个标量目标函数，该函数联合聚合了检索指标（recall@k、mAP、nDCG、MRR）和生成指标（LLM-Judge 和语义相似度）。我们在六个源自维基百科的领域（数学、法律、金融、医学、国防工业、计算机科学）上进行评估，每个领域包含 100 个问题，涵盖事实性、解释性和长答案类型。RAGSmith 找到的配置在平均情况下比朴素 RAG 基线提升 +3.8%（各领域范围为 +1.2% 至 +6.9%），其中检索部分最高提升 +12.5%，生成部分最高提升 +7.5%。搜索通常探索约 0.2% 的配置空间（约 100 个候选方案），并发现一个稳健的主干结构——向量召回加生成后反思/修订——并辅以领域依赖的选择，包括扩展、重排、增强和提示重排序；而段落压缩从未被选中。改进幅度与问题类型相关，事实性/长答案混合问题的提升幅度大于以解释性为主的问题集。这些结果为构建有效的 RAG 系统提供了实用且具备领域感知的指导，并展示了进化搜索在全流程优化中的有效性。",
+        "translated_title": "RAGSmith：一种跨数据集寻找检索增强生成方法最优组合的框架",
+        "label": [
+            "LLM生成式推荐（LLM-based Generative Recommendation）",
+            "重排（Re-ranking）",
+            "召回（Recall）"
+        ],
+        "label_reason": "论文聚焦RAG系统优化，涉及召回、重排、生成等环节，虽非专为推荐设计，但方法可迁移至推荐场景。",
+        "relevance_score": 4,
+        "novelty_score": 8,
+        "novelty_reason": "提出模块化架构搜索框架，结合遗传算法优化多模块组合，显著提升RAG性能，属有效创新。"
+    },
+    {
+        "title": "A semantic-based deep learning approach for mathematical expression\n  retrieval",
+        "url": "http://arxiv.org/abs/2511.01364v1",
+        "pub_date": "2025-11-03",
+        "summary": "Mathematical expressions (MEs) have complex two-dimensional structures in which symbols can be present at any nested depth like superscripts, subscripts, above, below etc. As MEs are represented using LaTeX format, several text retrieval methods based on string matching, vector space models etc., have also been applied for ME retrieval problem in the literature. As these methods are based on syntactic similarity, recently deep learning approaches based on embedding have been used for semantic similarity. In our present work, we have focused on the retrieval of mathematical expressions using deep learning approaches. In our approach, semantic features are extracted from the MEs using a deep recurrent neural network (DRNN) and these features have been used for matching and retrieval. We have trained the network for a classification task which determines the complexity of an ME. ME complexity has been quantified in terms of its nested depth. Based on the nested depth, we have considered three complexity classes of MEs: Simple, Medium and Complex. After training the network, outputs just before the the final fully connected layer are extracted for all the MEs. These outputs form the semantic features of MEs and are stored in a database. For a given ME query, its semantic features are computed using the trained DRNN and matched against the semantic feature database. Matching is performed based on the standard euclidean distance and top 'k' nearest matches are retrieved, where 'k' is a user-defined parameter. Our approach has been illustrated on a database of 829 MEs.",
+        "translated": "数学表达式（MEs）具有复杂的二维结构，其中符号可以出现在任意嵌套深度，如上标、下标、上方、下方等。由于MEs通常以LaTeX格式表示，文献中已应用多种基于字符串匹配、向量空间模型等文本检索方法来解决MEs的检索问题。然而，这些方法基于语法相似性，近年来基于嵌入的深度学习方法被用于捕捉语义相似性。在本研究中，我们专注于利用深度学习方法进行数学表达式的检索。我们的方法采用深度循环神经网络（DRNN）从MEs中提取语义特征，并利用这些特征进行匹配与检索。我们通过一个分类任务对网络进行训练，该任务用于判断ME的复杂度。ME的复杂度通过其嵌套深度进行量化。根据嵌套深度，我们将ME划分为三个复杂度类别：简单（Simple）、中等（Medium）和复杂（Complex）。网络训练完成后，提取所有ME在最终全连接层之前的输出，这些输出构成MEs的语义特征，并存储于数据库中。对于给定的ME查询，使用训练好的DRNN计算其语义特征，并与语义特征数据库进行匹配。匹配基于标准欧氏距离，检索出最接近的前'k'个结果，其中'k'为用户定义的参数。我们的方法在包含829个MEs的数据库上进行了验证。",
+        "translated_title": "一种基于语义的深度学习数学表达式检索方法",
+        "label": [],
+        "label_reason": "论文聚焦数学表达式检索，属于信息检索范畴，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 5,
+        "novelty_reason": "采用DRNN提取语义特征，属于常规深度学习方法在检索中的应用，无本质创新。"
     }
 ]
