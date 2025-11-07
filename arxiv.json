@@ -7719,5 +7719,198 @@
         "relevance_score": 6,
         "novelty_score": 8,
         "novelty_reason": "提出自监督联合优化荧光分布与光学性质的新范式，创新性强"
+    },
+    {
+        "title": "LLM-as-a-Judge: Toward World Models for Slate Recommendation Systems",
+        "url": "http://arxiv.org/abs/2511.04541v1",
+        "pub_date": "2025-11-06",
+        "summary": "Modeling user preferences across domains remains a key challenge in slate recommendation (i.e. recommending an ordered sequence of items) research. We investigate how Large Language Models (LLM) can effectively act as world models of user preferences through pairwise reasoning over slates. We conduct an empirical study involving several LLMs on three tasks spanning different datasets. Our results reveal relationships between task performance and properties of the preference function captured by LLMs, hinting towards areas for improvement and highlighting the potential of LLMs as world models in recommender systems.",
+        "translated": "跨领域建模用户偏好仍是滑动推荐（即推荐有序物料序列）研究中的关键挑战。我们探究了大语言模型（LLM）如何通过在滑动序列上进行成对推理，有效充当用户偏好的世界模型。我们针对三个不同数据集上的任务，对多个LLM进行了实证研究。结果揭示了任务性能与LLM所捕捉的偏好函数属性之间的关系，指出了潜在的改进方向，并凸显了LLM作为推荐系统中世界模型的潜力。",
+        "translated_title": "LLM-as-a-Judge：面向榜单推荐系统的“世界模型”构建",
+        "label": [
+            "LLM生成式推荐（LLM-based Generative Recommendation）",
+            "重排（Re-ranking）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "论文探索LLM作为用户偏好世界模型用于列表推荐，涉及重排与生成式推荐，与推荐系统核心环节紧密相关。",
+        "relevance_score": 8,
+        "novelty_score": 8,
+        "novelty_reason": "提出将LLM作为世界模型进行成对推理，用于推荐列表生成，方法新颖且具潜力。"
+    },
+    {
+        "title": "RUST-BENCH: Benchmarking LLM Reasoning on Unstructured Text within\n  Structured Tables",
+        "url": "http://arxiv.org/abs/2511.04491v1",
+        "pub_date": "2025-11-06",
+        "summary": "Existing tabular reasoning benchmarks mostly test models on small, uniform tables, underrepresenting the complexity of real-world data and giving an incomplete view of Large Language Models' (LLMs) reasoning abilities. Real tables are long, heterogeneous, and domain-specific, mixing structured fields with free text and requiring multi-hop reasoning across thousands of tokens. To address this gap, we introduce RUST-BENCH, a benchmark of 7966 questions from 2031 real-world tables spanning two domains: i) RB-Science (NSF grant records) and ii) RB-Sports (NBA statistics). Unlike prior work, RUST-BENCH evaluates LLMs jointly across scale, heterogeneity, domain specificity, and reasoning complexity. Experiments with open-source and proprietary models show that LLMs struggle with heterogeneous schemas and complex multi-hop inference, revealing persistent weaknesses in current architectures and prompting strategies. RUST-BENCH establishes a challenging new testbed for advancing tabular reasoning research.",
+        "translated": "现有表格推理基准主要在小型、均匀的表格上测试模型，未能充分反映真实世界数据的复杂性，从而对大语言模型（LLM）的推理能力给出了不完整的评估。真实表格通常较长、异构且具有领域特异性，混合了结构化字段与自由文本，需要在数千个token上进行多跳推理。为弥补这一差距，我们引入了RUST-BENCH，一个包含来自2031个真实世界表格的7966个问题的基准，涵盖两个领域：i) RB-Science（NSF资助记录）和ii) RB-Sports（NBA统计数据）。与以往工作不同，RUST-BENCH联合评估LLM在规模、异构性、领域特异性以及推理复杂度方面的表现。对开源和专有模型的实验表明，LLM在处理异构模式和复杂多跳推理时存在困难，揭示了当前架构和提示策略中持续存在的弱点。RUST-BENCH为推进表格推理研究建立了一个具有挑战性的新测试平台。",
+        "translated_title": "RUST-BENCH：在结构化表格中的非结构化文本上对大语言模型推理能力进行基准测试",
+        "label": [],
+        "label_reason": "论文聚焦表格文本推理，与推荐系统无直接关联，属通用NLP任务。",
+        "relevance_score": 2,
+        "novelty_score": 7,
+        "novelty_reason": "提出新基准RUST-BENCH，挑战LLM在复杂表格上的推理能力，具有方法创新。"
+    },
+    {
+        "title": "Ground-Truth Subgraphs for Better Training and Evaluation of Knowledge\n  Graph Augmented LLMs",
+        "url": "http://arxiv.org/abs/2511.04473v1",
+        "pub_date": "2025-11-06",
+        "summary": "Retrieval of information from graph-structured knowledge bases represents a promising direction for improving the factuality of LLMs. While various solutions have been proposed, a comparison of methods is difficult due to the lack of challenging QA datasets with ground-truth targets for graph retrieval. We present SynthKGQA, a framework for generating high-quality synthetic Knowledge Graph Question Answering datasets from any Knowledge Graph, providing the full set of ground-truth facts in the KG to reason over each question. We show how, in addition to enabling more informative benchmarking of KG retrievers, the data produced with SynthKGQA also allows us to train better models. We apply SynthKGQA to Wikidata to generate GTSQA, a new dataset designed to test zero-shot generalization abilities of KG retrievers with respect to unseen graph structures and relation types, and benchmark popular solutions for KG-augmented LLMs on it.",
+        "translated": "从图结构知识库中检索信息是提升大语言模型（LLM）事实性的有前景方向。尽管已有多种解决方案被提出，但由于缺乏具有真实答案标注的、具有挑战性的问答数据集，方法间的比较变得困难。我们提出 SynthKGQA，一个从任意知识图谱（KG）生成高质量合成知识图谱问答（KGQA）数据集的框架，该框架为每个问题提供知识图谱中完整的地面真值事实以供推理。我们展示了 SynthKGQA 生成的数据不仅能够支持对知识图谱检索器进行更具有信息量的基准评测，还能用于训练性能更优的模型。我们将 SynthKGQA 应用于 Wikidata，生成 GTSQA，一个新数据集，旨在测试知识图谱检索器在未见过的图结构和关系类型上的零样本泛化能力，并在该数据集上对流行的基于知识图谱增强的 LLM 解决方案进行基准评测。",
+        "translated_title": "真实子图用于知识图谱增强大语言模型的更好训练与评估",
+        "label": [
+            "LLM生成式推荐",
+            "负采样与对比学习"
+        ],
+        "label_reason": "论文聚焦KG增强LLM的训练与评估，与推荐系统中LLM生成式推荐有间接关联，需适配使用。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出SynthKGQA框架生成高质量合成数据，用于训练和评估KG检索器，方法新颖且实用。"
+    },
+    {
+        "title": "On the Brittleness of CLIP Text Encoders",
+        "url": "http://arxiv.org/abs/2511.04247v1",
+        "pub_date": "2025-11-06",
+        "summary": "Multimodal co-embedding models, especially CLIP, have advanced the state of the art in zero-shot classification and multimedia information retrieval in recent years by aligning images and text in a shared representation space. However, such modals trained on a contrastive alignment can lack stability towards small input perturbations. Especially when dealing with manually expressed queries, minor variations in the query can cause large differences in the ranking of the best-matching results. In this paper, we present a systematic analysis of the effect of multiple classes of non-semantic query perturbations in an multimedia information retrieval scenario. We evaluate a diverse set of lexical, syntactic, and semantic perturbations across multiple CLIP variants using the TRECVID Ad-Hoc Video Search queries and the V3C1 video collection. Across models, we find that syntactic and semantic perturbations drive the largest instabilities, while brittleness is concentrated in trivial surface edits such as punctuation and case. Our results highlight robustness as a critical dimension for evaluating vision-language models beyond benchmark accuracy.",
+        "translated": "多模态共嵌入模型，尤其是CLIP，在近年来通过将图像与文本对齐到共享表示空间，显著推动了零样本分类和多媒体信息检索领域的技术发展。然而，这类基于对比对齐训练的模态在面对微小输入扰动时往往缺乏稳定性。特别是在处理人工表达的查询时，查询中的微小变化可能导致最佳匹配结果的排序出现显著差异。本文针对多媒体信息检索场景，系统分析了多种非语义查询扰动的影响。我们采用TRECVID Ad-Hoc视频搜索查询和V3C1视频数据集，评估了多种CLIP变体在词汇、句法和语义扰动下的表现。实验结果表明，句法和语义扰动引发的不稳定性最为显著，而脆弱性主要集中在标点符号和大小写等表面微小编辑上。我们的研究结果强调，鲁棒性是评估视觉-语言模型时除基准准确率之外的关键维度。",
+        "translated_title": "关于CLIP文本编码器的脆弱性",
+        "label": [
+            "多模态推荐",
+            "负采样与对比学习"
+        ],
+        "label_reason": "论文研究CLIP文本编码器在多模态检索中的脆弱性，涉及对比学习与检索稳定性，与多模态推荐间接相关。",
+        "relevance_score": 4,
+        "novelty_score": 6,
+        "novelty_reason": "系统分析多种查询扰动对CLIP的影响，揭示表面编辑导致的不稳定性，属方法性改进非范式创新。"
+    },
+    {
+        "title": "Denoised Recommendation Model with Collaborative Signal Decoupling",
+        "url": "http://arxiv.org/abs/2511.04237v1",
+        "pub_date": "2025-11-06",
+        "summary": "Although the collaborative filtering (CF) algorithm has achieved remarkable performance in recommendation systems, it suffers from suboptimal recommendation performance due to noise in the user-item interaction matrix. Numerous noise-removal studies have improved recommendation models, but most existing approaches conduct denoising on a single graph. This may cause attenuation of collaborative signals: removing edges between two nodes can interrupt paths between other nodes, weakening path-dependent collaborative information. To address these limitations, this study proposes a novel GNN-based CF model called DRCSD for denoising unstable interactions. DRCSD includes two core modules: a collaborative signal decoupling module (decomposes signals into distinct orders by structural characteristics) and an order-wise denoising module (performs targeted denoising on each order). Additionally, the information aggregation mechanism of traditional GNN-based CF models is modified to avoid cross-order signal interference until the final pooling operation. Extensive experiments on three public real-world datasets show that DRCSD has superior robustness against unstable interactions and achieves statistically significant performance improvements in recommendation accuracy metrics compared to state-of-the-art baseline models.",
+        "translated": "尽管协同过滤（CF）算法在推荐系统中取得了显著的性能，但由于用户-物料交互矩阵中的噪声，其推荐效果仍存在不足。大量去噪研究已提升了推荐模型性能，但现有大多数方法仅在单个图上进行去噪处理。这可能导致协同信号衰减：移除两个节点之间的边可能中断其他节点之间的路径，从而削弱路径依赖的协同信息。为解决上述局限，本文提出一种基于图神经网络（GNN）的新型CF模型DRCSD，用于去噪不稳定的交互。DRCSD包含两个核心模块：协同信号解耦模块（根据结构特征将信号分解为不同阶次）和逐阶去噪模块（对每一阶次进行针对性去噪）。此外，修改了传统GNN-based CF模型的信息聚合机制，以避免在最终池化操作前出现跨阶次信号干扰。在三个公开真实数据集上的大量实验表明，DRCSD对不稳定交互具有更强的鲁棒性，且在推荐准确率指标上相比最先进的基线模型实现了统计显著的性能提升。",
+        "translated_title": "去噪推荐模型与协同信号解耦",
+        "label": [
+            "图神经网络推荐（GNN for Recommendation）",
+            "召回（Recall）",
+            "负采样与对比学习（Negative Sampling / Contrastive Learning）"
+        ],
+        "label_reason": "基于GNN的协同过滤模型，针对噪声交互设计去噪模块，提升推荐准确性，属于推荐系统核心环节。",
+        "relevance_score": 8,
+        "novelty_score": 8,
+        "novelty_reason": "提出信号解耦与分阶去噪机制，避免传统GNN去噪导致的信号衰减，方法新颖且有效。"
+    },
+    {
+        "title": "Coordination-Free Lane Partitioning for Convergent ANN Search",
+        "url": "http://arxiv.org/abs/2511.04221v1",
+        "pub_date": "2025-11-06",
+        "summary": "Production vector search systems often fan out each query across parallel lanes (threads, replicas, or shards) to meet latency service-level objectives (SLOs). In practice, these lanes rediscover the same candidates, so extra compute does not increase coverage. We present a coordination-free lane partitioner that turns duplication into complementary work at the same cost and deadline. For each query we (1) build a deterministic candidate pool sized to the total top-k budget, (2) apply a per-query pseudorandom permutation, and (3) assign each lane a disjoint slice of positions. Lanes then return different results by construction, with no runtime coordination.   At equal cost with four lanes (total candidate budget 64), on SIFT1M (1M SIFT feature vectors) with Hierarchical Navigable Small World graphs (HNSW) recall@10 rises from 0.249 to 0.999 while lane overlap falls from nearly 100% to 0%. On MS MARCO (8.8M passages) with HNSW, hit@10 improves from 0.200 to 0.601 and Mean Reciprocal Rank at 10 (MRR@10) from 0.133 to 0.330. For inverted file (IVF) indexes we see smaller but consistent gains (for example, +11% on MS MARCO) by de-duplicating list routing. A microbenchmark shows planner overhead of ~37 microseconds per query (mean at the main setting) with linear growth in the number of merged candidates.   These results yield a simple operational guideline: size the per-query pool to the total budget, deterministically partition positions across lanes, and turn redundant fan-out into complementary coverage without changing budget or deadline.",
+        "translated": "生产环境中的向量检索系统通常将每个查询广播到多个并行通道（线程、副本或分片）中，以满足延迟服务等级目标（SLO）。在实践中，这些通道会重复发现相同的候选结果，因此额外的计算资源并未提升召回覆盖范围。我们提出了一种无需协调的通道划分器，能够在相同成本和截止时间下，将重复计算转化为互补性工作。对于每个查询，我们（1）构建一个大小等于总 top-k 预算的确定性候选池，（2）应用一个针对每个查询的伪随机排列，（3）为每个通道分配互不重叠的位置切片。通过这种设计，各通道天然返回不同的结果，且无需运行时协调。\n\n在四通道配置下（总候选预算为64），在 SIFT1M（100万 SIFT 特征向量）数据集上使用分层可导航小世界图（HNSW）时，recall@10 从 0.249 提升至 0.999，同时通道重叠率从接近 100% 降至 0%。在 MS MARCO（880万段落）数据集上使用 HNSW 时，hit@10 从 0.200 提升至 0.601，MRR@10 从 0.133 提升至 0.330。对于倒排文件（IVF）索引，我们观察到较小但稳定的增益（例如在 MS MARCO 上提升 11%），这是通过消除列表路由中的重复项实现的。微基准测试显示，规划器的每查询开销约为 37 微秒（主配置下的平均值），且随合并候选数量呈线性增长。\n\n这些结果得出一个简单实用的操作指南：将每个查询的候选池大小设置为总预算，以确定性方式在各通道间划分位置，从而在不改变预算或截止时间的前提下，将冗余的广播查询转化为互补的覆盖范围。",
+        "translated_title": "无协调车道划分用于收敛的近似最近邻搜索",
+        "label": [],
+        "label_reason": "论文聚焦ANN搜索优化，虽用于向量检索，但未针对推荐系统设计，与推荐核心环节无直接关联。",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "提出无协调的车道划分策略，提升搜索覆盖，方法新颖且在ANN搜索中有显著效果。"
+    },
+    {
+        "title": "Transforming Mentorship: An AI Powered Chatbot Approach to University\n  Guidance",
+        "url": "http://arxiv.org/abs/2511.04172v1",
+        "pub_date": "2025-11-06",
+        "summary": "University students face immense challenges during their undergraduate lives, often being deprived of personalized on-demand guidance that mentors fail to provide at scale. Digital tools exist, but there is a serious lack of customized coaching for newcomers. This paper presents an AI-powered chatbot that will serve as a mentor for the students of BRAC University. The main component is a data ingestion pipeline that efficiently processes and updates information from diverse sources, such as CSV files and university webpages. The chatbot retrieves information through a hybrid approach, combining BM25 lexical ranking with ChromaDB semantic retrieval, and uses a Large Language Model, LLaMA-3.3-70B, to generate conversational responses. The generated text was found to be semantically highly relevant, with a BERTScore of 0.831 and a METEOR score of 0.809. The data pipeline was also very efficient, taking 106.82 seconds for updates, compared to 368.62 seconds for new data. This chatbot will be able to help students by responding to their queries, helping them to get a better understanding of university life, and assisting them to plan better routines for their semester in the open-credit university.",
+        "translated": "大学生在本科阶段面临巨大挑战，常常缺乏个性化、按需提供的指导，而导师难以在大规模场景下提供此类支持。虽然已存在一些数字工具，但针对新生的定制化辅导仍严重不足。本文提出一种基于人工智能的聊天机器人，旨在作为布拉克大学（BRAC University）学生的导师。其核心组件是一个数据摄取管道，能够高效处理和更新来自多种来源（如CSV文件和大学网页）的信息。该聊天机器人采用混合检索方法，结合BM25词法排序与ChromaDB语义检索，并利用大语言模型LLaMA-3.3-70B生成对话式回复。生成文本在语义相关性方面表现优异，BERTScore达到0.831，METEOR得分为0.809。数据管道效率亦很高，更新耗时106.82秒，新数据处理耗时368.62秒。该聊天机器人能够响应学生查询，帮助其更好地理解大学生活，并协助其在学分开放制大学中制定更合理的学期计划。",
+        "translated_title": "变革导师制：基于人工智能聊天机器人的大学指导方法",
+        "label": [
+            "LLM生成式推荐",
+            "召回"
+        ],
+        "label_reason": "论文基于LLM构建聊天机器人，结合BM25与语义检索，用于学生指导，属于生成式推荐范畴，但非典型推荐系统场景。",
+        "relevance_score": 5,
+        "novelty_score": 6,
+        "novelty_reason": "采用混合检索+LLM生成，提升响应相关性，但方法组合属常规，无突破性创新。"
+    },
+    {
+        "title": "E-CARE: An Efficient LLM-based Commonsense-Augmented Framework for\n  E-Commerce",
+        "url": "http://arxiv.org/abs/2511.04087v1",
+        "pub_date": "2025-11-06",
+        "summary": "Finding relevant products given a user query plays a pivotal role in an e-commerce platform, as it can spark shopping behaviors and result in revenue gains. The challenge lies in accurately predicting the correlation between queries and products. Recently, mining the cross-features between queries and products based on the commonsense reasoning capacity of Large Language Models (LLMs) has shown promising performance. However, such methods suffer from high costs due to intensive real-time LLM inference during serving, as well as human annotations and potential Supervised Fine Tuning (SFT). To boost efficiency while leveraging the commonsense reasoning capacity of LLMs for various e-commerce tasks, we propose the Efficient Commonsense-Augmented Recommendation Enhancer (E-CARE). During inference, models augmented with E-CARE can access commonsense reasoning with only a single LLM forward pass per query by utilizing a commonsense reasoning factor graph that encodes most of the reasoning schema from powerful LLMs. The experiments on 2 downstream tasks show an improvement of up to 12.1% on precision@5.",
+        "translated": "在电子商务平台中，根据用户查询找到相关商品起着关键作用，因为它能够激发购物行为并带来收入增长。挑战在于准确预测查询与商品之间的关联性。近期，基于大语言模型（LLM）的常识推理能力挖掘查询与商品之间的交叉特征，已展现出良好的性能。然而，此类方法在服务阶段因需要密集的实时LLM推理，以及人工标注和潜在的监督微调（SFT），导致成本较高。为了在提升效率的同时充分利用LLM的常识推理能力以应对多种电商任务，我们提出了一种高效常识增强推荐增强器（E-CARE）。在推理阶段，集成E-CARE的模型可通过每个查询仅进行一次LLM前向传播，借助编码了强大LLM中大部分推理模式的常识推理因子图，访问常识推理能力。在两个下游任务上的实验表明，该方法在precision@5指标上最高提升了12.1%。",
+        "translated_title": "E-CARE：一种高效的基于大语言模型的常识增强电商推荐框架",
+        "label": [
+            "LLM生成式推荐（LLM-based Generative Recommendation）",
+            "召回（Recall）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "论文提出基于LLM的高效常识增强框架，用于电商推荐召回，显著提升精度，与推荐系统核心环节紧密相关。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出因子图结构减少LLM推理次数，结合常识推理提升推荐效果，方法新颖且具实用性。"
+    },
+    {
+        "title": "Publication Trend in DESIDOC Journal of Library and Information\n  Technology during 2013-2017: A Scientometric Approach",
+        "url": "http://arxiv.org/abs/2511.04082v1",
+        "pub_date": "2025-11-06",
+        "summary": "DESIDOC Journal of Library &amp; Information Technology (DJLIT) formerly known as DESIDOC Bulletin of Information Technology is a peer-reviewed, open access, bimonthly journal. This paper presents a Scientometric analysis of the DESIDOC Journal. The paper analyses the pattern of growth of the research output published in the journal, pattern of authorship, author productivity, and, subjects covered to the papers over the period (2013-2017). It is found that 227 papers were published during the period of study (2001-2012). The maximum numbers of articles were collaborative in nature. The subject concentration of the journal noted is Scientometrics. The maximum numbers of articles (65%) have ranged their thought contents between 6 and 10 pages. The study applied standard formula and statistical tools to bring out the factual result.",
+        "translated": "DESIDOC图书馆与信息技术期刊（DJLIT），前身为DESIDOC信息技术公报，是一本经过同行评审、开放获取的双月刊。本文对DESIDOC期刊进行了科学计量学分析。研究分析了2013至2017年间该期刊发表的研究成果的增长模式、作者署名模式、作者生产力以及论文所覆盖的主题领域。研究发现，在2001至2012年的研究期间，共发表了227篇论文。其中，合作撰写的论文数量最多。该期刊的主题集中于科学计量学。超过65%的论文篇幅在6至10页之间。本研究采用标准公式和统计工具，以得出客观的分析结果。",
+        "translated_title": "2013–2017年DESIDOC图书馆与信息技术期刊的出版趋势：一种科学计量学方法",
+        "label": [],
+        "label_reason": "论文为信息计量学分析，研究期刊出版趋势，与推荐系统无直接关联。",
+        "relevance_score": 1,
+        "novelty_score": 1,
+        "novelty_reason": "仅采用标准统计方法进行文献分析，无新方法或技术贡献。"
+    },
+    {
+        "title": "Caption Injection for Optimization in Generative Search Engine",
+        "url": "http://arxiv.org/abs/2511.04080v1",
+        "pub_date": "2025-11-06",
+        "summary": "Generative Search Engines (GSEs) leverage Retrieval-Augmented Generation (RAG) techniques and Large Language Models (LLMs) to integrate multi-source information and provide users with accurate and comprehensive responses. Unlike traditional search engines that present results in ranked lists, GSEs shift users' attention from sequential browsing to content-driven subjective perception, driving a paradigm shift in information retrieval. In this context, enhancing the subjective visibility of content through Generative Search Engine Optimization (G-SEO) methods has emerged as a new research focus. With the rapid advancement of Multimodal Retrieval-Augmented Generation (MRAG) techniques, GSEs can now efficiently integrate text, images, audio, and video, producing richer responses that better satisfy complex information needs. Existing G-SEO methods, however, remain limited to text-based optimization and fail to fully exploit multimodal data. To address this gap, we propose Caption Injection, the first multimodal G-SEO approach, which extracts captions from images and injects them into textual content, integrating visual semantics to enhance the subjective visibility of content in generative search scenarios. We systematically evaluate Caption Injection on MRAMG, a benchmark for MRAG, under both unimodal and multimodal settings. Experimental results show that Caption Injection significantly outperforms text-only G-SEO baselines under the G-Eval metric, demonstrating the necessity and effectiveness of multimodal integration in G-SEO to improve user-perceived content visibility.",
+        "translated": "生成式搜索引擎（GSEs）利用检索增强生成（RAG）技术与大语言模型（LLM），整合多源信息，为用户提供准确且全面的响应。与传统搜索引擎以排序列表形式呈现结果不同，GSEs将用户的注意力从顺序浏览转向以内容驱动的主观感知，推动了信息检索范式的转变。在此背景下，通过生成式搜索引擎优化（G-SEO）方法提升内容的主观可见性，已成为新的研究焦点。随着多模态检索增强生成（MRAG）技术的快速发展，GSEs现已能够高效整合文本、图像、音频和视频，生成更丰富的响应，更好地满足复杂的信息需求。然而，现有的G-SEO方法仍局限于基于文本的优化，未能充分挖掘多模态数据的潜力。为弥补这一空白，我们提出Caption Injection，这是首个多模态G-SEO方法，通过从图像中提取字幕并注入文本内容，融合视觉语义，从而提升生成式搜索场景下内容的主观可见性。我们在MRAMG（MRAG基准）上系统评估了Caption Injection，分别在单模态和多模态设置下进行实验。实验结果表明，Caption Injection在G-Eval指标下显著优于仅基于文本的G-SEO基线方法，证明了在G-SEO中融合多模态数据的必要性与有效性，以提升用户感知的内容可见性。",
+        "translated_title": "生成式搜索引擎中的标题注入优化",
+        "label": [
+            "LLM生成式推荐（LLM-based Generative Recommendation）",
+            "多模态推荐（Multimodal Recommendation）"
+        ],
+        "label_reason": "论文聚焦生成式搜索优化，涉及LLM与多模态融合，虽非传统推荐，但与生成式推荐技术密切相关。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出首个多模态G-SEO方法，注入图像字幕提升内容可见性，方法新颖且有效。"
+    },
+    {
+        "title": "Two Decades of Research at the University of Lagos (2004-2023): A\n  Scientometric Analysis of Productivity, Collaboration, and Impact",
+        "url": "http://arxiv.org/abs/2511.04075v1",
+        "pub_date": "2025-11-06",
+        "summary": "This paper presents a scientometric analysis of research output from the University of Lagos, focusing on the two decades spanning 2004 to 2023. Using bibliometric data retrieved from the Web of Science, we examine trends in publication volume, collaboration patterns, citation impact, and the most prolific authors, departments, and research domains at the university. The study reveals a consistent increase in research productivity, with the highest publication output recorded in 2023. Health Sciences, Engineering, and Social Sciences are identified as dominant fields, reflecting the university's interdisciplinary research strengths. Collaborative efforts, both locally and internationally, show a positive correlation with higher citation impact, with the United States and the United Kingdom being the leading international collaborators. Notably, open-access publications account for a significant portion of the university's research output, enhancing visibility and citation rates. The findings offer valuable insights into the university's research performance over the past two decades, providing a foundation for strategic planning and policy formulation to foster research excellence and global impact.",
+        "translated": "本文对拉各斯大学在2004至2023年二十年间的研究产出进行了科学计量学分析。基于从Web of Science获取的文献计量数据，我们考察了该大学在论文发表数量、合作模式、引用影响力以及最具产研力的作者、院系和研究领域等方面的发展趋势。研究结果表明，其研究生产力呈现持续增长态势，2023年发表论文数量达到最高。健康科学、工程学和社会科学被识别为主要优势领域，反映出该大学在跨学科研究方面的综合实力。本地与国际间的合作均与更高的引用影响力呈正相关，其中美国和英国是其最主要的国际合作伙伴。值得注意的是，开放获取（open-access）论文占该大学研究产出的相当大比例，显著提升了研究成果的可见度和引用率。本研究结果为过去二十年拉各斯大学的研究表现提供了重要洞察，可为未来战略规划和政策制定提供依据，以促进研究卓越性和全球影响力。",
+        "translated_title": "拉各斯大学二十年研究（2004–2023）：生产力、合作与影响力的知识计量分析",
+        "label": [],
+        "label_reason": "论文为科研产出的科学计量分析，与推荐系统无直接关联。",
+        "relevance_score": 1,
+        "novelty_score": 1,
+        "novelty_reason": "仅进行文献计量统计分析，无技术创新或方法论贡献。"
+    },
+    {
+        "title": "Learning Filter-Aware Distance Metrics for Nearest Neighbor Search with\n  Multiple Filters",
+        "url": "http://arxiv.org/abs/2511.04073v1",
+        "pub_date": "2025-11-06",
+        "summary": "Filtered Approximate Nearest Neighbor (ANN) search retrieves the closest vectors for a query vector from a dataset. It enforces that a specified set of discrete labels $S$ for the query must be included in the labels of each retrieved vector. Existing graph-based methods typically incorporate filter awareness by assigning fixed penalties or prioritizing nodes based on filter satisfaction. However, since these methods use fixed, data in- dependent penalties, they often fail to generalize across datasets with diverse label and vector distributions. In this work, we propose a principled alternative that learns the optimal trade-off between vector distance and filter match directly from the data, rather than relying on fixed penalties. We formulate this as a constrained linear optimization problem, deriving weights that better reflect the underlying filter distribution and more effectively address the filtered ANN search problem. These learned weights guide both the search process and index construction, leading to graph structures that more effectively capture the underlying filter distribution and filter semantics. Our experiments demonstrate that adapting the distance function to the data significantly im- proves accuracy by 5-10% over fixed-penalty methods, providing a more flexible and generalizable framework for the filtered ANN search problem.",
+        "translated": "过滤近似最近邻（ANN）搜索从数据集中为查询向量检索最接近的向量，并强制要求查询的指定离散标签集合 $S$ 必须包含在每个检索向量的标签中。现有的基于图的方法通常通过为满足过滤条件的节点分配固定惩罚或优先级来实现过滤感知。然而，由于这些方法采用固定且与数据无关的惩罚值，它们往往难以在具有不同标签和向量分布的数据集上泛化。在本研究中，我们提出了一种基于原理的替代方案，该方案直接从数据中学习向量距离与过滤匹配之间的最优权衡，而非依赖固定惩罚。我们将此问题形式化为一个带约束的线性优化问题，推导出能够更好反映底层过滤分布并更有效地解决过滤ANN搜索问题的权重。这些学习到的权重指导搜索过程和索引构建，从而生成更能有效捕捉底层过滤分布和过滤语义的图结构。实验结果表明，将距离函数适配于数据相比固定惩罚方法可显著提升5-10%的准确率，为过滤ANN搜索问题提供了一个更具灵活性和泛化能力的框架。",
+        "translated_title": "学习面向多过滤条件的最近邻搜索的过滤感知距离度量",
+        "label": [],
+        "label_reason": "论文聚焦于带过滤条件的近似最近邻搜索，属于通用信息检索范畴，与推荐系统无直接关联。",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "提出学习数据驱动的滤波距离权重，改进传统固定惩罚方法，具有创新性但非推荐领域应用。"
+    },
+    {
+        "title": "KnowThyself: An Agentic Assistant for LLM Interpretability",
+        "url": "http://arxiv.org/abs/2511.03878v1",
+        "pub_date": "2025-11-05",
+        "summary": "We develop KnowThyself, an agentic assistant that advances large language model (LLM) interpretability. Existing tools provide useful insights but remain fragmented and code-intensive. KnowThyself consolidates these capabilities into a chat-based interface, where users can upload models, pose natural language questions, and obtain interactive visualizations with guided explanations. At its core, an orchestrator LLM first reformulates user queries, an agent router further directs them to specialized modules, and the outputs are finally contextualized into coherent explanations. This design lowers technical barriers and provides an extensible platform for LLM inspection. By embedding the whole process into a conversational workflow, KnowThyself offers a robust foundation for accessible LLM interpretability.",
+        "translated": "我们开发了 KnowThyself，一种用于提升大语言模型（LLM）可解释性的智能体助手。现有工具虽能提供有价值的洞察，但功能分散且高度依赖代码。KnowThyself 将这些能力整合至一个基于对话的界面中，用户可上传模型、以自然语言提问，并获得带有引导式解释的交互式可视化结果。其核心机制为：一个协调器 LLM 首先对用户查询进行重述，随后由代理路由模块将其导向专门的功能模块，最终将输出结果整合为连贯的解释。该设计降低了技术门槛，并为 LLM 检查提供了可扩展的平台。通过将整个流程嵌入对话式工作流，KnowThyself 为可访问的 LLM 可解释性奠定了坚实基础。",
+        "translated_title": "KnowThyself：面向大语言模型可解释性的智能体助手",
+        "label": [],
+        "label_reason": "论文聚焦LLM可解释性工具开发，与推荐系统无直接关联，属通用NLP工具。",
+        "relevance_score": 2,
+        "novelty_score": 7,
+        "novelty_reason": "提出基于代理的交互式解释框架，整合多模块，设计新颖，提升可访问性。"
     }
 ]
