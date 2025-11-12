@@ -9393,5 +9393,18 @@
         "relevance_score": 2,
         "novelty_score": 3,
         "novelty_reason": "方法通用，无推荐系统创新点"
+    },
+    {
+        "title": "Information Retrieval of Jumbled Words",
+        "url": "http://arxiv.org/abs/1101.0766v1",
+        "pub_date": "2011-01-04",
+        "summary": "It is known that humans can easily read words where the letters have been jumbled in a certain way. This paper examines this problem by associating a distance measure with the jumbling process. Modifications to text were generated according to the Damerau-Levenshtein distance and it was checked if the users are able to read it. Graphical representations of the results are provided.",
+        "translated": "众所周知，人类能够轻易阅读字母被打乱但以某种方式重组的单词。本文通过将距离度量与字母打乱过程相结合来研究该问题。根据 Damerau-Levenshtein 距离生成文本修改，并检验用户是否能够读懂这些修改后的文本。结果以图形形式呈现。",
+        "translated_title": "词序打乱的信息检索",
+        "label": [],
+        "label_reason": "研究字母打乱阅读，与推荐系统无关。",
+        "relevance_score": 2,
+        "novelty_score": 3,
+        "novelty_reason": "方法陈旧，无推荐系统创新点。"
     }
 ]
