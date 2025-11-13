@@ -9406,5 +9406,18 @@
         "relevance_score": 2,
         "novelty_score": 3,
         "novelty_reason": "方法陈旧，无推荐系统创新点。"
+    },
+    {
+        "title": "Where did you get that? Towards Summarization Attribution for Analysts",
+        "url": "http://arxiv.org/abs/2511.08589v1",
+        "pub_date": "2025-10-28",
+        "summary": "Analysts require attribution, as nothing can be reported without knowing the source of the information. In this paper, we will focus on automatic methods for attribution, linking each sentence in the summary to a portion of the source text, which may be in one or more documents. We explore using a hybrid summarization, i.e., an automatic paraphrase of an extractive summary, to ease attribution. We also use a custom topology to identify the proportion of different categories of attribution-related errors.",
+        "translated": "分析人员需要溯源，因为任何报告都必须知道信息的来源。在本文中，我们将重点关注自动溯源方法，即将摘要中的每一句与源文本中的相应部分关联起来，该部分可能来自一个或多个文档。我们探索使用混合摘要——即对抽取式摘要进行自动改写——以简化溯源过程。同时，我们还采用一种自定义拓扑结构来识别不同类型溯源相关错误所占的比例。",
+        "translated_title": "那东西是从哪里来的？面向分析师的摘要溯源",
+        "label": [],
+        "label_reason": "论文聚焦文本摘要溯源，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 3,
+        "novelty_reason": "方法属通用NLP任务，创新度有限。"
     }
 ]
