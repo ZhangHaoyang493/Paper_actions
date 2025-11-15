@@ -9687,5 +9687,304 @@
         "relevance_score": 1,
         "novelty_score": 3,
         "novelty_reason": "复现性实验，无本质创新"
+    },
+    {
+        "title": "Don't Waste It: Guiding Generative Recommenders with Structured Human Priors via Multi-head Decoding",
+        "url": "http://arxiv.org/abs/2511.10492v1",
+        "pub_date": "2025-11-13",
+        "summary": "Optimizing recommender systems for objectives beyond accuracy, such as diversity, novelty, and personalization, is crucial for long-term user satisfaction. To this end, industrial practitioners have accumulated vast amounts of structured domain knowledge, which we term human priors (e.g., item taxonomies, temporal patterns). This knowledge is typically applied through post-hoc adjustments during ranking or post-ranking. However, this approach remains decoupled from the core model learning, which is particularly undesirable as the industry shifts to end-to-end generative recommendation foundation models. On the other hand, many methods targeting these beyond-accuracy objectives often require architecture-specific modifications and discard these valuable human priors by learning user intent in a fully unsupervised manner.   Instead of discarding the human priors accumulated over years of practice, we introduce a backbone-agnostic framework that seamlessly integrates these human priors directly into the end-to-end training of generative recommenders. With lightweight, prior-conditioned adapter heads inspired by efficient LLM decoding strategies, our approach guides the model to disentangle user intent along human-understandable axes (e.g., interaction types, long- vs. short-term interests). We also introduce a hierarchical composition strategy for modeling complex interactions across different prior types. Extensive experiments on three large-scale datasets demonstrate that our method significantly enhances both accuracy and beyond-accuracy objectives. We also show that human priors allow the backbone model to more effectively leverage longer context lengths and larger model sizes.",
+        "translated": "优化推荐系统以实现除准确率之外的目标（如多样性、新颖性与个性化），对长期用户满意度至关重要。为此，工业界从业者已积累大量结构化的领域知识，我们将其称为“人类先验”（例如：物料分类体系、时间模式等）。此类知识通常在排序或重排阶段通过事后调整加以应用。然而，该方法仍与核心模型学习过程相分离，这尤其在行业向端到端生成式推荐基础模型演进的过程中尤为不可取。另一方面，许多旨在达成上述非准确率目标的方法往往需要特定架构的修改，并通过完全无监督的方式学习用户意图，从而舍弃这些宝贵的“人类先验”。我们并未抛弃多年实践中积累的“人类先验”，而是提出一种与骨干模型无关的框架，将这些先验直接无缝整合至生成式推荐系统的端到端训练流程中。该方法采用受高效大语言模型解码策略启发的轻量级、先验条件化适配器头，引导模型沿人类可理解的维度（如交互类型、长期兴趣与短期兴趣）解耦用户意图。此外，我们还引入了一种分层组合策略，用于建模不同先验类型之间的复杂交互关系。在三个大规模数据集上的广泛实验表明，我们的方法显著提升了准确率及非准确率目标的表现。我们也证明，“人类先验”使骨干模型能够更有效地利用更长的上下文长度和更大的模型规模。",
+        "translated_title": "别浪费它：通过多头解码引导生成式推荐器利用结构化人类先验",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "直接解决生成式推荐中融入结构化先验知识问题",
+        "relevance_score": 10,
+        "novelty_score": 9,
+        "novelty_reason": "首创多头解码引导框架整合人类先验于端到端训练"
+    },
+    {
+        "title": "Fixed-Persona SLMs with Modular Memory: Scalable NPC Dialogue on Consumer Hardware",
+        "url": "http://arxiv.org/abs/2511.10277v1",
+        "pub_date": "2025-11-13",
+        "summary": "Large Language Models (LLMs) have demonstrated remarkable capabilities in generating human-like text, yet their applicability to dialogue systems in computer games remains limited. This limitation arises from their substantial hardware requirements, latency constraints, and the necessity to maintain clearly defined knowledge boundaries within a game setting. In this paper, we propose a modular NPC dialogue system that leverages Small Language Models (SLMs), fine-tuned to encode specific NPC personas and integrated with runtime-swappable memory modules. These memory modules preserve character-specific conversational context and world knowledge, enabling expressive interactions and long-term memory without retraining or model reloading during gameplay. We comprehensively evaluate our system using three open-source SLMs: DistilGPT-2, TinyLlama-1.1B-Chat, and Mistral-7B-Instruct, trained on synthetic persona-aligned data and benchmarked on consumer-grade hardware. While our approach is motivated by applications in gaming, its modular design and persona-driven memory architecture hold significant potential for broader adoption in domains requiring expressive, scalable, and memory-rich conversational agents, such as virtual assistants, customer support bots, or interactive educational systems.",
+        "translated": "大语言模型（Large Language Models, LLMs）在生成类人文本方面展现出显著能力，但其在计算机游戏对话系统中的适用性仍受限。这一局限源于其高昂的硬件需求、延迟约束，以及在游戏场景中维持明确知识边界的必要性。本文提出一种模块化非玩家角色（NPC）对话系统，该系统基于小型语言模型（Small Language Models, SLMs），经微调以编码特定NPC人设，并与可在运行时动态切换的记忆模块集成。这些记忆模块保存角色专属的对话上下文及世界观知识，从而在游戏过程中无需重新训练或加载模型即可实现富有表现力的交互与长期记忆。我们在三款开源SLM上全面评估了该系统：DistilGPT-2、TinyLlama-1.1B-Chat 和 Mistral-7B-Instruct，这些模型均在合成的人设对齐数据上进行训练，并在消费级硬件上进行了基准测试。虽然我们的方法最初面向游戏应用，但其模块化设计与基于人设的记忆架构，对于需要具备表达力、可扩展性和丰富记忆能力的对话代理的其他领域（如虚拟助手、客户服务机器人或互动教育系统）也具有广泛的推广潜力。",
+        "translated_title": "具有模块化记忆的固定人格SLM：在消费级硬件上实现可扩展NPC对话",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "基于SLM的对话系统，可适配推荐场景中的用户画像与交互建模。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "模块化记忆架构提升效率，适合多角色场景应用。"
+    },
+    {
+        "title": "GPR: Towards a Generative Pre-trained One-Model Paradigm for Large-Scale Advertising Recommendation",
+        "url": "http://arxiv.org/abs/2511.10138v1",
+        "pub_date": "2025-11-13",
+        "summary": "As an intelligent infrastructure connecting users with commercial content, advertising recommendation systems play a central role in information flow and value creation within the digital economy. However, existing multi-stage advertising recommendation systems suffer from objective misalignment and error propagation, making it difficult to achieve global optimality, while unified generative recommendation models still struggle to meet the demands of practical industrial applications. To address these issues, we propose GPR (Generative Pre-trained Recommender), the first one-model framework that redefines advertising recommendation as an end-to-end generative task, replacing the traditional cascading paradigm with a unified generative approach. To realize GPR, we introduce three key innovations spanning unified representation, network architecture, and training strategy. First, we design a unified input schema and tokenization method tailored to advertising scenarios, mapping both ads and organic content into a shared multi-level semantic ID space, thereby enhancing semantic alignment and modeling consistency across heterogeneous data. Second, we develop the Heterogeneous Hierarchical Decoder (HHD), a dual-decoder architecture that decouples user intent modeling from ad generation, achieving a balance between training efficiency and inference flexibility while maintaining strong modeling capacity. Finally, we propose a multi-stage joint training strategy that integrates Multi-Token Prediction (MTP), Value-Aware Fine-Tuning and the Hierarchy Enhanced Policy Optimization (HEPO) algorithm, forming a complete generative recommendation pipeline that unifies interest modeling, value alignment, and policy optimization. GPR has been fully deployed in the Tencent Weixin Channels advertising system, delivering significant improvements in key business metrics including GMV and CTCVR.",
+        "translated": "作为连接用户与商业内容的智能基础设施，广告推荐系统在数字经济的信息流动与价值创造中扮演着核心角色。然而，现有的多阶段广告推荐系统存在目标不一致与误差传播问题，难以实现全局最优；同时，统一的生成式推荐模型仍难以满足实际工业应用的需求。为解决上述问题，我们提出 GPR（Generative Pre-trained Recommender），这是首个将广告推荐重新定义为端到端生成任务的一体化模型框架，用统一的生成范式替代传统级联架构。为实现 GPR，我们引入三项关键技术革新，涵盖统一表征、网络架构与训练策略：首先，我们设计了一种面向广告场景的统一输入格式与分词方法，将广告与自然内容映射至共享的多层次语义 ID 空间，从而增强异构数据间的语义对齐与建模一致性；其次，我们构建了异构层次解码器（Heterogeneous Hierarchical Decoder, HHD），一种双解码器架构，将用户意图建模与广告生成解耦，在保证强建模能力的同时兼顾训练效率与推理灵活性；最后，我们提出一种多阶段联合训练策略，整合多令牌预测（Multi-Token Prediction, MTP）、价值感知微调与层次增强策略优化（Hierarchy Enhanced Policy Optimization, HEPO）算法，形成一套完整的一体化生成式推荐流水线，统一兴趣建模、价值对齐与策略优化。GPR 已在腾讯微信频道广告系统中全面部署，显著提升了 GMV 与 CTCVR 等关键业务指标。",
+        "translated_title": "GPR：面向大规模广告推荐的生成式预训练单模型范式",
+        "label": [
+            "LLM生成式推荐",
+            "精排",
+            "通用推荐技术"
+        ],
+        "label_reason": "提出统一生成式模型解决广告推荐端到端优化问题",
+        "relevance_score": 10,
+        "novelty_score": 9,
+        "novelty_reason": "首创一模型范式，整合意图建模与价值对齐"
+    },
+    {
+        "title": "Practical RAG Evaluation: A Rarity-Aware Set-Based Metric and Cost-Latency-Quality Trade-offs",
+        "url": "http://arxiv.org/abs/2511.09545v1",
+        "pub_date": "2025-11-12",
+        "summary": "This paper addresses the guessing game in building production RAG. Classical rank-centric IR metrics (nDCG/MAP/MRR) are a poor fit for RAG, where LLMs consume a set of passages rather than a browsed list; position discounts and prevalence-blind aggregation miss what matters: whether the prompt at cutoff K contains the decisive evidence. Second, there is no standardized, reproducible way to build and audit golden sets. Third, leaderboards exist but lack end-to-end, on-corpus benchmarking that reflects production trade-offs. Fourth, how state-of-the-art embedding models handle proper-name identity signals and conversational noise remains opaque. To address these, we contribute: (1) RA-nWG@K, a rarity-aware, per-query-normalized set score, and operational ceilings via the pool-restricted oracle ceiling (PROC) and the percentage of PROC (%PROC) to separate retrieval from ordering headroom within a Cost-Latency-Quality (CLQ) lens; (2) rag-gs (MIT), a lean golden-set pipeline with Plackett-Luce listwise refinement whose iterative updates outperform single-shot LLM ranking; (3) a comprehensive benchmark on a production RAG (scientific-papers corpus) spanning dense retrieval, hybrid dense+BM25, embedding models and dimensions, cross-encoder rerankers, ANN (HNSW), and quantization; and (4) targeted diagnostics that quantify proper-name identity signal and conversational-noise sensitivity via identity-destroying and formatting ablations. Together, these components provide practitioner Pareto guidance and auditable guardrails to support reproducible, budget/SLA-aware decisions.",
+        "translated": "本文探讨了构建生产级 RAG 系统中的“猜测游戏”问题。传统的以排序为中心的 IR 评估指标（如 nDCG/MAP/MRR）并不适用于 RAG 场景，因为大语言模型（LLM）消费的是一个段落集合而非浏览列表；位置折扣与忽视流行度的聚合方式忽略了真正关键的信息：在截断位置 K 处的提示是否包含决定性证据。其次，目前尚无标准化、可复现的方法来构建和审计“黄金集”。第三，虽有排行榜存在，但缺乏端到端、基于真实语料的基准测试，难以反映生产环境中的权衡取舍。第四，当前最先进的嵌入模型如何处理专有名词身份信号及对话噪声仍不透明。为解决上述问题，我们贡献如下：(1) RA-nWG@K，一种考虑稀有度且按查询归一化的集合评分方法，并通过池限制 oracle 上限（PROC）与 PROC 占比（%PROC），从成本-延迟-质量（CLQ）视角划分检索与排序模块各自的设计空间；(2) rag-gs（MIT），一个轻量级黄金集构建流水线，采用 Plackett-Luce 列式优化方法，其迭代更新性能优于单次 LLM 排序；(3) 针对生产级 RAG（科学论文语料库）的全面基准测试，涵盖稠密检索、混合稠密+BM25、嵌入模型与维度、交叉编码器重排器、近似最近邻（HNSW）以及量化技术；(4) 面向具体诊断的分析方法，通过破坏身份信息与格式化消融实验，量化专有名词身份信号与对话噪声敏感性。这些组件共同为从业者提供帕累托最优指导，并提供可审计的安全边界，支持可复现、预算/服务等级协议（SLA）感知的决策。",
+        "translated_title": "实用RAG评估：一种基于稀有度感知的集合型指标与成本-延迟-质量权衡",
+        "label": [
+            "推荐系统评估",
+            "通用推荐技术"
+        ],
+        "label_reason": "聚焦RAG评估，非推荐核心环节但相关",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出新评估指标与基准框架，实用性强"
+    },
+    {
+        "title": "Sim4IA-Bench: A User Simulation Benchmark Suite for Next Query and Utterance Prediction",
+        "url": "http://arxiv.org/abs/2511.09329v1",
+        "pub_date": "2025-11-12",
+        "summary": "Validating user simulation is a difficult task due to the lack of established measures and benchmarks, which makes it challenging to assess whether a simulator accurately reflects real user behavior. As part of the Sim4IA Micro-Shared Task at the Sim4IA Workshop, SIGIR 2025, we present Sim4IA-Bench, a simulation benchmark suit for the prediction of the next queries and utterances, the first of its kind in the IR community. Our dataset as part of the suite comprises 160 real-world search sessions from the CORE search engine. For 70 of these sessions, up to 62 simulator runs are available, divided into Task A and Task B, in which different approaches predicted users next search queries or utterances. Sim4IA-Bench provides a basis for evaluating and comparing user simulation approaches and for developing new measures of simulator validity. Although modest in size, the suite represents the first publicly available benchmark that links real search sessions with simulated next-query predictions. In addition to serving as a testbed for next query prediction, it also enables exploratory studies on query reformulation behavior, intent drift, and interaction-aware retrieval evaluation. We also introduce a new measure for evaluating next-query predictions in this task. By making the suite publicly available, we aim to promote reproducible research and stimulate further work on realistic and explainable user simulation for information access: https://github.com/irgroup/Sim4IA-Bench.",
+        "translated": "验证用户模拟是一项困难的任务，原因在于缺乏既定的评估指标和基准数据集，这使得难以判断模拟器是否真实反映了真实用户行为。作为 Sim4IA Workshop 2025 上 Sim4IA Micro-Shared Task 的一部分，我们提出了 Sim4IA-Bench，这是信息检索领域首个用于预测下一轮查询与话语的模拟基准套件。本套件中的数据集来自 CORE 搜索引擎的 160 个真实搜索会话；其中 70 个会话提供了多达 62 次模拟器运行记录，分为任务 A 和任务 B，分别对应不同方法对用户下一轮搜索查询或话语的预测。Sim4IA-Bench 为评估和比较用户模拟方法、开发新的模拟器有效性度量标准提供了基础。尽管规模有限，该套件是首个公开可用且将真实搜索会话与模拟的下一轮查询预测相链接的基准。除作为下一轮查询预测的测试平台外，它亦支持探索性研究，如查询改写行为、意图漂移及交互感知的检索评估。此外，我们还引入了一种新度量标准，用于评估该任务中的下一轮查询预测性能。通过公开发布此套件，我们旨在推动可复现研究，并促进关于真实且可解释的用户模拟在信息获取领域的进一步工作：https://github.com/irgroup/Sim4IA-Bench。",
+        "translated_title": "Sim4IA-Bench：面向下一句查询与话语预测的用户模拟基准套件",
+        "label": [],
+        "label_reason": "专注用户模拟与查询预测，非推荐系统核心环节",
+        "relevance_score": 3,
+        "novelty_score": 5,
+        "novelty_reason": "首次提供IR领域用户模拟基准，但无推荐系统创新"
+    },
+    {
+        "title": "NeuroCLIP: Brain-Inspired Prompt Tuning for EEG-to-Image Multimodal Contrastive Learning",
+        "url": "http://arxiv.org/abs/2511.09250v1",
+        "pub_date": "2025-11-12",
+        "summary": "Recent advances in brain-inspired artificial intelligence have sought to align neural signals with visual semantics using multimodal models such as CLIP. However, existing methods often treat CLIP as a static feature extractor, overlooking its adaptability to neural representations and the inherent physiological-symbolic gap in EEG-image alignment. To address these challenges, we present NeuroCLIP, a prompt tuning framework tailored for EEG-to-image contrastive learning. Our approach introduces three core innovations: (1) We design a dual-stream visual embedding pipeline that combines dynamic filtering and token-level fusion to generate instance-level adaptive prompts, which guide the adjustment of patch embedding tokens based on image content, thereby enabling fine-grained modulation of visual representations under neural constraints; (2) We are the first to introduce visual prompt tokens into EEG-image alignment, acting as global, modality-level prompts that work in conjunction with instance-level adjustments. These visual prompt tokens are inserted into the Transformer architecture to facilitate neural-aware adaptation and parameter optimization at a global level; (3) Inspired by neuroscientific principles of human visual encoding, we propose a refined contrastive loss that better model the semantic ambiguity and cross-modal noise present in EEG signals. On the THINGS-EEG2 dataset, NeuroCLIP achieves a Top-1 accuracy of 63.2% in zero-shot image retrieval, surpassing the previous best method by +12.3%, and demonstrates strong generalization under inter-subject conditions (+4.6% Top-1), highlighting the potential of physiology-aware prompt tuning for bridging brain signals and visual semantics.",
+        "translated": "近年来，受脑启发的人工智能研究致力于通过多模态模型（如 CLIP）将神经信号与视觉语义对齐。然而，现有方法通常将 CLIP 视为静态特征提取器，忽视其对神经表征的适应性以及 EEG 与图像对齐中存在的固有生理-符号鸿沟。为应对这些挑战，我们提出 NeuroCLIP，一种专为 EEG 到图像对比学习设计的提示调优框架。我们的方法包含三项核心创新：（1）我们设计了一种双流视觉嵌入管道，结合动态滤波与 token 级融合，生成实例级自适应提示，引导根据图像内容调整 patch 嵌入 token，从而在神经约束下实现视觉表征的精细化调制；（2）我们首次将视觉提示 token 引入 EEG-图像对齐任务，作为全局、模态级别的提示，与实例级调整协同作用。这些视觉提示 token 被插入 Transformer 架构中，以支持全局层面的神经感知适配与参数优化；（3）受人类视觉编码神经科学原理的启发，我们提出一种改进的对比损失函数，更有效地建模 EEG 信号中固有的语义模糊性与跨模态噪声。在 THINGS-EEG2 数据集上，NeuroCLIP 在零样本图像检索任务中达到 63.2% 的 Top-1 准确率，较此前最优方法提升 +12.3%，并在跨受试者条件下展现出强大的泛化能力（+4.6% Top-1），凸显了生理感知提示调优在弥合脑信号与视觉语义之间的巨大潜力。",
+        "translated_title": "NeuroCLIP：受脑启发的提示调优用于脑电图到图像的多模态对比学习",
+        "label": [],
+        "label_reason": "研究聚焦EEG-图像对齐，非推荐系统相关",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "首次引入视觉提示用于神经信号对齐"
+    },
+    {
+        "title": "Thinking Forward and Backward: Multi-Objective Reinforcement Learning for Retrieval-Augmented Reasoning",
+        "url": "http://arxiv.org/abs/2511.09109v2",
+        "pub_date": "2025-11-12",
+        "summary": "Retrieval-augmented generation (RAG) has proven to be effective in mitigating hallucinations in large language models, yet its effectiveness remains limited in complex, multi-step reasoning scenarios. Recent efforts have incorporated search-based interactions into RAG, enabling iterative reasoning with real-time retrieval. Most approaches rely on outcome-based supervision, offering no explicit guidance for intermediate steps. This often leads to reward hacking and degraded response quality. We propose Bi-RAR, a novel retrieval-augmented reasoning framework that evaluates each intermediate step jointly in both forward and backward directions. To assess the information completeness of each step, we introduce a bidirectional information distance grounded in Kolmogorov complexity, approximated via language model generation probabilities. This quantification measures both how far the current reasoning is from the answer and how well it addresses the question. To optimize reasoning under these bidirectional signals, we adopt a multi-objective reinforcement learning framework with a cascading reward structure that emphasizes early trajectory alignment. Empirical results on seven question answering benchmarks demonstrate that Bi-RAR surpasses previous methods and enables efficient interaction and reasoning with the search engine during training and inference.",
+        "translated": "检索增强生成（RAG）已被证明在减轻大语言模型中的幻觉现象方面有效，但在复杂的多步骤推理场景中其效果仍显有限。近期研究已将基于搜索的交互引入RAG，从而支持与实时检索结合的迭代推理。大多数方法依赖于结果导向的监督信号，未能为中间步骤提供明确引导，这常导致奖励欺骗和响应质量下降。我们提出了Bi-RAR，一种新颖的检索增强推理框架，该框架从正向与反向两个方向联合评估每个中间步骤。为衡量每一步信息的完整性，我们引入了一种基于Kolmogorov复杂度的双向信息距离，并通过语言模型生成概率进行近似。该量化指标同时测量当前推理距离答案有多远，以及其对问题的覆盖程度。为在上述双向信号下优化推理过程，我们采用多目标强化学习框架，并设计级联式奖励结构，强调早期轨迹对齐。在七个问答基准上的实验证明，Bi-RAR优于现有方法，并能在训练与推理过程中高效地与搜索引擎交互并完成推理。",
+        "translated_title": "面向前与面向后：用于检索增强推理的多目标强化学习",
+        "label": [],
+        "label_reason": "论文聚焦RAG与强化学习，非推荐系统核心环节",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "双向信息距离+多目标RL创新，但非为推荐设计"
+    },
+    {
+        "title": "Efficient Model-Agnostic Continual Learning for Next POI Recommendation",
+        "url": "http://arxiv.org/abs/2511.08941v1",
+        "pub_date": "2025-11-12",
+        "summary": "Next point-of-interest (POI) recommendation improves personalized location-based services by predicting users' next destinations based on their historical check-ins. However, most existing methods rely on static datasets and fixed models, limiting their ability to adapt to changes in user behavior over time. To address this limitation, we explore a novel task termed continual next POI recommendation, where models dynamically adapt to evolving user interests through continual updates. This task is particularly challenging, as it requires capturing shifting user behaviors while retaining previously learned knowledge. Moreover, it is essential to ensure efficiency in update time and memory usage for real-world deployment. To this end, we propose GIRAM (Generative Key-based Interest Retrieval and Adaptive Modeling), an efficient, model-agnostic framework that integrates context-aware sustained interests with recent interests. GIRAM comprises four components: (1) an interest memory to preserve historical preferences; (2) a context-aware key encoding module for unified interest key representation; (3) a generative key-based retrieval module to identify diverse and relevant sustained interests; and (4) an adaptive interest update and fusion module to update the interest memory and balance sustained and recent interests. In particular, GIRAM can be seamlessly integrated with existing next POI recommendation models. Experiments on three real-world datasets demonstrate that GIRAM consistently outperforms state-of-the-art methods while maintaining high efficiency in both update time and memory consumption.",
+        "translated": "下一步兴趣点（POI）推荐通过基于用户历史签到行为预测其下一目的地，从而提升个性化位置服务的效果。然而，现有大多数方法依赖静态数据集和固定模型，难以适应用户行为随时间演变的动态特性。为解决这一局限性，我们探索了一项名为持续下一步POI推荐的新任务，在该任务中，模型通过持续更新的方式动态适应用户兴趣的变化。该任务极具挑战性，不仅需要捕捉用户行为的动态迁移，同时必须保留先前所学知识。此外，为实现实际部署，还需确保更新时长与内存开销的高效性。为此，我们提出GIRAM（生成式键驱动的兴趣检索与自适应建模），这是一种高效且模型无关的框架，用于融合上下文感知的持续兴趣与近期兴趣。GIRAM包含四个核心组件：（1）兴趣记忆模块，用于保存历史偏好；（2）上下文感知的键编码模块，实现统一的兴趣键表示；（3）生成式键驱动的检索模块，用于识别多样且相关的持续兴趣；以及（4）自适应兴趣更新与融合模块，用于更新兴趣记忆并平衡持续兴趣与近期兴趣。特别地，GIRAM可无缝集成至现有下一步POI推荐模型中。在三个真实世界数据集上的实验表明，GIRAM在性能上持续优于当前最先进方法，同时在更新时长与内存消耗方面保持高效率。",
+        "translated_title": "面向下一POI推荐的高效模型无关持续学习",
+        "label": [
+            "召回",
+            "精排",
+            "通用推荐技术"
+        ],
+        "label_reason": "针对POI推荐的持续学习，改进模型适应性与效率。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出模型无关框架GIRAM，高效融合历史与近期兴趣。"
+    },
+    {
+        "title": "Compression then Matching: An Efficient Pre-training Paradigm for Multimodal Embedding",
+        "url": "http://arxiv.org/abs/2511.08480v1",
+        "pub_date": "2025-11-11",
+        "summary": "Vision-language models advance multimodal representation learning by acquiring transferable semantic embeddings, thereby substantially enhancing performance across a range of vision-language tasks, including cross-modal retrieval, clustering, and classification. An effective embedding is expected to comprehensively preserve the semantic content of the input while simultaneously emphasizing features that are discriminative for downstream tasks. Recent approaches demonstrate that VLMs can be adapted into competitive embedding models via large-scale contrastive learning, enabling the simultaneous optimization of two complementary objectives. We argue that the two aforementioned objectives can be decoupled: a comprehensive understanding of the input facilitates the embedding model in achieving superior performance in downstream tasks via contrastive learning. In this paper, we propose CoMa, a compressed pre-training phase, which serves as a warm-up stage for contrastive learning. Experiments demonstrate that with only a small amount of pre-training data, we can transform a VLM into a competitive embedding model. CoMa achieves new state-of-the-art results among VLMs of comparable size on the MMEB, realizing optimization in both efficiency and effectiveness.",
+        "translated": "视觉-语言模型通过获取可迁移的语义嵌入，推动了多模态表征学习的发展，从而显著提升了跨模态检索、聚类和分类等视觉-语言任务的性能。一个有效的嵌入应全面保留输入的语义内容，同时强调对下游任务具有判别性的特征。近期方法表明，可通过大规模对比学习将视觉-语言模型（VLMs）适配为具有竞争力的嵌入模型，从而实现两项互补目标的同时优化。我们认为，上述两项目标可以解耦：对输入的全面理解有助于嵌入模型通过对比学习在下游任务中实现更优表现。本文提出 CoMa，一种压缩式预训练阶段，作为对比学习的预热阶段。实验表明，仅需少量预训练数据，即可将视觉-语言模型转化为具有竞争力的嵌入模型。CoMa 在同等规模的视觉-语言模型中，在 MMEB 数据集上取得了新的最先进性能，实现了效率与效果的双重优化。",
+        "translated_title": "压缩而后匹配：一种高效的多模态嵌入预训练范式",
+        "label": [
+            "多模态推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "论文聚焦多模态嵌入，可适配推荐系统中的跨模态召回或排序。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出压缩预训练范式，提升效率与效果，具创新性。"
+    },
+    {
+        "title": "Advancing Scientific Knowledge Retrieval and Reuse with a Novel Digital Library for Machine-Readable Knowledge",
+        "url": "http://arxiv.org/abs/2511.08476v1",
+        "pub_date": "2025-11-11",
+        "summary": "Digital libraries for research, such as the ACM Digital Library or Semantic Scholar, do not enable the machine-supported, efficient reuse of scientific knowledge (e.g., in synthesis research). This is because these libraries are based on document-centric models with narrative text knowledge expressions that require manual or semi-automated knowledge extraction, structuring, and organization. We present ORKG reborn, an emerging digital library that supports finding, accessing, and reusing accurate, fine-grained, and reproducible machine-readable expressions of scientific knowledge that relate scientific statements and their supporting evidence in terms of data and code. The rich expressions of scientific knowledge are published as reborn (born-reusable) articles and provide novel possibilities for scientific knowledge retrieval, for instance by statistical methods, software packages, variables, or data matching specific constraints. We describe the proposed system and demonstrate its practical viability and potential for information retrieval in contrast to state-of-the-art digital libraries and document-centric scholarly communication using several published articles in research fields ranging from computer science to soil science. Our work underscores the enormous potential of scientific knowledge databases and a viable approach to their construction.",
+        "translated": "研究型数字图书馆，如ACM数字图书馆或Semantic Scholar，并未支持科学知识的机器辅助高效复用（例如在综合研究中）。这是因为这些图书馆基于以文档为中心的模型，其知识表达依赖叙事性文本，需人工或半自动化的知识抽取、结构化与组织。我们提出ORKG reborn，这是一种新兴的数字图书馆，支持查找、访问并复用精确、细粒度、可复现的机器可读科学知识表达形式，该形式关联科学命题及其支持证据（包括数据与代码）。丰富的科学知识表达以“重生”（born-reusable）文章形式发布，为科学知识检索提供全新可能性，例如通过统计方法、软件包、变量或符合特定约束的数据进行匹配。我们描述了所提出的系统，并通过多个跨学科领域（从计算机科学到土壤科学）的已发表文章，展示其相较于现有数字图书馆及以文档为中心的学术传播模式，在信息检索方面的实用可行性与潜力。本工作凸显了科学知识数据库的巨大潜力，并提出了一种可行的构建路径。",
+        "translated_title": "以面向机器可读知识的新型数字图书馆推进科学知识的检索与重用",
+        "label": [],
+        "label_reason": "论文聚焦科学知识库构建，非推荐系统相关",
+        "relevance_score": 3,
+        "novelty_score": 5,
+        "novelty_reason": "改进知识表达结构，但未针对推荐场景设计"
+    },
+    {
+        "title": "Bid Farewell to Seesaw: Towards Accurate Long-tail Session-based Recommendation via Dual Constraints of Hybrid Intents",
+        "url": "http://arxiv.org/abs/2511.08378v1",
+        "pub_date": "2025-11-11",
+        "summary": "Session-based recommendation (SBR) aims to predict anonymous users' next interaction based on their interaction sessions. In the practical recommendation scenario, low-exposure items constitute the majority of interactions, creating a long-tail distribution that severely compromises recommendation diversity. Existing approaches attempt to address this issue by promoting tail items but incur accuracy degradation, exhibiting a \"see-saw\" effect between long-tail and accuracy performance. We attribute such conflict to session-irrelevant noise within the tail items, which existing long-tail approaches fail to identify and constrain effectively. To resolve this fundamental conflict, we propose \\textbf{HID} (\\textbf{H}ybrid \\textbf{I}ntent-based \\textbf{D}ual Constraint Framework), a plug-and-play framework that transforms the conventional \"see-saw\" into \"win-win\" through introducing the hybrid intent-based dual constraints for both long-tail and accuracy. Two key innovations are incorporated in this framework: (i) \\textit{Hybrid Intent Learning}, where we reformulate the intent extraction strategies by employing attribute-aware spectral clustering to reconstruct the item-to-intent mapping. Furthermore, discrimination of session-irrelevant noise is achieved through the assignment of the target and noise intents to each session. (ii) \\textit{Intent Constraint Loss}, which incorporates two novel constraint paradigms regarding the \\textit{diversity} and \\textit{accuracy} to regulate the representation learning process of both items and sessions. These two objectives are unified into a single training loss through rigorous theoretical derivation. Extensive experiments across multiple SBR models and datasets demonstrate that HID can enhance both long-tail performance and recommendation accuracy, establishing new state-of-the-art performance in long-tail recommender systems.",
+        "translated": "基于会话的推荐（SBR）旨在根据用户的交互会话预测匿名用户的下一次交互行为。在实际推荐场景中，曝光率较低的物料构成了大多数交互，形成长尾分布，严重损害推荐多样性。现有方法虽尝试通过促进尾部物料来缓解此问题，但往往导致准确率下降，表现出长尾性能与准确率之间的“跷跷板”效应。我们归因于尾部物料中存在的会话无关噪声，而现有长尾推荐方法未能有效识别并约束此类噪声。为解决这一根本性冲突，我们提出 \\textbf{HID}（\\textbf{H}ybrid \\textbf{I}ntent-based \\textbf{D}ual Constraint Framework），一种即插即用框架，通过引入混合意图双约束机制，在长尾性能与准确率之间实现从“跷跷板”到“双赢”的转变。该框架包含两项关键创新：(i) \\textit{混合意图学习}，我们通过引入属性感知谱聚类重构物料至意图映射，并通过为每个会话分配目标意图与噪声意图，实现对会话无关噪声的区分；(ii) \\textit{意图约束损失}，其融合两种新颖的约束范式——\\textit{多样性}与\\textit{准确率}，用于调控物料与会话的表示学习过程。这两项目标通过严谨的理论推导统一至单一训练损失函数中。在多个 SBR 模型和数据集上的广泛实验表明，HID 可同时提升长尾性能与推荐准确率，建立长尾推荐系统新的最先进性能。",
+        "translated_title": "告别摇摆：通过混合意图的双约束实现精准长尾会话推荐",
+        "label": [
+            "精排（Ranking）",
+            "序列推荐（Sequential Recommendation）"
+        ],
+        "label_reason": "聚焦会话推荐中长尾问题与精度平衡，属精排核心优化",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出混合意图双约束框架，理论统一且提升效果显著"
+    },
+    {
+        "title": "TurkEmbed: Turkish Embedding Model on NLI &amp; STS Tasks",
+        "url": "http://arxiv.org/abs/2511.08376v1",
+        "pub_date": "2025-11-11",
+        "summary": "This paper introduces TurkEmbed, a novel Turkish language embedding model designed to outperform existing models, particularly in Natural Language Inference (NLI) and Semantic Textual Similarity (STS) tasks. Current Turkish embedding models often rely on machine-translated datasets, potentially limiting their accuracy and semantic understanding. TurkEmbed utilizes a combination of diverse datasets and advanced training techniques, including matryoshka representation learning, to achieve more robust and accurate embeddings. This approach enables the model to adapt to various resource-constrained environments, offering faster encoding capabilities. Our evaluation on the Turkish STS-b-TR dataset, using Pearson and Spearman correlation metrics, demonstrates significant improvements in semantic similarity tasks. Furthermore, TurkEmbed surpasses the current state-of-the-art model, Emrecan, on All-NLI-TR and STS-b-TR benchmarks, achieving a 1-4\\% improvement. TurkEmbed promises to enhance the Turkish NLP ecosystem by providing a more nuanced understanding of language and facilitating advancements in downstream applications.",
+        "translated": "本文介绍了TurkEmbed，一种旨在超越现有模型的新型土耳其语嵌入模型，尤其在自然语言推理（NLI）和语义文本相似度（STS）任务中表现优异。当前的土耳其语嵌入模型常依赖机器翻译的数据集，可能限制其准确性和语义理解能力。TurkEmbed结合了多样化的数据集与先进的训练技术，包括套娃式表示学习（matryoshka representation learning），以实现更鲁棒且精确的嵌入。该方法使模型能够适应各种资源受限环境，并提供更快的编码能力。我们在土耳其语STS-b-TR数据集上进行评估，使用皮尔逊相关系数和斯皮尔曼相关系数作为评价指标，结果表明模型在语义相似度任务上显著提升。此外，TurkEmbed在All-NLI-TR和STS-b-TR基准测试中超越当前最先进模型Emrecan，性能提升达1%-4%。TurkEmbed有望通过提供对语言更细腻的理解，推动土耳其自然语言处理生态系统的进步，并促进下游应用的发展。",
+        "translated_title": "TurkEmbed：在自然语言推理与语义文本相似度任务上的土耳其语嵌入模型",
+        "label": [],
+        "label_reason": "论文聚焦土耳其语NLP任务，与推荐系统无关。",
+        "relevance_score": 2,
+        "novelty_score": 7,
+        "novelty_reason": "提出新嵌入模型，但非为推荐系统设计。"
+    },
+    {
+        "title": "AgentPRM: Process Reward Models for LLM Agents via Step-Wise Promise and Progress",
+        "url": "http://arxiv.org/abs/2511.08325v1",
+        "pub_date": "2025-11-11",
+        "summary": "Despite rapid development, large language models (LLMs) still encounter challenges in multi-turn decision-making tasks (i.e., agent tasks) like web shopping and browser navigation, which require making a sequence of intelligent decisions based on environmental feedback. Previous work for LLM agents typically relies on elaborate prompt engineering or fine-tuning with expert trajectories to improve performance. In this work, we take a different perspective: we explore constructing process reward models (PRMs) to evaluate each decision and guide the agent's decision-making process. Unlike LLM reasoning, where each step is scored based on correctness, actions in agent tasks do not have a clear-cut correctness. Instead, they should be evaluated based on their proximity to the goal and the progress they have made. Building on this insight, we propose a re-defined PRM for agent tasks, named AgentPRM, to capture both the interdependence between sequential decisions and their contribution to the final goal. This enables better progress tracking and exploration-exploitation balance. To scalably obtain labeled data for training AgentPRM, we employ a Temporal Difference-based (TD-based) estimation method combined with Generalized Advantage Estimation (GAE), which proves more sample-efficient than prior methods. Extensive experiments across different agentic tasks show that AgentPRM is over $8\\times$ more compute-efficient than baselines, and it demonstrates robust improvement when scaling up test-time compute. Moreover, we perform detailed analyses to show how our method works and offer more insights, e.g., applying AgentPRM to the reinforcement learning of LLM agents.",
+        "translated": "尽管大语言模型（LLMs）发展迅速，但在多轮决策任务（即代理任务）如网页购物和浏览器导航中，仍面临挑战，这些任务要求根据环境反馈做出一系列智能决策。以往针对LLM代理的研究通常依赖复杂的提示工程或使用专家轨迹进行微调以提升性能。在本工作中，我们采取了不同的视角：探索构建过程奖励模型（PRMs），以评估每个决策并引导代理的决策过程。与LLM推理中每一步基于正确性评分不同，代理任务中的动作并无明确的“正确”或“错误”标准，而应依据其接近目标的程度及所取得的进展进行评估。基于这一洞察，我们提出了一种重新定义的PRM，命名为AgentPRM，用于捕捉序列决策之间的相互依赖关系及其对最终目标的贡献。这有助于更有效地追踪进度并平衡探索与利用。为可扩展地获取训练AgentPRM所需的标注数据，我们采用基于时序差分（TD-based）的估计方法结合广义优势估计（GAE），该方法比先前方法更具样本效率。在多种代理任务上的广泛实验表明，AgentPRM相比基线方法计算效率高出8倍以上，并且在测试时计算资源扩展时表现出稳健的性能提升。此外，我们进行了详细分析，揭示了方法的工作机制并提供进一步见解，例如将AgentPRM应用于大语言模型代理的强化学习。",
+        "translated_title": "AgentPRM：通过分步承诺与进度驱动的大语言模型代理过程奖励建模",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "提出过程奖励模型指导LLM代理决策，适用于推荐场景",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "创新性构建PRM评估多步决策，提升效率与探索平衡"
+    },
+    {
+        "title": "MARC: Multimodal and Multi-Task Agentic Retrieval-Augmented Generation for Cold-Start Recommender System",
+        "url": "http://arxiv.org/abs/2511.08181v1",
+        "pub_date": "2025-11-11",
+        "summary": "Recommender systems (RS) are currently being studied to mitigate limitations during cold-start conditions by leveraging modality information or introducing Agent concepts based on the exceptional reasoning capabilities of Large Language Models (LLMs). Meanwhile, food and beverage recommender systems have traditionally used knowledge graph and ontology concepts due to the domain's unique data attributes and relationship characteristics. On this background, we propose MARC, a multimodal and multi-task cocktail recommender system based on Agentic Retrieval-Augmented Generation (RAG) utilizing graph database under cold-start conditions. The proposed system generates high-quality, contextually appropriate answers through two core processes: a task recognition router and a reflection process. The graph database was constructed by processing cocktail data from Kaggle, and its effectiveness was evaluated using 200 manually crafted questions. The evaluation used both LLM-as-a-judge and human evaluation to demonstrate that answers generated via the graph database outperformed those from a simple vector database in terms of quality. The code is available at https://github.com/diddbwls/cocktail_rec_agentrag",
+        "translated": "推荐系统（RS）当前正通过利用模态信息或引入基于大语言模型（LLMs）卓越推理能力的代理概念，以缓解冷启动场景下的局限性。同时，由于食品饮料领域数据具有独特的属性与关系特征，传统食品饮料推荐系统多采用知识图谱和本体概念。在此背景下，我们提出MARC，这是一种基于代理式检索增强生成（RAG）并结合图数据库的多模态、多任务鸡尾酒推荐系统，在冷启动条件下运行。该系统通过两个核心过程生成高质量且符合上下文的回答：任务识别路由器与反思过程。图数据库由Kaggle上的鸡尾酒数据构建而成，其有效性通过200个手工设计的问题进行评估。评估采用LLM作为裁判与人工评价相结合的方式，证明了图数据库生成的答案在质量上优于简单向量数据库生成的答案。代码详见https://github.com/diddbwls/cocktail_rec_agentrag",
+        "translated_title": "MARC：面向冷启动推荐系统的多模态与多任务代理检索增强生成模型",
+        "label": [
+            "多模态推荐",
+            "LLM生成式推荐",
+            "召回"
+        ],
+        "label_reason": "结合多模态与LLM-RAG解决冷启动召回问题",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "首创Agentic RAG架构应对冷启动，任务路由+反思机制新颖"
+    },
+    {
+        "title": "DiffuGR: Generative Document Retrieval with Diffusion Language Models",
+        "url": "http://arxiv.org/abs/2511.08150v1",
+        "pub_date": "2025-11-11",
+        "summary": "Generative retrieval (GR) re-frames document retrieval as a sequence-based document identifier (DocID) generation task, memorizing documents with model parameters and enabling end-to-end retrieval without explicit indexing. Existing GR methods are based on auto-regressive generative models, i.e., the token generation is performed from left to right. However, such auto-regressive methods suffer from: (1) mismatch between DocID generation and natural language generation, e.g., an incorrect DocID token generated in early left steps would lead to totally erroneous retrieval; and (2) failure to balance the trade-off between retrieval efficiency and accuracy dynamically, which is crucial for practical applications. To address these limitations, we propose generative document retrieval with diffusion language models, dubbed DiffuGR. It models DocID generation as a discrete diffusion process: during training, DocIDs are corrupted through a stochastic masking process, and a diffusion language model is learned to recover them under a retrieval-aware objective. For inference, DiffuGR attempts to generate DocID tokens in parallel and refines them through a controllable number of denoising steps. In contrast to conventional left-to-right auto-regressive decoding, DiffuGR provides a novel mechanism to first generate more confident DocID tokens and refine the generation through diffusion-based denoising. Moreover, DiffuGR also offers explicit runtime control over the qualitylatency tradeoff. Extensive experiments on benchmark retrieval datasets show that DiffuGR is competitive with strong auto-regressive generative retrievers, while offering flexible speed and accuracy tradeoffs through variable denoising budgets. Overall, our results indicate that non-autoregressive diffusion models are a practical and effective alternative for generative document retrieval.",
+        "translated": "生成式检索（GR）将文档检索重构为基于序列的文档标识符（DocID）生成任务，通过模型参数记忆文档内容，并实现无需显式索引的端到端检索。现有GR方法均基于自回归生成模型，即从左至右逐词生成token。然而，此类自回归方法存在以下缺陷：(1) DocID生成与自然语言生成之间存在不匹配，例如早期左侧步骤生成的错误DocID token将导致完全错误的检索结果；(2) 无法动态平衡检索效率与准确率之间的权衡，这对于实际应用至关重要。为解决上述局限性，我们提出基于扩散语言模型的生成式文档检索方法，命名为DiffuGR。该方法将DocID生成建模为离散扩散过程：训练阶段，DocIDs通过随机掩码过程进行破坏化处理，随后学习一个具备检索感知目标的扩散语言模型以恢复其原始形式。在推理阶段，DiffuGR尝试并行生成DocID token，并通过可控数量的去噪步骤对其进行优化。相较于传统的左到右自回归解码方式，DiffuGR提供了全新的机制：首先生成更置信度高的DocID token，再通过基于扩散的去噪过程逐步优化生成结果。此外，DiffuGR还支持对质量-延迟权衡的显式运行时控制。在多个基准检索数据集上的广泛实验表明，DiffuGR在性能上可媲美强大的自回归生成式检索器，同时可通过调节去噪预算灵活调整速度与精度的权衡。总体而言，我们的结果表明，非自回归扩散模型是生成式文档检索的一种实用且有效的替代方案。",
+        "translated_title": "DiffuGR：基于扩散语言模型的生成式文档检索",
+        "label": [
+            "重排",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "基于扩散模型的生成式检索，适配推荐系统召回环节",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "首次将扩散模型用于文档生成检索，提升效率与精度平衡"
+    },
+    {
+        "title": "BiCA: Effective Biomedical Dense Retrieval with Citation-Aware Hard Negatives",
+        "url": "http://arxiv.org/abs/2511.08029v1",
+        "pub_date": "2025-11-11",
+        "summary": "Hard negatives are essential for training effective retrieval models. Hard-negative mining typically relies on ranking documents using cross-encoders or static embedding models based on similarity metrics such as cosine distance. Hard negative mining becomes challenging for biomedical and scientific domains due to the difficulty in distinguishing between source and hard negative documents. However, referenced documents naturally share contextual relevance with the source document but are not duplicates, making them well-suited as hard negatives. In this work, we propose BiCA: Biomedical Dense Retrieval with Citation-Aware Hard Negatives, an approach for hard-negative mining by utilizing citation links in 20,000 PubMed articles for improving a domain-specific small dense retriever. We fine-tune the GTE_small and GTE_Base models using these citation-informed negatives and observe consistent improvements in zero-shot dense retrieval using nDCG@10 for both in-domain and out-of-domain tasks on BEIR and outperform baselines on long-tailed topics in LoTTE using Success@5. Our findings highlight the potential of leveraging document link structure to generate highly informative negatives, enabling state-of-the-art performance with minimal fine-tuning and demonstrating a path towards highly data-efficient domain adaptation.",
+        "translated": "硬负样本对于训练有效的检索模型至关重要。硬负样本挖掘通常依赖于使用交叉编码器或基于相似度度量（如余弦距离）的静态嵌入模型对文档进行排序。在生物医学和科学领域，由于区分源文档与硬负样本文档存在困难，硬负样本挖掘变得尤为具有挑战性。然而，参考文献自然与源文档共享上下文相关性，但又非重复内容，因此非常适合作为硬负样本。在本工作中，我们提出了BiCA：基于引文感知硬负样本的生物医学稠密检索方法，该方法利用2万篇PubMed文章中的引文链接，用于改进特定领域的轻量级稠密检索器。我们使用这些引文引导的负样本微调GTE_small和GTE_Base模型，并发现在BEIR数据集上的零样本稠密检索任务中，nDCG@10指标在域内和跨域任务上均取得一致提升；同时，在LoTTE数据集的长尾主题任务中，Success@5指标显著优于现有基线方法。我们的研究结果表明，利用文档链接结构生成高度信息丰富的负样本具有巨大潜力，能够在极小规模微调的情况下实现当前最优性能，并为高数据效率的领域自适应提供了可行路径。",
+        "translated_title": "BiCA：基于引文感知难负样本的有效生物医学密集检索",
+        "label": [],
+        "label_reason": "聚焦生物医学检索，非推荐系统核心问题",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "改进负采样策略，但领域非推荐"
+    },
+    {
+        "title": "From IDs to Semantics: A Generative Framework for Cross-Domain Recommendation with Adaptive Semantic Tokenization",
+        "url": "http://arxiv.org/abs/2511.08006v1",
+        "pub_date": "2025-11-11",
+        "summary": "Cross-domain recommendation (CDR) is crucial for improving recommendation accuracy and generalization, yet traditional methods are often hindered by the reliance on shared user/item IDs, which are unavailable in most real-world scenarios. Consequently, many efforts have focused on learning disentangled representations through multi-domain joint training to bridge the domain gaps. Recent Large Language Model (LLM)-based approaches show promise, they still face critical challenges, including: (1) the \\textbf{item ID tokenization dilemma}, which leads to vocabulary explosion and fails to capture high-order collaborative knowledge; and (2) \\textbf{insufficient domain-specific modeling} for the complex evolution of user interests and item semantics. To address these limitations, we propose \\textbf{GenCDR}, a novel \\textbf{Gen}erative \\textbf{C}ross-\\textbf{D}omain \\textbf{R}ecommendation framework. GenCDR first employs a \\textbf{Domain-adaptive Tokenization} module, which generates disentangled semantic IDs for items by dynamically routing between a universal encoder and domain-specific adapters. Symmetrically, a \\textbf{Cross-domain Autoregressive Recommendation} module models user preferences by fusing universal and domain-specific interests. Finally, a \\textbf{Domain-aware Prefix-tree} enables efficient and accurate generation. Extensive experiments on multiple real-world datasets demonstrate that GenCDR significantly outperforms state-of-the-art baselines. Our code is available in the supplementary materials.",
+        "translated": "跨域推荐（CDR）对于提升推荐准确性和泛化能力至关重要，但传统方法通常受限于对共享用户/物料ID的依赖，而这些ID在大多数现实场景中并不可用。因此，许多研究致力于通过多域联合训练学习解耦表征，以弥合域间差异。近年来基于大语言模型（LLM）的方法展现出潜力，但仍面临关键挑战：（1）**物料ID分词困境**，导致词汇爆炸，并无法捕捉高阶协同知识；（2）**领域特定建模不足**，难以应对用户兴趣与物料语义的复杂演化。为解决上述局限，我们提出**GenCDR**，一种新颖的**Gen**erative **C**ross-**D**omain **R**ecommendation框架。GenCDR 首先采用**领域自适应分词模块**，通过动态路由在通用编码器与领域特异性适配器之间生成解耦语义ID；对称地，**跨域自回归推荐模块**通过融合通用与领域特定兴趣来建模用户偏好；最后，**领域感知前缀树**实现高效且精准的生成。在多个真实世界数据集上的广泛实验表明，GenCDR 显著优于现有最先进基线方法。我们的代码见附录材料。",
+        "translated_title": "从ID到语义：一种面向跨域推荐的生成式框架与自适应语义分词",
+        "label": [
+            "跨域/联邦推荐",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "提出基于LLM的跨域生成推荐框架，解决ID语义建模问题。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新性地结合自适应语义分词与跨域自回归生成，提升泛化能力。"
+    },
+    {
+        "title": "TurkEmbed4Retrieval: Turkish Embedding Model for Retrieval Task",
+        "url": "http://arxiv.org/abs/2511.07595v1",
+        "pub_date": "2025-11-10",
+        "summary": "In this work, we introduce TurkEmbed4Retrieval, a retrieval specialized variant of the TurkEmbed model originally designed for Natural Language Inference (NLI) and Semantic Textual Similarity (STS) tasks. By fine-tuning the base model on the MS MARCO TR dataset using advanced training techniques, including Matryoshka representation learning and a tailored multiple negatives ranking loss, we achieve SOTA performance for Turkish retrieval tasks. Extensive experiments demonstrate that our model outperforms Turkish colBERT by 19,26% on key retrieval metrics for the Scifact TR dataset, thereby establishing a new benchmark for Turkish information retrieval.",
+        "translated": "在本工作中，我们引入了 TurkEmbed4Retrieval，这是最初为自然语言推理（NLI）和语义文本相似度（STS）任务设计的 TurkEmbed 模型的一种面向检索任务的专用变体。通过在 MS MARCO TR 数据集上采用先进的训练技术对基础模型进行微调，包括 Matryoshka 表示学习和定制化的多负样本排序损失，我们在土耳其语检索任务中取得了当前最优性能。大量实验表明，我们的模型在 Scifact TR 数据集的关键检索指标上相较土耳其语 colBERT 提升了 19.26%，从而确立了土耳其语信息检索的新基准。",
+        "translated_title": "TurkEmbed4Retrieval：面向检索任务的土耳其语嵌入模型",
+        "label": [],
+        "label_reason": "专注土耳其语检索，非推荐系统相关",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "改进嵌入模型，但无推荐场景应用"
+    },
+    {
+        "title": "Think Before You Retrieve: Learning Test-Time Adaptive Search with Small Language Models",
+        "url": "http://arxiv.org/abs/2511.07581v1",
+        "pub_date": "2025-11-10",
+        "summary": "Effective information retrieval requires reasoning over partial evidence and refining strategies as information emerges. Yet current approaches fall short: neural retrievers lack reasoning capabilities, large language models (LLMs) provide semantic depth but at prohibitive cost, and query rewriting or decomposition limits improvement to static transformations. As a result, existing methods fail to capture the iterative dynamics of exploration, feedback, and revision that complex user queries demand. We introduce Orion, a training framework that enables compact models (350M-1.2B parameters) to perform iterative retrieval through learned search strategies. Orion combines: (1) synthetic trajectory generation and supervised fine-tuning to encourage diverse exploration patterns in models, (2) reinforcement learning (RL) that rewards effective query refinement and backtracking behaviors, and (3) inference-time beam search algorithms that exploit the self-reflection capabilities learned during RL. Despite using only 3% of the training data available, our 1.2B model achieves 77.6% success on SciFact (vs. 72.6% for prior retrievers), 25.2% on BRIGHT (vs. 22.1%), 63.2% on NFCorpus (vs. 57.8%), and remains competitive on FEVER, HotpotQA, and MSMarco. It outperforms retrievers up to 200-400x larger on five of six benchmarks. These findings suggest that retrieval performance can emerge from learned strategies, not just model scale, when models are trained to search, reflect, and revise.",
+        "translated": "有效的信息检索需要基于部分证据进行推理，并随着信息的呈现不断调整策略。然而当前方法存在不足：神经检索器缺乏推理能力，大语言模型（LLM）虽具备语义深度，但代价高昂；而查询重写或分解仅限于静态变换，难以带来实质性改进。因此，现有方法无法捕捉复杂用户查询所要求的探索、反馈与修订的迭代动态过程。我们提出了Orion，一种训练框架，使参数规模较小的模型（350M至1.2B参数）能够通过学习到的搜索策略实现迭代式检索。Orion结合了以下三方面机制：(1) 通过合成轨迹生成与监督微调，促使模型形成多样化的探索模式；(2) 采用强化学习（RL），奖励有效查询优化与回溯行为；(3) 在推理阶段使用束搜索算法，利用在RL过程中习得的自反思能力。尽管仅使用现有训练数据的3%，我们的1.2B模型在SciFact上达到77.6%的成功率（优于先前检索器的72.6%），在BRIGHT上达到25.2%（优于22.1%），在NFCorpus上达到63.2%（优于57.8%），并在FEVER、HotpotQA和MSMarco等基准测试中保持竞争力。该模型在六个基准中的五个上性能优于参数规模大200-400倍的检索器。这些结果表明，当模型被训练用于搜索、反思与修订时，其检索性能可源于习得的策略，而不仅依赖模型规模。",
+        "translated_title": "检索前先思考：利用小语言模型学习测试时自适应搜索",
+        "label": [
+            "召回",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "聚焦检索策略优化，适配推荐系统召回环节",
+        "relevance_score": 4,
+        "novelty_score": 8,
+        "novelty_reason": "引入RL与自反思机制提升检索策略学习"
+    },
+    {
+        "title": "A Decentralized Retrieval Augmented Generation System with Source Reliabilities Secured on Blockchain",
+        "url": "http://arxiv.org/abs/2511.07577v1",
+        "pub_date": "2025-11-10",
+        "summary": "Existing retrieval-augmented generation (RAG) systems typically use a centralized architecture, causing a high cost of data collection, integration, and management, as well as privacy concerns. There is a great need for a decentralized RAG system that enables foundation models to utilize information directly from data owners who maintain full control over their sources. However, decentralization brings a challenge: the numerous independent data sources vary significantly in reliability, which can diminish retrieval accuracy and response quality. To address this, our decentralized RAG system has a novel reliability scoring mechanism that dynamically evaluates each source based on the quality of responses it contributes to generate and prioritizes high-quality sources during retrieval. To ensure transparency and trust, the scoring process is securely managed through blockchain-based smart contracts, creating verifiable and tamper-proof reliability records without relying on a central authority. We evaluate our decentralized system with two Llama models (3B and 8B) in two simulated environments where six data sources have different levels of reliability. Our system achieves a +10.7\\% performance improvement over its centralized counterpart in the real world-like unreliable data environments. Notably, it approaches the upper-bound performance of centralized systems under ideally reliable data environments. The decentralized infrastructure enables secure and trustworthy scoring management, achieving approximately 56\\% marginal cost savings through batched update operations. Our code and system are open-sourced at github.com/yining610/Reliable-dRAG.",
+        "translated": "现有检索增强生成（RAG）系统通常采用集中式架构，导致数据收集、整合与管理成本高昂，并引发隐私问题。亟需一种去中心化的 RAG 系统，使基础模型能够直接利用由数据所有者自主掌控的数据源所提供的信息。然而，去中心化带来了新的挑战：众多独立的数据源在可靠性方面差异显著，可能导致检索准确率下降及响应质量受损。为此，我们的去中心化 RAG 系统引入了一种新颖的可靠性评分机制，该机制动态评估每个数据源所贡献生成响应的质量，并在检索过程中优先选择高质量来源。为确保透明性与可信度，评分过程通过基于区块链的智能合约安全执行，生成可验证且不可篡改的可靠性记录，无需依赖中央权威机构。我们在两个模拟环境中，使用两种 Llama 模型（3B 和 8B）对系统进行评估，其中六个数据源具有不同程度的可靠性。在类似真实世界中不稳定的低可靠性数据环境下，本系统相较其集中式对应系统的性能提升达 +10.7%；值得注意的是，在理想可靠数据环境下，其性能接近集中式系统的理论上限。去中心化基础设施实现了安全可信的评分管理机制，并通过批量更新操作实现约 56% 的边际成本节约。我们的代码和系统已开源于 github.com/yining610/Reliable-dRAG。",
+        "translated_title": "一种基于区块链保障源可靠性去中心化检索增强生成系统",
+        "label": [],
+        "label_reason": "论文聚焦RAG系统去中心化，非推荐系统相关",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "创新性评分因方法通用，非推荐场景定制"
     }
 ]
