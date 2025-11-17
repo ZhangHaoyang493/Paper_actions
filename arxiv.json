@@ -10384,5 +10384,31 @@
         "relevance_score": 10,
         "novelty_score": 9,
         "novelty_reason": "首次端到端训练，联合优化多模态与推荐目标"
+    },
+    {
+        "title": "LARM: A Large Articulated-Object Reconstruction Model",
+        "url": "http://arxiv.org/abs/2511.11563v1",
+        "pub_date": "2025-11-14",
+        "summary": "Modeling 3D articulated objects with realistic geometry, textures, and kinematics is essential for a wide range of applications. However, existing optimization-based reconstruction methods often require dense multi-view inputs and expensive per-instance optimization, limiting their scalability. Recent feedforward approaches offer faster alternatives but frequently produce coarse geometry, lack texture reconstruction, and rely on brittle, complex multi-stage pipelines. We introduce LARM, a unified feedforward framework that reconstructs 3D articulated objects from sparse-view images by jointly recovering detailed geometry, realistic textures, and accurate joint structures. LARM extends LVSM a recent novel view synthesis (NVS) approach for static 3D objects into the articulated setting by jointly reasoning over camera pose and articulation variation using a transformer-based architecture, enabling scalable and accurate novel view synthesis. In addition, LARM generates auxiliary outputs such as depth maps and part masks to facilitate explicit 3D mesh extraction and joint estimation. Our pipeline eliminates the need for dense supervision and supports high-fidelity reconstruction across diverse object categories. Extensive experiments demonstrate that LARM outperforms state-of-the-art methods in both novel view and state synthesis as well as 3D articulated object reconstruction, generating high-quality meshes that closely adhere to the input images. project page: https://sylviayuan-sy.github.io/larm-site/",
+        "translated": "建模具有真实几何结构、纹理和运动学特性的三维可变形物体，对众多应用至关重要。然而，现有的基于优化的重建方法通常需要密集多视角输入，并且需针对每个实例进行昂贵的优化过程，限制了其可扩展性。近期的前馈式方法虽能提供更快速的替代方案，但往往生成粗略的几何结构、缺乏纹理重建能力，并依赖脆弱而复杂的多阶段流程。我们提出LARM，这是一种统一的前馈框架，能够从稀疏视角图像中重建三维可变形物体，同时联合恢复精细几何结构、逼真纹理与准确的关节布局。LARM将近期为静态三维物体设计的新型视图合成（NVS）方法LVSM拓展至可变形场景，通过基于Transformer的架构联合推理相机位姿与运动变化，实现了可扩展且精确的新视图合成。此外，LARM还输出辅助结果，如深度图与部件掩码，以支持明确的三维网格提取及关节估计。我们的流程无需密集监督信号，并支持在各类物体类别上实现高保真重建。大量实验表明，LARM在新视图合成、状态合成以及三维可变形物体重建任务中均优于当前最先进方法，所生成的高质量网格紧密贴合输入图像。项目主页：https://sylviayuan-sy.github.io/larm-site/",
+        "translated_title": "LARM：一种大型可变形物体重建模型",
+        "label": [],
+        "label_reason": "3D重建属高阶视觉任务，非像素级图像恢复。",
+        "relevance_score": 1,
+        "novelty_score": 8,
+        "novelty_reason": "首次将Transformer用于稀疏视图下关节物体重建。"
+    },
+    {
+        "title": "DocLens : A Tool-Augmented Multi-Agent Framework for Long Visual Document Understanding",
+        "url": "http://arxiv.org/abs/2511.11552v1",
+        "pub_date": "2025-11-14",
+        "summary": "Comprehending long visual documents, where information is distributed across extensive pages of text and visual elements, is a critical but challenging task for modern Vision-Language Models (VLMs). Existing approaches falter on a fundamental challenge: evidence localization. They struggle to retrieve relevant pages and overlook fine-grained details within visual elements, leading to limited performance and model hallucination. To address this, we propose DocLens, a tool-augmented multi-agent framework that effectively ``zooms in'' on evidence like a lens. It first navigates from the full document to specific visual elements on relevant pages, then employs a sampling-adjudication mechanism to generate a single, reliable answer. Paired with Gemini-2.5-Pro, DocLens achieves state-of-the-art performance on MMLongBench-Doc and FinRAGBench-V, surpassing even human experts. The framework's superiority is particularly evident on vision-centric and unanswerable queries, demonstrating the power of its enhanced localization capabilities.",
+        "translated": "理解长视觉文档——其中信息分布于大量文本与视觉元素的页面上——是现代视觉-语言模型（VLMs）的一项关键但极具挑战性的任务。现有方法在一项根本性难题上表现不足：证据定位。它们难以检索到相关页面，且忽略视觉元素中的细粒度细节，导致性能受限和模型幻觉。为解决这一问题，我们提出 DocLens，一种工具增强型多智能体框架，能够如同“镜头”一般“放大”证据。该框架首先从完整文档导航至相关页面上的特定视觉元素，随后通过采样-裁决机制生成一个可靠单一答案。结合 Gemini-2.5-Pro，DocLens 在 MMLongBench-Doc 和 FinRAGBench-V 上达到当前最优性能，甚至超越人类专家水平。该框架的优势在以视觉为中心及无答案查询中尤为明显，充分展现了其增强定位能力的强大作用。",
+        "translated_title": "DocLens：一种增强工具的多智能体框架，用于长视觉文档理解",
+        "label": [],
+        "label_reason": "任务为文档理解，属高阶视觉语言模型应用。",
+        "relevance_score": 1,
+        "novelty_score": 1,
+        "novelty_reason": "框架创新在多智能体协作，非像素级图像处理。"
     }
 ]
