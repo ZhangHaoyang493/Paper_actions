@@ -10673,5 +10673,297 @@
         "relevance_score": 1,
         "novelty_score": 7,
         "novelty_reason": "提出旋转主导的优化框架，提升SfM精度"
+    },
+    {
+        "title": "Compact Multimodal Language Models as Robust OCR Alternatives for Noisy Textual Clinical Reports",
+        "url": "http://arxiv.org/abs/2511.13523v1",
+        "pub_date": "2025-11-17",
+        "summary": "Digitization of medical records often relies on smartphone photographs of printed reports, producing images degraded by blur, shadows, and other noise. Conventional OCR systems, optimized for clean scans, perform poorly under such real-world conditions. This study evaluates compact multimodal language models as privacy-preserving alternatives for transcribing noisy clinical documents. Using obstetric ultrasound reports written in regionally inflected medical English common to Indian healthcare settings, we compare eight systems in terms of transcription accuracy, noise sensitivity, numeric accuracy, and computational efficiency. Compact multimodal models consistently outperform both classical and neural OCR pipelines. Despite higher computational costs, their robustness and linguistic adaptability position them as viable candidates for on-premises healthcare digitization.",
+        "translated": "医疗记录的数字化常依赖于对打印报告的智能手机拍照，由此生成的图像常因模糊、阴影及其他噪声而失真。传统的光学字符识别（OCR）系统针对清晰扫描文档优化，在此类真实环境条件下表现不佳。本研究评估了紧凑型多模态语言模型作为隐私保护替代方案，用于转录含噪临床文档。我们以印度医疗环境中常见的区域性变体医学英语撰写的产科超声报告为测试对象，从转录准确率、噪声敏感度、数值准确性及计算效率四个维度比较八种系统。结果表明，紧凑型多模态模型在各项指标上持续优于传统及神经网络OCR流程。尽管其计算开销更高，但其鲁棒性与语言适应能力使其成为本地化医疗数字化的可行候选方案。",
+        "translated_title": "紧凑型多模态语言模型作为嘈杂文本临床报告的鲁棒OCR替代方案",
+        "label": [],
+        "label_reason": "论文聚焦OCR技术，非推荐系统相关",
+        "relevance_score": 3,
+        "novelty_score": 5,
+        "novelty_reason": "改进OCR模型，无推荐系统创新"
+    },
+    {
+        "title": "PolicyBot - Reliable Question Answering over Policy Documents",
+        "url": "http://arxiv.org/abs/2511.13489v1",
+        "pub_date": "2025-11-17",
+        "summary": "All citizens of a country are affected by the laws and policies introduced by their government. These laws and policies serve essential functions for citizens. Such as granting them certain rights or imposing specific obligations. However, these documents are often lengthy, complex, and difficult to navigate, making it challenging for citizens to locate and understand relevant information. This work presents PolicyBot, a retrieval-augmented generation (RAG) system designed to answer user queries over policy documents with a focus on transparency and reproducibility. The system combines domain-specific semantic chunking, multilingual dense embeddings, multi-stage retrieval with reranking, and source-aware generation to provide responses grounded in the original documents. We implemented citation tracing to reduce hallucinations and improve user trust, and evaluated alternative retrieval and generation configurations to identify effective design choices. The end-to-end pipeline is built entirely with open-source tools, enabling easy adaptation to other domains requiring document-grounded question answering. This work highlights design considerations, practical challenges, and lessons learned in deploying trustworthy RAG systems for governance-related contexts.",
+        "translated": "一个国家的所有公民均受其政府所制定的法律与政策影响。这些法律和政策对公民具有基础性功能，例如赋予其特定权利或施加特定义务。然而，此类文件往往篇幅冗长、结构复杂且难以查阅，使普通公民难以定位并理解相关条文。本文提出 PolicyBot，一种检索增强生成（RAG）系统，旨在针对政策文档回答用户查询，并注重透明性与可复现性。该系统结合领域语义分块、多语言稠密嵌入、多阶段召回与重排机制，以及源感知生成技术，确保其响应内容基于原始文档。我们通过引用溯源机制降低幻觉现象、提升用户信任度，并评估多种召回与生成配置以识别高效设计策略。该端到端流程完全依托开源工具构建，便于快速适配其他需文档支撑问答的领域。本研究强调了在治理相关场景中部署可信 RAG 系统的设计考量、实际挑战及经验教训。",
+        "translated_title": "PolicyBot - 基于政策文档的可靠问答系统",
+        "label": [],
+        "label_reason": "论文聚焦政策文档问答，非推荐系统范畴",
+        "relevance_score": 3,
+        "novelty_score": 5,
+        "novelty_reason": "RAG架构改进，但无推荐系统创新"
+    },
+    {
+        "title": "Exploring Multi-Table Retrieval Through Iterative Search",
+        "url": "http://arxiv.org/abs/2511.13418v1",
+        "pub_date": "2025-11-17",
+        "summary": "Open-domain question answering over datalakes requires retrieving and composing information from multiple tables, a challenging subtask that demands semantic relevance and structural coherence (e.g., joinability). While exact optimization methods like Mixed-Integer Programming (MIP) can ensure coherence, their computational complexity is often prohibitive. Conversely, simpler greedy heuristics that optimize for query coverage alone often fail to find these coherent, joinable sets. This paper frames multi-table retrieval as an iterative search process, arguing this approach offers advantages in scalability, interpretability, and flexibility. We propose a general framework and a concrete instantiation: a fast, effective Greedy Join-Aware Retrieval algorithm that holistically balances relevance, coverage, and joinability. Experiments across 5 NL2SQL benchmarks demonstrate that our iterative method achieves competitive retrieval performance compared to the MIP-based approach while being 4-400x faster depending on the benchmark and search space settings. This work highlights the potential of iterative heuristics for practical, scalable, and composition-aware retrieval.",
+        "translated": "在数据湖上进行开放域问答需要从多个表中检索并组合信息，这是一个具有挑战性的子任务，要求语义相关性与结构连贯性（例如可连接性）。虽然精确优化方法如混合整数规划（MIP）能够确保连贯性，但其计算复杂度通常不可接受。相反，仅针对查询覆盖进行优化的简单贪心启发式方法往往无法找到这些连贯且可连接的集合。本文将多表检索建模为一个迭代搜索过程，认为该方法在可扩展性、可解释性和灵活性方面具有优势。我们提出了一般性框架及其具体实现：一种快速有效的贪心连接感知检索算法，该算法全面平衡相关性、覆盖范围和可连接性。在5个NL2SQL基准测试中的实验表明，我们的迭代方法在检索性能上与基于MIP的方法相当，但在不同基准和搜索空间设置下速度提升4至400倍。本工作凸显了迭代启发式方法在实用、可扩展且具备组合感知能力检索方面的潜力。",
+        "translated_title": "通过迭代搜索探索多表检索",
+        "label": [],
+        "label_reason": "聚焦多表检索，与推荐系统无直接关联",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "迭代搜索框架有实用改进，但非推荐领域创新"
+    },
+    {
+        "title": "Attention Grounded Enhancement for Visual Document Retrieval",
+        "url": "http://arxiv.org/abs/2511.13415v1",
+        "pub_date": "2025-11-17",
+        "summary": "Visual document retrieval requires understanding heterogeneous and multi-modal content to satisfy information needs. Recent advances use screenshot-based document encoding with fine-grained late interaction, significantly improving retrieval performance. However, retrievers are still trained with coarse global relevance labels, without revealing which regions support the match. As a result, retrievers tend to rely on surface-level cues and struggle to capture implicit semantic connections, hindering their ability to handle non-extractive queries. To alleviate this problem, we propose a \\textbf{A}ttention-\\textbf{G}rounded \\textbf{RE}triever \\textbf{E}nhancement (AGREE) framework. AGREE leverages cross-modal attention from multimodal large language models as proxy local supervision to guide the identification of relevant document regions. During training, AGREE combines local signals with the global signals to jointly optimize the retriever, enabling it to learn not only whether documents match, but also which content drives relevance. Experiments on the challenging ViDoRe V2 benchmark show that AGREE significantly outperforms the global-supervision-only baseline. Quantitative and qualitative analyses further demonstrate that AGREE promotes deeper alignment between query terms and document regions, moving beyond surface-level matching toward more accurate and interpretable retrieval. Our code is available at: https://anonymous.4open.science/r/AGREE-2025.",
+        "translated": "视觉文档检索需要理解异构且多模态的内容以满足用户的信息需求。近期研究通过基于截图的文档编码与细粒度后交互机制，显著提升了检索性能。然而，当前检索器仍仅依赖粗粒度的全局相关性标签进行训练，未能揭示哪些区域支持匹配关系。因此，检索器往往依赖于表面特征，难以捕捉隐含语义关联，限制了其处理非抽取式查询的能力。为缓解该问题，我们提出一种**注意力引导的检索增强框架**（A ttention-Grounded REtriever ENhancement, AGREE）。AGREE 利用多模态大语言模型中的跨模态注意力机制作为代理局部监督信号，引导检索器识别相关文档区域。在训练过程中，AGREE 将局部信号与全局信号结合，联合优化检索器，使其不仅能学习文档是否匹配，还能识别驱动相关性的具体内容。在具有挑战性的 ViDoRe V2 数据集上的实验表明，AGREE 显著优于仅使用全局监督的基线方法。定量与定性分析进一步证明，AGREE 促进了查询词与文档区域之间更深层次的对齐，超越了表面匹配，实现了更准确、可解释的检索效果。我们的代码已公开：https://anonymous.4open.science/r/AGREE-2025。",
+        "translated_title": "视觉文档检索中的注意力引导增强",
+        "label": [
+            "通用推荐技术",
+            "多模态推荐"
+        ],
+        "label_reason": "聚焦视觉文档检索，属多模态信息匹配问题",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "引入跨模态注意力作为局部监督信号提升检索精度"
+    },
+    {
+        "title": "Uncovering Causal Drivers of Energy Efficiency for Industrial Process in Foundry via Time-Series Causal Inference",
+        "url": "http://arxiv.org/abs/2511.13389v1",
+        "pub_date": "2025-11-17",
+        "summary": "Improving energy efficiency in industrial foundry processes is a critical challenge, as these operations are highly energy-intensive and marked by complex interdependencies among process variables. Correlation-based analyses often fail to distinguish true causal drivers from spurious associations, limiting their usefulness for decision-making. This paper applies a time-series causal inference framework to identify the operational factors that directly affect energy efficiency in induction furnace melting. Using production data from a Danish foundry, the study integrates time-series clustering to segment melting cycles into distinct operational modes with the PCMCI+ algorithm, a state-of-the-art causal discovery method, to uncover cause-effect relationships within each mode. Across clusters, robust causal relations among energy consumption, furnace temperature, and material weight define the core drivers of efficiency, while voltage consistently influences cooling water temperature with a delayed response. Cluster-specific differences further distinguish operational regimes: efficient clusters are characterized by stable causal structures, whereas inefficient ones exhibit reinforcing feedback loops and atypical dependencies. The contributions of this study are twofold. First, it introduces an integrated clustering-causal inference pipeline as a methodological innovation for analyzing energy-intensive processes. Second, it provides actionable insights that enable foundry operators to optimize performance, reduce energy consumption, and lower emissions.",
+        "translated": "提升工业铸造工艺的能量效率是一项关键挑战，因为这些工艺高度耗能，且过程变量间存在复杂的相互依赖关系。基于相关性的分析往往难以区分真实的因果驱动因素与虚假的相关性，限制了其在决策中的实用性。本文应用时间序列因果推断框架，识别感应炉熔炼过程中直接影响能源效率的操作因素。研究利用丹麦一家铸造厂的生产数据，结合时间序列聚类方法将熔炼周期划分为不同的操作模式，并采用当前最先进的因果发现方法PCMCI+，在各模式内揭示因果关系。在各个聚类中，能源消耗、炉温与物料重量之间稳健的因果关系构成了效率的核心驱动因素，而电压则始终对冷却水温度产生延迟响应的影响。不同聚类之间的差异进一步区分了不同操作工况：高效聚类表现出稳定的因果结构，而不高效聚类则呈现强化的反馈循环及非典型依赖关系。本研究贡献体现在两方面：首先，提出一种集成聚类-因果推断的流程，作为分析高耗能工艺的方法论创新；其次，提供可操作的洞察，助力铸造厂操作人员优化性能、降低能耗并减少排放。",
+        "translated_title": "通过时间序列因果推断揭示铸造工业过程中能效的因果驱动因素",
+        "label": [],
+        "label_reason": "研究聚焦工业过程因果推理，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 5,
+        "novelty_reason": "方法创新在工业分析领域，非推荐系统专用技术。"
+    },
+    {
+        "title": "FLOWER: Flow-Oriented Entity-Relationship Tool",
+        "url": "http://arxiv.org/abs/2511.13357v1",
+        "pub_date": "2025-11-17",
+        "summary": "Exploring relationships across data sources is a crucial optimization for entities recognition. Since databases can store big amount of information with synthetic and organic data, serving all quantity of objects correctly is an important task to deal with. However, the decision of how to construct entity relationship model is associated with human factor. In this paper, we present flow-oriented entity-relationship tool. This is first and unique end-to-end solution that eliminates routine and resource-intensive problems of processing, creating and visualizing both of explicit and implicit dependencies for prominent SQL dialects on-the-fly. Once launched, FLOWER automatically detects built-in constraints and starting to create own correct and necessary one using dynamic sampling and robust data analysis techniques. This approach applies to improve entity-relationship model and data storytelling to better understand the foundation of data and get unseen insights from DB sources using SQL or natural language. Evaluated on state-of-the-art STATS benchmark, experiments show that FLOWER is superior to reservoir sampling by 2.4x for distribution representation and 2.6x for constraint learning with 2.15x acceleration. For data storytelling, our tool archives 1.19x for accuracy enhance with 1.86x context decrease compare to LLM. Presented tool is also support 23 languages and compatible with both of CPU and GPU. Those results show that FLOWER can manage with real-world data a way better to ensure with quality, scalability and applicability for different use-cases.",
+        "translated": "探索跨数据源的关系是实体识别的关键优化。由于数据库可存储大量合成与有机数据，准确处理所有对象是一项重要任务。然而，实体关系模型的构建方式往往受人为因素影响。本文提出了一种面向流程的实体关系工具FLOWER。这是首个也是唯一一个端到端解决方案，能够即时处理、创建并可视化主流SQL方言中的显式与隐式依赖关系，从而消除传统方法中繁琐且资源密集的问题。一旦启动，FLOWER将自动检测内置约束，并利用动态采样与稳健数据分析技术自动生成正确且必要的新约束。该方法可用于改进实体关系模型及数据叙事能力，帮助用户更深入理解数据基础，并从数据库中挖掘前所未见的洞察，支持使用SQL或自然语言实现。在最新STATS基准测试中，实验表明：FLOWER在分布表征方面比水库采样快2.4倍，在约束学习方面快2.6倍，整体加速达2.15倍。对于数据叙事，本工具相较大语言模型（LLM）在准确性提升上达到1.19倍，上下文减少1.86倍。所呈现的工具支持23种语言，并兼容CPU与GPU。实验结果表明，FLOWER能更高效地应对真实世界数据，确保其质量、可扩展性及在不同应用场景下的适用性。",
+        "translated_title": "FLOWER：基于流导向的实体关系工具",
+        "label": [],
+        "label_reason": "论文聚焦数据库ER建模，与推荐系统无关",
+        "relevance_score": 2,
+        "novelty_score": 5,
+        "novelty_reason": "改进采样与可视化工具，非推荐领域创新"
+    },
+    {
+        "title": "Examining the Usage of Generative AI Models in Student Learning Activities for Software Programming",
+        "url": "http://arxiv.org/abs/2511.13271v1",
+        "pub_date": "2025-11-17",
+        "summary": "The rise of Generative AI (GenAI) tools like ChatGPT has created new opportunities and challenges for computing education. Existing research has primarily focused on GenAI's ability to complete educational tasks and its impact on student performance, often overlooking its effects on knowledge gains. In this study, we investigate how GenAI assistance compares to conventional online resources in supporting knowledge gains across different proficiency levels. We conducted a controlled user experiment with 24 undergraduate students of two different levels of programming experience (beginner, intermediate) to examine how students interact with ChatGPT while solving programming tasks. We analyzed task performance, conceptual understanding, and interaction behaviors. Our findings reveal that generating complete solutions with GenAI significantly improves task performance, especially for beginners, but does not consistently result in knowledge gains. Importantly, usage strategies differ by experience: beginners tend to rely heavily on GenAI toward task completion often without knowledge gain in the process, while intermediates adopt more selective approaches. We find that both over-reliance and minimal use result in weaker knowledge gains overall. Based on our results, we call on students and educators to adopt GenAI as a learning rather than a problem solving tool. Our study highlights the urgent need for guidance when integrating GenAI into programming education to foster deeper understanding.",
+        "translated": "生成式人工智能（GenAI）工具如ChatGPT的兴起，为计算教育带来了新的机遇与挑战。现有研究主要聚焦于GenAI完成教育任务的能力及其对学生学业表现的影响，常忽视其对知识获取效果的作用。本研究探讨了在不同熟练程度水平下，GenAI辅助相较于传统在线资源，在支持知识获取方面的差异。我们通过对24名编程经验水平不同的本科生（初学者、进阶者）开展受控用户实验，考察学生在解决编程任务过程中如何使用ChatGPT。我们分析了任务表现、概念理解及交互行为。研究发现，利用GenAI生成完整解决方案显著提升了任务表现，尤其对初学者更为明显，但并未持续带来知识增长。重要的是，使用策略因经验水平而异：初学者倾向于过度依赖GenAI以完成任务，此过程往往缺乏知识积累；而进阶者则采取更选择性的使用方式。我们发现，无论是过度依赖还是极少使用，均导致整体知识收益较弱。基于研究结果，我们呼吁学生和教育者将GenAI视为学习工具，而非问题解决工具。本研究凸显了在编程教育中整合GenAI时亟需指导以促进深度理解的重要性。",
+        "translated_title": "探究生成式人工智能模型在学生软件编程学习活动中的应用",
+        "label": [],
+        "label_reason": "研究聚焦教育场景，非推荐系统核心问题",
+        "relevance_score": 3,
+        "novelty_score": 4,
+        "novelty_reason": "方法常规，无推荐系统创新设计"
+    },
+    {
+        "title": "Cog-RAG: Cognitive-Inspired Dual-Hypergraph with Theme Alignment Retrieval-Augmented Generation",
+        "url": "http://arxiv.org/abs/2511.13201v1",
+        "pub_date": "2025-11-17",
+        "summary": "Retrieval-Augmented Generation (RAG) enhances the response quality and domain-specific performance of large language models (LLMs) by incorporating external knowledge to combat hallucinations. In recent research, graph structures have been integrated into RAG to enhance the capture of semantic relations between entities. However, it primarily focuses on low-order pairwise entity relations, limiting the high-order associations among multiple entities. Hypergraph-enhanced approaches address this limitation by modeling multi-entity interactions via hyperedges, but they are typically constrained to inter-chunk entity-level representations, overlooking the global thematic organization and alignment across chunks. Drawing inspiration from the top-down cognitive process of human reasoning, we propose a theme-aligned dual-hypergraph RAG framework (Cog-RAG) that uses a theme hypergraph to capture inter-chunk thematic structure and an entity hypergraph to model high-order semantic relations. Furthermore, we design a cognitive-inspired two-stage retrieval strategy that first activates query-relevant thematic content from the theme hypergraph, and then guides fine-grained recall and diffusion in the entity hypergraph, achieving semantic alignment and consistent generation from global themes to local details. Our extensive experiments demonstrate that Cog-RAG significantly outperforms existing state-of-the-art baseline approaches.",
+        "translated": "检索增强生成（RAG）通过引入外部知识来对抗幻觉，从而提升大语言模型（LLM）的响应质量与领域特异性表现。近期研究中，图结构被整合进 RAG 以增强实体间语义关系的捕捉能力。然而，此类方法主要聚焦于低阶成对实体关系，难以建模多实体间的高阶关联。超图增强方法通过超边建模多实体交互，缓解了这一限制，但通常受限于跨块级别的实体表征，忽略了块间全局主题组织与对齐关系。受人类推理自上而下认知过程的启发，我们提出一种主题对齐双超图 RAG 框架（Cog-RAG），其利用主题超图捕捉跨块的主题结构，并借助实体超图建模高阶语义关系。此外，我们设计了一种受认知启发的两阶段检索策略：首先从主题超图激活与查询相关的主题内容，随后引导在实体超图中的细粒度召回与扩散，实现从全局主题到局部细节的语义对齐与一致生成。大量实验表明，Cog-RAG 显著优于现有最先进基线方法。",
+        "translated_title": "Cog-RAG：受认知启发的双超图与主题对齐检索增强生成",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "RAG框架用于提升LLM生成质量，具推荐系统间接应用价值。",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "创新性双超图结构与认知启发检索策略，显著提升效果。"
+    },
+    {
+        "title": "Large Language Models Meet Extreme Multi-label Classification: Scaling and Multi-modal Framework",
+        "url": "http://arxiv.org/abs/2511.13189v1",
+        "pub_date": "2025-11-17",
+        "summary": "Foundation models have revolutionized artificial intelligence across numerous domains, yet their transformative potential remains largely untapped in Extreme Multi-label Classification (XMC). Queries in XMC are associated with relevant labels from extremely large label spaces, where it is critical to strike a balance between efficiency and performance. Therefore, many recent approaches efficiently pose XMC as a maximum inner product search between embeddings learned from small encoder-only transformer architectures. In this paper, we address two important aspects in XMC: how to effectively harness larger decoder-only models, and how to exploit visual information while maintaining computational efficiency. We demonstrate that both play a critical role in XMC separately and can be combined for improved performance. We show that a few billion-size decoder can deliver substantial improvements while keeping computational overhead manageable. Furthermore, our Vision-enhanced eXtreme Multi-label Learning framework (ViXML) efficiently integrates foundation vision models by pooling a single embedding per image. This limits computational growth while unlocking multi-modal capabilities. Remarkably, ViXML with small encoders outperforms text-only decoder in most cases, showing that an image is worth billions of parameters. Finally, we present an extension of existing text-only datasets to exploit visual metadata and make them available for future benchmarking. Comprehensive experiments across four public text-only datasets and their corresponding image enhanced versions validate our proposals' effectiveness, surpassing previous state-of-the-art by up to +8.21\\% in P@1 on the largest dataset. ViXML's code is available at https://github.com/DiegoOrtego/vixml.",
+        "translated": "基础模型已在众多领域革新了人工智能，但在极端多标签分类（XMC）中，其变革潜力仍远未被充分挖掘。在XMC任务中，查询需从极其庞大的标签空间中关联相关标签，因此必须在效率与性能之间取得平衡。为此，许多近期方法高效地将XMC建模为嵌入向量间的最大内积搜索问题，其中嵌入由小型仅编码器结构的Transformer架构学习得到。本文聚焦于XMC中的两个关键方面：如何有效利用更大的仅解码器模型，以及如何在保持计算效率的同时融合视觉信息。我们证明，这两者在XMC中均扮演着关键角色，并可结合使用以提升整体性能。我们表明，仅使用数亿参数规模的解码器即可带来显著性能提升，同时控制计算开销在合理范围内。此外，我们的视觉增强型极端多标签学习框架（ViXML）通过为每张图像聚合单一嵌入向量，高效整合基础视觉模型，在限制计算增长的同时解锁多模态能力。尤为值得注意的是，当搭配小型编码器时，ViXML在大多数情况下优于纯文本解码器，表明“一张图像胜过数十亿参数”。最后，我们扩展了现有纯文本数据集，使其包含视觉元数据，并将其公开用于未来基准测试。我们在四个公开的纯文本数据集及其对应的视觉增强版本上进行了全面实验，结果验证了所提方法的有效性，在最大数据集上的P@1指标较此前最先进方法提升了高达+8.21%。ViXML代码已开源，地址为 https://github.com/DiegoOrtego/vixml。",
+        "translated_title": "大语言模型遇见极端多标签分类：规模扩展与多模态框架",
+        "label": [],
+        "label_reason": "聚焦XMC任务，非推荐系统核心问题",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "结合视觉与大模型提升效率，有实用改进"
+    },
+    {
+        "title": "Local Collaborative Filtering: A Collaborative Filtering Method that Utilizes Local Similarities among Users",
+        "url": "http://arxiv.org/abs/2511.13166v1",
+        "pub_date": "2025-11-17",
+        "summary": "To leverage user behavior data from the Internet more effectively in recommender systems, this paper proposes a novel collaborative filtering (CF) method called Local Collaborative Filtering (LCF). LCF utilizes local similarities among users and integrates their data using the law of large numbers (LLN), thereby improving the utilization of user behavior data. Experiments are conducted on the Steam game dataset, and the results of LCF align with real-world needs.",
+        "translated": "为更有效地利用互联网中的用户行为数据，本文提出了一种新颖的协同过滤（CF）方法，称为局部协同过滤（LCF）。LCF 利用用户间的局部相似性，并基于大数定律（LLN）整合其数据，从而提升用户行为数据的利用率。实验在 Steam 游戏数据集上进行，结果符合实际需求。",
+        "translated_title": "局部协同过滤：一种利用用户间局部相似性的协同过滤方法",
+        "label": [
+            "精排（Ranking）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "提出基于用户局部相似性的CF方法，用于提升推荐精度。",
+        "relevance_score": 8,
+        "novelty_score": 6,
+        "novelty_reason": "改进传统CF方法，引入局部相似性与大数定律，属常规优化。"
+    },
+    {
+        "title": "Region-Point Joint Representation for Effective Trajectory Similarity Learning",
+        "url": "http://arxiv.org/abs/2511.13125v1",
+        "pub_date": "2025-11-17",
+        "summary": "Recent learning-based methods have reduced the computational complexity of traditional trajectory similarity computation, but state-of-the-art (SOTA) methods still fail to leverage the comprehensive spectrum of trajectory information for similarity modeling. To tackle this problem, we propose \\textbf{RePo}, a novel method that jointly encodes \\textbf{Re}gion-wise and \\textbf{Po}int-wise features to capture both spatial context and fine-grained moving patterns. For region-wise representation, the GPS trajectories are first mapped to grid sequences, and spatial context are captured by structural features and semantic context enriched by visual features. For point-wise representation, three lightweight expert networks extract local, correlation, and continuous movement patterns from dense GPS sequences. Then, a router network adaptively fuses the learned point-wise features, which are subsequently combined with region-wise features using cross-attention to produce the final trajectory embedding. To train RePo, we adopt a contrastive loss with hard negative samples to provide similarity ranking supervision. Experiment results show that RePo achieves an average accuracy improvement of 22.2\\% over SOTA baselines across all evaluation metrics.",
+        "translated": "近期基于学习的方法已降低了传统轨迹相似度计算的计算复杂度，但当前最先进的（SOTA）方法仍未能充分利用轨迹信息的全面光谱以进行相似性建模。为解决这一问题，我们提出了一种新颖的方法 \\textbf{RePo}，该方法联合编码 \\textbf{Re}gion-wise 和 \\textbf{Po}int-wise 特征，以同时捕捉空间上下文与细粒度移动模式。对于区域级表示，GPS 轨迹首先被映射为网格序列，空间上下文通过结构特征捕获，并借助视觉特征增强语义上下文。对于点级表示，三个轻量专家网络从密集的 GPS 序列中提取局部、关联及连续运动模式。随后，一个路由网络自适应融合所学习到的点级特征，这些特征再通过交叉注意力机制与区域级特征结合，生成最终的轨迹嵌入。为训练 RePo，我们采用带有难负样本的对比损失，以提供相似性排序监督。实验结果表明，RePo 在所有评估指标上相较 SOTA 基线方法平均准确率提升了 22.2\\%。",
+        "translated_title": "区域-点联合表示用于有效的轨迹相似性学习",
+        "label": [
+            "通用推荐技术",
+            "负采样与对比学习"
+        ],
+        "label_reason": "轨迹相似性学习可用于推荐场景，如POI推荐。",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "联合区域与点特征，引入路由网络与对比学习。"
+    },
+    {
+        "title": "FGNet: Leveraging Feature-Guided Attention to Refine SAM2 for 3D EM Neuron Segmentation",
+        "url": "http://arxiv.org/abs/2511.13063v1",
+        "pub_date": "2025-11-17",
+        "summary": "Accurate segmentation of neural structures in Electron Microscopy (EM) images is paramount for neuroscience. However, this task is challenged by intricate morphologies, low signal-to-noise ratios, and scarce annotations, limiting the accuracy and generalization of existing methods. To address these challenges, we seek to leverage the priors learned by visual foundation models on a vast amount of natural images to better tackle this task. Specifically, we propose a novel framework that can effectively transfer knowledge from Segment Anything 2 (SAM2), which is pre-trained on natural images, to the EM domain. We first use SAM2 to extract powerful, general-purpose features. To bridge the domain gap, we introduce a Feature-Guided Attention module that leverages semantic cues from SAM2 to guide a lightweight encoder, the Fine-Grained Encoder (FGE), in focusing on these challenging regions. Finally, a dual-affinity decoder generates both coarse and refined affinity maps. Experimental results demonstrate that our method achieves performance comparable to state-of-the-art (SOTA) approaches with the SAM2 weights frozen. Upon further fine-tuning on EM data, our method significantly outperforms existing SOTA methods. This study validates that transferring representations pre-trained on natural images, when combined with targeted domain-adaptive guidance, can effectively address the specific challenges in neuron segmentation.",
+        "translated": "在电子显微镜（EM）图像中对神经结构进行精确分割，对于神经科学至关重要。然而，该任务面临形态复杂、信噪比低以及标注稀缺等挑战，限制了现有方法的准确性和泛化能力。为应对这些挑战，我们试图利用视觉基础模型在海量自然图像上学习到的先验知识，以更好地解决该问题。具体而言，我们提出了一种新颖框架，可有效将已在自然图像上预训练的Segment Anything 2（SAM2）的知识迁移到EM领域。首先，我们使用SAM2提取强大的通用特征；为弥合领域差距，我们引入了一个特征引导注意力模块，该模块利用SAM2提供的语义线索，引导轻量级编码器——细粒度编码器（Fine-Grained Encoder, FGE）聚焦于这些具有挑战性的区域；最终，一个双亲和度解码器生成粗略与精细的亲和度图。实验结果表明，在冻结SAM2权重的情况下，我们的方法已达到现有最先进（SOTA）方法的性能水平；而在进一步在EM数据上微调后，我们的方法显著超越现有SOTA方法。本研究验证了：当结合有针对性的领域自适应引导时，从自然图像上预训练得到的表示能够有效应对神经元分割中的特定挑战。",
+        "translated_title": "FGNet：利用特征引导注意力优化SAM2用于三维电镜神经元分割",
+        "label": [],
+        "label_reason": "论文聚焦图像分割，与推荐系统无关。",
+        "relevance_score": 1,
+        "novelty_score": 3,
+        "novelty_reason": "方法为医学图像处理，无推荐相关创新。"
+    },
+    {
+        "title": "Dimension vs. Precision: A Comparative Analysis of Autoencoders and Quantization for Efficient Vector Retrieval on BEIR SciFact",
+        "url": "http://arxiv.org/abs/2511.13057v1",
+        "pub_date": "2025-11-17",
+        "summary": "Dense retrieval models have become a standard for state-of-the-art information retrieval. However, their high-dimensional, high-precision (float32) vector embeddings create significant storage and memory challenges for real-world deployment. To address this, we conduct a rigorous empirical study on the BEIR SciFact benchmark, evaluating the trade-offs between two primary compression strategies: (1) Dimensionality Reduction via deep Autoencoders (AE), reducing original 384-dim vectors to latent spaces from 384 down to 12, and (2) Precision Reduction via Quantization (float16, int8, and binary). We systematically compare each method by measuring the \"performance loss\" (or gain) relative to a float32 baseline across a full suite of retrieval metrics (NDCG, MAP, MRR, Recall, Precision) at various k cutoffs. Our results show that int8 scalar quantization provides the most effective \"sweet spot,\" achieving a 4x compression with a negligible [~1-2%] drop in nDCG@10. In contrast, Autoencoders show a graceful degradation but suffer a more significant performance loss at equivalent 4x compression ratios (AE-96). binary quantization was found to be unsuitable for this task due to catastrophic performance drops. This work provides a practical guide for deploying efficient, high-performance retrieval systems.",
+        "translated": "密集检索模型已成为信息检索领域最先进方法的标准。然而，其高维、高精度（float32）的向量嵌入在实际部署中会带来显著的存储与内存挑战。为解决此问题，我们在 BEIR SciFact 数据集上开展了严谨的实证研究，评估两种主要压缩策略的权衡：(1) 通过深度自编码器（AE）进行降维，将原始 384 维向量压缩至潜空间，维度从 384 下降至 12；(2) 通过量化实现精度降低（float16、int8 和二值化）。我们系统性地比较了每种方法，在多个 k 截断点下，针对完整的一组检索指标（NDCG、MAP、MRR、Recall、Precision），测量其相对于 float32 基线的“性能损失”（或增益）。实验结果表明，int8 标量量化提供了最有效的“最佳折中点”，实现了 4 倍压缩，同时 nDCG@10 的下降幅度极小（约 1-2%）。相比之下，自编码器虽表现出平滑退化趋势，但在等效 4 倍压缩率下（AE-96）性能损失更为显著。二值量化则因性能急剧下降而不适合本任务。本工作为部署高效、高性能的检索系统提供了实用指导。",
+        "translated_title": "维度与精度：在 BEIR SciFact 上对自编码器与量化方法进行高效向量检索的对比分析",
+        "label": [
+            "通用推荐技术"
+        ],
+        "label_reason": "研究向量检索压缩，属信息检索范畴，非推荐系统核心",
+        "relevance_score": 4,
+        "novelty_score": 6,
+        "novelty_reason": "常规压缩方法比较，无推荐系统创新"
+    },
+    {
+        "title": "Mitigating Recommendation Biases via Group-Alignment and Global-Uniformity in Representation Learning",
+        "url": "http://arxiv.org/abs/2511.13041v1",
+        "pub_date": "2025-11-17",
+        "summary": "Collaborative Filtering~(CF) plays a crucial role in modern recommender systems, leveraging historical user-item interactions to provide personalized suggestions. However, CF-based methods often encounter biases due to imbalances in training data. This phenomenon makes CF-based methods tend to prioritize recommending popular items and performing unsatisfactorily on inactive users. Existing works address this issue by rebalancing training samples, reranking recommendation results, or making the modeling process robust to the bias. Despite their effectiveness, these approaches can compromise accuracy or be sensitive to weighting strategies, making them challenging to train. In this paper, we deeply analyze the causes and effects of the biases and propose a framework to alleviate biases in recommendation from the perspective of representation distribution, namely Group-Alignment and Global-Uniformity Enhanced Representation Learning for Debiasing Recommendation (AURL). Specifically, we identify two significant problems in the representation distribution of users and items, namely group-discrepancy and global-collapse. These two problems directly lead to biases in the recommendation results. To this end, we propose two simple but effective regularizers in the representation space, respectively named group-alignment and global-uniformity. The goal of group-alignment is to bring the representation distribution of long-tail entities closer to that of popular entities, while global-uniformity aims to preserve the information of entities as much as possible by evenly distributing representations. Our method directly optimizes both the group-alignment and global-uniformity regularization terms to mitigate recommendation biases. Extensive experiments on three real datasets and various recommendation backbones verify the superiority of our proposed framework.",
+        "translated": "协同过滤（CF）在现代推荐系统中扮演着至关重要的角色，其通过历史用户-物料交互数据提供个性化推荐。然而，基于CF的方法常因训练数据分布不均衡而产生偏差，导致倾向于优先推荐热门物料并对低活跃度用户表现不佳。现有研究通过重采样训练样本、重排序推荐结果或使建模过程对偏差鲁棒等方式缓解该问题。尽管这些方法有效，但往往牺牲准确性或对权重策略敏感，难以稳定训练。本文深入分析偏差的成因与影响，并从表示分布角度提出一种减轻推荐偏差的框架，命名为“面向去偏的分组对齐与全局均匀性增强表示学习”（AURL）。具体而言，我们识别出用户和物料表示分布中存在的两个关键问题：群体差异性（group-discrepancy）与全局坍缩（global-collapse），二者直接导致推荐结果出现偏差。为此，我们在表示空间中分别设计了两种简单而有效的正则化项，名为“分组对齐”（group-alignment）与“全局均匀性”（global-uniformity）。其中，分组对齐旨在使长尾实体的表示分布更贴近热门实体；全局均匀性则通过均匀分布表示，尽可能保留实体信息。我们的方法直接优化上述两项正则化项，以缓解推荐偏差。在三个真实数据集及多种推荐骨干模型上的大量实验验证了所提框架的有效性。",
+        "translated_title": "通过表示学习中的组对齐与全局均匀性缓解推荐偏差",
+        "label": [
+            "精排",
+            "推荐系统公平性/可解释性"
+        ],
+        "label_reason": "针对推荐偏差提出表示学习优化方法，适用于精排环节。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新性引入组对齐与全局均匀性正则化解决偏差问题。"
+    },
+    {
+        "title": "Personalized Federated Recommendation With Knowledge Guidance",
+        "url": "http://arxiv.org/abs/2511.12959v1",
+        "pub_date": "2025-11-17",
+        "summary": "Federated Recommendation (FedRec) has emerged as a key paradigm for building privacy-preserving recommender systems. However, existing FedRec models face a critical dilemma: memory-efficient single-knowledge models suffer from a suboptimal knowledge replacement practice that discards valuable personalization, while high-performance dual-knowledge models are often too memory-intensive for practical on-device deployment. We propose Federated Recommendation with Knowledge Guidance (FedRKG), a model-agnostic framework that resolves this dilemma. The core principle, Knowledge Guidance, avoids full replacement and instead fuses global knowledge into preserved local embeddings, attaining the personalization benefits of dual-knowledge within a single-knowledge memory footprint. Furthermore, we introduce Adaptive Guidance, a fine-grained mechanism that dynamically modulates the intensity of this guidance for each user-item interaction, overcoming the limitations of static fusion methods. Extensive experiments on benchmark datasets demonstrate that FedRKG significantly outperforms state-of-the-art methods, validating the effectiveness of our approach. The code is available at https://github.com/Jaehyung-Lim/fedrkg.",
+        "translated": "联邦推荐（FedRec）已成为构建隐私保护推荐系统的关键范式。然而，现有的 FedRec 模型面临一个关键困境：内存效率高的单知识模型因采用次优的知识替换策略而丢失宝贵的个性化能力；而高性能的双知识模型则往往因内存开销过大，难以在设备端实际部署。我们提出联邦推荐与知识引导（FedRKG），这是一种模型无关的框架，旨在解决上述困境。其核心原则“知识引导”避免了完全替换，而是将全局知识融合进保留的局部嵌入中，在单知识内存开销下实现双知识模型的个性化优势。此外，我们引入自适应引导机制，作为一种细粒度机制，动态调节对每个用户-物料交互的引导强度，克服了静态融合方法的局限性。在多个基准数据集上的大量实验表明，FedRKG 显著优于现有最先进方法，验证了我们方法的有效性。代码开源地址为 https://github.com/Jaehyung-Lim/fedrkg。",
+        "translated_title": "基于知识引导的个性化联邦推荐",
+        "label": [
+            "跨域/联邦推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "解决联邦推荐中个性化与内存效率矛盾",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出知识引导机制动态融合全局与局部知识"
+    },
+    {
+        "title": "Can We Predict the Next Question? A Collaborative Filtering Approach to Modeling User Behavior",
+        "url": "http://arxiv.org/abs/2511.12949v1",
+        "pub_date": "2025-11-17",
+        "summary": "In recent years, large language models (LLMs) have excelled in language understanding and generation, powering advanced dialogue and recommendation systems. However, a significant limitation persists: these systems often model user preferences statically, failing to capture the dynamic and sequential nature of interactive behaviors. The sequence of a user's historical questions provides a rich, implicit signal of evolving interests and cognitive patterns, yet leveraging this temporal data for predictive tasks remains challenging due to the inherent disconnect between language modeling and behavioral sequence modeling.   To bridge this gap, we propose a Collaborative Filtering-enhanced Question Prediction (CFQP) framework. CFQP dynamically models evolving user-question interactions by integrating personalized memory modules with graph-based preference propagation. This dual mechanism allows the system to adaptively learn from user-specific histories while refining predictions through collaborative signals from similar users. Experimental results demonstrate that our approach effectively generates agents that mimic real-user questioning patterns, highlighting its potential for building proactive and adaptive dialogue systems.",
+        "translated": "近年来，大语言模型（LLM）在语言理解和生成方面表现卓越，推动了先进对话与推荐系统的研发。然而，其仍存在一个显著局限：这些系统往往静态建模用户偏好，难以捕捉交互行为的动态性和序列性特征。用户历史提问的序列蕴含了丰富的隐式信号，反映了兴趣演化与认知模式的变化，但由于语言建模与行为序列建模之间固有的割裂，如何有效利用此类时序数据进行预测任务仍具挑战。  \n\n为弥合此差距，我们提出一种基于协同过滤增强的问答预测框架（Collaborative Filtering-enhanced Question Prediction, CFQP）。CFQP 通过融合个性化记忆模块与基于图的偏好传播机制，动态建模用户-问题交互的演化过程。该双机制使系统既能自适应学习用户专属历史，又能借助相似用户的协同信号优化预测效果。实验结果表明，我们的方法能有效生成模仿真实用户提问模式的代理，凸显其在构建主动、自适应对话系统方面的潜力。",
+        "translated_title": "我们能否预测下一个问题？一种基于协同过滤的用户行为建模方法",
+        "label": [
+            "序列推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "建模用户行为序列，但未聚焦推荐核心环节。",
+        "relevance_score": 6,
+        "novelty_score": 5,
+        "novelty_reason": "整合协同过滤与记忆模块，但非推荐专用创新。"
+    },
+    {
+        "title": "A Plug-and-Play Spatially-Constrained Representation Enhancement Framework for Local-Life Recommendation",
+        "url": "http://arxiv.org/abs/2511.12947v1",
+        "pub_date": "2025-11-17",
+        "summary": "Local-life recommendation have witnessed rapid growth, providing users with convenient access to daily essentials. However, this domain faces two key challenges: (1) spatial constraints, driven by the requirements of the local-life scenario, where items are usually shown only to users within a limited geographic area, indirectly reducing their exposure probability; and (2) long-tail sparsity, where few popular items dominate user interactions, while many high-quality long-tail items are largely overlooked due to imbalanced interaction opportunities. Existing methods typically adopt a user-centric perspective, such as modeling spatial user preferences or enhancing long-tail representations with collaborative filtering signals. However, we argue that an item-centric perspective is more suitable for this domain, focusing on enhancing long-tail items representation that align with the spatially-constrained characteristics of local lifestyle services. To tackle this issue, we propose ReST, a Plug-And-Play Spatially-Constrained Representation Enhancement Framework for Long-Tail Local-Life Recommendation. Specifically, we first introduce a Meta ID Warm-up Network, which initializes fundamental ID representations by injecting their basic attribute-level semantic information. Subsequently, we propose a novel Spatially-Constrained ID Representation Enhancement Network (SIDENet) based on contrastive learning, which incorporates two efficient strategies: a spatially-constrained hard sampling strategy and a dynamic representation alignment strategy. This design adaptively identifies weak ID representations based on their attribute-level information during training. It additionally enhances them by capturing latent item relationships within the spatially-constrained characteristics of local lifestyle services, while preserving compatibility with popular items.",
+        "translated": "本地生活推荐系统近年来发展迅速，为用户提供便捷的日常必需品访问服务。然而，该领域面临两大核心挑战：（1）空间约束问题，由本地生活场景的需求驱动，物品通常仅向限定地理区域内的用户展示，间接降低了其曝光概率；（2）长尾稀疏性问题，少数热门物品主导用户交互行为，而大量高质量长尾物品因交互机会分布不均而被严重忽视。现有方法通常采用以用户为中心的视角，例如建模空间用户偏好或利用协同过滤信号增强长尾物品表征。然而，我们认为，对于本领域而言，以物品为中心的视角更为合适，应聚焦于提升与本地生活服务空间约束特性相契合的长尾物品表征能力。为解决此问题，我们提出 ReST，一种面向长尾本地生活推荐的“即插即用”空间约束表征增强框架。具体而言，我们首先引入元 ID 预热网络（Meta ID Warm-up Network），通过注入基础属性层面语义信息初始化基本 ID 表征；随后，我们提出一种基于对比学习的新型空间约束 ID 表征增强网络（SIDENet），融合两项高效策略：空间约束硬采样策略与动态表征对齐策略。该设计在训练过程中根据物品属性信息自适应识别弱表征，并通过捕捉本地生活服务空间约束特性下的潜在物品关系加以增强，同时保持与热门物品的兼容性。",
+        "translated_title": "一种即插即用的空间约束表示增强框架用于本地生活推荐",
+        "label": [
+            "召回",
+            "精排",
+            "负采样与对比学习"
+        ],
+        "label_reason": "聚焦本地生活推荐中的空间约束与长尾问题，设计新框架提升召回/排序效果。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出SIDENet结合空间约束对比学习，创新性增强长尾物品表征。"
+    },
+    {
+        "title": "AIF: Asynchronous Inference Framework for Cost-Effective Pre-Ranking",
+        "url": "http://arxiv.org/abs/2511.12934v1",
+        "pub_date": "2025-11-17",
+        "summary": "In industrial recommendation systems, pre-ranking models based on deep neural networks (DNNs) commonly adopt a sequential execution framework: feature fetching and model forward computation are triggered only after receiving candidates from the upstream retrieval stage. This design introduces inherent bottlenecks, including redundant computations of identical users/items and increased latency due to strictly sequential operations, which jointly constrain the model's capacity and system efficiency. To address these limitations, we propose the Asynchronous Inference Framework (AIF), a cost-effective computational architecture that decouples interaction-independent components, those operating within a single user or item, from real-time prediction. AIF reorganizes the model inference process by performing user-side computations in parallel with the retrieval stage and conducting item-side computations in a nearline manner. This means that interaction-independent components are calculated just once and completed before the real-time prediction phase of the pre-ranking stage. As a result, AIF enhances computational efficiency and reduces latency, freeing up resources to significantly improve the feature set and model architecture of interaction-independent components. Moreover, we delve into model design within the AIF framework, employing approximated methods for interaction-dependent components in online real-time predictions. By co-designing both the framework and the model, our solution achieves notable performance gains without significantly increasing computational and latency costs. This has enabled the successful deployment of AIF in the Taobao display advertising system.",
+        "translated": "在工业推荐系统中，基于深度神经网络（DNNs）的粗排模型通常采用顺序执行框架：特征获取与模型前向计算仅在从上游召回阶段接收到候选物料后才被触发。该设计引入了固有的瓶颈，包括相同用户/物料重复计算以及因严格顺序操作导致的延迟增加，二者共同制约了模型能力与系统效率。为解决这些局限性，我们提出异步推理框架（Asynchronous Inference Framework, AIF），这是一种低成本的计算架构，将交互无关组件——即在单个用户或物料内独立运行的部分——与实时预测解耦。AIF通过在召回阶段并行执行用户侧计算、以近线方式处理物料侧计算，重新组织模型推理流程。这意味着交互无关组件仅计算一次，并在粗排阶段实时预测阶段之前完成。因此，AIF提升了计算效率、降低了延迟，释放出资源用于显著增强交互无关组件的特征集与模型架构。此外，我们在AIF框架内深入探讨模型设计，针对在线实时预测部分采用近似方法处理交互相关组件。通过框架与模型协同设计，我们的方案实现了显著性能提升，而无需大幅增加计算开销和延迟成本。此方案已在淘宝展示广告系统中成功部署。",
+        "translated_title": "AIF：一种低成本粗排的异步推理框架",
+        "label": [
+            "粗排（Pre-ranking）"
+        ],
+        "label_reason": "聚焦预排序阶段异步推理架构优化，直接提升推荐系统效率。",
+        "relevance_score": 9,
+        "novelty_score": 7,
+        "novelty_reason": "提出异步框架解耦计算，巧妙结合模型与系统设计创新。"
+    },
+    {
+        "title": "Tokenize Once, Recommend Anywhere: Unified Item Tokenization for Multi-domain LLM-based Recommendation",
+        "url": "http://arxiv.org/abs/2511.12922v1",
+        "pub_date": "2025-11-17",
+        "summary": "Large language model (LLM)-based recommender systems have achieved high-quality performance by bridging the discrepancy between the item space and the language space through item tokenization. However, existing item tokenization methods typically require training separate models for each item domain, limiting generalization. Moreover, the diverse distributions and semantics across item domains make it difficult to construct a unified tokenization that preserves domain-specific information. To address these challenges, we propose UniTok, a Unified item Tokenization framework that integrates our own mixture-of-experts (MoE) architecture with a series of codebooks to convert items into discrete tokens, enabling scalable tokenization while preserving semantic information across multiple item domains. Specifically, items from different domains are first projected into a unified latent space through a shared encoder. They are then routed to domain-specific experts to capture the unique semantics, while a shared expert, which is always active, encodes common knowledge transferable across domains. Additionally, to mitigate semantic imbalance across domains, we present a mutual information calibration mechanism, which guides the model towards retaining similar levels of semantic information for each domain. Comprehensive experiments on wide-ranging real-world datasets demonstrate that the proposed UniTok framework is (a) highly effective: achieving up to 51.89% improvements over strong benchmarks, (b) theoretically sound: showing the analytical validity of our architectural design and optimization; and (c) highly generalizable: demonstrating robust performance across diverse domains without requiring per-domain retraining, a capability not supported by existing baselines.",
+        "translated": "基于大语言模型（LLM）的推荐系统通过将物料空间与语言空间之间的差异桥接，借助物料分词技术实现了高质量的性能。然而，现有物料分词方法通常需要为每个物料领域单独训练独立模型，限制了其泛化能力。此外，不同物料领域间分布与语义的多样性使得构建一个统一的分词方案以保留各领域特定信息变得困难。为解决上述挑战，我们提出 UniTok，一种统一物料分词框架，该框架结合了我们设计的混合专家（MoE）架构及一系列代码本，将物料转换为离散令牌，从而在保持多领域语义信息的同时实现可扩展的分词能力。具体而言，来自不同领域的物料首先通过共享编码器投影至统一潜在空间，随后被路由至领域特定专家以捕获独特语义，同时一个始终激活的共享专家负责编码跨领域迁移的知识。此外，为缓解各领域间语义不平衡的问题，我们提出了一种互信息校准机制，引导模型在各领域间保留相似层次的语义信息。在广泛真实世界数据集上的全面实验表明，所提出的 UniTok 框架具备：(a) 高效性：相较强基线模型最高提升达 51.89%；(b) 理论严谨性：展示了架构设计与优化的分析有效性；以及 (c) 高泛化性：在无需为各领域重新训练的前提下，于多样化领域中均展现出稳健表现，这是现有基线方法所不具备的能力。",
+        "translated_title": "一次 Token 化，随处推荐：面向多领域大语言模型推荐的统一物料 Token 化",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "提出统一Token化框架，适配多域LLM推荐",
+        "relevance_score": 10,
+        "novelty_score": 9,
+        "novelty_reason": "首创MoE+Codebook架构解决跨域token化难题"
+    },
+    {
+        "title": "Auditing Google's AI Overviews and Featured Snippets: A Case Study on Baby Care and Pregnancy",
+        "url": "http://arxiv.org/abs/2511.12920v1",
+        "pub_date": "2025-11-17",
+        "summary": "Google Search increasingly surfaces AI-generated content through features like AI Overviews (AIO) and Featured Snippets (FS), which users frequently rely on despite having no control over their presentation. Through a systematic algorithm audit of 1,508 real baby care and pregnancy-related queries, we evaluate the quality and consistency of these information displays. Our robust evaluation framework assesses multiple quality dimensions, including answer consistency, relevance, presence of medical safeguards, source categories, and sentiment alignment. Our results reveal concerning gaps in information consistency, with information in AIO and FS displayed on the same search result page being inconsistent with each other in 33% of cases. Despite high relevance scores, both features critically lack medical safeguards (present in just 11% of AIO and 7% of FS responses). While health and wellness websites dominate source categories for both, AIO and FS, FS also often link to commercial sources. These findings have important implications for public health information access and demonstrate the need for stronger quality controls in AI-mediated health information. Our methodology provides a transferable framework for auditing AI systems across high-stakes domains where information quality directly impacts user well-being.",
+        "translated": "谷歌搜索正越来越多地通过AI摘要（AIO）和精选片段（FS）等功能展示由人工智能生成的内容，尽管用户对此类内容的呈现方式并无控制权，却频繁依赖这些功能。通过对1,508条真实的婴儿护理与孕期相关查询进行系统性算法审计，我们评估了这些信息展示的质量与一致性。我们的稳健评估框架从多个质量维度进行衡量，包括答案一致性、相关性、是否包含医疗安全机制、来源类别分布及情感倾向匹配度。结果显示，存在令人担忧的信息不一致问题：在33%的案例中，同一搜索结果页面上AIO与FS所呈现的信息彼此矛盾。尽管相关性评分较高，但这两项功能均严重缺乏医疗安全措施（仅分别有11%和7%的AIO与FS响应包含此类保障）。虽然健康与福祉类网站在两类功能的来源类别中占据主导地位，但FS亦常链接至商业来源。上述发现对公众获取健康信息具有重要影响，并表明在AI中介的健康信息领域亟需强化质量管控。我们的方法论提供了一种可迁移的框架，可用于高风险领域的AI系统审计——其中信息质量直接影响用户福祉。",
+        "translated_title": "审计谷歌AI摘要与精选片段：以育儿与孕期为主题的研究案例",
+        "label": [],
+        "label_reason": "研究对象为搜索结果质量审计，非推荐系统核心环节。",
+        "relevance_score": 2,
+        "novelty_score": 3,
+        "novelty_reason": "方法通用，未针对推荐系统提出创新性解决方案。"
     }
 ]
