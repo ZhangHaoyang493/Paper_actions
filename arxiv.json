@@ -11499,5 +11499,194 @@
         "relevance_score": 1,
         "novelty_score": 7,
         "novelty_reason": "提出轻量结构改进，但属音频领域"
+    },
+    {
+        "title": "NeuCLIRBench: A Modern Evaluation Collection for Monolingual, Cross-Language, and Multilingual Information Retrieval",
+        "url": "http://arxiv.org/abs/2511.14758v1",
+        "pub_date": "2025-11-18",
+        "summary": "To measure advances in retrieval, test collections with relevance judgments that can faithfully distinguish systems are required. This paper presents NeuCLIRBench, an evaluation collection for cross-language and multilingual retrieval. The collection consists of documents written natively in Chinese, Persian, and Russian, as well as those same documents machine translated into English. The collection supports several retrieval scenarios including: monolingual retrieval in English, Chinese, Persian, or Russian; cross-language retrieval with English as the query language and one of the other three languages as the document language; and multilingual retrieval, again with English as the query language and relevant documents in all three languages. NeuCLIRBench combines the TREC NeuCLIR track topics of 2022, 2023, and 2024. The 250,128 judgments across approximately 150 queries for the monolingual and cross-language tasks and 100 queries for multilingual retrieval provide strong statistical discriminatory power to distinguish retrieval approaches. A fusion baseline of strong neural retrieval systems is included with the collection so that developers of reranking algorithms are no longer reliant on BM25 as their first-stage retriever. NeuCLIRBench is publicly available.",
+        "translated": "为衡量检索技术的进步，需要具备相关性判断且能真实区分不同系统的测试集合。本文提出了NeuCLIRBench，这是一个面向跨语言与多语言检索的评估数据集。该数据集包含原生以中文、波斯语和俄语撰写的文档，以及这些文档经机器翻译后的英文版本。该数据集支持多种检索场景，包括：在英语、中文、波斯语或俄语中进行单语言检索；以英语为查询语言、其他三种语言之一为文档语言的跨语言检索；以及以英语为查询语言、同时检索中文、波斯语和俄语相关文档的多语言检索。NeuCLIRBench整合了TREC NeuCLIR赛道2022、2023及2024年的评测主题。针对单语言与跨语言任务，约150个查询对应250,128条相关性判断；针对多语言检索任务，则有100个查询。这些数据提供了强大的统计区分能力，以便有效区分不同的检索方法。数据集中还包含若干强神经检索系统的融合基线，使重排序算法开发者不再依赖BM25作为其第一阶段检索器。NeuCLIRBench已公开发布。",
+        "translated_title": "NeuCLIRBench：面向单语、跨语言与多语言信息检索的现代评估基准集",
+        "label": [],
+        "label_reason": "聚焦信息检索评估，非推荐系统核心问题",
+        "relevance_score": 3,
+        "novelty_score": 5,
+        "novelty_reason": "提供多语言评测集，但无推荐系统创新"
+    },
+    {
+        "title": "LiveRAG: A diverse Q&amp;A dataset with varying difficulty level for RAG evaluation",
+        "url": "http://arxiv.org/abs/2511.14531v1",
+        "pub_date": "2025-11-18",
+        "summary": "With Retrieval Augmented Generation (RAG) becoming more and more prominent in generative AI solutions, there is an emerging need for systematically evaluating their effectiveness. We introduce the LiveRAG benchmark, a publicly available dataset of 895 synthetic questions and answers designed to support systematic evaluation of RAG-based Q&amp;A systems. This synthetic benchmark is derived from the one used during the SIGIR'2025 LiveRAG Challenge, where competitors were evaluated under strict time constraints. It is augmented with information that was not made available to competitors during the Challenge, such as the ground-truth answers, together with their associated supporting claims which were used for evaluating competitors' answers. In addition, each question is associated with estimated difficulty and discriminability scores, derived from applying an Item Response Theory model to competitors' responses. Our analysis highlights the benchmark's questions diversity, the wide range of their difficulty levels, and their usefulness in differentiating between system capabilities. The LiveRAG benchmark will hopefully help the community advance RAG research, conduct systematic evaluation, and develop more robust Q&amp;A systems.",
+        "translated": "随着检索增强生成（RAG）在生成式人工智能解决方案中的日益普及，系统性评估其有效性变得愈发迫切。我们引入了LiveRAG基准数据集，该数据集包含895组合成问题与答案，旨在支持对基于RAG的问答系统的系统性评估。该合成基准源自SIGIR’2025 LiveRAG挑战赛所使用的数据集，在挑战赛中参赛者需在严格的时间约束下进行评测。本基准额外补充了在挑战赛期间未向参赛者公开的信息，例如真实答案及其对应的支撑论据，后者用于评估参赛者答案的质量。此外，每个问题均关联有难度估计值和区分度评分，这些评分是通过将项目反应理论模型应用于参赛者回答所推导得出的。我们的分析突显了该基准在问题多样性、难度梯度覆盖范围以及区分系统能力方面的实用性。LiveRAG基准有望助力学术界推进RAG研究，开展系统性评估，并开发出更鲁棒的问答系统。",
+        "translated_title": "LiveRAG：一个具有不同难度等级的多样化问答数据集，用于评估检索增强生成（RAG）系统",
+        "label": [],
+        "label_reason": "论文聚焦RAG评估，非推荐系统核心环节。",
+        "relevance_score": 3,
+        "novelty_score": 5,
+        "novelty_reason": "提供新基准数据集，但无推荐系统创新。"
+    },
+    {
+        "title": "Effective Diversification of Multi-Carousel Book Recommendation",
+        "url": "http://arxiv.org/abs/2511.14461v1",
+        "pub_date": "2025-11-18",
+        "summary": "Using multiple carousels, lists that wrap around and can be scrolled, is the basis for offering content in most contemporary movie streaming platforms. Carousels allow for highlighting different aspects of users' taste, that fall in categories such as genres and authors. However, while carousels offer structure and greater ease of navigation, they alone do not increase diversity in recommendations, while this is essential to keep users engaged. In this work we propose several approaches to effectively increase item diversity within the domain of book recommendations, on top of a collaborative filtering algorithm. These approaches are intended to improve book recommendations in the web catalogs of public libraries. Furthermore, we introduce metrics to evaluate the resulting strategies, and show that the proposed system finds a suitable balance between accuracy and beyond-accuracy aspects.",
+        "translated": "使用多个轮播图和可滚动的列表，是当前大多数电影流媒体平台呈现内容的基础。轮播图能够突出展示用户偏好的不同方面，如类型与作者等分类。然而，尽管轮播图提供了结构化布局并提升了导航便捷性，但它们本身并不能有效提升推荐结果的多样性，而多样性对于维持用户参与度至关重要。在本研究中，我们提出若干方法，在协同过滤算法的基础上，有效提升图书推荐领域的物料多样性，以改善公共图书馆网站目录中的图书推荐效果。此外，我们引入了评估所提策略的指标，并表明该系统能够在准确率与超越准确率的其他维度之间取得合适的平衡。",
+        "translated_title": "多轮书推荐的有效多样性增强",
+        "label": [
+            "召回",
+            "通用推荐技术"
+        ],
+        "label_reason": "聚焦图书推荐多样性，属召回层优化",
+        "relevance_score": 6,
+        "novelty_score": 5,
+        "novelty_reason": "改进CF算法多样性，非全新范式"
+    },
+    {
+        "title": "Jasper-Token-Compression-600M Technical Report",
+        "url": "http://arxiv.org/abs/2511.14405v1",
+        "pub_date": "2025-11-18",
+        "summary": "This technical report presents the training methodology and evaluation results of the open-source Jasper-Token-Compression-600M model, released in November 2025. Building on previous distillation-based recipes from the English Stella and Jasper models, we successfully extend this approach to a bilingual (English and Chinese) domain, further enhancing model performance through the incorporation of contrastive learning. A key innovation of our model is the introduction of a one-dimensional convolution-based token compression module. We dynamically adjust the compression rate during training, enabling the model to learn more robust and efficient compressed text representations. By combining knowledge distillation with token compression techniques, we achieve significant improvements in both embedding quality and inference efficiency. Our model performs with higher efficiency than a traditional 0.6B model while achieving performance comparable to that of an 8B model. For more information on the model release, visit: https://huggingface.co/infgrad/Jasper-Token-Compression-600M.",
+        "translated": "本技术报告介绍了于2025年11月发布的开源Jasper-Token-Compression-600M模型的训练方法与评估结果。在先前基于蒸馏的英文Stella和Jasper模型经验基础上，我们成功将该方法扩展至双语（英文与中文）领域，并通过引入对比学习进一步提升模型性能。本模型的关键创新在于引入了一种基于一维卷积的Token压缩模块。我们在训练过程中动态调整压缩率，使模型能够学习到更鲁棒且高效的压缩文本表示。通过结合知识蒸馏与Token压缩技术，我们在嵌入质量与推理效率方面均取得了显著提升。该模型在效率上优于传统0.6B模型，同时其性能可媲美8B模型。有关模型发布详情，请访问：https://huggingface.co/infgrad/Jasper-Token-Compression-600M。",
+        "translated_title": "Jasper-Token-Compression-600M 技术报告",
+        "label": [],
+        "label_reason": "模型压缩技术非推荐系统核心环节",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "常规压缩方法，无推荐领域创新"
+    },
+    {
+        "title": "Infer As You Train: A Symmetric Paradigm of Masked Generative for Click-Through Rate Prediction",
+        "url": "http://arxiv.org/abs/2511.14403v1",
+        "pub_date": "2025-11-18",
+        "summary": "Generative models are increasingly being explored in click-through rate (CTR) prediction field to overcome the limitations of the conventional discriminative paradigm, which rely on a simple binary classification objective. However, existing generative models typically confine the generative paradigm to the training phase, primarily for representation learning. During online inference, they revert to a standard discriminative paradigm, failing to leverage their powerful generative capabilities to further improve prediction accuracy. This fundamental asymmetry between the training and inference phases prevents the generative paradigm from realizing its full potential. To address this limitation, we propose the Symmetric Masked Generative Paradigm for CTR prediction (SGCTR), a novel framework that establishes symmetry between the training and inference phases. Specifically, after acquiring generative capabilities by learning feature dependencies during training, SGCTR applies the generative capabilities during online inference to iteratively redefine the features of input samples, which mitigates the impact of noisy features and enhances prediction accuracy. Extensive experiments validate the superiority of SGCTR, demonstrating that applying the generative paradigm symmetrically across both training and inference significantly unlocks its power in CTR prediction.",
+        "translated": "生成式模型正越来越多地被应用于点击率（CTR）预测领域，以克服传统判别式范式的局限性，后者依赖于简单的二分类目标。然而，现有的生成式模型通常仅将生成范式局限于训练阶段，主要用于表示学习；在在线推理阶段，它们则退回到标准的判别式范式，未能充分利用其强大的生成能力进一步提升预测精度。这种训练与推理阶段之间根本性的不对称性，阻碍了生成范式潜力的充分发挥。为解决这一局限，我们提出了用于CTR预测的对称掩码生成范式（SGCTR），这是一种新颖框架，旨在建立训练与推理阶段之间的对称性。具体而言，在训练阶段通过学习特征依赖关系获得生成能力后，SGCTR在在线推理阶段应用该生成能力，迭代性地重新定义输入样本的特征，从而缓解噪声特征的影响并提升预测准确性。大量实验验证了SGCTR的优越性，表明在训练与推理阶段对称地应用生成范式，能显著释放其在CTR预测中的潜力。",
+        "translated_title": "边训练边推理：一种用于点击率预测的对称式掩码生成范式",
+        "label": [
+            "精排（Ranking）"
+        ],
+        "label_reason": "聚焦CTR预测，属推荐系统精排环节",
+        "relevance_score": 8,
+        "novelty_score": 9,
+        "novelty_reason": "提出训练推理对称生成范式，显著提升效果"
+    },
+    {
+        "title": "PathMind: A Retrieve-Prioritize-Reason Framework for Knowledge Graph Reasoning with Large Language Models",
+        "url": "http://arxiv.org/abs/2511.14256v1",
+        "pub_date": "2025-11-18",
+        "summary": "Knowledge graph reasoning (KGR) is the task of inferring new knowledge by performing logical deductions on knowledge graphs. Recently, large language models (LLMs) have demonstrated remarkable performance in complex reasoning tasks. Despite promising success, current LLM-based KGR methods still face two critical limitations. First, existing methods often extract reasoning paths indiscriminately, without assessing their different importance, which may introduce irrelevant noise that misleads LLMs. Second, while many methods leverage LLMs to dynamically explore potential reasoning paths, they require high retrieval demands and frequent LLM calls. To address these limitations, we propose PathMind, a novel framework designed to enhance faithful and interpretable reasoning by selectively guiding LLMs with important reasoning paths. Specifically, PathMind follows a \"Retrieve-Prioritize-Reason\" paradigm. First, it retrieves a query subgraph from KG through the retrieval module. Next, it introduces a path prioritization mechanism that identifies important reasoning paths using a semantic-aware path priority function, which simultaneously considers the accumulative cost and the estimated future cost for reaching the target. Finally, PathMind generates accurate and logically consistent responses via a dual-phase training strategy, including task-specific instruction tuning and path-wise preference alignment. Extensive experiments on benchmark datasets demonstrate that PathMind consistently outperforms competitive baselines, particularly on complex reasoning tasks with fewer input tokens, by identifying essential reasoning paths.",
+        "translated": "知识图谱推理（KGR）是在知识图谱上进行逻辑推演以推断新知识的任务。近期，大语言模型（LLM）在复杂推理任务中展现出卓越性能。尽管成果显著，当前基于LLM的KGR方法仍面临两大关键局限：首先，现有方法常无差别提取推理路径，未评估不同路径的重要性，可能引入无关噪声干扰LLM；其次，虽多数方法借助LLM动态探索潜在推理路径，但其对检索需求高、频繁调用LLM。为解决上述问题，我们提出PathMind框架，旨在通过选择性引导重要推理路径，提升LLM推理的忠实性与可解释性。具体而言，PathMind遵循“检索-优先-推理”范式：首先，通过检索模块从知识图谱中获取查询子图；其次，引入路径优先机制，利用语义感知的路径优先函数识别重要推理路径，该函数同时考虑累积成本与抵达目标节点的预估未来成本；最后，通过双阶段训练策略生成准确且逻辑一致的响应，包含任务特定指令调优与路径级偏好对齐。大量实验表明，PathMind在基准数据集上持续优于主流基线方法，尤其在输入token较少的复杂推理任务中，通过精准识别关键推理路径实现显著性能提升。",
+        "translated_title": "PathMind：一种基于大语言模型的知识图谱推理检索-优先-推理框架",
+        "label": [],
+        "label_reason": "论文聚焦知识图谱推理，非推荐系统相关",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "路径优先机制创新，但非推荐场景应用"
+    },
+    {
+        "title": "LLM-Aligned Geographic Item Tokenization for Local-Life Recommendation",
+        "url": "http://arxiv.org/abs/2511.14221v1",
+        "pub_date": "2025-11-18",
+        "summary": "Recent advances in Large Language Models (LLMs) have enhanced text-based recommendation by enriching traditional ID-based methods with semantic generalization capabilities. Text-based methods typically encode item textual information via prompt design and generate discrete semantic IDs through item tokenization. However, in domain-specific tasks such as local-life services, simply injecting location information into prompts fails to capture fine-grained spatial characteristics and real-world distance awareness among items. To address this, we propose LGSID, an LLM-Aligned Geographic Item Tokenization Framework for Local-life Recommendation. This framework consists of two key components: (1) RL-based Geographic LLM Alignment, and (2) Hierarchical Geographic Item Tokenization. In the RL-based alignment module, we initially train a list-wise reward model to capture real-world spatial relationships among items. We then introduce a novel G-DPO algorithm that uses pre-trained reward model to inject generalized spatial knowledge and collaborative signals into LLMs while preserving their semantic understanding. Furthermore, we propose a hierarchical geographic item tokenization strategy, where primary tokens are derived from discrete spatial and content attributes, and residual tokens are refined using the aligned LLM's geographic representation vectors. Extensive experiments on real-world Kuaishou industry datasets show that LGSID consistently outperforms state-of-the-art discriminative and generative recommendation models. Ablation studies, visualizations, and case studies further validate its effectiveness.",
+        "translated": "大语言模型（LLMs）的最新进展通过为传统的基于ID的推荐方法赋予语义泛化能力，提升了文本驱动的推荐效果。文本类方法通常通过提示设计编码物品文本信息，并通过物品分词生成离散语义ID。然而，在本地生活服务等特定领域任务中，仅将地理位置信息注入提示无法捕捉物品间精细的空间特征和现实世界中的距离感知能力。为此，我们提出LGSID——一种面向本地生活推荐的、与LLM对齐的地理物品分词框架。该框架包含两个关键组件：(1) 基于强化学习的地理LLM对齐模块，以及(2) 分层地理物品分词策略。在基于强化学习的对齐模块中，我们首先训练一个列表级奖励模型以捕捉物品间的现实空间关系；随后引入一种新颖的G-DPO算法，利用预训练奖励模型将泛化的空间知识及协同信号注入LLM，同时保留其语义理解能力。此外，我们提出一种分层地理物品分词策略，其中主分词来源于离散的空间与内容属性，残差分词则借助对齐后的LLM地理表征向量进行精细化处理。在真实世界快手行业数据集上的大量实验表明，LGSID持续优于当前最先进的判别式与生成式推荐模型。消融研究、可视化分析及案例分析进一步验证了其有效性。",
+        "translated_title": "面向本地生活推荐的大语言模型对齐地理物料分词",
+        "label": [
+            "LLM生成式推荐",
+            "召回",
+            "精排"
+        ],
+        "label_reason": "结合LLM与地理信息优化推荐，聚焦本地生活场景。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出G-DPO算法与分层地理Token化，显著提升空间建模能力。"
+    },
+    {
+        "title": "WebRec: Enhancing LLM-based Recommendations with Attention-guided RAG from Web",
+        "url": "http://arxiv.org/abs/2511.14182v1",
+        "pub_date": "2025-11-18",
+        "summary": "Recommender systems play a vital role in alleviating information overload and enriching users' online experience. In the era of large language models (LLMs), LLM-based recommender systems have emerged as a prevalent paradigm for advancing personalized recommendations. Recently, retrieval-augmented generation (RAG) has drawn growing interest to facilitate the recommendation capability of LLMs, incorporating useful information retrieved from external knowledge bases. However, as a rich source of up-to-date information, the web remains under-explored by existing RAG-based recommendations. In particular, unique challenges are posed from two perspectives: one is to generate effective queries for web retrieval, considering the inherent knowledge gap between web search and recommendations; another challenge lies in harnessing online websites that contain substantial noisy content. To tackle these limitations, we propose WebRec, a novel web-based RAG framework, which takes advantage of the reasoning capability of LLMs to interpret recommendation tasks into queries of user preferences that cater to web retrieval. Moreover, given noisy web-retrieved information, where relevant pieces of evidence are scattered far apart, an insightful MP-Head is designed to enhance LLM attentions between distant tokens of relevant information via message passing. Extensive experiments have been conducted to demonstrate the effectiveness of our proposed web-based RAG methods in recommendation scenarios.",
+        "translated": "推荐系统在缓解信息过载、丰富用户在线体验方面发挥着至关重要的作用。在大语言模型（LLMs）时代，基于LLM的推荐系统已成为推动个性化推荐发展的主流范式。近年来，检索增强生成（RAG）因能够通过从外部知识库中检索有用信息来提升LLM的推荐能力而受到广泛关注。然而，作为丰富的实时信息来源，网络在现有基于RAG的推荐方法中仍被严重忽视。尤其地，这一问题从两个角度提出了独特挑战：其一是如何为网络检索生成有效的查询语句，需考虑网络搜索与推荐任务之间固有的知识鸿沟；另一挑战在于有效利用包含大量噪声内容的在线网页。为应对上述局限性，我们提出WebRec，一种新颖的基于网络的RAG框架，该框架借助LLM的推理能力将推荐任务转化为适配网络检索的用户偏好查询语句。此外，鉴于网络检索结果常包含分散且不连续的相关证据片段，我们设计了一种具有洞察力的MP-Head模块，通过消息传递机制增强LLM对远距离相关信息片段间注意力权重的捕捉能力。大量的实验已验证了我们在推荐场景下所提出的基于网络的RAG方法的有效性。",
+        "translated_title": "WebRec：基于注意力引导的检索增强生成技术提升大语言模型驱动的推荐系统",
+        "label": [
+            "LLM生成式推荐",
+            "重排"
+        ],
+        "label_reason": "直接构建LLM驱动的RAG推荐框架，聚焦召回与重排环节",
+        "relevance_score": 10,
+        "novelty_score": 9,
+        "novelty_reason": "创新性设计MP-Head增强长距离注意力，提升信息整合能力"
+    },
+    {
+        "title": "Applying Relation Extraction and Graph Matching to Answering Multiple Choice Questions",
+        "url": "http://arxiv.org/abs/2511.14144v1",
+        "pub_date": "2025-11-18",
+        "summary": "In this research, we combine Transformer-based relation extraction with matching of knowledge graphs (KGs) and apply them to answering multiple-choice questions (MCQs) while maintaining the traceability of the output process. KGs are structured representations of factual knowledge consisting of entities and relations. Due to the high construction cost, they had been regarded as static databases with validated links. However, the recent development of Transformer-based relation extraction (RE) methods has enabled us to generate KGs dynamically by giving them natural language texts, and thereby opened the possibility for representing the meaning of the input sentences with the created KGs. Using this effect, we propose a method that answers MCQs in the \"fill-in-the-blank\" format, taking care of the point that RE methods generate KGs that represent false information if provided with factually incorrect texts. We measure the truthfulness of each question sentence by (i) converting the sentence into a relational graph using an RE method and (ii) verifying it against factually correct KGs under the closed-world assumption. The experimental results demonstrate that our method correctly answers up to around 70% of the questions, while providing traceability of the procedure. We also highlight that the question category has a vast influence on the accuracy.",
+        "translated": "在本研究中，我们结合基于 Transformer 的关系抽取方法与知识图谱（KGs）的匹配，并将其应用于多选题（MCQs）解答，同时保持输出过程的可追溯性。知识图谱是对事实性知识的结构化表示，由实体和关系构成。由于构建成本高昂，此前其被视为具有验证链接的静态数据库。然而，近期基于 Transformer 的关系抽取（RE）方法的发展使我们能够通过输入自然语言文本动态生成知识图谱，从而为用所生成的知识图谱表征输入句子的语义提供了可能。利用这一特性，我们提出了一种以“填空”格式解答多选题的方法，并特别考虑了关系抽取方法若面对事实性错误的文本时，会生成代表虚假信息的知识图谱的问题。我们通过以下两步衡量每个问题句子的真实性：(i) 使用关系抽取方法将句子转换为关系图；(ii) 在闭世界假设下，将该图与事实正确的知识图谱进行比对验证。实验结果表明，我们的方法可正确解答约 70% 的题目，同时提供过程的可追溯性。此外，我们还指出题目类别对准确率具有显著影响。",
+        "translated_title": "应用关系抽取与图匹配回答多选题",
+        "label": [],
+        "label_reason": "研究聚焦NLP与知识图谱，非推荐系统相关",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "方法改进RE+KG匹配，但无推荐场景应用"
+    },
+    {
+        "title": "PRISM: Prompt-Refined In-Context System Modelling for Financial Retrieval",
+        "url": "http://arxiv.org/abs/2511.14130v1",
+        "pub_date": "2025-11-18",
+        "summary": "With the rapid progress of large language models (LLMs), financial information retrieval has become a critical industrial application. Extracting task-relevant information from lengthy financial filings is essential for both operational and analytical decision-making. The FinAgentBench dataset formalizes this problem through two tasks: document ranking and chunk ranking. We present PRISM, a training-free framework that integrates refined system prompting, in-context learning (ICL), and a lightweight multi-agent system. Each component is examined extensively to reveal their synergies: prompt engineering provides precise task instructions, ICL supplies semantically relevant few-shot examples, and the multi-agent system models coordinated scoring behaviour. Our best configuration achieves an NDCG@5 of 0.71818 on the restricted validation split. We further demonstrate that PRISM is feasible and robust for production-scale financial retrieval. Its modular, inference-only design makes it practical for real-world use cases. The source code is released at https://bit.ly/prism-ailens.",
+        "translated": "随着大语言模型（LLM）的快速发展，金融信息检索已成为一项关键的工业应用。从冗长的财务文件中提取与任务相关的信息，对运营和分析决策至关重要。FinAgentBench 数据集通过两个任务形式化了该问题：文档排序与片段排序。我们提出了 PRISM，一个无需训练的框架，融合了精细化系统提示、上下文学习（ICL）以及轻量级多智能体系统。每个组件均经过深入研究以揭示其协同效应：提示工程提供精确的任务指令，上下文学习提供语义相关的少样本示例，而多智能体系统建模协调评分行为。在受限验证集上，我们的最佳配置实现了 0.71818 的 NDCG@5。我们进一步证明 PRISM 在生产规模金融检索场景中具备可行性与鲁棒性。其模块化、仅用于推理的设计使其适用于真实世界的应用场景。源代码已发布于 https://bit.ly/prism-ailens。",
+        "translated_title": "PRISM：面向金融检索的提示精炼上下文系统建模",
+        "label": [
+            "通用推荐技术"
+        ],
+        "label_reason": "聚焦金融信息检索，与推荐系统无直接关联",
+        "relevance_score": 4,
+        "novelty_score": 6,
+        "novelty_reason": "模块化设计实用，但非推荐系统专用创新"
+    },
+    {
+        "title": "NeuroPath: Neurobiology-Inspired Path Tracking and Reflection for Semantically Coherent Retrieval",
+        "url": "http://arxiv.org/abs/2511.14096v1",
+        "pub_date": "2025-11-18",
+        "summary": "Retrieval-augmented generation (RAG) greatly enhances large language models (LLMs) performance in knowledge-intensive tasks. However, naive RAG methods struggle with multi-hop question answering due to their limited capacity to capture complex dependencies across documents. Recent studies employ graph-based RAG to capture document connections. However, these approaches often result in a loss of semantic coherence and introduce irrelevant noise during node matching and subgraph construction. To address these limitations, we propose NeuroPath, an LLM-driven semantic path tracking RAG framework inspired by the path navigational planning of place cells in neurobiology. It consists of two steps: Dynamic Path Tracking and Post-retrieval Completion. Dynamic Path Tracking performs goal-directed semantic path tracking and pruning over the constructed knowledge graph (KG), improving noise reduction and semantic coherence. Post-retrieval Completion further reinforces these benefits by conducting second-stage retrieval using intermediate reasoning and the original query to refine the query goal and complete missing information in the reasoning path. NeuroPath surpasses current state-of-the-art baselines on three multi-hop QA datasets, achieving average improvements of 16.3% on recall@2 and 13.5% on recall@5 over advanced graph-based RAG methods. Moreover, compared to existing iter-based RAG methods, NeuroPath achieves higher accuracy and reduces token consumption by 22.8%. Finally, we demonstrate the robustness of NeuroPath across four smaller LLMs (Llama3.1, GLM4, Mistral0.3, and Gemma3), and further validate its scalability across tasks of varying complexity. Code is available at https://github.com/KennyCaty/NeuroPath.",
+        "translated": "检索增强生成（RAG）极大地提升了大语言模型（LLM）在知识密集型任务中的表现。然而，朴素的 RAG 方法由于难以捕捉文档间复杂的依赖关系，在多跳问答任务中表现不佳。近期研究采用基于图结构的 RAG 来建模文档间的关联关系。但这些方法往往导致语义连贯性下降，并在节点匹配与子图构建过程中引入无关噪声。为解决上述局限，我们提出 NeuroPath，这是一种受神经生物学中位置细胞路径导航规划启发的、由 LLM 驱动的语义路径追踪 RAG 框架。该框架包含两个阶段：动态路径追踪与后检索完成。动态路径追踪在构建的知识图谱（KG）上执行目标导向的语义路径追踪与剪枝，提升噪声抑制能力并增强语义连贯性。后检索完成阶段进一步通过中间推理结果与原始查询进行第二阶段检索，以精炼查询目标并补全推理路径中的缺失信息。NeuroPath 在三个多跳问答数据集上超越现有最先进基线方法，相较先进的图结构 RAG 方法，其 recall@2 和 recall@5 平均分别提升 16.3% 和 13.5%。此外，与现有的迭代式 RAG 方法相比，NeuroPath 在准确率上更高，同时减少 22.8% 的 token 消耗。最后，我们在四个较小规模的 LLM（Llama3.1、GLM4、Mistral0.3、Gemma3）上验证了 NeuroPath 的鲁棒性，并进一步证明其在不同复杂度任务上的可扩展性。代码开源于 https://github.com/KennyCaty/NeuroPath。",
+        "translated_title": "NeuroPath：受神经生物学启发的路径追踪与反思机制，用于语义连贯的检索",
+        "label": [
+            "通用推荐技术",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "论文聚焦RAG框架优化，与推荐系统间接相关。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "引入神经科学启发路径跟踪机制，提升多跳问答效果。"
+    },
+    {
+        "title": "CORGI: Efficient Pattern Matching With Quadratic Guarantees",
+        "url": "http://arxiv.org/abs/2511.13942v1",
+        "pub_date": "2025-11-17",
+        "summary": "Rule-based systems must solve complex matching problems within tight time constraints to be effective in real-time applications, such as planning and reactive control for AI agents, as well as low-latency relational database querying. Pattern-matching systems can encounter issues where exponential time and space are required to find matches for rules with many underconstrained variables, or which produce combinatorial intermediate partial matches (but are otherwise well-constrained). When online AI systems automatically generate rules from example-driven induction or code synthesis, they can easily produce worst-case matching patterns that slow or halt program execution by exceeding available memory. In our own work with cognitive systems that learn from example, we've found that aggressive forms of anti-unification-based generalization can easily produce these circumstances. To make these systems practical without hand-engineering constraints or succumbing to unpredictable failure modes, we introduce a new matching algorithm called CORGI (Collection-Oriented Relational Graph Iteration). Unlike RETE-based approaches, CORGI offers quadratic time and space guarantees for finding single satisficing matches, and the ability to iteratively stream subsequent matches without committing entire conflict sets to memory. CORGI differs from RETE in that it does not have a traditional $β$-memory for collecting partial matches. Instead, CORGI takes a two-step approach: a graph of grounded relations is built/maintained in a forward pass, and an iterator generates matches as needed by working backward through the graph. This approach eliminates the high-latency delays and memory overflows that can result from populating full conflict sets. In a performance evaluation, we demonstrate that CORGI significantly outperforms RETE implementations from SOAR and OPS5 on a simple combinatorial matching task.",
+        "translated": "基于规则的系统必须在严格的时延约束下解决复杂的匹配问题，以在实时应用场景（如AI代理的规划与反应式控制、低延迟关系数据库查询）中发挥实效。模式匹配系统可能面临如下问题：当规则包含大量未约束变量时，其搜索过程需要指数级的时间和空间；或当规则虽整体约束良好但生成组合性的中间部分匹配时，也会导致性能瓶颈。当在线AI系统通过示例驱动的归纳或代码合成自动产生规则时，极易生成最坏情况下的匹配模式，从而因超出可用内存而导致程序执行缓慢甚至停滞。在我们自身关于从示例中学习的认知系统的研究中，发现基于反统一化的激进泛化方法极易引发上述情形。为使这类系统无需人工设计约束、亦不陷入不可预测的故障模式而具备实用性，我们提出一种新的匹配算法——CORGI（面向集合的关系图迭代）。与基于RETE的方法不同，CORGI对寻找单个可行匹配提供二次时间与空间保障，并能迭代式地流式输出后续匹配结果，而不必将完整的冲突集存储于内存中。CORGI不同于RETE之处在于，它不具备传统用于收集部分匹配的β记忆结构。相反，CORGI采用两步策略：首先，在前向传递阶段构建并维护一个接地关系图；随后，通过逆向遍历该图，由迭代器按需生成匹配结果。这种机制有效消除了因填充完整冲突集而导致的高延迟与内存溢出问题。在性能评估中，我们证明CORGI在一项简单的组合匹配任务上显著优于SOAR与OPS5等系统所实现的RETE方案。",
+        "translated_title": "CORGI：具有二次保证的高效模式匹配",
+        "label": [],
+        "label_reason": "论文聚焦规则匹配算法，与推荐系统无关",
+        "relevance_score": 2,
+        "novelty_score": 7,
+        "novelty_reason": "提出新图迭代算法，但非为推荐设计"
+    },
+    {
+        "title": "TaoSearchEmb: A Multi-Objective Reinforcement Learning Framework for Dense Retrieval in Taobao Search",
+        "url": "http://arxiv.org/abs/2511.13885v1",
+        "pub_date": "2025-11-17",
+        "summary": "Dense retrieval, as the core component of e-commerce search engines, maps user queries and items into a unified semantic space through pre-trained embedding models to enable large-scale real-time semantic retrieval. Despite the rapid advancement of LLMs gradually replacing traditional BERT architectures for embedding, their training paradigms still adhere to BERT-like supervised fine-tuning and hard negative mining strategies. This approach relies on complex offline hard negative sample construction pipelines, which constrain model iteration efficiency and hinder the evolutionary potential of semantic representation capabilities. Besides, existing multi-task learning frameworks face the seesaw effect when simultaneously optimizing semantic relevance and non-relevance objectives. In this paper, we propose Retrieval-GRPO, a multi-objective reinforcement learning-based dense retrieval framework designed to address these challenges. The method eliminates offline hard negative sample construction by dynamically retrieving Top-K candidate products for each query during training, while introducing a relevance LLM as a reward model to generate real-time feedback. Specifically, the retrieval model dynamically optimizes embedding representations through reinforcement learning, with reward signals combining LLM-generated relevance scores, product quality scores, and multi-way exclusivity metrics to achieve multi-objective user preference alignment and real-time error correction. This mechanism not only removes dependency on hard negatives but also mitigates the seesaw effect through collaborative multi-objective optimization, significantly enhancing the model's semantic generalization capability for complex long-tail queries. Extensive offline and online experiments validate the effectiveness of Retrieval-GRPO, which has been deployed on China's largest e-commerce platform.",
+        "translated": "密集检索作为电子商务搜索引擎的核心组件，通过预训练嵌入模型将用户查询与商品映射到统一的语义空间，以实现大规模实时语义检索。尽管大语言模型（LLM）正逐步取代传统的BERT架构用于嵌入生成，其训练范式仍沿用类似于BERT的监督微调及硬负例挖掘策略。该方法依赖复杂的离线硬负例样本构建流水线，制约了模型迭代效率，并限制了语义表征能力的演化潜力。此外，现有多任务学习框架在同时优化语义相关性与非相关性目标时面临“跷跷板效应”。本文提出Retrieval-GRPO，一种基于多目标强化学习的密集检索框架，旨在解决上述挑战。该方法通过在训练过程中为每个查询动态检索Top-K候选商品，消除对离线硬负例构造的依赖；并引入一个相关性LLM作为奖励模型，生成实时反馈。具体而言，检索模型通过强化学习动态优化嵌入表示，其奖励信号结合LLM生成的相关性评分、商品质量评分及多路互斥性度量指标，实现多目标用户偏好对齐与实时误差修正。该机制不仅消除了对硬负例的依赖，还通过协同多目标优化缓解“跷跷板效应”，显著提升了模型对复杂长尾查询的语义泛化能力。大量离线与在线实验验证了Retrieval-GRPO的有效性，该模型已部署于中国最大电商平台。",
+        "translated_title": "TaoSearchEmb：面向淘宝搜索密集召回的多目标强化学习框架",
+        "label": [
+            "召回",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "基于RL的密集召回框架，结合LLM反馈优化嵌入",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新性引入LLM奖励模型与多目标强化学习"
     }
 ]
