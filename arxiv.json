@@ -12108,5 +12108,170 @@
         "relevance_score": 1,
         "novelty_score": 7,
         "novelty_reason": "提出多尺度图结构对比学习框架，提升跨模态表示"
+    },
+    {
+        "title": "CroPS: Improving Dense Retrieval with Cross-Perspective Positive Samples in Short-Video Search",
+        "url": "http://arxiv.org/abs/2511.15443v1",
+        "pub_date": "2025-11-19",
+        "summary": "Dense retrieval has become a foundational paradigm in modern search systems, especially on short-video platforms. However, most industrial systems adopt a self-reinforcing training pipeline that relies on historically exposed user interactions for supervision. This paradigm inevitably leads to a filter bubble effect, where potentially relevant but previously unseen content is excluded from the training signal, biasing the model toward narrow and conservative retrieval. In this paper, we present CroPS (Cross-Perspective Positive Samples), a novel retrieval data engine designed to alleviate this problem by introducing diverse and semantically meaningful positive examples from multiple perspectives. CroPS enhances training with positive signals derived from user query reformulation behavior (query-level), engagement data in recommendation streams (system-level), and world knowledge synthesized by large language models (knowledge-level). To effectively utilize these heterogeneous signals, we introduce a Hierarchical Label Assignment (HLA) strategy and a corresponding H-InfoNCE loss that together enable fine-grained, relevance-aware optimization. Extensive experiments conducted on Kuaishou Search, a large-scale commercial short-video search platform, demonstrate that CroPS significantly outperforms strong baselines both offline and in live A/B tests, achieving superior retrieval performance and reducing query reformulation rates. CroPS is now fully deployed in Kuaishou Search, serving hundreds of millions of users daily.",
+        "translated": "稠密检索已成为现代搜索系统的基础范式，尤其在短视频平台中尤为关键。然而，大多数工业级系统采用一种自强化训练流程，其监督信号依赖于历史上已曝光的用户交互行为。这种范式不可避免地导致“信息茧房”效应——那些潜在相关但此前未被曝光的内容被排除在训练信号之外，致使模型偏向窄化保守的检索倾向。本文提出 CroPS（Cross-Perspective Positive Samples），一种新型检索数据引擎，旨在通过引入来自多视角的多样化且语义丰富的正样本缓解该问题。CroPS 通过三类异构正样本增强训练：用户查询重写行为所衍生的查询级别正信号、推荐流中的用户参与数据所贡献的系统级别正信号，以及由大语言模型合成的世界知识所提供的知识级别正信号。为有效利用这些异质信号，我们设计了层级标签分配（Hierarchical Label Assignment, HLA）策略与对应的 H-InfoNCE 损失函数，共同实现细粒度、相关性感知的优化。在快手搜索（Kuaishou Search）这一大规模商业短视频搜索平台上进行的广泛实验表明，CroPS 在离线评估和线上 A/B 测试中均显著优于主流基线方法，取得更优的检索效果并降低用户查询重写率。目前，CroPS 已全面部署于快手搜索系统，日均服务数亿用户。",
+        "translated_title": "CroPS：通过跨视角正样本提升短视频搜索中的稠密检索",
+        "label": [
+            "召回",
+            "负采样与对比学习"
+        ],
+        "label_reason": "聚焦检索召回优化，引入多视角正样本缓解滤泡效应",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "创新性引入三层次正样本及HLA策略提升训练信号多样性"
+    },
+    {
+        "title": "HV-Attack: Hierarchical Visual Attack for Multimodal Retrieval Augmented Generation",
+        "url": "http://arxiv.org/abs/2511.15435v1",
+        "pub_date": "2025-11-19",
+        "summary": "Advanced multimodal Retrieval-Augmented Generation (MRAG) techniques have been widely applied to enhance the capabilities of Large Multimodal Models (LMMs), but they also bring along novel safety issues. Existing adversarial research has revealed the vulnerability of MRAG systems to knowledge poisoning attacks, which fool the retriever into recalling injected poisoned contents. However, our work considers a different setting: visual attack of MRAG by solely adding imperceptible perturbations at the image inputs of users, without manipulating any other components. This is challenging due to the robustness of fine-tuned retrievers and large-scale generators, and the effect of visual perturbation may be further weakened by propagation through the RAG chain. We propose a novel Hierarchical Visual Attack that misaligns and disrupts the two inputs (the multimodal query and the augmented knowledge) of MRAG's generator to confuse its generation. We further design a hierarchical two-stage strategy to obtain misaligned augmented knowledge. We disrupt the image input of the retriever to make it recall irrelevant knowledge from the original database, by optimizing the perturbation which first breaks the cross-modal alignment and then disrupts the multimodal semantic alignment. We conduct extensive experiments on two widely-used MRAG datasets: OK-VQA and InfoSeek. We use CLIP-based retrievers and two LMMs BLIP-2 and LLaVA as generators. Results demonstrate the effectiveness of our visual attack on MRAG through the significant decrease in both retrieval and generation performance.",
+        "translated": "先进的多模态检索增强生成（MRAG）技术已被广泛应用于提升大型多模态模型（LMMs）的能力，但也随之带来了新的安全风险。现有对抗性研究已揭示MRAG系统易受知识投毒攻击的脆弱性，此类攻击通过误导检索器召回注入的有毒内容实现。然而，我们的工作考虑的是另一种场景：仅通过对用户图像输入添加不可感知扰动，实施视觉攻击以破坏MRAG系统，而不对其他组件进行任何操作。这极具挑战性，原因在于经过微调的检索器与大规模生成器具有较强的鲁棒性，且视觉扰动在RAG链路中传播时其效果可能进一步被削弱。我们提出了一种新颖的分层视觉攻击方法，通过干扰和破坏MRAG生成器的两个输入（多模态查询与增强知识），混淆其生成过程。我们进一步设计了一种分层两阶段策略，以获取错位的增强知识：首先破坏检索器的图像输入，使其从原始数据库中召回无关知识；该扰动优化过程先打破跨模态对齐，再干扰多模态语义对齐。我们在两个常用的MRAG数据集OK-VQA和InfoSeek上进行了大量实验，使用基于CLIP的检索器及两种LMM——BLIP-2和LLaVA作为生成器。实验结果表明，我们的视觉攻击显著降低了检索与生成性能，验证了其有效性。",
+        "translated_title": "HV-Attack：面向多模态检索增强生成的分层视觉攻击",
+        "label": [
+            "多模态推荐",
+            "推荐系统评估"
+        ],
+        "label_reason": "研究视觉攻击对多模态检索生成的影响，间接关联推荐系统安全评估。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出分层视觉对抗策略，针对性破坏跨模态对齐，具创新性改进。"
+    },
+    {
+        "title": "NAMeGEn: Creative Name Generation via A Novel Agent-based Multiple Personalized Goal Enhancement Framework",
+        "url": "http://arxiv.org/abs/2511.15408v1",
+        "pub_date": "2025-11-19",
+        "summary": "Trained on diverse human-authored texts, Large Language Models (LLMs) unlocked the potential for Creative Natural Language Generation (CNLG), benefiting various applications like advertising and storytelling. Nevertheless, CNLG still remains difficult due to two main challenges. (1) Multi-objective flexibility: user requirements are often personalized, fine-grained, and pluralistic, which LLMs struggle to satisfy simultaneously; (2) Interpretive complexity: beyond generation, creativity also involves understanding and interpreting implicit meaning to enhance users' perception. These challenges significantly limit current methods, especially in short-form text generation, in generating creative and insightful content. To address this, we focus on Chinese baby naming, a representative short-form CNLG task requiring adherence to explicit user constraints (e.g., length, semantics, anthroponymy) while offering meaningful aesthetic explanations. We propose NAMeGEn, a novel multi-agent optimization framework that iteratively alternates between objective extraction, name generation, and evaluation to meet diverse requirements and generate accurate explanations. To support this task, we further construct a classical Chinese poetry corpus with 17k+ poems to enhance aesthetics, and introduce CBNames, a new benchmark with tailored metrics. Extensive experiments demonstrate that NAMeGEn effectively generates creative names that meet diverse, personalized requirements while providing meaningful explanations, outperforming six baseline methods spanning various LLM backbones without any training.",
+        "translated": "在多样的人类创作文本上训练的大语言模型（LLMs）释放了创意自然语言生成（CNLG）的潜力，并为广告、故事创作等应用场景提供了助力。然而，CNLG 仍面临两大核心挑战：(1) 多目标灵活性：用户需求往往高度个性化、细粒度且多元，而 LLMs 难以同时满足这些复杂要求；(2) 解释性复杂性：除生成之外，创造力还涉及对隐含语义的理解与阐释，以增强用户的感知体验。这些挑战严重制约了现有方法——特别是在短文本生成领域——创造兼具创意与洞察力的内容的能力。为此，我们聚焦中文起名这一具有代表性的短文本 CNLG 任务，该任务需严格遵循明确的用户约束（如长度、语义、人名规范），并提供具审美价值的解释说明。我们提出 NAMeGEn，一种新颖的多智能体优化框架，通过交替进行目标提取、姓名生成与评估，以满足多样化需求并生成精准的解释。为支持此任务，我们进一步构建了一个包含逾 17,000 首古典中文诗歌的语料库，以提升美学质量，并引入 CBNames 数据集，配备定制化评估指标。大量实验表明，NAMeGEn 能有效生成符合多样化、个性化需求的创意姓名，并提供有意义的解释，在无需任何训练的前提下显著优于六种基于不同 LLM 架构的基线方法。",
+        "translated_title": "NAMeGEn：基于新颖的代理多个性化目标增强框架的创意名称生成",
+        "label": [],
+        "label_reason": "论文聚焦创意文本生成，与推荐系统无直接关联。",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "提出多智能体框架优化个性化生成，方法具创新性。"
+    },
+    {
+        "title": "Unveiling Inference Scaling for Difference-Aware User Modeling in LLM Personalization",
+        "url": "http://arxiv.org/abs/2511.15389v1",
+        "pub_date": "2025-11-19",
+        "summary": "Large Language Models (LLMs) are increasingly integrated into users' daily lives, driving a growing demand for personalized outputs. Prior work has primarily leveraged a user's own history, often overlooking inter-user differences that are critical for effective personalization. While recent methods have attempted to model such differences, their feature extraction processes typically rely on fixed dimensions and quick, intuitive inference (System-1 thinking), limiting both the coverage and granularity of captured user differences. To address these limitations, we propose Difference-aware Reasoning Personalization (DRP), a framework that reconstructs the difference extraction mechanism by leveraging inference scaling to enhance LLM personalization. DRP autonomously identifies relevant difference feature dimensions and generates structured definitions and descriptions, enabling slow, deliberate reasoning (System-2 thinking) over user differences. Experiments on personalized review generation demonstrate that DRP consistently outperforms baseline methods across multiple metrics.",
+        "translated": "大语言模型（LLMs）正日益融入用户的日常生活，推动了对个性化输出日益增长的需求。以往的研究主要依赖于用户自身的交互历史，往往忽视了对有效个性化至关重要的用户间差异。尽管近期方法尝试建模此类差异，但其特征提取过程通常依赖固定维度和快速、直观的推理（System-1 thinking），从而限制了所捕捉用户差异的覆盖范围与颗粒度。为解决上述局限，我们提出差异感知推理个性化（Difference-aware Reasoning Personalization, DRP）框架，通过利用推理扩展重构差异提取机制，以增强LLM的个性化能力。DRP可自主识别相关差异特征维度，并生成结构化的定义与描述，支持对用户差异进行缓慢、审慎的推理（System-2 thinking）。在个性化评论生成任务上的实验表明，DRP在多个评估指标上均显著优于基线方法。",
+        "translated_title": "揭示大语言模型个性化中差异感知用户建模的推理扩展机制",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "聚焦LLM个性化，改进用户建模用于推荐输出生成",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新推理机制提升用户差异建模精度与结构化"
+    },
+    {
+        "title": "A Compliance-Preserving Retrieval System for Aircraft MRO Task Search",
+        "url": "http://arxiv.org/abs/2511.15383v1",
+        "pub_date": "2025-11-19",
+        "summary": "Aircraft Maintenance Technicians (AMTs) spend up to 30% of work time searching manuals, a documented efficiency bottleneck in MRO operations where every procedure must be traceable to certified sources. We present a compliance-preserving retrieval system that adapts LLM reranking and semantic search to aviation MRO environments by operating alongside, rather than replacing, certified legacy viewers. The system constructs revision-robust embeddings from ATA chapter hierarchies and uses vision-language parsing to structure certified content, allowing technicians to preview ranked tasks and access verified procedures in existing viewers. Evaluation on 49k synthetic queries achieves &gt;90% retrieval accuracy, while bilingual controlled studies with 10 licensed AMTs demonstrate 90.9% top-10 success rate and 95% reduction in lookup time, from 6-15 minutes to 18 seconds per task. These gains provide concrete evidence that semantic retrieval can operate within strict regulatory constraints and meaningfully reduce operational workload in real-world multilingual MRO workflows.",
+        "translated": "航空维修技术人员（AMTs）将高达30%的工作时间用于查阅手册，这是MRO作业中已证实的效率瓶颈，因为所有操作流程必须可追溯至认证来源。我们提出了一种合规性保持的检索系统，通过与经认证的传统查看器协同运行而非替代其功能，将大语言模型重排与语义搜索适配于航空MRO环境。该系统基于ATA章节层级构建抗修订的嵌入表示，并利用视觉-语言解析对认证内容进行结构化处理，使技术人员能够预览排序后的任务并直接在现有查看器中访问验证过的操作规程。在4.9万个合成查询上的评估实现了超过90%的召回准确率；而针对10名持证AMT开展的双语对照实验表明，其前10名命中成功率高达90.9%，单项任务查找时间从6–15分钟缩短至18秒，降幅达95%。这些成果为语义检索在严格监管约束下可行提供了实证依据，并切实减轻了现实世界多语言MRO工作流中的操作负荷。",
+        "translated_title": "符合性保持的航空MRO任务检索系统",
+        "label": [
+            "重排",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "利用LLM重排与语义检索优化航空维修任务搜索",
+        "relevance_score": 6,
+        "novelty_score": 7,
+        "novelty_reason": "结合LLM与合规约束的检索架构具创新性"
+    },
+    {
+        "title": "Opinion Dynamics Models for Sentiment Evolution in Weibo Blogs",
+        "url": "http://arxiv.org/abs/2511.15303v1",
+        "pub_date": "2025-11-19",
+        "summary": "Online social media platforms enable influencers to distribute content and quickly capture audience reactions, significantly shaping their promotional strategies and advertising agreements. Understanding how sentiment dynamics and emotional contagion unfold among followers is vital for influencers and marketers, as these processes shape engagement, brand perception, and purchasing behavior. While sentiment analysis tools effectively track sentiment fluctuations, dynamical models explaining their evolution remain limited, often neglecting network structures and interactions both among blogs and between their topic-focused follower groups. In this study, we tracked influential tech-focused Weibo bloggers over six months, quantifying follower sentiment from text-mined feedback. By treating each blogger's audience as a single \"macro-agent\", we find that sentiment trajectories follow the principle of iterative averaging -- a foundational mechanism in many dynamical models of opinion formation, a theoretical framework at the intersection of social network analysis and dynamical systems theory. The sentiment evolution aligns closely with opinion-dynamics models, particularly modified versions of the classical French-DeGroot model that incorporate delayed perception and distinguish between expressed and private opinions. The inferred influence structures reveal interdependencies among blogs that may arise from homophily, whereby emotionally similar users subscribe to the same blogs and collectively shape the shared sentiment expressed within these communities.",
+        "translated": "在线社交媒体平台使意见领袖能够分发内容并迅速捕捉受众反应，显著影响其推广策略和广告合作。理解追随者群体中情感动态与情绪传染的演变过程，对意见领袖和营销人员至关重要，因为这些过程塑造用户参与度、品牌认知及购买行为。尽管情感分析工具可有效追踪情感波动，但解释其演化的动力学模型仍较为有限，常忽略博客间以及以主题为中心的粉丝群体间的网络结构与互动关系。在本研究中，我们对若干聚焦科技领域的微博意见领袖进行了为期六个月的跟踪，通过文本挖掘其粉丝反馈，量化了粉丝情感变化。我们将每位意见领袖的受众视为一个“宏观代理”，发现其情感轨迹遵循迭代平均原则——这是众多意见形成动力学模型中的基础机制，属于社会网络分析与动力系统理论交叉领域的理论框架。所观察到的情感演化与意见动力学模型高度契合，特别是引入延迟感知机制并区分公开意见与私人意见的改进型法国-德格鲁特经典模型。推断出的影响结构揭示了博客之间可能因同质性而产生的相互依赖关系：情感相似的用户倾向于订阅相同博客，共同塑造社区内共有的集体情感倾向。",
+        "translated_title": "微博博文中的情感演化意见动力学模型",
+        "label": [],
+        "label_reason": "研究社交媒体情绪演化，非推荐系统核心问题",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "改进意见动力学模型，但未应用于推荐场景"
+    },
+    {
+        "title": "Selective Mixup for Debiasing Question Selection in Computerized Adaptive Testing",
+        "url": "http://arxiv.org/abs/2511.15241v1",
+        "pub_date": "2025-11-19",
+        "summary": "Computerized Adaptive Testing (CAT) is a widely used technology for evaluating learners' proficiency in online education platforms. By leveraging prior estimates of proficiency to select questions and updating the estimates iteratively based on responses, CAT enables personalized learner modeling and has attracted substantial attention. Despite this progress, most existing works focus primarily on improving diagnostic accuracy, while overlooking the selection bias inherent in the adaptive process. Selection Bias arises because the question selection is strongly influenced by the estimated proficiency, such as assigning easier questions to learners with lower proficiency and harder ones to learners with higher proficiency. Since the selection depends on prior estimation, this bias propagates into the diagnosis model, which is further amplified during iterative updates, leading to misalignment and biased predictions. Moreover, the imbalanced nature of learners' historical interactions often exacerbates the bias in diagnosis models. To address this issue, we propose a debiasing framework consisting of two key modules: Cross-Attribute Examinee Retrieval and Selective Mixup-based Regularization. First, we retrieve balanced examinees with relatively even distributions of correct and incorrect responses and use them as neutral references for biased examinees. Then, mixup is applied between each biased examinee and its matched balanced counterpart under label consistency. This augmentation enriches the diversity of bias-conflicting samples and smooths selection boundaries. Finally, extensive experiments on two benchmark datasets with multiple advanced diagnosis models demonstrate that our method substantially improves both the generalization ability and fairness of question selection in CAT.",
+        "translated": "计算机化自适应测试（CAT）是在线教育平台中广泛使用的评估学习者能力的技术。通过利用先前对学习者能力水平的估计来选择题目，并基于答题反馈迭代更新该估计，CAT实现了个性化学习者建模并受到广泛关注。尽管已有诸多进展，大多数现有工作主要聚焦于提高诊断准确性，却忽视了自适应过程中固有的选择偏差问题。选择偏差源于题目选择强烈依赖于能力估计：例如，为能力较低的学习者分配较简单题目，而为能力较高者分配较难题目。由于题目选择依赖于先前估计，该偏差会传递至诊断模型，并在迭代更新过程中进一步放大，导致预测结果出现错位与偏倚。此外，学习者历史交互行为往往分布不平衡，这进一步加剧了诊断模型中的偏差问题。为解决此问题，我们提出一种去偏框架，包含两个关键模块：跨属性考生检索与基于选择性Mixup的正则化。首先，我们检索出正确与错误回答分布相对均衡的平衡考生，并将其作为偏倚考生的中性参照样本；随后，在标签一致性约束下，将每个偏倚考生与其匹配的平衡考生进行Mixup操作。该数据增强策略丰富了偏倚冲突样本的多样性，并平滑了题目的选择边界。最后，在两个基准数据集上针对多种先进诊断模型的大量实验表明，我们的方法显著提升了CAT中题目选择的泛化能力和公平性。",
+        "translated_title": "用于计算机化自适应测试中题目选择去偏的Selective Mixup方法",
+        "label": [],
+        "label_reason": "论文聚焦教育测评，非推荐系统相关",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "方法针对测试偏差，无推荐系统创新"
+    },
+    {
+        "title": "ItemRAG: Item-Based Retrieval-Augmented Generation for LLM-Based Recommendation",
+        "url": "http://arxiv.org/abs/2511.15141v1",
+        "pub_date": "2025-11-19",
+        "summary": "Recently, large language models (LLMs) have been widely used as recommender systems, owing to their strong reasoning capability and their effectiveness in handling cold-start items. To better adapt LLMs for recommendation, retrieval-augmented generation (RAG) has been incorporated. Most existing RAG methods are user-based, retrieving purchase patterns of users similar to the target user and providing them to the LLM. In this work, we propose ItemRAG, an item-based RAG method for LLM-based recommendation that retrieves relevant items (rather than users) from item-item co-purchase histories. ItemRAG helps LLMs capture co-purchase patterns among items, which are beneficial for recommendations. Especially, our retrieval strategy incorporates semantically similar items to better handle cold-start items and uses co-purchase frequencies to improve the relevance of the retrieved items. Through extensive experiments, we demonstrate that ItemRAG consistently (1) improves the zero-shot LLM-based recommender by up to 43% in Hit-Ratio-1 and (2) outperforms user-based RAG baselines under both standard and cold-start item recommendation settings.",
+        "translated": "近年来，大语言模型（LLM）因其强大的推理能力及处理冷启动物料的有效性，被广泛应用于推荐系统。为更好地适配LLM进行推荐，研究者引入了检索增强生成（RAG）方法。现有大多数RAG方法均基于用户，通过检索与目标用户相似的用户购买模式，并将其提供给LLM。在本文中，我们提出ItemRAG，这是一种面向LLM推荐的基于物料的RAG方法，其从物料-物料共购历史中检索相关物料（而非用户）。ItemRAG有助于LLM捕捉物料间的共购模式，从而提升推荐效果。特别地，我们的检索策略结合语义相似物料以更有效地处理冷启动物料，并利用共购频次提升所检索物料的相关性。通过大量实验，我们证明ItemRAG始终能够：（1）将零样本LLM推荐系统的Hit-Ratio-1提升最高达43%；（2）在标准和冷启动物料推荐设置下均优于基于用户的RAG基线方法。",
+        "translated_title": "ItemRAG：基于物品的检索增强生成推荐方法（面向大语言模型）",
+        "label": [
+            "LLM生成式推荐",
+            "召回"
+        ],
+        "label_reason": "直接提出基于物品的RAG方法用于LLM推荐",
+        "relevance_score": 10,
+        "novelty_score": 9,
+        "novelty_reason": "创新性地将RAG应用于物品召回，显著提升冷启动效果"
+    },
+    {
+        "title": "Multi-Aspect Cross-modal Quantization for Generative Recommendation",
+        "url": "http://arxiv.org/abs/2511.15122v1",
+        "pub_date": "2025-11-19",
+        "summary": "Generative Recommendation (GR) has emerged as a new paradigm in recommender systems. This approach relies on quantized representations to discretize item features, modeling users' historical interactions as sequences of discrete tokens. Based on these tokenized sequences, GR predicts the next item by employing next-token prediction methods. The challenges of GR lie in constructing high-quality semantic identifiers (IDs) that are hierarchically organized, minimally conflicting, and conducive to effective generative model training. However, current approaches remain limited in their ability to harness multimodal information and to capture the deep and intricate interactions among diverse modalities, both of which are essential for learning high-quality semantic IDs and for effectively training GR models. To address this, we propose Multi-Aspect Cross-modal quantization for generative Recommendation (MACRec), which introduces multimodal information and incorporates it into both semantic ID learning and generative model training from different aspects. Specifically, we first introduce cross-modal quantization during the ID learning process, which effectively reduces conflict rates and thus improves codebook usability through the complementary integration of multimodal information. In addition, to further enhance the generative ability of our GR model, we incorporate multi-aspect cross-modal alignments, including the implicit and explicit alignments. Finally, we conduct extensive experiments on three well-known recommendation datasets to demonstrate the effectiveness of our proposed method.",
+        "translated": "生成式推荐（GR）已成为推荐系统领域的一种新范式。该方法依赖量化表示，将物料特征离散化，并将用户的历史交互建模为离散token序列。基于这些token化序列，GR通过下一token预测方法预测下一个物料。GR面临的核心挑战在于构建高质量的语义标识符（IDs），这些ID需具备层次结构、冲突最小化，且有利于生成模型的有效训练。然而，当前方法在利用多模态信息以及捕捉不同模态间深层次、复杂的交互关系方面仍显不足，而这两者对于学习高质量语义ID及有效训练GR模型至关重要。为此，我们提出了一种面向生成式推荐的多方面跨模态量化方法（MACRec），从多个角度引入多模态信息并将其融入语义ID学习与生成模型训练之中。具体而言，我们在ID学习阶段引入跨模态量化机制，通过融合多模态信息实现互补，有效降低冲突率，从而提升码本的可用性。此外，为进一步增强GR模型的生成能力，我们引入了多方面的跨模态对齐机制，包括隐式对齐与显式对齐。最后，我们在三个知名推荐数据集上进行了广泛的实验，以验证所提方法的有效性。",
+        "translated_title": "多方面跨模态量化用于生成式推荐",
+        "label": [
+            "LLM生成式推荐",
+            "多模态推荐"
+        ],
+        "label_reason": "直接解决生成式推荐中多模态语义ID构建问题",
+        "relevance_score": 10,
+        "novelty_score": 9,
+        "novelty_reason": "首创跨模态量化与对齐机制用于生成式推荐"
+    },
+    {
+        "title": "Beyond GeneGPT: A Multi-Agent Architecture with Open-Source LLMs for Enhanced Genomic Question Answering",
+        "url": "http://arxiv.org/abs/2511.15061v1",
+        "pub_date": "2025-11-19",
+        "summary": "Genomic question answering often requires complex reasoning and integration across diverse biomedical sources. GeneGPT addressed this challenge by combining domain-specific APIs with OpenAI's code-davinci-002 large language model to enable natural language interaction with genomic databases. However, its reliance on a proprietary model limits scalability, increases operational costs, and raises concerns about data privacy and generalization.   In this work, we revisit and reproduce GeneGPT in a pilot study using open source models, including Llama 3.1, Qwen2.5, and Qwen2.5 Coder, within a monolithic architecture; this allows us to identify the limitations of this approach. Building on this foundation, we then develop OpenBioLLM, a modular multi-agent framework that extends GeneGPT by introducing agent specialization for tool routing, query generation, and response validation. This enables coordinated reasoning and role-based task execution.   OpenBioLLM matches or outperforms GeneGPT on over 90% of the benchmark tasks, achieving average scores of 0.849 on Gene-Turing and 0.830 on GeneHop, while using smaller open-source models without additional fine-tuning or tool-specific pretraining. OpenBioLLM's modular multi-agent design reduces latency by 40-50% across benchmark tasks, significantly improving efficiency without compromising model capability. The results of our comprehensive evaluation highlight the potential of open-source multi-agent systems for genomic question answering. Code and resources are available at https://github.com/ielab/OpenBioLLM.",
+        "translated": "基因组问答通常需要跨多样化的生物医学数据源进行复杂推理与整合。GeneGPT 通过结合领域专用 API 与 OpenAI 的 code-davinci-002 大语言模型，实现了与基因组数据库的自然语言交互，从而应对这一挑战。然而，其对专有模型的依赖限制了可扩展性，增加了运营成本，并引发了关于数据隐私和泛化能力的担忧。\n\n在本研究中，我们通过使用开源模型（包括 Llama 3.1、Qwen2.5 和 Qwen2.5 Coder）在一个单体架构下重新实现并复现了 GeneGPT，以此识别该方法的局限性。在此基础上，我们进一步构建了 OpenBioLLM——一个模块化的多智能体框架，通过引入工具路由、查询生成与响应验证等智能体专业化机制，拓展了 GeneGPT 的能力。该设计支持协同推理与基于角色的任务执行。\n\nOpenBioLLM 在超过 90% 的基准任务上表现匹配或优于 GeneGPT，在 Gene-Turing 任务上的平均得分达 0.849，在 GeneHop 上达 0.830；且无需额外微调或针对特定工具的预训练，即以更小的开源模型实现上述性能。OpenBioLLM 的模块化多智能体架构显著降低了基准任务中的延迟 40–50%，大幅提升了效率，同时未牺牲模型能力。综合评估结果凸显了开源多智能体系统在基因组问答领域的应用潜力。代码与资源详见 https://github.com/ielab/OpenBioLLM。",
+        "translated_title": "超越GeneGPT：一种基于开源大语言模型的多智能体架构，用于增强基因组学问答能力",
+        "label": [],
+        "label_reason": "论文聚焦基因问答，非推荐系统相关",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "多智能体架构创新，但领域非推荐"
+    },
+    {
+        "title": "SilverTorch: A Unified Model-based System to Democratize Large-Scale Recommendation on GPUs",
+        "url": "http://arxiv.org/abs/2511.14881v1",
+        "pub_date": "2025-11-18",
+        "summary": "Serving deep learning based recommendation models (DLRM) at scale is challenging. Existing systems rely on CPU-based ANN indexing and filtering services, suffering from non-negligible costs and forgoing joint optimization opportunities. Such inefficiency makes them difficult to support more complex model architectures, such as learned similarities and multi-task retrieval.   In this paper, we propose SilverTorch, a model-based system for serving recommendation models on GPUs. SilverTorch unifies model serving by replacing standalone indexing and filtering services with layers of served models. We propose a Bloom index algorithm on GPUs for feature filtering and a tensor-native fused Int8 ANN kernel on GPUs for nearest neighbor search. We further co-design the ANN search index and filtering index to reduce GPU memory utilization and eliminate unnecessary computation. Benefit from SilverTorch's serving paradigm, we introduce a OverArch scoring layer and a Value Model to aggregate results across multi-tasks. These advancements improve the accuracy for retrieval and enable future studies for serving more complex models. For ranking, SilverTorch's design accelerates item embedding calculation by caching the pre-calculated embeddings inside the serving model.   Our evaluation on the industry-scale datasets show that SilverTorch achieves up to 5.6x lower latency and 23.7x higher throughput compared to the state-of-the-art approaches. We also demonstrate that SilverTorch's solution is 13.35x more cost-efficient than CPU-based solution while improving accuracy via serving more complex models. SilverTorch serves over hundreds of models online across major products and recommends contents for billions of daily active users.",
+        "translated": "在大规模服务基于深度学习的推荐模型（DLRM）时面临严峻挑战。现有系统依赖于基于CPU的ANN索引与过滤服务，存在不可忽视的成本开销，并错失联合优化的机会。这种低效性使其难以支持更复杂的模型架构，如学习到的相似度和多任务检索。\n\n本文提出SilverTorch，一种面向GPU的模型驱动型推荐模型服务系统。SilverTorch通过以服务模型层取代独立的索引与过滤服务，统一了模型服务流程。我们提出了一种基于GPU的Bloom索引算法用于特征过滤，并设计了一种针对GPU的张量原生融合Int8 ANN内核用于最近邻搜索。此外，我们进一步协同设计ANN搜索索引与过滤索引，以降低GPU内存占用并消除不必要的计算。\n\n得益于SilverTorch的服务范式，我们引入了OverArch评分层与价值模型，以跨多任务聚合结果。这些改进提升了检索准确率，并为未来服务更复杂模型的研究奠定了基础。对于排序环节，SilverTorch的设计通过将预计算的物料嵌入缓存至服务模型内部，加速了物料嵌入的计算过程。\n\n我们在业界规模数据集上的评估表明，SilverTorch相较当前最优方法可实现高达5.6倍的延迟降低和23.7倍的吞吐量提升。同时，我们证明SilverTorch方案相较基于CPU的方案成本效率高出13.35倍，且通过服务更复杂模型提升了准确性。目前，SilverTorch已在线服务于数百个模型，覆盖主要产品线，每日向数十亿活跃用户提供内容推荐。",
+        "translated_title": "SilverTorch：一种统一的基于模型的系统，用于在GPU上普及大规模推荐",
+        "label": [
+            "召回",
+            "精排",
+            "通用推荐技术"
+        ],
+        "label_reason": "聚焦推荐系统服务架构优化，提升召回与排序效率。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新GPU统一模型服务架构，高效支持复杂推荐模型。"
     }
 ]
