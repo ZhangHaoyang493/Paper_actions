@@ -13173,5 +13173,82 @@
         "relevance_score": 3,
         "novelty_score": 7,
         "novelty_reason": "提出新策略优化框架，提升配准效率与鲁棒性"
+    },
+    {
+        "title": "A Little More Like This: Text-to-Image Retrieval with Vision-Language Models Using Relevance Feedback",
+        "url": "http://arxiv.org/abs/2511.17255v1",
+        "pub_date": "2025-11-21",
+        "summary": "Large vision-language models (VLMs) enable intuitive visual search using natural language queries. However, improving their performance often requires fine-tuning and scaling to larger model variants. In this work, we propose a mechanism inspired by traditional text-based search to improve retrieval performance at inference time: relevance feedback. While relevance feedback can serve as an alternative to fine-tuning, its model-agnostic design also enables use with fine-tuned VLMs. Specifically, we introduce and evaluate four feedback strategies for VLM-based retrieval. First, we revise classical pseudo-relevance feedback (PRF), which refines query embeddings based on top-ranked results. To address its limitations, we propose generative relevance feedback (GRF), which uses synthetic captions for query refinement. Furthermore, we introduce an attentive feedback summarizer (AFS), a custom transformer-based model that integrates multimodal fine-grained features from relevant items. Finally, we simulate explicit feedback using ground-truth captions as an upper-bound baseline. Experiments on Flickr30k and COCO with the VLM backbones show that GRF, AFS, and explicit feedback improve retrieval performance by 3-5% in MRR@5 for smaller VLMs, and 1-3% for larger ones, compared to retrieval with no feedback. Moreover, AFS, similarly to explicit feedback, mitigates query drift and is more robust than GRF in iterative, multi-turn retrieval settings. Our findings demonstrate that relevance feedback can consistently enhance retrieval across VLMs and open up opportunities for interactive and adaptive visual search.",
+        "translated": "大型视觉-语言模型（VLMs）能够通过自然语言查询实现直观的视觉搜索。然而，提升其性能通常需要微调并扩展至更大的模型变体。在本研究中，我们提出了一种受传统基于文本检索启发的机制，以在推理阶段提升检索性能：相关性反馈。虽然相关性反馈可作为微调的替代方案，但其模型无关的设计也使其能够与微调后的VLMs兼容使用。具体而言，我们针对基于VLM的检索任务引入并评估了四种反馈策略。首先，我们改进了经典的伪相关性反馈（PRF），该方法依据排名靠前的结果对查询嵌入进行优化。为克服其局限性，我们提出了生成式相关性反馈（GRF），利用合成标题对查询进行精细化调整。此外，我们引入了一种名为注意力反馈摘要器（AFS）的定制化Transformer模型，该模型融合了相关物料的多模态细粒度特征。最后，我们通过将真实标注标题模拟为显式反馈，构建了一个上限基线。在Flickr30k和COCO数据集上，使用不同VLM骨干网络进行实验表明：相较于无反馈检索，GRF、AFS及显式反馈分别在MRR@5指标上使小规模VLM性能提升3%-5%，大规模VLM提升1%-3%。此外，在迭代式、多轮检索场景下，AFS与显式反馈类似，能有效缓解查询漂移，并比GRF更具鲁棒性。我们的研究结果表明，相关性反馈可在各类VLM中持续提升检索性能，并为交互式与自适应视觉搜索提供了新的可能性。",
+        "translated_title": "更贴近这样：利用视觉-语言模型与相关反馈的文本到图像检索",
+        "label": [],
+        "label_reason": "论文聚焦视觉搜索，与推荐系统无直接关联。",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "改进检索策略，但非推荐系统专用方法。"
+    },
+    {
+        "title": "Parametric Retrieval-Augmented Generation using Latent Routing of LoRA Adapters",
+        "url": "http://arxiv.org/abs/2511.17044v1",
+        "pub_date": "2025-11-21",
+        "summary": "Parametric Retrieval-Augmented Generation (PRAG) is a novel RAG paradigm that integrates external knowledge directly into a Large Language Model (LLM) by parameterizing documents using LoRA adapters, demonstrating reduced inference costs compared to traditional RAG approaches. However, current PRAG approaches adopt a \\textbf{one-to-one} document encoding scheme, using a dedicated LoRA adapter for each individual document. This scheme introduces two major limitations: First, it leads to data scarcity, as the training datasets for individual LoRA adapters are limited. Second, it incurs high overhead during inference, requiring the merging of LLM weights with a new LoRA adapter for every candidate passage, which is computationally inefficient. To overcome these challenges, we propose a novel paradigm for encoding passages in PRAG that utilizes a latent routing encoding process (Poly-PRAG). During offline encoding, we treat the encoding of a set of documents as a multi-task learning process, where each passage is assigned a unique task identifier. By employing a routing function, we use a small set of latent LoRA adapters to encode the entire passage space. During online inference, this routing function selectively activates a subset of latent experts based on the input query. We conduct comprehensive evaluations of Poly-PRAG across multiple knowledge-intensive NLP tasks. Our extensive experiments demonstrate the effectiveness of the proposed method, achieving state-of-the-art results on four distinct datasets.",
+        "translated": "参数化检索增强生成（Parametric Retrieval-Augmented Generation, PRAG）是一种新颖的RAG范式，通过使用LoRA适配器对文档进行参数化，将外部知识直接集成到大语言模型（Large Language Model, LLM）中，相比传统RAG方法具有更低的推理开销。然而，当前PRAG方法采用一种**一对一**的文档编码方案，为每个独立文档配备专用的LoRA适配器。该方案存在两大主要局限性：首先，导致数据稀缺，因为每个LoRA适配器的训练数据集规模有限；其次，推理阶段开销高昂，需针对每个候选段落合并LLM权重与新的LoRA适配器，计算效率低下。为克服这些挑战，我们提出了一种新型PRAG中的段落编码范式——多路路由编码机制（Poly-PRAG）。在离线编码阶段，我们将一组文档的编码视为多任务学习过程，为每段内容分配唯一任务标识符，并借助路由函数，利用少量潜在LoRA适配器来编码整个段落空间。在线推理阶段，该路由函数根据输入查询选择性激活部分潜在专家。我们在多个知识密集型自然语言处理任务上对Poly-PRAG进行全面评估。大量实验表明，所提方法有效，于四个不同数据集上均取得当前最优性能。",
+        "translated_title": "基于LoRA适配器潜在路由的参数化检索增强生成",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "PRAG方法用于LLM知识增强，间接支持推荐场景",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出路由机制优化LoRA适配器使用，提升效率"
+    },
+    {
+        "title": "CLLMRec: LLM-powered Cognitive-Aware Concept Recommendation via Semantic Alignment and Prerequisite Knowledge Distillation",
+        "url": "http://arxiv.org/abs/2511.17041v1",
+        "pub_date": "2025-11-21",
+        "summary": "The growth of Massive Open Online Courses (MOOCs) presents significant challenges for personalized learning, where concept recommendation is crucial. Existing approaches typically rely on heterogeneous information networks or knowledge graphs to capture conceptual relationships, combined with knowledge tracing models to assess learners' cognitive states. However, these methods face significant limitations due to their dependence on high-quality structured knowledge graphs, which are often scarce in real-world educational scenarios. To address this fundamental challenge, this paper proposes CLLMRec, a novel framework that leverages Large Language Models through two synergistic technical pillars: Semantic Alignment and Prerequisite Knowledge Distillation. The Semantic Alignment component constructs a unified representation space by encoding unstructured textual descriptions of learners and concepts. The Prerequisite Knowledge Distillation paradigm employs a teacher-student architecture, where a large teacher LLM (implemented as the Prior Knowledge Aware Component) extracts conceptual prerequisite relationships from its internalized world knowledge and distills them into soft labels to train an efficient student ranker. Building upon these foundations, our framework incorporates a fine-ranking mechanism that explicitly models learners' real-time cognitive states through deep knowledge tracing, ensuring recommendations are both structurally sound and cognitively appropriate. Extensive experiments on two real-world MOOC datasets demonstrate that CLLMRec significantly outperforms existing baseline methods across multiple evaluation metrics, validating its effectiveness in generating truly cognitive-aware and personalized concept recommendations without relying on explicit structural priors.",
+        "translated": "大规模开放在线课程（MOOCs）的蓬勃发展为个性化学习带来了严峻挑战，其中概念推荐至关重要。现有方法通常依赖异构信息网络或知识图谱来捕捉概念间的关系，并结合知识追踪模型以评估学习者的认知状态。然而，这些方法受限于对高质量结构化知识图谱的依赖，而此类图谱在现实教育场景中往往稀缺。为应对这一根本性挑战，本文提出CLLMRec框架，该框架通过两大协同技术支柱——语义对齐与先验知识蒸馏——充分利用大语言模型的能力。语义对齐模块通过编码学习者与概念的非结构化文本描述，在统一表征空间中构建语义关联；先验知识蒸馏机制采用教师-学生架构，其中大语言模型作为“先验知识感知组件”充当教师，从其内化的世界知识中提取概念间的先决关系，并将其转化为软标签用于训练高效的学生排序器。在此基础上，本框架进一步引入细粒度排序机制，通过深度知识追踪显式建模学习者实时认知状态，从而确保推荐结果兼具结构合理性与认知适配性。在两个真实MOOC数据集上的广泛实验表明，CLLMRec在多个评估指标上显著优于现有基线方法，验证了其无需依赖显式结构先验即可生成真正认知感知且高度个性化的概念推荐的有效性。",
+        "translated_title": "CLLMRec：基于大语言模型的认知感知概念推荐方法，通过语义对齐与先验知识蒸馏实现",
+        "label": [
+            "LLM生成式推荐",
+            "精排",
+            "通用推荐技术"
+        ],
+        "label_reason": "基于LLM构建认知感知概念推荐，聚焦推荐系统精排环节",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新融合LLM语义对齐与知识蒸馏，提升个性化推荐效果"
+    },
+    {
+        "title": "RASTP: Representation-Aware Semantic Token Pruning for Generative Recommendation with Semantic Identifiers",
+        "url": "http://arxiv.org/abs/2511.16943v1",
+        "pub_date": "2025-11-21",
+        "summary": "Generative recommendation systems typically leverage Semantic Identifiers (SIDs), which represent each item as a sequence of tokens that encode semantic information. However, representing item ID with multiple SIDs significantly increases input sequence length, which is a major determinant of computational complexity and memory consumption. While existing efforts primarily focus on optimizing attention computation and KV cache, we propose RASTP (Representation-Aware Semantic Token Pruning), which directly prunes less informative tokens in the input sequence. Specifically, RASTP evaluates token importance by combining semantic saliency, measured via representation magnitude, and attention centrality, derived from cumulative attention weights. Since RASTP dynamically prunes low-information or irrelevant semantic tokens, experiments on three real-world Amazon datasets show that RASTP reduces training time by 26.7\\%, while maintaining or slightly improving recommendation performance. The code has been open-sourced at https://github.com/Yuzt-zju/RASTP.",
+        "translated": "生成式推荐系统通常利用语义标识符（Semantic Identifiers, SIDs），将每个物料表示为编码语义信息的词元序列。然而，使用多个SID表示物料ID会显著增加输入序列长度，而这是影响计算复杂度和内存消耗的主要因素。尽管现有研究主要聚焦于优化注意力计算与KV缓存，我们提出RASTP（Representation-Aware Semantic Token Pruning），直接从输入序列中剪枝信息量较低的词元。具体而言，RASTP通过结合语义显著性（通过嵌入向量模长衡量）与注意力中心性（由累积注意力权重推导）来评估词元的重要性。由于RASTP动态剪枝低信息量或无关语义词元，实验表明在三个真实世界Amazon数据集上，RASTP可将训练时间减少26.7%，同时保持或略微提升推荐性能。代码已开源至 https://github.com/Yuzt-zju/RASTP。",
+        "translated_title": "RASTP：面向生成式推荐的语义标识符感知表示-aware语义标记剪枝",
+        "label": [
+            "LLM生成式推荐",
+            "重排"
+        ],
+        "label_reason": "聚焦生成式推荐中语义Token剪枝优化",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出基于表征与注意力的动态Token剪枝新方法"
+    },
+    {
+        "title": "δ-EMG: A Monotonic Graph Index for Approximate Nearest Neighbor Search",
+        "url": "http://arxiv.org/abs/2511.16921v1",
+        "pub_date": "2025-11-21",
+        "summary": "Approximate nearest neighbor (ANN) search in high-dimensional spaces is a foundational component of many modern retrieval and recommendation systems. Currently, almost all algorithms follow an $ε$-Recall-Bounded principle when comparing performance: they require the ANN search results to achieve a recall of more than $1-ε$ and then compare query-per-second (QPS) performance. However, this approach only accounts for the recall of true positive results and does not provide guarantees on the deviation of incorrect results. To address this limitation, we focus on an Error-Bounded ANN method, which ensures that the returned results are a $(1/δ)$-approximation of the true values. Our approach adopts a graph-based framework. To enable Error-Bounded ANN search, we propose a $δ$-EMG (Error-bounded Monotonic Graph), which, for the first time, provides a provable approximation for arbitrary queries. By enforcing a $δ$-monotonic geometric constraint during graph construction, $δ$-EMG ensures that any greedy search converges to a $(1/δ)$-approximate neighbor without backtracking. Building on this foundation, we design an error-bounded top-$k$ ANN search algorithm that adaptively controls approximation accuracy during query time. To make the framework practical at scale, we introduce $δ$-EMQG (Error-bounded Monotonic Quantized Graph), a localized and degree-balanced variant with near-linear construction complexity. We further integrate vector quantization to accelerate distance computation while preserving theoretical guarantees. Extensive experiments on the ANN-Benchmarks dataset demonstrate the effectiveness of our approach. Under a recall requirement of 0.99, our algorithm achieves 19,000 QPS on the SIFT1M dataset, outperforming other methods by more than 40\\%.",
+        "translated": "高维空间中的近似最近邻（ANN）搜索是许多现代检索与推荐系统的基础组件。目前，几乎所有算法在比较性能时均遵循 $ε$-Recall-Bounded 原则：要求 ANN 搜索结果的召回率高于 $1-ε$，并在此前提下比较每秒查询数（QPS）性能。然而，该方法仅考虑真实正样本的召回率，无法对错误结果的偏差提供保证。为解决这一局限性，我们专注于一种误差有界（Error-Bounded）的 ANN 方法，确保返回结果是对真实值的 $(1/δ)$ 近似。我们的方法采用基于图的框架。为实现误差有界的 ANN 检索，我们提出了一种 $δ$-EMG（误差有界单调图），首次为任意查询提供了可证明的近似保证。通过在图构建过程中施加 $δ$-单调几何约束，$δ$-EMG 确保任何贪心搜索均可收敛至 $(1/δ)$ 近似邻居，且无需回溯。在此基础上，我们设计了一种误差有界的 Top-$k$ ANN 搜索算法，在查询阶段自适应控制近似精度。为使框架在大规模场景下具备实用性，我们引入了 $δ$-EMQG（误差有界单调量化图），其为局部化且度均衡的变体，构造复杂度接近线性。我们进一步结合向量量化技术以加速距离计算，同时保持理论保证。在 ANN-Benchmarks 数据集上的大量实验验证了本方法的有效性。在召回率为 0.99 的条件下，我们的算法在 SIFT1M 数据集上达到 19,000 QPS，优于其他方法超过 40\\%。",
+        "translated_title": "δ-EMG：一种用于近似最近邻搜索的单调图索引",
+        "label": [
+            "通用推荐技术"
+        ],
+        "label_reason": "ANN搜索是推荐系统基础组件，但非专为推荐设计。",
+        "relevance_score": 6,
+        "novelty_score": 8,
+        "novelty_reason": "首次提出误差有界图索引，理论与实践结合显著。"
     }
 ]
