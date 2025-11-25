@@ -13518,5 +13518,317 @@
         "relevance_score": 2,
         "novelty_score": 7,
         "novelty_reason": "提出新模块提升分割精度与效率"
+    },
+    {
+        "title": "Revisiting Feedback Models for HyDE",
+        "url": "http://arxiv.org/abs/2511.19349v1",
+        "pub_date": "2025-11-24",
+        "summary": "Recent approaches that leverage large language models (LLMs) for pseudo-relevance feedback (PRF) have generally not utilized well-established feedback models like Rocchio and RM3 when expanding queries for sparse retrievers like BM25. Instead, they often opt for a simple string concatenation of the query and LLM-generated expansion content. But is this optimal? To answer this question, we revisit and systematically evaluate traditional feedback models in the context of HyDE, a popular method that enriches query representations with LLM-generated hypothetical answer documents. Our experiments show that HyDE's effectiveness can be substantially improved when leveraging feedback algorithms such as Rocchio to extract and weight expansion terms, providing a simple way to further enhance the accuracy of LLM-based PRF methods.",
+        "translated": "近期利用大语言模型（LLM）进行伪相关反馈（PRF）的方法，通常未在针对如BM25等稀疏检索器扩展查询时采用Rocchio和RM3等成熟反馈模型。相反，它们往往仅将原始查询与LLM生成的扩展内容简单拼接成字符串。但这种做法是否最优？为回答该问题，我们重新审视并系统评估了传统反馈模型在HyDE方法中的适用性——HyDE是一种流行方法，通过LLM生成的假设答案文档来丰富查询表示。实验表明，当结合如Rocchio等反馈算法提取并加权扩展项时，HyDE的效果可显著提升，从而为进一步增强基于LLM的PRF方法的准确性提供了一种简洁可行的途径。",
+        "translated_title": "重访HyDE的反馈模型",
+        "label": [
+            "通用推荐技术",
+            "负采样与对比学习"
+        ],
+        "label_reason": "HyDE用于检索增强，非推荐系统核心环节",
+        "relevance_score": 4,
+        "novelty_score": 6,
+        "novelty_reason": "改进传统反馈模型，但未针对推荐场景优化"
+    },
+    {
+        "title": "Generative Query Expansion with Multilingual LLMs for Cross-Lingual Information Retrieval",
+        "url": "http://arxiv.org/abs/2511.19325v1",
+        "pub_date": "2025-11-24",
+        "summary": "Query expansion is the reformulation of a user query by adding semantically related information, and is an essential component of monolingual and cross-lingual information retrieval used to ensure that relevant documents are not missed. Recently, multilingual large language models (mLLMs) have shifted query expansion from semantic augmentation with synonyms and related words to pseudo-document generation. Pseudo-documents both introduce additional relevant terms and bridge the gap between short queries and long documents, which is particularly beneficial in dense retrieval. This study evaluates recent mLLMs and fine-tuned variants across several generative expansion strategies to identify factors that drive cross-lingual retrieval performance. Results show that query length largely determines which prompting technique is effective, and that more elaborate prompts often do not yield further gains. Substantial linguistic disparities persist: cross-lingual query expansion can produce the largest improvements for languages with the weakest baselines, yet retrieval is especially poor between languages written in different scripts. Fine-tuning is found to lead to performance gains only when the training and test data are of similar format. These outcomes underline the need for more balanced multilingual and cross-lingual training and evaluation resources.",
+        "translated": "查询扩展是通过添加语义相关的信息对用户查询进行改写，是单语言和跨语言信息检索中的关键组件，旨在确保不遗漏相关文档。近年来，多语言大语言模型（mLLMs）已将查询扩展从使用同义词和相关词汇的语义增强，转变为伪文档生成。伪文档不仅引入了额外的相关术语，还弥合了短查询与长文档之间的差距，尤其在稠密检索中具有显著优势。本研究评估了多种生成式扩展策略下近期mLLMs及其微调变体的表现，以识别驱动跨语言检索性能的关键因素。结果表明，查询长度在很大程度上决定了哪种提示技术有效；而更复杂的提示往往并未带来进一步提升。语言间的显著差异依然存在：跨语言查询扩展在基线最弱的语言中能产生最大改进，但在不同书写系统的语言间，检索效果尤为不佳。研究发现，仅当训练数据与测试数据格式相似时，微调才会带来性能增益。这些结果凸显了亟需更加平衡的多语言与跨语言训练和评测资源。",
+        "translated_title": "多语言大语言模型驱动的生成式查询扩展用于跨语言信息检索",
+        "label": [],
+        "label_reason": "聚焦跨语言信息检索，非推荐系统核心问题",
+        "relevance_score": 3,
+        "novelty_score": 5,
+        "novelty_reason": "方法改进有限，未针对推荐场景设计"
+    },
+    {
+        "title": "What Drives Cross-lingual Ranking? Retrieval Approaches with Multilingual Language Models",
+        "url": "http://arxiv.org/abs/2511.19324v1",
+        "pub_date": "2025-11-24",
+        "summary": "Cross-lingual information retrieval (CLIR) enables access to multilingual knowledge but remains challenging due to disparities in resources, scripts, and weak cross-lingual semantic alignment in embedding models. Existing pipelines often rely on translation and monolingual retrieval heuristics, which add computational overhead and noise, degrading performance. This work systematically evaluates four intervention types, namely document translation, multilingual dense retrieval with pretrained encoders, contrastive learning at word, phrase, and query-document levels, and cross-encoder re-ranking, across three benchmark datasets. We find that dense retrieval models trained specifically for CLIR consistently outperform lexical matching methods and derive little benefit from document translation. Contrastive learning mitigates language biases and yields substantial improvements for encoders with weak initial alignment, and re-ranking can be effective, but depends on the quality of the cross-encoder training data. Although high-resource languages still dominate overall performance, gains over lexical and document-translated baselines are most pronounced for low-resource and cross-script pairs. These findings indicate that cross-lingual search systems should prioritise semantic multilingual embeddings and targeted learning-based alignment over translation-based pipelines, particularly for cross-script and under-resourced languages.",
+        "translated": "跨语言信息检索（CLIR）能够访问多语言知识，但由于资源、字符集差异以及嵌入模型中弱的跨语言语义对齐，仍面临挑战。现有流程通常依赖于翻译和单语言检索启发式方法，这会增加计算开销并引入噪声，从而降低性能。本文系统性地评估了四种干预类型——文档翻译、基于预训练编码器的多语言稠密检索、词、短语及查询-文档层面的对比学习，以及交叉编码器重排——在三个基准数据集上的表现。我们发现，专门针对 CLIR 训练的稠密检索模型始终优于词汇匹配方法，并且从文档翻译中获益甚微。对比学习可缓解语言偏倚，显著提升初始语义对齐能力较弱的编码器性能；而重排虽有效，但其效果依赖于交叉编码器训练数据的质量。尽管高资源语言仍主导整体性能，但在低资源语言及跨字符集配对上，相对于词汇匹配和文档翻译基线方法，性能提升最为显著。这些结果表明，跨语言搜索系统应优先采用语义型多语言嵌入与基于目标学习的对齐方法，而非依赖翻译管道，尤其适用于跨字符集和资源匮乏语言。",
+        "translated_title": "什么驱动跨语言排序？基于多语言语言模型的检索方法",
+        "label": [
+            "召回",
+            "重排",
+            "负采样与对比学习"
+        ],
+        "label_reason": "研究跨语言检索中的召回与重排方法，含对比学习优化。",
+        "relevance_score": 4,
+        "novelty_score": 6,
+        "novelty_reason": "对比学习与重排策略改进，但非推荐系统专用创新。"
+    },
+    {
+        "title": "From Raw Features to Effective Embeddings: A Three-Stage Approach for Multimodal Recipe Recommendation",
+        "url": "http://arxiv.org/abs/2511.19176v1",
+        "pub_date": "2025-11-24",
+        "summary": "Recipe recommendation has become an essential task in web-based food platforms. A central challenge is effectively leveraging rich multimodal features beyond user-recipe interactions. Our analysis shows that even simple uses of multimodal signals yield competitive performance, suggesting that systematic enhancement of these signals is highly promising. We propose TESMR, a 3-stage framework for recipe recommendation that progressively refines raw multimodal features into effective embeddings through: (1) content-based enhancement using foundation models with multimodal comprehension, (2) relation-based enhancement via message propagation over user-recipe interactions, and (3) learning-based enhancement through contrastive learning with learnable embeddings. Experiments on two real-world datasets show that TESMR outperforms existing methods, achieving 7-15% higher Recall@10.",
+        "translated": "食谱推荐已成为基于网络的食品平台中的关键任务。其核心挑战在于有效利用用户-食谱交互之外的丰富多模态特征。我们的分析表明，即使对多模态信号进行简单的使用也能获得具有竞争力的性能，这表明系统性增强这些信号具有巨大潜力。我们提出TESMR，一种用于食谱推荐的三阶段框架，通过以下三个步骤逐步将原始多模态特征精炼为有效的嵌入：（1）基于内容的增强，利用具备多模态理解能力的基础模型；（2）基于关系的增强，通过在用户-食谱交互图上进行消息传播实现；（3）基于学习的增强，通过对比学习与可学习嵌入完成。在两个真实世界数据集上的实验表明，TESMR优于现有方法，Recall@10提升7%至15%。",
+        "translated_title": "从原始特征到有效嵌入：面向多模态食谱推荐的三阶段方法",
+        "label": [
+            "多模态推荐",
+            "精排"
+        ],
+        "label_reason": "提出三阶段框架优化多模态特征用于食谱推荐",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新性融合基础模型、图传播与对比学习"
+    },
+    {
+        "title": "Heterogeneous Multi-treatment Uplift Modeling for Trade-off Optimization in Short-Video Recommendation",
+        "url": "http://arxiv.org/abs/2511.18997v1",
+        "pub_date": "2025-11-24",
+        "summary": "The rapid proliferation of short videos on social media platforms presents unique challenges and opportunities for recommendation systems. Users exhibit diverse preferences, and the responses resulting from different strategies often conflict with one another, potentially exhibiting inverse correlations between metrics such as watch time and video view counts. Existing uplift models face limitations in handling the heterogeneous multi-treatment scenarios of short-video recommendations, often failing to effectively capture both the synergistic and individual causal effects of different strategies. Furthermore, traditional fixed-weight approaches for balancing these responses lack personalization and can result in biased decision-making. To address these issues, we propose a novel Heterogeneous Multi-treatment Uplift Modeling (HMUM) framework for trade-off optimization in short-video recommendations. HMUM comprises an Offline Hybrid Uplift Modeling (HUM) module, which captures the synergistic and individual effects of multiple strategies, and an Online Dynamic Decision-Making (DDM) module, which estimates the value weights of different user responses in real-time for personalized decision-making. Evaluated on two public datasets, an industrial dataset, and through online A/B experiments on the Kuaishou platform, our model demonstrated superior offline performance and significant improvements in key metrics. It is now fully deployed on the platform, benefiting hundreds of millions of users.",
+        "translated": "社交媒体平台上短视频的迅猛增长为推荐系统带来了独特的挑战与机遇。用户表现出多样化偏好，不同策略所产生的响应往往相互冲突，相关指标（如观看时长与视频播放量）可能存在负相关关系。现有提升模型在处理短视频推荐中的异构多策略场景时存在局限，难以有效捕捉不同策略间协同效应与个体因果效应。此外，传统固定权重方法在平衡这些响应时缺乏个性化，易导致决策偏倚。为解决上述问题，我们提出了一种面向短视频推荐的异构多策略提升建模框架（Heterogeneous Multi-treatment Uplift Modeling, HMUM）。HMUM 包含两个模块：离线混合提升建模模块（Offline Hybrid Uplift Modeling, HUM），用于捕捉多种策略间的协同效应与个体效应；以及在线动态决策模块（Online Dynamic Decision-Making, DDM），用于实时估计不同用户响应的价值权重，以实现个性化决策。该模型在两个公开数据集、一个工业数据集上进行评估，并通过快手平台的线上 A/B 实验验证，展现出卓越的离线性能及关键指标的显著提升，目前已全面部署于平台，惠及数亿用户。",
+        "translated_title": "异质多干预提升建模在短视频推荐中的权衡优化",
+        "label": [
+            "精排",
+            "推荐系统评估"
+        ],
+        "label_reason": "聚焦短视频推荐中的多策略因果建模与优化。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出异构多处理提升模型，动态个性化权衡策略。"
+    },
+    {
+        "title": "STORE: Semantic Tokenization, Orthogonal Rotation and Efficient Attention for Scaling Up Ranking Models",
+        "url": "http://arxiv.org/abs/2511.18805v1",
+        "pub_date": "2025-11-24",
+        "summary": "Ranking models have become an important part of modern personalized recommendation systems. However, significant challenges persist in handling high-cardinality, heterogeneous, and sparse feature spaces, particularly regarding model scalability and efficiency. We identify two key bottlenecks: (i) Representation Bottleneck: Driven by the high cardinality and dynamic nature of features, model capacity is forced into sparse-activated embedding layers, leading to low-rank representations. This, in turn, triggers phenomena like \"One-Epoch\" and \"Interaction-Collapse,\" ultimately hindering model scalability.(ii) Computational Bottleneck: Integrating all heterogeneous features into a unified model triggers an explosion in the number of feature tokens, rendering traditional attention mechanisms computationally demanding and susceptible to attention dispersion. To dismantle these barriers, we introduce STORE, a unified and scalable token-based ranking framework built upon three core innovations: (1) Semantic Tokenization fundamentally tackles feature heterogeneity and sparsity by decomposing high-cardinality sparse features into a compact set of stable semantic tokens; and (2) Orthogonal Rotation Transformation is employed to rotate the subspace spanned by low-cardinality static features, which facilitates more efficient and effective feature interactions; and (3) Efficient attention that filters low-contributing tokens to improve computional efficiency while preserving model accuracy. Across extensive offline experiments and online A/B tests, our framework consistently improves prediction accuracy(online CTR by 2.71%, AUC by 1.195%) and training effeciency (1.84 throughput).",
+        "translated": "排序模型已成为现代个性化推荐系统的重要组成部分。然而，在处理高基数、异构且稀疏的特征空间时，仍面临显著挑战，尤其体现在模型的可扩展性与效率方面。我们识别出两个关键瓶颈：(i) 表示瓶颈：由于特征具有高基数与动态特性，模型容量被迫依赖稀疏激活的嵌入层，导致低秩表示。这进一步引发“单轮训练”及“交互坍塌”等现象，最终阻碍模型的可扩展性；(ii) 计算瓶颈：将所有异构特征整合至统一模型中，会激增特征标记数量，使传统注意力机制计算开销陡增，并易受注意力分散影响。为突破上述限制，我们提出 STORE，一种基于令牌的统一且可扩展的排序框架，其构建于三项核心创新之上：(1) 语义令牌化从根本上解决特征异构性与稀疏性问题，通过将高基数稀疏特征分解为一组紧凑且稳定的语义令牌；(2) 正交旋转变换被用于旋转低基数静态特征所张成的子空间，从而更高效地促进特征交互；(3) 高效注意力机制通过过滤贡献度较低的令牌，在提升计算效率的同时保持模型精度。在广泛的离线实验和线上A/B测试中，我们的框架持续提升预测准确率（线上点击率提升2.71%，AUC提升1.195%）和训练效率（吞吐量提升1.84倍）。",
+        "translated_title": "STORE：面向大规模排序模型的语义分词、正交旋转与高效注意力机制",
+        "label": [
+            "精排",
+            "通用推荐技术"
+        ],
+        "label_reason": "聚焦精排模型效率与表示瓶颈，专为推荐系统优化",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新性提出三模块协同提升效率与精度"
+    },
+    {
+        "title": "Large Language Models Require Curated Context for Reliable Political Fact-Checking -- Even with Reasoning and Web Search",
+        "url": "http://arxiv.org/abs/2511.18749v1",
+        "pub_date": "2025-11-24",
+        "summary": "Large language models (LLMs) have raised hopes for automated end-to-end fact-checking, but prior studies report mixed results. As mainstream chatbots increasingly ship with reasoning capabilities and web search tools -- and millions of users already rely on them for verification -- rigorous evaluation is urgent. We evaluate 15 recent LLMs from OpenAI, Google, Meta, and DeepSeek on more than 6,000 claims fact-checked by PolitiFact, comparing standard models with reasoning- and web-search variants. Standard models perform poorly, reasoning offers minimal benefits, and web search provides only moderate gains, despite fact-checks being available on the web. In contrast, a curated RAG system using PolitiFact summaries improved macro F1 by 233% on average across model variants. These findings suggest that giving models access to curated high-quality context is a promising path for automated fact-checking.",
+        "translated": "大语言模型（LLMs）为实现端到端自动化事实核查带来了希望，但此前研究结果参差不齐。随着主流聊天机器人日益集成推理能力与网络搜索工具——且已有数百万用户依赖它们进行信息核实——亟需对其进行严谨评估。我们对来自OpenAI、Google、Meta及DeepSeek的15种最新LLMs，在由PolitiFact核查的6000余条声明上进行了评估，对比标准模型与具备推理和网络搜索功能的变体。结果显示，标准模型表现不佳，推理能力带来的提升微乎其微，而网络搜索虽能带来适度增益，但事实核查内容本身已可于网络获取。相比之下，使用PolitiFact摘要构建的精选RAG系统，在所有模型变体中平均将宏F1值提升了233%。这些发现表明，为模型提供精选高质量上下文是自动化事实核查颇具前景的发展路径。",
+        "translated_title": "大语言模型需要经过筛选的上下文才能可靠地进行政治事实核查——即使具备推理与网络搜索能力",
+        "label": [],
+        "label_reason": "研究聚焦事实核查，非推荐系统核心问题",
+        "relevance_score": 3,
+        "novelty_score": 5,
+        "novelty_reason": "改进RAG系统，但未应用于推荐场景"
+    },
+    {
+        "title": "Multimodal Large Language Models with Adaptive Preference Optimization for Sequential Recommendation",
+        "url": "http://arxiv.org/abs/2511.18740v1",
+        "pub_date": "2025-11-24",
+        "summary": "Recent advances in Large Language Models (LLMs) have opened new avenues for sequential recommendation by enabling natural language reasoning over user behavior sequences. A common approach formulates recommendation as a language modeling task, where interaction histories are transformed into prompts and user preferences are learned via supervised fine-tuning. However, these methods operate solely in the textual modality and often miss users' fine-grained interests, especially when shaped by rich visual signals such as product images or movie posters. Multimodal Large Language Models (MLLMs) offer a promising alternative by aligning text and vision in a shared semantic space. A prevalent training paradigm applies Supervised Fine-Tuning (SFT) followed by Direct Preference Optimization (DPO) to model user preferences. Yet, two core challenges remain: 1) Imbalanced sample hardness, where random negative sampling causes overfitting on easy examples and under-training on hard ones; 2) Cross-modal semantic bias, where the fixed reference model in DPO prevents the policy model from correcting modality misalignments--especially over long sequences. To address these issues, we propose a Multimodal LLM framework that integrates Hardness-aware and Noise-regularized preference optimization for Recommendation (HaNoRec). Specifically, HaNoRec dynamically adjusts optimization weights based on both the estimated hardness of each training sample and the policy model's real-time responsiveness, prioritizing harder examples. It further introduces Gaussian-perturbed distribution optimization on output logits to enhance cross-modal semantic consistency and reduce modality bias inherited from the reference model.",
+        "translated": "近年来，大语言模型（LLMs）的发展为序列推荐开辟了新路径，使其能够对用户行为序列进行自然语言推理。一种常见方法将推荐任务建模为语言建模任务，其中交互历史被转化为提示（prompt），并通过监督微调学习用户偏好。然而，这些方法仅在文本模态中运作，常忽略用户的细粒度兴趣，尤其是在用户兴趣受丰富视觉信号（如商品图片或电影海报）影响时。多模态大语言模型（MLLMs）提供了一种有前景的替代方案，通过在共享语义空间中对齐文本与视觉信息。主流训练范式通常采用监督微调（SFT）后接直接偏好优化（DPO）以建模用户偏好。然而，仍存在两个核心挑战：1）样本难度不平衡问题，随机负采样导致模型在简单样本上过拟合、在困难样本上欠训练；2）跨模态语义偏差问题，DPO中固定的参考模型阻碍策略模型纠正模态错位——尤其在长序列场景下更为显著。为解决上述问题，我们提出了一种融合难度感知与噪声正则化偏好优化的推荐框架（HaNoRec）。具体而言，HaNoRec 根据每个训练样本的预估难度及策略模型的实时响应动态调整优化权重，优先处理较难样本；同时引入高斯扰动分布优化输出 logits，以增强跨模态语义一致性，并降低继承自参考模型的模态偏倚。",
+        "translated_title": "面向序列推荐的多模态大语言模型与自适应偏好优化",
+        "label": [
+            "LLM生成式推荐",
+            "序列推荐",
+            "负采样与对比学习"
+        ],
+        "label_reason": "直接利用MLLM解决序列推荐中多模态偏好优化问题",
+        "relevance_score": 10,
+        "novelty_score": 9,
+        "novelty_reason": "创新性提出HaNoRec框架，解决样本硬度与跨模态偏置"
+    },
+    {
+        "title": "When and What to Recommend: Joint Modeling of Timing and Content for Active Sequential Recommendation",
+        "url": "http://arxiv.org/abs/2511.18717v1",
+        "pub_date": "2025-11-24",
+        "summary": "Sequential recommendation models user preferences to predict the next target item. Most existing work is passive, where the system responds only when users open the application, missing chances after closure. We investigate active recommendation, which predicts the next interaction time and actively delivers items. Two challenges: accurately estimating the Time of Interest (ToI) and generating Item of Interest (IoI) conditioned on the predicted ToI. We propose PASRec, a diffusion-based framework that aligns ToI and IoI via a joint objective. Experiments on five benchmarks show superiority over eight state-of-the-art baselines under leave-one-out and temporal splits.",
+        "translated": "序列推荐模型利用用户偏好预测下一个目标物品。现有大多数工作属于被动式推荐，系统仅在用户打开应用时响应，忽视了关闭应用后的潜在交互机会。我们研究主动推荐方法，即预测下一次交互时间，并主动推送物品。该方法面临两大挑战：准确估计兴趣时间（ToI），以及在预测的 ToI 条件下生成兴趣物品（IoI）。我们提出 PASRec，一种基于扩散的框架，通过联合目标对齐 ToI 与 IoI。在五个基准数据集上的实验表明，在留一验证和时间划分下，PASRec 在八种当前最先进基线方法之上表现更优。",
+        "translated_title": "何时推荐何物：面向主动序列推荐的时序与内容联合建模",
+        "label": [
+            "序列推荐",
+            "主动推荐"
+        ],
+        "label_reason": "提出主动时序内容联合建模框架，解决推荐时机问题",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "首次结合扩散模型进行时间与物品联合预测"
+    },
+    {
+        "title": "A Recommender System Based on Binary Matrix Representations for Cognitive Disorders",
+        "url": "http://arxiv.org/abs/2511.18645v1",
+        "pub_date": "2025-11-23",
+        "summary": "Diagnosing cognitive (mental health) disorders is a delicate and complex task. Identifying the next most informative symptoms to assess, in order to distinguish between possible disorders, presents an additional challenge. This process requires comprehensive knowledge of diagnostic criteria and symptom overlap across disorders, making it difficult to navigate based on symptoms alone. This research aims to develop a recommender system for cognitive disorder diagnosis using binary matrix representations. The core algorithm utilizes a binary matrix of disorders and their symptom combinations. It filters through the rows and columns based on the patient's current symptoms to identify potential disorders and recommend the most informative next symptoms to examine. A prototype of the recommender system was implemented in Python. Using synthetic test and some real-life data, the system successfully identified plausible disorders from an initial symptom set and recommended further symptoms to refine the diagnosis. It also provided additional context on the symptom-disorder relationships. Although this is a prototype, the recommender system shows potential as a clinical support tool. A fully-developed application of this recommender system may assist mental health professionals in identifying relevant disorders more efficiently and guiding symptom-specific follow-up investigations to improve diagnostic accuracy.",
+        "translated": "诊断认知（精神健康）障碍是一项精细且复杂的任务。识别用于区分可能障碍的下一个最具信息量的症状，构成了额外的挑战。这一过程要求对各类障碍的诊断标准及症状交叉重叠情况有全面了解，仅依据症状难以有效导航。本研究旨在开发一种基于二值矩阵表示的认知障碍诊断推荐系统。核心算法利用障碍及其症状组合构成的二值矩阵，通过患者当前症状筛选行与列，以识别潜在障碍，并推荐最具有信息量的下一个待评估症状。该推荐系统的原型使用Python实现。在合成测试数据和部分真实数据上的实验表明，系统能够从初始症状集合中成功识别出合理的障碍，并推荐进一步检查的症状以细化诊断，同时提供症状-障碍关系的附加上下文信息。尽管目前仍为原型系统，该推荐系统展现出作为临床辅助工具的潜力。若该推荐系统得以充分开发，或可帮助心理健康专业人员更高效地识别相关障碍，并引导针对特定症状的后续调查，从而提升诊断准确性。",
+        "translated_title": "基于二元矩阵表示的认知障碍推荐系统",
+        "label": [
+            "通用推荐技术",
+            "推荐系统评估"
+        ],
+        "label_reason": "基于矩阵推荐诊断，属医疗场景推荐应用",
+        "relevance_score": 7,
+        "novelty_score": 6,
+        "novelty_reason": "方法常规但适配临床场景，有实用价值"
+    },
+    {
+        "title": "General Agentic Memory Via Deep Research",
+        "url": "http://arxiv.org/abs/2511.18423v1",
+        "pub_date": "2025-11-23",
+        "summary": "Memory is critical for AI agents, yet the widely-adopted static memory, aiming to create readily available memory in advance, is inevitably subject to severe information loss. To address this limitation, we propose a novel framework called \\textbf{general agentic memory (GAM)}. GAM follows the principle of \"\\textbf{just-in time (JIT) compilation}\" where it focuses on creating optimized contexts for its client at runtime while keeping only simple but useful memory during the offline stage. To this end, GAM employs a duo-design with the following components. 1) \\textbf{Memorizer}, which highlights key historical information using a lightweight memory, while maintaining complete historical information within a universal page-store. 2) \\textbf{Researcher}, which retrieves and integrates useful information from the page-store for its online request guided by the pre-constructed memory. This design allows GAM to effectively leverage the agentic capabilities and test-time scalability of frontier large language models (LLMs), while also facilitating end-to-end performance optimization through reinforcement learning. In our experimental study, we demonstrate that GAM achieves substantial improvement on various memory-grounded task completion scenarios against existing memory systems.",
+        "translated": "记忆对AI代理至关重要，然而广泛采用的静态记忆机制，旨在提前构建可随时调用的记忆，不可避免地面临严重的信息丢失问题。为解决这一局限性，我们提出了一种新颖的框架，称为**通用代理记忆（GAM）**。GAM遵循“**即时编译（JIT compilation）**”原则，在运行时针对其客户端动态生成优化后的上下文，而在离线阶段仅保留简洁但有用的记忆内容。为此，GAM采用双模块设计，包含以下组件：1) **Memorizer**，利用轻量级记忆突出关键历史信息，同时在通用页存储中完整保存全部历史信息；2) **Researcher**，根据预先构建的记忆，从页存储中检索并整合对在线请求有用的信息。该设计使GAM能够有效利用前沿大语言模型（LLMs）的代理能力与测试时的可扩展性，并通过强化学习实现端到端性能优化。在实验研究中，我们证明GAM在多种基于记忆的任务完成场景下显著优于现有记忆系统。",
+        "translated_title": "通用代理记忆通过深度研究",
+        "label": [],
+        "label_reason": "论文聚焦AI代理记忆系统，非推荐系统相关",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "提出JIT编译式记忆框架，具创新性"
+    },
+    {
+        "title": "Multi-Agent Collaborative Filtering: Orchestrating Users and Items for Agentic Recommendations",
+        "url": "http://arxiv.org/abs/2511.18413v1",
+        "pub_date": "2025-11-23",
+        "summary": "Agentic recommendations cast recommenders as large language model (LLM) agents that can plan, reason, use tools, and interact with users of varying preferences in web applications. However, most existing agentic recommender systems focus on generic single-agent plan-execute workflows or multi-agent task decomposition pipelines. Without recommendation-oriented design, they often underuse the collaborative signals in the user-item interaction history, leading to unsatisfying recommendation results. To address this, we propose the Multi-Agent Collaborative Filtering (MACF) framework for agentic recommendations, drawing an analogy between traditional collaborative filtering algorithms and LLM-based multi-agent collaboration. Specifically, given a target user and query, we instantiate similar users and relevant items as LLM agents with unique profiles. Each agent is able to call retrieval tools, suggest candidate items, and interact with other agents. Different from the static preference aggregation in traditional collaborative filtering, MACF employs a central orchestrator agent to adaptively manage the collaboration between user and item agents via dynamic agent recruitment and personalized collaboration instruction. Experimental results on datasets from three different domains show the advantages of our MACF framework compared to strong agentic recommendation baselines.",
+        "translated": "代理推荐将推荐系统视为能够规划、推理、调用工具并交互于具有不同偏好的用户的大型语言模型（LLM）代理。然而，现有大多数代理推荐系统聚焦于通用的单代理计划-执行工作流或多代理任务分解管道，缺乏面向推荐的设计，往往未能充分利用用户-物料交互历史中的协同信号，导致推荐效果不尽如人意。为解决这一问题，我们提出面向代理推荐的多代理协同过滤（MACF）框架，其借鉴了传统协同过滤算法与基于LLM的多代理协作之间的类比关系。具体而言，给定目标用户和查询，我们将相似用户和相关物料实例化为具备独特画像的LLM代理。每个代理均可调用检索工具、建议候选物料，并与其他代理交互。不同于传统协同过滤中静态偏好聚合的方式，MACF采用一个中央协调代理，通过动态代理招募与个性化协作指令，自适应管理用户代理与物料代理间的协作过程。在三个不同领域数据集上的实验结果表明，我们的MACF框架相较于强基线代理推荐方法具有显著优势。",
+        "translated_title": "多智能体协同过滤：协调用户与物料以实现智能推荐",
+        "label": [
+            "LLM生成式推荐",
+            "召回",
+            "精排"
+        ],
+        "label_reason": "基于LLM的多智能体协同过滤，直接解决推荐生成与协作建模问题。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "首次将多智能体协作类比CF，动态管理用户-物品交互，创新性强。"
+    },
+    {
+        "title": "A Multimodal Conversational Agent for Tabular Data Analysis",
+        "url": "http://arxiv.org/abs/2511.18405v1",
+        "pub_date": "2025-11-23",
+        "summary": "Large language models (LLMs) can reshape information processing by handling data analysis, visualization, and interpretation in an interactive, context-aware dialogue with users, including voice interaction, while maintaining high performance. In this article, we present Talk2Data, a multimodal LLM-driven conversational agent for intuitive data exploration. The system lets users query datasets with voice or text instructions and receive answers as plots, tables, statistics, or spoken explanations. Built on LLMs, the suggested design combines OpenAI Whisper automatic speech recognition (ASR) system, Qwen-coder code generation LLM/model, custom sandboxed execution tools, and Coqui library for text-to-speech (TTS) within an agentic orchestration loop. Unlike text-only analysis tools, it adapts responses across modalities and supports multi-turn dialogues grounded in dataset context. In an evaluation of 48 tasks on three datasets, our prototype achieved 95.8% accuracy with model-only generation time under 1.7 seconds (excluding ASR and execution time). A comparison across five LLM sizes (1.5B-32B) revealed accuracy-latency-cost trade-offs, with a 7B model providing the best balance for interactive use. By routing between conversation with user and code execution, constrained to a transparent sandbox, with simultaneously grounding prompts in schema-level context, the Talk2Data agent reliably retrieves actionable insights from tables while making computations verifiable. In the article, except for the Talk2Data agent itself, we discuss implications for human-data interaction, trust in LLM-driven analytics, and future extensions toward large-scale multimodal assistants.",
+        "translated": "大语言模型（LLMs）可通过与用户进行交互式、情境感知的对话——包括语音交互——在数据处理中重塑信息分析、可视化与解释过程，同时保持高性能。本文提出 Talk2Data，一种基于多模态 LLM 的对话代理，用于直观的数据探索。该系统允许用户通过语音或文本指令查询数据集，并以图表、表格、统计结果或口头解释的形式返回答案。该系统构建于 LLM 之上，其设计结合了 OpenAI Whisper 自动语音识别（ASR）系统、Qwen-coder 代码生成 LLM/模型、定制化的沙箱执行工具以及 Coqui 库中的文本转语音（TTS）功能，构成一个代理编排循环。与仅支持文本分析的工具不同，Talk2Data 能跨模态自适应响应，并支持基于数据集上下文的多轮对话。在三个数据集上的 48 个任务评估中，我们的原型系统实现了 95.8% 的准确率，且纯模型生成时间低于 1.7 秒（不包含 ASR 和执行时间）。对五种不同规模 LLM（1.5B–32B）的对比表明，在准确性、延迟与成本之间存在权衡，其中 7B 模型在交互式使用场景下提供了最佳平衡。通过在用户对话与代码执行之间路由，受限于透明沙箱环境，并将提示语同时锚定在模式级上下文中，Talk2Data 代理能够可靠地从表格中提取可操作的洞察，并确保计算过程可验证。本文除 Talk2Data 代理本身外，还讨论了人机数据交互、对 LLM 驱动分析的信任问题，以及未来向大规模多模态助手扩展的可能性。",
+        "translated_title": "用于表格数据分析的多模态对话代理",
+        "label": [],
+        "label_reason": "论文聚焦多模态对话分析，非推荐系统核心问题。",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "常规LLM应用改进，无推荐系统创新。"
+    },
+    {
+        "title": "Toward an AI-Native Internet: Rethinking the Web Architecture for Semantic Retrieval",
+        "url": "http://arxiv.org/abs/2511.18354v1",
+        "pub_date": "2025-11-23",
+        "summary": "The rise of Generative AI Search is fundamentally transforming how users and intelligent systems interact with the Internet. LLMs increasingly act as intermediaries between humans and web information. Yet the web remains optimized for human browsing rather than AI-driven semantic retrieval, resulting in wasted network bandwidth, lower information quality, and unnecessary complexity for developers. We introduce the concept of an AI-Native Internet, a web architecture in which servers expose semantically relevant information chunks rather than full documents, supported by a Web-native semantic resolver that allows AI applications to discover relevant information sources before retrieving fine-grained chunks. Through motivational experiments, we quantify the inefficiencies of current HTML-based retrieval, and outline architectural directions and open challenges for evolving today's document-centric web into an AI-oriented substrate that better supports semantic access to web content.",
+        "translated": "生成式AI搜索的兴起正从根本上改变用户与智能系统如何与互联网交互的方式。大语言模型（LLM）日益成为人类与网络信息之间的中介。然而，当前的互联网仍主要为人类浏览优化，而非面向AI驱动的语义检索，导致网络带宽浪费、信息质量下降，并给开发者带来不必要的复杂性。我们提出“原生AI互联网”的概念——一种服务器仅暴露语义相关的信息片段而非完整文档的网络架构，并辅以原生支持Web语义解析的机制，使AI应用能够在细粒度片段检索前即可发现相关信息源。通过动机性实验，我们量化了当前基于HTML的检索方式所存在的效率缺陷，并勾勒出将当前以文档为中心的互联网演进为更适配AI导向的基础设施所需的关键架构方向与开放挑战，从而更好地支持对网络内容的语义访问。",
+        "translated_title": "迈向原生人工智能的互联网：为语义检索重新思考网络架构",
+        "label": [
+            "通用推荐技术"
+        ],
+        "label_reason": "探讨AI驱动语义检索架构，非直接推荐算法。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出AI原生Web架构，支持语义检索优化。"
+    },
+    {
+        "title": "Time Matters: Enhancing Sequential Recommendations with Time-Guided Graph Neural ODEs",
+        "url": "http://arxiv.org/abs/2511.18347v1",
+        "pub_date": "2025-11-23",
+        "summary": "Sequential recommendation (SR) is widely deployed in e-commerce platforms, streaming services, etc., revealing significant potential to enhance user experience. However, existing methods often overlook two critical factors: irregular user interests between interactions and highly uneven item distributions over time. The former factor implies that actual user preferences are not always continuous, and long-term historical interactions may not be relevant to current purchasing behavior. Therefore, relying only on these historical interactions for recommendations may result in a lack of user interest at the target time. The latter factor, characterized by peaks and valleys in interaction frequency, may result from seasonal trends, special events, or promotions. These externally driven distributions may not align with individual user interests, leading to inaccurate recommendations. To address these deficiencies, we propose TGODE to both enhance and capture the long-term historical interactions. Specifically, we first construct a user time graph and item evolution graph, which utilize user personalized preferences and global item distribution information, respectively. To tackle the temporal sparsity caused by irregular user interactions, we design a time-guided diffusion generator to automatically obtain an augmented time-aware user graph. Additionally, we devise a user interest truncation factor to efficiently identify sparse time intervals and achieve balanced preference inference. After that, the augmented user graph and item graph are fed into a generalized graph neural ordinary differential equation (ODE) to align with the evolution of user preferences and item distributions. This allows two patterns of information evolution to be matched over time. Experimental results demonstrate that TGODE outperforms baseline methods across five datasets, with improvements ranging from 10% to 46%.",
+        "translated": "序列推荐（SR）广泛部署于电子商务平台、流媒体服务等场景，展现出显著提升用户体验的潜力。然而，现有方法常忽视两个关键因素：用户交互间兴趣的不连续性与物品随时间分布的高度不均衡。前者表明用户实际偏好并非始终连续，长期历史交互可能与当前购买行为无关，因此仅依赖历史交互进行推荐可能导致目标时刻用户兴趣缺失。后者表现为交互频率的峰谷波动，可能源于季节趋势、特殊事件或促销活动等外部驱动因素，其分布模式未必契合个体用户兴趣，从而导致推荐结果不准确。为解决上述缺陷，我们提出TGODE模型以增强并捕捉长期历史交互。具体而言，我们首先构建用户时序图与物品演化图，分别利用用户个性化偏好与全局物品分布信息。为应对因用户交互不规律导致的时间稀疏性，我们设计了时间引导扩散生成器，自动生成扩展的时间感知用户图。此外，我们引入用户兴趣截断因子，高效识别稀疏时间段，并实现偏好推理的平衡。随后，将扩展后的用户图与物品图输入广义图神经ODE模型，使其与用户偏好及物品分布随时间演化的动态保持一致，从而实现两类信息演化在时间维度上的匹配。实验结果表明，TGODE在五个数据集上均优于基线方法，性能提升幅度介于10%至46%之间。",
+        "translated_title": "时间至关重要：基于时间引导的图神经网络微分方程提升序列推荐",
+        "label": [
+            "序列推荐",
+            "图神经网络推荐"
+        ],
+        "label_reason": "聚焦序列推荐中时序建模与图神经网络结合",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新性引入时间引导ODE框架处理用户兴趣演化"
+    },
+    {
+        "title": "UFO: Unfair-to-Fair Evolving Mitigates Unfairness in LLM-based Recommender Systems via Self-Play Fine-tuning",
+        "url": "http://arxiv.org/abs/2511.18342v1",
+        "pub_date": "2025-11-23",
+        "summary": "Large language model-based Recommender Systems (LRSs) have demonstrated superior recommendation performance by integrating pre-training with Supervised Fine-Tuning (SFT). However, this approach introduces item-side unfairness. Existing studies primarily attribute this issue to the absence of fairness constraints during SFT and attempt to mitigate unfairness via re-weighting and re-ranking methods. In this paper, we find that unfairness arises not only from SFT but also from pre-training, where inherent biases are further amplified during SFT. This finding underscores the failure of current methods to address the root causes of unfairness. Moreover, current methods struggle to preserve satisfactory recommendation performance. To tackle these issues, we propose an Unfair-to-Fair evOlving (UFO) framework using a self-play mechanism, formulating unfairness mitigation as a two-player game. UFO alternates between two player roles: the \\textit{judger}, which identifies unfairness from both pre-training and SFT, and the \\textit{corrector}, which adjusts the LRS to address identified unfairness while preserving recommendation performance. Iterative optimization between these roles enables UFO to completely resolve unfairness. Extensive experiments demonstrate that UFO effectively mitigates unfairness while improving recommendation performance.",
+        "translated": "基于大语言模型的推荐系统（LRSs）通过结合预训练与监督微调（SFT）展现了优越的推荐性能。然而，该方法引入了物品侧的不公平性。现有研究主要将此问题归因于SFT阶段缺乏公平性约束，并尝试通过重加权与重排序方法缓解不公平性。本文发现，不公平性不仅源于SFT阶段，也源自预训练阶段，在SFT过程中固有偏见进一步被放大。这一发现表明当前方法未能触及不公平性的根本成因。此外，现有方法难以在缓解不公平性的同时保持满意的推荐性能。为解决上述问题，我们提出一种“从不公平到公平”的自演进框架（Unfair-to-Fair evOlving, UFO），采用自对弈机制，将不公平性缓解建模为双人博弈。UFO交替扮演两个角色：\\textit{判别者}，用于识别预训练与SFT阶段产生的不公平性；以及\\textit{修正者}，通过调整LRS以应对已识别的不公平性，同时保留推荐性能。这两个角色间的迭代优化使UFO能够彻底消除不公平性。大量实验表明，UFO有效缓解了不公平性并提升了推荐性能。",
+        "translated_title": "UFO：通过自对弈微调缓解基于大语言模型推荐系统中的不公平性，实现从不公平到公平的演化",
+        "label": [
+            "LLM生成式推荐",
+            "推荐系统公平性/可解释性"
+        ],
+        "label_reason": "聚焦LLM推荐中的公平性问题，提出自博弈优化框架。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "首创自博弈机制解决推荐系统不公平性与性能平衡。"
+    },
+    {
+        "title": "Path-Constrained Retrieval: A Structural Approach to Reliable LLM Agent Reasoning Through Graph-Scoped Semantic Search",
+        "url": "http://arxiv.org/abs/2511.18313v1",
+        "pub_date": "2025-11-23",
+        "summary": "Large Language Model agents often retrieve context from knowledge bases that lack structural consistency with the agent's current reasoning state, leading to incoherent reasoning chains. We introduce Path-Constrained Retrieval (PCR), a retrieval method that combines structural graph constraints with semantic search to ensure retrieved information maintains logical relationships within a knowledge graph. PCR restricts the search space to nodes reachable from an anchor node, preventing retrieval of structurally disconnected information that may lead to inconsistent reasoning. We evaluate PCR on PathRAG-6, a benchmark spanning six domains with 180 nodes and 360 edges. Our results show that PCR achieves full structural consistency compared to 24-32 percent in baseline methods, while maintaining strong relevance scores. On the technology domain, PCR obtains full relevance at rank 10 with full structural consistency, significantly outperforming vector search and hybrid retrieval. PCR reduces the average graph distance of retrieved context by 78 percent compared to baselines, demonstrating retrieval of more structurally consistent information. These findings suggest that path-constrained retrieval is an effective approach for improving the reliability and coherence of LLM agent reasoning systems.",
+        "translated": "大语言模型代理常常从缺乏与当前推理状态结构一致性的知识库中检索上下文，从而导致推理链不连贯。我们引入了路径约束检索（Path-Constrained Retrieval, PCR），一种结合结构图约束与语义搜索的检索方法，以确保检索到的信息在知识图谱内保持逻辑关联性。PCR将搜索空间限制在从锚点节点可达的节点范围内，避免检索那些可能导致推理不一致的结构上断开的信息。我们在涵盖六个领域、包含180个节点和360条边的PathRAG-6基准数据集上评估PCR。结果表明，相比基线方法24%-32%的结构一致性，PCR实现了完全的结构一致性，同时保持了较高的相关性得分。在技术领域，PCR在排名前10时实现完全相关性且具备完整结构一致性，显著优于向量搜索和混合检索方法。与基线方法相比，PCR使检索上下文的平均图距离降低了78%，表明其能更有效地检索结构一致的信息。这些发现表明，路径约束检索是提升大语言模型代理推理系统可靠性和连贯性的有效方法。",
+        "translated_title": "路径约束检索：通过图域语义搜索实现大语言模型代理可靠推理的结构化方法",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "方法用于LLM推理，与推荐系统间接相关",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出图结构约束检索，提升LLM推理一致性"
+    },
+    {
+        "title": "Large Language Model Enhanced Graph Invariant Contrastive Learning for Out-of-Distribution Recommendation",
+        "url": "http://arxiv.org/abs/2511.18282v1",
+        "pub_date": "2025-11-23",
+        "summary": "Out-of-distribution (OOD) generalization has emerged as a significant challenge in graph recommender systems. Traditional graph neural network algorithms often fail because they learn spurious environmental correlations instead of stable causal relationships, leading to substantial performance degradation under distribution shifts. While recent advancements in Large Language Models (LLMs) offer a promising avenue due to their vast world knowledge and reasoning capabilities, effectively integrating this knowledge with the fine-grained topology of specific graphs to solve the OOD problem remains a significant challenge. To address these issues, we propose {$\\textbf{Inv}$ariant $\\textbf{G}$raph $\\textbf{C}$ontrastive Learning with $\\textbf{LLM}$s for Out-of-Distribution Recommendation (InvGCLLM)}, an innovative causal learning framework that synergistically integrates the strengths of data-driven models and knowledge-driven LLMs. Our framework first employs a data-driven invariant learning model to generate causal confidence scores for each user-item interaction. These scores then guide an LLM to perform targeted graph refinement, leveraging its world knowledge to prune spurious connections and augment missing causal links. Finally, the structurally purified graphs provide robust supervision for a causality-guided contrastive learning objective, enabling the model to learn representations that are resilient to spurious correlations. Experiments conducted on four public datasets demonstrate that InvGCLLM achieves significant improvements in out-of-distribution recommendation, consistently outperforming state-of-the-art baselines.",
+        "translated": "分布外（OOD）泛化已成为图推荐系统中的重要挑战。传统图神经网络算法往往失效，因为它们学习的是环境中的虚假相关性而非稳定的因果关系，在分布偏移下会导致显著性能下降。尽管近期大语言模型（LLMs）的发展因其广泛的世界知识与推理能力展现出巨大潜力，但如何有效融合这一知识与特定图结构的细粒度拓扑以解决OOD问题，仍是一个重大挑战。为应对这些问题，我们提出了一种创新性的因果学习框架——基于大语言模型的不变图对比学习方法用于分布外推荐（InvGCLLM），该框架协同整合数据驱动模型与知识驱动型LLMs的优势。我们的框架首先使用一个数据驱动的不变性学习模型，为每个用户-物料交互生成因果置信得分；随后，这些得分引导LLM执行有针对性的图结构精炼，利用其世界知识剪枝虚假连接并增强缺失的因果关联；最后，结构净化后的图提供稳健监督，支持因果引导的对比学习目标，从而使模型能够学习到对虚假相关性具有鲁棒性的表示。在四个公开数据集上的实验表明，InvGCLLM在分布外推荐任务中取得了显著提升，并持续优于现有最先进基线方法。",
+        "translated_title": "大语言模型增强的图不变对比学习用于分布外推荐",
+        "label": [
+            "召回",
+            "精排",
+            "图神经网络推荐",
+            "负采样与对比学习"
+        ],
+        "label_reason": "结合LLM与图结构解决OOD推荐，属推荐系统核心问题",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新性融合LLM与因果对比学习框架"
+    },
+    {
+        "title": "Democratic Recommendation with User and Item Representatives Produced by Graph Condensation",
+        "url": "http://arxiv.org/abs/2511.18279v1",
+        "pub_date": "2025-11-23",
+        "summary": "The challenges associated with large-scale user-item interaction graphs have attracted increasing attention in graph-based recommendation systems, primarily due to computational inefficiencies and inadequate information propagation. Existing methods provide partial solutions but suffer from notable limitations: model-centric approaches, such as sampling and aggregation, often struggle with generalization, while data-centric techniques, including graph sparsification and coarsening, lead to information loss and ineffective handling of bipartite graph structures. Recent advances in graph condensation offer a promising direction by reducing graph size while preserving essential information, presenting a novel approach to mitigating these challenges. Inspired by the principles of democracy, we propose \\textbf{DemoRec}, a framework that leverages graph condensation to generate user and item representatives for recommendation tasks. By constructing a compact interaction graph and clustering nodes with shared characteristics from the original graph, DemoRec significantly reduces graph size and computational complexity. Furthermore, it mitigates the over-reliance on high-order information, a critical challenge in large-scale bipartite graphs. Extensive experiments conducted on four public datasets demonstrate the effectiveness of DemoRec, showcasing substantial improvements in recommendation performance, computational efficiency, and robustness compared to SOTA methods.",
+        "translated": "大规模用户-物料交互图所引发的挑战在基于图的推荐系统中受到越来越多的关注，主要源于计算效率低下和信息传播不充分的问题。现有方法虽提供部分解决方案，但仍存在显著局限：以模型为中心的方法（如采样与聚合）往往难以泛化；而以数据为中心的技术（包括图稀疏化与粗化）则导致信息丢失，并无法有效处理二分图结构。近期图压缩领域的进展为缓解上述挑战提供了有前景的新方向——通过减少图规模同时保留关键信息。受民主原则启发，我们提出**DemoRec**框架，利用图压缩技术为推荐任务生成用户与物料代表。该框架通过构建紧凑的交互图，并对原图中具有相似特征的节点进行聚类，大幅降低图规模与计算复杂度，同时缓解了在大规模二分图中过度依赖高阶信息这一关键难题。在四个公开数据集上进行的广泛实验表明，DemoRec在推荐性能、计算效率及鲁棒性方面均显著优于当前最先进方法。",
+        "translated_title": "基于图凝聚生成的用户与物料代表的民主推荐",
+        "label": [
+            "召回",
+            "图神经网络推荐"
+        ],
+        "label_reason": "基于图压缩的用户/物品代表生成，用于推荐召回环节。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "首次将民主思想与图压缩结合用于推荐系统召回。"
+    },
+    {
+        "title": "LLM Reasoning for Cold-Start Item Recommendation",
+        "url": "http://arxiv.org/abs/2511.18261v1",
+        "pub_date": "2025-11-23",
+        "summary": "Large Language Models (LLMs) have shown significant potential for improving recommendation systems through their inherent reasoning capabilities and extensive knowledge base. Yet, existing studies predominantly address warm-start scenarios with abundant user-item interaction data, leaving the more challenging cold-start scenarios, where sparse interactions hinder traditional collaborative filtering methods, underexplored. To address this limitation, we propose novel reasoning strategies designed for cold-start item recommendations within the Netflix domain. Our method utilizes the advanced reasoning capabilities of LLMs to effectively infer user preferences, particularly for newly introduced or rarely interacted items. We systematically evaluate supervised fine-tuning, reinforcement learning-based fine-tuning, and hybrid approaches that combine both methods to optimize recommendation performance. Extensive experiments on real-world data demonstrate significant improvements in both methodological efficacy and practical performance in cold-start recommendation contexts. Remarkably, our reasoning-based fine-tuned models outperform Netflix's production ranking model by up to 8% in certain cases.",
+        "translated": "大语言模型（LLMs）凭借其固有的推理能力和广泛的知识库，在提升推荐系统性能方面展现出巨大潜力。然而，现有研究主要聚焦于拥有丰富用户-物料交互数据的暖启动场景，而对更具有挑战性的冷启动场景关注不足——在该场景下，稀疏的交互数据阻碍了传统协同过滤方法的有效应用。为解决这一局限，我们提出了一种面向Netflix领域冷启动物料推荐的新型推理策略。我们的方法利用LLMs强大的推理能力，有效推断用户偏好，尤其适用于新引入或极少被交互的物料。我们系统性地评估了监督微调、基于强化学习的微调以及融合二者优势的混合方法，以优化推荐性能。在真实世界数据上的大量实验表明，我们的方法在冷启动推荐场景中显著提升了方法有效性与实际表现。尤为突出的是，我们的基于推理的微调模型在某些情况下相较Netflix生产级排序模型性能高出高达8%。",
+        "translated_title": "大语言模型推理用于冷启动物料推荐",
+        "label": [
+            "LLM生成式推荐",
+            "召回"
+        ],
+        "label_reason": "直接利用LLM解决冷启动推荐问题，属核心推荐环节",
+        "relevance_score": 10,
+        "novelty_score": 9,
+        "novelty_reason": "创新性结合LLM推理与冷启动策略，效果显著提升"
     }
 ]
