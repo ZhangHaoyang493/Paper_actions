@@ -14350,5 +14350,197 @@
         "relevance_score": 1,
         "novelty_score": 8,
         "novelty_reason": "提出Fisher引导模块选择机制，显著提升适应效率。"
+    },
+    {
+        "title": "Kleinkram: Open Robotic Data Management",
+        "url": "http://arxiv.org/abs/2511.20492v1",
+        "pub_date": "2025-11-25",
+        "summary": "We introduce Kleinkram, a free and open-source system designed to solve the challenge of managing massive, unstructured robotic datasets. Designed as a modular, on-premises cloud solution, Kleinkram enables scalable storage, indexing, and sharing of datasets, ranging from individual experiments to large-scale research collections. Kleinkram natively integrates with standard formats such as ROS bags and MCAP and utilises S3-compatible storage for flexibility. Beyond storage, Kleinkram features an integrated \"Action Runner\" that executes customizable Docker-based workflows for data validation, curation, and benchmarking. Kleinkram has successfully managed over 30 TB of data from diverse robotic systems, streamlining the research lifecycle through a modern web interface and a robust Command Line Interface (CLI).",
+        "translated": "我们引入了 Kleinkram，这是一个免费且开源的系统，旨在解决管理海量、非结构化机器人数据集的挑战。Kleinkram 设计为模块化的本地部署云解决方案，支持从单个实验到大规模研究集合的数据集可扩展存储、索引与共享。Kleinkram 原生支持 ROS bags 和 MCAP 等标准格式，并采用兼容 S3 的存储方案以提升灵活性。除存储功能外，Kleinkram 还集成了一套“动作执行器”（Action Runner），可执行基于 Docker 的自定义工作流，用于数据验证、整理及基准测试。Kleinkram 已成功管理来自多种机器人系统的超过 30 TB 数据，通过现代化的 Web 界面和强大的命令行接口（CLI），有效简化了研究全流程。",
+        "translated_title": "Kleinkram：开放机器人数据管理",
+        "label": [],
+        "label_reason": "论文聚焦机器人数据管理，与推荐系统无关",
+        "relevance_score": 1,
+        "novelty_score": 1,
+        "novelty_reason": "无推荐系统创新，属通用数据管理工具"
+    },
+    {
+        "title": "HHFT: Hierarchical Heterogeneous Feature Transformer for Recommendation Systems",
+        "url": "http://arxiv.org/abs/2511.20235v1",
+        "pub_date": "2025-11-25",
+        "summary": "We propose HHFT (Hierarchical Heterogeneous Feature Transformer), a Transformer-based architecture tailored for industrial CTR prediction. HHFT addresses the limitations of DNN through three key designs: (1) Semantic Feature Partitioning: Grouping heterogeneous features (e.g. user profile, item information, behaviour sequennce) into semantically coherent blocks to preserve domain-specific information; (2) Heterogeneous Transformer Encoder: Adopting block-specific QKV projections and FFNs to avoid semantic confusion between distinct feature types; (3) Hiformer Layer: Capturing high-order interactions across features. Our findings reveal that Transformers significantly outperform DNN baselines, achieving a +0.4% improvement in CTR AUC at scale. We have successfully deployed the model on Taobao's production platform, observing a significant uplift in key business metrics, including a +0.6% increase in Gross Merchandise Value (GMV).",
+        "translated": "我们提出 HHFT（分层异构特征变换器），这是一种面向工业级点击率预测的 Transformer 架构。HHFT 通过三项关键设计克服了深度神经网络（DNN）的局限性：(1) 语义特征分区：将异构特征（如用户画像、物品信息、行为序列）划分为语义连贯的模块，以保留领域特定信息；(2) 异构 Transformer 编码器：采用针对不同模块的独立 QKV 投影与前馈网络（FFN），避免不同特征类型间的语义混淆；(3) HiFormer 层：捕捉跨特征的高阶交互关系。我们的实验结果表明，Transformer 显著优于 DNN 基线模型，在大规模场景下实现了 CTR AUC 提升 +0.4%。该模型已在淘宝生产平台成功部署，显著提升了关键业务指标，包括商品交易总额（GMV）提升 +0.6%。",
+        "translated_title": "HHFT：面向推荐系统的层次化异构特征变换器",
+        "label": [
+            "精排",
+            "通用推荐技术"
+        ],
+        "label_reason": "提出Transformer架构用于CTR预测，属精排核心方法",
+        "relevance_score": 9,
+        "novelty_score": 7,
+        "novelty_reason": "改进Transformer结构适配推荐场景，有显著性能提升"
+    },
+    {
+        "title": "HKRAG: Holistic Knowledge Retrieval-Augmented Generation Over Visually-Rich Documents",
+        "url": "http://arxiv.org/abs/2511.20227v1",
+        "pub_date": "2025-11-25",
+        "summary": "Existing multimodal Retrieval-Augmented Generation (RAG) methods for visually rich documents (VRD) are often biased towards retrieving salient knowledge(e.g., prominent text and visual elements), while largely neglecting the critical fine-print knowledge(e.g., small text, contextual details). This limitation leads to incomplete retrieval and compromises the generator's ability to produce accurate and comprehensive answers. To bridge this gap, we propose HKRAG, a new holistic RAG framework designed to explicitly capture and integrate both knowledge types. Our framework features two key components: (1) a Hybrid Masking-based Holistic Retriever that employs explicit masking strategies to separately model salient and fine-print knowledge, ensuring a query-relevant holistic information retrieval; and (2) an Uncertainty-guided Agentic Generator that dynamically assesses the uncertainty of initial answers and actively decides how to integrate the two distinct knowledge streams for optimal response generation. Extensive experiments on open-domain visual question answering benchmarks show that HKRAG consistently outperforms existing methods in both zero-shot and supervised settings, demonstrating the critical importance of holistic knowledge retrieval for VRD understanding.",
+        "translated": "现有针对视觉丰富文档（VRD）的多模态检索增强生成（RAG）方法往往倾向于检索显著知识（如醒目文本与视觉元素），而大量忽略关键的细粒度信息（如小字、上下文细节）。这一局限导致检索不完整，削弱了生成器输出准确且全面答案的能力。为弥合此差距，我们提出HKRAG，一种旨在显式捕获并融合两类知识的全新整体型RAG框架。该框架包含两个核心组件：(1) 基于混合掩码的整体检索器，采用显式掩码策略分别建模显著知识与细粒度知识，确保查询相关性的全局信息检索；(2) 基于不确定性引导的代理生成器，动态评估初始答案的不确定性，并主动决定如何整合两类不同知识流以实现最优响应生成。在开放域视觉问答基准上的广泛实验表明，HKRAG在零样本与监督设置下均持续优于现有方法，验证了整体知识检索对VRD理解的关键重要性。",
+        "translated_title": "HKRAG：面向视觉丰富文档的综合知识检索增强生成",
+        "label": [],
+        "label_reason": "聚焦多模态检索生成，非推荐系统核心环节",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "创新性改进RAG框架，但非推荐算法"
+    },
+    {
+        "title": "Enhancing Sequential Recommendation with World Knowledge from Large Language Models",
+        "url": "http://arxiv.org/abs/2511.20177v1",
+        "pub_date": "2025-11-25",
+        "summary": "Sequential Recommendation System~(SRS) has become pivotal in modern society, which predicts subsequent actions based on the user's historical behavior. However, traditional collaborative filtering-based sequential recommendation models often lead to suboptimal performance due to the limited information of their collaborative signals. With the rapid development of LLMs, an increasing number of works have incorporated LLMs' world knowledge into sequential recommendation. Although they achieve considerable gains, these approaches typically assume the correctness of LLM-generated results and remain susceptible to noise induced by LLM hallucinations. To overcome these limitations, we propose GRASP (Generation Augmented Retrieval with Holistic Attention for Sequential Prediction), a flexible framework that integrates generation augmented retrieval for descriptive synthesis and similarity retrieval, and holistic attention enhancement which employs multi-level attention to effectively employ LLM's world knowledge even with hallucinations and better capture users' dynamic interests. The retrieved similar users/items serve as auxiliary contextual information for the later holistic attention enhancement module, effectively mitigating the noisy guidance of supervision-based methods. Comprehensive evaluations on two public benchmarks and one industrial dataset reveal that GRASP consistently achieves state-of-the-art performance when integrated with diverse backbones. The code is available at: https://anonymous.4open.science/r/GRASP-SRS.",
+        "translated": "序列推荐系统（SRS）已成为现代社会中的关键组成部分，其基于用户的历史行为预测后续动作。然而，传统的基于协同过滤的序列推荐模型往往因协同信号信息有限而导致性能次优。随着大语言模型（LLM）的快速发展，越来越多的研究工作开始将LLM的世界知识融入序列推荐中。尽管这些方法取得了显著提升，但它们通常假设LLM生成结果的准确性，并仍易受由LLM幻觉引发的噪声影响。为克服上述局限性，我们提出GRASP（Generation Augmented Retrieval with Holistic Attention for Sequential Prediction），一个灵活的框架，该框架融合了增强生成的检索机制，用于描述性合成与相似度检索，并结合全局注意力增强模块，通过多级注意力机制有效利用LLM世界知识，即使在存在幻觉的情况下亦能更好地捕捉用户的动态兴趣。所检索到的相似用户/物料作为辅助上下文信息供给后续的全局注意力增强模块，有效缓解了基于监督信号的方法所面临的噪声引导问题。在两个公开基准数据集和一个工业数据集上的全面评估表明，当与多种骨干网络集成时，GRASP始终实现最先进性能。代码可访问：https://anonymous.4open.science/r/GRASP-SRS。",
+        "translated_title": "利用大语言模型的世界知识增强序列推荐",
+        "label": [
+            "序列推荐",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "结合LLM增强序列推荐，解决幻觉问题。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新框架融合生成与检索，提升鲁棒性。"
+    },
+    {
+        "title": "SEDA: A Self-Adapted Entity-Centric Data Augmentation for Boosting Gird-based Discontinuous NER Models",
+        "url": "http://arxiv.org/abs/2511.20143v1",
+        "pub_date": "2025-11-25",
+        "summary": "Named Entity Recognition (NER) is a critical task in natural language processing, yet it remains particularly challenging for discontinuous entities. The primary difficulty lies in text segmentation, as traditional methods often missegment or entirely miss cross-sentence discontinuous entities, significantly affecting recognition accuracy. Therefore, we aim to address the segmentation and omission issues associated with such entities. Recent studies have shown that grid-tagging methods are effective for information extraction due to their flexible tagging schemes and robust architectures. Building on this, we integrate image data augmentation techniques, such as cropping, scaling, and padding, into grid-based models to enhance their ability to recognize discontinuous entities and handle segmentation challenges. Experimental results demonstrate that traditional segmentation methods often fail to capture cross-sentence discontinuous entities, leading to decreased performance. In contrast, our augmented grid models achieve notable improvements. Evaluations on the CADEC, ShARe13, and ShARe14 datasets show F1 score gains of 1-2.5% overall and 3.7-8.4% for discontinuous entities, confirming the effectiveness of our approach.",
+        "translated": "命名实体识别（NER）是自然语言处理中的关键任务，但针对非连续实体仍极具挑战性。其主要难点在于文本切分：传统方法常错误切分或完全遗漏跨句非连续实体，显著影响识别准确率。因此，我们旨在解决此类实体所面临的切分与遗漏问题。近期研究表明，网格标注方法因其灵活的标注方案和稳健的架构，在信息抽取任务中表现优异。在此基础上，我们将图像数据增强技术（如裁剪、缩放与填充）引入基于网格的模型，以增强其对非连续实体的识别能力并缓解切分难题。实验结果表明，传统切分方法常无法捕捉跨句非连续实体，导致性能下降；相比之下，我们的增强型网格模型取得了显著提升。在CADEC、ShARe13及ShARe14数据集上的评估显示，整体F1分数提升1%-2.5%，针对非连续实体的提升幅度达3.7%-8.4%，验证了本方法的有效性。",
+        "translated_title": "SEDA：一种自适应实体为中心的数据增强方法，用于提升基于网格的不连续命名实体识别模型",
+        "label": [],
+        "label_reason": "论文聚焦NER任务，与推荐系统无关。",
+        "relevance_score": 1,
+        "novelty_score": 3,
+        "novelty_reason": "方法改进有限，未引入新范式。"
+    },
+    {
+        "title": "Towards A Tri-View Diffusion Framework for Recommendation",
+        "url": "http://arxiv.org/abs/2511.20122v1",
+        "pub_date": "2025-11-25",
+        "summary": "Diffusion models (DMs) have recently gained significant interest for their exceptional potential in recommendation tasks. This stems primarily from their prominent capability in distilling, modeling, and generating comprehensive user preferences. However, previous work fails to examine DMs in recommendation tasks through a rigorous lens. In this paper, we first experimentally investigate the completeness of recommender models from a thermodynamic view. We reveal that existing DM-based recommender models operate by maximizing the energy, while classic recommender models operate by reducing the entropy. Based on this finding, we propose a minimalistic diffusion framework that incorporates both factors via the maximization of Helmholtz free energy. Meanwhile, to foster the optimization, our reverse process is armed with a well-designed denoiser to maintain the inherent anisotropy, which measures the user-item cross-correlation in the context of bipartite graphs. Finally, we adopt an Acceptance-Rejection Gumbel Sampling Process (AR-GSP) to prioritize the far-outnumbered unobserved interactions for model robustness. AR-GSP integrates an acceptance-rejection sampling to ensure high-quality hard negative samples for general recommendation tasks, and a timestep-dependent Gumbel Softmax to handle an adaptive sampling strategy for diffusion models. Theoretical analyses and extensive experiments demonstrate that our proposed framework has distinct superiority over baselines in terms of accuracy and efficiency.",
+        "translated": "扩散模型（DMs）近年来因其在推荐任务中的卓越潜力而受到广泛关注。这主要源于其在提炼、建模和生成全面用户偏好方面的突出能力。然而，以往研究未能从严格的角度考察扩散模型在推荐任务中的表现。本文首先从热力学视角实验性地探究推荐模型的完备性。我们发现，现有的基于扩散模型的推荐模型通过最大化能量进行运作，而经典推荐模型则通过降低熵值实现优化。基于这一发现，我们提出一种极简化的扩散框架，通过最大化亥姆霍兹自由能同时融合上述两个因素。与此同时，为促进优化，我们的逆过程配备了一种精心设计的去噪器，以保持固有的各向异性，该各向异性衡量的是二部图背景下用户-物料间的交叉相关性。最后，我们采用接受-拒绝Gumbel采样过程（AR-GSP），以提升模型对数量远超观测交互的未观测交互的鲁棒性。AR-GSP结合了接受-拒绝采样机制，以确保通用推荐任务中高质量硬负样本的获取，并引入时步依赖的Gumbel Softmax，用于处理扩散模型所需的自适应采样策略。理论分析与大量实验表明，所提出的框架在准确性和效率方面均显著优于基线方法。",
+        "translated_title": "面向推荐系统的三视角扩散框架",
+        "label": [
+            "精排",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "提出基于扩散模型的推荐框架，聚焦生成式推荐与排序优化。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "首次将热力学视角与扩散模型结合用于推荐系统建模。"
+    },
+    {
+        "title": "Invisible in Search? Auditing Aesthetic Bias in the Visual Representation of Holocaust Victims on Google",
+        "url": "http://arxiv.org/abs/2511.20036v1",
+        "pub_date": "2025-11-25",
+        "summary": "Information retrieval systems, such as search engines, increasingly shape the representation of the past and present states of social reality. Despite their importance, these systems face challenges in dealing with the ethical aspects of representation due to various forms of bias, including aesthetic bias that perpetuates hegemonic patterns of representation. While most research on aesthetic bias has examined it in the context of current societal issues, it is also crucial for historical representation, particularly of sensitive subjects such as historical atrocities. To address this gap, we conduct a comparative audit of the visual representation of Holocaust victims on Google. We find that Google tends to propagate a male-dominated representation of Holocaust victims with an emphasis on atrocity context, risking rendering invisible gender-specific suffering and decreasing potential for nurturing empathy. We also observe a variation in representation across geographic locations, suggesting that search algorithms may produce their own aesthetic of victimhood.",
+        "translated": "信息检索系统，如搜索引擎，日益塑造着社会现实过去与现在状态的表征。尽管这些系统至关重要，但由于存在多种形式的偏见（包括强化霸权表征模式的审美偏见），它们在处理表征的伦理方面面临挑战。虽然大多数关于审美偏见的研究聚焦于当前社会议题，但其对历史表征——特别是涉及敏感主题如历史暴行的历史再现——同样具有关键意义。为填补这一空白，我们对谷歌上大屠杀受害者的视觉表征进行了比较审计。研究发现，谷歌倾向于传播以男性为主导、强调暴行语境的大屠杀受害者表征，这可能导致性别特定苦难被忽视，并削弱培养共情的可能性。此外，我们还观察到不同地理区域间表征呈现差异，表明搜索算法可能自身生成一种独特的“受害者美学”。",
+        "translated_title": "搜索中看不见的？审计谷歌上大屠杀受害者视觉表征中的审美偏见",
+        "label": [],
+        "label_reason": "研究搜索偏见，非推荐系统核心问题",
+        "relevance_score": 3,
+        "novelty_score": 5,
+        "novelty_reason": "审计方法常规，未提出新推荐技术"
+    },
+    {
+        "title": "Adaptive Knowledge Transfer for Cross-Disciplinary Cold-Start Knowledge Tracing",
+        "url": "http://arxiv.org/abs/2511.20009v1",
+        "pub_date": "2025-11-25",
+        "summary": "Cross-Disciplinary Cold-start Knowledge Tracing (CDCKT) faces a critical challenge: insufficient student interaction data in the target discipline prevents effective knowledge state modeling and performance prediction. Existing cross-disciplinary methods rely on overlapping entities between disciplines for knowledge transfer through simple mapping functions, but suffer from two key limitations: (1) overlapping entities are scarce in real-world scenarios, and (2) simple mappings inadequately capture cross-disciplinary knowledge complexity. To overcome these challenges, we propose Mixed of Experts and Adversarial Generative Network-based Cross-disciplinary Cold-start Knowledge Tracing Framework. Our approach consists of three key components: First, we pre-train a source discipline model and cluster student knowledge states into K categories. Second, these cluster attributes guide a mixture-of-experts network through a gating mechanism, serving as a cross-domain mapping bridge. Third, an adversarial discriminator enforces feature separation by pulling same-attribute student features closer while pushing different-attribute features apart, effectively mitigating small-sample limitations. We validate our method's effectiveness across 20 extreme cross-disciplinary cold-start scenarios.",
+        "translated": "跨学科冷启动知识追踪（CDCKT）面临一个关键挑战：目标学科中学生交互数据不足，难以有效建模知识状态并进行性能预测。现有跨学科方法依赖学科间重叠实体，通过简单映射函数实现知识迁移，但存在两大核心局限：（1）现实场景中重叠实体稀缺；（2）简单映射无法充分捕捉跨学科知识的复杂性。为克服上述挑战，我们提出基于混合专家与对抗生成网络的跨学科冷启动知识追踪框架。该方法包含三个关键组件：首先，预训练源学科模型，并将学生知识状态聚类为 K 个类别；其次，利用这些聚类属性通过门控机制引导混合专家网络，作为跨域映射桥梁；第三，引入对抗判别器，通过拉近同属性学生特征、推离异属性特征，强制实现特征分离，从而有效缓解小样本限制。我们在 20 个极端跨学科冷启动场景中验证了该方法的有效性。",
+        "translated_title": "跨学科冷启动下的自适应知识迁移",
+        "label": [
+            "跨域/联邦推荐",
+            "负采样与对比学习"
+        ],
+        "label_reason": "解决跨学科冷启动知识追踪，适配推荐系统用户建模场景。",
+        "relevance_score": 6,
+        "novelty_score": 7,
+        "novelty_reason": "提出MoE+对抗网络新框架，提升小样本跨域迁移能力。"
+    },
+    {
+        "title": "Popularity Bias Alignment Estimates",
+        "url": "http://arxiv.org/abs/2511.19999v1",
+        "pub_date": "2025-11-25",
+        "summary": "We are extending Popularity Bias Memorization theorem from arXiv:archive/2404.12008 in several directions. We extend it to arbitrary degree distributions and also prove both upper and lower estimates for the alignment with top-k singular hyperspace.",
+        "translated": "我们正在将 arXiv:archive/2404.12008 中提出的流行度偏差记忆定理扩展至若干方向。我们将其推广至任意度分布情形，并同时证明了其与前 k 个奇异超空间对齐的上下界估计。",
+        "translated_title": "流行度偏差对齐估计",
+        "label": [],
+        "label_reason": "论文聚焦流行度偏差理论，与推荐系统无直接关联。",
+        "relevance_score": 3,
+        "novelty_score": 5,
+        "novelty_reason": "扩展流行度偏置定理，但非推荐系统专用创新。"
+    },
+    {
+        "title": "REWA: Witness-Overlap Theory -- Foundations for Composable Binary Similarity Systems",
+        "url": "http://arxiv.org/abs/2511.19998v1",
+        "pub_date": "2025-11-25",
+        "summary": "REWA introduces a general theory of similarity based on witness-overlap structures. We show that whenever similarity between concepts can be expressed as monotone witness overlap -- whether arising from graph neighborhoods, causal relations, temporal structure, topological features, symbolic patterns, or embedding-based neighborhoods -- it admits a reduction to compact encodings with provable ranking preservation guarantees. REWA systems consist of: (1) finite witness sets $W(v)$, (2) semi-random bit assignments generated from each witness, and (3) monotonicity of expected similarity in the overlap $Δ(u, v) = |W(u) \\cap W(v)|$. We prove that under an overlap-gap condition on the final witness sets -- independent of how they were constructed -- top-$k$ rankings are preserved using $m = O(\\log(|V|/δ))$ bits. The witness-set formulation is compositional: any sequence of structural, temporal, causal, topological, information-theoretic, or learned transformations can be combined into pipelines that terminate in discrete witness sets. The theory applies to the final witness overlap, enabling modular construction of similarity systems from reusable primitives. This yields a vast design space: millions of composable similarity definitions inherit logarithmic encoding complexity. REWA subsumes and unifies Bloom filters, minhash, LSH bitmaps, random projections, sketches, and hierarchical filters as special cases. It provides a principled foundation for similarity systems whose behavior is governed by witness overlap rather than hash-function engineering. This manuscript presents the axioms, the main reducibility theorem, complete proofs with explicit constants, and a detailed discussion of compositional design, limitations, and future extensions including multi-bit encodings, weighted witnesses, and non-set representations.",
+        "translated": "REWA 基于见证重叠结构提出了一种通用的相似性理论。我们证明，只要概念之间的相似性可表示为单调见证重叠——无论该重叠源于图邻域、因果关系、时序结构、拓扑特征、符号模式或基于嵌入的邻域——则其均可被缩减为具有可证排序保持保证的紧凑编码。REWA 系统由以下三部分组成：（1）有限的见证集 $W(v)$；（2）从每个见证生成的半随机位赋值；（3）期望相似度在重叠 $Δ(u, v) = |W(u) \\cap W(v)|$ 中的单调性。我们在最终见证集满足重叠-间隙条件的前提下（与这些集合如何构造无关），证明仅需 $m = O(\\log(|V|/δ))$ 位即可保持 top-$k$ 排名。见证集形式具备组合性：任意序列的结构、时序、因果、拓扑、信息论或学习变换均可组合成终止于离散见证集的管线。该理论适用于最终的见证重叠，从而允许从可复用的基本构件模块化构建相似性系统。这开辟了广阔的设计空间：数百万种可组合的相似性定义继承对数级编码复杂度。REWA 包含并统一了 Bloom 过滤器、MinHash、LSH 位图、随机投影、小样本估计及分层过滤器作为特例。它为一种行为由见证重叠而非哈希函数工程所主导的相似性系统提供了严谨的基础。本文呈现了公理、主要可约性定理、带显式常数的完整证明，以及对组合式设计、局限性与未来扩展（包括多比特编码、加权见证及非集合表示）的详细讨论。",
+        "translated_title": "REWA：见证重叠理论——可组合二元相似性系统的理论基础",
+        "label": [],
+        "label_reason": "与推荐系统无直接关联，属通用相似性理论",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "提出可组合相似性框架，但非专为推荐设计"
+    },
+    {
+        "title": "$\\text{R}^2\\text{R}$: A Route-to-Rerank Post-Training Framework for Multi-Domain Decoder-Only Rerankers",
+        "url": "http://arxiv.org/abs/2511.19987v1",
+        "pub_date": "2025-11-25",
+        "summary": "Decoder-only rerankers are central to Retrieval-Augmented Generation (RAG). However, generalist models miss domain-specific nuances in high-stakes fields like finance and law, and naive fine-tuning causes surface-form overfitting and catastrophic forgetting. To address this challenge, we introduce R2R, a domain-aware framework that combines dynamic expert routing with a two-stage training strategy, Entity Abstraction for Generalization (EAG). EAG introduces a counter-shortcut mechanism by masking the most predictive surface cues, forcing the reranker to learn domain-invariant relevance patterns rather than memorizing dataset-specific entities. To efficiently activate domain experts, R2R employs a lightweight Latent Semantic Router that probes internal representations from the frozen backbone decoder to select the optimal LoRA expert per query. Extensive experiments across different reranker backbones and diverse domains (legal, medical, and financial) demonstrate that R2R consistently surpasses generalist and single-domain fine-tuned baselines. Our results confirm that R2R is a model-agnostic and modular approach to domain specialization with strong cross-domain robustness.",
+        "translated": "仅解码器结构的重排模型是检索增强生成（RAG）的核心。然而，通用模型在金融、法律等高风险领域中缺乏特定领域的细微差别，而简单的微调会导致表面形式过拟合与灾难性遗忘。为应对这一挑战，我们提出了 R2R，一个具有领域感知能力的框架，结合动态专家路由与两阶段训练策略——实体抽象以促进泛化（EAG）。EAG 通过屏蔽最具预测性的表面线索引入反捷径机制，迫使重排模型学习领域无关的相关性模式，而非记忆特定数据集中的实体。为高效激活领域专家，R2R 使用轻量级潜在语义路由器，探测冻结主干解码器的内部表示，为每个查询选择最优 LoRA 专家。在不同重排模型主干及多样领域（法律、医学与金融）上的广泛实验表明，R2R 一致优于通用模型和单一领域微调基线。我们的结果证实，R2R 是一种模型无关且模块化的领域专业化方法，具备强大的跨领域鲁棒性。",
+        "translated_title": "R²R：面向多域解码器-only重排器的路由-重排后训练框架",
+        "label": [
+            "重排",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "针对RAG中重排模块的多领域适配问题",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出路由+抽象机制解决领域泛化问题"
+    },
+    {
+        "title": "The 2nd Workshop on Human-Centered Recommender Systems",
+        "url": "http://arxiv.org/abs/2511.19979v1",
+        "pub_date": "2025-11-25",
+        "summary": "Recommender systems shape how people discover information, form opinions, and connect with society. Yet, as their influence grows, traditional metrics, e.g., accuracy, clicks, and engagement, no longer capture what truly matters to humans. The workshop on Human-Centered Recommender Systems (HCRS) calls for a paradigm shift from optimizing engagement toward designing systems that truly understand, involve, and benefit people. It brings together researchers in recommender systems, human-computer interaction, AI safety, and social computing to explore how human values, e.g., trust, safety, fairness, transparency, and well-being, can be integrated into recommendation processes. Centered around three thematic axes-Human Understanding, Human Involvement, and Human Impact-HCRS features keynotes, panels, and papers covering topics from LLM-based interactive recommenders to societal welfare optimization. By fostering interdisciplinary collaboration, HCRS aims to shape the next decade of responsible and human-aligned recommendation research.",
+        "translated": "推荐系统塑造着人们如何发现信息、形成观点以及与社会建立联系。然而，随着其影响力日益扩大，传统的评价指标（如准确率、点击量和参与度）已无法真正反映对人类而言至关重要的价值。人类中心化推荐系统研讨会（HCRS）呼吁从优化用户参与转向设计真正理解、融入并惠及人类的系统。该研讨会汇聚了推荐系统、人机交互、人工智能安全及社会计算等领域的研究人员，共同探讨如何将人类价值观——例如信任、安全、公平、透明性与福祉——整合进推荐过程。围绕“人类理解”、“人类参与”与“人类影响”三大主题轴心，HCRS设置了主旨演讲、专题讨论与论文评审，涵盖基于大语言模型的互动式推荐器到社会福祉优化等议题。通过促进跨学科协作，HCRS致力于塑造未来十年负责任且以人为本的推荐研究方向。",
+        "translated_title": "第二届以人为中心的推荐系统研讨会",
+        "label": [
+            "推荐系统公平性/可解释性",
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "聚焦人本推荐，整合价值观与LLM交互",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "推动推荐系统向伦理与人类价值对齐"
+    },
+    {
+        "title": "LLM-EDT: Large Language Model Enhanced Cross-domain Sequential Recommendation with Dual-phase Training",
+        "url": "http://arxiv.org/abs/2511.19931v1",
+        "pub_date": "2025-11-25",
+        "summary": "Cross-domain Sequential Recommendation (CDSR) has been proposed to enrich user-item interactions by incorporating information from various domains. Despite current progress, the imbalance issue and transition issue hinder further development of CDSR. The former one presents a phenomenon that the interactions in one domain dominate the entire behavior, leading to difficulty in capturing the domain-specific features in the other domain. The latter points to the difficulty in capturing users' cross-domain preferences within the mixed interaction sequence, resulting in poor next-item prediction performance for specific domains. With world knowledge and powerful reasoning ability, Large Language Models (LLMs) partially alleviate the above issues by performing as a generator and an encoder. However, current LLMs-enhanced CDSR methods are still under exploration, which fail to recognize the irrelevant noise and rough profiling problems. Thus, to make peace with the aforementioned challenges, we proposed an LLMs Enhanced Cross-domain Sequential Recommendation with Dual-phase Training ({LLM-EDT}). To address the imbalance issue while introducing less irrelevant noise, we first propose the transferable item augmenter to adaptively generate possible cross-domain behaviors for users. Then, to alleviate the transition issue, we introduce a dual-phase training strategy to empower the domain-specific thread with a domain-shared background. As for the rough profiling problem, we devise a domain-aware profiling module to summarize the user's preference in each domain and adaptively aggregate them to generate comprehensive user profiles. The experiments on three public datasets validate the effectiveness of our proposed LLM-EDT. To ease reproducibility, we have released the detailed code online at {https://anonymous.4open.science/r/LLM-EDT-583F}.",
+        "translated": "跨域序列推荐（CDSR）通过引入多领域信息来丰富用户-物料交互。尽管当前研究已取得一定进展，但领域不平衡问题与领域过渡问题仍制约着CDSR的进一步发展。前者表现为某一领域中的交互行为主导了整体行为模式，导致难以捕捉其他领域的特定特征；后者则指向在混合交互序列中难以有效捕捉用户的跨域偏好，从而造成对特定领域下一物料预测性能下降。凭借世界知识和强大的推理能力，大语言模型（LLMs）可作为生成器与编码器部分缓解上述问题。然而，当前基于LLMs增强的CDSR方法尚未充分探索，未能有效识别无关噪声及粗粒度画像问题。为此，我们提出了一种名为“LLM增强跨域序列推荐双阶段训练框架”（LLM-EDT）的方法，以应对上述挑战。为解决领域不平衡问题并减少无关噪声干扰，我们首先提出一种可迁移的物料增强器，用于自适应生成用户可能的跨域行为；随后，为缓解领域过渡问题，我们引入双阶段训练策略，赋予各领域专属模块以共享背景知识的支持；针对粗粒度画像问题，我们设计了一种领域感知画像模块，分别总结用户在各个领域的偏好，并自适应聚合以生成全面的用户画像。我们在三个公开数据集上的实验验证了所提方法LLM-EDT的有效性。为便于复现，我们已在{https://anonymous.4open.science/r/LLM-EDT-583F}公开详细代码。",
+        "translated_title": "LLM-EDT：基于大语言模型增强的跨域序列推荐与双阶段训练",
+        "label": [
+            "跨域/联邦推荐",
+            "序列推荐",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "针对跨域序列推荐，融合LLM解决不平衡与过渡问题。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "双阶段训练+领域感知模块，创新性提升跨域建模能力。"
     }
 ]
