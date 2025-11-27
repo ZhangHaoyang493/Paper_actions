@@ -15062,5 +15062,96 @@
         "relevance_score": 2,
         "novelty_score": 8,
         "novelty_reason": "提出新噪声注入与多尺度精炼策略提升生成多样性"
+    },
+    {
+        "title": "RIA: A Ranking-Infused Approach for Optimized listwise CTR Prediction",
+        "url": "http://arxiv.org/abs/2511.21394v1",
+        "pub_date": "2025-11-26",
+        "summary": "Reranking improves recommendation quality by modeling item interactions. However, existing methods often decouple ranking and reranking, leading to weak listwise evaluation models that suffer from combinatorial sparsity and limited representational power under strict latency constraints. In this paper, we propose RIA (Ranking-Infused Architecture), a unified, end-to-end framework that seamlessly integrates pointwise and listwise evaluation. RIA introduces four key components: (1) the User and Candidate DualTransformer (UCDT) for fine-grained user-item-context modeling; (2) the Context-aware User History and Target (CUHT) module for position-sensitive preference learning; (3) the Listwise Multi-HSTU (LMH) module to capture hierarchical item dependencies; and (4) the Embedding Cache (EC) module to bridge efficiency and effectiveness during inference. By sharing representations across ranking and reranking, RIA enables rich contextual knowledge transfer while maintaining low latency. Extensive experiments show that RIA outperforms state-of-the-art models on both public and industrial datasets, achieving significant gains in AUC and LogLoss. Deployed in Meituan advertising system, RIA yields a +1.69% improvement in Click-Through Rate (CTR) and a +4.54% increase in Cost Per Mille (CPM) in online A/B tests.",
+        "translated": "重排通过建模物料交互来提升推荐质量。然而，现有方法往往将排序与重排解耦，导致其列表级评估模型能力薄弱，在严格的延迟约束下易受组合稀疏性影响且表征能力有限。本文提出RIA（Ranking-Infused Architecture），一种统一的端到端框架，无缝融合点级与列表级评估。RIA包含四个关键组件：（1）用户与候选物料双Transformer（UCDT），用于细粒度的用户-物料-上下文建模；（2）上下文感知用户历史与目标模块（CUHT），用于位置敏感偏好学习；（3）列表级多层HSTU模块（LMH），用于捕捉物料间的层次依赖关系；（4）嵌入缓存模块（EC），用于推理阶段平衡效率与效果。通过在排序与重排间共享表示，RIA实现丰富上下文知识迁移的同时维持低延迟。大量实验表明，RIA在公开及工业数据集上均优于当前最先进模型，在AUC和LogLoss指标上取得显著提升。部署于美团广告系统后，RIA在在线A/B测试中使点击率（CTR）提升1.69%，千次展示成本（CPM）增长4.54%。",
+        "translated_title": "RIA：一种融合排序机制的列表式点击率预测优化方法",
+        "label": [
+            "精排",
+            "重排",
+            "通用推荐技术"
+        ],
+        "label_reason": "提出统一精排与重排框架，提升列表级CTR预测",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新性融合点/列表评估，高效知识迁移"
+    },
+    {
+        "title": "FITRep: Attention-Guided Item Representation via MLLMs",
+        "url": "http://arxiv.org/abs/2511.21389v1",
+        "pub_date": "2025-11-26",
+        "summary": "Online platforms usually suffer from user experience degradation due to near-duplicate items with similar visuals and text. While Multimodal Large Language Models (MLLMs) enable multimodal embedding, existing methods treat representations as black boxes, ignoring structural relationships (e.g., primary vs. auxiliary elements), leading to local structural collapse problem. To address this, inspired by Feature Integration Theory (FIT), we propose FITRep, the first attention-guided, white-box item representation framework for fine-grained item deduplication. FITRep consists of: (1) Concept Hierarchical Information Extraction (CHIE), using MLLMs to extract hierarchical semantic concepts; (2) Structure-Preserving Dimensionality Reduction (SPDR), an adaptive UMAP-based method for efficient information compression; and (3) FAISS-Based Clustering (FBC), a FAISS-based clustering that assigns each item a unique cluster id using FAISS. Deployed on Meituan's advertising system, FITRep achieves +3.60% CTR and +4.25% CPM gains in online A/B tests, demonstrating both effectiveness and real-world impact.",
+        "translated": "在线平台通常因视觉与文本相似的近重复物料导致用户体验下降。尽管多模态大语言模型（MLLMs）能够生成多模态嵌入，现有方法将这些表示视为黑箱，忽视了结构关系（如主元素与辅助元素），从而引发局部结构坍塌问题。为解决该问题，受特征整合理论（FIT）启发，我们提出 FITRep——首个面向细粒度物料去重的、基于注意力引导的白盒物料表征框架。FITRep 包含三部分：(1) 概念层次信息提取（CHIE），利用 MLLMs 提取分层语义概念；(2) 结构保持降维（SPDR），一种基于自适应 UMAP 的高效信息压缩方法；以及 (3) 基于 FAISS 的聚类（FBC），通过 FAISS 为每件物料分配唯一聚类 ID。在美团广告系统中部署后，FITRep 在线上 A/B 测试中分别实现 +3.60% 点击率（CTR）和 +4.25% CPM 提升，验证了其有效性与实际应用价值。",
+        "translated_title": "FITRep：基于大语言模型的注意力引导物料表示",
+        "label": [
+            "多模态推荐",
+            "召回"
+        ],
+        "label_reason": "解决推荐中去重问题，优化召回阶段表示",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "首次引入FIT理论指导多模态物品表征"
+    },
+    {
+        "title": "Beyond Patch Aggregation: 3-Pass Pyramid Indexing for Vision-Enhanced Document Retrieval",
+        "url": "http://arxiv.org/abs/2511.21121v1",
+        "pub_date": "2025-11-26",
+        "summary": "Document centric RAG pipelines usually begin with OCR, followed by brittle heuristics for chunking, table parsing, and layout reconstruction. These text first workflows are costly to maintain, sensitive to small layout shifts, and often lose the spatial cues that contain the answer. Vision first retrieval has emerged as a strong alternative. By operating directly on page images, systems like ColPali and ColQwen preserve structure and reduce pipeline complexity while achieving strong benchmark performance. However, these late interaction models tie retrieval to a specific vision backbone and require storing hundreds of patch embeddings per page, creating high memory overhead and complicating large scale deployment.   We introduce VisionRAG, a multimodal retrieval system that is OCR free and model agnostic. VisionRAG indexes documents directly as images, preserving layout, tables, and spatial cues, and builds semantic vectors without committing to a specific extraction. Our three pass pyramid indexing framework creates vectors using global page summaries, section headers, visual hotspots, and fact level cues. These summaries act as lightweight retrieval surrogates. At query time, VisionRAG retrieves the most relevant pages using the pyramid index, then forwards the raw page image encoded as base64 to a multimodal LLM for final question answering. During retrieval, reciprocal rank fusion integrates signals across the pyramid to produce robust ranking.   VisionRAG stores only 17 to 27 vectors per page, matching the efficiency of patch based methods while staying flexible across multimodal encoders. On financial document benchmarks, it achieves 0.8051 accuracy at 10 on FinanceBench and 0.9629 recall at 100 on TAT DQA. These results show that OCR free, summary guided multimodal retrieval is a practical and scalable alternative to traditional text extraction pipelines.",
+        "translated": "以文档为中心的RAG管道通常始于OCR，随后依赖脆弱的启发式方法进行分块、表格解析和版面重建。这些“先文本”的工作流维护成本高昂，对微小的版面变化敏感，并常常丢失包含答案的空间线索。视觉优先的检索方法已逐渐成为强有力的替代方案。通过直接在页面图像上操作，如ColPali和ColQwen等系统能够保留结构信息，在降低管道复杂度的同时实现优异的基准性能。然而，这类晚期交互模型将检索与特定视觉骨干网络绑定，并需为每页存储数百个patch嵌入，导致内存开销巨大，且不利于大规模部署。\n\n我们引入VisionRAG，一种无需OCR且模型无关的多模态检索系统。VisionRAG直接将文档索引为图像，保留布局、表格及空间线索，并在不承诺特定提取方式的前提下构建语义向量。我们的三阶段金字塔索引框架利用全局页面摘要、节标题、视觉热点及事实级线索生成向量。这些摘要充当轻量级检索代理。查询时，VisionRAG首先使用金字塔索引检索最相关的页面，再将原始页面图像编码为base64格式传递给多模态大语言模型（LLM）进行最终问答。在检索过程中，互逆排名融合技术整合金字塔各层级信号，生成稳健排序结果。\n\nVisionRAG每页仅存储17至27个向量，兼顾了基于patch的方法效率，同时保持对多种多模态编码器的高度兼容性。在金融文档基准测试中，其在FinanceBench 10位准确率上达到0.8051，在TAT DQA 100位召回率上达0.9629。这些结果表明，无需OCR、由摘要引导的多模态检索是一种切实可行且可扩展的传统文本提取管道的有效替代方案。",
+        "translated_title": "超越补丁聚合：面向视觉增强文档检索的三阶段金字塔索引",
+        "label": [
+            "多模态推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "提出视觉增强检索框架，适配RAG场景",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "三阶段金字塔索引创新，提升效率与灵活性"
+    },
+    {
+        "title": "ICPO: Intrinsic Confidence-Driven Group Relative Preference Optimization for Efficient Reinforcement Learning",
+        "url": "http://arxiv.org/abs/2511.21005v1",
+        "pub_date": "2025-11-26",
+        "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) demonstrates significant potential in enhancing the reasoning capabilities of Large Language Models (LLMs). However, existing RLVR methods are often constrained by issues such as coarse-grained rewards, reward noise, and inefficient exploration, which lead to unstable training and entropy collapse. To address this challenge, we propose the Intrinsic Confidence-Driven Group Relative Preference Optimization method (ICPO). The intuition behind it lies in the fact that the probabilities of an LLM generating different responses can inherently and directly reflect its self-assessment of the reasoning process. Inspired by the idea of preference modeling, ICPO calculates a preference advantage score for each response by comparing the relative generation probabilities of multiple responses under the same input prompt, and integrates this score with verifiable rewards to guide the exploration process. We have discovered that the preference advantage score not only alleviates the issues of coarse-grained rewards and reward noise but also effectively curbs overconfident errors, enhances the relative superiority of undervalued high-quality responses, and prevents the model from overfitting to specific strategies, thereby facilitating more thorough exploration. Comprehensive experiments across four general-domain benchmarks and three mathematical benchmarks demonstrate that ICPO steadily boosts reasoning compared to GRPO.",
+        "translated": "基于可验证奖励的强化学习（RLVR）在增强大语言模型（LLMs）推理能力方面展现出显著潜力。然而，现有RLVR方法常受粗粒度奖励、奖励噪声及探索效率低下等问题制约，导致训练不稳定与熵坍塌。为应对这一挑战，我们提出内在置信驱动的群体相对偏好优化方法（ICPO）。其核心思想在于：大语言模型生成不同响应的概率本身即可直接反映其对推理过程的自我评估。受偏好建模理念启发，ICPO通过比较同一输入提示下多个响应的相对生成概率，为每个响应计算偏好优势得分，并将该得分与可验证奖励相结合，以引导探索过程。我们发现，偏好优势得分不仅缓解了粗粒度奖励与奖励噪声问题，还能有效抑制过度自信错误，提升被低估的高质量响应的相对优势，并防止模型过度拟合特定策略，从而促进更全面的探索。在四个通用领域基准和三个数学领域基准上的综合实验表明，ICPO相较GRPO持续提升了推理性能。",
+        "translated_title": "ICPO：基于内在置信度驱动的组相对偏好优化，用于高效强化学习",
+        "label": [],
+        "label_reason": "论文聚焦LLM强化学习，非推荐系统相关",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "改进RLVR方法，提升推理能力，非推荐场景"
+    },
+    {
+        "title": "Generating Querying Code from Text for Multi-Modal Electronic Health Record",
+        "url": "http://arxiv.org/abs/2511.20904v1",
+        "pub_date": "2025-11-25",
+        "summary": "Electronic health records (EHR) contain extensive structured and unstructured data, including tabular information and free-text clinical notes. Querying relevant patient information often requires complex database operations, increasing the workload for clinicians. However, complex table relationships and professional terminology in EHRs limit the query accuracy. In this work, we construct a publicly available dataset, TQGen, that integrates both \\textbf{T}ables and clinical \\textbf{T}ext for natural language-to-query \\textbf{Gen}eration. To address the challenges posed by complex medical terminology and diverse types of questions in EHRs, we propose TQGen-EHRQuery, a framework comprising a medical knowledge module and a questions template matching module. For processing medical text, we introduced the concept of a toolset, which encapsulates the text processing module as a callable tool, thereby improving processing efficiency and flexibility. We conducted extensive experiments to assess the effectiveness of our dataset and workflow, demonstrating their potential to enhance information querying in EHR systems.",
+        "translated": "电子健康记录（EHR）包含大量结构化与非结构化数据，包括表格信息和自由文本临床笔记。查询相关患者信息通常需要复杂的数据库操作，增加了临床医生的工作负担。然而，EHR中的复杂表关系和专业术语限制了查询的准确性。在本工作中，我们构建了一个公开可用的数据集 TQGen，该数据集整合了 \\textbf{T}ables 和临床 \\textbf{T}ext，用于自然语言到查询的 \\textbf{Gen}eration。为应对 EHR 中复杂的医学术语和多样化的提问类型带来的挑战，我们提出了 TQGen-EHRQuery 框架，该框架包含一个医学知识模块和一个问题模板匹配模块。针对医学文本处理，我们引入了“工具集”概念，将文本处理模块封装为可调用工具，从而提升处理效率与灵活性。我们进行了广泛的实验以评估数据集及工作流的有效性，验证了其增强 EHR 系统中信息查询能力的潜力。",
+        "translated_title": "从文本生成查询代码用于多模态电子健康记录",
+        "label": [],
+        "label_reason": "论文聚焦医疗文本到SQL生成，非推荐系统相关",
+        "relevance_score": 2,
+        "novelty_score": 5,
+        "novelty_reason": "方法属通用NLP任务，无推荐系统创新"
+    },
+    {
+        "title": "E-GEO: A Testbed for Generative Engine Optimization in E-Commerce",
+        "url": "http://arxiv.org/abs/2511.20867v1",
+        "pub_date": "2025-11-25",
+        "summary": "With the rise of large language models (LLMs), generative engines are becoming powerful alternatives to traditional search, reshaping retrieval tasks. In e-commerce, for instance, conversational shopping agents now guide consumers to relevant products. This shift has created the need for generative engine optimization (GEO)--improving content visibility and relevance for generative engines. Yet despite its growing importance, current GEO practices are ad hoc, and their impacts remain poorly understood, especially in e-commerce. We address this gap by introducing E-GEO, the first benchmark built specifically for e-commerce GEO. E-GEO contains over 7,000 realistic, multi-sentence consumer product queries paired with relevant listings, capturing rich intent, constraints, preferences, and shopping contexts that existing datasets largely miss. Using this benchmark, we conduct the first large-scale empirical study of e-commerce GEO, evaluating 15 common rewriting heuristics and comparing their empirical performance. To move beyond heuristics, we further formulate GEO as a tractable optimization problem and develop a lightweight iterative prompt-optimization algorithm that can significantly outperform these baselines. Surprisingly, the optimized prompts reveal a stable, domain-agnostic pattern--suggesting the existence of a \"universally effective\" GEO strategy. Our data and code are publicly available at https://github.com/psbagga17/E-GEO.",
+        "translated": "随着大语言模型（LLM）的兴起，生成式引擎正逐渐成为传统搜索的强大替代方案，重塑了检索任务。例如，在电子商务领域，对话式购物代理如今引导消费者找到相关商品。这一转变催生了生成式引擎优化（GEO）的需求——即提升内容在生成式引擎中的可见性与相关性。然而，尽管GEO的重要性日益凸显，当前的实践仍属临时性、非系统化，其实际效果也尚不明确，尤其是在电子商务场景中。为填补这一空白，我们提出了E-GEO，这是首个专为电子商务GEO设计的基准数据集。E-GEO包含超过7000条真实、多句式的消费者产品查询及其对应的匹配商品列表，涵盖了现有数据集普遍缺失的丰富意图、约束条件、偏好和购物情境。基于此基准，我们首次开展了大规模实证研究，评估了15种常见的重写启发式方法，并比较了它们的实际表现。为进一步超越启发式方法，我们还将GEO形式化为一个可计算的优化问题，并开发了一种轻量级的迭代提示优化算法，该算法显著优于现有基线方法。令人惊讶的是，优化后的提示展现出一种稳定且跨领域的通用模式——暗示着存在一种“普适有效的”GEO策略。我们的数据与代码已公开发布于 https://github.com/psbagga17/E-GEO。",
+        "translated_title": "E-GEO：电子商务生成式引擎优化的测试平台",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "聚焦生成式推荐优化，适配电商场景",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "首次构建电商GEO基准并提出迭代提示优化算法"
     }
 ]
