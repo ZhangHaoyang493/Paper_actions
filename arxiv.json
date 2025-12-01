@@ -15611,5 +15611,258 @@
         "relevance_score": 3,
         "novelty_score": 8,
         "novelty_reason": "提出频率感知采样策略提升细节表现"
+    },
+    {
+        "title": "Do LLM-judges Align with Human Relevance in Cranfield-style Recommender Evaluation?",
+        "url": "http://arxiv.org/abs/2511.23312v1",
+        "pub_date": "2025-11-28",
+        "summary": "Evaluating recommender systems remains a long-standing challenge, as offline methods based on historical user interactions and train-test splits often yield unstable and inconsistent results due to exposure bias, popularity bias, sampled evaluations, and missing-not-at-random patterns. In contrast, textual document retrieval benefits from robust, standardized evaluation via Cranfield-style test collections, which combine pooled relevance judgments with controlled setups. While recent work shows that adapting this methodology to recommender systems is feasible, constructing such collections remains costly due to the need for manual relevance judgments, thus limiting scalability. This paper investigates whether Large Language Models (LLMs) can serve as reliable automatic judges to address these scalability challenges. Using the ML-32M-ext Cranfield-style movie recommendation collection, we first examine the limitations of existing evaluation methodologies. Then we explore the alignment and the recommender systems ranking agreement between the LLM-judge and human provided relevance labels. We find that incorporating richer item metadata and longer user histories improves alignment, and that LLM-judge yields high agreement with human-based rankings (Kendall's tau = 0.87). Finally, an industrial case study in the podcast recommendation domain demonstrates the practical value of LLM-judge for model selection. Overall, our results show that LLM-judge is a viable and scalable approach for evaluating recommender systems.",
+        "translated": "评估推荐系统仍是一个长期存在的挑战，因为基于历史用户交互和训练-测试划分的离线方法，常因曝光偏差、流行度偏差、采样评估及缺失非随机模式而产生不稳定且不一致的结果。相比之下，文本文档检索得益于Cranfield式测试集所支持的稳健且标准化的评估体系，该体系结合了聚合的相关性判断与受控实验设置。尽管近期研究已表明将此方法论适配至推荐系统是可行的，但由于需要人工标注相关性，构建此类集合成本高昂，从而限制了其可扩展性。本文探讨大型语言模型（LLMs）是否能够作为可靠的自动判别器，以应对上述可扩展性挑战。我们使用ML-32M-ext Cranfield式电影推荐数据集，首先检验现有评估方法的局限性；随后探究LLM判别器与人工标注相关性标签在排序一致性上的对齐程度。结果表明，引入更丰富的物料元数据与更长的用户历史序列可提升对齐效果，且LLM判别器与人工排名高度一致（Kendall's tau = 0.87）。最后，在播客推荐领域的工业案例研究中，验证了LLM判别器在模型选择中的实际价值。总体而言，我们的结果表明，LLM判别器是一种可行且可扩展的推荐系统评估方法。",
+        "translated_title": "大语言模型判别器在 Cranfield 风格推荐系统评估中是否与人类相关性判断一致？",
+        "label": [
+            "推荐系统评估",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "利用LLM自动评估推荐系统排序效果，解决标定成本问题。",
+        "relevance_score": 9,
+        "novelty_score": 7,
+        "novelty_reason": "提出LLM作为自动评估器，提升评估效率与一致性。"
+    },
+    {
+        "title": "Masked Diffusion for Generative Recommendation",
+        "url": "http://arxiv.org/abs/2511.23021v1",
+        "pub_date": "2025-11-28",
+        "summary": "Generative recommendation (GR) with semantic IDs (SIDs) has emerged as a promising alternative to traditional recommendation approaches due to its performance gains, capitalization on semantic information provided through language model embeddings, and inference and storage efficiency. Existing GR with SIDs works frame the probability of a sequence of SIDs corresponding to a user's interaction history using autoregressive modeling. While this has led to impressive next item prediction performances in certain settings, these autoregressive GR with SIDs models suffer from expensive inference due to sequential token-wise decoding, potentially inefficient use of training data and bias towards learning short-context relationships among tokens. Inspired by recent breakthroughs in NLP, we propose to instead model and learn the probability of a user's sequence of SIDs using masked diffusion. Masked diffusion employs discrete masking noise to facilitate learning the sequence distribution, and models the probability of masked tokens as conditionally independent given the unmasked tokens, allowing for parallel decoding of the masked tokens. We demonstrate through thorough experiments that our proposed method consistently outperforms autoregressive modeling. This performance gap is especially pronounced in data-constrained settings and in terms of coarse-grained recall, consistent with our intuitions. Moreover, our approach allows the flexibility of predicting multiple SIDs in parallel during inference while maintaining superior performance to autoregressive modeling.",
+        "translated": "基于语义ID（SIDs）的生成式推荐（GR）因其性能提升、利用语言模型嵌入提供的语义信息，以及推理与存储效率高，已逐渐成为传统推荐方法的有前景替代方案。现有基于SIDs的生成式推荐工作通常采用自回归建模框架，以刻画与用户交互历史对应的SIDs序列的概率分布。尽管该方法在特定场景下实现了令人印象深刻的下一个物品预测性能，但这些基于自回归的SIDs生成式推荐模型存在推理成本高昂的问题——源于逐token顺序解码；此外，其训练数据利用率可能较低，且倾向于学习短上下文关系中的token关联。受自然语言处理领域近期突破的启发，我们提出改用掩码扩散模型来建模并学习用户SIDs序列的概率分布。掩码扩散通过离散掩码噪声促进序列分布的学习，并将掩码token的概率建模为在未掩码token条件下的独立事件，从而支持掩码token的并行解码。通过详尽实验，我们证明所提方法在多个指标上持续优于自回归建模方法。该性能优势尤其在数据受限场景及粗粒度召回任务中表现显著，符合我们的直觉预期。此外，我们的方法在推理阶段允许并行预测多个SIDs，同时保持较自回归建模更优的性能水平。",
+        "translated_title": "掩码扩散生成式推荐",
+        "label": [
+            "LLM生成式推荐",
+            "重排"
+        ],
+        "label_reason": "提出扩散模型用于生成式推荐，优化推理效率与召回",
+        "relevance_score": 10,
+        "novelty_score": 9,
+        "novelty_reason": "首次将掩码扩散应用于生成式推荐，突破序列解码瓶颈"
+    },
+    {
+        "title": "CNN-Based Framework for Pedestrian Age and Gender Classification Using Far-View Surveillance in Mixed-Traffic Intersections",
+        "url": "http://arxiv.org/abs/2511.22873v1",
+        "pub_date": "2025-11-28",
+        "summary": "Pedestrian safety remains a pressing concern in congested urban intersections, particularly in low- and middle-income countries where traffic is multimodal, and infrastructure often lacks formal control. Demographic factors like age and gender significantly influence pedestrian vulnerability, yet real-time monitoring systems rarely capture this information. To address this gap, this study proposes a deep learning framework that classifies pedestrian age group and gender from far-view intersection footage using convolutional neural networks (CNNs), without relying on facial recognition or high-resolution imagery. The classification is structured as a unified six-class problem, distinguishing adult, teenager, and child pedestrians for both males and females, based on full-body visual cues. Video data was collected from three high-risk intersections in Dhaka, Bangladesh. Two CNN architectures were implemented: ResNet50, a deep convolutional neural network pretrained on ImageNet, and a custom lightweight CNN optimized for computational efficiency. Eight model variants explored combinations of pooling strategies and optimizers. ResNet50 with Max Pooling and SGD achieved the highest accuracy (86.19%), while the custom CNN performed comparably (84.15%) with fewer parameters and faster training. The model's efficient design enables real-time inference on standard surveillance feeds. For practitioners, this system provides a scalable, cost-effective tool to monitor pedestrian demographics at intersections using existing camera infrastructure. Its outputs can shape intersection design, optimize signal timing, and enable targeted safety interventions for vulnerable groups such as children or the elderly. By offering demographic insights often missing in conventional traffic data, the framework supports more inclusive, data-driven planning in mixed-traffic environments.",
+        "translated": "行人安全在拥挤的城市交叉路口仍是一个紧迫问题，特别是在交通模式多样、基础设施常缺乏正式管控的低收入和中等收入国家。年龄与性别等人口统计因素显著影响行人的脆弱性，但现有的实时监控系统极少捕捉此类信息。为弥补这一不足，本研究提出一种深度学习框架，利用卷积神经网络（CNNs），从远距离视角的交叉路口视频中对行人年龄组别和性别进行分类，且不依赖人脸识别或高分辨率图像。该分类被构建成一个统一的六类问题，根据全身视觉线索区分男性和女性的成人、青少年及儿童行人。视频数据采集自孟加拉国达卡市三个高风险交叉路口。实验实现了两种CNN架构：在ImageNet上预训练的深度卷积神经网络ResNet50，以及专为计算效率优化设计的轻量级自定义CNN。八种模型变体探索了不同池化策略与优化器的组合。其中，采用最大池化与SGD优化器的ResNet50取得最高准确率（86.19%），而自定义CNN表现相当（84.15%），参数更少、训练速度更快。该模型高效的设计使其可在标准监控视频流上实现实时推理。对实践者而言，该系统提供了一种可扩展、低成本的工具，利用现有摄像头基础设施监测交叉路口的行人人口特征。其输出可用于指导交叉口设计、优化信号配时，并针对儿童或老年人等脆弱群体实施精准安全干预。通过补充传统交通数据中常缺失的人口统计洞察，该框架支持混合交通环境中更具包容性的数据驱动规划。",
+        "translated_title": "基于卷积神经网络的混合交通交叉口远距离监控下行人年龄与性别分类框架",
+        "label": [],
+        "label_reason": "论文聚焦行人年龄性别分类，与推荐系统无关。",
+        "relevance_score": 2,
+        "novelty_score": 4,
+        "novelty_reason": "常规CNN应用，无推荐系统创新。"
+    },
+    {
+        "title": "FedAU2: Attribute Unlearning for User-Level Federated Recommender Systems with Adaptive and Robust Adversarial Training",
+        "url": "http://arxiv.org/abs/2511.22872v1",
+        "pub_date": "2025-11-28",
+        "summary": "Federated Recommender Systems (FedRecs) leverage federated learning to protect user privacy by retaining data locally. However, user embeddings in FedRecs often encode sensitive attribute information, rendering them vulnerable to attribute inference attacks. Attribute unlearning has emerged as a promising approach to mitigate this issue. In this paper, we focus on user-level FedRecs, which is a more practical yet challenging setting compared to group-level FedRecs. Adversarial training emerges as the most feasible approach within this context. We identify two key challenges in implementing adversarial training-based attribute unlearning for user-level FedRecs: i) mitigating training instability caused by user data heterogeneity, and ii) preventing attribute information leakage through gradients. To address these challenges, we propose FedAU2, an attribute unlearning method for user-level FedRecs. For CH1, we propose an adaptive adversarial training strategy, where the training dynamics are adjusted in response to local optimization behavior. For CH2, we propose a dual-stochastic variational autoencoder to perturb the adversarial model, effectively preventing gradient-based information leakage. Extensive experiments on three real-world datasets demonstrate that our proposed FedAU2 achieves superior performance in unlearning effectiveness and recommendation performance compared to existing baselines.",
+        "translated": "联邦推荐系统（FedRecs）利用联邦学习在本地保留数据，从而保护用户隐私。然而，FedRecs 中的用户嵌入通常编码了敏感属性信息，使其易受属性推断攻击。属性遗忘作为一种有前景的方法，可缓解此问题。本文聚焦于用户级 FedRecs，相较于群体级 FedRecs，该设定更具实用性但也更具挑战性。对抗训练在此背景下成为最可行的方案。我们识别出在用户级 FedRecs 中应用基于对抗训练的属性遗忘面临两个关键挑战：i）缓解因用户数据异质性导致的训练不稳定问题；ii）防止通过梯度泄露属性信息。为应对上述挑战，我们提出 FedAU2，一种面向用户级 FedRecs 的属性遗忘方法。针对 CH1，我们设计了一种自适应对抗训练策略，根据局部优化行为动态调整训练过程；针对 CH2，我们提出一种双随机变分自编码器，通过扰动对抗模型有效防止基于梯度的信息泄露。在三个真实世界数据集上的大量实验表明，所提出的 FedAU2 在遗忘效果和推荐性能方面均显著优于现有基线方法。",
+        "translated_title": "FedAU2：面向用户级联邦推荐系统的属性遗忘方法，结合自适应与鲁棒对抗训练",
+        "label": [
+            "跨域/联邦推荐",
+            "推荐系统公平性/可解释性"
+        ],
+        "label_reason": "聚焦联邦推荐中的属性遗忘，属隐私保护相关",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出自适应对抗训练与双随机变分自编码器组合方案"
+    },
+    {
+        "title": "RAG System for Supporting Japanese Litigation Procedures: Faithful Response Generation Complying with Legal Norms",
+        "url": "http://arxiv.org/abs/2511.22858v1",
+        "pub_date": "2025-11-28",
+        "summary": "This study discusses the essential components that a Retrieval-Augmented Generation (RAG)-based LLM system should possess in order to support Japanese medical litigation procedures complying with legal norms. In litigation, expert commissioners, such as physicians, architects, accountants, and engineers, provide specialized knowledge to help judges clarify points of dispute. When considering the substitution of these expert roles with a RAG-based LLM system, the constraint of strict adherence to legal norms is imposed. Specifically, three requirements arise: (1) the retrieval module must retrieve appropriate external knowledge relevant to the disputed issues in accordance with the principle prohibiting the use of private knowledge, (2) the responses generated must originate from the context provided by the RAG and remain faithful to that context, and (3) the retrieval module must reference external knowledge with appropriate timestamps corresponding to the issues at hand. This paper discusses the design of a RAG-based LLM system that satisfies these requirements.",
+        "translated": "本研究探讨了基于检索增强生成（RAG）的大语言模型（LLM）系统为支持符合法律规范的日本医疗诉讼程序所应具备的核心组件。在诉讼过程中，专家委员（如医师、建筑师、会计师和工程师）提供专业知识以协助法官厘清争议焦点。当考虑用基于 RAG 的 LLM 系统替代这些专家角色时，必须遵循严格的法律规范约束。具体而言，提出三项要求：（1）检索模块必须依据禁止使用私人知识的原则，检索与争议事项相关的适当外部知识；（2）生成的响应必须源自 RAG 提供的上下文，并忠实于该上下文；（3）检索模块必须引用与当前争议事项相匹配的恰当时间戳对应的外部知识。本文讨论了一种满足上述要求的基于 RAG 的 LLM 系统的设计。",
+        "translated_title": "支持日本诉讼程序的RAG系统：符合法律规范的忠实响应生成",
+        "label": [],
+        "label_reason": "论文聚焦法律RAG系统，非推荐系统相关",
+        "relevance_score": 3,
+        "novelty_score": 4,
+        "novelty_reason": "改进RAG在法律场景下的约束设计"
+    },
+    {
+        "title": "Two-Stage Distributionally Robust Optimization Framework for Secure Communications in Aerial-RIS Systems",
+        "url": "http://arxiv.org/abs/2511.22855v1",
+        "pub_date": "2025-11-28",
+        "summary": "This letter proposes a two-stage distributionally robust optimization (DRO) framework for secure deployment and beamforming in an aerial reconfigurable intelligent surface (A-RIS) assisted millimeter-wave system. To account for multi-timescale uncertainties arising from user mobility, imperfect channel state information (CSI), and hardware impairments, our approach decouples the long-term unmanned aerial vehicle (UAV) placement from the per-slot beamforming design. By employing the conditional value-at-risk (CVaR) as a distribution-free risk metric, a low-complexity algorithm is developed, which combines a surrogate model for efficient deployment with an alternating optimization (AO) scheme for robust real-time beamforming. Simulation results validate that the proposed DRO-CVaR framework significantly enhances the tail-end secrecy spectral efficiency and maintains a lower outage probability compared to benchmark schemes, especially under severe uncertainty conditions.",
+        "translated": "本通信提出了一种两级分布鲁棒优化（DRO）框架，用于在由空中可重构智能表面（A-RIS）辅助的毫米波系统中实现安全部署与波束赋形。为应对由用户移动性、不完美的信道状态信息（CSI）和硬件缺陷所引发的多时间尺度不确定性，我们的方法将长期无人机（UAV）部署与每时隙波束赋形设计解耦。通过采用条件值-at-风险（CVaR）作为无分布假设的风险度量，我们开发了一种低复杂度算法，该算法结合了用于高效部署的代理模型与交替优化（AO）方案，以实现鲁棒的实时波束赋形。仿真结果验证了所提出的DRO-CVaR框架在显著提升尾部安全性频谱效率的同时，相较于基准方案在更低的中断概率下表现更优，尤其在严重不确定性条件下。",
+        "translated_title": "面向空天地一体化RIS系统的两阶段分布鲁棒优化框架",
+        "label": [],
+        "label_reason": "论文聚焦无线通信安全，与推荐系统无关。",
+        "relevance_score": 1,
+        "novelty_score": 3,
+        "novelty_reason": "方法属优化算法，无推荐系统创新。"
+    },
+    {
+        "title": "CoFiRec: Coarse-to-Fine Tokenization for Generative Recommendation",
+        "url": "http://arxiv.org/abs/2511.22707v1",
+        "pub_date": "2025-11-27",
+        "summary": "In web environments, user preferences are often refined progressively as users move from browsing broad categories to exploring specific items. However, existing generative recommenders overlook this natural refinement process. Generative recommendation formulates next-item prediction as autoregressive generation over tokenized user histories, where each item is represented as a sequence of discrete tokens. Prior models typically fuse heterogeneous attributes such as ID, category, title, and description into a single embedding before quantization, which flattens the inherent semantic hierarchy of items and fails to capture the gradual evolution of user intent during web interactions. To address this limitation, we propose CoFiRec, a novel generative recommendation framework that explicitly incorporates the Coarse-to-Fine nature of item semantics into the tokenization process. Instead of compressing all attributes into a single latent space, CoFiRec decomposes item information into multiple semantic levels, ranging from high-level categories to detailed descriptions and collaborative filtering signals. Based on this design, we introduce the CoFiRec Tokenizer, which tokenizes each level independently while preserving structural order. During autoregressive decoding, the language model is instructed to generate item tokens from coarse to fine, progressively modeling user intent from general interests to specific item-level interests. Experiments across multiple public benchmarks and backbones demonstrate that CoFiRec outperforms existing methods, offering a new perspective for generative recommendation. Theoretically, we prove that structured tokenization leads to lower dissimilarity between generated and ground truth items, supporting its effectiveness in generative recommendation. Our code is available at https://github.com/YennNing/CoFiRec.",
+        "translated": "在Web环境中，用户偏好通常随着其从浏览宽泛类别逐步深入到探索具体物品而不断精细化。然而，现有的生成式推荐系统忽视了这一自然的渐进式细化过程。生成式推荐将下一物品预测建模为对分词后的用户历史序列的自回归生成，其中每个物品被表示为离散token组成的序列。先前模型通常在量化前将异构属性（如ID、类别、标题和描述）融合为单一嵌入向量，这导致物品固有的语义层次结构被扁平化，并无法捕捉用户在Web交互过程中意图的渐进演化。为解决这一局限性，我们提出CoFiRec，一种全新的生成式推荐框架，该框架明确将物品语义的“粗到细”特性融入分词过程。与压缩所有属性至单个潜在空间不同，CoFiRec将物品信息分解为多个语义层级，涵盖从高层类别到详细描述及协同过滤信号。基于此设计，我们引入CoFiRec Tokenizer，该分词器在保持结构顺序的前提下，对各层级独立进行分词。在自回归解码过程中，语言模型被引导按“粗到细”顺序生成物品token，从而逐步建模用户从一般兴趣到具体物品级兴趣的意图演化。在多个公开基准数据集及不同骨干网络上的实验表明，CoFiRec优于现有方法，为生成式推荐提供了全新视角。理论上，我们证明结构化分词可降低生成物品与真实物品之间的差异度，支持其在生成式推荐中的有效性。我们的代码开源于 https://github.com/YennNing/CoFiRec。",
+        "translated_title": "CoFiRec：用于生成式推荐的粗到细分词方法",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "直接提出生成式推荐新框架，解决语义层次建模问题。",
+        "relevance_score": 10,
+        "novelty_score": 9,
+        "novelty_reason": "创新性结构化分层token化，显著提升生成质量。"
+    },
+    {
+        "title": "SciPostGen: Bridging the Gap between Scientific Papers and Poster Layouts",
+        "url": "http://arxiv.org/abs/2511.22490v1",
+        "pub_date": "2025-11-27",
+        "summary": "As the number of scientific papers continues to grow, there is a demand for approaches that can effectively convey research findings, with posters serving as a key medium for presenting paper contents. Poster layouts determine how effectively research is communicated and understood, highlighting their growing importance. In particular, a gap remains in understanding how papers correspond to the layouts that present them, which calls for datasets with paired annotations at scale. To bridge this gap, we introduce SciPostGen, a large-scale dataset for understanding and generating poster layouts from scientific papers. Our analyses based on SciPostGen show that paper structures are associated with the number of layout elements in posters. Based on this insight, we explore a framework, Retrieval-Augmented Poster Layout Generation, which retrieves layouts consistent with a given paper and uses them as guidance for layout generation. We conducted experiments under two conditions: with and without layout constraints typically specified by poster creators. The results show that the retriever estimates layouts aligned with paper structures, and our framework generates layouts that also satisfy given constraints.",
+        "translated": "随着科学论文数量持续增长，亟需能够有效传达研究成果的方法，海报作为呈现论文内容的关键媒介，其布局决定着研究信息传递与理解的效率，因而其重要性日益凸显。尤其在当前，尚缺乏对论文如何对应其展示布局的系统认知，这呼唤大规模配对标注数据集的出现。为弥合这一差距，我们提出 SciPostGen，这是一个面向从科学论文生成和理解海报布局的大规模数据集。基于 SciPostGen 的分析表明，论文结构与海报中布局元素的数量存在关联。基于此洞察，我们探索了一种框架——检索增强型海报布局生成（Retrieval-Augmented Poster Layout Generation），该框架首先检索与给定论文一致的布局，并以此作为布局生成的引导。我们在两种条件下进行了实验：一种是包含通常由海报创作者指定的布局约束条件，另一种则无此类约束。结果表明，检索器能够估计出与论文结构相符的布局，而我们的框架生成的布局亦能满足给定约束条件。",
+        "translated_title": "SciPostGen：弥合科学论文与海报布局之间的鸿沟",
+        "label": [],
+        "label_reason": "论文聚焦学术海报布局生成，与推荐系统无直接关联。",
+        "relevance_score": 3,
+        "novelty_score": 5,
+        "novelty_reason": "方法基于检索增强生成，但非为推荐任务设计。"
+    },
+    {
+        "title": "An Efficient Embedding Based Ad Retrieval with GPU-Powered Feature Interaction",
+        "url": "http://arxiv.org/abs/2511.22460v1",
+        "pub_date": "2025-11-27",
+        "summary": "In large-scale advertising recommendation systems, retrieval serves as a critical component, aiming to efficiently select a subset of candidate ads relevant to user behaviors from a massive ad inventory for subsequent ranking and recommendation. The Embedding-Based Retrieval (EBR) methods modeled by the dual-tower network are widely used in the industry to maintain both retrieval efficiency and accuracy. However, the dual-tower model has significant limitations: the embeddings of users and ads interact only at the final inner product computation, resulting in insufficient feature interaction capabilities. Although DNN-based models with both user and ad as input features, allowing for early-stage interaction between these features, are introduced in the ranking stage to mitigate this issue, they are computationally infeasible for the retrieval stage. To bridge this gap, this paper proposes an efficient GPU-based feature interaction for the dual-tower network to significantly improve retrieval accuracy while substantially reducing computational costs. Specifically, we introduce a novel compressed inverted list designed for GPU acceleration, enabling efficient feature interaction computation at scale. To the best of our knowledge, this is the first framework in the industry to successfully implement Wide and Deep in a retrieval system. We apply this model to the real-world business scenarios in Tencent Advertising, and experimental results demonstrate that our method outperforms existing approaches in offline evaluation and has been successfully deployed to Tencent's advertising recommendation system, delivering significant online performance gains. This improvement not only validates the effectiveness of the proposed method, but also provides new practical guidance for optimizing large-scale ad retrieval systems.",
+        "translated": "在大规模广告推荐系统中，召回作为关键一环，旨在从海量广告库存中高效筛选出与用户行为相关的候选广告子集，供后续排序与推荐使用。基于嵌入的召回（Embedding-Based Retrieval, EBR）方法通过双塔网络建模，在业界广泛应用，以兼顾召回效率与准确性。然而，双塔模型存在显著局限性：用户与广告的嵌入仅在最终内积计算阶段发生交互，导致特征交互能力不足。尽管在排序阶段引入了以用户和广告为输入特征的深度神经网络（DNN）模型，可在早期阶段实现特征交互以缓解该问题，但此类模型在召回阶段因计算开销过大而不可行。为弥合这一差距，本文提出一种面向双塔网络的高效GPU加速特征交互机制，在显著提升召回准确率的同时大幅降低计算成本。具体而言，我们设计了一种专用于GPU加速的压缩倒排列表，可支持大规模下高效特征交互计算。据我们所知，这是业界首个成功在召回系统中实现Wide and Deep框架的方案。我们将该模型应用于腾讯广告的实际业务场景，实验结果表明，本方法在离线评估中优于现有方法，并已成功部署至腾讯广告推荐系统，带来显著的线上性能提升。该改进不仅验证了所提方法的有效性，也为优化大规模广告召回系统提供了新的实用指导。",
+        "translated_title": "一种基于高效嵌入的广告召回系统，利用GPU加速特征交互",
+        "label": [
+            "召回",
+            "通用推荐技术"
+        ],
+        "label_reason": "聚焦广告召回阶段特征交互优化，提升效率与精度",
+        "relevance_score": 9,
+        "novelty_score": 7,
+        "novelty_reason": "首次在召回系统中实现Wide and Deep架构，具实用创新"
+    },
+    {
+        "title": "Structured Extraction from Business Process Diagrams Using Vision-Language Models",
+        "url": "http://arxiv.org/abs/2511.22448v1",
+        "pub_date": "2025-11-27",
+        "summary": "Business Process Model and Notation (BPMN) is a widely adopted standard for representing complex business workflows. While BPMN diagrams are often exchanged as visual images, existing methods primarily rely on XML representations for computational analysis. In this work, we present a pipeline that leverages Vision-Language Models (VLMs) to extract structured JSON representations of BPMN diagrams directly from images, without requiring source model files or textual annotations. We also incorporate optical character recognition (OCR) for textual enrichment and evaluate the generated element lists against ground truth data derived from the source XML files. Our approach enables robust component extraction in scenarios where original source files are unavailable. We benchmark multiple VLMs and observe performance improvements in several models when OCR is used for text enrichment. In addition, we conducted extensive statistical analyses of OCR-based enrichment methods and prompt ablation studies, providing a clearer understanding of their impact on model performance.",
+        "translated": "业务流程模型与符号（BPMN）是表示复杂业务工作流广泛采用的标准。尽管BPMN图通常以视觉图像形式进行交换，现有方法主要依赖XML表示来进行计算分析。在本研究中，我们提出了一种利用视觉-语言模型（VLMs）直接从图像中提取BPMN图结构化JSON表示的管道，无需依赖源模型文件或文本标注。我们同时引入光学字符识别（OCR）进行文本增强，并将生成的元素列表与从源XML文件推导出的真实数据进行对比评估。该方法能够在无原始源文件的情况下实现稳健的组件提取。我们对多种VLMs进行了基准测试，观察到当使用OCR进行文本增强时，多个模型的性能得到提升。此外，我们还对基于OCR的增强方法进行了广泛的统计分析和提示消融实验，进一步明确了其对模型性能的影响。",
+        "translated_title": "基于视觉-语言模型的业务流程图结构化提取",
+        "label": [],
+        "label_reason": "论文聚焦视觉-语言模型在BPMN图提取，与推荐系统无关。",
+        "relevance_score": 1,
+        "novelty_score": 4,
+        "novelty_reason": "OCR增强VLM方法常规改进，非推荐系统创新。"
+    },
+    {
+        "title": "Efficiency and Effectiveness of SPLADE Models on Billion-Scale Web Document Title",
+        "url": "http://arxiv.org/abs/2511.22263v1",
+        "pub_date": "2025-11-27",
+        "summary": "This paper presents a comprehensive comparison of BM25, SPLADE, and Expanded-SPLADE models in the context of large-scale web document retrieval. We evaluate the effectiveness and efficiency of these models on datasets spanning from tens of millions to billions of web document titles. SPLADE and Expanded-SPLADE, which utilize sparse lexical representations, demonstrate superior retrieval performance compared to BM25, especially for complex queries. However, these models incur higher computational costs. We introduce pruning strategies, including document-centric pruning and top-k query term selection, boolean query with term threshold to mitigate these costs and improve the models' efficiency without significantly sacrificing retrieval performance. The results show that Expanded-SPLADE strikes the best balance between effectiveness and efficiency, particularly when handling large datasets. Our findings offer valuable insights for deploying sparse retrieval models in large-scale search engines.",
+        "translated": "本文在大规模网络文档检索背景下，对 BM25、SPLADE 和 Expanded-SPLADE 三种模型进行了全面比较。我们在涵盖数千万至数十亿网页标题的数据集上评估了这些模型的有效性与效率。SPLADE 和 Expanded-SPLADE 利用稀疏词汇表示，在复杂查询场景下相较于 BM25 表现出更优的检索性能。然而，这些模型带来了更高的计算开销。为此，我们引入了剪枝策略，包括以文档为中心的剪枝、前 k 个查询词选取以及布尔查询结合词项阈值，以缓解计算成本并提升模型效率，而不会显著牺牲检索性能。实验结果表明，Expanded-SPLADE 在处理大规模数据集时，在效果与效率之间取得了最佳平衡。我们的研究为在大规模搜索引擎中部署稀疏检索模型提供了有价值的参考。",
+        "translated_title": "SPLADE模型在十亿级网页文档标题上的效率与效果",
+        "label": [],
+        "label_reason": "研究聚焦大规模文档检索，非推荐系统核心问题",
+        "relevance_score": 3,
+        "novelty_score": 5,
+        "novelty_reason": "改进稀疏模型效率，但无推荐系统创新"
+    },
+    {
+        "title": "UNION: A Lightweight Target Representation for Efficient Zero-Shot Image-Guided Retrieval with Optional Textual Queries",
+        "url": "http://arxiv.org/abs/2511.22253v1",
+        "pub_date": "2025-11-27",
+        "summary": "Image-Guided Retrieval with Optional Text (IGROT) is a general retrieval setting where a query consists of an anchor image, with or without accompanying text, aiming to retrieve semantically relevant target images. This formulation unifies two major tasks: Composed Image Retrieval (CIR) and Sketch-Based Image Retrieval (SBIR). In this work, we address IGROT under low-data supervision by introducing UNION, a lightweight and generalisable target representation that fuses the image embedding with a null-text prompt. Unlike traditional approaches that rely on fixed target features, UNION enhances semantic alignment with multimodal queries while requiring no architectural modifications to pretrained vision-language models. With only 5,000 training samples - from LlavaSCo for CIR and Training-Sketchy for SBIR - our method achieves competitive results across benchmarks, including CIRCO mAP@50 of 38.5 and Sketchy mAP@200 of 82.7, surpassing many heavily supervised baselines. This demonstrates the robustness and efficiency of UNION in bridging vision and language across diverse query types.",
+        "translated": "图像引导的可选文本检索（IGROT）是一种通用的检索设置，其中查询由一个锚图像组成，可附带或不附带文本，旨在检索语义相关的目标图像。该设定统一了两个主要任务：组合图像检索（CIR）与基于草图的图像检索（SBIR）。在本工作中，我们针对低监督数据场景下的 IGROT 问题，提出 UNION，一种轻量且具泛化能力的目标表示方法，将图像嵌入与空文本提示融合。与依赖固定目标特征的传统方法不同，UNION 在无需修改预训练视觉-语言模型架构的前提下，增强了与多模态查询之间的语义对齐能力。仅使用 5,000 个训练样本——来自 LlavaSCo 的 CIR 数据集和 Training-Sketchy 的 SBIR 数据集——我们的方法在多个基准测试中取得了具有竞争力的结果，包括 CIRCO 的 mAP@50 达到 38.5、Sketchy 的 mAP@200 达到 82.7，超越了许多高度监督的基线方法。这证明了 UNION 在跨越多样化的查询类型时，有效连接视觉与语言的能力，兼具鲁棒性与高效性。",
+        "translated_title": "UNION：一种轻量级目标表示，用于高效零样本图像引导检索并支持可选文本查询",
+        "label": [
+            "通用推荐技术"
+        ],
+        "label_reason": "方法适用于图像检索，可适配推荐系统中视觉内容召回",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出轻量级目标表示，无需架构修改提升多模态对齐"
+    },
+    {
+        "title": "FIGROTD: A Friendly-to-Handle Dataset for Image Guided Retrieval with Optional Text",
+        "url": "http://arxiv.org/abs/2511.22247v1",
+        "pub_date": "2025-11-27",
+        "summary": "Image-Guided Retrieval with Optional Text (IGROT) unifies visual retrieval (without text) and composed retrieval (with text). Despite its relevance in applications like Google Image and Bing, progress has been limited by the lack of an accessible benchmark and methods that balance performance across subtasks. Large-scale datasets such as MagicLens are comprehensive but computationally prohibitive, while existing models often favor either visual or compositional queries. We introduce FIGROTD, a lightweight yet high-quality IGROT dataset with 16,474 training triplets and 1,262 test triplets across CIR, SBIR, and CSTBIR. To reduce redundancy, we propose the Variance Guided Feature Mask (VaGFeM), which selectively enhances discriminative dimensions based on variance statistics. We further adopt a dual-loss design (InfoNCE + Triplet) to improve compositional reasoning. Trained on FIGROTD, VaGFeM achieves competitive results on nine benchmarks, reaching 34.8 mAP@10 on CIRCO and 75.7 mAP@200 on Sketchy, outperforming stronger baselines despite fewer triplets.",
+        "translated": "图像引导的可选文本检索（IGROT）统一了无文本的视觉检索与带文本的组合式检索。尽管其在如 Google 图像和 Bing 等应用中具有重要意义，但进展受限于缺乏公开可用的基准数据集以及能够平衡子任务性能的方法。大规模数据集如 MagicLens 虽然全面，但计算开销过高；而现有模型往往偏向视觉或组合查询。我们提出了 FIGROTD，这是一个轻量级且高质量的 IGROT 数据集，包含来自 CIR、SBIR 和 CSTBIR 三类任务的 16,474 个训练三元组和 1,262 个测试三元组。为降低冗余，我们提出方差引导特征掩码（VaGFeM），基于方差统计选择性增强判别维度。此外，我们采用双损失设计（InfoNCE + Triplet）以提升组合推理能力。在 FIGROTD 上训练后，VaGFeM 在九个基准数据集上表现优异，在 CIRCO 上达到 34.8 mAP@10，在 Sketchy 上达到 75.7 mAP@200，优于参数更少的基线模型。",
+        "translated_title": "FIGROTD：一个便于处理的图像引导检索数据集（支持可选文本）",
+        "label": [
+            "通用推荐技术"
+        ],
+        "label_reason": "聚焦图像检索基准，非推荐系统核心环节",
+        "relevance_score": 4,
+        "novelty_score": 6,
+        "novelty_reason": "改进特征掩码与损失设计，但非推荐专用"
+    },
+    {
+        "title": "Evaluating Embedding Models and Pipeline Optimization for AI Search Quality",
+        "url": "http://arxiv.org/abs/2511.22240v1",
+        "pub_date": "2025-11-27",
+        "summary": "We evaluate the performance of various text embedding models and pipeline configurations for AI-driven search systems. We compare sentence-transformer and generative embedding models (e.g., All-MPNet, BGE, GTE, and Qwen) at different dimensions, indexing methods (Milvus HNSW/IVF), and chunking strategies. A custom evaluation dataset of 11,975 query-chunk pairs was synthesized from US City Council meeting transcripts using a local large language model (LLM). The data pipeline includes preprocessing, automated question generation per chunk, manual validation, and continuous integration/continuous deployment (CI/CD) integration. We measure retrieval accuracy using reference-based metrics: Top-K Accuracy and Normalized Discounted Cumulative Gain (NDCG). Our results demonstrate that higher-dimensional embeddings significantly boost search quality (e.g., Qwen3-Embedding-8B/4096 achieves Top-3 accuracy about 0.571 versus 0.412 for GTE-large/1024), and that neural re-rankers (e.g., a BGE cross-encoder) further improve ranking accuracy (Top-3 up to 0.527). Finer-grained chunking (512 characters versus 2000 characters) also improves accuracy. We discuss the impact of these factors and outline future directions for pipeline automation and evaluation.",
+        "translated": "我们评估了多种文本嵌入模型及用于AI驱动搜索系统的管道配置的性能。我们对比了不同维度、索引方法（Milvus HNSW/IVF）和分块策略下的句子变换器与生成式嵌入模型（例如 All-MPNet、BGE、GTE 和 Qwen）。该自定义评估数据集由11,975组查询-分块对组成，通过本地大语言模型（LLM）从美国市议会会议记录中合成。数据管道包括预处理、按分块自动生成问题、人工验证，以及持续集成/持续部署（CI/CD）集成。我们采用基于参考的标准指标评估检索准确性：Top-K 准确率与归一化折扣累积增益（NDCG）。实验结果表明，高维嵌入显著提升搜索质量（例如，Qwen3-Embedding-8B/4096 在 Top-3 准确率上达到 0.571，相较 GTE-large/1024 的 0.412 显著提高），而神经重排序器（如 BGE 跨编码器）进一步提升了排序准确率（Top-3 达至 0.527）。更精细的分块粒度（512 字符 vs 2000 字符）亦可提升准确率。我们讨论了这些因素的影响，并概述了未来在管道自动化与评估方面的研究方向。",
+        "translated_title": "评估嵌入模型与管道优化对AI搜索质量的影响",
+        "label": [
+            "通用推荐技术",
+            "重排（Re-ranking）"
+        ],
+        "label_reason": "研究搜索召回与重排，非专为推荐设计",
+        "relevance_score": 4,
+        "novelty_score": 5,
+        "novelty_reason": "改进嵌入与重排策略，但非推荐系统原创"
+    },
+    {
+        "title": "From Topology to Retrieval: Decoding Embedding Spaces with Unified Signatures",
+        "url": "http://arxiv.org/abs/2511.22150v1",
+        "pub_date": "2025-11-27",
+        "summary": "Studying how embeddings are organized in space not only enhances model interpretability but also uncovers factors that drive downstream task performance. In this paper, we present a comprehensive analysis of topological and geometric measures across a wide set of text embedding models and datasets. We find a high degree of redundancy among these measures and observe that individual metrics often fail to sufficiently differentiate embedding spaces. Building on these insights, we introduce Unified Topological Signatures (UTS), a holistic framework for characterizing embedding spaces. We show that UTS can predict model-specific properties and reveal similarities driven by model architecture. Further, we demonstrate the utility of our method by linking topological structure to ranking effectiveness and accurately predicting document retrievability. We find that a holistic, multi-attribute perspective is essential to understanding and leveraging the geometry of text embeddings.",
+        "translated": "研究嵌入在空间中的组织方式不仅有助于提升模型的可解释性，还能揭示驱动下游任务性能的关键因素。本文对一系列文本嵌入模型与数据集中的拓扑与几何度量进行了全面分析。我们发现这些度量之间存在高度冗余，并观察到单个指标往往不足以充分区分不同的嵌入空间。基于上述洞察，我们提出了统一拓扑签名（Unified Topological Signatures, UTS），一个用于刻画嵌入空间的综合框架。我们表明，UTS能够预测特定模型的属性，并揭示由模型架构所驱动的相似性。进一步地，我们通过将拓扑结构与排序效果关联起来，并准确预测文档的检索能力，展示了该方法的实用性。我们发现，要理解和利用文本嵌入的空间几何特性，必须采取全面、多属性的视角。",
+        "translated_title": "从拓扑到检索：通过统一签名解码嵌入空间",
+        "label": [
+            "通用推荐技术",
+            "推荐系统评估"
+        ],
+        "label_reason": "分析嵌入空间结构，间接支持排序与检索效果评估",
+        "relevance_score": 4,
+        "novelty_score": 6,
+        "novelty_reason": "提出统一拓扑签名框架，但非专为推荐设计"
+    },
+    {
+        "title": "Real-Time Procedural Learning From Experience for AI Agents",
+        "url": "http://arxiv.org/abs/2511.22074v1",
+        "pub_date": "2025-11-27",
+        "summary": "Learning how to do things from trial and error in real time is a hallmark of biological intelligence, yet most LLM-based agents lack mechanisms to acquire procedural knowledge after deployment. We propose Procedural Recall for Agents with eXperiences Indexed by State (PRAXIS), a lightweight post-training learning mechanism that stores the consequences of actions and retrieves them by jointly matching environmental and internal states of past episodes to the current state. PRAXIS augments agentic action selection with retrieved state-action-result exemplars that are generated in real time. When evaluated on the REAL web browsing benchmark, PRAXIS improves task completion accuracy, reliability, and cost efficiency across different foundation model backbones, and shows preliminary generalization to unseen tasks in similar environments. These results demonstrate that PRAXIS enables the practical adoption of AI agents in fast-evolving stateful environments by helping them learn new procedures effectively.",
+        "translated": "从试错中实时学习如何完成任务，是生物智能的显著特征，但大多数基于大语言模型（LLM）的智能体在部署后缺乏获取程序性知识的机制。我们提出了一种名为“基于状态索引经验的智能体程序性召回”（PRAXIS）的轻量级后训练学习机制。该机制通过将过往回合中的环境状态与内部状态共同匹配当前状态，存储并检索行动后果。PRAXIS 在智能体的动作选择过程中，动态生成并引入实时检索到的状态-动作-结果示例。在 REAL 网页浏览基准测试中，PRAXIS 在不同基础模型架构上均提升了任务完成准确率、可靠性及成本效率，并初步展现出对相似环境中未见过任务的泛化能力。这些结果表明，PRAXIS 能够帮助 AI 智能体有效学习新程序，从而实现在快速演化的状态化环境中实际部署应用。",
+        "translated_title": "AI代理从经验中实时过程式学习",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "论文聚焦LLM代理实时学习，与推荐系统间接相关。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "提出PRAXIS机制，实现实时经验回溯，具实用价值。"
+    },
+    {
+        "title": "Selecting User Histories to Generate LLM Users for Cold-Start Item Recommendation",
+        "url": "http://arxiv.org/abs/2511.21989v1",
+        "pub_date": "2025-11-27",
+        "summary": "Large Language Models (LLMs) have demonstrated remarkable capabilities in reasoning, generalization, and simulating human-like behavior across a wide range of tasks. These strengths present new opportunities to enhance traditional recommendation systems (RS), especially in the cold-start item scenario where newly introduced items lack interactions. Existing works have used LLMs to address cold-start issues in traditional RS through data augmentation, but they have limitations. One recent work directly addresses this issue by prompting LLMs to generate augmented interaction data between randomly sampled users and cold-start items. Then, they train the traditional RS with augmented data, incorporating collaborative signals for cold-start items. Although they use LLMs to provide cold-start items with feedback, they use partial user histories, which does not allow the LLM to fully emulate the user. Furthermore, randomly selecting users is not optimal for augmentation. To address these challenges, we leverage the LLM as a user and develop a reinforcement learning (RL) framework that trains a policy to select users for augmentation, optimizing for cold-start item performance after augmented training. The policy model learns to select users for cold-start item data augmentation based on their behavioral features and histories. To optimize user selection for cold-start item performance, we employ a policy gradient method that updates the policy in the direction of actions that lead to high rewards. Experiments on Amazon Product Review datasets show substantial gains in cold-start item recall, demonstrating the effectiveness of our method as a scalable, serving-efficient augmentation strategy for modern RS.",
+        "translated": "大语言模型（LLMs）在多种任务中展现出卓越的推理、泛化及模拟人类行为的能力。这些优势为增强传统推荐系统（RS）带来了新的机遇，尤其是在冷启动物料场景下——新引入的物料缺乏用户交互记录。现有研究已利用LLMs通过数据增强解决传统RS中的冷启动问题，但其方法仍存在局限性。近期一项工作直接针对该问题，通过提示LLMs生成随机采样用户与冷启动物料之间的增强交互数据，随后使用该增强数据训练传统推荐系统，并融入协同信号以提升冷启动物料表现。尽管其利用LLMs为冷启动物料提供反馈，但仅使用部分用户历史行为，未能使LLM充分模拟完整用户。此外，随机选取用户作为增强对象并非最优策略。为应对上述挑战，我们以LLM作为用户代理，构建了一种强化学习（RL）框架，用于训练策略以选择最合适的用户进行物料增强，从而在增强训练后最大化冷启动物料的性能。该策略模型根据用户的特征与历史行为，学习选择用于冷启动物料数据增强的用户。为优化用户选择以提升冷启动物料效果，我们采用策略梯度方法，在高奖励方向更新策略。在Amazon Product Review数据集上的实验表明，本方法显著提升了冷启动物料召回率，验证了其作为一种可扩展且服务高效的现代推荐系统数据增强策略的有效性。",
+        "translated_title": "选择用户历史以生成大语言模型用户用于冷启动物品推荐",
+        "label": [
+            "LLM生成式推荐",
+            "召回",
+            "负采样与对比学习"
+        ],
+        "label_reason": "利用LLM生成用户行为数据增强冷启动召回",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "RL驱动的用户选择策略创新，提升冷启动效果"
     }
 ]
