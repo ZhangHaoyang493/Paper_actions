@@ -16124,5 +16124,246 @@
         "relevance_score": 1,
         "novelty_score": 7,
         "novelty_reason": "引入局部注意力机制提升特征区分度"
+    },
+    {
+        "title": "MMAG: Mixed Memory-Augmented Generation for Large Language Models Applications",
+        "url": "http://arxiv.org/abs/2512.01710v1",
+        "pub_date": "2025-12-01",
+        "summary": "Large Language Models (LLMs) excel at generating coherent text within a single prompt but fall short in sustaining relevance, personalization, and continuity across extended interactions. Human communication, however, relies on multiple forms of memory, from recalling past conversations to adapting to personal traits and situational context. This paper introduces the Mixed Memory-Augmented Generation (MMAG) pattern, a framework that organizes memory for LLM-based agents into five interacting layers: conversational, long-term user, episodic and event-linked, sensory and context-aware, and short-term working memory. Drawing inspiration from cognitive psychology, we map these layers to technical components and outline strategies for coordination, prioritization, and conflict resolution. We demonstrate the approach through its implementation in the Heero conversational agent, where encrypted long-term bios and conversational history already improve engagement and retention. We further discuss implementation concerns around storage, retrieval, privacy, and latency, and highlight open challenges. MMAG provides a foundation for building memory-rich language agents that are more coherent, proactive, and aligned with human needs.",
+        "translated": "大语言模型（LLMs）在单次提示下擅长生成连贯文本，但在持续交互中难以维持相关性、个性化与连续性。然而，人类交流依赖多种记忆形式，包括回忆过往对话、适应个人特质和情境背景。本文提出混合记忆增强生成（MMAG）范式，为基于LLM的智能体组织记忆，将其划分为五个相互作用层级：对话记忆层、长期用户记忆层、事件关联型情景记忆层、感官与情境感知记忆层以及短期工作记忆层。受认知心理学启发，我们将这些记忆层级映射至技术组件，并概述协调机制、优先级排序策略及冲突解决方法。我们通过在Heero对话智能体中的实现验证该框架，其中加密的长期用户档案与对话历史已显著提升用户参与度与留存率。此外，我们进一步讨论存储、检索、隐私与延迟等实施考量，并指出当前尚未解决的关键挑战。MMAG为构建具备丰富记忆能力、更加连贯、主动且契合人类需求的语言智能体奠定了基础。",
+        "translated_title": "MMAG：面向大语言模型应用的混合记忆增强生成",
+        "label": [],
+        "label_reason": "论文聚焦LLM记忆机制，非推荐系统核心环节",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "引入多层记忆框架，但未用于推荐场景"
+    },
+    {
+        "title": "Structured Spectral Reasoning for Frequency-Adaptive Multimodal Recommendation",
+        "url": "http://arxiv.org/abs/2512.01372v1",
+        "pub_date": "2025-12-01",
+        "summary": "Multimodal recommendation aims to integrate collaborative signals with heterogeneous content such as visual and textual information, but remains challenged by modality-specific noise, semantic inconsistency, and unstable propagation over user-item graphs. These issues are often exacerbated by naive fusion or shallow modeling strategies, leading to degraded generalization and poor robustness. While recent work has explored the frequency domain as a lens to separate stable from noisy signals, most methods rely on static filtering or reweighting, lacking the ability to reason over spectral structure or adapt to modality-specific reliability. To address these challenges, we propose a Structured Spectral Reasoning (SSR) framework for frequency-aware multimodal recommendation. Our method follows a four-stage pipeline: (i) Decompose graph-based multimodal signals into spectral bands via graph-guided transformations to isolate semantic granularity; (ii) Modulate band-level reliability with spectral band masking, a training-time masking with a prediction-consistency objective that suppresses brittle frequency components; (iii) Fuse complementary frequency cues using hyperspectral reasoning with low-rank cross-band interaction; and (iv) Align modality-specific spectral features via contrastive regularization to promote semantic and structural consistency. Experiments on three real-world benchmarks show consistent gains over strong baselines, particularly under sparse and cold-start settings. Additional analyses indicate that structured spectral modeling improves robustness and provides clearer diagnostics of how different bands contribute to performance.",
+        "translated": "多模态推荐旨在融合协同信号与视觉、文本等异构内容，但面临模态特定噪声、语义不一致以及在用户-物品图上传播不稳定等挑战。这些问题常因朴素的融合或浅层建模策略而加剧，导致泛化能力下降和鲁棒性不足。尽管近期工作已尝试以频域视角区分稳定与噪声信号，多数方法依赖静态滤波或重加权，缺乏对频谱结构推理的能力，亦无法适应不同模态的可靠性特性。为应对上述挑战，我们提出一种面向频域感知的多模态推荐框架——结构化频谱推理（Structured Spectral Reasoning, SSR）。该方法遵循四阶段流程：(i) 通过图引导变换将基于图的多模态信号分解为频谱带，以分离语义粒度；(ii) 利用频谱带掩码机制调节各频带可靠性，该机制在训练时引入预测一致性目标，抑制脆弱频段成分；(iii) 采用高光谱推理结合低秩跨频带交互，融合互补频域线索；(iv) 通过对比正则化对齐各模态的频谱特征，促进语义与结构一致性。在三个真实世界基准数据集上的实验表明，SSR 相较于强基线模型持续取得性能提升，尤其在稀疏与冷启动场景下表现突出。附加分析显示，结构化频谱建模可增强鲁棒性，并提供更清晰的诊断，揭示不同频带对性能贡献的具体方式。",
+        "translated_title": "面向频域自适应多模态推荐的结构化谱推理",
+        "label": [
+            "多模态推荐",
+            "重排",
+            "负采样与对比学习"
+        ],
+        "label_reason": "聚焦多模态推荐中的频域建模与结构化推理",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出频域结构化推理框架，结合对比正则化提升鲁棒性"
+    },
+    {
+        "title": "Toward a benchmark for CTR prediction in online advertising: datasets, evaluation protocols and perspectives",
+        "url": "http://arxiv.org/abs/2512.01179v1",
+        "pub_date": "2025-12-01",
+        "summary": "This research designs a unified architecture of CTR prediction benchmark (Bench-CTR) platform that offers flexible interfaces with datasets and components of a wide range of CTR prediction models. Moreover, we construct a comprehensive system of evaluation protocols encompassing real-world and synthetic datasets, a taxonomy of metrics, standardized procedures and experimental guidelines for calibrating the performance of CTR prediction models. Furthermore, we implement the proposed benchmark platform and conduct a comparative study to evaluate a wide range of state-of-the-art models from traditional multivariate statistical to modern large language model (LLM)-based approaches on three public datasets and two synthetic datasets. Experimental results reveal that, (1) high-order models largely outperform low-order models, though such advantage varies in terms of metrics and on different datasets; (2) LLM-based models demonstrate a remarkable data efficiency, i.e., achieving the comparable performance to other models while using only 2% of the training data; (3) the performance of CTR prediction models has achieved significant improvements from 2015 to 2016, then reached a stage with slow progress, which is consistent across various datasets. This benchmark is expected to facilitate model development and evaluation and enhance practitioners' understanding of the underlying mechanisms of models in the area of CTR prediction. Code is available at https://github.com/NuriaNinja/Bench-CTR.",
+        "translated": "本研究设计了一个统一的点击率（CTR）预测基准平台（Bench-CTR），该平台提供灵活的接口，支持多种CTR预测模型的数据集与组件。此外，我们构建了一套全面的评估体系，涵盖真实世界与合成数据集、指标分类体系、标准化实验流程及性能校准指南，以系统性地评估CTR预测模型的表现。进一步地，我们实现了所提出的基准平台，并在三个公开数据集和两个合成数据集上开展对比实验，评测从传统多元统计模型到现代基于大语言模型（LLM）方法的一系列前沿模型。实验结果表明：（1）高阶模型在多数情况下显著优于低阶模型，但其优势因评估指标和数据集不同而有所差异；（2）基于LLM的模型展现出卓越的数据效率——仅使用训练数据的2%即可达到与其他模型相当的性能；（3）CTR预测模型的整体性能自2015年至2016年大幅提升后，进入进展缓慢的平台期，这一趋势在多个数据集上均保持一致。该基准平台有望促进模型开发与评估，加深从业者对CTR预测模型内在机制的理解。代码已开源，详见 https://github.com/NuriaNinja/Bench-CTR。",
+        "translated_title": "面向在线广告点击率预测的基准：数据集、评估协议与研究视角",
+        "label": [
+            "精排（Ranking）",
+            "通用推荐技术（General Recommendation Techniques）"
+        ],
+        "label_reason": "聚焦CTR预测，属推荐系统精排核心任务",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "构建统一评测平台，推动模型比较与评估标准化"
+    },
+    {
+        "title": "Conversion rate prediction in online advertising: modeling techniques, performance evaluation and future directions",
+        "url": "http://arxiv.org/abs/2512.01171v1",
+        "pub_date": "2025-12-01",
+        "summary": "Conversion and conversion rate (CVR) prediction play a critical role in efficient advertising decision-making. In past decades, although researchers have developed plenty of models for CVR prediction, the methodological evolution and relationships between different techniques have been precluded. In this paper, we conduct a comprehensive literature review on CVR prediction in online advertising, and classify state-of-the-art CVR prediction models into six categories with respect to the underlying techniques and elaborate on connections between these techniques. For each category of models, we present the framework of underlying techniques, their advantages and disadvantages, and discuss how they are utilized for CVR prediction. Moreover, we summarize the performance of various CVR prediction models on public and proprietary datasets. Finally, we identify research trends, major challenges, and promising future directions. We observe that results of performance evaluation reported in prior studies are not unanimous; semantics-enriched, attribution-enhanced, debiased CVR prediction and jointly modeling CTR and CVR prediction would be promising directions to explore in the future. This review is expected to provide valuable references and insights for future researchers and practitioners in this area.",
+        "translated": "转化率（CVR）预测与转化预测在高效广告决策中发挥着关键作用。过去几十年来，尽管研究人员已开发出大量用于CVR预测的模型，但不同技术之间的方法论演化及其相互关系尚未被系统梳理。本文对在线广告中的CVR预测进行了全面文献综述，并依据底层技术将当前最先进的CVR预测模型划分为六大类，详细阐述了各类技术间的关联性。对于每一类模型，我们介绍了其底层技术框架、优缺点，并探讨了它们如何应用于CVR预测。此外，我们总结了各类CVR预测模型在公开及自有数据集上的性能表现。最后，我们指出了研究趋势、主要挑战及未来有前景的研究方向。我们观察到，以往研究中报告的性能评估结果并不统一；语义增强、归因增强、去偏的CVR预测以及联合建模点击率（CTR）与CVR预测将是未来值得探索的重要方向。本综述有望为该领域的未来研究者和从业者提供有价值的参考与洞见。",
+        "translated_title": "在线广告中的转化率预测：建模技术、性能评估与未来方向",
+        "label": [],
+        "label_reason": "聚焦广告转化率预测，非推荐系统核心问题",
+        "relevance_score": 3,
+        "novelty_score": 3,
+        "novelty_reason": "为方法综述，无新模型或架构提出"
+    },
+    {
+        "title": "Optimizing Generative Ranking Relevance via Reinforcement Learning in Xiaohongshu Search",
+        "url": "http://arxiv.org/abs/2512.00968v1",
+        "pub_date": "2025-11-30",
+        "summary": "Ranking relevance is a fundamental task in search engines, aiming to identify the items most relevant to a given user query. Traditional relevance models typically produce scalar scores or directly predict relevance labels, limiting both interpretability and the modeling of complex relevance signals. Inspired by recent advances in Chain-of-Thought (CoT) reasoning for complex tasks, we investigate whether explicit reasoning can enhance both interpretability and performance in relevance modeling. However, existing reasoning-based Generative Relevance Models (GRMs) primarily rely on supervised fine-tuning on large amounts of human-annotated or synthetic CoT data, which often leads to limited generalization. Moreover, domain-agnostic, free-form reasoning tends to be overly generic and insufficiently grounded, limiting its potential to handle the diverse and ambiguous cases prevalent in open-domain search. In this work, we formulate relevance modeling in Xiaohongshu search as a reasoning task and introduce a Reinforcement Learning (RL)-based training framework to enhance the grounded reasoning capabilities of GRMs. Specifically, we incorporate practical business-specific relevance criteria into the multi-step reasoning prompt design and propose Stepwise Advantage Masking (SAM), a lightweight process-supervision strategy which facilitates effective learning of these criteria through improved credit assignment. To enable industrial deployment, we further distill the large-scale RL-tuned model to a lightweight version suitable for real-world search systems. Extensive experiments on industrial datasets, along with online A/B tests, demonstrate the effectiveness of our approach.",
+        "translated": "排序相关性是搜索引擎中的基础任务，旨在识别与给定用户查询最相关的物料。传统相关性模型通常输出标量分数或直接预测相关性标签，这限制了其可解释性，并难以建模复杂的相关信号。受近期针对复杂任务的链式思维（Chain-of-Thought, CoT）推理方法进展启发，我们探究显式推理是否能够提升相关性建模的可解释性与性能。然而，现有的基于推理的生成式相关性模型（Generative Relevance Models, GRMs）主要依赖于大规模人工标注或合成的CoT数据进行监督微调，往往导致泛化能力有限。此外，领域无关、自由形式的推理常过于通用且缺乏具体依据，难以有效应对开放域搜索中普遍存在的多样化和模糊性场景。在本工作中，我们将小红书搜索中的相关性建模形式化为一个推理任务，并引入基于强化学习（Reinforcement Learning, RL）的训练框架以增强GRMs的具身推理能力。具体而言，我们在多步推理提示设计中融入实际业务相关的相关性标准，并提出逐步优势掩码（Stepwise Advantage Masking, SAM），这是一种轻量级过程监督策略，通过改进奖励归因机制，促进对这些标准的有效学习。为进一步实现工业部署，我们进一步将大规模RL微调后的模型蒸馏至适合现实搜索系统使用的轻量化版本。在工业数据集上的大量实验以及线上A/B测试均验证了本方法的有效性。",
+        "translated_title": "小红书搜索中的生成式排序相关性优化研究",
+        "label": [
+            "精排",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "基于RL优化生成式排序，适配推荐系统精排环节",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "引入RL+SAM策略提升推理接地性与可部署性"
+    },
+    {
+        "title": "SHRAG: AFrameworkfor Combining Human-Inspired Search with RAG",
+        "url": "http://arxiv.org/abs/2512.00772v1",
+        "pub_date": "2025-11-30",
+        "summary": "Retrieval-Augmented Generation (RAG) is gaining recognition as one of the key technological axes for next generation information retrieval, owing to its ability to mitigate the hallucination phenomenon in Large Language   Models (LLMs)and effectively incorporate up-to-date information. However, specialized expertise is necessary to   construct ahigh-quality retrieval system independently; moreover, RAGdemonstratesrelativelyslowerprocessing   speeds compared to conventional pure retrieval systems because it involves both retrieval and generation stages.   Accordingly, this study proposes SHRAG, a novel framework designed to facilitate the seamless integration of   Information Retrieval and RAG while simultaneously securing precise retrieval performance. SHRAG utilizes a   Large Language Model as a Query Strategist to automatically transform unstructured natural language queries   into logically structured search queries, subsequently performing Boolean retrieval to emulate the search process   of an expert human searcher. Furthermore, it incorporates multilingual query expansion and a multilingual   embedding model, enabling it to perform efficient cross-lingual question answering within the multilingual   dataset environment of the ScienceON Challenge. Experimental results demonstrate that the proposed method,   combining logical retrieval capabilities and generative reasoning, can significantly enhance the accuracy and   reliability of RAG systems. Furthermore, SHRAG movesbeyondconventionaldocument-centric retrieval methods,   presenting the potential for a new search paradigm capable of providing direct and reliable responses to queries.",
+        "translated": "检索增强生成（RAG）因其能够缓解大语言模型（LLMs）中的幻觉现象，并有效整合最新信息，正逐渐被视为下一代信息检索的关键技术之一。然而，构建一个高质量的独立检索系统需要专门的专业知识；此外，由于RAG需经历检索与生成两个阶段，其处理速度相较于传统的纯检索系统相对较慢。为此，本文提出SHRAG框架，旨在实现信息检索与RAG的无缝集成，同时保障精确的检索性能。SHRAG利用大语言模型作为查询策略师，自动将非结构化的自然语言查询转化为逻辑结构化的搜索查询，随后执行布尔检索以模拟专家人工检索者的搜索过程。此外，该框架还结合了多语言查询扩展及多语言嵌入模型，使其能够在ScienceON挑战赛的多语言数据集环境中高效完成跨语言问答任务。实验结果表明，该方法融合了逻辑检索能力与生成式推理，能显著提升RAG系统的准确性与可靠性。此外，SHRAG超越了传统以文档为中心的检索方法，展现出一种可提供直接且可靠回答的新检索范式的潜力。",
+        "translated_title": "SHRAG：一种结合人类启发式搜索与RAG的框架",
+        "label": [],
+        "label_reason": "聚焦信息检索与RAG，非推荐系统核心问题",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "改进检索策略，但未针对推荐场景设计"
+    },
+    {
+        "title": "Text Mining Analysis of Symptom Patterns in Medical Chatbot Conversations",
+        "url": "http://arxiv.org/abs/2512.00768v1",
+        "pub_date": "2025-11-30",
+        "summary": "The fast growth of digital health systems has led to a need to better comprehend how they interpret and represent patient-reported symptoms. Chatbots have been used in healthcare to provide clinical support and enhance the user experience, making it possible to provide meaningful clinical patterns from text-based data through chatbots. The proposed research utilises several different natural language processing methods to study the occurrences of symptom descriptions in medicine as well as analyse the patterns that emerge through these conversations within medical bots. Through the use of the Medical Conversations to Disease Dataset which contains 960 multi-turn dialogues divided into 24 Clinical Conditions, a standardised representation of conversations between patient and bot is created for further analysis by computational means. The multi-method approach uses a variety of tools, including Latent Dirichlet Allocation (LDA) to identify latent symptom themes, K-Means to group symptom descriptions by similarity, Transformer-based Named Entity Recognition (NER) to extract medical concepts, and the Apriori algorithm to discover frequent symptom pairs. Findings from the analysis indicate a coherent structure of clinically relevant topics, moderate levels of clustering cohesiveness and several high confidence rates on the relationships between symptoms like fever headache and rash itchiness. The results support the notion that conversational medical data can be a valuable diagnostic signal for early symptom interpretation, assist in strengthening decision support and improve how users interact with tele-health technology. By demonstrating a method for converting unstructured free-flowing dialogue into actionable knowledge regarding symptoms this work provides an extensible framework to further enhance future performance, dependability and clinical utility of selecting medical chatbots.",
+        "translated": "数字健康系统的快速发展促使人们亟需更深入地理解其如何解释和表征患者报告的症状。聊天机器人已在医疗领域被用于提供临床支持并提升用户体验，从而通过基于文本的对话数据为医疗聊天机器人提取有意义的临床模式。本研究运用多种自然语言处理方法，探究医学文献中症状描述的出现情况，并分析医疗机器人对话中所呈现的模式。研究基于“Medical Conversations to Disease Dataset”数据集（包含24种临床病症划分的960个多轮对话），构建标准化的患者与机器人对话表示形式，以供计算手段进一步分析。该多方法路径结合了多种工具：包括使用潜在狄利克雷分配（LDA）识别潜在症状主题、K-Means聚类相似症状描述、基于Transformer的命名实体识别（NER）抽取医学概念，以及Apriori算法挖掘高频症状对。分析结果表明，临床相关主题结构清晰，聚类内凝聚性适中，并在如发热头痛与皮疹瘙痒等症状关系上展现出较高的置信度。这些结果支持了以下观点：对话式医疗数据可作为早期症状解读的有价值诊断信号，有助于强化决策支持并改善用户与远程健康技术的交互体验。通过展示将非结构化自由对话转化为关于症状的可操作知识的方法，本研究提供了可扩展的框架，有望进一步提升未来医疗聊天机器人选择的性能、可靠性及临床实用性。",
+        "translated_title": "医疗聊天机器人对话中的症状模式文本挖掘分析",
+        "label": [],
+        "label_reason": "论文聚焦医疗对话文本挖掘，与推荐系统无直接关联。",
+        "relevance_score": 3,
+        "novelty_score": 4,
+        "novelty_reason": "常规NLP方法用于症状模式分析，无推荐系统创新。"
+    },
+    {
+        "title": "Upcycled and Merged MoE Reward Model for Mitigating Reward Hacking",
+        "url": "http://arxiv.org/abs/2512.00724v1",
+        "pub_date": "2025-11-30",
+        "summary": "Reward models play a critical role in Reinforcement Learning from Human Feedback (RLHF) by assessing the consistency between generated outputs and human preferences. However, conventional reward models are prone to reward hacking or over-optimization, where the policy exploits shortcut patterns to obtain high reward scores that do not reflect true human preference. Although Mixture-of-Experts (MoE)-based reward models can enhance discriminative capability, they typically introduce substantial computational overhead. To address these challenges, we propose an upcycle and merge MoE reward modeling approach. We first upcycle a dense reward model into a MoE architecture, where a shared expert captures general knowledge, while normal experts specialize in instruction-specific patterns. We then apply routing-weight normalization and merge experts back into a dense model through a learnable weight-averaging mechanism, preserving performance gains while significantly reducing inference cost. Experimental results demonstrate that our method effectively mitigates reward hacking across various model scales. Our work highlights the potential of upcycle and merge MoE structures for improving both robustness and efficiency of RLHF reward models.",
+        "translated": "奖励模型在基于人类反馈的强化学习（RLHF）中扮演着关键角色，用于评估生成输出与人类偏好之间的一致性。然而，传统奖励模型容易出现奖励黑客行为或过度优化问题，即策略通过利用捷径模式获取高奖励分数，而这些分数并不能反映真实的人类偏好。尽管基于专家混合（MoE）的奖励模型能够增强判别能力，但通常会引入显著的计算开销。为应对上述挑战，我们提出一种“上采样并融合”MoE奖励建模方法：首先将稠密奖励模型上采样为MoE架构，其中共享专家负责捕捉通用知识，而普通专家则专注于特定指令模式；随后通过路由权重归一化，并借助可学习的加权平均机制将专家重新融合回稠密模型，在保留性能提升的同时大幅降低推理成本。实验结果表明，该方法能有效缓解不同规模模型下的奖励黑客现象。本工作凸显了“上采样并融合”MoE结构在提升RLHF奖励模型鲁棒性与效率方面的潜力。",
+        "translated_title": "循环复用与融合的MoE奖励模型以缓解奖励黑客行为",
+        "label": [],
+        "label_reason": "论文聚焦RLHF奖励模型优化，非推荐系统范畴",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "MoE结构创新用于奖励建模，提升效率与鲁棒性"
+    },
+    {
+        "title": "Cross-Domain Federated Semantic Communication with Global Representation Alignment and Domain-Aware Aggregation",
+        "url": "http://arxiv.org/abs/2512.00711v1",
+        "pub_date": "2025-11-30",
+        "summary": "Semantic communication can significantly improve bandwidth utilization in wireless systems by exploiting the meaning behind raw data. However, the advancements achieved through semantic communication are closely dependent on the development of deep learning (DL) models for joint source-channel coding (JSCC) encoder/decoder techniques, which require a large amount of data for training. To address this data-intensive nature of DL models, federated learning (FL) has been proposed to train a model in a distributed manner, where the server broadcasts the DL model to clients in the network for training with their local data. However, the conventional FL approaches suffer from catastrophic degradation when client data are from different domains. In contrast, in this paper, a novel FL framework is proposed to address this domain shift by constructing the global representation, which aligns with the local features of the clients to preserve the semantics of different data domains. In addition, the dominance problem of client domains with a large number of samples is identified and, then, addressed with a domain-aware aggregation approach. This work is the first to consider the domain shift in training the semantic communication system for the image reconstruction task. Finally, simulation results demonstrate that the proposed approach outperforms the model-contrastive FL (MOON) framework by 0.5 for PSNR values under three domains at an SNR of 1 dB, and this gap continues to widen as the channel quality improves.",
+        "translated": "语义通信可通过利用原始数据背后的语义信息，显著提升无线系统中的带宽利用率。然而，语义通信所取得的进展高度依赖于深度学习（DL）模型在联合信源信道编码（JSCC）编解码技术中的发展，而这些模型的训练需要大量数据。为应对深度学习模型对数据密集性的要求，联邦学习（FL）被提出，以分布式方式训练模型：服务器将DL模型广播至网络中的客户端，由其使用本地数据进行训练。然而，传统的FL方法在客户端数据来自不同域时会遭受灾难性性能退化。相比之下，本文提出了一种新颖的FL框架，通过构建全局表征来解决该域迁移问题，该表征与各客户端的局部特征对齐，从而保留不同数据域的语义信息。此外，本文识别并解决了样本数量较多的客户端域主导性问题，采用了域感知聚合方法予以应对。本工作首次考虑了在图像重建任务中训练语义通信系统的域迁移问题。仿真结果表明，在信噪比为1 dB、三个不同域条件下，所提方法相较模型对比式FL（MOON）框架的PSNR值高出0.5，且随着信道质量改善，这一差距持续扩大。",
+        "translated_title": "跨域联邦语义通信：全局表示对齐与领域感知聚合",
+        "label": [],
+        "label_reason": "论文聚焦无线通信领域，与推荐系统无关。",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "改进联邦学习框架，但非推荐系统创新。"
+    },
+    {
+        "title": "ProEx: A Unified Framework Leveraging Large Language Model with Profile Extrapolation for Recommendation",
+        "url": "http://arxiv.org/abs/2512.00679v1",
+        "pub_date": "2025-11-30",
+        "summary": "The powerful text understanding and generation capabilities of large language models (LLMs) have brought new vitality to general recommendation with implicit feedback. One possible strategy involves generating a unique user (or item) profile from historical interaction data, which is then mapped to a semantic representation in the language space. However, a single-instance profile may be insufficient to comprehensively capture the complex intentions behind a user's interacted items. Moreover, due to the inherent instability of LLMs, a biased or misinterpreted profile could even undermine the original recommendation performance. Consequently, an intuitive solution is to generate multiple profiles for each user (or item), each reflecting a distinct aspect of their characteristics. In light of this, we propose a unified recommendation framework with multi-faceted profile extrapolation (ProEx) in this paper. By leveraging chain-of-thought reasoning, we construct multiple distinct profiles for each user and item. These new profiles are subsequently mapped into semantic vectors, extrapolating from the position of the original profile to explore a broader region of the language space. Subsequently, we introduce the concept of environments, where each environment represents a possible linear combination of all profiles. The differences across environments are minimized to reveal the inherent invariance of user preferences. We apply ProEx to three discriminative methods and three generative methods, and conduct extensive experiments on three datasets. The experimental results demonstrate that ProEx significantly enhances the performance of these base recommendation models.",
+        "translated": "大语言模型（LLM）强大的文本理解与生成能力为基于隐式反馈的通用推荐系统注入了新的活力。一种可行策略是根据用户的历史交互数据生成独特的用户（或物品）画像，并将其映射到语言空间中的语义表示。然而，单一画像可能不足以全面捕捉用户所交互物品背后的复杂意图；此外，由于大语言模型固有的不稳定性，偏倚或误释的画像甚至可能损害原始推荐性能。因此，一个直观的解决方案是为每个用户（或物品）生成多个画像，每个画像反映其特征的不同侧面。针对这一思路，本文提出了一种统一的推荐框架——多维画像外推（ProEx）。通过链式思维推理机制，我们为每个用户和物品构建多个不同的画像。随后，这些新画像被映射至语义向量空间，并从原始画像位置出发进行外推，以探索更广阔的语言空间区域。接着，我们引入“环境”概念，其中每个环境代表所有画像的一种可能线性组合。通过最小化不同环境间的差异，揭示用户偏好内在不变性。我们将 ProEx 应用于三种判别式方法和三种生成式方法，并在三个数据集上进行了广泛实验。实验结果表明，ProEx 显著提升了这些基础推荐模型的性能。",
+        "translated_title": "ProEx：一种结合大语言模型与画像外推的统一推荐框架",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "利用LLM多视角用户画像提升推荐性能",
+        "relevance_score": 10,
+        "novelty_score": 9,
+        "novelty_reason": "创新性多视角profile生成与环境建模"
+    },
+    {
+        "title": "DLRREC: Denoising Latent Representations via Multi-Modal Knowledge Fusion in Deep Recommender Systems",
+        "url": "http://arxiv.org/abs/2512.00596v1",
+        "pub_date": "2025-11-29",
+        "summary": "Modern recommender systems struggle to effectively utilize the rich, yet high-dimensional and noisy, multi-modal features generated by Large Language Models (LLMs). Treating these features as static inputs decouples them from the core recommendation task. We address this limitation with a novel framework built on a key insight: deeply fusing multi-modal and collaborative knowledge for representation denoising. Our unified architecture introduces two primary technical innovations. First, we integrate dimensionality reduction directly into the recommendation model, enabling end-to-end co-training that makes the reduction process aware of the final ranking objective. Second, we introduce a contrastive learning objective that explicitly incorporates the collaborative filtering signal into the latent space. This synergistic process refines raw LLM embeddings, filtering noise while amplifying task-relevant signals. Extensive experiments confirm our method's superior discriminative power, proving that this integrated fusion and denoising strategy is critical for achieving state-of-the-art performance. Our work provides a foundational paradigm for effectively harnessing LLMs in recommender systems.",
+        "translated": "现代推荐系统难以有效利用大型语言模型（LLMs）生成的丰富但高维且噪声较多的多模态特征。将这些特征视为静态输入，使其与核心推荐任务脱节。我们通过一个新颖框架解决这一局限，其核心思想是：深度融合多模态与协同知识以实现表征去噪。我们的统一架构引入两项关键技术革新。首先，我们将降维直接集成到推荐模型中，实现端到端联合训练，使降维过程感知最终排序目标。其次，我们引入一种对比学习目标，显式将协同过滤信号融入潜在空间。这一协同过程精炼原始LLM嵌入，滤除噪声并增强与任务相关信号。大量实验验证了该方法优越的判别能力，证明这种集成融合与去噪策略对于实现业界领先性能至关重要。本工作为有效利用LLMs于推荐系统提供了基础范式。",
+        "translated_title": "DLRREC：通过多模态知识融合在深度推荐系统中进行潜在表示去噪",
+        "label": [
+            "精排",
+            "LLM生成式推荐",
+            "负采样与对比学习"
+        ],
+        "label_reason": "融合多模态与协同信号优化推荐表示",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "首创对比学习+维度压缩联合优化框架"
+    },
+    {
+        "title": "PEOAT: Personalization-Guided Evolutionary Question Assembly for One-Shot Adaptive Testing",
+        "url": "http://arxiv.org/abs/2512.00439v1",
+        "pub_date": "2025-11-29",
+        "summary": "With the rapid advancement of intelligent education, Computerized Adaptive Testing (CAT) has attracted increasing attention by integrating educational psychology with deep learning technologies. Unlike traditional paper-and-pencil testing, CAT aims to efficiently and accurately assess examinee abilities by adaptively selecting the most suitable items during the assessment process. However, its real-time and sequential nature presents limitations in practical scenarios, particularly in large-scale assessments where interaction costs are high, or in sensitive domains such as psychological evaluations where minimizing noise and interference is essential. These challenges constrain the applicability of conventional CAT methods in time-sensitive or resourceconstrained environments. To this end, we first introduce a novel task called one-shot adaptive testing (OAT), which aims to select a fixed set of optimal items for each test-taker in a one-time selection. Meanwhile, we propose PEOAT, a Personalization-guided Evolutionary question assembly framework for One-shot Adaptive Testing from the perspective of combinatorial optimization. Specifically, we began by designing a personalization-aware initialization strategy that integrates differences between examinee ability and exercise difficulty, using multi-strategy sampling to construct a diverse and informative initial population. Building on this, we proposed a cognitive-enhanced evolutionary framework incorporating schema-preserving crossover and cognitively guided mutation to enable efficient exploration through informative signals. To maintain diversity without compromising fitness, we further introduced a diversity-aware environmental selection mechanism. The effectiveness of PEOAT is validated through extensive experiments on two datasets, complemented by case studies that uncovered valuable insights.",
+        "translated": "随着智能教育的快速发展，计算机自适应测试（CAT）通过融合教育心理学与深度学习技术，日益受到关注。与传统的纸笔测试不同，CAT旨在通过在测评过程中动态选择最合适的题目，高效且精准地评估考生能力。然而，其实时性和序列性特点在实际应用场景中存在局限，特别是在大规模测评场景下交互成本高昂，或在心理评估等敏感领域需最大限度减少噪声与干扰的情况下尤为突出。这些挑战限制了传统CAT方法在时间敏感或资源受限环境中的适用性。为此，我们首先提出了一项新型任务——单次自适应测试（OAT），旨在为每位考生一次性选定一组最优题目。同时，我们提出了PEOAT框架，即面向单次自适应测试的个性化引导进化题库组装框架，从组合优化视角出发构建该框架。具体而言，我们首先设计了一种个性化感知的初始化策略，结合考生能力与题目难度差异，采用多策略采样方法构建多样且信息丰富的初始种群；在此基础上，我们进一步提出一种认知增强型进化框架，集成保持结构的交叉操作与认知引导变异机制，以有效利用信息信号实现高效探索；为在不牺牲适应度的前提下维持种群多样性，我们还引入了一种多样性感知的环境选择机制。PEOAT的有效性已在两个数据集上通过大量实验验证，并辅以案例研究揭示了有价值的洞见。",
+        "translated_title": "PEOAT：面向单次自适应测试的个性化引导演化问题组合",
+        "label": [],
+        "label_reason": "论文聚焦自适应测试，非推荐系统相关",
+        "relevance_score": 3,
+        "novelty_score": 5,
+        "novelty_reason": "改进进化算法，但无推荐系统创新"
+    },
+    {
+        "title": "Mitigating the Threshold Priming Effect in Large Language Model-Based Relevance Judgments via Personality Infusing",
+        "url": "http://arxiv.org/abs/2512.00390v1",
+        "pub_date": "2025-11-29",
+        "summary": "Recent research has explored LLMs as scalable tools for relevance labeling, but studies indicate they are susceptible to priming effects, where prior relevance judgments influence later ones. Although psychological theories link personality traits to such biases, it is unclear whether simulated personalities in LLMs exhibit similar effects. We investigate how Big Five personality profiles in LLMs influence priming in relevance labeling, using multiple LLMs on TREC 2021 and 2022 Deep Learning Track datasets. Our results show that certain profiles, such as High Openness and Low Neuroticism, consistently reduce priming susceptibility. Additionally, the most effective personality in mitigating priming may vary across models and task types. Based on these findings, we propose personality prompting as a method to mitigate threshold priming, connecting psychological evidence with LLM-based evaluation practices.",
+        "translated": "近期研究已探索将大语言模型（LLM）作为可扩展的关联性标注工具，但研究表明其易受启动效应影响，即先前的相关性判断会干扰后续判断。虽然心理学理论将人格特质与此类偏见相联系，但尚不明确大语言模型中模拟的人格是否表现出类似效应。我们通过在TREC 2021和2022深度学习赛道数据集上使用多个大语言模型，探究模型内“大五人格”特征如何影响相关性标注中的启动效应。实验结果表明，某些人格特征（如高开放性和低神经质）能持续降低启动效应的敏感度。此外，最有效的缓解启动效应的人格可能因模型及任务类型而异。基于上述发现，我们提出“人格提示法”以缓解阈值启动效应，并将心理学实证与基于大语言模型的评估实践相结合。",
+        "translated_title": "通过人格注入缓解大语言模型相关性判断中的阈值启动效应",
+        "label": [
+            "LLM生成式推荐",
+            "推荐系统评估"
+        ],
+        "label_reason": "研究LLM在相关性标注中的偏倚，属评估环节改进",
+        "relevance_score": 4,
+        "novelty_score": 6,
+        "novelty_reason": "提出人格提示法缓解偏倚，属方法优化"
+    },
+    {
+        "title": "The Information Theory of Similarity",
+        "url": "http://arxiv.org/abs/2512.00378v1",
+        "pub_date": "2025-11-29",
+        "summary": "We establish a precise mathematical equivalence between witness-based similarity systems (REWA) and Shannon's information theory. We prove that witness overlap is mutual information, that REWA bit complexity bounds arise from channel capacity limitations, and that ranking-preserving encodings obey rate-distortion constraints. This unification reveals that fifty years of similarity search research -- from Bloom filters to locality-sensitive hashing to neural retrieval -- implicitly developed information theory for relational data. We derive fundamental lower bounds showing that REWA's $O(Δ^{-2} \\log N)$ complexity is optimal: no encoding scheme can preserve similarity rankings with fewer bits. The framework establishes that semantic similarity has physical units (bits of mutual information), search is communication (query transmission over a noisy channel), and retrieval systems face fundamental capacity limits analogous to Shannon's channel coding theorem.",
+        "translated": "我们建立了基于见证的相似性系统（REWA）与香农信息论之间的精确数学等价关系。我们证明：见证重叠即互信息；REWA 的比特复杂度界限源于信道容量限制；保持排序的编码需满足率失真约束。这一统一揭示，过去五十年间从布隆过滤器到局部敏感哈希再到神经检索的相似性搜索研究，实际上隐式发展了面向关系数据的信息理论。我们推导出基本下界，表明 REWA 的 $O(Δ^{-2} \\log N)$ 复杂度是最优的：不存在任何编码方案能够在更少的比特内保持相似性排序。该框架确立了语义相似性具有物理单位（互信息比特）、搜索是通信（在噪声信道上传输查询），且检索系统面临类似于香农信道编码定理的基本容量限制。",
+        "translated_title": "相似性的信息论",
+        "label": [],
+        "label_reason": "论文聚焦信息论与相似性搜索，非推荐系统核心环节。",
+        "relevance_score": 3,
+        "novelty_score": 8,
+        "novelty_reason": "构建信息论框架解释相似性搜索，理论创新显著。"
+    },
+    {
+        "title": "Breaking It Down: Domain-Aware Semantic Segmentation for Retrieval Augmented Generation",
+        "url": "http://arxiv.org/abs/2512.00367v1",
+        "pub_date": "2025-11-29",
+        "summary": "Document chunking is a crucial component of Retrieval-Augmented Generation (RAG), as it directly affects the retrieval of relevant and precise context. Conventional fixed-length and recursive splitters often produce arbitrary, incoherent segments that fail to preserve semantic structure. Although semantic chunking has gained traction, its influence on generation quality remains underexplored. This paper introduces two efficient semantic chunking methods, Projected Similarity Chunking (PSC) and Metric Fusion Chunking (MFC), trained on PubMed data using three different embedding models. We further present an evaluation framework that measures the effect of chunking on both retrieval and generation by augmenting PubMedQA with full-text PubMed Central articles. Our results show substantial retrieval improvements (24x with PSC) in MRR and higher Hits@k on PubMedQA. We provide a comprehensive analysis, including statistical significance and response-time comparisons with common chunking libraries. Despite being trained on a single domain, PSC and MFC also generalize well, achieving strong out-of-domain generation performance across multiple datasets. Overall, our findings confirm that our semantic chunkers, especially PSC, consistently deliver superior performance.",
+        "translated": "文档分块是检索增强生成（RAG）的关键组件，因其直接影响相关且精确上下文的召回效果。传统的固定长度与递归式分块器往往生成任意性高、语义不连贯的片段，难以保留语义结构。尽管语义分块已逐渐受到关注，其对生成质量的影响仍鲜有深入研究。本文提出两种高效的语义分块方法：投影相似度分块（Projected Similarity Chunking, PSC）与度量融合分块（Metric Fusion Chunking, MFC），并基于 PubMed 数据集结合三种不同嵌入模型进行训练。我们进一步构建评估框架，通过将 PubMedQA 与全文 PubMed Central 文章结合，衡量分块对召回与生成性能的影响。实验结果表明，在 PubMedQA 上，PSC 实现了高达 24 倍的 MRR 提升及更高的 Hits@k 指标。我们提供了全面分析，包括统计显著性检验以及与主流分块库在响应时间上的对比。尽管两类方法均在单一领域数据上训练，但 PSC 与 MFC 在多个数据集上展现出良好的泛化能力，实现了强跨域生成表现。总体而言，我们的研究证实，所提出的语义分块器——尤其是 PSC——持续展现出卓越性能。",
+        "translated_title": "拆解分析：面向检索增强生成的领域感知语义分割",
+        "label": [],
+        "label_reason": "聚焦RAG中的分块，非推荐系统核心环节",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "改进分块方法，但无推荐系统创新"
+    },
+    {
+        "title": "Evidence-Guided Schema Normalization for Temporal Tabular Reasoning",
+        "url": "http://arxiv.org/abs/2512.00329v1",
+        "pub_date": "2025-11-29",
+        "summary": "Temporal reasoning over evolving semi-structured tables poses a challenge to current QA systems. We propose a SQL-based approach that involves (1) generating a 3NF schema from Wikipedia infoboxes, (2) generating SQL queries, and (3) query execution. Our central finding challenges model scaling assumptions: the quality of schema design has a greater impact on QA precision than model capacity. We establish three evidence-based principles: normalization that preserves context, semantic naming that reduces ambiguity, and consistent temporal anchoring. Our best configuration (Gemini 2.5 Flash schema + Gemini-2.0-Flash queries) achieves 80.39 EM, a 16.8\\% improvement over the baseline (68.89 EM).",
+        "translated": "对不断演变的半结构化表格进行时序推理，给当前问答系统带来了挑战。我们提出一种基于SQL的方法，包括（1）从维基百科信息框生成3NF模式，（2）生成SQL查询，以及（3）执行查询。我们的核心发现质疑了模型扩展性的假设：模式设计的质量对问答精度的影响大于模型容量。我们确立了三个基于实证的原则：保留上下文的规范化、减少歧义的语义命名，以及一致的时序锚定。我们的最佳配置（Gemini 2.5 Flash schema + Gemini-2.0-Flash queries）取得80.39 EM，相较基线（68.89 EM）提升16.8%。",
+        "translated_title": "基于证据引导的模式规范化用于时序表格推理",
+        "label": [],
+        "label_reason": "论文聚焦表格推理与SQL生成，非推荐系统相关",
+        "relevance_score": 2,
+        "novelty_score": 5,
+        "novelty_reason": "改进schema设计，但无推荐系统创新"
+    },
+    {
+        "title": "Evolving Paradigms in Task-Based Search and Learning: A Comparative Analysis of Traditional Search Engine with LLM-Enhanced Conversational Search System",
+        "url": "http://arxiv.org/abs/2512.00313v1",
+        "pub_date": "2025-11-29",
+        "summary": "Large Language Models (LLMs) are rapidly reshaping information retrieval by enabling interactive, generative, and inference-driven search. While traditional keyword-based search remains central to web and academic information access, it often struggles to support multi-step reasoning and exploratory learning tasks. LLM-powered search interfaces, such as ChatGPT and Claude, introduce new capabilities that may influence how users formulate queries, navigate information, and construct knowledge. However, empirical understanding of these effects is still limited. This study compares search behavior and learning outcomes in two environments: a standard search engine and an LLM-powered search system. We investigate (1) how search strategies, query formulation, and evaluation behaviors differ across systems, and (2) how LLM use affects comprehension, knowledge integration, and critical thinking during search-based learning tasks. Findings offer insight into how generative AI shapes information-seeking processes and contribute to ongoing discussions in information retrieval, human-AI interaction, and technology-supported learning.",
+        "translated": "大语言模型（LLMs）正迅速重塑信息检索，通过支持交互式、生成式和推理驱动的搜索方式。尽管传统的基于关键词的搜索在网页与学术信息获取中仍居核心地位，但其往往难以有效支持多步骤推理与探索性学习任务。由大语言模型驱动的搜索界面（如ChatGPT与Claude）引入了新的能力，可能影响用户构建查询、导航信息及建构知识的方式。然而，目前对其实际影响的实证理解仍显不足。本研究比较了两种环境下的搜索行为与学习成果：标准搜索引擎与大语言模型驱动的搜索系统。我们探究了两点：（1）不同系统间搜索策略、查询构建与评估行为的差异；（2）大语言模型使用如何影响用户在基于搜索的学习任务中的理解力、知识整合能力与批判性思维。研究结果揭示了生成式人工智能如何塑造信息寻求过程，并为信息检索、人机交互及技术支持学习等领域的持续讨论提供贡献。",
+        "translated_title": "任务驱动搜索与学习中的演进范式：传统搜索引擎与大语言模型增强的对话式搜索系统的比较分析",
+        "label": [],
+        "label_reason": "研究聚焦信息检索与人机交互，非推荐系统核心问题",
+        "relevance_score": 3,
+        "novelty_score": 4,
+        "novelty_reason": "对比LLM搜索系统，无推荐算法创新"
     }
 ]
