@@ -16625,5 +16625,144 @@
         "relevance_score": 1,
         "novelty_score": 8,
         "novelty_reason": "提出首个物理可执行的ID转移攻击方法，具泛化性。"
+    },
+    {
+        "title": "LORE: A Large Generative Model for Search Relevance",
+        "url": "http://arxiv.org/abs/2512.03025v1",
+        "pub_date": "2025-12-02",
+        "summary": "Achievement. We introduce LORE, a systematic framework for Large Generative Model-based relevance in e-commerce search. Deployed and iterated over three years, LORE achieves a cumulative +27\\% improvement in online GoodRate metrics. This report shares the valuable experience gained throughout its development lifecycle, spanning data, features, training, evaluation, and deployment. Insight. While existing works apply Chain-of-Thought (CoT) to enhance relevance, they often hit a performance ceiling. We argue this stems from treating relevance as a monolithic task, lacking principled deconstruction. Our key insight is that relevance comprises distinct capabilities: knowledge and reasoning, multi-modal matching, and rule adherence. We contend that a qualitative-driven decomposition is essential for breaking through current performance bottlenecks. Contributions. LORE provides a complete blueprint for the LLM relevance lifecycle. Key contributions include: (1) A two-stage training paradigm combining progressive CoT synthesis via SFT with human preference alignment via RL. (2) A comprehensive benchmark, RAIR, designed to evaluate these core capabilities. (3) A query frequency-stratified deployment strategy that efficiently transfers offline LLM capabilities to the online system. LORE serves as both a practical solution and a methodological reference for other vertical domains.",
+        "translated": "成果。我们提出了LORE，一个基于大生成式模型的电商搜索相关性系统化框架。该框架在三年部署与迭代过程中，累计实现线上GoodRate指标提升27%。本报告分享其全生命周期开发过程中的宝贵经验，涵盖数据、特征、训练、评估与部署等环节。\n\n洞察。尽管现有工作通过思维链（Chain-of-Thought, CoT）提升相关性，往往受限于性能瓶颈。我们认为这源于将相关性视为单一任务，缺乏原则性的分解。我们的核心洞见是：相关性包含三项独立能力——知识与推理、多模态匹配、规则遵循。我们主张，唯有基于定性驱动的分解，方可突破当前性能瓶颈。\n\n贡献。LORE为大语言模型（LLM）相关性生命周期提供了完整蓝图。主要贡献包括：（1）一种两阶段训练范式，结合通过监督微调（SFT）进行渐进式CoT合成与通过强化学习（RL）对齐人类偏好；（2）一套综合性基准RAIR，用于评估上述核心能力；（3）一种按查询频率分层的部署策略，高效将离线LLM能力迁移至在线系统。LORE既是实际解决方案，亦可作为其他垂直领域方法论的参考。",
+        "translated_title": "LORE：用于搜索相关性的大型生成模型",
+        "label": [
+            "LLM生成式推荐",
+            "重排",
+            "通用推荐技术"
+        ],
+        "label_reason": "基于LLM的搜索相关性优化，适配推荐系统重排环节。",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "创新两阶段训练与能力分解框架，突破性能瓶颈。"
+    },
+    {
+        "title": "GraphMatch: Fusing Language and Graph Representations in a Dynamic Two-Sided Work Marketplace",
+        "url": "http://arxiv.org/abs/2512.02849v1",
+        "pub_date": "2025-12-02",
+        "summary": "Recommending matches in a text-rich, dynamic two-sided marketplace presents unique challenges due to evolving content and interaction graphs. We introduce GraphMatch, a new large-scale recommendation framework that fuses pre-trained language models with graph neural networks to overcome these challenges. Unlike prior approaches centered on standalone models, GraphMatch is a comprehensive recipe built on powerful text encoders and GNNs working in tandem. It employs adversarial negative sampling alongside point-in-time subgraph training to learn representations that capture both the fine-grained semantics of evolving text and the time-sensitive structure of the graph. We evaluated extensively on interaction data from Upwork, a leading labor marketplace, at large scale, and discuss our approach towards low-latency inference suitable for real-time use. In our experiments, GraphMatch outperforms language-only and graph-only baselines on matching tasks while being efficient at runtime. These results demonstrate that unifying language and graph representations yields a highly effective solution to text-rich, dynamic two-sided recommendations, bridging the gap between powerful pretrained LMs and large-scale graphs in practice.",
+        "translated": "在内容丰富且动态的双边市场中推荐匹配项面临独特挑战，因其内容与交互图结构持续演化。我们提出 GraphMatch，一种全新的大规模推荐框架，融合预训练语言模型与图神经网络以应对上述挑战。与以往聚焦于独立模型的方法不同，GraphMatch 是一套基于强大文本编码器与 GNN 协同工作的综合性方案。其采用对抗负采样与时间点子图训练相结合的方式，学习到同时捕捉动态文本细粒度语义与时序敏感图结构的表征。我们在 Upwork（全球领先劳动力市场）的大规模交互数据上进行了全面评估，并探讨了面向实时应用的低延迟推理方法。实验表明，GraphMatch 在匹配任务上优于仅依赖语言模型或仅依赖图结构的基线方法，同时具备高效的运行时性能。这些结果证明，统一语言与图表示可为文本丰富、动态双向推荐提供高度有效的解决方案，在实践中弥合了强大预训练大语言模型与大规模图结构之间的鸿沟。",
+        "translated_title": "GraphMatch：在动态双边工作市场中融合语言与图表示",
+        "label": [
+            "多模态推荐",
+            "图神经网络推荐",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "融合语言模型与图结构，解决动态双边市场推荐问题。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "首创联合LM与GNN架构，提升语义与结构建模能力。"
+    },
+    {
+        "title": "Towards Unification of Hallucination Detection and Fact Verification for Large Language Models",
+        "url": "http://arxiv.org/abs/2512.02772v1",
+        "pub_date": "2025-12-02",
+        "summary": "Large Language Models (LLMs) frequently exhibit hallucinations, generating content that appears fluent and coherent but is factually incorrect. Such errors undermine trust and hinder their adoption in real-world applications. To address this challenge, two distinct research paradigms have emerged: model-centric Hallucination Detection (HD) and text-centric Fact Verification (FV). Despite sharing the same goal, these paradigms have evolved in isolation, using distinct assumptions, datasets, and evaluation protocols. This separation has created a research schism that hinders their collective progress. In this work, we take a decisive step toward bridging this divide. We introduce UniFact, a unified evaluation framework that enables direct, instance-level comparison between FV and HD by dynamically generating model outputs and corresponding factuality labels. Through large-scale experiments across multiple LLM families and detection methods, we reveal three key findings: (1) No paradigm is universally superior; (2) HD and FV capture complementary facets of factual errors; and (3) hybrid approaches that integrate both methods consistently achieve state-of-the-art performance. Beyond benchmarking, we provide the first in-depth analysis of why FV and HD diverged, as well as empirical evidence supporting the need for their unification. The comprehensive experimental results call for a new, integrated research agenda toward unifying Hallucination Detection and Fact Verification in LLMs.   We have open-sourced all the code, data, and baseline implementation at: https://github.com/oneal2000/UniFact/",
+        "translated": "大语言模型（LLMs）经常表现出幻觉现象，生成的内容虽流畅连贯，但事实错误。此类错误会削弱用户信任，并阻碍其在实际应用中的落地。为应对这一挑战，研究界已形成两种截然不同的研究范式：以模型为中心的幻觉检测（HD）与以文本为中心的事实验证（FV）。尽管二者目标一致，却各自独立发展，采用不同的假设、数据集和评估协议。这种割裂导致了研究领域的分裂，严重制约了双方协同进步。本文采取关键举措弥合此鸿沟。我们提出UniFact，一个统一的评估框架，通过动态生成模型输出及其对应的事实性标签，实现FV与HD在实例级别上的直接对比。通过对多个LLM家族及检测方法的大规模实验，我们揭示三项核心发现：（1）不存在普遍优于他者的单一范式；（2）HD与FV分别捕捉事实错误的不同侧面，具有互补性；（3）融合二者方法的混合策略始终取得当前最优性能。除基准测试外，我们首次深入剖析了FV与HD为何走向分野，并提供实证证据支持其统一化的必要性。全面的实验结果呼吁建立新的整合性研究议程，推动LLMs中幻觉检测与事实验证的统一化发展。我们已开源全部代码、数据及基线实现，详见：https://github.com/oneal2000/UniFact/",
+        "translated_title": "面向大语言模型的幻觉检测与事实验证的统一化研究",
+        "label": [],
+        "label_reason": "论文聚焦LLM事实验证，与推荐系统无直接关联",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "提出统一框架对比HD与FV，方法具创新性但非推荐领域"
+    },
+    {
+        "title": "FGC-Comp: Adaptive Neighbor-Grouped Attribute Completion for Graph-based Anomaly Detection",
+        "url": "http://arxiv.org/abs/2512.02705v1",
+        "pub_date": "2025-12-02",
+        "summary": "Graph-based Anomaly Detection models have gained widespread adoption in recent years, identifying suspicious nodes by aggregating neighborhood information. However, most existing studies overlook the pervasive issues of missing and adversarially obscured node attributes, which can undermine aggregation stability and prediction reliability. To mitigate this, we propose FGC-Comp, a lightweight, classifier-agnostic, and deployment-friendly attribute completion module-designed to enhance neighborhood aggregation under incomplete attributes. We partition each node's neighbors into three label-based groups, apply group-specific transforms to the labeled groups while a node-conditioned gate handles unknowns, fuse messages via residual connections, and train end-to-end with a binary classification objective to improve aggregation stability and prediction reliability under missing attributes. Experiments on two real-world fraud datasets validate the effectiveness of the approach with negligible computational overhead.",
+        "translated": "近年来，基于图的异常检测模型已被广泛采用，通过聚合邻居信息识别可疑节点。然而，现有大多数研究忽视了节点属性缺失及对抗性遮蔽这一普遍存在的问题，这可能破坏聚合稳定性并降低预测可靠性。为缓解该问题，我们提出FGC-Comp，一种轻量级、分类器无关且易于部署的属性补全模块，旨在提升在不完整属性下的邻居聚合效果。我们根据标签将每个节点的邻居划分为三类，对有标签组应用特定变换，而节点条件门控机制处理未知属性，通过残差连接融合消息，并以二分类目标端到端训练，从而在属性缺失情况下增强聚合稳定性与预测可靠性。在两个真实世界欺诈数据集上的实验验证了该方法的有效性，且计算开销微乎其微。",
+        "translated_title": "FGC-Comp：面向图结构异常检测的自适应邻居分组属性补全",
+        "label": [],
+        "label_reason": "论文聚焦图异常检测，非推荐系统相关",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "方法提升图模型鲁棒性，但无推荐系统创新"
+    },
+    {
+        "title": "Spatially-Grounded Document Retrieval via Patch-to-Region Relevance Propagation",
+        "url": "http://arxiv.org/abs/2512.02660v1",
+        "pub_date": "2025-12-02",
+        "summary": "Vision-language models (VLMs) like ColPali achieve state-of-the-art document retrieval by embedding pages as images and computing fine-grained similarity between query tokens and visual patches. However, they return entire pages rather than specific regions, limiting utility for retrieval-augmented generation (RAG) where precise context is paramount. Conversely, OCR-based systems extract structured text with bounding box coordinates but lack semantic grounding for relevance assessment. We propose a hybrid architecture that unifies these paradigms: using ColPali's patch-level similarity scores as spatial relevance filters over OCR-extracted regions. We formalize the coordinate mapping between vision transformer patch grids and OCR bounding boxes, introduce intersection metrics for relevance propagation, and establish theoretical bounds on retrieval precision. Our approach operates at inference time without additional training. We release Snappy, an open-source implementation demonstrating practical applicability, with empirical evaluation ongoing.",
+        "translated": "视觉-语言模型（VLMs）如 ColPali 通过将页面视为图像进行嵌入，并计算查询词元与视觉补丁之间的细粒度相似度，实现了最先进的文档检索性能。然而，它们返回的是整个页面而非特定区域，这在对精确上下文要求极高的检索增强生成（RAG）场景中限制了其实用性。相反，基于 OCR 的系统虽能提取带有边界框坐标的结构化文本，但缺乏语义锚定以评估相关性。我们提出一种混合架构，统一上述两种范式：利用 ColPali 在补丁级别输出的相似度分数作为空间相关性过滤器，作用于 OCR 提取的各个区域之上。我们形式化了视觉 Transformer 补丁网格与 OCR 边界框之间的坐标映射关系，引入交集度量用于相关性传播，并建立了检索精度的理论界限。该方法无需额外训练即可在推理阶段运行。我们开源了 Snappy，一个展示实际可行性的实现版本，目前尚在开展实证评估。",
+        "translated_title": "基于空间定位的文档检索：通过Patch到区域的相关性传播",
+        "label": [],
+        "label_reason": "聚焦视觉文档检索，非推荐系统核心问题",
+        "relevance_score": 3,
+        "novelty_score": 6,
+        "novelty_reason": "改进坐标映射与传播机制，但无推荐场景创新"
+    },
+    {
+        "title": "ADORE: Autonomous Domain-Oriented Relevance Engine for E-commerce",
+        "url": "http://arxiv.org/abs/2512.02555v1",
+        "pub_date": "2025-12-02",
+        "summary": "Relevance modeling in e-commerce search remains challenged by semantic gaps in term-matching methods (e.g., BM25) and neural models' reliance on the scarcity of domain-specific hard samples. We propose ADORE, a self-sustaining framework that synergizes three innovations: (1) A Rule-aware Relevance Discrimination module, where a Chain-of-Thought LLM generates intent-aligned training data, refined via Kahneman-Tversky Optimization (KTO) to align with user behavior; (2) An Error-type-aware Data Synthesis module that auto-generates adversarial examples to harden robustness; and (3) A Key-attribute-enhanced Knowledge Distillation module that injects domain-specific attribute hierarchies into a deployable student model. ADORE automates annotation, adversarial generation, and distillation, overcoming data scarcity while enhancing reasoning. Large-scale experiments and online A/B testing verify the effectiveness of ADORE. The framework establishes a new paradigm for resource-efficient, cognitively aligned relevance modeling in industrial applications.",
+        "translated": "电商平台搜索中的相关性建模仍面临术语匹配方法（如 BM25）存在语义鸿沟以及神经模型依赖领域特定硬样本稀缺性的挑战。本文提出 ADORE，一种自维持框架，融合三项创新：（1）规则感知的相关性判别模块，其中 Chain-of-Thought 大语言模型生成意图对齐的训练数据，并通过 Kahneman-Tversky 优化（KTO）进行精细化调整，以契合用户行为；（2）错误类型感知的数据合成模块，自动生成对抗样本来增强模型鲁棒性；（3）关键属性增强的知识蒸馏模块，将领域特定的属性层次结构注入可部署的学生模型中。ADORE 自动完成标注、对抗样本生成及蒸馏过程，在克服数据稀缺性的同时提升推理能力。大规模实验与线上 A/B 测试验证了 ADORE 的有效性。该框架为工业场景中资源高效且认知对齐的相关性建模建立了新范式。",
+        "translated_title": "ADORE：面向电商领域的自主领域相关性引擎",
+        "label": [
+            "召回",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "聚焦电商搜索相关性建模，融合LLM与认知优化提升召回效果。",
+        "relevance_score": 8,
+        "novelty_score": 9,
+        "novelty_reason": "首创LLM+KTO+对抗样本自动生成框架，显著提升工业级相关性建模效率。"
+    },
+    {
+        "title": "AskNearby: An LLM-Based Application for Neighborhood Information Retrieval and Personalized Cognitive-Map Recommendations",
+        "url": "http://arxiv.org/abs/2512.02502v1",
+        "pub_date": "2025-12-02",
+        "summary": "The \"15-minute city\" envisions neighborhoods where residents can meet daily needs via a short walk or bike ride. Realizing this vision requires not only physical proximity but also efficient and reliable access to information about nearby places, services, and events. Existing location-based systems, however, focus mainly on city-level tasks and neglect the spatial, temporal, and cognitive factors that shape localized decision-making. We conceptualize this gap as the Local Life Information Accessibility (LLIA) problem and introduce AskNearby, an AI-driven community application that unifies retrieval and recommendation within the 15-minute life circle. AskNearby integrates (i) a three-layer Retrieval-Augmented Generation (RAG) pipeline that synergizes graph-based, semantic-vector, and geographic retrieval with (ii) a cognitive-map model that encodes each user's neighborhood familiarity and preferences. Experiments on real-world community datasets demonstrate that AskNearby significantly outperforms LLM-based and map-based baselines in retrieval accuracy and recommendation quality, achieving robust performance in spatiotemporal grounding and cognitive-aware ranking. Real-world deployments further validate its effectiveness. By addressing the LLIA challenge, AskNearby empowers residents to more effectively discover local resources, plan daily activities, and engage in community life.",
+        "translated": "“15分钟城市”构想了一个居民可通过短距离步行或骑行满足日常需求的社区环境。实现这一愿景不仅需要物理上的邻近性，还需要高效且可靠的本地场所、服务与活动信息获取能力。然而，现有的基于位置的服务系统主要聚焦于城市级任务，忽视了塑造本地化决策的空间、时间和认知因素。我们将此差距定义为“本地生活信息可及性”（Local Life Information Accessibility, LLIA）问题，并引入AskNearby——一款以人工智能驱动的社区应用，将检索与推荐统一整合于“15分钟生活圈”内。AskNearby集成了（i）一个三层结构的检索增强生成（Retrieval-Augmented Generation, RAG）流程，协同图结构、语义向量与地理检索技术；以及（ii）一个认知地图模型，用于编码每位用户对周边区域的熟悉度与偏好。在真实社区数据集上的实验表明，AskNearby在检索准确率和推荐质量上显著优于基于大语言模型（LLM）和地图系统的基线方法，展现出在时空锚定与认知感知排序方面的稳健性能。实际部署进一步验证了其有效性。通过应对LLIA挑战，AskNearby赋能居民更有效地发现本地资源、规划日常活动并融入社区生活。",
+        "translated_title": "AskNearby：一种基于大语言模型的邻域信息检索与个性化认知地图推荐应用",
+        "label": [
+            "LLM生成式推荐",
+            "重排",
+            "通用推荐技术"
+        ],
+        "label_reason": "融合RAG与认知地图，面向本地化推荐场景",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新性结合空间认知建模与LLM生成推荐"
+    },
+    {
+        "title": "Q-BERT4Rec: Quantized Semantic-ID Representation Learning for Multimodal Recommendation",
+        "url": "http://arxiv.org/abs/2512.02474v1",
+        "pub_date": "2025-12-02",
+        "summary": "Sequential recommendation plays a critical role in modern online platforms such as e-commerce, advertising, and content streaming, where accurately predicting users' next interactions is essential for personalization. Recent Transformer-based methods like BERT4Rec have shown strong modeling capability, yet they still rely on discrete item IDs that lack semantic meaning and ignore rich multimodal information (e.g., text and image). This leads to weak generalization and limited interpretability. To address these challenges, we propose Q-Bert4Rec, a multimodal sequential recommendation framework that unifies semantic representation and quantized modeling. Specifically, Q-Bert4Rec consists of three stages: (1) cross-modal semantic injection, which enriches randomly initialized ID embeddings through a dynamic transformer that fuses textual, visual, and structural features; (2) semantic quantization, which discretizes fused representations into meaningful tokens via residual vector quantization; and (3) multi-mask pretraining and fine-tuning, which leverage diverse masking strategies -- span, tail, and multi-region -- to improve sequential understanding. We validate our model on public Amazon benchmarks and demonstrate that Q-Bert4Rec significantly outperforms many strong existing methods, confirming the effectiveness of semantic tokenization for multimodal sequential recommendation. Our source code will be publicly available on GitHub after publishing.",
+        "translated": "序列推荐在电商、广告和内容流媒体等现代在线平台中发挥着关键作用，准确预测用户下一次交互行为对于个性化至关重要。近期基于Transformer的方法（如BERT4Rec）展现了强大的建模能力，但仍依赖离散的物料ID，这些ID缺乏语义信息，并忽略了丰富的多模态信息（例如文本与图像），导致泛化能力较弱且可解释性有限。为应对上述挑战，我们提出Q-Bert4Rec，这是一种融合语义表示与量化建模的多模态序列推荐框架。具体而言，Q-Bert4Rec包含三个阶段：（1）跨模态语义注入，通过一个动态Transformer将文本、视觉与结构特征融合，从而丰富随机初始化的ID嵌入；（2）语义量化，利用残差向量量化将融合表征离散化为具有语义意义的Token；（3）多掩码预训练与微调，采用多样化的掩码策略——跨度掩码、尾部掩码及多区域掩码——以提升对序列模式的理解能力。我们在公开的Amazon数据集上验证了该模型的有效性，结果表明Q-Bert4Rec显著优于多数现有强方法，证实了语义Token化对多模态序列推荐的有效性。我们的源代码将在论文发表后于GitHub开源。",
+        "translated_title": "Q-BERT4Rec：用于多模态推荐的量化语义ID表示学习",
+        "label": [
+            "序列推荐",
+            "多模态推荐",
+            "精排"
+        ],
+        "label_reason": "聚焦多模态序列推荐，改进语义建模与量化表示",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新性融合跨模态语义注入与量化建模，提升泛化能力"
+    },
+    {
+        "title": "WorldMM: Dynamic Multimodal Memory Agent for Long Video Reasoning",
+        "url": "http://arxiv.org/abs/2512.02425v1",
+        "pub_date": "2025-12-02",
+        "summary": "Recent advances in video large language models have demonstrated strong capabilities in understanding short clips. However, scaling them to hours- or days-long videos remains highly challenging due to limited context capacity and the loss of critical visual details during abstraction. Existing memory-augmented methods mitigate this by leveraging textual summaries of video segments, yet they heavily rely on text and fail to utilize visual evidence when reasoning over complex scenes. Moreover, retrieving from fixed temporal scales further limits their flexibility in capturing events that span variable durations. To address this, we introduce WorldMM, a novel multimodal memory agent that constructs and retrieves from multiple complementary memories, encompassing both textual and visual representations. WorldMM comprises three types of memory: episodic memory indexes factual events across multiple temporal scales, semantic memory continuously updates high-level conceptual knowledge, and visual memory preserves detailed information about scenes. During inference, an adaptive retrieval agent iteratively selects the most relevant memory source and leverages multiple temporal granularities based on the query, continuing until it determines that sufficient information has been gathered. WorldMM significantly outperforms existing baselines across five long video question-answering benchmarks, achieving an average 8.4% performance gain over previous state-of-the-art methods, showing its effectiveness on long video reasoning.",
+        "translated": "近年来，视频大语言模型在理解短视频片段方面展现出强大能力。然而，将其扩展至数小时甚至数天长的视频仍面临巨大挑战，原因在于其上下文容量有限，且在抽象过程中会丢失关键视觉细节。现有通过文本摘要增强记忆的方法虽能缓解此问题，但严重依赖文本信息，在推理复杂场景时无法有效利用视觉证据。此外，从固定时间粒度中检索进一步限制了其捕捉跨可变时长事件的灵活性。为解决上述问题，我们提出 WorldMM，一种新颖的多模态记忆代理，能够构建并从多种互补记忆中检索，涵盖文本与视觉表征。WorldMM 包含三种类型记忆：情节记忆在多个时间尺度上索引具体事件；语义记忆持续更新高层次概念知识；视觉记忆保留场景的详细信息。推理过程中，一个自适应检索代理根据查询内容迭代选择最相关的记忆来源，并依据需要灵活利用多种时间粒度，直至判定已收集到充分信息为止。WorldMM 在五个长视频问答基准测试中显著优于现有基线方法，相较之前最先进方法平均性能提升 8.4%，验证了其在长视频推理任务中的有效性。",
+        "translated_title": "WorldMM：面向长视频推理的动态多模态记忆代理",
+        "label": [
+            "多模态推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "论文聚焦长视频多模态记忆推理，非传统推荐系统问题。",
+        "relevance_score": 4,
+        "novelty_score": 7,
+        "novelty_reason": "创新性构建多模态记忆机制，提升长视频理解能力。"
     }
 ]
