@@ -17299,5 +17299,104 @@
         "relevance_score": 4,
         "novelty_score": 7,
         "novelty_reason": "引入输入自适应机制改进DIP框架"
+    },
+    {
+        "title": "Learning to Comparison-Shop",
+        "url": "http://arxiv.org/abs/2512.04009v1",
+        "pub_date": "2025-12-03",
+        "summary": "In online marketplaces like Airbnb, users frequently engage in comparison shopping before making purchase decisions. Despite the prevalence of this behavior, a significant disconnect persists between mainstream e-commerce search engines and users' comparison needs. Traditional ranking models often evaluate items in isolation, disregarding the context in which users compare multiple items on a search results page. While recent advances in deep learning have sought to improve ranking accuracy, diversity, and fairness by encoding listwise context, the challenge of aligning search rankings with user comparison shopping behavior remains inadequately addressed. In this paper, we propose a novel ranking architecture - Learning-to-Comparison-Shop (LTCS) System - that explicitly models and learns users' comparison shopping behaviors. Through extensive offline and online experiments, we demonstrate that our approach yields statistically significant gains in key business metrics - improving NDCG by 1.7% and boosting booking conversion rate by 0.6% in A/B testing - while also enhancing user experience. We also compare our model against state-of-the-art approaches and demonstrate that LTCS significantly outperforms them.",
+        "translated": "在如 Airbnb 这样的在线市场平台上，用户在做出购买决策前经常进行比较购物。尽管这种行为十分普遍，主流电子商务搜索引擎与用户的比较需求之间仍存在显著脱节。传统排序模型通常孤立地评估物品，忽视了用户在搜索结果页面上同时比较多个物品时所处的上下文环境。虽然近期深度学习领域的进展尝试通过编码列表级上下文来提升排序的准确性、多样性和公平性，但如何使搜索排序与用户比较购物行为相匹配的问题仍未得到充分解决。本文提出了一种新颖的排序架构——学习比较购物（Learning-to-Comparison-Shop, LTCS）系统，该系统显式建模并学习用户的比较购物行为。通过大量的离线与在线实验，我们证明，我们的方法在关键业务指标上取得了统计学意义上的显著提升：A/B 测试中 NDCG 提升 1.7%，预订转化率提高 0.6%，同时亦增强了用户体验。此外，我们将模型与当前最先进方法进行对比，表明 LTCS 显著优于它们。",
+        "translated_title": "学会比价购物",
+        "label": [
+            "精排（Ranking）"
+        ],
+        "label_reason": "聚焦推荐排序中比较购物行为建模，直接提升排序效果。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "提出LTCS架构显式建模比较行为，显著优于SOTA。"
+    },
+    {
+        "title": "Algorithms for Boolean Matrix Factorization using Integer Programming and Heuristics",
+        "url": "http://arxiv.org/abs/2512.03807v1",
+        "pub_date": "2025-12-03",
+        "summary": "Boolean matrix factorization (BMF) approximates a given binary input matrix as the product of two smaller binary factors. Unlike binary matrix factorization based on standard arithmetic, BMF employs the Boolean OR and AND operations for the matrix product, which improves interpretability and reduces the approximation error. It is also used in role mining and computer vision. In this paper, we first propose algorithms for BMF that perform alternating optimization (AO) of the factor matrices, where each subproblem is solved via integer programming (IP). We then design different approaches to further enhance AO-based algorithms by selecting an optimal subset of rank-one factors from multiple runs. To address the scalability limits of IP-based methods, we introduce new greedy and local-search heuristics. We also construct a new C++ data structure for Boolean vectors and matrices that is significantly faster than existing ones and is of independent interest, allowing our heuristics to scale to large datasets. We illustrate the performance of all our proposed methods and compare them with the state of the art on various real datasets, both with and without missing data, including applications in topic modeling and imaging.",
+        "translated": "布尔矩阵分解（BMF）将给定的二值输入矩阵近似表示为两个较小二值因子矩阵的乘积。与基于标准算术运算的二值矩阵分解不同，BMF 采用布尔 OR 和 AND 运算进行矩阵乘法，从而提升可解释性并降低近似误差。该方法亦被应用于角色挖掘和计算机视觉领域。本文首先提出针对 BMF 的交替优化（AO）算法，其中每个子问题通过整数规划（IP）求解；随后设计多种方法进一步增强 AO 基础算法，通过从多轮运行中选取最优的一组秩一因子。为解决基于 IP 方法的可扩展性限制，我们引入新的贪心与局部搜索启发式算法。此外，我们构建了一种新的 C++ 数据结构，用于存储布尔向量与矩阵，其性能显著优于现有方案，具有独立研究价值，使我们的启发式算法能够扩展至大规模数据集。我们在多个真实数据集上评估了所有所提方法的表现，并与当前最先进方法进行对比，涵盖包含缺失数据与无缺失数据的情形，应用场景包括主题建模与图像处理。",
+        "translated_title": "布尔矩阵分解的整数规划与启发式算法",
+        "label": [],
+        "label_reason": "论文聚焦布尔矩阵分解，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 6,
+        "novelty_reason": "提出IP求解与启发式算法，但非推荐系统创新。"
+    },
+    {
+        "title": "AR-Med: Automated Relevance Enhancement in Medical Search via LLM-Driven Information Augmentation",
+        "url": "http://arxiv.org/abs/2512.03737v1",
+        "pub_date": "2025-12-03",
+        "summary": "Accurate and reliable search on online healthcare platforms is critical for user safety and service efficacy. Traditional methods, however, often fail to comprehend complex and nuanced user queries, limiting their effectiveness. Large language models (LLMs) present a promising solution, offering powerful semantic understanding to bridge this gap. Despite their potential, deploying LLMs in this high-stakes domain is fraught with challenges, including factual hallucinations, specialized knowledge gaps, and high operational costs. To overcome these barriers, we introduce \\textbf{AR-Med}, a novel framework for \\textbf{A}utomated \\textbf{R}elevance assessment for \\textbf{Med}ical search that has been successfully deployed at scale on the Online Medical Delivery Platforms. AR-Med grounds LLM reasoning in verified medical knowledge through a retrieval-augmented approach, ensuring high accuracy and reliability. To enable efficient online service, we design a practical knowledge distillation scheme that compresses large teacher models into compact yet powerful student models. We also introduce LocalQSMed, a multi-expert annotated benchmark developed to guide model iteration and ensure strong alignment between offline and online performance. Extensive experiments show AR-Med achieves an offline accuracy of over 93\\%, a 24\\% absolute improvement over the original online system, and delivers significant gains in online relevance and user satisfaction. Our work presents a practical and scalable blueprint for developing trustworthy, LLM-powered systems in real-world healthcare applications.",
+        "translated": "在线医疗平台上的精准、可靠搜索对用户安全和服务效能至关重要。然而，传统方法往往难以理解用户查询中复杂而微妙的语义，限制了其有效性。大语言模型（LLM）为此提供了一种有前景的解决方案，凭借强大的语义理解能力弥合这一差距。尽管潜力巨大，但在这一高风险领域部署 LLM 仍面临诸多挑战，包括事实幻觉、专业知识缺失以及高昂的运营成本。为克服这些障碍，我们提出了一种名为 \\textbf{AR-Med} 的全新框架——用于 \\textbf{A}utomated \\textbf{R}elevance assessment for \\textbf{Med}ical search（医学搜索的自动化相关性评估），该框架已在大型在线医疗配送平台上成功规模化部署。AR-Med 通过检索增强的方式将 LLM 推理锚定在经验证的医学知识之上，从而保证高准确性和可靠性。为支持高效在线服务，我们设计了一种实用的知识蒸馏方案，将大型教师模型压缩为结构紧凑却性能强大的学生模型。此外，我们还引入了 LocalQSMed，一个由多专家标注构建的基准数据集，旨在指导模型迭代并确保离线与在线性能之间的强一致性。大量实验表明，AR-Med 在离线场景下达到超过 93% 的准确率，相较原在线系统绝对提升 24%，并在在线相关性及用户满意度方面带来显著增益。本工作为在真实世界医疗应用中开发可信且可扩展的 LLM 驱动系统提供了一个切实可行的范式。",
+        "translated_title": "AR-Med：基于大语言模型驱动的信息增强的医学搜索自动相关性提升",
+        "label": [
+            "通用推荐技术",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "利用LLM增强医疗搜索相关性，属推荐系统应用场景",
+        "relevance_score": 7,
+        "novelty_score": 8,
+        "novelty_reason": "创新性结合LLM与检索增强，提升医疗搜索效果"
+    },
+    {
+        "title": "M3DR: Towards Universal Multilingual Multimodal Document Retrieval",
+        "url": "http://arxiv.org/abs/2512.03514v1",
+        "pub_date": "2025-12-03",
+        "summary": "Multimodal document retrieval systems have shown strong progress in aligning visual and textual content for semantic search. However, most existing approaches remain heavily English-centric, limiting their effectiveness in multilingual contexts. In this work, we present M3DR (Multilingual Multimodal Document Retrieval), a framework designed to bridge this gap across languages, enabling applicability across diverse linguistic and cultural contexts. M3DR leverages synthetic multilingual document data and generalizes across different vision-language architectures and model sizes, enabling robust cross-lingual and cross-modal alignment. Using contrastive training, our models learn unified representations for text and document images that transfer effectively across languages. We validate this capability on 22 typologically diverse languages, demonstrating consistent performance and adaptability across linguistic and script variations. We further introduce a comprehensive benchmark that captures real-world multilingual scenarios, evaluating models under monolingual, multilingual, and mixed-language settings. M3DR generalizes across both single dense vector and ColBERT-style token-level multi-vector retrieval paradigms. Our models, NetraEmbed and ColNetraEmbed achieve state-of-the-art performance with ~150% relative improvements on cross-lingual retrieval.",
+        "translated": "多模态文档检索系统在视觉与文本内容语义对齐方面已取得显著进展。然而，现有大多数方法仍高度依赖英语，限制了其在多语言环境中的有效性。在本项工作中，我们提出了M3DR（Multilingual Multimodal Document Retrieval），一个旨在弥合多语言间差距的框架，使其能够适用于多样化的语言与文化背景。M3DR 利用合成多语言文档数据，并可泛化至不同的视觉-语言架构和模型规模，从而实现稳健的跨语言与跨模态对齐。通过对比学习，我们的模型学习到统一的文本与文档图像表示，可在不同语言间有效迁移。我们在22种语法结构各异的语言上验证了该能力，展示了其在语言及书写系统变化下的稳定性能与适应性。我们进一步引入了一个全面的基准测试，涵盖真实世界多语言场景，在单语言、多语言及混合语言设置下评估模型表现。M3DR 可泛化至单个稠密向量与ColBERT风格的词级别多向量检索范式。我们的模型NetraEmbed 和 ColNetraEmbed 在跨语言检索任务中实现了约150%的相对性能提升，达到当前最优水平。",
+        "translated_title": "M3DR：面向通用多语言多模态文档检索",
+        "label": [],
+        "label_reason": "聚焦多语言多模态检索，非推荐系统核心问题",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "跨语言视觉-文本对齐创新，但非推荐场景设计"
+    },
+    {
+        "title": "Tuning for TraceTarnish: Techniques, Trends, and Testing Tangible Traits",
+        "url": "http://arxiv.org/abs/2512.03465v1",
+        "pub_date": "2025-12-03",
+        "summary": "In this study, we more rigorously evaluated our attack script $\\textit{TraceTarnish}$, which leverages adversarial stylometry principles to anonymize the authorship of text-based messages. To ensure the efficacy and utility of our attack, we sourced, processed, and analyzed Reddit comments--comments that were later alchemized into $\\textit{TraceTarnish}$ data--to gain valuable insights. The transformed $\\textit{TraceTarnish}$ data was then further augmented by $\\textit{StyloMetrix}$ to manufacture stylometric features--features that were culled using the Information Gain criterion, leaving only the most informative, predictive, and discriminative ones. Our results found that function words and function word types ($L\\_FUNC\\_A$ $\\&amp;$ $L\\_FUNC\\_T$); content words and content word types ($L\\_CONT\\_A$ $\\&amp;$ $L\\_CONT\\_T$); and the Type-Token Ratio ($ST\\_TYPE\\_TOKEN\\_RATIO\\_LEMMAS$) yielded significant Information-Gain readings. The identified stylometric cues--function-word frequencies, content-word distributions, and the Type-Token Ratio--serve as reliable indicators of compromise (IoCs), revealing when a text has been deliberately altered to mask its true author. Similarly, these features could function as forensic beacons, alerting defenders to the presence of an adversarial stylometry attack; granted, in the absence of the original message, this signal may go largely unnoticed, as it appears to depend on a pre- and post-transformation comparison. \"In trying to erase a trace, you often imprint a larger one.\" Armed with this understanding, we framed $\\textit{TraceTarnish}$'s operations and outputs around these five isolated features, using them to conceptualize and implement enhancements that further strengthen the attack.",
+        "translated": "在本研究中，我们更严谨地评估了我们的攻击脚本 $\\textit{TraceTarnish}$，该脚本利用对抗性文体风格学原理对基于文本的消息进行作者匿名化处理。为确保攻击的有效性和实用性，我们采集、处理并分析了Reddit评论——这些评论随后被转化为$\\textit{TraceTarnish}$数据——以获取宝贵洞见。随后，$\\textit{TraceTarnish}$数据经由$\\textit{StyloMetrix}$进一步扩充，生成文体特征；这些特征依据信息增益准则筛选，仅保留最具信息量、预测力和区分度的特征。我们的实验结果表明，功能词及其类型（$L\\_FUNC\\_A$ $\\&$ $L\\_FUNC\\_T$）、内容词及其类型（$L\\_CONT\\_A$ $\\&$ $L\\_CONT\\_T$），以及类型-词数比（$ST\\_TYPE\\_TOKEN\\_RATIO\\_LEMMAS$）均呈现出显著的信息增益值。所识别出的文体学线索——即功能词频率、内容词分布及类型-词数比——可作为可靠的妥协指标（IoCs），揭示文本是否被刻意修改以掩盖其真实作者。同样，这些特征也可作为取证信号灯，提示防御方可能存在对抗性文体风格攻击；然而，在缺乏原始消息的情况下，此类信号可能难以被察觉，因其依赖于前后变换对比。正如“试图抹除痕迹，往往反而留下更深的印记”。基于此认知，我们将$\\textit{TraceTarnish}$的操作与输出围绕这五个孤立特征构建，并据此构想与实现增强措施，进一步强化攻击能力。",
+        "translated_title": "TraceTarnish 的调优：技术、趋势与可衡量特质的验证",
+        "label": [],
+        "label_reason": "论文聚焦文本匿名化与风格学攻击，与推荐系统无关",
+        "relevance_score": 1,
+        "novelty_score": 3,
+        "novelty_reason": "方法陈旧，未引入新范式或推荐相关创新"
+    },
+    {
+        "title": "LLM as Explainable Re-Ranker for Recommendation System",
+        "url": "http://arxiv.org/abs/2512.03439v1",
+        "pub_date": "2025-12-03",
+        "summary": "The application of large language models (LLMs) in recommendation systems has recently gained traction. Traditional recommendation systems often lack explainability and suffer from issues such as popularity bias. Previous research has also indicated that LLMs, when used as standalone predictors, fail to achieve accuracy comparable to traditional models. To address these challenges, we propose to use LLM as an explainable re-ranker, a hybrid approach that combines traditional recommendation models with LLMs to enhance both accuracy and interpretability. We constructed a dataset to train the re-ranker LLM and evaluated the alignment between the generated dataset and human expectations. Leveraging a two-stage training process, our model significantly improved NDCG, a key ranking metric. Moreover, the re-ranker outperformed a zero-shot baseline in ranking accuracy and interpretability. These results highlight the potential of integrating traditional recommendation models with LLMs to address limitations in existing systems and pave the way for more explainable and fair recommendation frameworks.",
+        "translated": "大语言模型（LLMs）在推荐系统中的应用近年来日益受到关注。传统推荐系统往往缺乏可解释性，并存在流行度偏差等问题。先前研究表明，当LLMs作为独立预测器使用时，其准确率难以媲美传统模型。为应对这些挑战，我们提出将LLM用作可解释的重排器，这是一种融合传统推荐模型与LLMs的混合方法，旨在同时提升准确性和可解释性。我们构建了一个数据集用于训练重排器LLM，并评估了生成数据集与人类预期之间的对齐程度。通过两阶段训练流程，我们的模型显著提升了NDCG这一关键排序指标。此外，该重排器在排序准确性和可解释性方面均优于零样本基线模型。这些结果凸显了将传统推荐模型与LLMs相结合以克服现有系统局限性的潜力，并为构建更具可解释性和公平性的推荐框架指明了方向。",
+        "translated_title": "大语言模型作为推荐系统的可解释重排器",
+        "label": [
+            "重排",
+            "LLM生成式推荐"
+        ],
+        "label_reason": "LLM用于推荐重排，提升可解释性与排序效果。",
+        "relevance_score": 9,
+        "novelty_score": 8,
+        "novelty_reason": "创新性结合传统模型与LLM做重排，显著提升NDCG。"
+    },
+    {
+        "title": "BookRAG: A Hierarchical Structure-aware Index-based Approach for Retrieval-Augmented Generation on Complex Documents",
+        "url": "http://arxiv.org/abs/2512.03413v1",
+        "pub_date": "2025-12-03",
+        "summary": "As an effective method to boost the performance of Large Language Models (LLMs) on the question answering (QA) task, Retrieval-Augmented Generation (RAG), which queries highly relevant information from external complex documents, has attracted tremendous attention from both industry and academia. Existing RAG approaches often focus on general documents, and they overlook the fact that many real-world documents (such as books, booklets, handbooks, etc.) have a hierarchical structure, which organizes their content from different granularity levels, leading to poor performance for the QA task. To address these limitations, we introduce BookRAG, a novel RAG approach targeted for documents with a hierarchical structure, which exploits logical hierarchies and traces entity relations to query the highly relevant information. Specifically, we build a novel index structure, called BookIndex, by extracting a hierarchical tree from the document, which serves as the role of its table of contents, using a graph to capture the intricate relationships between entities, and mapping entities to tree nodes. Leveraging the BookIndex, we then propose an agent-based query method inspired by the Information Foraging Theory, which dynamically classifies queries and employs a tailored retrieval workflow. Extensive experiments on three widely adopted benchmarks demonstrate that BookRAG achieves state-of-the-art performance, significantly outperforming baselines in both retrieval recall and QA accuracy while maintaining competitive efficiency.",
+        "translated": "作为一种有效提升大语言模型（LLMs）在问答（QA）任务中性能的方法，检索增强生成（RAG）通过从外部复杂文档中查询高度相关的信息，已受到产业界和学术界的广泛关注。现有RAG方法多聚焦于通用文档，却忽视了现实世界中的许多文档（如书籍、手册、指南等）具有层级结构，其内容按不同粒度层次组织，从而导致问答任务表现不佳。为解决这一局限性，我们提出了BookRAG，一种专为具有层级结构文档设计的新型RAG方法，该方法利用逻辑层级与实体关系追踪来查询高度相关信息。具体而言，我们构建了一种新颖的索引结构——BookIndex，通过从文档中提取层级树（充当目录角色），使用图结构捕捉实体间的复杂关系，并将实体映射至树节点。在此基础上，我们进一步提出了一种受信息觅食理论启发的代理式查询方法，该方法可动态分类查询并采用定制化的检索流程。在三个广泛采用的基准测试上进行的大量实验表明，BookRAG取得了当前最优性能，在召回率和问答准确率方面显著超越基线方法，同时保持了良好的效率。",
+        "translated_title": "BookRAG：一种面向复杂文档的检索增强生成任务的层次结构感知索引方法",
+        "label": [],
+        "label_reason": "聚焦RAG与文档结构，非推荐系统核心问题",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "创新索引结构+查询策略，但不面向推荐"
     }
 ]
