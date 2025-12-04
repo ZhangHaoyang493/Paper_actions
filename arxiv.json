@@ -17398,5 +17398,57 @@
         "relevance_score": 3,
         "novelty_score": 7,
         "novelty_reason": "创新索引结构+查询策略，但不面向推荐"
+    },
+    {
+        "title": "Unique Lives, Shared World: Learning from Single-Life Videos",
+        "url": "http://arxiv.org/abs/2512.04085v1",
+        "pub_date": "2025-12-03",
+        "summary": "We introduce the \"single-life\" learning paradigm, where we train a distinct vision model exclusively on egocentric videos captured by one individual. We leverage the multiple viewpoints naturally captured within a single life to learn a visual encoder in a self-supervised manner. Our experiments demonstrate three key findings. First, models trained independently on different lives develop a highly aligned geometric understanding. We demonstrate this by training visual encoders on distinct datasets each capturing a different life, both indoors and outdoors, as well as introducing a novel cross-attention-based metric to quantify the functional alignment of the internal representations developed by different models. Second, we show that single-life models learn generalizable geometric representations that effectively transfer to downstream tasks, such as depth estimation, in unseen environments. Third, we demonstrate that training on up to 30 hours from one week of the same person's life leads to comparable performance to training on 30 hours of diverse web data, highlighting the strength of single-life representation learning. Overall, our results establish that the shared structure of the world, both leads to consistency in models trained on individual lives, and provides a powerful signal for visual representation learning.",
+        "translated": "我们引入了“单生命”学习范式，其中我们在单一个体所拍摄的以自我为中心的视频上训练独立的视觉模型。我们利用单个生命中自然存在的多视角数据，以自监督方式学习视觉编码器。实验表明三个关键发现：第一，分别在不同“生命”数据上独立训练的模型形成了高度一致的几何理解；我们通过在分别记录不同个体生活（室内与室外）的不同数据集上训练视觉编码器，并引入一种新颖的基于交叉注意力的度量指标，量化了不同模型内部表征的功能对齐程度，验证了这一点。第二，我们证明了“单生命”模型能够学习到可泛化的几何表征，在未见过的环境中能有效迁移至下游任务，例如深度估计。第三，我们表明仅使用同一人一周内约30小时的视频数据进行训练，其性能可媲美使用30小时多样化的网络数据进行训练的效果，凸显了“单生命”表征学习的强大性。总体而言，我们的结果表明，世界的共享结构不仅导致在个人生活中训练出的模型具有内在一致性，同时也为视觉表征学习提供了强大的信号。",
+        "translated_title": "独特生命，共享世界：从单生命视频中学习",
+        "label": [],
+        "label_reason": "研究聚焦视觉表示学习，非图像像素级恢复。",
+        "relevance_score": 1,
+        "novelty_score": 8,
+        "novelty_reason": "提出单人生视频自监督学习范式，具新颖性。"
+    },
+    {
+        "title": "SimFlow: Simplified and End-to-End Training of Latent Normalizing Flows",
+        "url": "http://arxiv.org/abs/2512.04084v1",
+        "pub_date": "2025-12-03",
+        "summary": "Normalizing Flows (NFs) learn invertible mappings between the data and a Gaussian distribution. Prior works usually suffer from two limitations. First, they add random noise to training samples or VAE latents as data augmentation, introducing complex pipelines including extra noising and denoising steps. Second, they use a pretrained and frozen VAE encoder, resulting in suboptimal reconstruction and generation quality. In this paper, we find that the two issues can be solved in a very simple way: just fixing the variance (which would otherwise be predicted by the VAE encoder) to a constant (e.g., 0.5). On the one hand, this method allows the encoder to output a broader distribution of tokens and the decoder to learn to reconstruct clean images from the augmented token distribution, avoiding additional noise or denoising design. On the other hand, fixed variance simplifies the VAE evidence lower bound, making it stable to train an NF with a VAE jointly. On the ImageNet $256 \\times 256$ generation task, our model SimFlow obtains a gFID score of 2.15, outperforming the state-of-the-art method STARFlow (gFID 2.40). Moreover, SimFlow can be seamlessly integrated with the end-to-end representation alignment (REPA-E) method and achieves an improved gFID of 1.91, setting a new state of the art among NFs.",
+        "translated": "归一化流（NFs）学习数据与高斯分布之间的可逆映射。以往的工作通常存在两个局限性：首先，它们在训练样本或VAE潜在空间中添加随机噪声作为数据增强，引入了包含额外去噪步骤的复杂流程；其次，它们使用预训练且冻结的VAE编码器，导致重建和生成质量次优。本文发现，上述两个问题可通过一种非常简单的方式解决：仅将方差固定为一个常数（例如0.5），而不允许VAE编码器预测该值。一方面，这一方法使编码器能够输出更广义的token分布，解码器则能从增强后的token分布中学习重建干净图像，从而无需额外设计噪声或去噪模块；另一方面，固定方差简化了VAE证据下界，使得联合训练NF与VAE更具稳定性。在ImageNet $256 \\times 256$ 生成任务上，我们的模型SimFlow取得了2.15的gFID评分，优于当前最先进的方法STARFlow（gFID 2.40）。此外，SimFlow可无缝集成至端到端表示对齐（REPA-E）方法，并实现改进后的gFID分数1.91，创下NF类方法的新纪录。",
+        "translated_title": "SimFlow：潜在归一化流的简化与端到端训练",
+        "label": [],
+        "label_reason": "生成模型，非图像像素级恢复任务",
+        "relevance_score": 2,
+        "novelty_score": 8,
+        "novelty_reason": "简化NF训练流程，提升生成质量"
+    },
+    {
+        "title": "PosterCopilot: Toward Layout Reasoning and Controllable Editing for Professional Graphic Design",
+        "url": "http://arxiv.org/abs/2512.04082v1",
+        "pub_date": "2025-12-03",
+        "summary": "Graphic design forms the cornerstone of modern visual communication, serving as a vital medium for promoting cultural and commercial events. Recent advances have explored automating this process using Large Multimodal Models (LMMs), yet existing methods often produce geometrically inaccurate layouts and lack the iterative, layer-specific editing required in professional workflows. To address these limitations, we present PosterCopilot, a framework that advances layout reasoning and controllable editing for professional graphic design. Specifically, we introduce a progressive three-stage training strategy that equips LMMs with geometric understanding and aesthetic reasoning for layout design, consisting of Perturbed Supervised Fine-Tuning, Reinforcement Learning for Visual-Reality Alignment, and Reinforcement Learning from Aesthetic Feedback. Furthermore, we develop a complete workflow that couples the trained LMM-based design model with generative models, enabling layer-controllable, iterative editing for precise element refinement while maintaining global visual consistency. Extensive experiments demonstrate that PosterCopilot achieves geometrically accurate and aesthetically superior layouts, offering unprecedented controllability for professional iterative design.",
+        "translated": "图形设计构成了现代视觉传播的基石，是推广文化与商业活动的重要媒介。近期研究已探索利用大型多模态模型（LMMs）自动化这一过程，但现有方法往往生成几何结构不准确的布局，并缺乏专业工作流中所需的逐层迭代编辑能力。为解决上述局限，我们提出了 PosterCopilot，一个面向专业图形设计的布局推理与可控编辑框架。具体而言，我们引入一种渐进式的三阶段训练策略，使 LMMs 获得对布局设计的几何理解与美学推理能力，包括扰动监督微调、用于视觉-现实对齐的强化学习，以及基于美学反馈的强化学习。此外，我们构建了一个完整的流程，将训练好的基于 LMM 的设计模型与生成式模型结合，从而支持逐层可控、可迭代的编辑，实现元素精准优化的同时保持整体视觉一致性。大量实验表明，PosterCopilot 生成的布局在几何精度和美学表现上均优于现有方法，为专业迭代设计提供了前所未有的可控性。",
+        "translated_title": "PosterCopilot：面向版式推理与可控编辑的专业图形设计研究",
+        "label": [],
+        "label_reason": "属于高阶视觉任务，非像素级图像处理",
+        "relevance_score": 1,
+        "novelty_score": 7,
+        "novelty_reason": "改进LMM设计流程，提升可控编辑能力"
+    },
+    {
+        "title": "Radiance Meshes for Volumetric Reconstruction",
+        "url": "http://arxiv.org/abs/2512.04076v1",
+        "pub_date": "2025-12-03",
+        "summary": "We introduce radiance meshes, a technique for representing radiance fields with constant density tetrahedral cells produced with a Delaunay tetrahedralization. Unlike a Voronoi diagram, a Delaunay tetrahedralization yields simple triangles that are natively supported by existing hardware. As such, our model is able to perform exact and fast volume rendering using both rasterization and ray-tracing. We introduce a new rasterization method that achieves faster rendering speeds than all prior radiance field representations (assuming an equivalent number of primitives and resolution) across a variety of platforms. Optimizing the positions of Delaunay vertices introduces topological discontinuities (edge flips). To solve this, we use a Zip-NeRF-style backbone which allows us to express a smoothly varying field even when the topology changes. Our rendering method exactly evaluates the volume rendering equation and enables high quality, real-time view synthesis on standard consumer hardware. Our tetrahedral meshes also lend themselves to a variety of exciting applications including fisheye lens distortion, physics-based simulation, editing, and mesh extraction.",
+        "translated": "我们引入了辐射网格（radiance meshes），这是一种通过Delaunay四面体化生成常密度四面体单元来表示辐射场的技术。与Voronoi图不同，Delaunay四面体化所产生的简单三角形天然被现有硬件所支持。因此，我们的模型能够利用光栅化和光线追踪两种方式实现精确且快速的体积渲染。我们提出了一种新的光栅化方法，在多种平台下，其渲染速度均优于所有先前的辐射场表示方法（假设使用相同数量的几何元组和分辨率）。对Delaunay顶点位置的优化会引入拓扑不连续性（边翻转）。为解决这一问题，我们采用类似Zip-NeRF的骨干网络结构，使其即使在拓扑发生变化时仍能表达平滑变化的场。我们的渲染方法可精确求解体积渲染方程，并能够在标准消费级硬件上实现高质量、实时的视图合成。此外，我们的四面体网格还适用于多种有趣的应用场景，包括鱼眼镜头畸变、基于物理的仿真、编辑以及网格提取。",
+        "translated_title": "用于体绘制重建的辐照度网格",
+        "label": [],
+        "label_reason": "非图像像素级恢复，属3D体积重建",
+        "relevance_score": 1,
+        "novelty_score": 8,
+        "novelty_reason": "新网格表示与渲染方法显著提升效率"
     }
 ]
