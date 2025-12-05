@@ -17718,5 +17718,109 @@
         "relevance_score": 10,
         "novelty_score": 9,
         "novelty_reason": "提出语义引导双阶段GAN架构，显著提升修复质量。"
+    },
+    {
+        "title": "Ask Safely: Privacy-Aware LLM Query Generation for Knowledge Graphs",
+        "url": "http://arxiv.org/abs/2512.04852v1",
+        "pub_date": "2025-12-04",
+        "summary": "Large Language Models (LLMs) are increasingly used to query knowledge graphs (KGs) due to their strong semantic understanding and extrapolation capabilities compared to traditional approaches. However, these methods cannot be applied when the KG contains sensitive data and the user lacks the resources to deploy a local generative LLM. To address this issue, we propose a privacy-aware query generation approach for KGs. Our method identifies sensitive information in the graph based on its structure and omits such values before requesting the LLM to translate natural language questions into Cypher queries. Experimental results show that our approach preserves the quality of the generated queries while preventing sensitive data from being transmitted to third-party services.",
+        "translated": "大语言模型（LLMs）由于其相较于传统方法更强的语义理解和外推能力，正越来越多地被用于查询知识图谱（KGs）。然而，当知识图谱包含敏感数据且用户缺乏部署本地生成式LLM的资源时，这些方法无法应用。为解决这一问题，我们提出了一种面向知识图谱的隐私感知查询生成方法。该方法依据图结构识别图中的敏感信息，并在请求LLM将自然语言问题翻译为Cypher查询之前剔除此类值。实验结果表明，我们的方法在保持生成查询质量的同时，有效防止了敏感数据传输至第三方服务。",
+        "translated_title": "安全提问：面向知识图谱的隐私感知大语言模型查询生成",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "利用LLM生成KG查询，间接支持推荐场景",
+        "relevance_score": 4,
+        "novelty_score": 6,
+        "novelty_reason": "改进隐私保护机制，但非推荐系统专用"
+    },
+    {
+        "title": "Are LLMs Truly Multilingual? Exploring Zero-Shot Multilingual Capability of LLMs for Information Retrieval: An Italian Healthcare Use Case",
+        "url": "http://arxiv.org/abs/2512.04834v1",
+        "pub_date": "2025-12-04",
+        "summary": "Large Language Models (LLMs) have become a key topic in AI and NLP, transforming sectors like healthcare, finance, education, and marketing by improving customer service, automating tasks, providing insights, improving diagnostics, and personalizing learning experiences. Information extraction from clinical records is a crucial task in digital healthcare. Although traditional NLP techniques have been used for this in the past, they often fall short due to the complexity, variability of clinical language, and high inner semantics in the free clinical text. Recently, Large Language Models (LLMs) have become a powerful tool for better understanding and generating human-like text, making them highly effective in this area. In this paper, we explore the ability of open-source multilingual LLMs to understand EHRs (Electronic Health Records) in Italian and help extract information from them in real-time. Our detailed experimental campaign on comorbidity extraction from EHR reveals that some LLMs struggle in zero-shot, on-premises settings, and others show significant variation in performance, struggling to generalize across various diseases when compared to native pattern matching and manual annotations.",
+        "translated": "大语言模型（LLMs）已成为人工智能与自然语言处理领域的重要研究方向，通过提升客户服务、自动化任务、提供洞察、改进诊断以及个性化学习体验，推动了医疗、金融、教育和营销等多个行业的变革。从临床记录中提取信息是数字医疗中的关键任务。尽管传统自然语言处理技术曾被用于此目的，但由于临床语言的复杂性、变异性及自由文本内在语义的高度密集性，这些方法往往表现不佳。近年来，大语言模型（LLMs）已成为更深入理解并生成类人类文本的强大工具，在该领域展现出极高的有效性。本文探讨了开源多语言LLM在意大利语电子健康记录（EHRs）中的理解能力，并助力实时从中提取信息。我们在EHR中共病信息提取上的详细实验表明，部分LLM在零样本、本地部署环境下表现不佳，而另一些模型则显示出显著性能差异，其跨不同疾病领域的泛化能力相较原生模式匹配与人工标注仍显不足。",
+        "translated_title": "大语言模型是否真正具备多语言能力？探索大语言模型在信息检索中的零样本多语言能力：以意大利医疗场景为例",
+        "label": [
+            "通用推荐技术"
+        ],
+        "label_reason": "LLM用于医疗信息提取，非推荐系统核心环节。",
+        "relevance_score": 4,
+        "novelty_score": 5,
+        "novelty_reason": "方法通用性强，未针对推荐场景创新。"
+    },
+    {
+        "title": "Spatially-Enhanced Retrieval-Augmented Generation for Walkability and Urban Discovery",
+        "url": "http://arxiv.org/abs/2512.04790v1",
+        "pub_date": "2025-12-04",
+        "summary": "Large Language Models (LLMs) have become foundational tools in artificial intelligence, supporting a wide range of applications beyond traditional natural language processing, including urban systems and tourist recommendations. However, their tendency to hallucinate and their limitations in spatial retrieval and reasoning are well known, pointing to the need for novel solutions. Retrieval-augmented generation (RAG) has recently emerged as a promising way to enhance LLMs with accurate, domain-specific, and timely information. Spatial RAG extends this approach to tasks involving geographic understanding. In this work, we introduce WalkRAG, a spatial RAG-based framework with a conversational interface for recommending walkable urban itineraries. Users can request routes that meet specific spatial constraints and preferences while interactively retrieving information about the path and points of interest (POIs) along the way. Preliminary results show the effectiveness of combining information retrieval, spatial reasoning, and LLMs to support urban discovery.",
+        "translated": "大语言模型（LLMs）已成为人工智能领域的基础性工具，其应用已超越传统的自然语言处理，涵盖城市系统与旅游推荐等广泛领域。然而，其易产生幻觉以及在空间检索和推理方面的局限性广为人知，这表明亟需新的解决方案。检索增强生成（RAG）近期作为一种有望提升LLMs准确性和领域相关性的方法而崭露头角。空间RAG将这一范式拓展至涉及地理理解的任务中。本文中，我们提出WalkRAG，这是一个基于空间RAG、具备对话接口的城市步行路线推荐框架。用户可请求满足特定空间约束与偏好路径，并在交互过程中实时检索沿途路径及兴趣点（POIs）信息。初步结果表明，结合信息检索、空间推理与大语言模型可有效支持城市探索。",
+        "translated_title": "空间增强的检索增强生成模型用于可达性与城市探索",
+        "label": [
+            "LLM生成式推荐",
+            "通用推荐技术"
+        ],
+        "label_reason": "结合空间检索与LLM生成推荐城市行程",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "提出WalkRAG框架融合空间推理与对话推荐"
+    },
+    {
+        "title": "UserSimCRS v2: Simulation-Based Evaluation for Conversational Recommender Systems",
+        "url": "http://arxiv.org/abs/2512.04588v1",
+        "pub_date": "2025-12-04",
+        "summary": "Resources for simulation-based evaluation of conversational recommender systems (CRSs) are scarce. The UserSimCRS toolkit was introduced to address this gap. In this work, we present UserSimCRS v2, a significant upgrade aligning the toolkit with state-of-the-art research. Key extensions include an enhanced agenda-based user simulator, introduction of large language model-based simulators, integration for a wider range of CRSs and datasets, and new LLM-as-a-judge evaluation utilities. We demonstrate these extensions in a case study.",
+        "translated": "用于基于模拟的对话推荐系统（CRSs）评估的资源十分匮乏。为弥补这一不足，UserSimCRS 工具包被提出。在本工作中，我们推出了 UserSimCRS v2，这是对工具包的重大升级，使其与当前最先进的研究保持一致。主要扩展包括：增强型基于议程的用户模拟器、引入基于大语言模型的模拟器、支持更广泛的 CRSs 与数据集集成，以及新增 LLM 作为裁判的评估工具。我们在一个案例研究中展示了这些扩展功能。",
+        "translated_title": "UserSimCRS v2：基于仿真的对话推荐系统评估",
+        "label": [
+            "推荐系统评估"
+        ],
+        "label_reason": "针对对话推荐系统评估工具升级，属评估环节创新。",
+        "relevance_score": 8,
+        "novelty_score": 7,
+        "novelty_reason": "引入LLM模拟器与新评价工具，显著提升评估能力。"
+    },
+    {
+        "title": "The Personalization Paradox: Semantic Loss vs. Reasoning Gains in Agentic AI Q&amp;A",
+        "url": "http://arxiv.org/abs/2512.04343v1",
+        "pub_date": "2025-12-04",
+        "summary": "AIVisor, an agentic retrieval-augmented LLM for student advising, was used to examine how personalization affects system performance across multiple evaluation dimensions. Using twelve authentic advising questions intentionally designed to stress lexical precision, we compared ten personalized and non-personalized system configurations and analyzed outcomes with a Linear Mixed-Effects Model across lexical (BLEU, ROUGE-L), semantic (METEOR, BERTScore), and grounding (RAGAS) metrics. Results showed a consistent trade-off: personalization reliably improved reasoning quality and grounding, yet introduced a significant negative interaction on semantic similarity, driven not by poorer answers but by the limits of current metrics, which penalize meaningful personalized deviations from generic reference texts. This reveals a structural flaw in prevailing LLM evaluation methods, which are ill-suited for assessing user-specific responses. The fully integrated personalized configuration produced the highest overall gains, suggesting that personalization can enhance system effectiveness when evaluated with appropriate multidimensional metrics. Overall, the study demonstrates that personalization produces metric-dependent shifts rather than uniform improvements and provides a methodological foundation for more transparent and robust personalization in agentic AI.",
+        "translated": "AIVisor，一种面向学生指导的代理式检索增强型大语言模型，被用于考察个性化如何影响系统在多个评估维度上的表现。我们使用十二个经过精心设计的真实指导问题，旨在强调词汇精确性，对比十种个性化与非个性化系统配置，并通过线性混合效应模型，从词汇层面（BLEU、ROUGE-L）、语义层面（METEOR、BERTScore）和 grounding 层面（RAGAS）对结果进行分析。结果显示存在一致的权衡关系：个性化可靠地提升了推理质量与 grounding 效果，但同时在语义相似性上引入了显著的负向交互作用——这种影响并非源于答案质量下降，而是由当前评估指标的局限性所致，即这些指标会惩罚与通用参考文本相比具有实质性个性化的偏离。这揭示了主流大语言模型评估方法中存在的结构性缺陷，其不适于评估面向特定用户的响应。完全集成的个性化配置带来了整体收益最大，表明当采用恰当的多维评估指标时，个性化可有效提升系统性能。总体而言，本研究证明个性化导致的是指标依赖性的表现变化而非统一改善，并为代理式 AI 中更透明且稳健的个性化提供了方法论基础。",
+        "translated_title": "个性化悖论：代理式AI问答中的语义损失与推理增益",
+        "label": [
+            "LLM生成式推荐",
+            "推荐系统评估"
+        ],
+        "label_reason": "研究个性化对LLM问答的影响，涉及推荐评估维度。",
+        "relevance_score": 6,
+        "novelty_score": 5,
+        "novelty_reason": "提出个性化与评估指标间矛盾，方法学贡献有限。"
+    },
+    {
+        "title": "MechDetect: Detecting Data-Dependent Errors",
+        "url": "http://arxiv.org/abs/2512.04138v1",
+        "pub_date": "2025-12-03",
+        "summary": "Data quality monitoring is a core challenge in modern information processing systems. While many approaches to detect data errors or shifts have been proposed, few studies investigate the mechanisms governing error generation. We argue that knowing how errors were generated can be key to tracing and fixing them. In this study, we build on existing work in the statistics literature on missing values and propose MechDetect, a simple algorithm to investigate error generation mechanisms. Given a tabular data set and a corresponding error mask, the algorithm estimates whether or not the errors depend on the data using machine learning models. Our work extends established approaches to detect mechanisms underlying missing values and can be readily applied to other error types, provided that an error mask is available. We demonstrate the effectiveness of MechDetect in experiments on established benchmark datasets.",
+        "translated": "数据质量监控是现代信息处理系统中的核心挑战。尽管已有诸多方法被提出用于检测数据错误或漂移，但鲜有研究探讨导致错误生成的机制。我们认为，了解错误是如何产生的，对于追溯并修复错误至关重要。在本研究中，我们基于统计学文献中关于缺失值的相关工作，提出了MechDetect，一种用于探究错误生成机制的简单算法。给定一个表格型数据集及其对应的错误掩码，该算法利用机器学习模型判断错误是否依赖于数据本身。我们的方法扩展了现有用于检测缺失值背后机制的成熟方法，并可便捷地应用于其他类型的错误，前提是存在相应的错误掩码。我们在多个标准基准数据集上的实验验证了MechDetect的有效性。",
+        "translated_title": "MechDetect：检测数据依赖性错误",
+        "label": [],
+        "label_reason": "论文聚焦数据质量监控，与推荐系统无直接关联。",
+        "relevance_score": 2,
+        "novelty_score": 5,
+        "novelty_reason": "方法基于统计学，创新性有限且非推荐领域。"
+    },
+    {
+        "title": "Towards Contextual Sensitive Data Detection",
+        "url": "http://arxiv.org/abs/2512.04120v1",
+        "pub_date": "2025-12-02",
+        "summary": "The emergence of open data portals necessitates more attention to protecting sensitive data before datasets get published and exchanged. While an abundance of methods for suppressing sensitive data exist, the conceptualization of sensitive data and methods to detect it, focus particularly on personal data that, if disclosed, may be harmful or violate privacy. We observe the need for refining and broadening our definitions of sensitive data, and argue that the sensitivity of data depends on its context. Based on this definition, we introduce two mechanisms for contextual sensitive data detection that con- sider the broader context of a dataset at hand. First, we introduce type contextualization, which first detects the semantic type of particular data values, then considers the overall context of the data values within the dataset or document. Second, we introduce domain contextualization which determines sensitivity of a given dataset in the broader context based on the retrieval of relevant rules from documents that specify data sensitivity (e.g., data topic and geographic origin). Experiments with these mechanisms, assisted by large language models (LLMs), confirm that: 1) type-contextualization significantly reduces the number of false positives for type-based sensitive data detection and reaches a recall of 94% compared to 63% with commercial tools, and 2) domain-contextualization leveraging sensitivity rule retrieval is effective for context-grounded sensitive data detection in non-standard data domains such as humanitarian datasets. Evaluation with humanitarian data experts also reveals that context-grounded LLM explanations provide useful guidance in manual data auditing processes, improving consistency. We open-source mechanisms and annotated datasets for contextual sensitive data detection at https://github.com/trl-lab/sensitive-data-detection.",
+        "translated": "开放数据门户的兴起要求在数据发布与交换前更注重保护敏感数据。尽管已有大量方法用于抑制敏感数据，但对敏感数据的概念界定及检测方法主要聚焦于个人数据——若其被泄露，可能造成危害或侵犯隐私。我们观察到有必要细化并扩展敏感数据的定义，并主张数据的敏感性取决于其所处上下文。基于此定义，我们提出了两种面向上下文的敏感数据检测机制，考虑当前数据集的整体语境。第一种是类型上下文化：首先识别特定数据值的语义类型，再结合该数据值在数据集或文档中的整体语境进行判断。第二种是领域上下文化：通过从指定数据敏感性的文档中检索相关规则（如数据主题与地理来源），评估给定数据集在更广泛背景下的敏感程度。借助大语言模型（LLM）辅助的实验验证表明：1）类型上下文化显著降低了基于类型检测敏感数据的假阳性数量，召回率相较商用工具提升了 94%（原为 63%）；2）领域上下文化利用敏感规则检索，在非标准数据域（如人道主义数据集）中能有效实现基于上下文的敏感数据检测。专家针对人道主义数据的评估也显示，基于上下文的 LLM 解释可为人工数据审计提供有益指导，提升一致性。我们开源了上述机制及相关标注数据集，供上下文敏感数据检测使用，详见 https://github.com/trl-lab/sensitive-data-detection。",
+        "translated_title": "面向上下文感知的数据检测",
+        "label": [],
+        "label_reason": "论文聚焦敏感数据检测，非推荐系统相关",
+        "relevance_score": 3,
+        "novelty_score": 7,
+        "novelty_reason": "提出上下文感知检测机制，具实用价值"
     }
 ]
